@@ -393,8 +393,15 @@ void Misc()
                         return;
                     }
 
-                    // Set console key
-                    SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(L"Tilde");
+                    // Get console key
+                    if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
+                    {
+                        spdlog::info("Console enabled: Access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
+                    }
+                    else if (!SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
+                    {
+                        spdlog::info("Console enabled but no console key is bound.\nAdd this: \n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde\nto %localappdata%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini");
+                    }
 
                     SDK::UEngine* Engine = SDK::UEngine::GetEngine();
                     SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
