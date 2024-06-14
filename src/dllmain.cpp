@@ -5,6 +5,7 @@
 #include <spdlog/sinks/basic_file_sink.h>
 #include <safetyhook.hpp>
 #include "SDK/Engine_classes.hpp"
+#include "SDK/CinematicCamera_classes.hpp"
 #include "SDK/WBP_LogoScreen_classes.hpp"
 #include "SDK/WB_ScreenFade_classes.hpp"
 #include "SDK/WB_ScreenTransition_classes.hpp"
@@ -30,6 +31,7 @@ std::pair DesktopDimensions = { 0,0 };
 bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
+float fAdditionalFOV;
 bool bIntroSkip;
 bool bEnableConsole;
 bool bDisableMenuFPSCap;
@@ -129,6 +131,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
+    inipp::get_value(ini.sections["Fix FOV"], "AdditionalFOV", fAdditionalFOV);
     inipp::get_value(ini.sections["Screen Percentage"], "Enabled", bScreenPercentage);
     inipp::get_value(ini.sections["Screen Percentage"], "Value", fScreenPercentage);
     inipp::get_value(ini.sections["Enable TAA"], "Enabled", bEnableTAA);
@@ -141,6 +144,12 @@ void ReadConfig()
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
+    spdlog::info("Config Parse: fAdditionalFOV: {}", fAdditionalFOV);
+    if (fAdditionalFOV < (float)1 || fAdditionalFOV >(float)120)
+    {
+        fAdditionalFOV = std::clamp(fAdditionalFOV, (float)1, (float)120);
+        spdlog::warn("Config Parse: fAdditionalFOV value invalid, clamped to {}", fAdditionalFOV);
+    }
     spdlog::info("Config Parse: bScreenPercentage: {}", bScreenPercentage);
     spdlog::info("Config Parse: fScreenPercentage: {}", fScreenPercentage);
     if (fScreenPercentage < (float)10 || fScreenPercentage >(float)400)
@@ -244,15 +253,28 @@ void AspectFOV()
     {
         spdlog::info("Aspect Ratio/FOV: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AspectFOVScanResult - (uintptr_t)baseModule);
 
-        if (bFixFOV)
+        if (bFixFOV || fAdditionalFOV > 0.00f)
         {
             static SafetyHookMid FOVMidHook{};
             FOVMidHook = safetyhook::create_mid(AspectFOVScanResult + 0x12,
                 [](SafetyHookContext& ctx)
                 {
+                    // Fix vert- FOV when using an ultrawide aspect ratio
                     if (fAspectRatio > fNativeAspect)
                     {
                         ctx.xmm0.f32[0] = atanf(tanf(ctx.xmm0.f32[0] * (fPi / 360)) / fNativeAspect * fAspectRatio) * (360 / fPi);
+                    }
+
+                    // Add additional FOV
+                    if (fAdditionalFOV > 0.00f)
+                    {
+                        SDK::UObject* obj = (SDK::UObject*)(ctx.rbx);
+
+                        // Do not increase FOV in cutscenes
+                        if (!obj->IsA(SDK::UCineCameraComponent::StaticClass()))
+                        {
+                            ctx.xmm0.f32[0] += fAdditionalFOV;
+                        }
                     }
                 });
         }
