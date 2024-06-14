@@ -25,6 +25,9 @@ This is a fix for ultrawide/narrower displays in Shin Megami Tensei V: Vengeance
 Please report any issues you see.
 This list will contain bugs which may or may not be fixed.
 
+- Some HUD backgrounds do not span to fill the screen.
+- Some UI prompts display visual errors outside 16:9 boundaries.
+
 ## Screenshots
 | ![ezgif-6-44e78ab660](https://github.com/Lyall/SMTVFix/assets/695941/1db582c4-2fe6-4a6a-8c1d-a44f5c96252f) |
 |:--:|
