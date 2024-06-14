@@ -6,6 +6,9 @@
 #include <safetyhook.hpp>
 #include "SDK/Engine_classes.hpp"
 #include "SDK/WBP_LogoScreen_classes.hpp"
+#include "SDK/WB_ScreenFade_classes.hpp"
+#include "SDK/WB_ScreenTransition_classes.hpp"
+#include "SDK/WB_EventColorFade_classes.hpp"
 
 HMODULE baseModule = GetModuleHandle(NULL);
 HMODULE thisModule;
@@ -14,7 +17,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.8.1";
+std::string sFixVer = "0.8.2";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
@@ -264,46 +267,49 @@ void HUD()
     if (HUDPositionScanResult)
     {
         spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
-
-        static std::vector<std::string> sSpannedHUD = { "WB_ScreenFade_C", "WB_EventColorFade_C", "WB_ScreenTransition_C" };
+        static bool bHasSkippedIntro = false;
 
         static SafetyHookMid HUDPositionMidHook{};
         HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult,
             [](SafetyHookContext& ctx)
             {
-                SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
-
-                // Intro Skip
-                if (bIntroSkip)
+                if (ctx.rcx)
                 {
-                    if (obj->Class->Name.ToString().find("WBP_LogoScreen_C") != std::string::npos)
-                    {
-                        auto LogoScreen = (SDK::UWBP_LogoScreen_C*)(ctx.rcx);
-                        LogoScreen->bComplete = true;
-                    }
-                }
+                    SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
 
-                // Center HUD
-                if (bFixHUD)
-                {
-                    // Check for whitelisted uObjects and skip centering them
-                    if (find(sSpannedHUD.begin(), sSpannedHUD.end(), obj->Class->Name.ToString()) != sSpannedHUD.end())
+                    // Intro Skip
+                    if (bIntroSkip && !bHasSkippedIntro && obj)
                     {
-                        return;
+                        if (obj->IsA(SDK::UWBP_LogoScreen_C::StaticClass()))
+                        {
+                            auto LogoScreen = (SDK::UWBP_LogoScreen_C*)(ctx.rcx);
+                            LogoScreen->bComplete = true;
+                            bHasSkippedIntro = true;
+                        }
                     }
 
                     // Center HUD
-                    if (ctx.xmm0.f32[0] == 0.00f && ctx.xmm0.f32[1] == 0.00f && ctx.xmm0.f32[2] == 1.00f && ctx.xmm0.f32[3] == 1.00f)
-                    {
-                        if (fAspectRatio > fNativeAspect)
+                    if (bFixHUD)
+                    { 
+                        // Check for whitelisted classes and skip centering them
+                        if (obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()))
                         {
-                            ctx.xmm0.f32[0] = (float)fHUDWidthOffset / iCurrentResX;
-                            ctx.xmm0.f32[2] = 1.00f - ctx.xmm0.f32[0];
+                            return;
                         }
-                        else if (fAspectRatio < fNativeAspect)
+
+                        // Center HUD
+                        if (ctx.xmm0.f32[0] == 0.00f && ctx.xmm0.f32[1] == 0.00f && ctx.xmm0.f32[2] == 1.00f && ctx.xmm0.f32[3] == 1.00f)
                         {
-                            ctx.xmm0.f32[1] = (float)fHUDHeightOffset / iCurrentResY;
-                            ctx.xmm0.f32[3] = 1.00f - ctx.xmm0.f32[1];
+                            if (fAspectRatio > fNativeAspect)
+                            {
+                                ctx.xmm0.f32[0] = (float)fHUDWidthOffset / iCurrentResX;
+                                ctx.xmm0.f32[2] = 1.00f - ctx.xmm0.f32[0];
+                            }
+                            else if (fAspectRatio < fNativeAspect)
+                            {
+                                ctx.xmm0.f32[1] = (float)fHUDHeightOffset / iCurrentResY;
+                                ctx.xmm0.f32[3] = 1.00f - ctx.xmm0.f32[1];
+                            }
                         }
                     }
                 }
