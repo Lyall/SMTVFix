@@ -7,7 +7,6 @@
 #include "SDK/Engine_classes.hpp"
 #include "SDK/WBP_LogoScreen_classes.hpp"
 
-
 HMODULE baseModule = GetModuleHandle(NULL);
 HMODULE thisModule;
 
@@ -28,6 +27,7 @@ bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
 bool bIntroSkip;
+bool bEnableConsole;
 bool bScreenPercentage;
 float fScreenPercentage = 100.0f;
 
@@ -114,6 +114,7 @@ void ReadConfig()
 
     // Read ini file
     inipp::get_value(ini.sections["Intro Skip"], "Enabled", bIntroSkip);
+    inipp::get_value(ini.sections["Enable Console"], "Enabled", bEnableConsole);
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
@@ -122,6 +123,7 @@ void ReadConfig()
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
+    spdlog::info("Config Parse: bEnableConsole: {}", bEnableConsole);
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
@@ -368,7 +370,42 @@ void GraphicalTweaks()
     {
         spdlog::error("Screen Percentage: Pattern scan failed.");
     }
+}
 
+void Misc()
+{
+    if (bEnableConsole)
+    {
+        // Construct Console
+        uint8_t* ConstructConsoleScanResult = Memory::PatternScan(baseModule, "48 89 74 24 ?? 57 48 81 ec ?? ?? ?? ?? 80 b9 ?? ?? ?? ?? ?? 48 8b f2");
+        if (ConstructConsoleScanResult)
+        {
+            spdlog::info("Construct Console: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ConstructConsoleScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid ConstructConsoleMidHook{};
+            ConstructConsoleMidHook = safetyhook::create_mid(ConstructConsoleScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    SDK::UGameViewportClient* viewport = (SDK::UGameViewportClient*)(ctx.rcx);
+
+                    if (viewport->ViewportConsole)
+                    {
+                        return;
+                    }
+
+                    // Set console key
+                    SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(L"Tilde");
+
+                    SDK::UEngine* Engine = SDK::UEngine::GetEngine();
+                    SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
+                    viewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
+                });
+        }
+        else if (!ConstructConsoleScanResult)
+        {
+            spdlog::error("Construct Console: Pattern scan failed.");
+        }
+    }
 }
 
 DWORD __stdcall Main(void*)
@@ -379,6 +416,7 @@ DWORD __stdcall Main(void*)
     AspectFOV();
     HUD();
     GraphicalTweaks();
+    Misc();
     return true; //end thread
 }
 
