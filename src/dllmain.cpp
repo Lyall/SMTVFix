@@ -9,6 +9,7 @@
 #include "SDK/WB_ScreenFade_classes.hpp"
 #include "SDK/WB_ScreenTransition_classes.hpp"
 #include "SDK/WB_EventColorFade_classes.hpp"
+#include "SDK/WB_Loading_classes.hpp"
 
 HMODULE baseModule = GetModuleHandle(NULL);
 HMODULE thisModule;
@@ -278,7 +279,7 @@ void HUD()
                     SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
 
                     // Intro Skip
-                    if (bIntroSkip && !bHasSkippedIntro && obj)
+                    if (bIntroSkip && !bHasSkippedIntro)
                     {
                         if (obj->IsA(SDK::UWBP_LogoScreen_C::StaticClass()))
                         {
@@ -292,7 +293,7 @@ void HUD()
                     if (bFixHUD)
                     { 
                         // Check for whitelisted classes and skip centering them
-                        if (obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()))
+                        if (obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()) || obj->IsA(SDK::UWB_Loading_C::StaticClass()))
                         {
                             return;
                         }
