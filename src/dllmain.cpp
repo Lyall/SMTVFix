@@ -318,15 +318,13 @@ void HUD()
         }
 
         // UIManager
-        uint8_t* UIManagerScanResult = Memory::PatternScan(baseModule, "E9 ?? ?? ?? ?? 09 ?? ?? ?? ?? ?? CC E2 ?? 9D");
+        uint8_t* UIManagerScanResult = Memory::PatternScan(baseModule, "75 ?? 48 ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 74 ?? 48 ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 48 ?? ?? ?? ??") + 0xA;
         if (UIManagerScanResult)
         {
             spdlog::info("HUD: UIManager: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)UIManagerScanResult - (uintptr_t)baseModule);
-            uintptr_t UIManagerGetAddr = Memory::GetAbsolute((uintptr_t)UIManagerScanResult + 0x1);
-            spdlog::info("HUD: UIManager: Func address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)UIManagerGetAddr - (uintptr_t)baseModule);
 
             static SafetyHookMid UIManagerMidHook{};
-            UIManagerMidHook = safetyhook::create_mid(UIManagerGetAddr + 0x78,
+            UIManagerMidHook = safetyhook::create_mid(UIManagerScanResult,
                 [](SafetyHookContext& ctx)
                 {
                     UIManager = ctx.rax;
