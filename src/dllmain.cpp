@@ -4,6 +4,9 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <safetyhook.hpp>
+#include "SDK/Engine_classes.hpp"
+#include "SDK/WBP_LogoScreen_classes.hpp"
+
 
 HMODULE baseModule = GetModuleHandle(NULL);
 HMODULE thisModule;
@@ -12,7 +15,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.8.0";
+std::string sFixVer = "0.8.1";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
@@ -24,6 +27,7 @@ std::pair DesktopDimensions = { 0,0 };
 bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
+bool bIntroSkip;
 bool bScreenPercentage;
 float fScreenPercentage = 100.0f;
 
@@ -42,9 +46,6 @@ int iCurrentResX;
 int iCurrentResY;
 int iOldResX;
 int iOldResY;
-uintptr_t UIManager;
-uintptr_t ScreenFade;
-uintptr_t ScreenTransitionWidget;
 
 void Logging()
 {
@@ -112,6 +113,7 @@ void ReadConfig()
     }
 
     // Read ini file
+    inipp::get_value(ini.sections["Intro Skip"], "Enabled", bIntroSkip);
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
@@ -119,6 +121,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["Screen Percentage"], "Value", fScreenPercentage);
 
     // Log config parse
+    spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
@@ -169,6 +172,9 @@ void CurrentResolution()
                 // Get ResX and ResY
                 iCurrentResX = (int)ctx.r10;
                 iCurrentResY = (int)ctx.r9;
+
+                iCurrentResX /= fScreenPercentage / 100;
+                iCurrentResY /= fScreenPercentage / 100;
 
                 // Calculate aspect ratio
                 fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
@@ -251,27 +257,40 @@ void AspectFOV()
 
 void HUD()
 {
-    if (bFixHUD)
+    // Center HUD + Intro Skip
+    uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3") + 0xA;
+    if (HUDPositionScanResult)
     {
-        // Center HUD
-        uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3") + 0xA;
-        if (HUDPositionScanResult)
-        {
-            spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
+        spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
 
-            static SafetyHookMid HUDPositionMidHook{};
-            HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult,
-                [](SafetyHookContext& ctx)
+        static std::vector<std::string> sSpannedHUD = { "WB_ScreenFade_C", "WB_EventColorFade_C", "WB_ScreenTransition_C" };
+
+        static SafetyHookMid HUDPositionMidHook{};
+        HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult,
+            [](SafetyHookContext& ctx)
+            {
+                SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
+
+                // Intro Skip
+                if (bIntroSkip)
                 {
-                    // Check for marker and don't center the UI element.
-                    if (ctx.rcx + 0x160)
+                    if (obj->Class->Name.ToString().find("WBP_LogoScreen_C") != std::string::npos)
                     {
-                        if (*reinterpret_cast<float*>(ctx.rcx + 0x160) == 12345.00f)
-                        {
-                            return;
-                        }
+                        auto LogoScreen = (SDK::UWBP_LogoScreen_C*)(ctx.rcx);
+                        LogoScreen->bComplete = true;
+                    }
+                }
+
+                // Center HUD
+                if (bFixHUD)
+                {
+                    // Check for whitelisted uObjects and skip centering them
+                    if (find(sSpannedHUD.begin(), sSpannedHUD.end(), obj->Class->Name.ToString()) != sSpannedHUD.end())
+                    {
+                        return;
                     }
 
+                    // Center HUD
                     if (ctx.xmm0.f32[0] == 0.00f && ctx.xmm0.f32[1] == 0.00f && ctx.xmm0.f32[2] == 1.00f && ctx.xmm0.f32[3] == 1.00f)
                     {
                         if (fAspectRatio > fNativeAspect)
@@ -285,13 +304,16 @@ void HUD()
                             ctx.xmm0.f32[3] = 1.00f - ctx.xmm0.f32[1];
                         }
                     }
-                });
-        }
-        else if (!HUDPositionScanResult)
-        {
-            spdlog::error("HUD: HUD Position: Pattern scan failed.");
-        }
+                }
+            });
+    }
+    else if (!HUDPositionScanResult)
+    {
+        spdlog::error("HUD: HUD Position: Pattern scan failed.");
+    }
 
+    if (bFixHUD)
+    {
         // Fix offset markers (i.e map icons etc)
         uint8_t* MarkersScanResult = Memory::PatternScan(baseModule, "0F ?? ?? 66 ?? ?? ?? 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? 4C") + 0xA;
         if (MarkersScanResult)
@@ -315,50 +337,6 @@ void HUD()
         else if (!MarkersScanResult)
         {
             spdlog::error("HUD: Markers: Pattern scan failed.");
-        }
-
-        // UIManager
-        uint8_t* UIManagerScanResult = Memory::PatternScan(baseModule, "75 ?? 48 ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 74 ?? 48 ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 48 ?? ?? ?? ??") + 0xA;
-        if (UIManagerScanResult)
-        {
-            spdlog::info("HUD: UIManager: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)UIManagerScanResult - (uintptr_t)baseModule);
-
-            static SafetyHookMid UIManagerMidHook{};
-            UIManagerMidHook = safetyhook::create_mid(UIManagerScanResult,
-                [](SafetyHookContext& ctx)
-                {
-                    UIManager = ctx.rax;
-
-                    if (UIManager + 0x48 && UIManager + 0xE8)
-                    {
-                        // Screen Fades
-                        ScreenFade = *(uintptr_t*)(UIManager + 0x48);
-                        if (ScreenFade + 0x160)
-                        {
-                            // Set marker
-                            *reinterpret_cast<float*>(ScreenFade + 0x160) = 12345.00f;
-                        }
-
-                        // Screen Transitions
-                        uintptr_t ScreenTransition = *(uintptr_t*)(UIManager + 0xE8);
-                        if (ScreenTransition)
-                        {
-                            ScreenTransitionWidget = *(uintptr_t*)(ScreenTransition + 0x238);
-                            if (ScreenTransitionWidget)
-                            {
-                                if (ScreenTransitionWidget + 0x160)
-                                {
-                                    // Set marker
-                                    *reinterpret_cast<float*>(ScreenTransitionWidget + 0x160) = 12345.00f;
-                                }
-                            }
-                        }
-                    }
-                });
-        }
-        else if (!UIManagerScanResult)
-        {
-            spdlog::error("HUD: UIManager: Pattern scan failed.");
         }
     }
 }
