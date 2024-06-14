@@ -33,6 +33,7 @@ bool bFixFOV;
 bool bIntroSkip;
 bool bEnableConsole;
 bool bDisableMenuFPSCap;
+bool bEnableTAA;
 bool bScreenPercentage;
 float fScreenPercentage = 100.0f;
 
@@ -51,6 +52,8 @@ int iCurrentResX;
 int iCurrentResY;
 int iOldResX;
 int iOldResY;
+uintptr_t AntiAliasingCVARAddr;
+uintptr_t HalfResAOCVARAddr;
 
 void Logging()
 {
@@ -126,6 +129,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
     inipp::get_value(ini.sections["Screen Percentage"], "Enabled", bScreenPercentage);
     inipp::get_value(ini.sections["Screen Percentage"], "Value", fScreenPercentage);
+    inipp::get_value(ini.sections["Enable TAA"], "Enabled", bEnableTAA);
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
@@ -141,6 +145,7 @@ void ReadConfig()
         fScreenPercentage = std::clamp(fScreenPercentage, (float)10, (float)400);
         spdlog::warn("Config Parse: fScreenPercentage value invalid, clamped to {}", fScreenPercentage);
     }
+    spdlog::info("Config Parse: bEnableTAA: {}", bEnableTAA);
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -355,6 +360,21 @@ void HUD()
 
 void GraphicalTweaks()
 {
+    // Enabling TAA requires half res AO to be disabled
+    uint8_t* AntiAliasingCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 4C ?? ?? ?? ?? 74 ?? FF 15 ?? ?? ?? ?? 33 ?? 3B ?? ?? ?? ?? ?? 0F ?? ?? EB ?? 33 ??");
+    uint8_t* HalfResAOCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ??");
+    if (AntiAliasingCVARScanResult && HalfResAOCVARScanResult)
+    {
+        AntiAliasingCVARAddr = Memory::GetAbsolute((uintptr_t)AntiAliasingCVARScanResult + 0x3);
+        spdlog::info("CVARS: Anti Aliasing CVAR: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AntiAliasingCVARAddr - (uintptr_t)baseModule);
+        HalfResAOCVARAddr = Memory::GetAbsolute((uintptr_t)HalfResAOCVARScanResult + 0x3);
+        spdlog::info("CVARS: Half Res AO CVAR: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HalfResAOCVARAddr - (uintptr_t)baseModule);
+    }
+    else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult)
+    {
+        spdlog::error("CVARS: Pattern scan failed.");
+    }
+
     // Screen Percentage
     uint8_t* ScreenPercentageScanResult = Memory::PatternScan(baseModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3");
     if (ScreenPercentageScanResult)
@@ -365,6 +385,19 @@ void GraphicalTweaks()
         ScreenPercentageMidHook = safetyhook::create_mid(ScreenPercentageScanResult + 0x3,
             [](SafetyHookContext& ctx)
             {
+                if (bEnableTAA)
+                {
+                    if (HalfResAOCVARAddr && AntiAliasingCVARAddr)
+                    {
+                        // r.AmbientOcclusion.HalfRes=0
+                        *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)) = 0;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)+0x4) = 0;
+                        // r.DefaultFeature.AntiAliasing=2
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)) = 2;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x4) = 2;
+                    }
+                }
+
                 if (bScreenPercentage)
                 {
                     *reinterpret_cast<float*>(ctx.rdi + (ctx.rbx * 4)) = (float)fScreenPercentage;
