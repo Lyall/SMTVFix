@@ -24,6 +24,8 @@ std::pair DesktopDimensions = { 0,0 };
 bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
+bool bScreenPercentage;
+float fScreenPercentage = 100.0f;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -40,6 +42,9 @@ int iCurrentResX;
 int iCurrentResY;
 int iOldResX;
 int iOldResY;
+uintptr_t UIManager;
+uintptr_t ScreenFade;
+uintptr_t ScreenTransitionWidget;
 
 void Logging()
 {
@@ -110,11 +115,20 @@ void ReadConfig()
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
+    inipp::get_value(ini.sections["Screen Percentage"], "Enabled", bScreenPercentage);
+    inipp::get_value(ini.sections["Screen Percentage"], "Value", fScreenPercentage);
 
     // Log config parse
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
+    spdlog::info("Config Parse: bScreenPercentage: {}", bScreenPercentage);
+    spdlog::info("Config Parse: fScreenPercentage: {}", fScreenPercentage);
+    if (fScreenPercentage < (float)10 || fScreenPercentage >(float)400)
+    {
+        fScreenPercentage = std::clamp(fScreenPercentage, (float)10, (float)400);
+        spdlog::warn("Config Parse: fScreenPercentage value invalid, clamped to {}", fScreenPercentage);
+    }
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -249,10 +263,10 @@ void HUD()
             HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult,
                 [](SafetyHookContext& ctx)
                 {
-                    // Check for left padding marker and don't center the UI element.
-                    if (ctx.rcx + 0x190)
+                    // Check for marker and don't center the UI element.
+                    if (ctx.rcx + 0x160)
                     {
-                        if (*reinterpret_cast<float*>(ctx.rcx + 0x190) == 12345.00f)
+                        if (*reinterpret_cast<float*>(ctx.rcx + 0x160) == 12345.00f)
                         {
                             return;
                         }
@@ -302,7 +316,83 @@ void HUD()
         {
             spdlog::error("HUD: Markers: Pattern scan failed.");
         }
+
+        // UIManager
+        uint8_t* UIManagerScanResult = Memory::PatternScan(baseModule, "E9 ?? ?? ?? ?? 09 ?? ?? ?? ?? ?? CC E2 ?? 9D");
+        if (UIManagerScanResult)
+        {
+            spdlog::info("HUD: UIManager: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)UIManagerScanResult - (uintptr_t)baseModule);
+            uintptr_t UIManagerGetAddr = Memory::GetAbsolute((uintptr_t)UIManagerScanResult + 0x1);
+            spdlog::info("HUD: UIManager: Func address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)UIManagerGetAddr - (uintptr_t)baseModule);
+
+            static SafetyHookMid UIManagerMidHook{};
+            UIManagerMidHook = safetyhook::create_mid(UIManagerGetAddr + 0x78,
+                [](SafetyHookContext& ctx)
+                {
+                    UIManager = ctx.rax;
+
+                    if (UIManager + 0x48 && UIManager + 0xE8)
+                    {
+                        // Screen Fades
+                        ScreenFade = *(uintptr_t*)(UIManager + 0x48);
+                        if (ScreenFade + 0x160)
+                        {
+                            // Set marker
+                            *reinterpret_cast<float*>(ScreenFade + 0x160) = 12345.00f;
+                        }
+
+                        // Screen Transitions
+                        uintptr_t ScreenTransition = *(uintptr_t*)(UIManager + 0xE8);
+                        if (ScreenTransition)
+                        {
+                            ScreenTransitionWidget = *(uintptr_t*)(ScreenTransition + 0x238);
+                            if (ScreenTransitionWidget)
+                            {
+                                if (ScreenTransitionWidget + 0x160)
+                                {
+                                    // Set marker
+                                    *reinterpret_cast<float*>(ScreenTransitionWidget + 0x160) = 12345.00f;
+                                }
+                            }
+                        }
+                    }
+                });
+        }
+        else if (!UIManagerScanResult)
+        {
+            spdlog::error("HUD: UIManager: Pattern scan failed.");
+        }
     }
+}
+
+void GraphicalTweaks()
+{
+    // Screen Percentage
+    uint8_t* ScreenPercentageScanResult = Memory::PatternScan(baseModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3");
+    if (ScreenPercentageScanResult)
+    {
+        spdlog::info("Screen Percentage: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ScreenPercentageScanResult - (uintptr_t)baseModule);
+
+        static SafetyHookMid ScreenPercentageMidHook{};
+        ScreenPercentageMidHook = safetyhook::create_mid(ScreenPercentageScanResult + 0x3,
+            [](SafetyHookContext& ctx)
+            {
+                if (bScreenPercentage)
+                {
+                    *reinterpret_cast<float*>(ctx.rdi + (ctx.rbx * 4)) = (float)fScreenPercentage;
+                }
+                else
+                {
+                    // Grab screen percentage value if not applied by user.
+                    fScreenPercentage = *reinterpret_cast<float*>(ctx.rdi + (ctx.rbx * 4));
+                }
+            });
+    }
+    else if (!ScreenPercentageScanResult)
+    {
+        spdlog::error("Screen Percentage: Pattern scan failed.");
+    }
+
 }
 
 DWORD __stdcall Main(void*)
@@ -312,6 +402,7 @@ DWORD __stdcall Main(void*)
     CurrentResolution();
     AspectFOV();
     HUD();
+    GraphicalTweaks();
     return true; //end thread
 }
 
