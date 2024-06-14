@@ -37,4 +37,5 @@ This list will contain bugs which may or may not be fixed.
 [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) for ASI loading. <br />
 [inipp](https://github.com/mcmtroffaes/inipp) for ini reading. <br />
 [spdlog](https://github.com/gabime/spdlog) for logging. <br />
+[Dumper7](https://github.com/Encryqed/Dumper-7) for generating UE4 SDK. <br />
 [safetyhook](https://github.com/cursey/safetyhook) for hooking.
