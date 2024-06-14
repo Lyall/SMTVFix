@@ -12,7 +12,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.0";
+std::string sFixVer = "0.8.0";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
@@ -38,6 +38,8 @@ float fHUDHeightOffset;
 // Variables
 int iCurrentResX;
 int iCurrentResY;
+int iOldResX;
+int iOldResY;
 
 void Logging()
 {
@@ -106,12 +108,12 @@ void ReadConfig()
 
     // Read ini file
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
-    //inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
+    inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
 
     // Log config parse
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
-    //spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
+    spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
     spdlog::info("----------");
 
@@ -141,7 +143,7 @@ void ReadConfig()
 void CurrentResolution()
 {
     // Get current resolution
-    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "F2 0F ?? ?? ?? ?? ?? ?? C6 ?? ?? ?? ?? ?? 01 48 ?? ?? ?? 5F C3");
+    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "42 ?? ?? ?? ?? ?? ?? ?? 41 ?? ?? 42 ?? ?? ?? ?? ?? ?? ?? 0F ?? ?? 41 ?? ?? 42 ?? ?? ?? ?? ?? ?? ??");
     if (CurrResolutionScanResult)
     {
         spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)baseModule);
@@ -151,8 +153,8 @@ void CurrentResolution()
             [](SafetyHookContext& ctx)
             {
                 // Get ResX and ResY
-                iCurrentResX = (int)ctx.xmm0.f32[0];
-                iCurrentResY = (int)ctx.xmm0.f32[1];
+                iCurrentResX = (int)ctx.r10;
+                iCurrentResY = (int)ctx.r9;
 
                 // Calculate aspect ratio
                 fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
@@ -171,16 +173,23 @@ void CurrentResolution()
                     fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
                 }
 
-                // Log details about current resolution
-                spdlog::info("----------");
-                spdlog::info("Current Resolution: Resolution: {}x{}", iCurrentResX, iCurrentResY);
-                spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
-                spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
-                spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
-                spdlog::info("Current Resolution: fHUDHeight: {}", fHUDHeight);
-                spdlog::info("Current Resolution: fHUDWidthOffset: {}", fHUDWidthOffset);
-                spdlog::info("Current Resolution: fHUDHeightOffset: {}", fHUDHeightOffset);
-                spdlog::info("----------");
+                // Only log on resolution change since this function runs all the time.
+                if (iCurrentResX != iOldResX || iCurrentResY != iOldResY)
+                {
+                    iOldResX = iCurrentResX;
+                    iOldResY = iCurrentResY;
+
+                    // Log details about current resolution
+                    spdlog::info("----------");
+                    spdlog::info("Current Resolution: Resolution: {}x{}", iCurrentResX, iCurrentResY);
+                    spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
+                    spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
+                    spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
+                    spdlog::info("Current Resolution: fHUDHeight: {}", fHUDHeight);
+                    spdlog::info("Current Resolution: fHUDWidthOffset: {}", fHUDWidthOffset);
+                    spdlog::info("Current Resolution: fHUDHeightOffset: {}", fHUDHeightOffset);
+                    spdlog::info("----------");
+                }
             });
     }
     else if (!CurrResolutionScanResult)
@@ -200,7 +209,7 @@ void AspectFOV()
         if (bFixFOV)
         {
             static SafetyHookMid FOVMidHook{};
-            FOVMidHook = safetyhook::create_mid(AspectFOVScanResult,
+            FOVMidHook = safetyhook::create_mid(AspectFOVScanResult + 0x12,
                 [](SafetyHookContext& ctx)
                 {
                     if (fAspectRatio > fNativeAspect)
@@ -226,12 +235,83 @@ void AspectFOV()
     }
 }
 
+void HUD()
+{
+    if (bFixHUD)
+    {
+        // Center HUD
+        uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3") + 0xA;
+        if (HUDPositionScanResult)
+        {
+            spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid HUDPositionMidHook{};
+            HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    // Check for left padding marker and don't center the UI element.
+                    if (ctx.rcx + 0x190)
+                    {
+                        if (*reinterpret_cast<float*>(ctx.rcx + 0x190) == 12345.00f)
+                        {
+                            return;
+                        }
+                    }
+
+                    if (ctx.xmm0.f32[0] == 0.00f && ctx.xmm0.f32[1] == 0.00f && ctx.xmm0.f32[2] == 1.00f && ctx.xmm0.f32[3] == 1.00f)
+                    {
+                        if (fAspectRatio > fNativeAspect)
+                        {
+                            ctx.xmm0.f32[0] = (float)fHUDWidthOffset / iCurrentResX;
+                            ctx.xmm0.f32[2] = 1.00f - ctx.xmm0.f32[0];
+                        }
+                        else if (fAspectRatio < fNativeAspect)
+                        {
+                            ctx.xmm0.f32[1] = (float)fHUDHeightOffset / iCurrentResY;
+                            ctx.xmm0.f32[3] = 1.00f - ctx.xmm0.f32[1];
+                        }
+                    }
+                });
+        }
+        else if (!HUDPositionScanResult)
+        {
+            spdlog::error("HUD: HUD Position: Pattern scan failed.");
+        }
+
+        // Fix offset markers (i.e map icons etc)
+        uint8_t* MarkersScanResult = Memory::PatternScan(baseModule, "0F ?? ?? 66 ?? ?? ?? 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? 4C") + 0xA;
+        if (MarkersScanResult)
+        {
+            spdlog::info("HUD: Markers: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MarkersScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid MarkersMidHook{};
+            MarkersMidHook = safetyhook::create_mid(MarkersScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    if (fAspectRatio > fNativeAspect)
+                    {
+                        ctx.xmm0.f32[0] = fHUDWidthOffset;
+                    }
+                    else if (fAspectRatio < fNativeAspect)
+                    {
+                        ctx.xmm1.f32[0] = fHUDHeightOffset;
+                    }
+                });
+        }
+        else if (!MarkersScanResult)
+        {
+            spdlog::error("HUD: Markers: Pattern scan failed.");
+        }
+    }
+}
+
 DWORD __stdcall Main(void*)
 {
     Logging();
     ReadConfig();
     CurrentResolution();
     AspectFOV();
+    HUD();
     return true; //end thread
 }
 
