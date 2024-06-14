@@ -32,6 +32,7 @@ bool bFixHUD;
 bool bFixFOV;
 bool bIntroSkip;
 bool bEnableConsole;
+bool bDisableMenuFPSCap;
 bool bScreenPercentage;
 float fScreenPercentage = 100.0f;
 
@@ -119,6 +120,7 @@ void ReadConfig()
     // Read ini file
     inipp::get_value(ini.sections["Intro Skip"], "Enabled", bIntroSkip);
     inipp::get_value(ini.sections["Enable Console"], "Enabled", bEnableConsole);
+    inipp::get_value(ini.sections["Remove 60FPS Cap"], "Enabled", bDisableMenuFPSCap);
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
@@ -128,6 +130,7 @@ void ReadConfig()
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
     spdlog::info("Config Parse: bEnableConsole: {}", bEnableConsole);
+    spdlog::info("Config Parse: bDisableMenuFPSCap: {}", bDisableMenuFPSCap);
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
@@ -407,7 +410,7 @@ void Misc()
                     }
                     else if (!SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
                     {
-                        spdlog::info("Console enabled but no console key is bound.\nAdd this: \n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde\nto %localappdata%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini");
+                        spdlog::info("Console enabled but no console key is bound.\nAdd this: \n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde\nto %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini");
                     }
 
                     SDK::UEngine* Engine = SDK::UEngine::GetEngine();
@@ -418,6 +421,27 @@ void Misc()
         else if (!ConstructConsoleScanResult)
         {
             spdlog::error("Construct Console: Pattern scan failed.");
+        }
+    }
+
+    if (bDisableMenuFPSCap)
+    {
+        // Disable FrameRateManager changing t.MaxFPS to 60
+        uint8_t* FramerateChangeScanResult = Memory::PatternScan(baseModule, "44 ?? ?? ?? 0F ?? ?? ?? ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ?? ");
+        if (FramerateChangeScanResult)
+        {
+            spdlog::info("Menu Framerate Cap: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FramerateChangeScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid FramerateChangeMidHook{};
+            FramerateChangeMidHook = safetyhook::create_mid(FramerateChangeScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    ctx.rdx = 0;
+                });
+        }
+        else if (!FramerateChangeScanResult)
+        {
+            spdlog::error("Menu Framerate Cap: Pattern scan failed.");
         }
     }
 }
