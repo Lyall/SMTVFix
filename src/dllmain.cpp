@@ -44,6 +44,8 @@ bool bAdjustCam;
 float fAdjustDist;
 float fAdjustFOV;
 float fAdjustHeight;
+bool bShadowQuality;
+int iShadowResolution;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -66,6 +68,7 @@ uintptr_t AntiAliasingCVARAddr;
 uintptr_t HalfResAOCVARAddr;
 uintptr_t TAAUAlgorithmCVARAddr;
 uintptr_t VertexMotionVectorsCVARAddr;
+uintptr_t MaxShadowCSMResolutionCVARAddr;
 
 void Logging()
 {
@@ -147,6 +150,8 @@ void ReadConfig()
     inipp::get_value(ini.sections["Screen Percentage"], "Value", fScreenPercentage);
     inipp::get_value(ini.sections["Enable TAA"], "Enabled", bEnableTAA);
     inipp::get_value(ini.sections["Enable TAA"], "TAAU_Gen5", bEnableGen5TAAU);
+    inipp::get_value(ini.sections["Shadow Quality"], "Enabled", bShadowQuality);
+    inipp::get_value(ini.sections["Shadow Quality"], "Resolution", iShadowResolution);
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
@@ -183,6 +188,14 @@ void ReadConfig()
     }
     spdlog::info("Config Parse: bEnableTAA: {}", bEnableTAA);
     spdlog::info("Config Parse: bEnableGen5TAAU: {}", bEnableGen5TAAU);
+    spdlog::info("Config Parse: bShadowQuality: {}", bShadowQuality);
+    iShadowResolution = ((iShadowResolution + 127) / 128) * 128; // Round up to a multiple of 128
+    spdlog::info("Config Parse: iShadowResolution: {}", iShadowResolution);
+    if (iShadowResolution < 256 || iShadowResolution > 8192)  // Shadows break over 8192
+    {
+        iShadowResolution = std::clamp(iShadowResolution, 256, 8192);
+        spdlog::warn("Config Parse: iShadowResolution value invalid, clamped to {}", iShadowResolution);
+    }
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -450,6 +463,7 @@ void GraphicalTweaks()
     uint8_t* HalfResAOCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ??");
     uint8_t* TAAUAlgorithmCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? B9 0A 00 00 00 0F ?? ?? ?? ?? ?? ?? 83 ?? ?? 00");
     uint8_t* VertexMotionVectorsCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ?? 48 ?? ?? 48 ?? ?? ?? 00 74 ??");
+    uint8_t* MaxShadowCSMResolutionCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 44 ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ?? 44 ?? ?? ?? ?? 0F ?? ?? ?? ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ??");
     if (AntiAliasingCVARScanResult && HalfResAOCVARScanResult && TAAUAlgorithmCVARScanResult && VertexMotionVectorsCVARScanResult)
     {
         AntiAliasingCVARAddr = Memory::GetAbsolute((uintptr_t)AntiAliasingCVARScanResult + 0x3);
@@ -460,13 +474,15 @@ void GraphicalTweaks()
         spdlog::info("CVARS: r.TemporalAA.Algorithm: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)TAAUAlgorithmCVARAddr - (uintptr_t)baseModule);
         VertexMotionVectorsCVARAddr = Memory::GetAbsolute((uintptr_t)VertexMotionVectorsCVARScanResult + 0x3);
         spdlog::info("CVARS: r.VertexDeformationOutputsVelocity: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)VertexMotionVectorsCVARScanResult - (uintptr_t)baseModule);
+        MaxShadowCSMResolutionCVARAddr = Memory::GetAbsolute((uintptr_t)MaxShadowCSMResolutionCVARScanResult + 0x3);
+        spdlog::info("CVARS: r.Shadow.MaxCSMResolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MaxShadowCSMResolutionCVARScanResult - (uintptr_t)baseModule);
     }
     else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult || !TAAUAlgorithmCVARScanResult || !VertexMotionVectorsCVARScanResult)
     {
         spdlog::error("CVARS: Pattern scan failed.");
     }
 
-    // Screen Percentage
+    // Screen Percentage + Set CVARs
     uint8_t* ScreenPercentageScanResult = Memory::PatternScan(baseModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3");
     if (ScreenPercentageScanResult)
     {
@@ -476,27 +492,34 @@ void GraphicalTweaks()
         ScreenPercentageMidHook = safetyhook::create_mid(ScreenPercentageScanResult + 0x3,
             [](SafetyHookContext& ctx)
             {
-                if (bEnableTAA)
+                if (bEnableTAA && HalfResAOCVARAddr && AntiAliasingCVARAddr && TAAUAlgorithmCVARAddr && VertexMotionVectorsCVARAddr)
                 {
-                    if (HalfResAOCVARAddr && AntiAliasingCVARAddr && TAAUAlgorithmCVARAddr && VertexMotionVectorsCVARAddr)
-                    {
-                        // r.AmbientOcclusion.HalfRes=0
-                        *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)) = 0;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)+0x4) = 0;
-                        // r.DefaultFeature.AntiAliasing=2
-                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)) = 2;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x4) = 2;
-                        // r.VolumetricClouds - 0x230 = r.VertexDeformationOutputsVelocity
-                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x230) = 1;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x22C) = 1;
+                    // r.AmbientOcclusion.HalfRes=0
+                    *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)) = 0;
+                    *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)+0x4) = 0;
+                    // r.DefaultFeature.AntiAliasing=2
+                    *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)) = 2;
+                    *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x4) = 2;
+                    // r.VolumetricClouds - 0x230 = r.VertexDeformationOutputsVelocity
+                    *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x230) = 1;
+                    *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x22C) = 1;
 
-                        if (bEnableGen5TAAU)
-                        {
-                            // r.TemporalAA.R11G11B10History - 0x320 = r.TemporalAA.Algorithm
-                            *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x320) = 1;
-                            *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x31C) = 1;
-                        }
+                    if (bEnableGen5TAAU)
+                    {
+                        // r.TemporalAA.R11G11B10History - 0x320 = r.TemporalAA.Algorithm
+                        *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x320) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x31C) = 1;
                     }
+                }
+
+                if (MaxShadowCSMResolutionCVARAddr && bShadowQuality)
+                {
+                    // r.Shadow.MaxCSMResolution
+                    *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)) = iShadowResolution;
+                    *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)) = iShadowResolution;
+                    // r.Shadow.MaxCSMResolution - 0x50 = r.Shadow.MaxResolution
+                    *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x50) = iShadowResolution;
+                    *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x4C) = iShadowResolution;
                 }
 
                 if (bScreenPercentage)
