@@ -46,11 +46,11 @@ struct WB_MsgSelect_C_ExecuteUbergraph_WB_MsgSelect final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E49[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6411[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    K2Node_CustomEvent_argscriptmessagelabel;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_ArgIndex;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_InAfterBuild;                   // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E4A[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6412[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_1;         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_1;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_1;        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -61,22 +61,22 @@ public:
 	bool                                          CallFunc_Play_ReturnValue_2;                       // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         K2Node_CustomEvent_InNewIconFrame;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue_3;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E4B[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6413[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName;           // 0x003C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName;          // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex;          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex;         // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess_1;                    // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E4C[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6414[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0058(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue_4;                       // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E4D[0x3];                                     // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6415[0x3];                                     // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    K2Node_CustomEvent_argscriptmessagelabel_1;        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_argselectitemname;              // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_InAfterBuild_1;                 // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_5;                       // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E4E[0x2];                                     // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6416[0x2];                                     // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              K2Node_ComponentBoundEvent_Pos;                    // 0x00AC(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              K2Node_ComponentBoundEvent_UV;                     // 0x00B4(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -231,7 +231,7 @@ struct WB_MsgSelect_C_SetText final
 {
 public:
 	bool                                          InAfterBuild;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E4F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6417[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMessageTagInterface>  CallFunc_GetSelectText_Text;                       // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_MsgSelect_C_SetText) == 0x000008, "Wrong alignment on WB_MsgSelect_C_SetText");
@@ -273,7 +273,7 @@ struct WB_MsgSelect_C_SetTextByIndex final
 {
 public:
 	bool                                          InAfterBuild;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E50[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6418[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMessageTagInterface>  CallFunc_GetSelectText_Text;                       // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_MsgSelect_C_SetTextByIndex) == 0x000008, "Wrong alignment on WB_MsgSelect_C_SetTextByIndex");
@@ -332,7 +332,7 @@ public:
 	int32                                         Temp_int_Variable;                                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetValueParam_ReturnValue;                // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E51[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6419[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMessageTagInterface>  CallFunc_SetValueParam_self_CastInput;             // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -396,7 +396,7 @@ public:
 	float                                         OutFrame;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Retframe;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E52[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_641A[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetPlayFrame_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetPlayFrame_ReturnValue_1;               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -415,9 +415,9 @@ struct WB_MsgSelect_C_SetTextColor final
 {
 public:
 	bool                                          Disabled;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E53[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_641B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E54[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_641C[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFontOutlineSettings                   K2Node_MakeStruct_FontOutlineSettings;             // 0x0018(0x0020)(NoDestructor, HasGetValueTypeHash)
 	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0038(0x0058)(HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue_1;                // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -465,7 +465,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_MINIMAP_POI_ICON                            CallFunc_CheckGardenTalkFlag_Any_DisplayIconType;  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckGardenTalkFlag_Any_ReturnValue;      // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E55[0x1];                                     // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_641D[0x1];                                     // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetGardenTalkIconUV_OutU;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetGardenTalkIconUV_OutV;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0074(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -491,14 +491,14 @@ struct WB_MsgSelect_C_GetGardenTalkIconUV final
 {
 public:
 	E_MINIMAP_POI_ICON                            InIconType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E56[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_641E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OutU;                                              // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         OutV;                                              // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MINIMAP_POI_ICON                            Loicon;                                            // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E57[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_641F[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMinimapManager*                        CallFunc_GetMinimapManager_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E58[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6420[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetIconMaterial_OutU;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetIconMaterial_OutV;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_GetIconMaterial_OutColor;                 // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

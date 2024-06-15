@@ -23,7 +23,7 @@ struct BPL_DebugResult_C_AddDebugMenuResultDebug final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AddDebugMenuItemTypeCheckBox_ReturnValue; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4084[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_538C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_DebugMenu_DispName_L10N_Text;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_DebugMenu_DispName_L10N_Text_1;           // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_DebugMenu_DispName_L10N_Text_2;           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)

@@ -27,7 +27,7 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	E_BTL_AI_STATE                                M_State;                                           // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsCounter;                                       // 0x0231(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_43EF[0x2];                                     // 0x0232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5863[0x2];                                     // 0x0232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_ActorIndex;                                      // 0x0234(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          M_IsPartner;                                       // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          M_ActorFix;                                        // 0x0239(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

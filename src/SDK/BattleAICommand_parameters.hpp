@@ -33,7 +33,7 @@ struct BattleAICommand_C_Act_Attack final
 {
 public:
 	bool                                          Success;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3429[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C15[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -49,7 +49,7 @@ struct BattleAICommand_C_Tar_Random final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_342A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C16[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_Random) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_Random");
@@ -64,7 +64,7 @@ struct BattleAICommand_C_Chk_MyHPPerc final
 public:
 	int32                                         Perc;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_342B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C17[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_CalcHPRate_retValue;                      // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -83,10 +83,10 @@ struct BattleAICommand_C_GetActorIndex final
 {
 public:
 	int32                                         RetValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_342C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C18[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_GetCharAction_Success;                 // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_342D[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C19[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleCharAction_C> CallFunc_BI_GetCharAction_RetValue;                // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BPI_GetActorIndex_Ret;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -127,7 +127,7 @@ public:
 	int32                                         Lo_maxHP;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_nowHP;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_CalcRate_retValue;                        // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_342E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C1A[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetMaxHP_retValue;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetNowHP_retValue;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -150,19 +150,19 @@ struct BattleAICommand_C_Chk_PLHPPerc final
 public:
 	int32                                         Perc;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_342F[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C1B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3430[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C1C[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3431[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C1D[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0040(0x0010)(ReferenceParm)
 	int32                                         CallFunc_CalcHPRate_retValue;                      // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3432[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C1E[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -189,19 +189,19 @@ struct BattleAICommand_C_Chk_PLHPPercOver final
 public:
 	int32                                         Perc;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3433[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C1F[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3434[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C20[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3435[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C21[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0040(0x0010)(ReferenceParm)
 	int32                                         CallFunc_CalcHPRate_retValue;                      // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3436[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C22[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -228,19 +228,19 @@ struct BattleAICommand_C_Chk_ENHPPerc final
 public:
 	int32                                         Perc;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3437[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C23[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3438[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C24[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3439[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C25[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0040(0x0010)(ReferenceParm)
 	int32                                         CallFunc_CalcHPRate_retValue;                      // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_343A[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C26[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -267,19 +267,19 @@ struct BattleAICommand_C_Chk_ENHPPercOver final
 public:
 	int32                                         Perc;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_343B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C27[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_343C[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C28[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_343D[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C29[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0040(0x0010)(ReferenceParm)
 	int32                                         CallFunc_CalcHPRate_retValue;                      // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_343E[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C2A[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -307,7 +307,7 @@ public:
 	int32                                         DevilID;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Perc;                                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_343F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C2B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Perc;                                           // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_DevilID;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -319,11 +319,11 @@ public:
 	int32                                         CallFunc_CalcHPRate_retValue;                      // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3440[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C2C[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetCharaID_retValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3441[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C2D[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0070(0x0010)(ReferenceParm)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -356,10 +356,10 @@ struct BattleAICommand_C_Chk_MyLvOver final
 public:
 	int32                                         Level;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3442[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C2E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3443[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C2F[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0020(0x0148)()
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -379,7 +379,7 @@ struct BattleAICommand_C_Chk_PLLvOver final
 public:
 	int32                                         Level;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3444[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C30[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Ave;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Cnt;                                            // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -391,13 +391,13 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3445[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C31[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0050(0x0148)()
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0198(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x01A8(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3446[0x3];                                     // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C32[0x3];                                     // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -431,7 +431,7 @@ struct BattleAICommand_C_Chk_ENLvOver final
 public:
 	int32                                         Level;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3447[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C33[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Ave;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Cnt;                                            // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -443,13 +443,13 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3448[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C34[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0050(0x0148)()
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0198(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x01A8(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3449[0x3];                                     // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C35[0x3];                                     // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -483,7 +483,7 @@ struct BattleAICommand_C_Chk_ENCnt final
 public:
 	int32                                         Num;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_344A[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C36[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0018(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -505,7 +505,7 @@ struct BattleAICommand_C_Chk_MyBst final
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_344B[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C37[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_CheckBadStatus_retValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -525,18 +525,18 @@ struct BattleAICommand_C_Chk_PLBst final
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_344C[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C38[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_344D[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C39[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_CheckBadStatus_retValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_344E[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C3A[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0058(0x0010)(ReferenceParm)
 };
@@ -563,7 +563,7 @@ struct BattleAICommand_C_Chk_ENBst final
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_344F[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C3B[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -574,7 +574,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_CheckBadStatus_retValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3450[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C3C[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0058(0x0010)(ReferenceParm)
 };
@@ -602,7 +602,7 @@ struct BattleAICommand_C_Chk_PLID final
 public:
 	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3451[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C3D[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -614,7 +614,7 @@ public:
 	int32                                         CallFunc_BI_GetCharaID_ReturnValue;                // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3452[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C3E[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0058(0x0010)(ReferenceParm)
 };
@@ -643,7 +643,7 @@ struct BattleAICommand_C_Chk_ENID final
 public:
 	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3453[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C3F[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -655,7 +655,7 @@ public:
 	int32                                         CallFunc_BI_GetCharaID_ReturnValue;                // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3454[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C40[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0058(0x0010)(ReferenceParm)
 };
@@ -686,12 +686,12 @@ public:
 	bool                                          Success;                                           // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Act_Attack_success;                       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3455[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C41[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetSkillName_ReturnValue;                 // 0x0008(0x0018)(ConstParm)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3456[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C42[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_Act_Skill) == 0x000008, "Wrong alignment on BattleAICommand_C_Act_Skill");
@@ -712,13 +712,13 @@ struct BattleAICommand_C_Chk_ENHojoPlusNum final
 {
 public:
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3457[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C43[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3458[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C44[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	E_BTL_CNT                                     CallFunc_ChangeHojoType_retValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3459[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C45[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -728,7 +728,7 @@ public:
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_345A[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C46[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0060(0x0010)(ReferenceParm)
 };
@@ -774,13 +774,13 @@ struct BattleAICommand_C_Chk_PLHojoPlusNum final
 {
 public:
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_345B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C47[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_345C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C48[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	E_BTL_CNT                                     CallFunc_ChangeHojoType_retValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_345D[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C49[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -790,7 +790,7 @@ public:
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_345E[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C4A[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0060(0x0010)(ReferenceParm)
 };
@@ -819,13 +819,13 @@ struct BattleAICommand_C_Chk_ENHojoMinusNum final
 {
 public:
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_345F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C4B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3460[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C4C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	E_BTL_CNT                                     CallFunc_ChangeHojoType_retValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3461[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C4D[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -835,7 +835,7 @@ public:
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3462[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C4E[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0060(0x0010)(ReferenceParm)
 };
@@ -864,13 +864,13 @@ struct BattleAICommand_C_Chk_PLHojoMinusNum final
 {
 public:
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3463[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C4F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3464[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C50[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	E_BTL_CNT                                     CallFunc_ChangeHojoType_retValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3465[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C51[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -880,7 +880,7 @@ public:
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3466[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C52[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0060(0x0010)(ReferenceParm)
 };
@@ -910,7 +910,7 @@ struct BattleAICommand_C_Chk_PLAishouPlus final
 public:
 	E_ATTRIBUTE_TYPE                              InAttr;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3467[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C53[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -920,11 +920,11 @@ public:
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0048(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3468[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C54[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0060(0x0148)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3469[0x3];                                     // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C55[0x3];                                     // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Get_Item_1;                         // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckAishouPlus_ReturnValue;              // 0x01B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -954,7 +954,7 @@ struct BattleAICommand_C_Chk_PLAishouFlat final
 public:
 	E_ATTRIBUTE_TYPE                              InAttr;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_346A[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C56[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -964,11 +964,11 @@ public:
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0048(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_346B[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C57[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0060(0x0148)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_346C[0x3];                                     // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C58[0x3];                                     // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Get_Item_1;                         // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -998,7 +998,7 @@ struct BattleAICommand_C_Chk_PLAishouMinus final
 public:
 	E_ATTRIBUTE_TYPE                              InAttr;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_346D[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C59[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1008,11 +1008,11 @@ public:
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0048(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_346E[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C5A[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0060(0x0148)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_346F[0x3];                                     // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C5B[0x3];                                     // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Get_Item_1;                         // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckAishouMinus_ReturnValue;             // 0x01B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1042,7 +1042,7 @@ struct BattleAICommand_C_Chk_MyUsedAttr final
 public:
 	E_ATTRIBUTE_TYPE                              InAttr;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3470[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C5C[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsedPrevSkillAttr_retValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1061,11 +1061,11 @@ public:
 	int32                                         InPartyIndex;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_ATTRIBUTE_TYPE                              InAttr;                                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3471[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C5D[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FBtlCommand                            CallFunc_BI_GetPrevCommand_ReturnValue;            // 0x0018(0x0010)()
 	bool                                          CallFunc_BI_IsInField_ReturnValue;                 // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3472[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C5E[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkillBaseData                         CallFunc_GetSkillBaseData_ReturnValue;             // 0x0030(0x0100)(ConstParm)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_ATTRIBUTE_TYPE                              CallFunc_SkillBaseDataGetValue_AtkAttr_ReturnValue; // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1092,7 +1092,7 @@ public:
 	int32                                         InPartyIndex;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InSkillId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3473[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C5F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FBtlCommand                            CallFunc_BI_GetPrevCommand_ReturnValue;            // 0x0020(0x0010)()
 	bool                                          CallFunc_BI_IsInField_ReturnValue;                 // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1117,7 +1117,7 @@ struct BattleAICommand_C_Chk_MyUsedSkillID final
 public:
 	int32                                         InSkillId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3474[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C60[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsedPrevSkillID_retValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1134,7 +1134,7 @@ struct BattleAICommand_C_Chk_MyCharged final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3475[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C61[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1154,7 +1154,7 @@ struct BattleAICommand_C_Chk_MyKaishingan final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3476[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C62[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1174,7 +1174,7 @@ struct BattleAICommand_C_Tar_AI final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3477[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C63[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AI) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AI");
@@ -1188,7 +1188,7 @@ struct BattleAICommand_C_Tar_HPMin final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3478[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C64[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_HPMin) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_HPMin");
@@ -1202,7 +1202,7 @@ struct BattleAICommand_C_Tar_HPMax final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3479[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C65[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_HPMax) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_HPMax");
@@ -1246,7 +1246,7 @@ struct BattleAICommand_C_Tar_Self final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_347A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C66[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_Self) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_Self");
@@ -1260,10 +1260,10 @@ struct BattleAICommand_C_Tar_AishouPlus final
 {
 public:
 	E_ATTRIBUTE_TYPE                              InAishou;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_347B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C67[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_347C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C68[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouPlus) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouPlus");
@@ -1279,10 +1279,10 @@ struct BattleAICommand_C_Tar_AishouNotPlus final
 {
 public:
 	E_ATTRIBUTE_TYPE                              InAishou;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_347D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C69[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_347E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C6A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouNotPlus) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouNotPlus");
@@ -1298,10 +1298,10 @@ struct BattleAICommand_C_Tar_AishouFlat final
 {
 public:
 	E_ATTRIBUTE_TYPE                              InAishou;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_347F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C6B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3480[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C6C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouFlat) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouFlat");
@@ -1317,10 +1317,10 @@ struct BattleAICommand_C_Tar_AishouNotFlat final
 {
 public:
 	E_ATTRIBUTE_TYPE                              InAishou;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3481[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C6D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3482[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C6E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouNotFlat) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouNotFlat");
@@ -1336,10 +1336,10 @@ struct BattleAICommand_C_Tar_AishouMinus final
 {
 public:
 	E_ATTRIBUTE_TYPE                              InAishou;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3483[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C6F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3484[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C70[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouMinus) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouMinus");
@@ -1355,10 +1355,10 @@ struct BattleAICommand_C_Tar_AishouNotMinus final
 {
 public:
 	E_ATTRIBUTE_TYPE                              InAishou;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3485[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C71[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3486[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C72[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouNotMinus) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouNotMinus");
@@ -1374,7 +1374,7 @@ struct BattleAICommand_C_GetMyHP final
 {
 public:
 	int32                                         RetValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3487[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C73[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetNowHP_retValue;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1392,11 +1392,11 @@ struct BattleAICommand_C_TempFlagOn final
 {
 public:
 	uint8                                         InValue;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3488[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C74[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class FString                                 CallFunc_Conv_ByteToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_AddAIFlag_Ret;                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3489[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C75[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_TempFlagOn) == 0x000008, "Wrong alignment on BattleAICommand_C_TempFlagOn");
@@ -1413,11 +1413,11 @@ struct BattleAICommand_C_TempFlagOff final
 {
 public:
 	uint8                                         InValue;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_348A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C76[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class FString                                 CallFunc_Conv_ByteToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_DelAIFlag_Ret;                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_348B[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C77[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_TempFlagOff) == 0x000008, "Wrong alignment on BattleAICommand_C_TempFlagOff");
@@ -1435,7 +1435,7 @@ struct BattleAICommand_C_TempFlagChk final
 public:
 	uint8                                         InValue;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret_Value;                                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_348C[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C78[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_CheckAIFlag_Ret;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1465,10 +1465,10 @@ struct BattleAICommand_C_Chk_ENBstOver final
 {
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_348D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C79[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_348E[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C7A[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1477,15 +1477,15 @@ public:
 	int32                                         Temp_int_Variable;                                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_348F[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C7B[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_CheckBadStatus_retValue;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3490[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C7C[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0068(0x0010)(ReferenceParm)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3491[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C7D[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_Chk_ENBstOver) == 0x000008, "Wrong alignment on BattleAICommand_C_Chk_ENBstOver");
@@ -1515,10 +1515,10 @@ struct BattleAICommand_C_Chk_PLBstOver final
 {
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3492[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C7E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3493[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C7F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1527,15 +1527,15 @@ public:
 	int32                                         Temp_int_Variable;                                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3494[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C80[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_CheckBadStatus_retValue;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3495[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C81[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0068(0x0010)(ReferenceParm)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3496[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C82[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_Chk_PLBstOver) == 0x000008, "Wrong alignment on BattleAICommand_C_Chk_PLBstOver");
@@ -1565,10 +1565,10 @@ struct BattleAICommand_C_Tar_Bst final
 {
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3497[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C83[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3498[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C84[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_Bst) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_Bst");
@@ -1584,10 +1584,10 @@ struct BattleAICommand_C_Tar_NotBst final
 {
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3499[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C85[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_349A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C86[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_NotBst) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_NotBst");
@@ -1603,7 +1603,7 @@ struct BattleAICommand_C_Tar_SelfSideOther final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_349B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C87[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_SelfSideOther) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_SelfSideOther");
@@ -1634,7 +1634,7 @@ public:
 	int32                                         N;                                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetValue;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_349C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C88[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0020(0x0148)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1659,15 +1659,15 @@ struct BattleAICommand_C_GetMySkillIDAttr final
 public:
 	int32                                         N;                                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_ATTRIBUTE_TYPE                              RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_349D[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C89[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_349E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C8A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0020(0x0148)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_349F[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C8B[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkillBaseData                         CallFunc_GetSkillBaseData_ReturnValue;             // 0x0178(0x0100)(ConstParm)
 	E_ATTRIBUTE_TYPE                              CallFunc_SkillBaseDataGetValue_AtkAttr_ReturnValue; // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1721,7 +1721,7 @@ struct BattleAICommand_C_Chk_PLNotBst final
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34A0[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C8C[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1733,7 +1733,7 @@ public:
 	bool                                          CallFunc_BI_CheckBadStatus_retValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34A1[0x5];                                     // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C8D[0x5];                                     // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0058(0x0010)(ReferenceParm)
 };
@@ -1761,19 +1761,19 @@ struct BattleAICommand_C_Chk_PLCritical final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34A2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C8E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34A3[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C8F[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34A4[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C90[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0058(0x0010)(ReferenceParm)
 };
@@ -1800,30 +1800,30 @@ struct BattleAICommand_C_Chk_ENIDHojoMinus final
 public:
 	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_EFFICACY_BD                                 N;                                                 // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34A5[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C91[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         N2;                                                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34A6[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C92[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_CNT                                     CallFunc_GetEfficacyToBtlCnt_retValue;             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34A7[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C93[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34A8[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C94[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34A9[0x2];                                     // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C95[0x2];                                     // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_BI_GetCharaID_ReturnValue;                // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34AA[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C96[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34AB[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C97[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0078(0x0010)(ReferenceParm)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1872,46 +1872,46 @@ struct BattleAICommand_C_GetENDevilID_AIAtkType final
 {
 public:
 	E_AI_ATK_TYPE                                 Type;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34AC[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C98[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DevilID;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_RetID;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34AD[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C99[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_DevilIDList;                                    // 0x0020(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34AE[0x2];                                     // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C9A[0x2];                                     // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34AF[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C9B[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34B0[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C9C[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34B1[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C9D[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0088(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetRandom_retValue;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34B2[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C9E[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Get_Item;                           // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34B3[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C9F[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x00B8(0x0148)()
 	int32                                         CallFunc_BI_GetCharaID_ReturnValue;                // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item_2;                         // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SkillIsMasicalAttack_ReturnValue;         // 0x020C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SkillIsPhysicalAttack_ReturnValue;        // 0x020D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34B4[0x2];                                     // 0x020E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA0[0x2];                                     // 0x020E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1962,10 +1962,10 @@ struct BattleAICommand_C_Tar_SetTargetHojoMIN final
 {
 public:
 	E_EFFICACY_BD                                 Efficacy;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34B5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34B6[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA2[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_SetTargetHojoMIN) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_SetTargetHojoMIN");
@@ -1986,7 +1986,7 @@ public:
 	int32                                         DevilID_3;                                         // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SkillId;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34B7[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA3[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkillBaseData                         LSkillData;                                        // 0x0018(0x0100)(Edit, BlueprintVisible)
 	struct FBtlCommand                            Lo_Command;                                        // 0x0118(0x0010)(Edit, BlueprintVisible)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0128(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1996,7 +1996,7 @@ public:
 	int32                                         CallFunc_BI_SetSummonDevilID_Ret_2;                // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_SetSummonDevilID_Ret_3;                // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_ClearSummonList_Ret;                   // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34B8[0x4];                                     // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA4[0x4];                                     // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -2031,27 +2031,27 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34B9[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA5[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<struct FBtlSummonData>                 CallFunc_BI_GetSummonList_List;                    // 0x0038(0x0010)(ReferenceParm)
 	struct FBtlSummonData                         CallFunc_Array_Get_Item;                           // 0x0048(0x000C)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34BA[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA6[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_GetActionSelectList_List;                 // 0x0060(0x0010)(ReferenceParm)
 	uint8                                         Temp_byte_Variable;                                // 0x0070(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34BB[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA7[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret_1;                   // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_const_GetEnemyLoopMax_retValue;        // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_const_GetEnemyStart_retValue;          // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34BC[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA8[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_IsExist_retValue;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34BD[0x2];                                     // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA9[0x2];                                     // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2097,13 +2097,13 @@ struct BattleAICommand_C_Chk_ENIDHojoPlus final
 public:
 	int32                                         DevilID;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_EFFICACY_BD                                 N;                                                 // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34BE[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CAA[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         N2;                                                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34BF[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CAB[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	E_BTL_CNT                                     CallFunc_GetEfficacyToBtlCnt_retValue;             // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34C0[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CAC[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2111,14 +2111,14 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34C1[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CAD[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34C2[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CAE[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_BI_GetCharaID_ReturnValue;                // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34C3[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CAF[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0070(0x0010)(ReferenceParm)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -2151,10 +2151,10 @@ struct BattleAICommand_C_Chk_PLBstOver2 final
 {
 public:
 	E_BAD_STATUS                                  N;                                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34C4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34C5[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB1[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2166,7 +2166,7 @@ public:
 	int32                                         CallFunc_BI_GetBstNum_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34C6[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB2[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue_1;            // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0060(0x0010)(ReferenceParm)
 };
@@ -2196,19 +2196,19 @@ struct BattleAICommand_C_Chk_ENBstOver2 final
 public:
 	E_BAD_STATUS                                  N;                                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34C7[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB3[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34C8[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB4[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetBstNum_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34C9[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB5[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue_1;            // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0058(0x0010)(ReferenceParm)
 };
@@ -2236,7 +2236,7 @@ struct BattleAICommand_C_Chk_PLAllHP final
 public:
 	int32                                         N;                                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34CA[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB6[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	float                                         Lo_Ratio;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Cnt;                                            // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2248,7 +2248,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34CB[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB7[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BI_GetHPRatio_retValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0060(0x0010)(ReferenceParm)
@@ -2258,7 +2258,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34CC[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB8[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_Chk_PLAllHP) == 0x000008, "Wrong alignment on BattleAICommand_C_Chk_PLAllHP");
@@ -2294,7 +2294,7 @@ struct BattleAICommand_C_Chk_ENAllHP final
 public:
 	int32                                         N;                                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34CD[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CB9[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	float                                         Lo_Ratio;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Cnt;                                            // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2306,7 +2306,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34CE[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CBA[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BI_GetHPRatio_retValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0060(0x0010)(ReferenceParm)
@@ -2316,7 +2316,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34CF[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CBB[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_Chk_ENAllHP) == 0x000008, "Wrong alignment on BattleAICommand_C_Chk_ENAllHP");
@@ -2351,7 +2351,7 @@ struct BattleAICommand_C_Chk_MyConsentrate final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34D0[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CBC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2373,7 +2373,7 @@ public:
 	int32                                         InSkillId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TurnCnt;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34D1[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CBD[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Lo_skill_id;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2384,9 +2384,9 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34D2[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CBE[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34D3[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CBF[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0068(0x0010)(ReferenceParm)
@@ -2433,7 +2433,7 @@ public:
 	int32                                         InSkillId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TurnCnt;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34D4[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC0[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_ChkUseSkill_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -2451,10 +2451,10 @@ struct BattleAICommand_C_Tar_SetTargetHojoMAX final
 {
 public:
 	E_EFFICACY_BD                                 Efficacy;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34D5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34D6[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC2[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_SetTargetHojoMAX) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_SetTargetHojoMAX");
@@ -2470,7 +2470,7 @@ struct BattleAICommand_C_Tar_NotBst2 final
 {
 public:
 	E_BAD_STATUS                                  Efficacy;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34D7[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2494,7 +2494,7 @@ public:
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_SetAIValue_Ret;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34D8[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC4[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -2535,7 +2535,7 @@ struct BattleAICommand_C_ClearTempValue final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34D9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_DelAIValue_Ret;                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -2565,9 +2565,9 @@ struct BattleAICommand_C_Chk_PLCnt final
 public:
 	int32                                         Num;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34DA[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC6[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Lo_Cnt;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34DB[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC7[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0020(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2590,13 +2590,13 @@ struct BattleAICommand_C_GetMySkillTargetArea final
 public:
 	int32                                         SkillIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SKILL_TARGET                                ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34DC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC8[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34DD[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC9[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           CallFunc_BI_GetBtlCharaData_ReturnValue;           // 0x0020(0x0148)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34DE[0x4];                                     // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CCA[0x4];                                     // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkillBaseData                         CallFunc_GetSkillBaseData_ReturnValue;             // 0x0170(0x0100)(ConstParm)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2622,15 +2622,15 @@ struct BattleAICommand_C_GetSkillHaveBst final
 public:
 	int32                                         SkillId;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BAD_STATUS                                  RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34DF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CCB[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<E_BAD_STATUS>                          Lo_BstList;                                        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Bst;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34E0[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CCC[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkillBaseData                         CallFunc_GetSkillBaseData_ReturnValue;             // 0x0020(0x0100)(ConstParm)
 	int32                                         CallFunc_SkillBaseDataGetValue_Bst_ReturnValue;    // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34E1[0x4];                                     // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CCD[0x4];                                     // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<E_BAD_STATUS>                          K2Node_MakeArray_Array;                            // 0x0130(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2712,7 +2712,7 @@ struct BattleAICommand_C_GetGlobalActNum final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34E2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CCE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetGlobalActNum_ReturnValue;           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -2762,7 +2762,7 @@ struct BattleAICommand_C_GetBlockTargetNum final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34E3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CCF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsBossFlagList_ReturnValue;     // 0x0018(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2780,7 +2780,7 @@ struct BattleAICommand_C_GetMyBstNum final
 {
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34E4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2849,7 +2849,7 @@ public:
 	TScriptInterface<class IBPI_BattleCharAction_C> Action;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_GetCharAction_Success;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34E5[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD1[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleCharAction_C> CallFunc_BI_GetCharAction_RetValue;                // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BattleAICommand_C_GetBPIActorAction) == 0x000008, "Wrong alignment on BattleAICommand_C_GetBPIActorAction");
@@ -2881,7 +2881,7 @@ struct BattleAICommand_C_ChkActNum final
 public:
 	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34E6[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD2[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2905,7 +2905,7 @@ struct BattleAICommand_C_ChkENTargetAll final
 public:
 	int32                                         TurnNum;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34E7[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD3[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_ChkENTargetAllArray_ReturnValue;       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -2922,7 +2922,7 @@ struct BattleAICommand_C_ChkMyUpLifting final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34E8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD4[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_IsUplifting_ReturnValue;               // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2941,7 +2941,7 @@ struct BattleAICommand_C_ChkENUpLiftingStage final
 public:
 	int32                                         Gauge;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34E9[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD5[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetUpliftingGauge_ReturnValue;         // 0x0018(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2960,10 +2960,10 @@ struct BattleAICommand_C_Tar_AishouReflection final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34EA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34EB[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD7[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouReflection) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouReflection");
@@ -2979,10 +2979,10 @@ struct BattleAICommand_C_Tar_AishouAbsorption final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34EC[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD8[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34ED[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CD9[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouAbsorption) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouAbsorption");
@@ -2998,10 +2998,10 @@ struct BattleAICommand_C_Tar_AishouBlock final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34EE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34EF[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDB[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouBlock) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouBlock");
@@ -3017,10 +3017,10 @@ struct BattleAICommand_C_Tar_AishouNotReflection final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDC[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F1[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDD[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouNotReflection) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouNotReflection");
@@ -3036,10 +3036,10 @@ struct BattleAICommand_C_Tar_AishouNotAbsorption final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F3[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDF[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouNotAbsorption) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouNotAbsorption");
@@ -3055,10 +3055,10 @@ struct BattleAICommand_C_Tar_AishouNotBlock final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F5[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE1[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_AishouNotBlock) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_AishouNotBlock");
@@ -3074,7 +3074,7 @@ struct BattleAICommand_C_Tar_Guard final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_Guard) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_Guard");
@@ -3088,7 +3088,7 @@ struct BattleAICommand_C_Tar_NotGuard final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_NotGuard) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_NotGuard");
@@ -3102,7 +3102,7 @@ struct BattleAICommand_C_Tar_TarTetra final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_TarTetra) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_TarTetra");
@@ -3116,7 +3116,7 @@ struct BattleAICommand_C_Tar_TarNotTetra final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34F9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_TarNotTetra) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_TarNotTetra");
@@ -3130,7 +3130,7 @@ struct BattleAICommand_C_Tar_TarMakra final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34FA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_TarMakra) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_TarMakra");
@@ -3144,7 +3144,7 @@ struct BattleAICommand_C_Tar_TarNotMakra final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34FB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_TarNotMakra) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_TarNotMakra");
@@ -3163,12 +3163,12 @@ public:
 	int32                                         DevilID_3;                                         // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SkillId;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34FC[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE8[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkillBaseData                         LSkillData;                                        // 0x0018(0x0100)(Edit, BlueprintVisible)
 	struct FBtlCommand                            Lo_Command;                                        // 0x0118(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBtlCommand                            K2Node_MakeStruct_BtlCommand;                      // 0x012C(0x0010)()
-	uint8                                         Pad_34FD[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE9[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MainInterface>    CallFunc_GetMainInterface_AsBPI_Main_Interface;    // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret_1;                      // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -3177,16 +3177,16 @@ public:
 	TScriptInterface<class IBPI_MainInterface>    CallFunc_BI_GetMainInterface_retValue_1;           // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<struct FBtlSummonData>                 CallFunc_BI_ShuffleSummonData_ReturnValue;         // 0x01A0(0x0010)(ConstParm, ReferenceParm)
 	int32                                         CallFunc_BI_SetSummonList_Ret;                     // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34FE[0x4];                                     // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CEA[0x4];                                     // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret_2;                      // 0x01B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<uint8>                                 CallFunc_AIBaseTar_SetTarAllEnemy_ReturnValue;     // 0x01C8(0x0010)(ReferenceParm)
 	TScriptInterface<class IBPI_PTFlagInterface>  CallFunc_BI_GetPartyFlagInterface_retValue;        // 0x01D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         CallFunc_Array_Get_Item;                           // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_ByteByte_ReturnValue;             // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34FF[0x2];                                     // 0x01EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CEB[0x2];                                     // 0x01EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3500[0x4];                                     // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CEC[0x4];                                     // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret_3;                      // 0x01F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_SetSummonDevilID_Ret;                  // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_SetSummonDevilID_Ret_1;                // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3194,9 +3194,9 @@ public:
 	int32                                         CallFunc_BI_SetSummonDevilID_Ret_3;                // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_ClearSummonList_Ret;                   // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x021C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3501[0x3];                                     // 0x021D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CED[0x3];                                     // 0x021D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3502[0x4];                                     // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CEE[0x4];                                     // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0228(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -3244,7 +3244,7 @@ struct BattleAICommand_C_Tar_TarAutoBattle final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3503[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CEF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_TarAutoBattle) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_TarAutoBattle");
@@ -3258,7 +3258,7 @@ struct BattleAICommand_C_GetMySkillIDByType final
 {
 public:
 	E_SKILL_TYPE                                  SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3504[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SkillId;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_SkillIDBySkillType_ReturnValue; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3308,10 +3308,10 @@ struct BattleAICommand_C_GetUpliftProbability final
 {
 public:
 	int32                                         Propability;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3505[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_ChkEnemySurpriseTurn_EnemySurpriseTurn; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3506[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF2[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_AIBaseGet_UpliftRate_ReturnValue;         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_GetUpliftProbability) == 0x000008, "Wrong alignment on BattleAICommand_C_GetUpliftProbability");
@@ -3331,13 +3331,13 @@ public:
 	int32                                         InTurn;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsed;                                            // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          LUsed;                                             // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3507[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF3[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetSkillName_ReturnValue;                 // 0x0010(0x0018)(ConstParm)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AIBaseChk_MyUsedSkillIDTurn_ReturnValue;  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3508[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF4[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -3368,16 +3368,16 @@ public:
 	int32                                         InTurn;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          LUsed;                                             // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3509[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF5[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_350A[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF6[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_350B[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF7[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetSkillName_ReturnValue;                 // 0x0048(0x0018)(ConstParm)
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -3422,7 +3422,7 @@ struct BattleAICommand_C_ChkEventEncount final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_350C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MainInterface>    CallFunc_GetMainInterface_AsBPI_Main_Interface;    // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_EncountIsEvent_ReturnValue;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -3440,7 +3440,7 @@ struct BattleAICommand_C_Get_MyAidCounter final
 {
 public:
 	E_BTL_CNT                                     AidCounter;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_350D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CF9[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3463,7 +3463,7 @@ public:
 	int32                                         SkillId;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Turn;                                              // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_350E[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CFA[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_Cnt;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3474,11 +3474,11 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsedPrevSkillIDTurn_IsUsed;             // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_350F[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CFB[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_BI_GetCharaID_ReturnValue;                // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3510[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CFC[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0068(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Chk_ENIDUsedSkillIDTurn) == 0x000008, "Wrong alignment on BattleAICommand_C_Chk_ENIDUsedSkillIDTurn");
@@ -3509,28 +3509,28 @@ struct BattleAICommand_C_GetSelUseSkill final
 public:
 	TArray<struct FBtlAISkillData>                AISkillData;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         SkillId;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3511[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CFD[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Lo_DebugPrint;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Lo_NowPerc;                                        // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Rand;                                           // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_TotalPerc;                                      // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3512[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CFE[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBtlAISkillData>                Lo_SkillData;                                      // 0x0038(0x0010)(Edit, BlueprintVisible)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3513[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CFF[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBtlAISkillData                        CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(NoDestructor)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_GetSkillName_ReturnValue;                 // 0x0078(0x0018)(ConstParm)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3514[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D00[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3515[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D01[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue_2;           // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -3543,12 +3543,12 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_7;              // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_8;              // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3516[0x3];                                     // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D02[0x3];                                     // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlAISkillData                        CallFunc_Array_Get_Item_1;                         // 0x0164(0x0008)(NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3517[0x3];                                     // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D03[0x3];                                     // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3601,39 +3601,39 @@ struct BattleAICommand_C_Get_HojoMinusTotal final
 public:
 	E_BTL_SIDE                                    Inside;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3518[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D04[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetValue;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Total;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3519[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D05[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	E_BTL_CNT                                     CallFunc_ChangeHojoType_retValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_351A[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D06[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_1; // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_351B[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D07[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_351C[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D08[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_351D[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D09[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_351E[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0A[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_6;              // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_351F[0x4];                                     // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0B[0x4];                                     // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0128(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -3678,42 +3678,42 @@ struct BattleAICommand_C_Get_HojoPlusTotal final
 public:
 	E_BTL_SIDE                                    Inside;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3520[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0C[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetValue;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Total;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3521[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0D[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	E_BTL_CNT                                     CallFunc_ChangeHojoType_retValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3522[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0E[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_1; // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3523[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0F[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3524[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D10[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3525[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D11[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3526[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D12[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_6;              // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3527[0x4];                                     // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D13[0x4];                                     // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0128(0x0010)(ReferenceParm)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3528[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D14[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_Get_HojoPlusTotal) == 0x000008, "Wrong alignment on BattleAICommand_C_Get_HojoPlusTotal");
@@ -3755,7 +3755,7 @@ struct BattleAICommand_C_Tar_Smart final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3529[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D15[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_Smart) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_Smart");
@@ -3769,28 +3769,28 @@ struct BattleAICommand_C_GetENIDCounter final
 {
 public:
 	E_BTL_CNT                                     AidCounter;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_352A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D16[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DevilID;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetValue;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_352B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D17[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_ActList;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_DevilID;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_CNT                                     Lo_Cnt;                                            // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_352C[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D18[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_352D[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D19[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetAidCounter_ReturnValue;             // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_352E[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D1A[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue_1;             // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetCharaID_ReturnValue;                // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_352F[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D1B[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0080(0x0010)(ReferenceParm)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -3823,18 +3823,18 @@ struct BattleAICommand_C_GetRandomIntegerInArray final
 public:
 	TArray<struct FBtlAISkillData>                AISkillData;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         Ret;                                               // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3530[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D1C[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Lo_DebugPrint;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Lo_NowPerc;                                        // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Rand;                                           // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_TotalPerc;                                      // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3531[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D1D[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBtlAISkillData>                Lo_SkillData;                                      // 0x0038(0x0010)(Edit, BlueprintVisible)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3532[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D1E[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBtlAISkillData                        CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(NoDestructor)
@@ -3854,12 +3854,12 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_7;              // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_8;              // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3533[0x3];                                     // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D1F[0x3];                                     // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlAISkillData                        CallFunc_Array_Get_Item_1;                         // 0x0144(0x0008)(NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3534[0x3];                                     // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D20[0x3];                                     // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3916,13 +3916,13 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3535[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D21[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetBstCnt_PartyIndex_Cnt;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3536[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D22[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0050(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -3956,20 +3956,20 @@ public:
 	int32                                         Temp_int_Variable;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_1;                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3537[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D23[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_Conv_IntToByte_ReturnValue_1;             // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetEnumeratorValueFromIndex_ReturnValue;  // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3538[0x1];                                     // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D24[0x1];                                     // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_2;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3539[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D25[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_CheckBadStatus_retValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_353A[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D26[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_GetBstCnt_PartyIndex) == 0x000008, "Wrong alignment on BattleAICommand_C_GetBstCnt_PartyIndex");
@@ -3998,7 +3998,7 @@ struct BattleAICommand_C_Tar_ENAnalyze final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_353B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D27[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_ENAnalyze) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_ENAnalyze");
@@ -4022,15 +4022,15 @@ public:
 	int32                                         CallFunc_Array_Get_Item;                           // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_353C[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D28[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetCharaID_retValue;                   // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_353D[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D29[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0090(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_CheckFlag2_retValue;                   // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_353E[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D2A[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_ChkDisabledAishou_ENAnalyze) == 0x000008, "Wrong alignment on BattleAICommand_C_ChkDisabledAishou_ENAnalyze");
@@ -4066,10 +4066,10 @@ public:
 	int32                                         SkillId;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsExclusionLeader;                                 // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Success;                                           // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_353F[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D2B[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Lo_Value;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Lo_IsExclusionLeader;                              // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3540[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D2C[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_DevilList;                                      // 0x0020(0x0010)(Edit, BlueprintVisible)
 	int32                                         Lo_IndexAdd;                                       // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_SkillId;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4078,17 +4078,17 @@ public:
 	int32                                         Lo_Devil1;                                         // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_Devil0;                                         // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3541[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D2D[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_GetEmptyPosSummonDevilId_ReturnValue;     // 0x0050(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3542[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D2E[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3543[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D2F[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Select_Default;                             // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Act_Summon_success;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -4128,7 +4128,7 @@ struct BattleAICommand_C_Tar_Weak final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3544[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D30[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_Weak) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_Weak");
@@ -4183,7 +4183,7 @@ struct BattleAICommand_C_Tar_ValidSkill final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3545[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D31[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_ValidSkill) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_ValidSkill");
@@ -4197,7 +4197,7 @@ struct BattleAICommand_C_Tar_Chohatsu final
 {
 public:
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3546[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D32[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_Tar_Chohatsu) == 0x000008, "Wrong alignment on BattleAICommand_C_Tar_Chohatsu");
@@ -4221,17 +4221,17 @@ public:
 	int32                                         CallFunc_Array_Get_Item;                           // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3547[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D33[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleParty_C>    CallFunc_GetBIPartySystem_ret;                     // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_CheckFlag2_retValue;                   // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3548[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D34[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_BI_GetSideIsInFieldList_ReturnValue;      // 0x0090(0x0010)(ReferenceParm)
 	int32                                         CallFunc_BI_GetCharaID_retValue;                   // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_CheckFlag2_retValue_1;                 // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3549[0x2];                                     // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D35[0x2];                                     // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BattleAICommand_C_ChkDisabledAishou_ENAnalyze2) == 0x000008, "Wrong alignment on BattleAICommand_C_ChkDisabledAishou_ENAnalyze2");
@@ -4445,7 +4445,7 @@ struct BattleAICommand_C_BI_ChkENBstOver final
 {
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_354A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D36[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_ENBstOver_retValue;                   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -4463,7 +4463,7 @@ struct BattleAICommand_C_BI_ChkPLBstOver final
 {
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_354B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D37[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_PLBstOver_retValue;                   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -4657,9 +4657,9 @@ struct BattleAICommand_C_BI_TarPartyIndex final
 public:
 	int32                                         InPartyIndex;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_354C[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D38[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_354D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D39[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0010(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_BI_TarPartyIndex) == 0x000008, "Wrong alignment on BattleAICommand_C_BI_TarPartyIndex");
@@ -4675,7 +4675,7 @@ struct BattleAICommand_C_BI_TarHero final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_354E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D3A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetHeroIndex_ReturnValue;              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4695,7 +4695,7 @@ struct BattleAICommand_C_BI_TarNotHero final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_354F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D3B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BI_GetHeroIndex_ReturnValue;              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -4941,7 +4941,7 @@ struct BattleAICommand_C_BI_ChkPLHojoMinusNum final
 {
 public:
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3550[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D3C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_PLHojoMinusNum_retValue;              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -4959,7 +4959,7 @@ struct BattleAICommand_C_BI_ChkENHojoMinusNum final
 {
 public:
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3551[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D3D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_ENHojoMinusNum_retValue;              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -4977,7 +4977,7 @@ struct BattleAICommand_C_BI_ChkPLHojoPlusNum final
 {
 public:
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3552[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D3E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_PLHojoPlusNum_retValue;               // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -4995,7 +4995,7 @@ struct BattleAICommand_C_BI_ChkENHojoPlusNum final
 {
 public:
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3553[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D3F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_ENHojoPlusNum_retValue;               // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -5068,7 +5068,7 @@ struct BattleAICommand_C_BI_Chk_ENIDHojoMinus final
 public:
 	int32                                         InID;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_EFFICACY_BD                                 N;                                                 // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3554[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D40[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         N2;                                                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_ENIDHojoMinus_retValue;               // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -5102,7 +5102,7 @@ struct BattleAICommand_C_BI_GetENDevilID_AIAtkType final
 {
 public:
 	E_AI_ATK_TYPE                                 AtkType;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3555[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D41[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DevilID;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetENDevilID_AIAtkType_devilID;           // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -5169,7 +5169,7 @@ struct BattleAICommand_C_BI_Chk_PLBstOver2 final
 {
 public:
 	E_BAD_STATUS                                  N;                                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3556[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D42[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_PLBstOver2_retValue;                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -5243,7 +5243,7 @@ struct BattleAICommand_C_BI_TarNotBst2 final
 {
 public:
 	E_BAD_STATUS                                  N;                                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3557[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D43[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -5511,7 +5511,7 @@ struct BattleAICommand_C_BI_GetPartnerNum final
 {
 public:
 	int32                                         RetValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3558[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D44[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 CallFunc_BI_GetPartnerList_ReturnValue;            // 0x0018(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -5529,7 +5529,7 @@ struct BattleAICommand_C_BI_GetMyBstNum final
 {
 public:
 	E_BAD_STATUS                                  bst;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3559[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D45[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Value;                                             // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMyBstNum_num;                          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -5565,7 +5565,7 @@ struct BattleAICommand_C_BI_ChkAllTurn final
 public:
 	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_355A[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D46[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BI_GetAITurnNum_TurnNum;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -5642,7 +5642,7 @@ struct BattleAICommand_C_BI_GetPress final
 {
 public:
 	int32                                         RetValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_355B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D47[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FPressIcon                             CallFunc_BI_GetPressIcon_ReturnValue;              // 0x0018(0x000C)(NoDestructor)
 	struct FPressIcon                             CallFunc_CalcDrawPressIconNum_ReturnValue;         // 0x0024(0x000C)(NoDestructor)
@@ -5662,7 +5662,7 @@ struct BattleAICommand_C_BI_GetPressFull final
 {
 public:
 	int32                                         RetValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_355C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D48[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FPressIcon                             CallFunc_BI_GetPressIcon_ReturnValue;              // 0x0018(0x000C)(NoDestructor)
 	struct FPressIcon                             CallFunc_CalcDrawPressIconNum_ReturnValue;         // 0x0024(0x000C)(NoDestructor)
@@ -5680,7 +5680,7 @@ struct BattleAICommand_C_BI_GetPressHalf final
 {
 public:
 	int32                                         RetValue;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_355D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D49[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PTUtilInterface>  CallFunc_GetPTUtilInterface_retValue;              // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FPressIcon                             CallFunc_BI_GetPressIcon_ReturnValue;              // 0x0018(0x000C)(NoDestructor)
 	struct FPressIcon                             CallFunc_CalcDrawPressIconNum_ReturnValue;         // 0x0024(0x000C)(NoDestructor)
@@ -5698,10 +5698,10 @@ struct BattleAICommand_C_BI_OptUpLifting final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_355E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D4A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Lo_WaitTaskList;                                   // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_355F[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D4B[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_BattleTaskFactory_C> CallFunc_BI_GetTaskFactory_retValue;               // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -5824,7 +5824,7 @@ struct BattleAICommand_C_BI_ChkPLAishouReflection final
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3560[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D4C[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AIBaseChk_PLAishouReflection_ReturnValue; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -5842,7 +5842,7 @@ struct BattleAICommand_C_BI_ChkPLAishouAbsorption final
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3561[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D4D[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AIBaseChk_PLAishouAbsorption_ReturnValue; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -5860,7 +5860,7 @@ struct BattleAICommand_C_BI_ChkPLAishouBlock final
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3562[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D4E[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AIBaseChk_PLAishouBlock_ReturnValue;      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6082,7 +6082,7 @@ struct BattleAICommand_C_BI_GetPLAishouReflection final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3563[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D4F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLAishouReflection_ReturnValue; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -6098,7 +6098,7 @@ struct BattleAICommand_C_BI_GetPLAishouAbsorption final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3564[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D50[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLAishouAbsorption_ReturnValue; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -6114,7 +6114,7 @@ struct BattleAICommand_C_BI_GetPLAishouBlock final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3565[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D51[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLAishouBlock_ReturnValue;      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -6130,7 +6130,7 @@ struct BattleAICommand_C_BI_GetPLAishouPlus final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3566[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D52[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLAishouPlus_ReturnValue;       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -6146,7 +6146,7 @@ struct BattleAICommand_C_BI_GetPLAishouFlat final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3567[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D53[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLAishouFlat_ReturnValue;       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -6162,7 +6162,7 @@ struct BattleAICommand_C_BI_GetPLAishouMinus final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3568[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D54[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLAishouMinus_ReturnValue;      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -6192,7 +6192,7 @@ struct BattleAICommand_C_BI_ChkMyAtcReflectionBefTurn final
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3569[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D55[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AIBaseChk_MyAtcReflectionBefTurn_ReturnValue; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6210,7 +6210,7 @@ struct BattleAICommand_C_BI_ChkMyAtcAbsorptionBefTurn final
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_356A[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D56[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AIBaseChk_MyAtcAbsorptionBefTurn_ReturnValue; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6228,7 +6228,7 @@ struct BattleAICommand_C_BI_ChkMyAtcBlockBefTurn final
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_356B[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D57[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AIBaseChk_MyAtcBlockBefTurn_ReturnValue;  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6246,7 +6246,7 @@ struct BattleAICommand_C_BI_ChkMyDmgAishouBefTurn final
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_356C[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D58[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AIBaseChk_MyDmgAishouBefTurn_ReturnValue; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6278,7 +6278,7 @@ struct BattleAICommand_C_BI_GetMySkillIDByType final
 {
 public:
 	E_SKILL_TYPE                                  SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_356D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D59[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SkillId;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_SkillIDBySkillType_ReturnValue; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -6337,7 +6337,7 @@ struct BattleAICommand_C_BI_ChkEnemySurpriseTurn final
 {
 public:
 	bool                                          IsSurprise;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_356E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D5A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_GetBIMainWork_ret;                        // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_ChkEnemySurpriseTurn_EnemySurpriseTurn; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6353,7 +6353,7 @@ struct BattleAICommand_C_BI_GetAttackSkillID final
 {
 public:
 	bool                                          IsAll;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_356F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D5B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SkillId;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_AttackSkillID_ReturnValue;      // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -6373,7 +6373,7 @@ public:
 	int32                                         InSkillId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InTurn;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3570[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D5C[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsedPrevSkillIDTurn_IsUsed;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6393,7 +6393,7 @@ public:
 	int32                                         InSkillId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InActNum;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsed;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3571[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D5D[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsedPrevSkillIDAct_retValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6424,7 +6424,7 @@ struct BattleAICommand_C_BI_ChkMyFirstAct final
 {
 public:
 	bool                                          IsFirstAct;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3572[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D5E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_BI_GetMyActNum_retValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -6440,7 +6440,7 @@ struct BattleAICommand_C_BI_GetMyAidCounter final
 {
 public:
 	E_BTL_CNT                                     AidCounter;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3573[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D5F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Get_MyAidCounter_retValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -6508,7 +6508,7 @@ struct BattleAICommand_C_BI_GetHojoPlusTotal final
 public:
 	E_BTL_SIDE                                    Inside;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3574[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D60[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         OutTotal;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Get_HojoPlusTotal_retValue;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -6528,7 +6528,7 @@ struct BattleAICommand_C_BI_GetHojoMinusTotal final
 public:
 	E_BTL_SIDE                                    Inside;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_AI_SERCH_AID                                InHojo;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3575[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D61[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         OutTotal;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Get_HojoMinusTotal_retValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -6606,7 +6606,7 @@ struct BattleAICommand_C_BI_ChkENIDHojoPlus final
 public:
 	int32                                         InDevilId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_EFFICACY_BD                                 InHojo;                                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3576[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D62[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InValue;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Chk_ENIDHojoPlus_retValue;                // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -6625,7 +6625,7 @@ struct BattleAICommand_C_BI_GetENIDAidCounter final
 {
 public:
 	E_BTL_CNT                                     AidCounter;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3577[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D63[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DevilID;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetValue;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetENIDCounter_retValue;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -6643,7 +6643,7 @@ struct BattleAICommand_C_BI_TarHPRatioMIN final
 {
 public:
 	bool                                          Ret;                                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3578[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D64[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
@@ -6659,7 +6659,7 @@ struct BattleAICommand_C_BI_TarHPRatioMAX final
 {
 public:
 	bool                                          Ret;                                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3579[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D65[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
@@ -6706,7 +6706,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_357A[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D66[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
@@ -6786,12 +6786,12 @@ struct BattleAICommand_C_BI_ChkMyPhysicalCharge final
 {
 public:
 	bool                                          Ret;                                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_357B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D67[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Get_MyAidCounter_retValue;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Get_MyAidCounter_retValue_1;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_357C[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D68[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Get_MyAidCounter_retValue_2;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_2;             // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -6815,7 +6815,7 @@ struct BattleAICommand_C_BI_ChkMyMagicCharge final
 {
 public:
 	bool                                          Ret;                                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_357D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D69[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Get_MyAidCounter_retValue;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Get_MyAidCounter_retValue_1;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -6868,7 +6868,7 @@ struct BattleAICommand_C_BI_GetSkillOverwriteBst final
 public:
 	int32                                         SkillId;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BAD_STATUS                                  bst;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_357E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D6A[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkillBaseData                         CallFunc_GetSkillBaseData_ReturnValue;             // 0x0008(0x0100)(ConstParm)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSkillOverwriteInfo                    CallFunc_Array_Get_Item;                           // 0x010C(0x0008)(NoDestructor)
@@ -6876,7 +6876,7 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x011D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_357F[0x2];                                     // 0x011E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D6B[0x2];                                     // 0x011E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -6977,7 +6977,7 @@ struct BattleAICommand_C_BI_GetPLNumVaildAttr_ENAnalyze final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3580[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D6C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLNumValidAttrENAnalyze_ReturnValue; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -7117,7 +7117,7 @@ public:
 	int32                                         DevilID;                                           // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PTMemDataInterface> CallFunc_GetPTMemInterface_retValue;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3581[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D6D[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlParty                              CallFunc_BI_GetPartyData_ReturnValue;              // 0x0020(0x0320)()
 };
 static_assert(alignof(BattleAICommand_C_BI_GetStealDevilID) == 0x000010, "Wrong alignment on BattleAICommand_C_BI_GetStealDevilID");
@@ -7146,7 +7146,7 @@ struct BattleAICommand_C_BI_GetPLAishouShield final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3582[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D6E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLShieldNum_ReturnValue;        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -7177,7 +7177,7 @@ struct BattleAICommand_C_BI_GetPLNumVaildAttr final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3583[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D6F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLValidAttrNum_ReturnValue;     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -7263,7 +7263,7 @@ struct BattleAICommand_C_BI_GetMyAishouChangeThisTurn final
 public:
 	TArray<E_ATTRIBUTE_TYPE>                      List;                                              // 0x0000(0x0010)(Parm, OutParm)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3584[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D70[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<E_ATTRIBUTE_TYPE>                      CallFunc_AIBaseGet_AishouChangeThisTurn_ReturnValue; // 0x0018(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_BI_GetMyAishouChangeThisTurn) == 0x000008, "Wrong alignment on BattleAICommand_C_BI_GetMyAishouChangeThisTurn");
@@ -7279,7 +7279,7 @@ struct BattleAICommand_C_BI_GetMyAisyouChangeAll final
 public:
 	TArray<E_ATTRIBUTE_TYPE>                      List;                                              // 0x0000(0x0010)(Parm, OutParm)
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3585[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D71[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<E_ATTRIBUTE_TYPE>                      CallFunc_AIBaseGet_AishouChangeAll_ReturnValue;    // 0x0018(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BattleAICommand_C_BI_GetMyAisyouChangeAll) == 0x000008, "Wrong alignment on BattleAICommand_C_BI_GetMyAisyouChangeAll");
@@ -7294,7 +7294,7 @@ struct BattleAICommand_C_BI_TarENAnalyze2 final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3586[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D72[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetActorIndex_retValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<uint8>                                 CallFunc_AIBaseTar_Common_ReturnValue;             // 0x0008(0x0010)(ReferenceParm)
 };
@@ -7310,7 +7310,7 @@ struct BattleAICommand_C_BI_GetPLNumVaildAttr_ENAnalyze2 final
 {
 public:
 	E_ATTRIBUTE_TYPE                              Attr;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3587[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D73[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Num;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AIBaseGet_PLNumValidAttrENAnalyze2_ReturnValue; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

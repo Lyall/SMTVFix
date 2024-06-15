@@ -23,7 +23,7 @@ struct TemplateSequenceActor_SetBinding final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverridesDefault;                                 // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10F4[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1137[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TemplateSequenceActor_SetBinding) == 0x000008, "Wrong alignment on TemplateSequenceActor_SetBinding");
 static_assert(sizeof(TemplateSequenceActor_SetBinding) == 0x000010, "Wrong size on TemplateSequenceActor_SetBinding");
@@ -82,7 +82,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTemplateSequence*                      TemplateSequence;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneSequencePlaybackSettings    Settings;                                          // 0x0010(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10F6[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1139[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ATemplateSequenceActor*                 OutActor;                                          // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTemplateSequencePlayer*                ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

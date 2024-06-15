@@ -21,7 +21,7 @@ struct FBattleMapDark_T final
 public:
 	int32                                         ID_9_0B6214F44E5A3F28F1885F9E734454B8;             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Memo_12_F4FC2BE84DD18C411CA5DB8D36567E25;          // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_460A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C34[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UMaterialParameterApplier> Parameter_17_1476BBD94B6AA857089953ADF7DAB8C4;     // 0x0010(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UParticleSystem>         Particle_21_6A2739ED469F1CFFF44AC188F7F06995;      // 0x0038(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };

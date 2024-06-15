@@ -22,7 +22,7 @@ struct BPI_CommonWindowCtrl_C_IActionWindowOpenByLabel final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CE1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C79[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   InLabel;                                           // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InIconType;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -53,7 +53,7 @@ struct BPI_CommonWindowCtrl_C_IActionWindowOpenByIndex final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CE2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C7A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InIndex;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InIconType;                                        // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -73,11 +73,11 @@ struct BPI_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByLabel final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CE3[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C7B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   InLabel;                                           // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_HELP_MAPPING_KEY_TYPE                   InAction;                                          // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CE4[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C7C[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InIconColor;                                       // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByLabel) == 0x000008, "Wrong alignment on BPI_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByLabel");
@@ -94,11 +94,11 @@ struct BPI_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByIndex final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CE5[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C7D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InIndex;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_HELP_MAPPING_KEY_TYPE                   InAction;                                          // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CE6[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C7E[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InIconColor;                                       // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByIndex) == 0x000008, "Wrong alignment on BPI_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByIndex");

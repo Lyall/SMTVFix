@@ -87,7 +87,7 @@ public:
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FName>                           InSelectItemName;                                  // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          InUseNewIcon;                                      // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3195[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D90[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  InSelectItemNewIcon;                               // 0x0028(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<bool>                                  InSelectTextDisabledColor;                         // 0x0038(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
@@ -150,7 +150,7 @@ public:
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 InSelectItemIndex;                                 // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          InUseNewIcon;                                      // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3196[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D91[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  InSelectItemNewIcon;                               // 0x0028(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<bool>                                  InSelectTextDisabledColor;                         // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
@@ -267,7 +267,7 @@ public:
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 NSelectItemIndex;                                  // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          InUseNewIcon;                                      // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3197[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D92[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  InSelectItemNewIcon;                               // 0x0028(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<bool>                                  InSelectTextDisabledColor;                         // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          InBuildTextLater;                                  // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -293,7 +293,7 @@ public:
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FName>                           InSelectItemName;                                  // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          InUseNewIcon;                                      // 0x0020(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3198[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D93[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  InSelectItemNewIcon;                               // 0x0028(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<bool>                                  InSelectTextDisabledColor;                         // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          InBuildTextLater;                                  // 0x0048(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -365,7 +365,7 @@ struct BPI_MsgCtrl_C_IMsgSetRichTextProgramValue final
 {
 public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3199[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D94[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 InValue;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_MsgCtrl_C_IMsgSetRichTextProgramValue) == 0x000008, "Wrong alignment on BPI_MsgCtrl_C_IMsgSetRichTextProgramValue");
@@ -469,7 +469,7 @@ struct BPI_MsgCtrl_C_IMsgWindowIsConfirmedMouse final
 {
 public:
 	bool                                          OutFinished;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_319A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D95[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         OutSelectedIndex;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_MsgCtrl_C_IMsgWindowIsConfirmedMouse) == 0x000004, "Wrong alignment on BPI_MsgCtrl_C_IMsgWindowIsConfirmedMouse");
@@ -534,7 +534,7 @@ public:
 	int32                                         Param_Index;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ExecutionText;                                     // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ShowPageIconAfterCompleted;                        // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_319B[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D96[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 SpeakingActor;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          FullvoiceText;                                     // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -556,7 +556,7 @@ public:
 	class FName                                   Label;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ExecutionText;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ShowPageIconAfterCompleted;                        // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_319C[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D97[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 SpeakingActor;                                     // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          FullvoiceText;                                     // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -578,7 +578,7 @@ public:
 	class FName                                   Label;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ExecutionText;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ShowPageIconAfterCompleted;                        // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_319D[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D98[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 SpeakingActor;                                     // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_MsgCtrl_C_IMsgCtrl_DrawCommonMsgTextLipSync) == 0x000008, "Wrong alignment on BPI_MsgCtrl_C_IMsgCtrl_DrawCommonMsgTextLipSync");

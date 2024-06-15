@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         DeltaTime;                                         // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4438[0x4];                                     // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5B3A[0x4];                                     // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 NkmId;                                             // 0x0238(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 	int32                                         SpawnNum;                                          // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	float                                         TestScale;                                         // 0x024C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -37,7 +37,7 @@ public:
 	class AMapPlayerSpawner_C*                    PlayerSpawner;                                     // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         StartIndex;                                        // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_InitialVisibility;                               // 0x0294(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_4439[0x3];                                     // 0x0295(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5B3B[0x3];                                     // 0x0295(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         M_Delay;                                           // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         M_ValidDevils;                                     // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -52,7 +52,7 @@ struct WB_MinimapPointOfInterest_C_Update final
 {
 public:
 	E_MINIMAP_MODE                                Mode;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_386C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Dimensions;                                        // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CanvasSize;                                        // 0x0010(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CanvasLocation;                                    // 0x001C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -93,7 +93,7 @@ struct WB_MinimapPointOfInterest_C_UpdatePlayer final
 {
 public:
 	E_MINIMAP_MODE                                InMinimapMode;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_386D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Dimensions;                                        // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CanvasSize;                                        // 0x0010(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Zoom;                                              // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -105,7 +105,7 @@ public:
 	float                                         CallFunc_GetCameraAngle_Angle;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShouldRotateMinimap_RotateMinimap;        // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ShouldRotateMinimap_RotateMinimap_1;      // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_386E[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A3[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMinimapManager*                        CallFunc_GetMinimapManager_ReturnValue;            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0060(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
@@ -117,9 +117,9 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsInGardenLevel_IsInGardenLevel;          // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ShouldRotateMinimap_RotateMinimap_2;      // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_386F[0x1];                                     // 0x00BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A4[0x1];                                     // 0x00BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_Divide_Vector2DFloat_ReturnValue;         // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3870[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A5[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMinimapManager*                        CallFunc_GetMinimapManager_ReturnValue_2;          // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_X;                          // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_Y;                          // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -128,12 +128,12 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3871[0x3];                                     // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A6[0x3];                                     // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_Divide_Vector2DFloat_ReturnValue_1;       // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_X_1;                        // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3872[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A7[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_1;              // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMinimapRenderParam                    K2Node_MakeStruct_MinimapRenderParam;              // 0x0100(0x0090)(NoDestructor)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0190(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -141,7 +141,7 @@ public:
 	struct FVector                                CallFunc_CalcScreenLocation_OutScreenLocation;     // 0x01A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_CalcScreenLocation_OutDist2;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MINIMAP_VISIBILITY                          CallFunc_CalcScreenLocation_ReturnValue;           // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3873[0x3];                                     // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A8[0x3];                                     // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -240,14 +240,14 @@ struct WB_MinimapPointOfInterest_C_InitFootprint final
 public:
 	class UImage*                                 CallFunc_SpawnObject_ReturnValue;                  // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3874[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43A9[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3875[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43AA[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MinimapPointOfInterest_C_InitFootprint) == 0x000008, "Wrong alignment on WB_MinimapPointOfInterest_C_InitFootprint");
@@ -268,12 +268,12 @@ struct WB_MinimapPointOfInterest_C_UpdateFootprintImage final
 {
 public:
 	class UImage*                                 Image;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3876[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43AB[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMinimapFootprintEntry                 Entry;                                             // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorFloat_ReturnValue;         // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3877[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43AC[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakVector_X;                            // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y;                            // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Z;                            // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -299,15 +299,15 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3878[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43AD[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMinimapManager*                        CallFunc_GetMinimapManager_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMinimapManager*                        CallFunc_GetMinimapManager_ReturnValue_1;          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UImage*>                         CallFunc_GetIconImageArray_ReturnValue;            // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3879[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43AE[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UImage*                                 CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_387A[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43AF[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MinimapPointOfInterest_C_InitImage) == 0x000008, "Wrong alignment on WB_MinimapPointOfInterest_C_InitImage");
@@ -329,13 +329,13 @@ struct WB_MinimapPointOfInterest_C_UpdateFootprint final
 {
 public:
 	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_387B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43B0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMinimapManager*                        CallFunc_GetMinimapManager_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FMinimapFootprintEntry>         CallFunc_GetFootprintEntries_ReturnValue;          // 0x0018(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_387C[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43B1[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MinimapPointOfInterest_C_UpdateFootprint) == 0x000008, "Wrong alignment on WB_MinimapPointOfInterest_C_UpdateFootprint");
@@ -399,11 +399,11 @@ struct WB_MinimapPointOfInterest_C_GetCameraAngle final
 {
 public:
 	float                                         Angle;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_387D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43B2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerBase_C*                          K2Node_DynamicCast_AsPlayer_Base;                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_387E[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43B3[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_K2_GetComponentRotation_ReturnValue;      // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

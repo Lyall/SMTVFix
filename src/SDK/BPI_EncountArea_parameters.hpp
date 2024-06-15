@@ -25,7 +25,7 @@ struct BPI_EncountArea_C_BPI_GetEncountAreaBox final
 public:
 	struct FTransform                             BoxPos;                                            // 0x0000(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 	struct FVector                                BoxSize;                                           // 0x0030(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53B8[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698B[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        AddPoints;                                         // 0x0040(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_EncountArea_C_BPI_GetEncountAreaBox) == 0x000010, "Wrong alignment on BPI_EncountArea_C_BPI_GetEncountAreaBox");
@@ -41,7 +41,7 @@ struct BPI_EncountArea_C_BPI_SpawnSymbol final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsManualPos;                                       // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_53B9[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698C[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ManualPos;                                         // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	bool                                          NewParam;                                          // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -230,7 +230,7 @@ struct BPI_EncountArea_C_BPI_GetSafeZoneID final
 {
 public:
 	bool                                          ManualSafeZoneID;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_53BA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SafeZoneID;                                        // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_EncountArea_C_BPI_GetSafeZoneID) == 0x000004, "Wrong alignment on BPI_EncountArea_C_BPI_GetSafeZoneID");
@@ -386,7 +386,7 @@ struct BPI_EncountArea_C_BPI_GetSymbolInfo final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53BB[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698E[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSpawnSymbolInfo                       SymbolInfo;                                        // 0x0010(0x00A0)(Parm, OutParm, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_EncountArea_C_BPI_GetSymbolInfo) == 0x000010, "Wrong alignment on BPI_EncountArea_C_BPI_GetSymbolInfo");
@@ -478,7 +478,7 @@ struct BPI_EncountArea_C_BPI_TimeAttackEncountAreaStart final
 {
 public:
 	bool                                          CheckMission;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_53BC[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MissionId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewParam;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -495,7 +495,7 @@ struct BPI_EncountArea_C_BPI_TimeAttackEncountAreaEnd final
 public:
 	bool                                          Effect;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CheckMission;                                      // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_53BD[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6990[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MissionId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewParam;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

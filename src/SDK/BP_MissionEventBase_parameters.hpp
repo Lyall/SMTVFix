@@ -22,7 +22,7 @@ struct BP_MissionEventBase_C_ExecuteUbergraph_BP_MissionEventBase final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_450F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C33[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetMissionName_ReturnValue;               // 0x0008(0x0018)(ConstParm)
 	struct FMissionData                           CallFunc_GetMissionData_ReturnValue;               // 0x0020(0x00B8)(ConstParm)
 };

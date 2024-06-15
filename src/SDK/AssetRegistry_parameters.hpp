@@ -24,7 +24,7 @@ struct AssetRegistryHelpers_CreateAssetData final
 public:
 	const class UObject*                          InAsset;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowBlueprintClass;                              // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1FFF[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_210B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAssetData                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AssetRegistryHelpers_CreateAssetData) == 0x000008, "Wrong alignment on AssetRegistryHelpers_CreateAssetData");
@@ -105,7 +105,7 @@ public:
 	class FName                                   InTagName;                                         // 0x0060(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OutTagValue;                                       // 0x0068(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0078(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2000[0x7];                                     // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_210C[0x7];                                     // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistryHelpers_GetTagValue) == 0x000008, "Wrong alignment on AssetRegistryHelpers_GetTagValue");
 static_assert(sizeof(AssetRegistryHelpers_GetTagValue) == 0x000080, "Wrong size on AssetRegistryHelpers_GetTagValue");
@@ -121,7 +121,7 @@ struct AssetRegistryHelpers_IsAssetLoaded final
 public:
 	struct FAssetData                             InAssetData;                                       // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2001[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_210D[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistryHelpers_IsAssetLoaded) == 0x000008, "Wrong alignment on AssetRegistryHelpers_IsAssetLoaded");
 static_assert(sizeof(AssetRegistryHelpers_IsAssetLoaded) == 0x000068, "Wrong size on AssetRegistryHelpers_IsAssetLoaded");
@@ -135,7 +135,7 @@ struct AssetRegistryHelpers_IsRedirector final
 public:
 	struct FAssetData                             InAssetData;                                       // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2002[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_210E[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistryHelpers_IsRedirector) == 0x000008, "Wrong alignment on AssetRegistryHelpers_IsRedirector");
 static_assert(sizeof(AssetRegistryHelpers_IsRedirector) == 0x000068, "Wrong size on AssetRegistryHelpers_IsRedirector");
@@ -149,7 +149,7 @@ struct AssetRegistryHelpers_IsUAsset final
 public:
 	struct FAssetData                             InAssetData;                                       // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2003[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_210F[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistryHelpers_IsUAsset) == 0x000008, "Wrong alignment on AssetRegistryHelpers_IsUAsset");
 static_assert(sizeof(AssetRegistryHelpers_IsUAsset) == 0x000068, "Wrong size on AssetRegistryHelpers_IsUAsset");
@@ -163,7 +163,7 @@ struct AssetRegistryHelpers_IsValid final
 public:
 	struct FAssetData                             InAssetData;                                       // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2004[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2110[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistryHelpers_IsValid) == 0x000008, "Wrong alignment on AssetRegistryHelpers_IsValid");
 static_assert(sizeof(AssetRegistryHelpers_IsValid) == 0x000068, "Wrong size on AssetRegistryHelpers_IsValid");
@@ -216,7 +216,7 @@ struct AssetRegistry_ScanFilesSynchronous final
 public:
 	TArray<class FString>                         InFilePaths;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bForceRescan;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2005[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2111[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_ScanFilesSynchronous) == 0x000008, "Wrong alignment on AssetRegistry_ScanFilesSynchronous");
 static_assert(sizeof(AssetRegistry_ScanFilesSynchronous) == 0x000018, "Wrong size on AssetRegistry_ScanFilesSynchronous");
@@ -241,7 +241,7 @@ struct AssetRegistry_ScanPathsSynchronous final
 public:
 	TArray<class FString>                         InPaths;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bForceRescan;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2006[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2112[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_ScanPathsSynchronous) == 0x000008, "Wrong alignment on AssetRegistry_ScanPathsSynchronous");
 static_assert(sizeof(AssetRegistry_ScanPathsSynchronous) == 0x000018, "Wrong size on AssetRegistry_ScanPathsSynchronous");
@@ -267,7 +267,7 @@ public:
 	TArray<struct FAssetData>                     OutAssetData;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bIncludeOnlyOnDiskAssets;                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2007[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2113[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_GetAllAssets) == 0x000008, "Wrong alignment on AssetRegistry_GetAllAssets");
 static_assert(sizeof(AssetRegistry_GetAllAssets) == 0x000018, "Wrong size on AssetRegistry_GetAllAssets");
@@ -293,7 +293,7 @@ struct AssetRegistry_GetAssetByObjectPath final
 public:
 	class FName                                   ObjectPath;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIncludeOnlyOnDiskAssets;                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2008[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2114[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAssetData                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AssetRegistry_GetAssetByObjectPath) == 0x000008, "Wrong alignment on AssetRegistry_GetAssetByObjectPath");
@@ -310,7 +310,7 @@ public:
 	struct FARFilter                              Filter;                                            // 0x0000(0x00F0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FAssetData>                     OutAssetData;                                      // 0x00F0(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0100(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2009[0x7];                                     // 0x0101(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2115[0x7];                                     // 0x0101(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_GetAssets) == 0x000008, "Wrong alignment on AssetRegistry_GetAssets");
 static_assert(sizeof(AssetRegistry_GetAssets) == 0x000108, "Wrong size on AssetRegistry_GetAssets");
@@ -327,7 +327,7 @@ public:
 	TArray<struct FAssetData>                     OutAssetData;                                      // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bSearchSubClasses;                                 // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_200A[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2116[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_GetAssetsByClass) == 0x000008, "Wrong alignment on AssetRegistry_GetAssetsByClass");
 static_assert(sizeof(AssetRegistry_GetAssetsByClass) == 0x000020, "Wrong size on AssetRegistry_GetAssetsByClass");
@@ -345,7 +345,7 @@ public:
 	TArray<struct FAssetData>                     OutAssetData;                                      // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bIncludeOnlyOnDiskAssets;                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_200B[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2117[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_GetAssetsByPackageName) == 0x000008, "Wrong alignment on AssetRegistry_GetAssetsByPackageName");
 static_assert(sizeof(AssetRegistry_GetAssetsByPackageName) == 0x000020, "Wrong size on AssetRegistry_GetAssetsByPackageName");
@@ -364,7 +364,7 @@ public:
 	bool                                          bRecursive;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIncludeOnlyOnDiskAssets;                          // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_200C[0x5];                                     // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2118[0x5];                                     // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_GetAssetsByPath) == 0x000008, "Wrong alignment on AssetRegistry_GetAssetsByPath");
 static_assert(sizeof(AssetRegistry_GetAssetsByPath) == 0x000020, "Wrong size on AssetRegistry_GetAssetsByPath");
@@ -382,7 +382,7 @@ public:
 	class FString                                 InBasePath;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         OutPathList;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bInRecurse;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_200D[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2119[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_GetSubPaths) == 0x000008, "Wrong alignment on AssetRegistry_GetSubPaths");
 static_assert(sizeof(AssetRegistry_GetSubPaths) == 0x000028, "Wrong size on AssetRegistry_GetSubPaths");
@@ -398,7 +398,7 @@ public:
 	class FName                                   PackagePath;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRecursive;                                        // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_200E[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_211A[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_HasAssets) == 0x000004, "Wrong alignment on AssetRegistry_HasAssets");
 static_assert(sizeof(AssetRegistry_HasAssets) == 0x00000C, "Wrong size on AssetRegistry_HasAssets");
@@ -424,10 +424,10 @@ struct AssetRegistry_K2_GetDependencies final
 public:
 	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FAssetRegistryDependencyOptions        DependencyOptions;                                 // 0x0008(0x0005)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_200F[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_211B[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           OutDependencies;                                   // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2010[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_211C[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_K2_GetDependencies) == 0x000008, "Wrong alignment on AssetRegistry_K2_GetDependencies");
 static_assert(sizeof(AssetRegistry_K2_GetDependencies) == 0x000028, "Wrong size on AssetRegistry_K2_GetDependencies");
@@ -443,10 +443,10 @@ struct AssetRegistry_K2_GetReferencers final
 public:
 	class FName                                   PackageName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FAssetRegistryDependencyOptions        ReferenceOptions;                                  // 0x0008(0x0005)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2011[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_211D[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           OutReferencers;                                    // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2012[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_211E[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetRegistry_K2_GetReferencers) == 0x000008, "Wrong alignment on AssetRegistry_K2_GetReferencers");
 static_assert(sizeof(AssetRegistry_K2_GetReferencers) == 0x000028, "Wrong size on AssetRegistry_K2_GetReferencers");

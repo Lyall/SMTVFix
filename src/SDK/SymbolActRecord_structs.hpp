@@ -23,7 +23,7 @@ struct FSymbolActRecord final
 {
 public:
 	E_MapSymbolState                              SymbolState_3_3016C4A94B42533D4D7CB098F905553D;    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6597[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ActIndex_5_9BCE159344FC560F60EAB8BC1188B470;       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSymbolActPattern>              ActList_9_A13E990844FD21872629298DC7161078;        // 0x0008(0x0010)(Edit, BlueprintVisible)
 	bool                                          SplineReverse_11_F1DCE6BD4D8F9A4173272298C67AA58F; // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)

@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_EventMissionBaseCommon.BP_EventMissionBaseCommon_C
 // 0x0040 (0x02B8 - 0x0278)
-class ABP_EventMissionBaseCommon_C final : public ABP_EventAreaActor_C
+class ABP_EventMissionBaseCommon_C : public ABP_EventAreaActor_C
 {
 public:
 	class UArrowComponent*                        Arrow;                                             // 0x0278(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -28,13 +28,13 @@ public:
 	bool                                          UseLookAt;                                         // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UsePlayerRotation;                                 // 0x0291(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UseRefresh;                                        // 0x0292(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3F62[0x5];                                     // 0x0293(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_518D[0x5];                                     // 0x0293(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_Message_C*                          MessageWidget;                                     // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBgmScene                                     PrevBGMScene;                                      // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F63[0x3];                                     // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_518E[0x3];                                     // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MissionDataId;                                     // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         EventEncountId;                                    // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F64[0x4];                                     // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_518F[0x4];                                     // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 EventEncountPoint;                                 // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

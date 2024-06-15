@@ -32,7 +32,7 @@ public:
 	class UBorder*                                TextBorder;                                        // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_ExternalFontIcon_C*                 WB_ExternalFontIcon;                               // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	E_BTN_ICON_SIZE                               IconSize;                                          // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6340[0x3];                                     // 0x0291(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B89[0x3];                                     // 0x0291(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           IconColor;                                         // 0x0294(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   AnimPack;                                          // 0x02A4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         AnimFrame;                                         // 0x02AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,7 +40,7 @@ public:
 	float                                         SingleCharMaxWidth;                                // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BaseCanvasWidth;                                   // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsExternalFont;                                    // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6341[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B8A[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   KeyboardText;                                      // 0x02D8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

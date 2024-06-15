@@ -28,7 +28,7 @@ public:
 	float                                         DeltaTime;                                         // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PartnerID;                                         // 0x0234(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	E_BTL_CHAR_TYPE                               CharType;                                          // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_442F[0x7];                                     // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5B1E[0x7];                                     // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   M_AssetClass;                                      // 0x0240(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	int32                                         M_Id;                                              // 0x0268(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Const_HayataroIndex;                               // 0x026C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

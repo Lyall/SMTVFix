@@ -70,10 +70,10 @@ public:
 	EAttachLocation                               LocationType;                                      // 0x003C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCastShadow;                                      // 0x003D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          bAutoDestroy;                                      // 0x003E(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_250C[0x1];                                     // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2AAA[0x1];                                     // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_250D[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2AAB[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

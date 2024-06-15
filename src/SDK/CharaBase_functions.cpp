@@ -3529,9 +3529,9 @@ void ACharaBase_C::ResetDitherDistance(float InterpSec)
 // Function CharaBase.CharaBase_C.UpdateDither
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Delta_time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Delta_Time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ACharaBase_C::UpdateDither(float Delta_time)
+void ACharaBase_C::UpdateDither(float Delta_Time)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3540,7 +3540,7 @@ void ACharaBase_C::UpdateDither(float Delta_time)
 
 	Params::CharaBase_C_UpdateDither Parms{};
 
-	Parms.Delta_time = Delta_time;
+	Parms.Delta_Time = Delta_Time;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

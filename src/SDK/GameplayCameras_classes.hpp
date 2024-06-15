@@ -62,7 +62,7 @@ public:
 	float                                         Duration;                                          // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BlendInTime;                                       // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BlendOutTime;                                      // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1062[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108B[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -109,7 +109,7 @@ class UCompositeCameraShakePattern final : public UCameraShakePattern
 {
 public:
 	TArray<class UCameraShakePattern*>            ChildPatterns;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1063[0x10];                                    // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108C[0x10];                                    // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -158,16 +158,16 @@ public:
 	float                                         AnimBlendInTime;                                   // 0x0110(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AnimBlendOutTime;                                  // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RandomAnimSegmentDuration;                         // 0x0118(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1064[0x4];                                     // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108D[0x4];                                     // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCameraAnim*                            Anim;                                              // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraAnimationSequence*               AnimSequence;                                      // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bRandomAnimSegment : 1;                            // 0x0130(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1065[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108E[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OscillatorTimeRemaining;                           // 0x0134(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraAnimInst*                        AnimInst;                                          // 0x0138(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1066[0x40];                                    // 0x0140(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108F[0x40];                                    // 0x0140(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
 	class USequenceCameraShakePattern*            SequenceShakePattern;                              // 0x0180(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1067[0x28];                                    // 0x0188(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1090[0x28];                                    // 0x0188(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UMatineeCameraShake* StartMatineeCameraShake(class APlayerCameraManager* PlayerCameraManager, TSubclassOf<class UMatineeCameraShake> ShakeClass, float Scale, ECameraShakePlaySpace PlaySpace, const struct FRotator& UserPlaySpaceRot);
@@ -261,7 +261,7 @@ public:
 	struct FPerlinNoiseShaker                     Yaw;                                               // 0x0068(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPerlinNoiseShaker                     Roll;                                              // 0x0070(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPerlinNoiseShaker                     FOV;                                               // 0x0078(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_106D[0x38];                                    // 0x0080(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1096[0x38];                                    // 0x0080(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -303,7 +303,7 @@ public:
 	struct FWaveOscillator                        Yaw;                                               // 0x0078(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWaveOscillator                        Roll;                                              // 0x0084(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWaveOscillator                        FOV;                                               // 0x0090(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_106E[0x3C];                                    // 0x009C(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1097[0x3C];                                    // 0x009C(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

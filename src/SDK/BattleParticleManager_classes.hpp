@@ -28,7 +28,7 @@ public:
 	TMap<class FString, class ABattleSkillParticle_C*> M_BattleParticleMap;                               // 0x00B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class FString>                         M_RemoveKeys;                                      // 0x0108(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          M_EnableDaath;                                     // 0x0118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4DC3[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_638B[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         M_EffectPlayRate;                                  // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<class FString, struct FTransform>        M_TransCache;                                      // 0x0120(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 

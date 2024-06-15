@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "E_Symbol_ActPattern_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_Symbol_ActPattern_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "E_MapSymbolState_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
@@ -34,14 +34,14 @@ public:
 	class UTextBlock*                             StateText;                                         // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Text_LevelDiff;                                    // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	int32                                         DevilID;                                           // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4D5B[0x4];                                     // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_62F2[0x4];                                     // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Devilname;                                         // 0x02A0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<E_Symbol_ActPattern>                   ActPatternList;                                    // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         ActIndex;                                          // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Counter;                                           // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CounterEnd;                                        // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MapSymbolState                              State;                                             // 0x02D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D5C[0x3];                                     // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_62F3[0x3];                                     // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Speed;                                             // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                PrevLocation;                                      // 0x02DC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DevilLevel;                                        // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)

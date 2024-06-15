@@ -34,13 +34,13 @@ public:
 	class UWB_MultiLineRichText_C*                WB_MultiLineRichText;                              // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	float                                         Time;                                              // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Flag;                                              // 0x029C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_ED7[0x3];                                      // 0x029D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EFD[0x3];                                      // 0x029D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FST_LoadingList>                List;                                              // 0x02A0(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FST_ViewList>                   ViewList;                                          // 0x02B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         Rand;                                              // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Counter;                                           // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NOT_DevilView;                                     // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_ED8[0x3];                                      // 0x02C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EFE[0x3];                                      // 0x02C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MapId;                                             // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

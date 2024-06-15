@@ -60,17 +60,17 @@ struct BattlePerformanceSpeedCtrl_C_UpdatePerformanceSpeed final
 public:
 	bool                                          Lo_MuteOff;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Lo_MuteOn;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5E25[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7662[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Lo_Tempo;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5E26[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7663[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_BPL_GetBIBattleMain_retValue;             // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPL_GetBIBattleMain_success;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5E27[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7664[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_SetBattlePlayRate_NoUse;               // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5E28[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7665[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetBattleTempo_ReturnValue;               // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -95,7 +95,7 @@ struct BattlePerformanceSpeedCtrl_C_FindUnit final
 public:
 	TScriptInterface<class IBPI_BattleParty_C>    BPI_BattleParty;                                   // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         PartyIndex;                                        // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E29[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7666[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACharaBase_C*                           Unit;                                              // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CharaBaseAccessor_C> CallFunc_BI_GetPartyUnit_retValue;                 // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class ACharaBase_C*                           K2Node_DynamicCast_AsChara_Base;                   // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -116,7 +116,7 @@ struct BattlePerformanceSpeedCtrl_C_IsEnableVoiceProtection final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5E2A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7667[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABattleMain_C*                          K2Node_DynamicCast_AsBattle_Main;                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

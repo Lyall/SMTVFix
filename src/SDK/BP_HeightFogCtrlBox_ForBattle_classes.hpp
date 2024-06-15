@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ST_HeightFogParameter_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_HeightFogParameter_structs.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class AExponentialHeightFog*                  TargetFogActor;                                    // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TargetStartDistance;                               // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E16[0x4];                                     // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FBD[0x4];                                     // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_FogCtrlHolder_C*                    CtrlHolder;                                        // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FST_HeightFogParameter                 InitialParam;                                      // 0x0250(0x0040)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FST_HeightFogParameter                 SrcParam;                                          // 0x0290(0x0040)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

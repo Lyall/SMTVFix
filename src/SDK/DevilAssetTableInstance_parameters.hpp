@@ -44,11 +44,11 @@ struct DevilAssetTableInstance_C_Get_DevilAssetRaw final
 {
 public:
 	int32                                         DevilAssetID;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AD2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34C6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDevilAssetTable_Raw                   AssetData;                                         // 0x0008(0x00B0)(Parm, OutParm)
 	bool                                          IsValid;                                           // 0x00B8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsFound;                                           // 0x00B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2AD3[0x6];                                     // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34C7[0x6];                                     // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDevilAssetTable_Raw                   Lo_found;                                          // 0x00C0(0x00B0)(Edit, BlueprintVisible)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_LeftPad_ReturnValue;                      // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -87,10 +87,10 @@ struct DevilAssetTableInstance_C_BI_GetDevilAsset final
 {
 public:
 	int32                                         DevilAssetID;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AD4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34C8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDevilAssetTable_Raw                   AssetData;                                         // 0x0008(0x00B0)(Parm, OutParm)
 	bool                                          IsValid;                                           // 0x00B8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2AD5[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34C9[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDevilAssetTable_Raw                   CallFunc_Get_DevilAssetRaw_AssetData;              // 0x00C0(0x00B0)()
 	bool                                          CallFunc_Get_DevilAssetRaw_IsValid;                // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };

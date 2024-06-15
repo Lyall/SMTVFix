@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ST_DirectionalLightParameter_structs.hpp"
+#include "ST_HeightFogParameter_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_HeightFogParameter_structs.hpp"
+#include "ST_DirectionalLightParameter_structs.hpp"
 
 
 namespace SDK
@@ -34,28 +34,28 @@ public:
 	float                                         TargetFogHeightFalloff;                            // 0x024C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TargetFogHeightOffset;                             // 0x0250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableFogInscatteringColor;                       // 0x0254(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3DFC[0x3];                                     // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FA3[0x3];                                     // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           TargetFogInscatteringColor;                        // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableFogPrimaryData;                             // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3DFD[0x3];                                     // 0x0269(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FA4[0x3];                                     // 0x0269(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TargetPrimaryFogDensity;                           // 0x026C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TargetPrimaryFogHeightFalloff;                     // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FST_HeightFogParameter                 DstFogParam;                                       // 0x0274(0x0040)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableStartDistance;                              // 0x02B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3DFE[0x3];                                     // 0x02B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FA5[0x3];                                     // 0x02B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TargetStartDistance;                               // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DFF[0x4];                                     // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FA6[0x4];                                     // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDirectionalLightComponent*             TargetLightComp;                                   // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_FogCtrlHolder_C*                    CtrlHolder;                                        // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFixStartDistance;                                 // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bEnableDirectionalInscatteringColor;               // 0x02D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3E00[0x2];                                     // 0x02D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FA7[0x2];                                     // 0x02D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TargetDirectionalInscatteringExponent;             // 0x02D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TargetDirectionalInscatteringStartDistance;        // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           TargetDirectionalInscatteringColor;                // 0x02DC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FST_DirectionalLightParameter          DstLightParam;                                     // 0x02EC(0x0014)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableLightShaft;                                 // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3E01[0x3];                                     // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FA8[0x3];                                     // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OcclusionMaskDarkness;                             // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BloomScale;                                        // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BloomThreshold;                                    // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

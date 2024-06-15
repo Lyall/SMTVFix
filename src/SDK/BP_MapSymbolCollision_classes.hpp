@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "MapSymbolParam_structs.hpp"
 #include "E_MapAttackDamage_structs.hpp"
 #include "EncountData_st_structs.hpp"
-#include "MapSymbolParam_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -30,7 +30,7 @@ public:
 	class UBoxComponent*                          Box;                                               // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        Scene;                                             // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMapAttackEncount;                                // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1253[0x7];                                     // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_125E[0x7];                                     // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEncountData_st                        EncountData;                                       // 0x0240(0x0028)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FMapSymbolParam                        SymbolParam;                                       // 0x0268(0x00E0)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             EvtDis_Overlap;                                    // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -43,7 +43,7 @@ public:
 	bool                                          AttackEncountEnable;                               // 0x0376(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          CollisionEnable;                                   // 0x0377(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	float                                         COLLISION_BOTTOM_ADD;                              // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1254[0x4];                                     // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_125F[0x4];                                     // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBoxComponent*                          AttackCollision2;                                  // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

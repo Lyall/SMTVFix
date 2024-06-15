@@ -86,7 +86,7 @@ public:
 	struct FMovieSceneObjectBindingID             Binding;                                           // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Actor;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowBindingsFromAsset;                           // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20D8[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2204[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LevelSequenceActor_AddBinding) == 0x000008, "Wrong alignment on LevelSequenceActor_AddBinding");
 static_assert(sizeof(LevelSequenceActor_AddBinding) == 0x000028, "Wrong size on LevelSequenceActor_AddBinding");
@@ -102,7 +102,7 @@ public:
 	class FName                                   BindingTag;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowBindingsFromAsset;                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20D9[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2205[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LevelSequenceActor_AddBindingByTag) == 0x000008, "Wrong alignment on LevelSequenceActor_AddBindingByTag");
 static_assert(sizeof(LevelSequenceActor_AddBindingByTag) == 0x000018, "Wrong size on LevelSequenceActor_AddBindingByTag");
@@ -155,7 +155,7 @@ public:
 	struct FMovieSceneObjectBindingID             Binding;                                           // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         Actors;                                            // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bAllowBindingsFromAsset;                           // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20DA[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2206[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LevelSequenceActor_SetBinding) == 0x000008, "Wrong alignment on LevelSequenceActor_SetBinding");
 static_assert(sizeof(LevelSequenceActor_SetBinding) == 0x000030, "Wrong size on LevelSequenceActor_SetBinding");
@@ -171,7 +171,7 @@ public:
 	class FName                                   BindingTag;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         Actors;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bAllowBindingsFromAsset;                           // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20DB[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2207[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LevelSequenceActor_SetBindingByTag) == 0x000008, "Wrong alignment on LevelSequenceActor_SetBindingByTag");
 static_assert(sizeof(LevelSequenceActor_SetBindingByTag) == 0x000020, "Wrong size on LevelSequenceActor_SetBindingByTag");
@@ -353,7 +353,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULevelSequence*                         LevelSequence;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneSequencePlaybackSettings    Settings;                                          // 0x0010(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20DD[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2209[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ALevelSequenceActor*                    OutActor;                                          // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULevelSequencePlayer*                   ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

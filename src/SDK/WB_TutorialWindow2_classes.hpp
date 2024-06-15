@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "E_TutorialWindow_WidgetState_structs.hpp"
-#include "UMG_classes.hpp"
-#include "Project_structs.hpp"
 #include "E_AmuletTutorial_MsgType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UMG_classes.hpp"
+#include "E_TutorialWindow_WidgetState_structs.hpp"
+#include "Project_structs.hpp"
 #include "Slate_structs.hpp"
 
 
@@ -42,7 +42,7 @@ public:
 	class UWB_MultiLineRichText_C*                WB_MainText;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_ScrollBar_C*                        WB_ScrollBar;                                      // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	E_TutorialWindow_WidgetState                  AnimState;                                         // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_647D[0x3];                                     // 0x02D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F29[0x3];                                     // 0x02D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         AnimPlayRate;                                      // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             MouseEvent_MovedScrollBar;                         // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsEscClose;                                        // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

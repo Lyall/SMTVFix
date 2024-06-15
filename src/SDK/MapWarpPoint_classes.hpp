@@ -27,7 +27,7 @@ public:
 	class UChildActorComponent*                   ChildActor;                                        // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int32                                         PointIndex;                                        // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22B9[0x4];                                     // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4F2C[0x4];                                     // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Base;                                              // 0x0250(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class FString                                 Index_MapWarpPoint_C;                              // 0x0260(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 

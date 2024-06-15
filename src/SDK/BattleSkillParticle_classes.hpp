@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "BattleSubActorBase_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "MaterialAnimSetting_T_structs.hpp"
+#include "BattleSubActorBase_classes.hpp"
 
 
 namespace SDK
@@ -37,18 +37,18 @@ public:
 	float                                         M_Speed;                                           // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_Tangent;                                         // 0x0274(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsProjectile;                                    // 0x0278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_489E[0x3];                                     // 0x0279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D15[0x3];                                     // 0x0279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                M_Gravity;                                         // 0x027C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                M_Velocity;                                        // 0x0288(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                M_Up;                                              // 0x0294(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_PlayRate;                                        // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsZigzag;                                        // 0x02A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_489F[0x3];                                     // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D16[0x3];                                     // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        M_ZigzagPoint;                                     // 0x02A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<float>                                 M_ZigzagPointDist;                                 // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	float                                         M_DurationSec;                                     // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsReachedZigzag;                                 // 0x02CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_48A0[0x3];                                     // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D17[0x3];                                     // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_ZigzagPointNumMin;                               // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         M_ZigzagPointNumMax;                               // 0x02D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_ZigzagDistMin;                                   // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -65,23 +65,23 @@ public:
 	float                                         M_DecalRotationRandMin;                            // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_DecalRotationRandMax;                            // 0x0338(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_DecalEnable;                                     // 0x033C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_48A1[0x3];                                     // 0x033D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D18[0x3];                                     // 0x033D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         M_ExtensionDist;                                   // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsDestroy;                                       // 0x0344(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_48A2[0x3];                                     // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D19[0x3];                                     // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         M_ZigzagTotalDist;                                 // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   AttachSocketName;                                  // 0x034C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_48A3[0xC];                                     // 0x0354(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1A[0xC];                                     // 0x0354(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RelativeTransform;                                 // 0x0360(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          M_IsAllowPositionUpdate;                           // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          M_IsNormalParticle;                                // 0x0391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_48A4[0x6];                                     // 0x0392(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1B[0x6];                                     // 0x0392(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 M_TargetActor;                                     // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	class FName                                   MotAttachSocketName;                               // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      ModAnim;                                           // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsOneTimeDone;                                   // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_IsOnlyRotationUpdate;                            // 0x03B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_48A5[0xE];                                     // 0x03B2(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1C[0xE];                                     // 0x03B2(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             BaseTrans;                                         // 0x03C0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_AbsolutelyNoRotation;                            // 0x03F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_CastOnlyStaticMesh;                              // 0x03F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

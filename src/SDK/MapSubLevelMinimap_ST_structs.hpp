@@ -22,10 +22,10 @@ public:
 	float                                         Dimensions_15_1308D4AC41ADB40A51F92E9C03B1DC3C;    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Zoom_17_620A912744F5CD83A883FAB4E0DE6AE4;          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPersistent_1_0EBA936A4436D8C84A8DF7B60B694398;   // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_38CA[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_472C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture>                PersistentTexture_4_F05B5DF44104D87D1F20BBAEE5AEB957; // 0x0010(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          IsAreaTexture_12_CC43CF9A420D08E4F71E488DB28F4744; // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_38CB[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_472D[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TSoftObjectPtr<class UTexture>>        AreaTextures_8_EF0542654E91C937D3065E936C8F62BD;   // 0x0040(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FMapSubLevelMinimap_ST) == 0x000008, "Wrong alignment on FMapSubLevelMinimap_ST");

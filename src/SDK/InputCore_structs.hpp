@@ -88,7 +88,7 @@ struct alignas(0x08) FKey final
 {
 public:
 	class FName                                   KeyName;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DEE[0x10];                                    // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E60[0x10];                                    // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FKey) == 0x000008, "Wrong alignment on FKey");
 static_assert(sizeof(FKey) == 0x000018, "Wrong size on FKey");

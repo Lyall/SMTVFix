@@ -21,7 +21,7 @@ namespace SDK
 
 // BlueprintGeneratedClass ProjectGameMode.ProjectGameMode_C
 // 0x00F8 (0x0438 - 0x0340)
-class AProjectGameMode_C final : public AProjectGameModeBase
+class AProjectGameMode_C : public AProjectGameModeBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -36,16 +36,16 @@ public:
 	bool                                          FadeCancel;                                        // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          InitStep;                                          // 0x03B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          GameStart;                                         // 0x03BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43A8[0x5];                                     // 0x03BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_581C[0x5];                                     // 0x03BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             EndUnResidentLoad;                                 // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsEndUnResidentLoad;                               // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          MIsMapEventPlaying;                                // 0x03D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          PauseCancel;                                       // 0x03D2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43A9[0x5];                                     // 0x03D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_581D[0x5];                                     // 0x03D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   Traport_Soft;                                      // 0x03D8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             MapStartBefore;                                    // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          DisablePlayerLoad;                                 // 0x0410(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43AA[0x7];                                     // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_581E[0x7];                                     // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             EndAreaInit;                                       // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          NowAutoPause;                                      // 0x0428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          NowAutoPauseDialog;                                // 0x0429(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

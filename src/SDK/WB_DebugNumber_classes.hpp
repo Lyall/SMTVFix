@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UWB_DebugNumberIndex_C*                 M_WBPartyIndex;                                    // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         M_PartyIndex;                                      // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_455F[0x4];                                     // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D62[0x4];                                     // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABattleMain_C*                          M_Work;                                            // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

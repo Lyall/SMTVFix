@@ -71,6 +71,30 @@ void APlayerBase_C::BI_TempToggleCameraDitherState(bool ForceDitherOff)
 }
 
 
+// Function PlayerBase.PlayerBase_C.Act_Death
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// uint8                                   InOption                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    DeadTimingOverride                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   DeadTiming                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APlayerBase_C::Act_Death(uint8 InOption, bool DeadTimingOverride, float DeadTiming)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBase_C", "Act_Death");
+
+	Params::PlayerBase_C_Act_Death Parms{};
+
+	Parms.InOption = InOption;
+	Parms.DeadTimingOverride = DeadTimingOverride;
+	Parms.DeadTiming = DeadTiming;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function PlayerBase.PlayerBase_C.TickForceTraport
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1262,30 +1286,6 @@ void APlayerBase_C::IsAutoRunning(bool* bAutoRunning)
 
 	if (bAutoRunning != nullptr)
 		*bAutoRunning = Parms.bAutoRunning;
-}
-
-
-// Function PlayerBase.PlayerBase_C.Act_Death
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// uint8                                   InOption                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    DeadTimingOverride                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   DeadTiming                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APlayerBase_C::Act_Death(uint8 InOption, bool DeadTimingOverride, float DeadTiming)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBase_C", "Act_Death");
-
-	Params::PlayerBase_C_Act_Death Parms{};
-
-	Parms.InOption = InOption;
-	Parms.DeadTimingOverride = DeadTimingOverride;
-	Parms.DeadTiming = DeadTiming;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

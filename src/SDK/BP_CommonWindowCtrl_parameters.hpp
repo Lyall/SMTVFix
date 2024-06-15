@@ -24,29 +24,29 @@ struct BP_CommonWindowCtrl_C_ExecuteUbergraph_BP_CommonWindowCtrl final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WIDGET_PRIO                                 K2Node_Event_InPriority_1;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_640F[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EBA[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    K2Node_Event_InScriptMessageAsset_1;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIndex;                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_HELP_MAPPING_KEY_TYPE                   K2Node_Event_InAction_1;                           // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6410[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EBB[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIconColor_1;                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WIDGET_PRIO                                 K2Node_Event_InPriority;                           // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6411[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EBC[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    K2Node_Event_InScriptMessageAsset;                 // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_Event_InLabel;                              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_HELP_MAPPING_KEY_TYPE                   K2Node_Event_InAction;                             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6412[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EBD[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIconColor;                          // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue;              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPriority_2;                         // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6413[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EBE[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    K2Node_Event_InScriptMessageAsset_2;               // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIndex_1;                            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIconType;                           // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIconColor_2;                        // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_1;            // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPriority_3;                         // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6414[0x2];                                     // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EBF[0x2];                                     // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    K2Node_Event_InScriptMessageAsset_3;               // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_Event_InLabel_1;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIconType_1;                         // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -54,13 +54,13 @@ public:
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_2;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_3;            // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_BTN_HELP_MAPPING_KEY_TYPE                   CallFunc_GetCurrentMappingType_MappingType;        // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6415[0x1];                                     // 0x0073(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EC0[0x1];                                     // 0x0073(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x007B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6416[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EC1[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CommonWindow_C*                     CallFunc_Create_ReturnValue;                       // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionWindowActive_OutParam;            // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_2;    // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -132,11 +132,11 @@ struct BP_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByLabel final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6417[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EC2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   InLabel;                                           // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_HELP_MAPPING_KEY_TYPE                   InAction;                                          // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6418[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EC3[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InIconColor;                                       // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByLabel) == 0x000008, "Wrong alignment on BP_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByLabel");
@@ -153,11 +153,11 @@ struct BP_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByIndex final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6419[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EC4[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InIndex;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_HELP_MAPPING_KEY_TYPE                   InAction;                                          // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_641A[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EC5[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InIconColor;                                       // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByIndex) == 0x000008, "Wrong alignment on BP_CommonWindowCtrl_C_IActionWindowOpenWithActionSpecifiedByIndex");
@@ -174,7 +174,7 @@ struct BP_CommonWindowCtrl_C_IActionWindowOpenByIndex final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_641B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EC6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InIndex;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InIconType;                                        // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -194,7 +194,7 @@ struct BP_CommonWindowCtrl_C_IActionWindowOpenByLabel final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_641C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EC7[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    InScriptMessageAsset;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   InLabel;                                           // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InIconType;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

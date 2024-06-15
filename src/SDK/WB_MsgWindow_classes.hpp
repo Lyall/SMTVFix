@@ -45,14 +45,14 @@ public:
 	bool                                          IsShowIconAfterCompleted;                          // 0x02BE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsNextPage;                                        // 0x02BF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsVoiceLoaded;                                     // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E59[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6421[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMessageData                           BaseMessageData;                                   // 0x02C8(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<TSoftObjectPtr<class USoundAtomCue>>   SorVoiceSoundAtomCue;                              // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class USoundAtomCue*>                  VoiceSoundAtomCue;                                 // 0x0348(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UScriptMessageAsset*                    UseScriptMessageAsset;                             // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAtomComponent*                         VoiceCompornent;                                   // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CanBeUseVoice;                                     // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E5A[0x3];                                     // 0x0369(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6422[0x3];                                     // 0x0369(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BaseMessageSpeed;                                  // 0x036C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Pageiconpos;                                       // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCentering;                                       // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -61,7 +61,7 @@ public:
 	bool                                          IsNameWindowVisible;                               // 0x037B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsMessagePageIconVisible;                          // 0x037C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsMessageRichTextVisible;                          // 0x037D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E5B[0x2];                                     // 0x037E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6423[0x2];                                     // 0x037E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         AnimPlayRate;                                      // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsNextPageIconClicked;                             // 0x0384(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsHoverOn;                                         // 0x0385(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -90,7 +90,7 @@ public:
 	void IsNameText(bool* Param_NameWindow);
 	void AddSelect();
 	void DecSelect();
-	void SetSelectCursorOffsest(int32 DefaultCursorPos);
+	void SetSelectCursorOffsest(int32 Defaultcursorpos);
 	void SetNameWindow(bool InExecution);
 	void MessageAutoOnOff();
 	void PresetSelectNewIcon();

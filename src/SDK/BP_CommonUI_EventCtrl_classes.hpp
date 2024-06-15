@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "E_SORTWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
-#include "E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "E_CATEGORYWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
+#include "Engine_classes.hpp"
+#include "E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE_structs.hpp"
+#include "E_SORTWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 
 
 namespace SDK

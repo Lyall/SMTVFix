@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_DEVIL_PERFORMANCE_TYPE_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_DEVIL_PERFORMANCE_TYPE_structs.hpp"
 #include "Project_structs.hpp"
 
 

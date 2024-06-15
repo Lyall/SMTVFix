@@ -54,7 +54,7 @@ public:
 	TArray<struct FSsAnimePack>                   AnimeList;                                         // 0x00C0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FSsCellMap>                     CellmapList;                                       // 0x00D0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FSsEffectFile>                  EffectList;                                        // 0x00E0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FF2[0x10];                                     // 0x00F0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1018[0x10];                                    // 0x00F0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	TArray<class FName> GetAnimationNames(class FName InAnimPackName) const;
@@ -120,7 +120,7 @@ class ASsPlayerActor final : public AActor
 {
 public:
 	bool                                          bAutoDestroy;                                      // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FF3[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1019[0x7];                                     // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USsPlayerComponent*                     SsPlayerComponent;                                 // 0x0228(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -148,15 +148,15 @@ static_assert(offsetof(ASsPlayerActor, SsPlayerComponent) == 0x000228, "Member '
 class USsPlayerComponent final : public UMeshComponent
 {
 public:
-	uint8                                         Pad_FF4[0xF0];                                     // 0x0478(0x00F0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101A[0xF0];                                    // 0x0478(0x00F0)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInstanceDynamic*>       PartsMIDRef;                                       // 0x0568(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_FF5[0x50];                                     // 0x0578(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101B[0x50];                                    // 0x0578(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<int32, class UMaterialInterface*>        MaterialReplacementMap;                            // 0x05C8(0x0050)(Transient, NativeAccessSpecifierPrivate)
 	TMap<int32, class UMaterialInterface*>        MapterialReplacementMapPerBlendMode;               // 0x0618(0x0050)(Transient, NativeAccessSpecifierPrivate)
 	class USs6Project*                            SsProject;                                         // 0x0668(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoUpdate;                                       // 0x0670(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoPlay;                                         // 0x0671(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FF6[0x2];                                      // 0x0672(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101C[0x2];                                     // 0x0672(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   AutoPlayAnimPackName;                              // 0x0674(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   AutoPlayAnimationName;                             // 0x067C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AutoPlayAnimPackIndex;                             // 0x0684(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -175,11 +175,11 @@ public:
 	struct FColor                                 OffScreenClearColor;                               // 0x06B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         UUPerPixel;                                        // 0x06BC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SsBoundsScale;                                     // 0x06C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FF7[0x4];                                      // 0x06C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101D[0x4];                                     // 0x06C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnSsEndPlay;                                       // 0x06C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnSsUserData;                                      // 0x06D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<class UMaterialInstanceDynamic*>       RenderMIDs;                                        // 0x06E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FF8[0x8];                                      // 0x06F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101E[0x8];                                     // 0x06F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddMaterialReplacement(class FName PartName, class UMaterialInterface* InBaseMaterial);
@@ -272,9 +272,9 @@ public:
 	class FName                                   PartName;                                          // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReflectPartAlpha;                                 // 0x0040(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverridePartSize;                                 // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1000[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1026[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              PartSize;                                          // 0x0044(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1001[0xC];                                     // 0x004C(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1027[0xC];                                     // 0x004C(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetAttachPart(class FName InNewPartName);
@@ -301,16 +301,16 @@ static_assert(offsetof(USsPlayerSlot, PartSize) == 0x000044, "Member 'USsPlayerS
 class USsPlayerWidget final : public UPanelWidget
 {
 public:
-	uint8                                         Pad_1002[0x148];                                   // 0x0120(0x0148)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1028[0x148];                                   // 0x0120(0x0148)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               OffScreenMID;                                      // 0x0268(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UTexture*                               OffScreenRenderTarget;                             // 0x0270(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1003[0x50];                                    // 0x0278(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1029[0x50];                                    // 0x0278(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<int32, class UMaterialInterface*>        MaterialReplacementMap;                            // 0x02C8(0x0050)(Transient, NativeAccessSpecifierPrivate)
 	TMap<int32, class UMaterialInterface*>        MaterialReplacementMapPerBlendMode;                // 0x0318(0x0050)(Transient, NativeAccessSpecifierPrivate)
 	class USs6Project*                            SsProject;                                         // 0x0368(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoUpdate;                                       // 0x0370(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoPlay;                                         // 0x0371(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1004[0x2];                                     // 0x0372(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_102A[0x2];                                     // 0x0372(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   AutoPlayAnimPackName;                              // 0x0374(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   AutoPlayAnimationName;                             // 0x037C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AutoPlayAnimPackIndex;                             // 0x0384(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -323,19 +323,19 @@ public:
 	bool                                          bTickableWhenPaused;                               // 0x039A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableBGAnim;                                     // 0x039B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRenderBGAnimToFront;                              // 0x039C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1005[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_102B[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   BGAnimPackName;                                    // 0x03A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   BGAnimationName;                                   // 0x03A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InstanceRandomWaitMin;                             // 0x03B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InstanceRandomWaitMax;                             // 0x03B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsPlayerWidgetRenderMode                     RenderMode;                                        // 0x03B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1006[0x7];                                     // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_102C[0x7];                                     // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     BaseMaterial;                                      // 0x03C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              OffScreenRenderResolution;                         // 0x03C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 OffScreenClearColor;                               // 0x03D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReflectParentAlpha;                               // 0x03D4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bScissor;                                          // 0x03D5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1007[0x2];                                     // 0x03D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_102D[0x2];                                     // 0x03D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ScissorLeftTop;                                    // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ScissorRightBottom;                                // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnSsEndPlay;                                       // 0x03E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)

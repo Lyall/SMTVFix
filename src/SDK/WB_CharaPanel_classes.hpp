@@ -93,7 +93,7 @@ public:
 	bool                                          IsSummonOnFlag;                                    // 0x046A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsFadeOut;                                         // 0x046B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsFadeIn;                                          // 0x046C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5457[0x3];                                     // 0x046D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C54[0x3];                                     // 0x046D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Calcratio;                                         // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          OnClicked;                                         // 0x0474(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          OnHovered;                                         // 0x0475(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

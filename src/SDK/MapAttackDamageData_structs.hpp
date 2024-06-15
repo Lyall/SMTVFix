@@ -22,7 +22,7 @@ struct FMapAttackDamageData final
 {
 public:
 	E_MapAttackDamage                             AttackType_2_E4EFDE80477B8A6E4EC77285C6D90EED;     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D58[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_62D5[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    AttackComponent_6_466D5437495F86EB1C8D9BBA53EC7A26; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FMapAttackDamageData) == 0x000008, "Wrong alignment on FMapAttackDamageData");

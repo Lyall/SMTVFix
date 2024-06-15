@@ -97,7 +97,7 @@ static_assert(sizeof(UClothingSimulationFactory) == 0x000028, "Wrong size on UCl
 class UClothingInteractor final : public UObject
 {
 public:
-	uint8                                         Pad_2088[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2195[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -118,7 +118,7 @@ class UClothingSimulationInteractor : public UObject
 {
 public:
 	TMap<class FName, class UClothingInteractor*> ClothingInteractors;                               // 0x0028(0x0050)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_2089[0x18];                                    // 0x0078(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2196[0x18];                                    // 0x0078(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClothConfigUpdated();
@@ -164,7 +164,7 @@ public:
 	int32                                         NumFixedVerts;                                     // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxBoneWeights;                                    // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint32>                                SelfCollisionIndices;                              // 0x0080(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_208A[0x50];                                    // 0x0090(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2197[0x50];                                    // 0x0090(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

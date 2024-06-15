@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "E_MakkaWindowAnimState_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -254,12 +254,12 @@ struct BP_MakkaWindowCtrl2_C_BPI_SetMoney final
 public:
 	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayAnimation;                                   // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6500[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FAC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InDelayBeforeAnim;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlaySE;                                          // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsReflectGameData;                                 // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          NotUse;                                            // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6501[0x1];                                     // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FAD[0x1];                                     // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAtomComponent*                         CallFunc_SpawnSound2D_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MakkaWindowCtrl2_C_BPI_SetMoney) == 0x000008, "Wrong alignment on BP_MakkaWindowCtrl2_C_BPI_SetMoney");
@@ -279,7 +279,7 @@ struct BP_MakkaWindowCtrl2_C_BPI_SetTotal final
 public:
 	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayAnimation;                                   // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6502[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FAE[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InDelayBeforeAnim;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NotUse;                                            // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -297,10 +297,10 @@ struct BP_MakkaWindowCtrl2_C_BPI_SetCost final
 public:
 	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayAnimation;                                   // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6503[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FAF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InDelayBeforeAnim;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NotUse;                                            // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6504[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FB0[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Abs_Int_ReturnValue;                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MakkaWindowCtrl2_C_BPI_SetCost) == 0x000004, "Wrong alignment on BP_MakkaWindowCtrl2_C_BPI_SetCost");
@@ -318,12 +318,12 @@ struct BP_MakkaWindowCtrl2_C_BPI_AddMoney final
 public:
 	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayAnimation;                                   // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6505[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FB1[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InDelayBeforeAnim;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlaySE;                                          // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsReflectGameData;                                 // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          NotUse;                                            // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6506[0x1];                                     // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FB2[0x1];                                     // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAtomComponent*                         CallFunc_SpawnSound2D_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MakkaWindowCtrl2_C_BPI_AddMoney) == 0x000008, "Wrong alignment on BP_MakkaWindowCtrl2_C_BPI_AddMoney");
@@ -343,7 +343,7 @@ struct BP_MakkaWindowCtrl2_C_BPI_AddTotal final
 public:
 	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayAnimation;                                   // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6507[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FB3[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InDelayBeforeAnim;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NotUse;                                            // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -361,7 +361,7 @@ struct BP_MakkaWindowCtrl2_C_BPI_AddCost final
 public:
 	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayAnimation;                                   // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6508[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FB4[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InDelayBeforeAnim;                                 // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NotUse;                                            // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

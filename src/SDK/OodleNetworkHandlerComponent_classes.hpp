@@ -22,14 +22,14 @@ class UOodleNetworkTrainerCommandlet final : public UCommandlet
 {
 public:
 	bool                                          bCompressionTest;                                  // 0x0080(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10FA[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_113D[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HashTableSize;                                     // 0x0084(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DictionarySize;                                    // 0x0088(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DictionaryTrials;                                  // 0x008C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TrialRandomness;                                   // 0x0090(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TrialGenerations;                                  // 0x0094(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bNoTrials;                                         // 0x0098(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10FB[0x7];                                     // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_113E[0x7];                                     // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

@@ -31,14 +31,14 @@ public:
 	int32                                         Oldcursor;                                         // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Localcursor;                                       // 0x028C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Localmax;                                          // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6444[0x4];                                     // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEF[0x4];                                     // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWB_DialogSelect_C*>             Msgselectwork;                                     // 0x0298(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	int32                                         DefaultCursorPos;                                  // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6445[0x4];                                     // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Defaultcursorpos;                                  // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EF0[0x4];                                     // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnAnyItemClicked;                                  // 0x02B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnAnyItemSelected;                                 // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsSelectInAnimation;                               // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6446[0x3];                                     // 0x02D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF1[0x3];                                     // 0x02D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SelectAnimeTime;                                   // 0x02D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Selectinanimestatus;                               // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -93,7 +93,7 @@ static_assert(offsetof(UWB_DialogSelectMenu_C, Oldcursor) == 0x000288, "Member '
 static_assert(offsetof(UWB_DialogSelectMenu_C, Localcursor) == 0x00028C, "Member 'UWB_DialogSelectMenu_C::Localcursor' has a wrong offset!");
 static_assert(offsetof(UWB_DialogSelectMenu_C, Localmax) == 0x000290, "Member 'UWB_DialogSelectMenu_C::Localmax' has a wrong offset!");
 static_assert(offsetof(UWB_DialogSelectMenu_C, Msgselectwork) == 0x000298, "Member 'UWB_DialogSelectMenu_C::Msgselectwork' has a wrong offset!");
-static_assert(offsetof(UWB_DialogSelectMenu_C, DefaultCursorPos) == 0x0002A8, "Member 'UWB_DialogSelectMenu_C::DefaultCursorPos' has a wrong offset!");
+static_assert(offsetof(UWB_DialogSelectMenu_C, Defaultcursorpos) == 0x0002A8, "Member 'UWB_DialogSelectMenu_C::Defaultcursorpos' has a wrong offset!");
 static_assert(offsetof(UWB_DialogSelectMenu_C, OnAnyItemClicked) == 0x0002B0, "Member 'UWB_DialogSelectMenu_C::OnAnyItemClicked' has a wrong offset!");
 static_assert(offsetof(UWB_DialogSelectMenu_C, OnAnyItemSelected) == 0x0002C0, "Member 'UWB_DialogSelectMenu_C::OnAnyItemSelected' has a wrong offset!");
 static_assert(offsetof(UWB_DialogSelectMenu_C, IsSelectInAnimation) == 0x0002D0, "Member 'UWB_DialogSelectMenu_C::IsSelectInAnimation' has a wrong offset!");

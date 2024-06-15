@@ -12,9 +12,9 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "MapSymbolParam_structs.hpp"
 #include "E_MapAttackDamage_structs.hpp"
 #include "MapAttackDamageData_structs.hpp"
-#include "MapSymbolParam_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,7 +27,7 @@ struct BP_MapSymbolCollision_C_EvtDis_Overlap__DelegateSignature final
 public:
 	bool                                          MapAttackEncount;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_MapAttackDamage                             AttackDamage;                                      // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1255[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1260[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    AttackComponent;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MapSymbolCollision_C_EvtDis_Overlap__DelegateSignature) == 0x000008, "Wrong alignment on BP_MapSymbolCollision_C_EvtDis_Overlap__DelegateSignature");
@@ -42,37 +42,37 @@ struct BP_MapSymbolCollision_C_ExecuteUbergraph_BP_MapSymbolCollision final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1256[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1261[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1257[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1262[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0028(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	ECollisionChannel                             CallFunc_GetCollisionObjectType_ReturnValue;       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_CustomEvent_Attack;                         // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1258[0x1];                                     // 0x00B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1263[0x1];                                     // 0x00B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakVector_X;                            // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y;                            // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Z;                            // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDebugMenuMap_SymbolCollisionView_View; // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1259[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1264[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMapAttackDamageData                   K2Node_Event_MapAttackData;                        // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          CallFunc_UpdateSymbolParam_Changed;                // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_125A[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1265[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_X_1;                          // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y_1;                          // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Z_1;                          // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_125B[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1266[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_125C[0x4];                                     // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1267[0x4];                                     // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCapsuleComponent*                      K2Node_DynamicCast_AsCapsule_Collision;            // 0x0108(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_125D[0x3];                                     // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1268[0x3];                                     // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetScaledCapsuleHalfHeight_ReturnValue;   // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FMax_ReturnValue;                         // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FMax_ReturnValue_1;                       // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -100,7 +100,7 @@ public:
 	float                                         CallFunc_Add_FloatFloat_ReturnValue_3;             // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue_4;                 // 0x021C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_125E[0x3];                                     // 0x0229(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1269[0x3];                                     // 0x0229(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakVector_X_3;                          // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y_3;                          // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Z_3;                          // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -114,26 +114,26 @@ public:
 	float                                         CallFunc_FMax_ReturnValue_8;                       // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue_5;                 // 0x0258(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_125F[0x3];                                     // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126A[0x3];                                     // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult_1;  // 0x0268(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1260[0xF];                                     // 0x02F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126B[0xF];                                     // 0x02F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0300(0x0030)(IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1261[0x7];                                     // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126C[0x7];                                     // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBoxComponent*                          CallFunc_AddComponent_ReturnValue;                 // 0x0338(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1262[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126D[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    K2Node_CustomEvent_OverlappedComponent;            // 0x0348(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_CustomEvent_OtherActor;                     // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_CustomEvent_OtherComp;                      // 0x0358(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_OtherBodyIndex;                 // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bFromSweep;                     // 0x0364(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1263[0x3];                                     // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126E[0x3];                                     // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             K2Node_CustomEvent_SweepResult;                    // 0x0368(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	ECollisionChannel                             CallFunc_GetCollisionObjectType_ReturnValue_1;     // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x03F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1264[0x2];                                     // 0x03F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126F[0x2];                                     // 0x03F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, struct FHitResult& SweepResult)> K2Node_CreateDelegate_OutputDelegate;              // 0x03F4(0x0010)(ZeroConstructor, NoDestructor)
 };
 static_assert(alignof(BP_MapSymbolCollision_C_ExecuteUbergraph_BP_MapSymbolCollision) == 0x000010, "Wrong alignment on BP_MapSymbolCollision_C_ExecuteUbergraph_BP_MapSymbolCollision");
@@ -228,7 +228,7 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1265[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1270[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             SweepResult;                                       // 0x0020(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(BP_MapSymbolCollision_C_OnComponentBeginOverlap_AttackCollision2) == 0x000008, "Wrong alignment on BP_MapSymbolCollision_C_OnComponentBeginOverlap_AttackCollision2");
@@ -283,7 +283,7 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1266[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1271[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             SweepResult;                                       // 0x0020(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(BP_MapSymbolCollision_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_MapSymbolCollision_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
@@ -301,12 +301,12 @@ struct BP_MapSymbolCollision_C_InitSymbolParam final
 {
 public:
 	bool                                          L_Changed;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1267[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1272[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMapSymbolParam                        L_Param;                                           // 0x0008(0x00E0)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FMapSymbolParam                        CallFunc_GetMapSymbolParam_Param;                  // 0x00E8(0x00E0)(HasGetValueTypeHash)
 	int32                                         CallFunc_GetMapSymbolParamIndex_ReturnValue;       // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1268[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1273[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x01D0(0x0010)(ReferenceParm)
 };
 static_assert(alignof(BP_MapSymbolCollision_C_InitSymbolParam) == 0x000008, "Wrong alignment on BP_MapSymbolCollision_C_InitSymbolParam");
@@ -325,7 +325,7 @@ struct BP_MapSymbolCollision_C_UpdateSymbolParam final
 public:
 	bool                                          Changed;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          L_Changed;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1269[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1274[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMapSymbolParam                        L_Param;                                           // 0x0008(0x00E0)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FMapSymbolParam                        CallFunc_GetDataTableRowFromName_OutRow;           // 0x00E8(0x00E0)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -429,17 +429,17 @@ struct BP_MapSymbolCollision_C_SetTouchEncountEnable final
 {
 public:
 	bool                                          Param_TouchEncountEnable;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_126A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1275[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UPrimitiveComponent*>            L_Comps;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_126B[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1276[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UPrimitiveComponent*>            CallFunc_GetOverlappingComponents_OutOverlappingComponents; // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
 	ECollisionChannel                             CallFunc_GetCollisionObjectType_ReturnValue;       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_126C[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1277[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -463,7 +463,7 @@ struct BP_MapSymbolCollision_C_SetAttackEncountEnable final
 {
 public:
 	bool                                          Param_AttackEncountEnable;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_126D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1278[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UPrimitiveComponent*>            L_Comps;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 };
 static_assert(alignof(BP_MapSymbolCollision_C_SetAttackEncountEnable) == 0x000008, "Wrong alignment on BP_MapSymbolCollision_C_SetAttackEncountEnable");

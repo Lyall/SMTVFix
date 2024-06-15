@@ -40,13 +40,13 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	E_CHARA_MOTION_ID                             MotionID;                                          // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2929[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E6[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PartyIndex;                                        // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WaitMotionFinish;                                  // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_292A[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E7[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StartPosition;                                     // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayOneScale;                                    // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_292B[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E8[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0034(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddSetUnitMotion) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddSetUnitMotion");
@@ -70,14 +70,14 @@ public:
 	int32                                         ActorIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TargetIndex;                                       // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_SKILL_CAM_TYPE                          Type;                                              // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_292C[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E9[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Param_Name;                                        // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          IsHokan;                                           // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsConsiderActor;                                   // 0x0041(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsOverrideHokanSpeed;                              // 0x0042(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsHokanSpeedMax;                                   // 0x0043(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          DoNotResetUnitAveLocation;                         // 0x0044(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_292D[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EA[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddCamRailSkillTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddCamRailSkillTask");
@@ -112,10 +112,10 @@ public:
 	class UAnimSequenceBase*                      ModAnim;                                           // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   ModAttachSocketName;                               // 0x00D0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPairTargetOverride;                              // 0x00D8(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_292E[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EB[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PairTargetLocation;                                // 0x00DC(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsIgnoreSideScale;                                 // 0x00E8(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_292F[0x3];                                     // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EC[0x3];                                     // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x00EC(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddPlayEffectTask) == 0x000010, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddPlayEffectTask");
@@ -161,7 +161,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         PlayID;                                            // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2930[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32ED[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 RowName;                                           // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UClass*                                 ShakeClass;                                        // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Scale;                                             // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -185,11 +185,11 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         TargetIndex;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2931[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EE[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SocketName;                                        // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	float                                         Value;                                             // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Sw;                                                // 0x003C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2932[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EF[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Damage;                                            // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         StartAmount;                                       // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         EndAmount;                                         // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -198,7 +198,7 @@ public:
 	struct FVector                                Origin;                                            // 0x0054(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Offset;                                            // 0x0060(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseOrigin;                                         // 0x006C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2933[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F0[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0070(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddRadialBlurTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddRadialBlurTask");
@@ -231,7 +231,7 @@ public:
 	E_BTL_DEAD_EFFECT                             DeadType;                                          // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Immediately;                                       // 0x0029(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IgnoreEnemyKilled;                                 // 0x002A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2934[0x1];                                     // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F1[0x1];                                     // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_MakeDeadTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_MakeDeadTask");
@@ -255,15 +255,15 @@ public:
 	int32                                         SrcIndex;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DstIndex;                                          // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WaitEnd;                                           // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2935[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F2[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Speed;                                             // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RevDeg;                                            // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLocationMove;                                    // 0x0034(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2936[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F3[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                MoveLocation;                                      // 0x0038(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                LookLocation;                                      // 0x0044(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHARA_MOTION_ID                             AttackMotion;                                      // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2937[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F4[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0054(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUnitAttackMoveTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUnitAttackMoveTask");
@@ -292,12 +292,12 @@ public:
 	int32                                         Program_no;                                        // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 AddString;                                         // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          Sw;                                                // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2938[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F5[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PlayRate;                                          // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Elementnumber;                                     // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ShowPosition;                                      // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSkillOrItemName;                                 // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2939[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F6[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SkillId;                                           // 0x004C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SkillAptitude;                                     // 0x0050(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ItemId;                                            // 0x0054(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -332,12 +332,12 @@ public:
 	int32                                         MPNum;                                             // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_NUMEFF                                  Type;                                              // 0x002C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_UTIL_ICON_TYPE                          HitType;                                           // 0x002D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_293A[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F7[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CriticalLevel;                                     // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RandArea;                                          // 0x0034(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         PlayRate;                                          // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsResist;                                          // 0x003C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_293B[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F8[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PositionOffset;                                    // 0x0040(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsDead;                                            // 0x004C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_KUISHIBARI_LEVEL                            Kuishibari;                                        // 0x004D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -376,7 +376,7 @@ public:
 	int32                                         Value;                                             // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_PANEL_CTRL                              Ctrl;                                              // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Sw;                                                // 0x0029(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_293C[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32F9[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddPartyPanelCtrlTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddPartyPanelCtrlTask");
@@ -399,7 +399,7 @@ public:
 	int32                                         TargetIndex;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WaitEnd;                                           // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_AVOID_DIRECTION                             Direction;                                         // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_293D[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32FA[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUnitBackStepTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUnitBackStepTask");
@@ -422,7 +422,7 @@ public:
 	bool                                          NoCureEffect;                                      // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsLecerationDam;                                   // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          UpdateLookAt;                                      // 0x0026(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_293E[0x1];                                     // 0x0027(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32FB[0x1];                                     // 0x0027(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddApplyUnitStateTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddApplyUnitStateTask");
@@ -465,7 +465,7 @@ public:
 	E_SKILL_INFO_MESS_TIMING                      Timing;                                            // 0x002C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BAD_STATUS                                  bst;                                               // 0x002D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMaster;                                          // 0x002E(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_293F[0x1];                                     // 0x002F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32FC[0x1];                                     // 0x002F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MsgID;                                             // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         PlayRate;                                          // 0x0034(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         OverrideDurationSec;                               // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -496,7 +496,7 @@ public:
 	int32                                         PartyIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHARA_ACTION_TYPE                           Action;                                            // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Option;                                            // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2940[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32FD[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FloatOption;                                       // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetValue;                                          // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -563,7 +563,7 @@ public:
 	struct FVector                                Location;                                          // 0x0038(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlay2D;                                          // 0x0044(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IgnorePlayRate;                                    // 0x0045(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2941[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32FE[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddPlaySETask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddPlaySETask");
@@ -597,27 +597,27 @@ public:
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	float                                         Rate;                                              // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECameraAnimationSpace                         Space;                                             // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2942[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32FF[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCameraAnimationAsset*                  CameraAsset;                                       // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             SpawnTransform;                                    // 0x0030(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         BlendInTime;                                       // 0x0060(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BlendOutTime;                                      // 0x0064(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ShowActorIndex;                                    // 0x0068(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsParty;                                           // 0x006C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2943[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3300[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ShowTargetIndex;                                   // 0x0070(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FocusTarget;                                       // 0x0074(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FocusActor;                                        // 0x0078(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2944[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3301[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SocketName;                                        // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UCameraAnimationAsset*                  CameraAsset2nd;                                    // 0x0090(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LerpAlpha;                                         // 0x0098(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2945[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3302[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 VisiblePartyIndexes;                               // 0x00A0(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<int32>                                 InvisiblePartyIndexes;                             // 0x00B0(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          CleanUp;                                           // 0x00C0(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsUseTargetScale;                                  // 0x00C1(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2946[0x2];                                     // 0x00C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3303[0x2];                                     // 0x00C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x00C4(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddAnimationCameraTask) == 0x000010, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddAnimationCameraTask");
@@ -695,7 +695,7 @@ public:
 	float                                         MoveTime;                                          // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LookSpeed;                                         // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WaitMoveFinish;                                    // 0x0044(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2947[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3304[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUnitMoveTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUnitMoveTask");
@@ -719,7 +719,7 @@ public:
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          IsFadeOut;                                         // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsWhite;                                           // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2948[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3305[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DurationSec;                                       // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetPecID;                                          // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -759,7 +759,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         PartyIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2949[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3306[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstance*                      DecalMaterial;                                     // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FMaterialAnimSetting_T>         MaterialAnimSetting;                               // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FVector                                DecalSize;                                         // 0x0040(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -767,16 +767,16 @@ public:
 	class FName                                   AttachPointName;                                   // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         OverrideLifeSec;                                   // 0x0060(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         LocationType;                                      // 0x0064(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_294A[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3307[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               Rotation;                                          // 0x0068(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         RotationRandMin;                                   // 0x0074(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RotationRandMax;                                   // 0x0078(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPutOnPartyCenter;                                // 0x007C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_294B[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3308[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             PartyCenterRelativeTrans;                          // 0x0080(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	bool                                          AbsolutelyNoRotation;                              // 0x00B0(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsCastOnlyStaticMesh;                              // 0x00B1(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_294C[0x6];                                     // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3309[0x6];                                     // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleSkillActionBase_C> SkillActionBase;                                   // 0x00B8(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         RetPecID;                                          // 0x00C8(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -830,7 +830,7 @@ public:
 	int32                                         DstIndex;                                          // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Speed;                                             // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseVector;                                         // 0x002C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_294D[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_330A[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LookPoint;                                         // 0x0030(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetPecID;                                          // 0x003C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -853,7 +853,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	E_BTL_EXTRA_ACTION                            ExtraAction;                                       // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_294E[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_330B[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Time;                                              // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ActorIndex;                                        // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TargetIndex;                                       // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -887,7 +887,7 @@ public:
 	TArray<int32>                                 EffectID;                                          // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          AbsolutelyNoRotation;                              // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsCastOnlyStaticMesh;                              // 0x0071(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_294F[0x6];                                     // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_330C[0x6];                                     // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleSkillActionBase_C> SkillActionBase;                                   // 0x0078(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         RetPecID;                                          // 0x0088(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -915,7 +915,7 @@ struct BPI_BattleTaskFactory_C_BI_GetTaskForPecID final
 {
 public:
 	int32                                         PecID;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2950[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_330D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ActionTask;                                        // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_GetTaskForPecID) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_GetTaskForPecID");
@@ -934,7 +934,7 @@ public:
 	float                                         Magnitude;                                         // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Time;                                              // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WaitShakeFinish;                                   // 0x002C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2951[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_330E[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddSetUnitShake) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddSetUnitShake");
@@ -956,10 +956,10 @@ public:
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         PartyIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_UTIL_ICON_TYPE                          IconType;                                          // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2952[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_330F[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PlayRate;                                          // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSkipping;                                        // 0x002C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2953[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3310[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUtilIconTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUtilIconTask");
@@ -982,10 +982,10 @@ public:
 	class FString                                 SEName;                                            // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class USoundAtomCue*                          Data;                                              // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TargetIndex;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2954[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3311[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SocketName;                                        // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          IgnorePlayRate;                                    // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2955[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3312[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0054(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddPlaySEUnitAttachTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddPlaySEUnitAttachTask");
@@ -1048,10 +1048,10 @@ public:
 	int32                                         TargetIndex;                                       // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   AbsorptionPointSocket;                             // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                AbsorptionPointOffset;                             // 0x0030(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2956[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3313[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveVector*                           AbsorptionRadius;                                  // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsReverse;                                         // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2957[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3314[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x004C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddPlayAbsorptionEffectTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddPlayAbsorptionEffectTask");
@@ -1110,7 +1110,7 @@ struct BPI_BattleTaskFactory_C_BI_GetTaskTypeTaskCnt final
 {
 public:
 	E_BTL_TASK_COM                                Type;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2958[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3315[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Cnt;                                               // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_GetTaskTypeTaskCnt) == 0x000004, "Wrong alignment on BPI_BattleTaskFactory_C_BI_GetTaskTypeTaskCnt");
@@ -1128,7 +1128,7 @@ public:
 	float                                         PlayRate;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_PRESS_TYPE                              PressType;                                         // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DoCalcAndApply;                                    // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2959[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3316[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddPressIconTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddPressIconTask");
@@ -1149,7 +1149,7 @@ public:
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         PartyIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Sw;                                                // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_295A[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3317[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUpliftingTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUpliftingTask");
@@ -1185,7 +1185,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	E_BTL_SIDE                                    Side;                                              // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_295B[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3318[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PecID;                                             // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddBeHomeSideAllTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddBeHomeSideAllTask");
@@ -1204,7 +1204,7 @@ public:
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	E_BTL_SIDE                                    Side;                                              // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Sw;                                                // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_295C[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3319[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PecID;                                             // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUnitVisibilitySideAll) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUnitVisibilitySideAll");
@@ -1225,18 +1225,18 @@ public:
 	int32                                         SrcPartyIndex;                                     // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DstPartyIndex;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_DAMAGE_HIT_TYPE                         Type;                                              // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_295D[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_331A[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HpDamage;                                          // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MpDamage;                                          // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         bst;                                               // 0x0034(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Dead;                                              // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_295E[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_331B[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DeadType;                                          // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HP1;                                               // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_295F[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_331C[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PlayRate;                                          // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Ret;                                               // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2960[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_331D[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Tasklist;                                          // 0x0050(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_MakeDamageTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_MakeDamageTask");
@@ -1283,7 +1283,7 @@ public:
 	int32                                         PartyIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Sw;                                                // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ParticleInterlock;                                 // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2961[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_331E[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PecID;                                             // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUnitVisibilityTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUnitVisibilityTask");
@@ -1303,7 +1303,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         PartyIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2962[0xC];                                     // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_331F[0xC];                                     // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0030(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	int32                                         RetPecID;                                          // 0x0060(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1338,7 +1338,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          SpendGaugeOnly;                                    // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2963[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3320[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddDrawPlayerUpliftingGaugeTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddDrawPlayerUpliftingGaugeTask");
@@ -1357,7 +1357,7 @@ public:
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	E_BTL_SIDE                                    Side;                                              // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Sw;                                                // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2964[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3321[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_MakeUpliftingTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_MakeUpliftingTask");
@@ -1389,7 +1389,7 @@ public:
 	class FString                                 Label;                                             // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         PartyIndex;                                        // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SelectSkillScriptMessage;                          // 0x0034(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2965[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3322[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PlayRate;                                          // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetPecID;                                          // 0x003C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1413,10 +1413,10 @@ public:
 	int32                                         PartyIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_CAM_TYPE                                Type;                                              // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InterpWait;                                        // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2966[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3323[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ManualName;                                        // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          StopWait;                                          // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2967[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3324[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DeltaWait;                                         // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PecID;                                             // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1525,7 +1525,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	E_TUTORIAL_WINDOW_MESSAGE_TYPE                TutorialType;                                      // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2968[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3325[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OpenRemainSec;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RetPecID;                                          // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1545,11 +1545,11 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Load_ID;                                           // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2969[0xC];                                     // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3326[0xC];                                     // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SpawnTransform;                                    // 0x0030(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	int32                                         PartyIndex;                                        // 0x0060(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RegisterAsAnEnemy;                                 // 0x0064(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_296A[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3327[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret_PecID;                                         // 0x0068(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUnitModelLoadTask) == 0x000010, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUnitModelLoadTask");
@@ -1608,11 +1608,11 @@ public:
 	int32                                         SrcIndex;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DstIndex;                                          // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseForceTransform;                                 // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_296B[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3328[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ForceTransform;                                    // 0x0030(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	struct FVector                                ReturnEffectLocation;                              // 0x0060(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsGodSkillSummon;                                  // 0x006C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_296C[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3329[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0070(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddSummonTask) == 0x000010, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddSummonTask");
@@ -1652,7 +1652,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	EAchievementFlag                              Achievement;                                       // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_296D[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_332A[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetPecID;                                          // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_AddUnlockAchievementTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_AddUnlockAchievementTask");
@@ -1672,7 +1672,7 @@ public:
 	int32                                         SrcPartyIndex;                                     // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DstPartyIndex;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_CURE                                    Type;                                              // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_296E[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_332B[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HpCure;                                            // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MpCure;                                            // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         bstCure;                                           // 0x0034(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1717,7 +1717,7 @@ public:
 	int32                                         PartyIndex;                                        // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_CAM_TYPE                                CamType;                                           // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HaveToBeHome;                                      // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_296F[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_332C[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PecID;                                             // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_MakeCloseUpCameraTask) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_MakeCloseUpCameraTask");
@@ -1813,7 +1813,7 @@ public:
 	TArray<int32>                                 WaitTaskList;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         TargetIndex;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2970[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_332D[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMaterialAnimSetting_T>         MaterialAnimSetting;                               // 0x0028(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         PecID;                                             // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1834,7 +1834,7 @@ public:
 	class FString                                 ParentName;                                        // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         TargetIndex;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSkipping;                                        // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2971[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_332E[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 RetWaitTaskList;                                   // 0x0028(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleTaskFactory_C_BI_MakeMusMahDirection) == 0x000008, "Wrong alignment on BPI_BattleTaskFactory_C_BI_MakeMusMahDirection");

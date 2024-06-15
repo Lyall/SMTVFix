@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_MakkaWindowAnimState_structs.hpp"
 #include "Engine_classes.hpp"
 #include "E_TutorialWindow_WidgetState_structs.hpp"
 #include "E_MoonAgeAnimationState_structs.hpp"
+#include "E_MakkaWindowAnimState_structs.hpp"
 #include "Project_structs.hpp"
 #include "E_ScreenTransitionFadeType_structs.hpp"
 

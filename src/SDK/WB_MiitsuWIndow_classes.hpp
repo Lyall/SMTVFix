@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_MakkaWindowAnimState_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_MakkaWindowAnimState_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -30,11 +30,11 @@ public:
 	class UWB_MakkaWindowNumber_C*                WB_PointNumber;                                    // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_MakkaWindowNumber_C*                WB_TotalNumber;                                    // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          IsUnderMakkaWindow;                                // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_65D2[0x3];                                     // 0x0291(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_80DC[0x3];                                     // 0x0291(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DigitMoveFrameNum;                                 // 0x0294(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MakkaWindowAnimState                        AnimState_Point;                                   // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MakkaWindowAnimState                        AnimState_Total;                                   // 0x0299(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65D3[0x2];                                     // 0x029A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_80DD[0x2];                                     // 0x029A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DispPoint;                                         // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DispTotal;                                         // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DestPoint;                                         // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -43,7 +43,7 @@ public:
 	int32                                         AddTotal_ByTick;                                   // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMoving_Point;                                    // 0x02B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsMoving_Total;                                    // 0x02B5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_65D4[0x2];                                     // 0x02B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_80DE[0x2];                                     // 0x02B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CampPosOffset;                                     // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AnimPlayRate;                                      // 0x02BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -26,12 +26,12 @@ class ABattleEventBase_C final : public ABattleSkillActionBase_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BattleEventBase_C;                  // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         BlankTask;                                         // 0x0940(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_389B[0x4];                                     // 0x0944(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467D[0x4];                                     // 0x0944(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_EventScript_C*                      M_BattleEvent;                                     // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class ACameraActor*>                   Cameras;                                           // 0x0950(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	TArray<class FName>                           CameraTags;                                        // 0x0960(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          M_IsBattleEventEnd;                                // 0x0970(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_389C[0x7];                                     // 0x0971(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467E[0x7];                                     // 0x0971(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABattleAnimationCamera_C*               AnimCamera;                                        // 0x0978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CurrentBGM_Vol;                                    // 0x0980(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         EventActorIndex;                                   // 0x0984(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -42,7 +42,7 @@ public:
 	bool                                          DisappearUplifting;                                // 0x0993(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          DisappearMoonAge;                                  // 0x0994(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_BTL_EVT_RESULT                              EventResult;                                       // 0x0995(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_389D[0x2];                                     // 0x0996(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467F[0x2];                                     // 0x0996(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         EventActorList;                                    // 0x0998(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:

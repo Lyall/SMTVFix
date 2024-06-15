@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_TalkCamera_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_TalkCamera_structs.hpp"
 #include "E_TALK_DEBUG_CAMERA_structs.hpp"
 #include "Project_structs.hpp"
 #include "E_TalkCameraDebugType_structs.hpp"

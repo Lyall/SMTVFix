@@ -48,7 +48,7 @@ class UControlPointMeshComponent final : public UStaticMeshComponent
 {
 public:
 	float                                         VirtualTextureMainPassMaxDrawDistance;             // 0x04F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFC[0xC];                                     // 0x04F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F8D[0xC];                                     // 0x04F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -75,81 +75,81 @@ public:
 	int32                                         MaxLODLevel;                                       // 0x0240(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LODDistanceFactor;                                 // 0x0244(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ELandscapeLODFalloff                          LODFalloff;                                        // 0x0248(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFD[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F8E[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ComponentScreenSizeToUseSubSections;               // 0x024C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LOD0ScreenSize;                                    // 0x0250(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LOD0DistributionSetting;                           // 0x0254(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LODDistributionSetting;                            // 0x0258(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TessellationComponentScreenSize;                   // 0x025C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseTessellationComponentScreenSizeFalloff;         // 0x0260(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFE[0x3];                                     // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F8F[0x3];                                     // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TessellationComponentScreenSizeFalloff;            // 0x0264(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         OccluderGeometryLOD;                               // 0x0268(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StaticLightingLOD;                                 // 0x026C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPhysicalMaterial*                      DefaultPhysMaterial;                               // 0x0270(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StreamingDistanceMultiplier;                       // 0x0278(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFF[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F90[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     LandscapeMaterial;                                 // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F00[0x20];                                    // 0x0288(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F91[0x20];                                    // 0x0288(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     LandscapeHoleMaterial;                             // 0x02A8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FLandscapeProxyMaterialOverride> LandscapeMaterialsOverride;                        // 0x02B0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bMeshHoles;                                        // 0x02C0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         MeshHolesMaxLod;                                   // 0x02C1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F01[0x6];                                     // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F92[0x6];                                     // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class URuntimeVirtualTexture*>         RuntimeVirtualTextures;                            // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         VirtualTextureNumLods;                             // 0x02D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         VirtualTextureLodBias;                             // 0x02DC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERuntimeVirtualTextureMainPassType            VirtualTextureRenderPassType;                      // 0x02E0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F02[0x3];                                     // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F93[0x3];                                     // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NegativeZBoundsExtension;                          // 0x02E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PositiveZBoundsExtension;                          // 0x02E8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F03[0x4];                                     // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F94[0x4];                                     // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ULandscapeComponent*>            LandscapeComponents;                               // 0x02F0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TArray<class ULandscapeHeightfieldCollisionComponent*> CollisionComponents;                               // 0x0300(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TArray<class UHierarchicalInstancedStaticMeshComponent*> FoliageComponents;                                 // 0x0310(0x0010)(ExportObject, ZeroConstructor, Transient, DuplicateTransient, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F04[0x64];                                    // 0x0320(0x0064)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F95[0x64];                                    // 0x0320(0x0064)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bHasLandscapeGrass;                                // 0x0384(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F05[0x3];                                     // 0x0385(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F96[0x3];                                     // 0x0385(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StaticLightingResolution;                          // 0x0388(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         CastShadow : 1;                                    // 0x038C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bCastDynamicShadow : 1;                            // 0x038C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bCastStaticShadow : 1;                             // 0x038C(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         BitPad_3E : 5;                                     // 0x008C(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
-	uint8                                         Pad_1F06[0x3];                                     // 0x038D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F97[0x3];                                     // 0x038D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bCastFarShadow : 1;                                // 0x0390(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         BitPad_3F : 7;                                     // 0x0090(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
-	uint8                                         Pad_1F07[0x3];                                     // 0x0391(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F98[0x3];                                     // 0x0391(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bCastHiddenShadow : 1;                             // 0x0394(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         BitPad_40 : 7;                                     // 0x0094(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
-	uint8                                         Pad_1F08[0x3];                                     // 0x0395(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F99[0x3];                                     // 0x0395(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bCastShadowAsTwoSided : 1;                         // 0x0398(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         BitPad_41 : 7;                                     // 0x0098(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
-	uint8                                         Pad_1F09[0x3];                                     // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F9A[0x3];                                     // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bAffectDistanceFieldLighting : 1;                  // 0x039C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	struct FLightingChannels                      LightingChannels;                                  // 0x039D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0A[0x2];                                     // 0x039E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F9B[0x2];                                     // 0x039E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bUseMaterialPositionOffsetInStaticLighting : 1;    // 0x03A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bRenderCustomDepth : 1;                            // 0x03A0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1F0B[0x3];                                     // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F9C[0x3];                                     // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	ERendererStencilMask                          CustomDepthStencilWriteMask;                       // 0x03A4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0C[0x3];                                     // 0x03A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F9D[0x3];                                     // 0x03A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CustomDepthStencilValue;                           // 0x03A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LDMaxDrawDistance;                                 // 0x03AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLightmassPrimitiveSettings            LightmassSettings;                                 // 0x03B0(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         CollisionMipLevel;                                 // 0x03C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SimpleCollisionMipLevel;                           // 0x03CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CollisionThickness;                                // 0x03D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0D[0x4];                                     // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F9E[0x4];                                     // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBodyInstance                          BodyInstance;                                      // 0x03D8(0x0158)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	uint8                                         bGenerateOverlapEvents : 1;                        // 0x0530(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bBakeMaterialPositionOffsetIntoCollision : 1;      // 0x0530(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1F0E[0x3];                                     // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F9F[0x3];                                     // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ComponentSizeQuads;                                // 0x0534(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SubsectionSizeQuads;                               // 0x0538(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumSubsections;                                    // 0x053C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bUsedForNavigation : 1;                            // 0x0540(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bFillCollisionUnderLandscapeForNavmesh : 1;        // 0x0540(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1F0F[0x3];                                     // 0x0541(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FA0[0x3];                                     // 0x0541(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bUseDynamicMaterialInstance;                       // 0x0544(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ENavDataGatheringMode                         NavigationGeometryGatheringMode;                   // 0x0545(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseLandscapeForCullingInvisibleHLODVertices;      // 0x0546(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -277,7 +277,7 @@ static_assert(sizeof(ALandscapeBlueprintBrushBase) == 0x000220, "Wrong size on A
 class ULandscapeLODStreamingProxy final : public UStreamableRenderAsset
 {
 public:
-	uint8                                         Pad_1F13[0x8];                                     // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FA4[0x8];                                     // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -302,7 +302,7 @@ public:
 	int32                                         ComponentSizeQuads;                                // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SubsectionSizeQuads;                               // 0x045C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumSubsections;                                    // 0x0460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F14[0x4];                                     // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FA5[0x4];                                     // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     OverrideMaterial;                                  // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMaterialInterface*                     OverrideHoleMaterial;                              // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FLandscapeComponentMaterialOverride> OverrideMaterials;                                 // 0x0478(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -313,7 +313,7 @@ public:
 	class UTexture2D*                             XYOffsetmapTexture;                                // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector4                               WeightmapScaleBias;                                // 0x04D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WeightmapSubsectionOffset;                         // 0x04E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F15[0xC];                                     // 0x04E4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FA6[0xC];                                     // 0x04E4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector4                               HeightmapScaleBias;                                // 0x04F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBox                                   CachedLocalBox;                                    // 0x0500(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	TLazyObjectPtr<class ULandscapeHeightfieldCollisionComponent> CollisionComponent;                                // 0x051C(0x001C)(ExportObject, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -332,14 +332,14 @@ public:
 	int32                                         LODBias;                                           // 0x05A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  StateId;                                           // 0x05A4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  BakedTextureMaterialGuid;                          // 0x05B4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F16[0x4];                                     // 0x05C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FA7[0x4];                                     // 0x05C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             GIBakedBaseColorTexture;                           // 0x05C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         MobileBlendableLayerMask;                          // 0x05D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F17[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FA8[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     MobileMaterialInterface;                           // 0x05D8(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, NonPIEDuplicateTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UMaterialInterface*>             MobileMaterialInterfaces;                          // 0x05E0(0x0010)(ZeroConstructor, NonPIEDuplicateTransient, NativeAccessSpecifierPublic)
 	TArray<class UTexture2D*>                     MobileWeightmapTextures;                           // 0x05F0(0x0010)(ZeroConstructor, NonPIEDuplicateTransient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F18[0x70];                                    // 0x0600(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FA9[0x70];                                    // 0x0600(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float EditorGetPaintLayerWeightAtLocation(const struct FVector& InLocation, class ULandscapeLayerInfoObject* PaintLayer);
@@ -420,7 +420,7 @@ static_assert(sizeof(ALandscapeGizmoActor) == 0x000220, "Wrong size on ALandscap
 class ALandscapeGizmoActiveActor final : public ALandscapeGizmoActor
 {
 public:
-	uint8                                         Pad_1F1C[0x50];                                    // 0x0220(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FAD[0x50];                                    // 0x0220(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -459,7 +459,7 @@ class ULandscapeGrassType final : public UObject
 public:
 	TArray<struct FGrassVariety>                  GrassVarieties;                                    // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         bEnableDensityScaling : 1;                         // 0x0038(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1F1D[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FAE[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMesh*                            GrassMesh;                                         // 0x0040(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         GrassDensity;                                      // 0x0048(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PlacementJitter;                                   // 0x004C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -467,7 +467,7 @@ public:
 	int32                                         EndCullDistance;                                   // 0x0054(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          RandomRotation;                                    // 0x0058(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          AlignToSurface;                                    // 0x0059(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1E[0x6];                                     // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FAF[0x6];                                     // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -501,14 +501,14 @@ public:
 	int32                                         CollisionSizeQuads;                                // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CollisionScale;                                    // 0x046C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SimpleCollisionSizeQuads;                          // 0x0470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1F[0x4];                                     // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB0[0x4];                                     // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 CollisionQuadFlags;                                // 0x0478(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FGuid                                  HeightfieldGuid;                                   // 0x0488(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBox                                   CachedLocalBox;                                    // 0x0498(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	TLazyObjectPtr<class ULandscapeComponent>     RenderComponent;                                   // 0x04B4(0x001C)(ExportObject, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F20[0x10];                                    // 0x04D0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB1[0x10];                                    // 0x04D0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UPhysicalMaterial*>              CookedPhysicalMaterials;                           // 0x04E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F21[0x40];                                    // 0x04F0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB2[0x40];                                    // 0x04F0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class ULandscapeComponent* GetRenderComponent() const;
@@ -548,9 +548,9 @@ public:
 	int32                                         SubsectionSizeQuads;                               // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ComponentNumSubsections;                           // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                DrawScale;                                         // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F22[0xA4];                                    // 0x006C(0x00A4)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB3[0xA4];                                    // 0x006C(0x00A4)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ALandscapeStreamingProxy*>       Proxies;                                           // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F23[0xF0];                                    // 0x0120(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB4[0xF0];                                    // 0x0120(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -577,7 +577,7 @@ static_assert(offsetof(ULandscapeInfo, Proxies) == 0x000110, "Member 'ULandscape
 class ULandscapeInfoMap final : public UObject
 {
 public:
-	uint8                                         Pad_1F24[0x58];                                    // 0x0028(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB5[0x58];                                    // 0x0028(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -601,7 +601,7 @@ public:
 	class UPhysicalMaterial*                      PhysMaterial;                                      // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Hardness;                                          // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           LayerUsageDebugColor;                              // 0x003C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F25[0x4];                                     // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB6[0x4];                                     // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -630,7 +630,7 @@ public:
 	uint8                                         bDisableTessellation : 1;                          // 0x0328(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bMobile : 1;                                       // 0x0328(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bEditorToolUsage : 1;                              // 0x0328(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1F26[0x7];                                     // 0x0329(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB7[0x7];                                     // 0x0329(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -652,7 +652,7 @@ class ULandscapeMeshCollisionComponent final : public ULandscapeHeightfieldColli
 {
 public:
 	struct FGuid                                  MeshGuid;                                          // 0x0530(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F27[0x10];                                    // 0x0540(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB8[0x10];                                    // 0x0540(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -697,7 +697,7 @@ public:
 	struct FGuid                                  LandscapeGuid;                                     // 0x04F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FIntPoint>                      ProxyComponentBases;                               // 0x0500(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	int8                                          ProxyLOD;                                          // 0x0510(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1F28[0xF];                                     // 0x0511(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB9[0xF];                                     // 0x0511(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -721,7 +721,7 @@ class ULandscapeSettings final : public UDeveloperSettings
 {
 public:
 	int32                                         MaxNumberOfLayers;                                 // 0x0038(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F29[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FBA[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -783,7 +783,7 @@ public:
 	TArray<struct FLandscapeSplineConnection>     ConnectedSegments;                                 // 0x0060(0x0010)(ZeroConstructor, TextExportTransient, NativeAccessSpecifierPublic)
 	TArray<struct FLandscapeSplineInterpPoint>    Points;                                            // 0x0070(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	struct FBox                                   Bounds;                                            // 0x0080(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1F2A[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FBB[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UControlPointMeshComponent*             LocalMeshComponent;                                // 0x00A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -822,7 +822,7 @@ public:
 	struct FInterpCurveVector                     SplineInfo;                                        // 0x0058(0x0018)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FLandscapeSplineInterpPoint>    Points;                                            // 0x0070(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	struct FBox                                   Bounds;                                            // 0x0080(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1F2B[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FBC[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USplineMeshComponent*>           LocalMeshComponents;                               // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, TextExportTransient, NativeAccessSpecifierProtected)
 
 public:
@@ -849,7 +849,7 @@ class ALandscapeStreamingProxy final : public ALandscapeProxy
 {
 public:
 	TLazyObjectPtr<class ALandscape>              LandscapeActor;                                    // 0x0598(0x001C)(Edit, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F2C[0x4];                                     // 0x05B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FBD[0x4];                                     // 0x05B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -870,7 +870,7 @@ static_assert(offsetof(ALandscapeStreamingProxy, LandscapeActor) == 0x000598, "M
 class ULandscapeSubsystem final : public UTickableWorldSubsystem
 {
 public:
-	uint8                                         Pad_1F2D[0x10];                                    // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FBE[0x10];                                    // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -959,12 +959,12 @@ class UMaterialExpressionLandscapeLayerCoords final : public UMaterialExpression
 public:
 	ETerrainCoordMappingType                      MappingType;                                       // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ELandscapeCustomizedCoordType                 CustomUVType;                                      // 0x0041(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F2E[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FBF[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MappingScale;                                      // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MappingRotation;                                   // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MappingPanU;                                       // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MappingPanV;                                       // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F2F[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FC0[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -993,7 +993,7 @@ public:
 	class FName                                   ParameterName;                                     // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PreviewWeight;                                     // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ExpressionGUID;                                    // 0x004C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F30[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FC1[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1020,9 +1020,9 @@ public:
 	struct FExpressionInput                       LayerNotUsed;                                      // 0x0054(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
 	class FName                                   ParameterName;                                     // 0x0068(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         PreviewUsed : 1;                                   // 0x0070(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1F31[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FC2[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  ExpressionGUID;                                    // 0x0074(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F32[0x4];                                     // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FC3[0x4];                                     // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

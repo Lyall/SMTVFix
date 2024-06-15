@@ -25,7 +25,7 @@ public:
 	int32                                         WaitCommandIndex;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHARA_MOTION_ID                             MotionID;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WaitMotionFinished;                                // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2857[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3117[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Com_Index;                                         // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleSkillActionBase_C_BI_Com_ActorSetMotion) == 0x000004, "Wrong alignment on BPI_BattleSkillActionBase_C_BI_Com_ActorSetMotion");

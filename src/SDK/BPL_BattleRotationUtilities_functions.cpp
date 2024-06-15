@@ -51,13 +51,13 @@ struct FRotator UBPL_BattleRotationUtilities_C::Find_Look_at_Rotation_with_UpVec
 // Parameters:
 // struct FRotator                         Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // struct FRotator                         Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   Delta_time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Delta_Time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Interp_Speed                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Up_Vec                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FRotator                         Return_Value                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UBPL_BattleRotationUtilities_C::RInterp_To_with_UpVec(const struct FRotator& Current, const struct FRotator& Target, float Delta_time, float Interp_Speed, const struct FVector& Up_Vec, class UObject* __WorldContext, struct FRotator* Return_Value)
+void UBPL_BattleRotationUtilities_C::RInterp_To_with_UpVec(const struct FRotator& Current, const struct FRotator& Target, float Delta_Time, float Interp_Speed, const struct FVector& Up_Vec, class UObject* __WorldContext, struct FRotator* Return_Value)
 {
 	static class UFunction* Func = nullptr;
 
@@ -68,7 +68,7 @@ void UBPL_BattleRotationUtilities_C::RInterp_To_with_UpVec(const struct FRotator
 
 	Parms.Current = std::move(Current);
 	Parms.Target = std::move(Target);
-	Parms.Delta_time = Delta_time;
+	Parms.Delta_Time = Delta_Time;
 	Parms.Interp_Speed = Interp_Speed;
 	Parms.Up_Vec = std::move(Up_Vec);
 	Parms.__WorldContext = __WorldContext;
@@ -85,13 +85,13 @@ void UBPL_BattleRotationUtilities_C::RInterp_To_with_UpVec(const struct FRotator
 // Parameters:
 // struct FRotator                         Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // struct FRotator                         Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   Delta_time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Delta_Time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Interp_Speed                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Up_Vec                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FRotator                         Return_Value                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UBPL_BattleRotationUtilities_C::RInterp_To_with_UpVec_Fix(const struct FRotator& Current, const struct FRotator& Target, float Delta_time, float Interp_Speed, const struct FVector& Up_Vec, class UObject* __WorldContext, struct FRotator* Return_Value)
+void UBPL_BattleRotationUtilities_C::RInterp_To_with_UpVec_Fix(const struct FRotator& Current, const struct FRotator& Target, float Delta_Time, float Interp_Speed, const struct FVector& Up_Vec, class UObject* __WorldContext, struct FRotator* Return_Value)
 {
 	static class UFunction* Func = nullptr;
 
@@ -102,7 +102,7 @@ void UBPL_BattleRotationUtilities_C::RInterp_To_with_UpVec_Fix(const struct FRot
 
 	Parms.Current = std::move(Current);
 	Parms.Target = std::move(Target);
-	Parms.Delta_time = Delta_time;
+	Parms.Delta_Time = Delta_Time;
 	Parms.Interp_Speed = Interp_Speed;
 	Parms.Up_Vec = std::move(Up_Vec);
 	Parms.__WorldContext = __WorldContext;
@@ -178,12 +178,12 @@ void UBPL_BattleRotationUtilities_C::RotateTransformByAxisAndDeg(const struct FT
 // Parameters:
 // struct FRotator                         Current                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // struct FRotator                         Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   Delta_time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Delta_Time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Interp_Speed                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FRotator                         Return_Value                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UBPL_BattleRotationUtilities_C::RInterp_To_UpVec_Considered(const struct FRotator& Current, const struct FRotator& Target, float Delta_time, float Interp_Speed, class UObject* __WorldContext, struct FRotator* Return_Value)
+void UBPL_BattleRotationUtilities_C::RInterp_To_UpVec_Considered(const struct FRotator& Current, const struct FRotator& Target, float Delta_Time, float Interp_Speed, class UObject* __WorldContext, struct FRotator* Return_Value)
 {
 	static class UFunction* Func = nullptr;
 
@@ -194,7 +194,7 @@ void UBPL_BattleRotationUtilities_C::RInterp_To_UpVec_Considered(const struct FR
 
 	Parms.Current = std::move(Current);
 	Parms.Target = std::move(Target);
-	Parms.Delta_time = Delta_time;
+	Parms.Delta_Time = Delta_Time;
 	Parms.Interp_Speed = Interp_Speed;
 	Parms.__WorldContext = __WorldContext;
 

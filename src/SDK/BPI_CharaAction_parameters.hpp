@@ -24,7 +24,7 @@ struct BPI_CharaAction_C_DeathAction final
 public:
 	uint8                                         InOption;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DeadTimingOverride;                                // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_232E[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2788[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DeadTiming;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_CharaAction_C_DeathAction) == 0x000004, "Wrong alignment on BPI_CharaAction_C_DeathAction");

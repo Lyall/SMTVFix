@@ -68,7 +68,7 @@ struct BPI_BattleField_C_BI_GetAddPost final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D6F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7592[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        Output;                                            // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleField_C_BI_GetAddPost) == 0x000008, "Wrong alignment on BPI_BattleField_C_BI_GetAddPost");
@@ -83,7 +83,7 @@ struct BPI_BattleField_C_PrepareRenzokuBattle final
 public:
 	int32                                         EncountID;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsEvent;                                           // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5D70[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7593[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 EnemyIds;                                          // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          OnlyApplyEncountPostData;                          // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

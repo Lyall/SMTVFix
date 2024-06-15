@@ -24,26 +24,26 @@ struct WB_BtnIcon2_C_ExecuteUbergraph_WB_BtnIcon2 final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6352[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B9B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6353[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B9C[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0014(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                CallFunc_GetPadBtnTexture_ByOptionSetting_ReturnValue; // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture*                               K2Node_DynamicCast_AsTexture;                      // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6354[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B9D[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectGameInstanceBase*               K2Node_DynamicCast_AsProject_Game_Instance_Base;   // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6355[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B9E[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x007C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_6356[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B9F[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectGameInstanceBase*               K2Node_DynamicCast_AsProject_Game_Instance_Base_1; // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6357[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7BA0[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x00A4(0x0010)(ZeroConstructor, NoDestructor)
 };
 static_assert(alignof(WB_BtnIcon2_C_ExecuteUbergraph_WB_BtnIcon2) == 0x000008, "Wrong alignment on WB_BtnIcon2_C_ExecuteUbergraph_WB_BtnIcon2");
@@ -96,13 +96,13 @@ struct WB_BtnIcon2_C_SetButtonSize final
 public:
 	E_BTN_ICON_SIZE                               InSIze2;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_ICON_SIZE                               Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6358[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7BA1[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Temp_struct_Variable;                              // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Temp_struct_Variable_1;                            // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Temp_struct_Variable_2;                            // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Temp_struct_Variable_3;                            // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_ICON_SIZE                               Temp_byte_Variable_1;                              // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6359[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7BA2[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     Temp_object_Variable;                              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                     Temp_object_Variable_2;                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -132,11 +132,11 @@ struct WB_BtnIcon2_C_SetButtonIcon final
 {
 public:
 	E_BTN_HELP_MAPPING_KEY_TYPE                   InType;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_635A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7BA3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetBtnHelpTexUV_ByMappingEnum_ReturnValue; // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_X;                          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_Y;                          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_635B[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7BA4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -167,7 +167,7 @@ struct WB_BtnIcon2_C_SetButtonColor_ByActiveState final
 public:
 	bool                                          IsActiveColor;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_635C[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7BA5[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -187,11 +187,11 @@ struct WB_BtnIcon2_C_UpdatePlatfrormTexture final
 public:
 	E_GAMEPAD_TYPE                                CallFunc_GetConnectedGamepadType_ForSteam_ReturnValue; // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_OPTION_CONTENT_BUTTON_ICON_TYPE             CallFunc_GetButtonIconType_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_635D[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7BA6[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CallFunc_GetPadBtnTexture_ByOptionSetting_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture*                               K2Node_DynamicCast_AsTexture;                      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_635E[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7BA7[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_BtnIcon2_C_UpdatePlatfrormTexture) == 0x000008, "Wrong alignment on WB_BtnIcon2_C_UpdatePlatfrormTexture");

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AreaNameData_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AreaNameData_structs.hpp"
 #include "Project_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MapActorCore_classes.hpp"
@@ -29,7 +29,7 @@ public:
 	TArray<struct FAreaNameData>                  AreaNameList;                                      // 0x0280(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FAreaNameData                          NowAreaNameData;                                   // 0x0290(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AreaNameChange;                                    // 0x029C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_62DA[0x3];                                     // 0x029D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B23[0x3];                                     // 0x029D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_MapUI_C*                            WB_MapUI;                                          // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   SiegeAreaName;                                     // 0x02A8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UWB_MapSiegeAreaName_C*                 WB_MapSiegeAreaName;                               // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -46,20 +46,20 @@ public:
 	E_UI_FADE_STATE                               MoveAutoStateMinimap;                              // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_UI_FADE_STATE                               MoveAutoStateCharaPanel;                           // 0x0381(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bShowMapUI;                                        // 0x0382(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_62DB[0x1];                                     // 0x0383(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B24[0x1];                                     // 0x0383(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MoveAutoIdleDurationWithCamera;                    // 0x0384(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MOVE_AUTO_IDLE_WAIT;                               // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_62DC[0x4];                                     // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B25[0x4];                                     // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             PrevCameraTransform;                               // 0x0390(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_UI_FADE_STATE                               MoveAutoStateOther;                                // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_62DD[0x3];                                     // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B26[0x3];                                     // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MoveAutoIdleDurationWithoutCamera;                 // 0x03C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_UI_FADE_STATE                               MoveAutoStateLocation;                             // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMoveAutoForceCharaPanel;                         // 0x03C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_62DE[0x2];                                     // 0x03CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B27[0x2];                                     // 0x03CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MoveAutoForceCharaPanelDuration;                   // 0x03CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMoveAutoForceMagatsuhiGauge;                     // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_62DF[0x3];                                     // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B28[0x3];                                     // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MoveAutoForceMagatsuhiGaugeDuration;               // 0x03D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

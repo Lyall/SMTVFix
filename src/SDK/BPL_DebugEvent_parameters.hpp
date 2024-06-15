@@ -23,7 +23,7 @@ struct BPL_DebugEvent_C_AddDebugMenuEvent final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AddDebugMenuItemTypeJumpPage_ReturnValue; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4116[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_552C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_DebugMenu_DispName_L10N_Text;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_DebugMenu_DispName_L10N_Text_1;           // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AddDebugMenuItemTypeFuncObj_ReturnValue;  // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -411,7 +411,7 @@ struct BPL_DebugEvent_C_IsDebugEventCutSkip final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUse;                                             // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4117[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_552D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -429,7 +429,7 @@ struct BPL_DebugEvent_C_IsDebugVoiceTiming final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUse;                                             // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4118[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_552E[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -447,7 +447,7 @@ struct BPL_DebugEvent_C_IsDebugTextAlpha0 final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUse;                                             // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4119[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_552F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -465,7 +465,7 @@ struct BPL_DebugEvent_C_GetDebugEventMaxFPS final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MaxFPS;                                            // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_411A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5530[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -483,7 +483,7 @@ struct BPL_DebugEvent_C_IsDebugNewRoute final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUse;                                             // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_411B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5531[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -501,7 +501,7 @@ struct BPL_DebugEvent_C_IsDebugPrintAperture final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewParam;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_411C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5532[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -519,7 +519,7 @@ struct BPL_DebugEvent_C_GetDebugAperture final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Val;                                               // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_411D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5533[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 };
 static_assert(alignof(BPL_DebugEvent_C_GetDebugAperture) == 0x000008, "Wrong alignment on BPL_DebugEvent_C_GetDebugAperture");
@@ -535,7 +535,7 @@ struct BPL_DebugEvent_C_IsDebugCutName final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewParam;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_411E[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5534[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -553,7 +553,7 @@ struct BPL_DebugEvent_C_IsDebugEventCameraBlend final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCheck;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_411F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5535[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -571,7 +571,7 @@ struct BPL_DebugEvent_C_IsDebugStaffRoll2 final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewParam;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4120[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5536[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0010(0x00D0)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };

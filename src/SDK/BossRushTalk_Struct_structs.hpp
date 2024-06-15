@@ -24,7 +24,7 @@ public:
 	class FName                                   Enemy_explain_label_100_8C2470E845C66874BEA55482A2A59F79; // 0x000C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Open_flag_42_B83551B349E4612869D33BB598DECBAB;     // 0x0014(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Finish_flag_44_3F338DCB4E3142D61F3DCDBADAE35C25;   // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E45[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_640D[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDataTable*                             Talk_koshimizu_56_05AD939A47B82F6C6E2C5FBCF09CDE2D; // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UDataTable*                             Talk_tsukuyomi_52_8705F35443581630CB711493C988B89D; // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Kenkyuin_flag_60_450124BD4C5C29DA53F42FA04CCEF2F0; // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

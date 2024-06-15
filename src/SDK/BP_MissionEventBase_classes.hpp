@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int32                                         MissionId;                                         // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_450E[0x4];                                     // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C32[0x4];                                     // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMissionData                           MissionData;                                       // 0x0238(0x00B8)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FText                                   MissionName;                                       // 0x02F0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	FMulticastInlineDelegateProperty_             EvtDis_Finish;                                     // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)

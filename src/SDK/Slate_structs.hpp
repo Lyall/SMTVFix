@@ -259,9 +259,9 @@ static_assert(offsetof(FAnchors, Maximum) == 0x000008, "Member 'FAnchors::Maximu
 struct alignas(0x08) FVirtualKeyboardOptions final
 {
 public:
-	uint8                                         Pad_1E0C[0x8];                                     // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E99[0x8];                                     // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bEnableAutocorrect;                                // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0D[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E9A[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FVirtualKeyboardOptions) == 0x000008, "Wrong alignment on FVirtualKeyboardOptions");
 static_assert(sizeof(FVirtualKeyboardOptions) == 0x000010, "Wrong size on FVirtualKeyboardOptions");
@@ -277,7 +277,7 @@ public:
 	uint8                                         bCtrl : 1;                                         // 0x0018(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bAlt : 1;                                          // 0x0018(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bCmd : 1;                                          // 0x0018(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1E0E[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E9B[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FInputChord) == 0x000008, "Wrong alignment on FInputChord");
 static_assert(sizeof(FInputChord) == 0x000020, "Wrong size on FInputChord");
@@ -315,7 +315,7 @@ public:
 	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                          // 0x0058(0x0050)(NativeAccessSpecifierPublic)
 	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                                        // 0x00A8(0x0050)(NativeAccessSpecifierPublic)
 	TArray<class FName>                           SectionOrder;                                      // 0x00F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0F[0xE0];                                    // 0x0108(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E9C[0xE0];                                    // 0x0108(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCustomizedToolMenu) == 0x000008, "Wrong alignment on FCustomizedToolMenu");
 static_assert(sizeof(FCustomizedToolMenu) == 0x0001E8, "Wrong size on FCustomizedToolMenu");

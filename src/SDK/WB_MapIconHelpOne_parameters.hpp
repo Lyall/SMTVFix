@@ -32,7 +32,7 @@ public:
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex_1;       // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3811[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42DE[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName;           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex;          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -153,12 +153,12 @@ struct WB_MapIconHelpOne_C_PlayAnimSlotIn final
 {
 public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3812[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42DF[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable_1;                              // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue;                         // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CheckSelect_IsSelect;                     // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3813[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E0[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -178,12 +178,12 @@ struct WB_MapIconHelpOne_C_PlayAnimSlotLoop final
 {
 public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3814[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable_1;                              // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue;                         // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CheckSelect_IsSelect;                     // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3815[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E2[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -203,12 +203,12 @@ struct WB_MapIconHelpOne_C_PlayAnimSlotOut final
 {
 public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3816[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable_1;                              // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue;                         // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CheckSelect_IsSelect;                     // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3817[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E4[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -240,7 +240,7 @@ struct WB_MapIconHelpOne_C_SetupItemData final
 public:
 	bool                                          Param_bSelect;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          bSkipInAnim;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3818[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E5[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMinimapIconHelpEntry                  Entry;                                             // 0x0008(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UWB_MapIconHelpList_C*                  Param_Parent;                                      // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ListIndex;                                         // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -265,12 +265,12 @@ struct WB_MapIconHelpOne_C_GetIconUV final
 {
 public:
 	E_MINIMAP_POI_ICON                            Param_POIIcon;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3819[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OutU;                                              // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         OutV;                                              // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MINIMAP_POI_ICON                            LPOIIcon;                                          // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_381A[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E7[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMinimapManager*                        CallFunc_GetMinimapManager_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetIconMaterial_OutU;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetIconMaterial_OutV;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -295,7 +295,7 @@ struct WB_MapIconHelpOne_C_SetupIcon final
 public:
 	E_MINIMAP_POI_ICON                            Param_POIIcon;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_381B[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E8[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetIconUV_OutU;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetIconUV_OutV;                           // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -330,9 +330,9 @@ public:
 	E_SHOP_ITEM_SELECT_TYPE                       L_SelectType;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckSelect_IsSelect;                     // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_381C[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42E9[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_381D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42EA[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0018(0x0028)()
 };
 static_assert(alignof(WB_MapIconHelpOne_C_UpdateInfo) == 0x000008, "Wrong alignment on WB_MapIconHelpOne_C_UpdateInfo");
@@ -362,24 +362,24 @@ struct WB_MapIconHelpOne_C_PlayAnimSlotContinue final
 {
 public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_381E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42EB[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable_1;                              // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_381F[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42EC[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable_2;                              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable_3;                              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3820[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42ED[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable_4;                              // 0x002C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable_5;                              // 0x0034(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckSelect_IsSelect;                     // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CheckSelect_IsSelect_1;                   // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3821[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42EE[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_Select_Default_1;                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckSelect_IsSelect_2;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3822[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42EF[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetPlayFrame_ReturnValue;                 // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_Select_Default_2;                           // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -29,7 +29,7 @@ public:
 	class UBoxComponent*                          Box;                                               // 0x0288(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                HitSize;                                           // 0x0290(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsView;                                            // 0x029C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E39[0x3];                                     // 0x029D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6401[0x3];                                     // 0x029D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   ProfileName;                                       // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SaveProfileName;                                   // 0x02A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 

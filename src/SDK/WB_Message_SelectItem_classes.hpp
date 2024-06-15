@@ -27,7 +27,7 @@ public:
 	class UCanvasPanel*                           Canvas_SelArray;                                   // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UMessageSimpleTextWidget*               SimpleText;                                        // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          IsSelect;                                          // 0x0278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E4C[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EA7[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMessageData                           MessageData;                                       // 0x0280(0x0070)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UScriptMessageAsset*                    ScriptAsset;                                       // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

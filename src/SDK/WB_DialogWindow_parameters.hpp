@@ -33,7 +33,7 @@ public:
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_2;        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex_2;       // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_643A[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EE5[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_3;         // 0x0024(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_3;        // 0x002C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_3;        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -41,7 +41,7 @@ public:
 	bool                                          K2Node_SwitchName_CmpSuccess_1;                    // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_4;                       // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_5;                       // 0x003E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_643B[0x1];                                     // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EE6[0x1];                                     // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_1;         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_1;        // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_1;        // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -51,7 +51,7 @@ public:
 	bool                                          K2Node_CustomEvent_InExecutionFlag_1;              // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_7;                       // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_CustomEvent_InExecutionFlag;                // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_643C[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EE7[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0060(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName;           // 0x009C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -257,7 +257,7 @@ public:
 	class FName                                   InLabel;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InExecutionText;                                   // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          InBuildText;                                       // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_643D[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EE8[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMessageTagInterface>  CallFunc_SetScriptMessageByLabel_self_CastInput;   // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_DialogWindow_C_SetMessageText) == 0x000008, "Wrong alignment on WB_DialogWindow_C_SetMessageText");
@@ -323,11 +323,11 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_643E[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EE9[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_643F[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEA[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           K2Node_MakeArray_Array;                            // 0x0050(0x0010)(ReferenceParm)
 	class FName                                   Temp_name_Variable;                                // 0x0060(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -362,11 +362,11 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6440[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEB[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6441[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEC[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0050(0x0010)(ReferenceParm)
 	int32                                         Temp_int_Variable;                                 // 0x0060(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -414,11 +414,11 @@ static_assert(offsetof(WB_DialogWindow_C_DecDialogSelect, CallFunc_IsVisible_Ret
 struct WB_DialogWindow_C_SetDialogSelectCursorOffset final
 {
 public:
-	int32                                         DefaultCursorPos;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Defaultcursorpos;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_DialogWindow_C_SetDialogSelectCursorOffset) == 0x000004, "Wrong alignment on WB_DialogWindow_C_SetDialogSelectCursorOffset");
 static_assert(sizeof(WB_DialogWindow_C_SetDialogSelectCursorOffset) == 0x000004, "Wrong size on WB_DialogWindow_C_SetDialogSelectCursorOffset");
-static_assert(offsetof(WB_DialogWindow_C_SetDialogSelectCursorOffset, DefaultCursorPos) == 0x000000, "Member 'WB_DialogWindow_C_SetDialogSelectCursorOffset::DefaultCursorPos' has a wrong offset!");
+static_assert(offsetof(WB_DialogWindow_C_SetDialogSelectCursorOffset, Defaultcursorpos) == 0x000000, "Member 'WB_DialogWindow_C_SetDialogSelectCursorOffset::Defaultcursorpos' has a wrong offset!");
 
 // Function WB_DialogWindow.WB_DialogWindow_C.DecidesDialogSelectCursor
 // 0x000C (0x000C - 0x0000)
@@ -456,7 +456,7 @@ public:
 	int32                                         OutIndex;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Retindex;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6442[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EED[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetSelectCursorIndex_OutIndex;            // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_DialogWindow_C_GetDialogCursorIndex) == 0x000004, "Wrong alignment on WB_DialogWindow_C_GetDialogCursorIndex");
@@ -498,7 +498,7 @@ struct WB_DialogWindow_C_SetRichTextProgramValue final
 {
 public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6443[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 InString;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	TScriptInterface<class IMessageTagInterface>  CallFunc_SetProgramValue_self_CastInput;           // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };

@@ -30,7 +30,7 @@ public:
 	FMulticastInlineDelegateProperty_             ScriptBeginOverlap;                                // 0x0240(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             ScriptEndOverlap;                                  // 0x0250(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          ActiveArea;                                        // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6509[0x3];                                     // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7FD3[0x3];                                     // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                BoxSize;                                           // 0x0264(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BoxDiff;                                           // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DebugPrintBoxDiff;                                 // 0x0274(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

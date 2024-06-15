@@ -23,20 +23,20 @@ struct WB_BtlInfoMess_C_ShowBySkill final
 {
 public:
 	int32                                         SkillId;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_556A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D73[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SrcActorName;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 DstActorName;                                      // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          IsMaster;                                          // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_556B[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D74[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         OverwriteSkillMesID;                               // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FString>                         Lo_ProgramVal;                                     // 0x0030(0x0010)(Edit, BlueprintVisible)
 	struct FSkillInfoMess                         Lo_SkillInfoMess;                                  // 0x0040(0x001C)(Edit, BlueprintVisible, NoDestructor)
 	int32                                         Lo_StringIndex;                                    // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Lo_MessageID;                                      // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_556C[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D75[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    Lo_MessageAsset;                                   // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_556D[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D76[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkillInfoMess                         CallFunc_GetSkillInfoMessData_ReturnValue;         // 0x0074(0x001C)(ConstParm, NoDestructor)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -72,7 +72,7 @@ public:
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_556E[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D77[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_InfoWindowCtrl_C> CallFunc_BPI_GetInfoWindowCtrl_OutActor;           // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_BtlInfoMess_C_Hide) == 0x000008, "Wrong alignment on WB_BtlInfoMess_C_Hide");
@@ -90,7 +90,7 @@ public:
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_556F[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D78[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_InfoWindowCtrl_C> CallFunc_BPI_GetInfoWindowCtrl_OutActor;           // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_BtlInfoMess_C_EndSeq) == 0x000008, "Wrong alignment on WB_BtlInfoMess_C_EndSeq");
@@ -123,11 +123,11 @@ struct WB_BtlInfoMess_C_IsDispOn final
 {
 public:
 	bool                                          RetValue;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5570[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D79[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5571[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D7A[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_InfoWindowCtrl_C> CallFunc_BPI_GetInfoWindowCtrl_OutActor;           // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IIsFinishedInfoWindowOpen_OutFinished;    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -146,7 +146,7 @@ struct WB_BtlInfoMess_C_ShowExtActMess final
 {
 public:
 	E_BTL_EXTRA_ACTION                            MessageIndex;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5572[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D7B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         ProgramStr;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -164,7 +164,7 @@ public:
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5573[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D7C[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_InfoWindowCtrl_C> CallFunc_BPI_GetInfoWindowCtrl_OutActor;           // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_BtlInfoMess_C_Setup) == 0x000008, "Wrong alignment on WB_BtlInfoMess_C_Setup");
@@ -207,12 +207,12 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5574[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D7D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5575[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D7E[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_InfoWindowCtrl_C> CallFunc_BPI_GetInfoWindowCtrl_OutActor;           // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_BtlInfoMess_C_SetWidgetVisibility) == 0x000008, "Wrong alignment on WB_BtlInfoMess_C_SetWidgetVisibility");
@@ -247,20 +247,20 @@ struct WB_BtlInfoMess_C_ShowInfoWindow final
 public:
 	class UScriptMessageAsset*                    InScriptMessage;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InMessageId;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5576[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D7F[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         InProgramValue;                                    // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5577[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D80[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5578[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D81[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5579[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D82[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_InfoWindowCtrl_C> CallFunc_BPI_GetInfoWindowCtrl_OutActor;           // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_BtlInfoMess_C_ShowInfoWindow) == 0x000008, "Wrong alignment on WB_BtlInfoMess_C_ShowInfoWindow");
@@ -290,15 +290,15 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_557A[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D83[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_557B[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D84[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_557C[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D85[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_InfoWindowCtrl_C> CallFunc_BPI_GetInfoWindowCtrl_OutActor;           // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(WB_BtlInfoMess_C_ShowInfoWindowByLabel) == 0x000008, "Wrong alignment on WB_BtlInfoMess_C_ShowInfoWindowByLabel");

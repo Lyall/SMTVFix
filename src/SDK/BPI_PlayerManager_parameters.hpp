@@ -45,7 +45,7 @@ struct BPI_PlayerManager_C_BPI_SetDeactiveLocation final
 {
 public:
 	E_PLAYER_MANAGER_TYPE                         PlayerType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D54[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4EEF[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Location;                                          // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BPI_PlayerManager_C_BPI_SetDeactiveLocation) == 0x000010, "Wrong alignment on BPI_PlayerManager_C_BPI_SetDeactiveLocation");
@@ -59,7 +59,7 @@ struct BPI_PlayerManager_C_BPI_GetDeactiveLocation final
 {
 public:
 	E_PLAYER_MANAGER_TYPE                         PlayerType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D55[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4EF0[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Location;                                          // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BPI_PlayerManager_C_BPI_GetDeactiveLocation) == 0x000010, "Wrong alignment on BPI_PlayerManager_C_BPI_GetDeactiveLocation");

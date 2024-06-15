@@ -20,7 +20,7 @@ struct FTalkMythAssetInfo final
 {
 public:
 	int32                                         MythId_2_73C5D41748FE07BE216A60A54BCD2AAA;         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6488[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UScriptMessageAsset>     ScrMsg_7_16795F5E4A4BCF02E85605BE413EF1B2;         // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UObject>                 ProcessTable_12_507F597048A5B110A8EE2090259DD6BC;  // 0x0030(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };

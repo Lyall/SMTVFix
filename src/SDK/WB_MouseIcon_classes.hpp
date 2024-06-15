@@ -28,7 +28,7 @@ public:
 	class UImage*                                 Image_Icon;                                        // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	E_BTN_HELP_MOUSE_ICON_TYPE                    Debug_IconType;                                    // 0x0270(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_ICON_SIZE                               IconSize2;                                         // 0x0271(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_633A[0x2];                                     // 0x0272(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B83[0x2];                                     // 0x0272(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           IconColor;                                         // 0x0274(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

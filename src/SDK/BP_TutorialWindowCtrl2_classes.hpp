@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Project_structs.hpp"
+#include "E_AmuletTutorial_MsgType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "E_TutorialWindow_WidgetState_structs.hpp"
-#include "E_AmuletTutorial_MsgType_structs.hpp"
 #include "Slate_structs.hpp"
 
 

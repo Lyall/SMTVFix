@@ -22,7 +22,7 @@ struct FEventBattleListStruct final
 {
 public:
 	int32                                         CharaID_2_27CE8DAD47F8F691C576EAB6BF1D5E7F;        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CA3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C04[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Chara_9_0C7C382342BF813C182B08840F8BE7EA;          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_CHAR_TYPE                               Type_12_DA1AC20D40671CE580ABA38A8A925E5C;          // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

@@ -50,7 +50,7 @@ struct BPI_StatusCharaChanger_C_Init_Battle final
 public:
 	struct FTransform                             SpawnPos;                                          // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	E_UI_STATUS_CTRL_TYPE                         Type;                                              // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_550C[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D11[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                StatusCtrlDataBtl;                                 // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseAnalyzeItem;                                    // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -91,7 +91,7 @@ struct BPI_StatusCharaChanger_C_NewInit final
 {
 public:
 	class UObject*                                DataObject;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_550D[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D12[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	bool                                          WithModelLoad;                                     // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          WithModelSpawn;                                    // 0x0041(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)

@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USsPlayerWidget*                        SsPlayerWidget_PopUp;                              // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	E_POP_UP_ICON_TYPE                            IconType;                                          // 0x0270(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_62CA[0x3];                                     // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B07[0x3];                                     // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ListIndex;                                         // 0x0274(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsStarted;                                         // 0x0278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 

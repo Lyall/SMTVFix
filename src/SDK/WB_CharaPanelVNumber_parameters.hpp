@@ -56,7 +56,7 @@ struct WB_CharaPanelVNumber_C_GetVNumberData final
 {
 public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_541E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5219[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_VariousNumber_C*                    OutWidget;                                         // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_VariousNumber_C*                    Outvnumberwidget;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -152,17 +152,17 @@ struct WB_CharaPanelVNumber_C_IsAnimationEnd final
 public:
 	bool                                          OutFinished;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsFinished;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_541F[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_521A[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_VariousNumber_C*                    CallFunc_GetVNumberData_OutWidget;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsAnimationEnd_OutFinished;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsAnimationEnd_OutFinished_1;             // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5420[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_521B[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_VariousNumber_C*                    CallFunc_GetVNumberData_OutWidget_1;               // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsAnimationEnd_OutFinished_2;             // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5421[0x1];                                     // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_521C[0x1];                                     // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CharaPanelVNumber_C_IsAnimationEnd) == 0x000008, "Wrong alignment on WB_CharaPanelVNumber_C_IsAnimationEnd");
