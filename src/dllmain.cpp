@@ -61,7 +61,6 @@ uintptr_t AntiAliasingCVARAddr;
 uintptr_t HalfResAOCVARAddr;
 uintptr_t TAAUAlgorithmCVARAddr;
 uintptr_t VertexMotionVectorsCVARAddr;
-uintptr_t TAAUUpsamplingCVARAddr;
 
 void Logging()
 {
