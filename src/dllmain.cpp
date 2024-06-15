@@ -55,9 +55,13 @@ int iCurrentResX;
 int iCurrentResY;
 int iOldResX;
 int iOldResY;
+
+// CVAR addresses
 uintptr_t AntiAliasingCVARAddr;
 uintptr_t HalfResAOCVARAddr;
 uintptr_t TAAUAlgorithmCVARAddr;
+uintptr_t VertexMotionVectorsCVARAddr;
+uintptr_t TAAUUpsamplingCVARAddr;
 
 void Logging()
 {
@@ -390,7 +394,8 @@ void GraphicalTweaks()
     uint8_t* AntiAliasingCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 4C ?? ?? ?? ?? 74 ?? FF 15 ?? ?? ?? ?? 33 ?? 3B ?? ?? ?? ?? ?? 0F ?? ?? EB ?? 33 ??");
     uint8_t* HalfResAOCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ??");
     uint8_t* TAAUAlgorithmCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? B9 0A 00 00 00 0F ?? ?? ?? ?? ?? ?? 83 ?? ?? 00");
-    if (AntiAliasingCVARScanResult && HalfResAOCVARScanResult && TAAUAlgorithmCVARScanResult)
+    uint8_t* VertexMotionVectorsCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ?? 48 ?? ?? 48 ?? ?? ?? 00 74 ??");
+    if (AntiAliasingCVARScanResult && HalfResAOCVARScanResult && TAAUAlgorithmCVARScanResult && VertexMotionVectorsCVARScanResult)
     {
         AntiAliasingCVARAddr = Memory::GetAbsolute((uintptr_t)AntiAliasingCVARScanResult + 0x3);
         spdlog::info("CVARS: r.DefaultFeature.AntiAliasing: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AntiAliasingCVARAddr - (uintptr_t)baseModule);
@@ -398,8 +403,10 @@ void GraphicalTweaks()
         spdlog::info("CVARS: r.AmbientOcclusion.HalfRes: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HalfResAOCVARAddr - (uintptr_t)baseModule);
         TAAUAlgorithmCVARAddr = Memory::GetAbsolute((uintptr_t)TAAUAlgorithmCVARScanResult + 0x3);
         spdlog::info("CVARS: r.TemporalAA.Algorithm: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)TAAUAlgorithmCVARAddr - (uintptr_t)baseModule);
+        VertexMotionVectorsCVARAddr = Memory::GetAbsolute((uintptr_t)VertexMotionVectorsCVARScanResult + 0x3);
+        spdlog::info("CVARS: r.TemporalAA.Algorithm: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)VertexMotionVectorsCVARScanResult - (uintptr_t)baseModule);
     }
-    else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult || !TAAUAlgorithmCVARScanResult)
+    else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult || !TAAUAlgorithmCVARScanResult || !VertexMotionVectorsCVARScanResult)
     {
         spdlog::error("CVARS: Pattern scan failed.");
     }
@@ -416,7 +423,7 @@ void GraphicalTweaks()
             {
                 if (bEnableTAA)
                 {
-                    if (HalfResAOCVARAddr && AntiAliasingCVARAddr && TAAUAlgorithmCVARAddr)
+                    if (HalfResAOCVARAddr && AntiAliasingCVARAddr && TAAUAlgorithmCVARAddr && VertexMotionVectorsCVARAddr)
                     {
                         // r.AmbientOcclusion.HalfRes=0
                         *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)) = 0;
@@ -424,6 +431,12 @@ void GraphicalTweaks()
                         // r.DefaultFeature.AntiAliasing=2
                         *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)) = 2;
                         *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x4) = 2;
+                        // r.VolumetricClouds - 0x230 = r.VertexDeformationOutputsVelocity
+                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x230) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x22C) = 1;
+                        // r.DefaultFeature.AntiAliasing + 0x500 = r.TemporalAA.Upsampling
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x500) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x504) = 1;
 
                         if (bEnableGen5TAAU)
                         {
