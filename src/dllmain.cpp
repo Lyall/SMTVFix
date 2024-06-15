@@ -149,9 +149,9 @@ void ReadConfig()
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
     spdlog::info("Config Parse: fAdditionalFOV: {}", fAdditionalFOV);
-    if (fAdditionalFOV < (float)1 || fAdditionalFOV >(float)120)
+    if (fAdditionalFOV < (float)0 || fAdditionalFOV >(float)120)
     {
-        fAdditionalFOV = std::clamp(fAdditionalFOV, (float)1, (float)120);
+        fAdditionalFOV = std::clamp(fAdditionalFOV, (float)0, (float)120);
         spdlog::warn("Config Parse: fAdditionalFOV value invalid, clamped to {}", fAdditionalFOV);
     }
     spdlog::info("Config Parse: bScreenPercentage: {}", bScreenPercentage);
