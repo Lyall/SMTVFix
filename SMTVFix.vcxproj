@@ -163,6 +163,7 @@
     <ClCompile Include="src\SDK\Basic.cpp" />
     <ClCompile Include="src\SDK\CoreUObject_functions.cpp" />
     <ClCompile Include="src\SDK\Engine_functions.cpp" />
+    <ClCompile Include="src\SDK\ProjectPlayerCameraManager_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="external\safetyhook\safetyhook.hpp" />

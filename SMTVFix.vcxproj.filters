@@ -33,6 +33,9 @@
     <ClCompile Include="src\SDK\CoreUObject_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\SDK\ProjectPlayerCameraManager_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\helper.hpp">

@@ -4,8 +4,10 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <safetyhook.hpp>
+
 #include "SDK/Engine_classes.hpp"
 #include "SDK/CinematicCamera_classes.hpp"
+#include "SDK/ProjectPlayerCameraManager_classes.hpp"
 #include "SDK/WBP_LogoScreen_classes.hpp"
 #include "SDK/WB_ScreenFade_classes.hpp"
 #include "SDK/WB_ScreenTransition_classes.hpp"
@@ -31,7 +33,6 @@ std::pair DesktopDimensions = { 0,0 };
 bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
-float fAdditionalFOV;
 bool bIntroSkip;
 bool bEnableConsole;
 bool bDisableMenuFPSCap;
@@ -39,6 +40,10 @@ bool bEnableTAA;
 bool bEnableGen5TAAU;
 bool bScreenPercentage;
 float fScreenPercentage = 100.0f;
+bool bAdjustCam;
+float fAdjustDist;
+float fAdjustFOV;
+float fAdjustHeight;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -134,7 +139,10 @@ void ReadConfig()
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
-    inipp::get_value(ini.sections["Fix FOV"], "AdditionalFOV", fAdditionalFOV);
+    inipp::get_value(ini.sections["Adjust Player Camera"], "Enabled", bAdjustCam);
+    inipp::get_value(ini.sections["Adjust Player Camera"], "Distance", fAdjustDist);
+    inipp::get_value(ini.sections["Adjust Player Camera"], "FOV", fAdjustFOV);
+    inipp::get_value(ini.sections["Adjust Player Camera"], "Height", fAdjustHeight);
     inipp::get_value(ini.sections["Screen Percentage"], "Enabled", bScreenPercentage);
     inipp::get_value(ini.sections["Screen Percentage"], "Value", fScreenPercentage);
     inipp::get_value(ini.sections["Enable TAA"], "Enabled", bEnableTAA);
@@ -147,11 +155,24 @@ void ReadConfig()
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
-    spdlog::info("Config Parse: fAdditionalFOV: {}", fAdditionalFOV);
-    if (fAdditionalFOV < (float)0 || fAdditionalFOV >(float)120)
+    spdlog::info("Config Parse: bAdjustCam: {}", bAdjustCam);
+    spdlog::info("Config Parse: fAdjustFOV: {}", fAdjustFOV);
+    if (fAdjustFOV < (float)1 || fAdjustFOV >(float)180)
     {
-        fAdditionalFOV = std::clamp(fAdditionalFOV, (float)0, (float)120);
-        spdlog::warn("Config Parse: fAdditionalFOV value invalid, clamped to {}", fAdditionalFOV);
+        fAdjustFOV = std::clamp(fAdjustFOV, (float)1, (float)180);
+        spdlog::warn("Config Parse: fAdjustFOV value invalid, clamped to {}", fAdjustFOV);
+    }
+    spdlog::info("Config Parse: fAdjustDist: {}", fAdjustDist);
+    if (fAdjustDist < (float)1 || fAdjustDist >(float)10000)
+    {
+        fAdjustDist = std::clamp(fAdjustDist, (float)1, (float)10000);
+        spdlog::warn("Config Parse: fAdjustDist value invalid, clamped to {}", fAdjustDist);
+    }
+    spdlog::info("Config Parse: fAdjustHeight: {}", fAdjustHeight);
+    if (fAdjustHeight < (float)1 || fAdjustHeight >(float)10000)
+    {
+        fAdjustHeight = std::clamp(fAdjustHeight, (float)1, (float)10000);
+        spdlog::warn("Config Parse: fAdjustHeight value invalid, clamped to {}", fAdjustHeight);
     }
     spdlog::info("Config Parse: bScreenPercentage: {}", bScreenPercentage);
     spdlog::info("Config Parse: fScreenPercentage: {}", fScreenPercentage);
@@ -250,16 +271,16 @@ void CurrentResolution()
 
 void AspectFOV()
 {
-    // Aspect Ratio / FOV
-    uint8_t* AspectFOVScanResult = Memory::PatternScan(baseModule, "74 ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? EB ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? 8B") + 0xA;
-    if (AspectFOVScanResult)
+    if (bFixFOV)
     {
-        spdlog::info("Aspect Ratio/FOV: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AspectFOVScanResult - (uintptr_t)baseModule);
-
-        if (bFixFOV || fAdditionalFOV > 0.00f)
+        // Field of View
+        uint8_t* FOVScanResult = Memory::PatternScan(baseModule, "E9 ?? ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 45 ?? ?? ??") + 0xA;
+        if (FOVScanResult)
         {
+            spdlog::info("FOV: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FOVScanResult - (uintptr_t)baseModule);
+
             static SafetyHookMid FOVMidHook{};
-            FOVMidHook = safetyhook::create_mid(AspectFOVScanResult + 0x12,
+            FOVMidHook = safetyhook::create_mid(FOVScanResult,
                 [](SafetyHookContext& ctx)
                 {
                     // Fix vert- FOV when using an ultrawide aspect ratio
@@ -267,34 +288,69 @@ void AspectFOV()
                     {
                         ctx.xmm0.f32[0] = atanf(tanf(ctx.xmm0.f32[0] * (fPi / 360)) / fNativeAspect * fAspectRatio) * (360 / fPi);
                     }
+                });
+        }
+        else if (!FOVScanResult)
+        {
+            spdlog::error("FOV: Pattern scan failed.");
+        }
+    }
 
-                    // Add additional FOV
-                    if (fAdditionalFOV > 0.00f)
+    if (bAdjustCam)
+    {
+        // Adjust player camera
+        uint8_t* PlayerCameraScanResult = Memory::PatternScan(baseModule, "49 ?? ?? C6 ?? ?? ?? 01 48 ?? ?? F3 0F ?? ?? ?? ?? F3 0F ?? ?? ?? ?? F3 0F ?? ?? ?? ??");
+        if (PlayerCameraScanResult)
+        {
+            spdlog::info("PlayerCamera: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)PlayerCameraScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid PlayerCameraMidHook{};
+            PlayerCameraMidHook = safetyhook::create_mid(PlayerCameraScanResult,
+                [](SafetyHookContext& ctx)
+                { 
+                    if (ctx.rdi)
                     {
-                        SDK::UObject* obj = (SDK::UObject*)(ctx.rbx);
-
-                        // Do not increase FOV in cutscenes
-                        if (!obj->IsA(SDK::UCineCameraComponent::StaticClass()))
+                        SDK::UObject* obj = (SDK::UObject*)(ctx.rdi);
+                        if (obj->IsA(SDK::AProjectPlayerCameraManager_C::StaticClass()))
                         {
-                            ctx.xmm0.f32[0] += fAdditionalFOV;
+                            SDK::AProjectPlayerCameraManager_C* camManager = (SDK::AProjectPlayerCameraManager_C*)(ctx.rdi);
+                            // Check if "Standard" camera angle
+                            if (camManager->DEF_Distance == 580.00f && camManager->DEF_FOV == 60.00f && camManager->DEF_Height == 73.00f)
+                            {
+                                camManager->Camera_Standard_Preset.M_CameraDistance = fAdjustDist;              // Default = 580
+                                camManager->Camera_Standard_Preset.M_CameraFOV = fAdjustFOV;                    // Default = 60
+                                camManager->Camera_Standard_Preset.M_CameraRootHeight = fAdjustHeight;          // Default = 73
+                                camManager->SetCameraFOV(SDK::E_OPTION_CONTENT_FOV_TYPE::E_OPTION_CONTENT_FOV_TYPE_STANDARD);
+                            }
                         }
                     }
                 });
         }
-
-        if (bFixAspect)
+        else if (!PlayerCameraScanResult)
         {
+            spdlog::error("PlayerCamera: Pattern scan failed.");
+        }
+    }
+
+    if (bFixAspect)
+    {
+        // Aspect Ratio
+        uint8_t* AspectRatioScanResult = Memory::PatternScan(baseModule, "74 ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? EB ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? 8B") + 0xA;
+        if (AspectRatioScanResult)
+        {
+            spdlog::info("Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AspectRatioScanResult - (uintptr_t)baseModule);
+
             static SafetyHookMid AspectRatioMidHook{};
-            AspectRatioMidHook = safetyhook::create_mid(AspectFOVScanResult + 0x1D,
+            AspectRatioMidHook = safetyhook::create_mid(AspectRatioScanResult + 0x1D,
                 [](SafetyHookContext& ctx)
                 {
                     ctx.rax = *(uint32_t*)&fAspectRatio;
                 });
         }
-    }
-    else if (!AspectFOVScanResult)
-    {
-        spdlog::error("Aspect Ratio/FOV: Pattern scan failed.");
+        else if (!AspectRatioScanResult)
+        {
+            spdlog::error("Aspect Ratio: Pattern scan failed.");
+        }
     }
 }
 
@@ -528,6 +584,7 @@ DWORD __stdcall Main(void*)
 {
     Logging();
     ReadConfig();
+    Sleep(1000);
     CurrentResolution();
     AspectFOV();
     HUD();
