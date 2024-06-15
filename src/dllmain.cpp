@@ -404,7 +404,7 @@ void GraphicalTweaks()
         TAAUAlgorithmCVARAddr = Memory::GetAbsolute((uintptr_t)TAAUAlgorithmCVARScanResult + 0x3);
         spdlog::info("CVARS: r.TemporalAA.Algorithm: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)TAAUAlgorithmCVARAddr - (uintptr_t)baseModule);
         VertexMotionVectorsCVARAddr = Memory::GetAbsolute((uintptr_t)VertexMotionVectorsCVARScanResult + 0x3);
-        spdlog::info("CVARS: r.TemporalAA.Algorithm: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)VertexMotionVectorsCVARScanResult - (uintptr_t)baseModule);
+        spdlog::info("CVARS: r.VertexDeformationOutputsVelocity: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)VertexMotionVectorsCVARScanResult - (uintptr_t)baseModule);
     }
     else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult || !TAAUAlgorithmCVARScanResult || !VertexMotionVectorsCVARScanResult)
     {
@@ -434,9 +434,6 @@ void GraphicalTweaks()
                         // r.VolumetricClouds - 0x230 = r.VertexDeformationOutputsVelocity
                         *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x230) = 1;
                         *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x22C) = 1;
-                        // r.DefaultFeature.AntiAliasing + 0x500 = r.TemporalAA.Upsampling
-                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x500) = 1;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x504) = 1;
 
                         if (bEnableGen5TAAU)
                         {
