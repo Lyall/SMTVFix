@@ -5,14 +5,21 @@
 This is a fix for Shin Megami Tensei V: Vengeance that adds ultrawide/narrow display support, graphical tweaks and much more.
 
 ## Features
+### General
+- Skip intro logos/movie.
+- Enable developer console.
+- Remove 60FPS cap in menus.
+- Adjust player camera distance/fov/height.
+
+### Ultrawide/Narrower
 - Remove pillarboxing/letterboxing.
 - Correct FOV at any resolution.
 - Centered 16:9 HUD.
-- Skip intro logos.
-- Enable developer console.
-- Remove 60FPS cap in menus.
+
+### Graphical Tweaks
 - Adjustable resolution scale (screen percentage).
 - Enable TAA.
+- Adjust shadow resolution.
 
 ## Installation
 - Grab the latest release of SMTVFix from [here.](https://github.com/Lyall/SMTVFix/releases)
@@ -29,6 +36,7 @@ This is a fix for Shin Megami Tensei V: Vengeance that adds ultrawide/narrow dis
 Please report any issues you see.
 This list will contain bugs which may or may not be fixed.
 
+### Ultrawide/Narrower Issues
 - Some HUD backgrounds do not span to fill the screen.
 - Some UI prompts display visual errors outside 16:9 boundaries.
 
