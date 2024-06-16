@@ -34,6 +34,7 @@ bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
 bool bIntroSkip;
+bool bIntroSkipMovie;
 bool bEnableConsole;
 bool bDisableMenuFPSCap;
 bool bEnableTAA;
@@ -137,6 +138,7 @@ void ReadConfig()
 
     // Read ini file
     inipp::get_value(ini.sections["Intro Skip"], "Enabled", bIntroSkip);
+    inipp::get_value(ini.sections["Intro Skip"], "SkipMovie", bIntroSkipMovie);
     inipp::get_value(ini.sections["Enable Console"], "Enabled", bEnableConsole);
     inipp::get_value(ini.sections["Remove 60FPS Cap"], "Enabled", bDisableMenuFPSCap);
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
@@ -155,6 +157,7 @@ void ReadConfig()
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
+    spdlog::info("Config Parse: bIntroSkipMovie: {}", bIntroSkipMovie);
     spdlog::info("Config Parse: bEnableConsole: {}", bEnableConsole);
     spdlog::info("Config Parse: bDisableMenuFPSCap: {}", bDisableMenuFPSCap);
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
@@ -369,7 +372,7 @@ void AspectFOV()
 
 void HUD()
 {
-    // Center HUD + Intro Skip
+    // Center HUD
     uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3") + 0xA;
     if (HUDPositionScanResult)
     {
@@ -383,17 +386,6 @@ void HUD()
                 if (ctx.rcx)
                 {
                     SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
-
-                    // Intro Skip
-                    if (bIntroSkip && !bHasSkippedIntro)
-                    {
-                        if (obj->IsA(SDK::UWBP_LogoScreen_C::StaticClass()))
-                        {
-                            auto LogoScreen = (SDK::UWBP_LogoScreen_C*)(ctx.rcx);
-                            LogoScreen->bComplete = true;
-                            bHasSkippedIntro = true;
-                        }
-                    }
 
                     // Center HUD
                     if (bFixHUD)
@@ -603,16 +595,66 @@ void Misc()
     }
 }
 
+void IntroSkip()
+{
+    if (bIntroSkip)
+    {
+        // Skip intro logos
+        SDK::UWBP_LogoScreen_C* IntroLogo_obj = SDK::UObject::FindObject<SDK::UWBP_LogoScreen_C>("WBP_LogoScreen_C Transient.ProjectGameEngine_2147482623.ProjectGameInstance_C_2147482615.WBP_LogoScreen_C_2147480233");
+
+        int i = 0;
+        while (!IntroLogo_obj)
+        {
+            Sleep(10);
+            IntroLogo_obj = SDK::UObject::FindObject<SDK::UWBP_LogoScreen_C>("WBP_LogoScreen_C Transient.ProjectGameEngine_2147482623.ProjectGameInstance_C_2147482615.WBP_LogoScreen_C_2147480233");
+            i++;
+            if (i == 1000)
+            {
+                // Give up after 10 seconds.
+                break;
+            }
+        }
+
+        if (IntroLogo_obj)
+        {
+            IntroLogo_obj->bComplete = true;
+            spdlog::info("Intro Skip: Skipped intro logos.");
+        }
+    }
+
+    if (bIntroSkipMovie)
+    {
+        // Skip intro movie
+        SDK::UFunction* IntroMovie_fn = SDK::UObject::FindObject<SDK::UFunction>("Function Project.BPL_Title.SetRequestTitleMovie");
+        spdlog::info("intro movie = {:x}", (uintptr_t)(IntroMovie_fn->ExecFunction));
+
+        static bool bHasSkippedIntroMovie = false;
+        static SafetyHookMid AspectRatioMidHook{};
+        AspectRatioMidHook = safetyhook::create_mid((uintptr_t)(IntroMovie_fn->ExecFunction) + 0x67,
+            [](SafetyHookContext& ctx)
+            {
+                // Only skip it once so people can replay it by idling in the main menu.
+                if (!bHasSkippedIntroMovie)
+                {
+                    ctx.rcx = 0;
+                    bHasSkippedIntroMovie = true;
+                    spdlog::info("Intro Skip: Skipped intro movie.");
+                }
+            });
+    }
+    
+}
+
 DWORD __stdcall Main(void*)
 {
     Logging();
     ReadConfig();
-    Sleep(1000);
     CurrentResolution();
     AspectFOV();
     HUD();
     GraphicalTweaks();
     Misc();
+    IntroSkip();
     return true; //end thread
 }
 
