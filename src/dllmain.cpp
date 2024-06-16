@@ -47,6 +47,8 @@ float fAdjustFOV;
 float fAdjustHeight;
 bool bShadowQuality;
 int iShadowResolution;
+bool bEnableGTAO;
+bool bGTAOHalfRes;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -70,6 +72,7 @@ uintptr_t HalfResAOCVARAddr;
 uintptr_t TAAUAlgorithmCVARAddr;
 uintptr_t VertexMotionVectorsCVARAddr;
 uintptr_t MaxShadowCSMResolutionCVARAddr;
+uintptr_t AOMethodCVARAddr;
 
 void Logging()
 {
@@ -154,6 +157,8 @@ void ReadConfig()
     inipp::get_value(ini.sections["Enable TAA"], "TAAU_Gen5", bEnableGen5TAAU);
     inipp::get_value(ini.sections["Shadow Quality"], "Enabled", bShadowQuality);
     inipp::get_value(ini.sections["Shadow Quality"], "Resolution", iShadowResolution);
+    inipp::get_value(ini.sections["GTAO Ambient Occlusion"], "Enabled", bEnableGTAO);
+    inipp::get_value(ini.sections["GTAO Ambient Occlusion"], "HalfRes", bGTAOHalfRes);
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
@@ -199,6 +204,8 @@ void ReadConfig()
         iShadowResolution = std::clamp(iShadowResolution, 256, 8192);
         spdlog::warn("Config Parse: iShadowResolution value invalid, clamped to {}", iShadowResolution);
     }
+    spdlog::info("Config Parse: bEnableGTAO: {}", bEnableGTAO);
+    spdlog::info("Config Parse: bGTAOHalfRes: {}", bGTAOHalfRes);
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -461,24 +468,33 @@ void HUD()
 
 void GraphicalTweaks()
 {
-    // Enabling TAA requires half res AO to be disabled
+    // CVARs
     uint8_t* AntiAliasingCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 4C ?? ?? ?? ?? 74 ?? FF 15 ?? ?? ?? ?? 33 ?? 3B ?? ?? ?? ?? ?? 0F ?? ?? EB ?? 33 ??");
     uint8_t* HalfResAOCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ??");
     uint8_t* TAAUAlgorithmCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? B9 0A 00 00 00 0F ?? ?? ?? ?? ?? ?? 83 ?? ?? 00");
     uint8_t* VertexMotionVectorsCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ?? 48 ?? ?? 48 ?? ?? ?? 00 74 ??");
     uint8_t* MaxShadowCSMResolutionCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 44 ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ?? 44 ?? ?? ?? ?? 0F ?? ?? ?? ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ??");
+    uint8_t* AOMethodCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 83 ?? ?? 01 75 ?? 83 ?? ?? ?? ?? ?? 03");
     if (AntiAliasingCVARScanResult && HalfResAOCVARScanResult && TAAUAlgorithmCVARScanResult && VertexMotionVectorsCVARScanResult)
     {
         AntiAliasingCVARAddr = Memory::GetAbsolute((uintptr_t)AntiAliasingCVARScanResult + 0x3);
         spdlog::info("CVARS: r.DefaultFeature.AntiAliasing: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AntiAliasingCVARAddr - (uintptr_t)baseModule);
+
         HalfResAOCVARAddr = Memory::GetAbsolute((uintptr_t)HalfResAOCVARScanResult + 0x3);
         spdlog::info("CVARS: r.AmbientOcclusion.HalfRes: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HalfResAOCVARAddr - (uintptr_t)baseModule);
+
         TAAUAlgorithmCVARAddr = Memory::GetAbsolute((uintptr_t)TAAUAlgorithmCVARScanResult + 0x3);
         spdlog::info("CVARS: r.TemporalAA.Algorithm: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)TAAUAlgorithmCVARAddr - (uintptr_t)baseModule);
+
         VertexMotionVectorsCVARAddr = Memory::GetAbsolute((uintptr_t)VertexMotionVectorsCVARScanResult + 0x3);
         spdlog::info("CVARS: r.VertexDeformationOutputsVelocity: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)VertexMotionVectorsCVARScanResult - (uintptr_t)baseModule);
+
         MaxShadowCSMResolutionCVARAddr = Memory::GetAbsolute((uintptr_t)MaxShadowCSMResolutionCVARScanResult + 0x3);
         spdlog::info("CVARS: r.Shadow.MaxCSMResolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MaxShadowCSMResolutionCVARScanResult - (uintptr_t)baseModule);
+
+        AOMethodCVARAddr = Memory::GetAbsolute((uintptr_t)AOMethodCVARScanResult + 0x3);
+        spdlog::info("CVARS: r.AmbientOcclusion.Method: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AOMethodCVARScanResult - (uintptr_t)baseModule);
+
     }
     else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult || !TAAUAlgorithmCVARScanResult || !VertexMotionVectorsCVARScanResult)
     {
@@ -523,6 +539,19 @@ void GraphicalTweaks()
                     // r.Shadow.MaxCSMResolution - 0x50 = r.Shadow.MaxResolution
                     *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x50) = iShadowResolution;
                     *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x4C) = iShadowResolution;
+                }
+
+                if (AOMethodCVARAddr && bEnableGTAO)
+                {
+                    // r.AmbientOcclusion.Method	
+                    *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
+                    *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
+                    if (bGTAOHalfRes)
+                    {
+                        // r.AmbientOcclusion.Method	 - 0x5A0 = r.GTAO.Downsample
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x5A0) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x59C) = 1;
+                    }
                 }
 
                 if (bScreenPercentage)
