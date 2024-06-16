@@ -17,7 +17,7 @@ This is a fix for Shin Megami Tensei V: Vengeance that adds ultrawide/narrow dis
 - Centered 16:9 HUD.
 
 ### Graphical Tweaks
-- Adjustable resolution scale (screen percentage).
+- Adjust resolution scale (screen percentage).
 - Enable TAA.
 - Adjust shadow resolution.
 
