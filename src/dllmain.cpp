@@ -612,7 +612,18 @@ void IntroSkip()
     {
         // Skip intro movie
         SDK::UFunction* IntroMovie_fn = SDK::UObject::FindObject<SDK::UFunction>("Function Project.BPL_Title.SetRequestTitleMovie");
-        spdlog::info("intro movie = {:x}", (uintptr_t)(IntroMovie_fn->ExecFunction));
+
+        int i = 0;
+        while(!IntroMovie_fn)
+        {
+            Sleep(500);
+            IntroMovie_fn = SDK::UObject::FindObject<SDK::UFunction>("Function Project.BPL_Title.SetRequestTitleMovie");
+            i++;
+            if (i == 20)
+            {
+                break;
+            }
+        }
 
         static bool bHasSkippedIntroMovie = false;
         static SafetyHookMid AspectRatioMidHook{};
