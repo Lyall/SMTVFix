@@ -387,6 +387,17 @@ void HUD()
                 {
                     SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
 
+                    // Intro Skip
+                    if (bIntroSkip && !bHasSkippedIntro)
+                    {
+                        if (obj->IsA(SDK::UWBP_LogoScreen_C::StaticClass()))
+                        {
+                            auto LogoScreen = (SDK::UWBP_LogoScreen_C*)(ctx.rcx);
+                            LogoScreen->bComplete = true;
+                            bHasSkippedIntro = true;
+                        }
+                    }
+
                     // Center HUD
                     if (bFixHUD)
                     { 
@@ -597,31 +608,6 @@ void Misc()
 
 void IntroSkip()
 {
-    if (bIntroSkip)
-    {
-        // Skip intro logos
-        SDK::UWBP_LogoScreen_C* IntroLogo_obj = SDK::UObject::FindObject<SDK::UWBP_LogoScreen_C>("WBP_LogoScreen_C Transient.ProjectGameEngine_2147482623.ProjectGameInstance_C_2147482615.WBP_LogoScreen_C_2147480233");
-
-        int i = 0;
-        while (!IntroLogo_obj)
-        {
-            Sleep(10);
-            IntroLogo_obj = SDK::UObject::FindObject<SDK::UWBP_LogoScreen_C>("WBP_LogoScreen_C Transient.ProjectGameEngine_2147482623.ProjectGameInstance_C_2147482615.WBP_LogoScreen_C_2147480233");
-            i++;
-            if (i == 1000)
-            {
-                // Give up after 10 seconds.
-                break;
-            }
-        }
-
-        if (IntroLogo_obj)
-        {
-            IntroLogo_obj->bComplete = true;
-            spdlog::info("Intro Skip: Skipped intro logos.");
-        }
-    }
-
     if (bIntroSkipMovie)
     {
         // Skip intro movie
