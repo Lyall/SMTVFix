@@ -40,24 +40,40 @@ jobs:
         
     - name: Create Directory Structure
       run: |
-        mkdir .\zip\Project\Binaries\Win64
+        mkdir .\zip\Xbox\Project\Binaries\WinGDK
+        mkdir .\zip\Steam\Project\Binaries\Win64
 
-    - name: Prepare files
+    # Xbox
+    - name: Prepare Xbox Files
       run: |
-        cp ${{ github.event.repository.name }}.asi .\zip\Project\Binaries\Win64\
-        cp ${{ github.event.repository.name }}.ini .\zip\Project\Binaries\Win64\
-        cp dinput8.dll .\zip\Project\Binaries\Win64\dsound.dll
-        cp UltimateASILoader_LICENSE.md .\zip\Project\Binaries\Win64\
-        New-Item -Path ".\zip\EXTRACT_TO_Project_FOLDER" -ItemType File
+        cp ${{ github.event.repository.name }}.asi .\zip\Xbox\Project\Binaries\WinGDK\
+        cp ${{ github.event.repository.name }}.ini .\zip\Xbox\Project\Binaries\WinGDK\
+        cp dinput8.dll .\zip\Xbox\Project\Binaries\WinGDK\dsound.dll
+        cp UltimateASILoader_LICENSE.md .\zip\Xbox\Project\Binaries\WinGDK\
+        New-Item -Path ".\zip\Xbox\EXTRACT_TO_GAME_FOLDER" -ItemType File
         
-    - name: Create Release Zip
+    - name: Create Xbox Zip
       run: |
-        cd .\zip\
-        7z a -r -tzip ..\${{ github.event.repository.name }}_${{ github.event.inputs.version }}.zip .\*
+        cd .\zip\Xbox
+        7z a -r -tzip ..\..\${{ github.event.repository.name }}_${{ github.event.inputs.version }}_Xbox.zip .\*
+
+    # Steam
+    - name: Prepare Steam Files
+      run: |
+        cp ${{ github.event.repository.name }}.asi .\zip\Steam\Project\Binaries\Win64\
+        cp ${{ github.event.repository.name }}.ini .\zip\Steam\Project\Binaries\Win64\
+        cp dinput8.dll .\zip\Steam\Project\Binaries\Win64\dsound.dll
+        cp UltimateASILoader_LICENSE.md .\zip\Steam\Project\Binaries\Win64\
+        New-Item -Path ".\zip\Steam\EXTRACT_TO_GAME_FOLDER" -ItemType File
+        
+    - name: Create Steam Zip
+      run: |
+        cd .\zip\Steam
+        7z a -r -tzip ..\..\${{ github.event.repository.name }}_${{ github.event.inputs.version }}_Steam.zip .\*
 
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: "${{ github.event.repository.name }}_${{ github.event.inputs.version }}.zip"
+        artifacts: "${{ github.event.repository.name }}_${{ github.event.inputs.version }}_Steam.zip, ${{ github.event.repository.name }}_${{ github.event.inputs.version }}_Xbox.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ github.event.inputs.version }}
         name: "${{ github.event.inputs.version }}"
