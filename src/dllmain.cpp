@@ -21,7 +21,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.8.4";
+std::string sFixVer = "0.8.3";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
@@ -212,12 +212,6 @@ void ReadConfig()
     DesktopDimensions = Util::GetPhysicalDesktopDimensions();
     iCurrentResX = DesktopDimensions.first;
     iCurrentResY = DesktopDimensions.second;
-}
-
-void CalculateAspectRatio()
-{
-    iCurrentResX /= fScreenPercentage / 100;
-    iCurrentResY /= fScreenPercentage / 100;
 
     // Calculate aspect ratio
     fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
@@ -235,52 +229,12 @@ void CalculateAspectRatio()
         fHUDWidthOffset = 0;
         fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
     }
-
-    if (iCurrentResX != iOldResX || iCurrentResY != iOldResY)
-    {
-        iOldResX = iCurrentResX;
-        iOldResY = iCurrentResY;
-
-        // Log details about current resolution
-        spdlog::info("----------");
-        spdlog::info("Current Resolution: Resolution: {}x{}", iCurrentResX, iCurrentResY);
-        spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
-        spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
-        spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
-        spdlog::info("Current Resolution: fHUDHeight: {}", fHUDHeight);
-        spdlog::info("Current Resolution: fHUDWidthOffset: {}", fHUDWidthOffset);
-        spdlog::info("Current Resolution: fHUDHeightOffset: {}", fHUDHeightOffset);
-        spdlog::info("----------");
-    }
 }
 
 void CurrentResolution()
 {
-    // Startup resolution
-    for (int i = 0; i < SDK::UObject::GObjects->Num(); i++)
-    {
-        SDK::UObject* Obj = SDK::UObject::GObjects->GetByIndex(i);
-
-        if (!Obj)
-            continue;
-
-        if (!Obj->IsDefaultObject())
-            continue;
-
-        // Get user settings
-        if (Obj->IsA(SDK::UGameUserSettings::StaticClass()))
-        {
-            SDK::UGameUserSettings* settings = (SDK::UGameUserSettings*)Obj;
-
-            // Get ResX and ResY
-            iCurrentResX = settings->ResolutionSizeX;
-            iCurrentResY = settings->ResolutionSizeY;
-            CalculateAspectRatio();
-        }
-    }
-
-    // Applied resolution
-    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "39 ?? ?? ?? ?? ?? 75 ?? 48 ?? ?? 48 ?? ?? ?? 39 ?? ?? ?? ?? ?? 74 ??");
+    // Get current resolution
+    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "42 ?? ?? ?? ?? ?? ?? ?? 41 ?? ?? 42 ?? ?? ?? ?? ?? ?? ?? 0F ?? ?? 41 ?? ?? 42 ?? ?? ?? ?? ?? ?? ??");
     if (CurrResolutionScanResult)
     {
         spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)baseModule);
@@ -290,9 +244,46 @@ void CurrentResolution()
             [](SafetyHookContext& ctx)
             {
                 // Get ResX and ResY
-                iCurrentResX = (int)ctx.rdx & 0xFFFFFFFF;
-                iCurrentResY = (int)static_cast<uint32_t>(ctx.rdx >> 32);
-                CalculateAspectRatio();
+                iCurrentResX = (int)ctx.r10;
+                iCurrentResY = (int)ctx.r9;
+
+                iCurrentResX /= fScreenPercentage / 100;
+                iCurrentResY /= fScreenPercentage / 100;
+
+                // Calculate aspect ratio
+                fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
+                fAspectMultiplier = fAspectRatio / fNativeAspect;
+
+                // HUD variables
+                fHUDWidth = iCurrentResY * fNativeAspect;
+                fHUDHeight = (float)iCurrentResY;
+                fHUDWidthOffset = (float)(iCurrentResX - fHUDWidth) / 2;
+                fHUDHeightOffset = 0;
+                if (fAspectRatio < fNativeAspect)
+                {
+                    fHUDWidth = (float)iCurrentResX;
+                    fHUDHeight = (float)iCurrentResX / fNativeAspect;
+                    fHUDWidthOffset = 0;
+                    fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
+                }
+
+                // Only log on resolution change since this function runs all the time.
+                if (iCurrentResX != iOldResX || iCurrentResY != iOldResY)
+                {
+                    iOldResX = iCurrentResX;
+                    iOldResY = iCurrentResY;
+
+                    // Log details about current resolution
+                    spdlog::info("----------");
+                    spdlog::info("Current Resolution: Resolution: {}x{}", iCurrentResX, iCurrentResY);
+                    spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
+                    spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
+                    spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
+                    spdlog::info("Current Resolution: fHUDHeight: {}", fHUDHeight);
+                    spdlog::info("Current Resolution: fHUDWidthOffset: {}", fHUDWidthOffset);
+                    spdlog::info("Current Resolution: fHUDHeightOffset: {}", fHUDHeightOffset);
+                    spdlog::info("----------");
+                }
             });
     }
     else if (!CurrResolutionScanResult)
@@ -557,7 +548,7 @@ void GraphicalTweaks()
                     *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
                     if (bGTAOHalfRes)
                     {
-                        // r.AmbientOcclusion.Method - 0x5A0 = r.GTAO.Downsample
+                        // r.AmbientOcclusion.Method	 - 0x5A0 = r.GTAO.Downsample
                         *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x5A0) = 1;
                         *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x59C) = 1;
                     }
@@ -676,19 +667,20 @@ void IntroSkip()
                     spdlog::info("Intro Skip: Skipped intro movie.");
                 }
             });
-    }  
+    }
+    
 }
 
 DWORD __stdcall Main(void*)
 {
     Logging();
     ReadConfig();
-    IntroSkip();
     CurrentResolution();
     AspectFOV();
     HUD();
     GraphicalTweaks();
     Misc();
+    IntroSkip();
     return true; //end thread
 }
 
