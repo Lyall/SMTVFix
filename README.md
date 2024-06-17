@@ -20,6 +20,8 @@ This is a fix for Shin Megami Tensei V: Vengeance that adds ultrawide/narrow dis
 - Adjust resolution scale (screen percentage).
 - Enable TAA.
 - Adjust shadow resolution.
+- Adjust LOD distance.
+- Enable GTAO ambient occlusion.
 
 ## Installation
 - Grab the latest release of SMTVFix from [here.](https://github.com/Lyall/SMTVFix/releases)
@@ -37,8 +39,7 @@ Please report any issues you see.
 This list will contain bugs which may or may not be fixed.
 
 ### Ultrawide/Narrower Issues
-- Some HUD backgrounds do not span to fill the screen.
-- Some UI prompts display visual errors outside 16:9 boundaries.
+- Map background does not span screen.
 
 ## Screenshots
 | ![ezgif-6-44e78ab660](https://github.com/Lyall/SMTVFix/assets/695941/1db582c4-2fe6-4a6a-8c1d-a44f5c96252f) |
