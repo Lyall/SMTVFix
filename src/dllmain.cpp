@@ -13,6 +13,8 @@
 #include "SDK/WB_ScreenTransition_classes.hpp"
 #include "SDK/WB_EventColorFade_classes.hpp"
 #include "SDK/WB_Loading_classes.hpp"
+#include "SDK/WB_MsgWindow_classes.hpp"
+#include "SDK/WB_MsgSelectMenu_classes.hpp"
 
 HMODULE baseModule = GetModuleHandle(NULL);
 HMODULE thisModule;
@@ -422,8 +424,8 @@ void HUD()
     if (HUDPositionScanResult)
     {
         spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
-        static bool bHasSkippedIntro = false;
 
+        static bool bHasSkippedIntro = false;
         static SafetyHookMid HUDPositionMidHook{};
         HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult,
             [](SafetyHookContext& ctx)
@@ -446,6 +448,14 @@ void HUD()
                     // Center HUD
                     if (bFixHUD)
                     { 
+                        if (obj->IsA(SDK::UWB_MsgWindow_C::StaticClass()))
+                        {
+                            auto messageWindow = (SDK::UWB_MsgWindow_C*)obj;
+                            auto selectWidget = messageWindow->MsgSelectMenu->SsPlayerWidgetIcon;
+                            // bScissor
+                            *reinterpret_cast<BYTE*>((uintptr_t)selectWidget + 0x3D5) = 1;
+                        }
+
                         // Check for whitelisted classes and skip centering them
                         if (obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()) || obj->IsA(SDK::UWB_Loading_C::StaticClass()))
                         {
@@ -500,6 +510,31 @@ void HUD()
         else if (!MarkersScanResult)
         {
             spdlog::error("HUD: Markers: Pattern scan failed.");
+        }
+
+        // Pause background
+        uint8_t* PauseBGScanResult = Memory::PatternScan(baseModule, "F3 0F ?? ?? ?? ?? ?? ?? 48 8D ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ??") + 0x15;
+        if (PauseBGScanResult)
+        {
+            spdlog::info("HUD: PauseBG: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)PauseBGScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid PauseBGMidHook{};
+            PauseBGMidHook = safetyhook::create_mid(PauseBGScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    if (fAspectRatio > fNativeAspect)
+                    {
+                        ctx.xmm0.f32[0] = 1090.00f * fAspectRatio;
+                    }
+                    else if (fAspectRatio < fNativeAspect)
+                    {
+                        ctx.xmm1.f32[0] = 1930.00f / fAspectRatio;
+                    }
+                });
+        }
+        else if (!PauseBGScanResult)
+        {
+            spdlog::error("HUD: PauseBG: Pattern scan failed.");
         }
     }
 }
