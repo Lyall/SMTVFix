@@ -13,6 +13,7 @@
 #include "SDK/WB_ScreenTransition_classes.hpp"
 #include "SDK/WB_EventColorFade_classes.hpp"
 #include "SDK/WB_Loading_classes.hpp"
+#include "SDK/WB_EncountScene_classes.hpp"
 #include "SDK/WB_MsgWindow_classes.hpp"
 #include "SDK/WB_MsgSelectMenu_classes.hpp"
 #include "SDK/SpriteStudio6_classes.hpp"
@@ -457,7 +458,7 @@ void HUD()
                         }
 
                         // Check for whitelisted classes and skip centering them
-                        if (obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()) || obj->IsA(SDK::UWB_Loading_C::StaticClass()))
+                        if (obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()) || obj->IsA(SDK::UWB_Loading_C::StaticClass()) || obj->IsA(SDK::UWB_EncountScene_C::StaticClass()))
                         {
                             return;
                         }
@@ -522,6 +523,7 @@ void HUD()
             HUDBackgroundsMidHook = safetyhook::create_mid(HUDBackgroundsScanResult,
                 [](SafetyHookContext& ctx)
                 {
+                    // Black Curtain
                     if (ctx.xmm0.f32[0] == 2200.00f && ctx.xmm0.f32[1] == 1200.00f)
                     {
                         if (fAspectRatio > fNativeAspect)
@@ -531,6 +533,19 @@ void HUD()
                         else if (fAspectRatio < fNativeAspect)
                         {
                             ctx.xmm0.f32[1] = 2200.00f / fAspectRatio;
+                        }
+                    }
+
+                    // Dialog BG
+                    if (ctx.xmm0.f32[0] == 1940.00f && ctx.xmm0.f32[1] == 404.00f)
+                    {
+                        if (fAspectRatio > fNativeAspect)
+                        {
+                            ctx.xmm0.f32[0] = 1940.00f * fAspectMultiplier;
+                        }
+                        else if (fAspectRatio < fNativeAspect)
+                        {
+                            ctx.xmm0.f32[1] = 404.00f / fAspectMultiplier;
                         }
                     }
                 });
@@ -663,7 +678,7 @@ void GraphicalTweaks()
                 }
 
                 // LOD
-                if (FoliageDistanceCVARAddr && MaxShadowCSMResolutionCVARAddr)
+                if (FoliageDistanceCVARAddr && MaxShadowCSMResolutionCVARAddr && bAdjustLOD)
                 {
                     // foliage.LODDistanceScale
                     *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
