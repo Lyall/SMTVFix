@@ -374,6 +374,24 @@ void AspectFOV()
         {
             spdlog::error("Aspect Ratio: Pattern scan failed.");
         }
+
+        // Freecam Aspect Ratio
+        uint8_t* FreecamAspectRatioScanResult = Memory::PatternScan(baseModule, "4C 89 ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ??") + 0x25;
+        if (FreecamAspectRatioScanResult)
+        {
+            spdlog::info("Freecam Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FreecamAspectRatioScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid FreecamAspectRatioMidHook{};
+            FreecamAspectRatioMidHook = safetyhook::create_mid(FreecamAspectRatioScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    ctx.rax = *(uint32_t*)&fAspectRatio;
+                });
+        }
+        else if (!FreecamAspectRatioScanResult)
+        {
+            spdlog::error("Freecam Aspect Ratio: Pattern scan failed.");
+        }
     }
 }
 
