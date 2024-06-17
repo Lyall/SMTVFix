@@ -49,6 +49,9 @@ bool bShadowQuality;
 int iShadowResolution;
 bool bEnableGTAO;
 bool bGTAOHalfRes;
+bool bAdjustLOD;
+float fFoliageDistanceScale;
+float fViewDistanceScale;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -73,6 +76,7 @@ uintptr_t TAAUAlgorithmCVARAddr;
 uintptr_t VertexMotionVectorsCVARAddr;
 uintptr_t MaxShadowCSMResolutionCVARAddr;
 uintptr_t AOMethodCVARAddr;
+uintptr_t FoliageDistanceCVARAddr;
 
 void Logging()
 {
@@ -157,6 +161,9 @@ void ReadConfig()
     inipp::get_value(ini.sections["Enable TAA"], "TAAU_Gen5", bEnableGen5TAAU);
     inipp::get_value(ini.sections["Shadow Quality"], "Enabled", bShadowQuality);
     inipp::get_value(ini.sections["Shadow Quality"], "Resolution", iShadowResolution);
+    inipp::get_value(ini.sections["Level of Detail"], "Enabled", bAdjustLOD);
+    inipp::get_value(ini.sections["Level of Detail"], "Foliage", fFoliageDistanceScale);
+    inipp::get_value(ini.sections["Level of Detail"], "ViewDistance", fViewDistanceScale);
     inipp::get_value(ini.sections["GTAO Ambient Occlusion"], "Enabled", bEnableGTAO);
     inipp::get_value(ini.sections["GTAO Ambient Occlusion"], "HalfRes", bGTAOHalfRes);
 
@@ -203,6 +210,19 @@ void ReadConfig()
     {
         iShadowResolution = std::clamp(iShadowResolution, 256, 8192);
         spdlog::warn("Config Parse: iShadowResolution value invalid, clamped to {}", iShadowResolution);
+    }
+    spdlog::info("Config Parse: bAdjustLOD: {}", bAdjustLOD);
+    spdlog::info("Config Parse: fViewDistanceScale: {}", fViewDistanceScale);
+    if (fViewDistanceScale < (float)1 || fViewDistanceScale >(float)10)
+    {
+        fViewDistanceScale = std::clamp(fViewDistanceScale, (float)1, (float)10);
+        spdlog::warn("Config Parse: fViewDistanceScale value invalid, clamped to {}", fViewDistanceScale);
+    }
+    spdlog::info("Config Parse: fFoliageDistanceScale: {}", fFoliageDistanceScale);
+    if (fFoliageDistanceScale < (float)1 || fFoliageDistanceScale >(float)10)
+    {
+        fFoliageDistanceScale = std::clamp(fFoliageDistanceScale, (float)1, (float)10);
+        spdlog::warn("Config Parse: fFoliageDistanceScale value invalid, clamped to {}", fFoliageDistanceScale);
     }
     spdlog::info("Config Parse: bEnableGTAO: {}", bEnableGTAO);
     spdlog::info("Config Parse: bGTAOHalfRes: {}", bGTAOHalfRes);
@@ -457,7 +477,7 @@ void HUD()
 
     if (bFixHUD)
     {
-        // Fix offset markers (i.e map icons etc)
+        // Fix offset markers (i.e speech bubbles etc)
         uint8_t* MarkersScanResult = Memory::PatternScan(baseModule, "0F ?? ?? 66 ?? ?? ?? 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? 4C") + 0xA;
         if (MarkersScanResult)
         {
@@ -493,6 +513,7 @@ void GraphicalTweaks()
     uint8_t* VertexMotionVectorsCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ?? 48 ?? ?? 48 ?? ?? ?? 00 74 ??");
     uint8_t* MaxShadowCSMResolutionCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 44 ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ?? 44 ?? ?? ?? ?? 0F ?? ?? ?? ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ??");
     uint8_t* AOMethodCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 83 ?? ?? 01 75 ?? 83 ?? ?? ?? ?? ?? 03");
+    uint8_t* FoliageDistanceCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? E8 ?? ?? ?? ?? 45 ?? ?? ??");
     if (AntiAliasingCVARScanResult && HalfResAOCVARScanResult && TAAUAlgorithmCVARScanResult && VertexMotionVectorsCVARScanResult)
     {
         AntiAliasingCVARAddr = Memory::GetAbsolute((uintptr_t)AntiAliasingCVARScanResult + 0x3);
@@ -513,6 +534,9 @@ void GraphicalTweaks()
         AOMethodCVARAddr = Memory::GetAbsolute((uintptr_t)AOMethodCVARScanResult + 0x3);
         spdlog::info("CVARS: r.AmbientOcclusion.Method: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AOMethodCVARScanResult - (uintptr_t)baseModule);
 
+        FoliageDistanceCVARAddr = Memory::GetAbsolute((uintptr_t)FoliageDistanceCVARScanResult + 0x3);
+        spdlog::info("CVARS: r.AmbientOcclusion.Method: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FoliageDistanceCVARScanResult - (uintptr_t)baseModule);
+
     }
     else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult || !TAAUAlgorithmCVARScanResult || !VertexMotionVectorsCVARScanResult)
     {
@@ -529,6 +553,7 @@ void GraphicalTweaks()
         ScreenPercentageMidHook = safetyhook::create_mid(ScreenPercentageScanResult + 0x3,
             [](SafetyHookContext& ctx)
             {
+                // TAA
                 if (bEnableTAA && HalfResAOCVARAddr && AntiAliasingCVARAddr && TAAUAlgorithmCVARAddr && VertexMotionVectorsCVARAddr)
                 {
                     // r.AmbientOcclusion.HalfRes=0
@@ -549,6 +574,7 @@ void GraphicalTweaks()
                     }
                 }
 
+                // Shadows
                 if (MaxShadowCSMResolutionCVARAddr && bShadowQuality)
                 {
                     // r.Shadow.MaxCSMResolution
@@ -559,6 +585,7 @@ void GraphicalTweaks()
                     *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x4C) = iShadowResolution;
                 }
 
+                // Ambient Occlusion
                 if (AOMethodCVARAddr && bEnableGTAO)
                 {
                     // r.AmbientOcclusion.Method	
@@ -566,12 +593,24 @@ void GraphicalTweaks()
                     *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
                     if (bGTAOHalfRes)
                     {
-                        // r.AmbientOcclusion.Method	 - 0x5A0 = r.GTAO.Downsample
+                        // r.AmbientOcclusion.Method - 0x5A0 = r.GTAO.Downsample
                         *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x5A0) = 1;
                         *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x59C) = 1;
                     }
                 }
 
+                // LOD
+                if (FoliageDistanceCVARAddr && MaxShadowCSMResolutionCVARAddr)
+                {
+                    // foliage.LODDistanceScale
+                    *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
+                    *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
+                    // r.Shadow.MaxCSMResolution + 0x230 = r.ViewDistanceScale
+                    *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) + 0x230) = fViewDistanceScale;
+                    *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) + 0x234) = fViewDistanceScale;
+                }
+
+                // Screen Percentage
                 if (bScreenPercentage)
                 {
                     *reinterpret_cast<float*>(ctx.rdi + (ctx.rbx * 4)) = (float)fScreenPercentage;
@@ -603,26 +642,29 @@ void Misc()
             ConstructConsoleMidHook = safetyhook::create_mid(ConstructConsoleScanResult,
                 [](SafetyHookContext& ctx)
                 {
-                    SDK::UGameViewportClient* viewport = (SDK::UGameViewportClient*)(ctx.rcx);
-
-                    if (viewport->ViewportConsole)
+                    if (ctx.rcx)
                     {
-                        return;
-                    }
+                        SDK::UGameViewportClient* viewport = (SDK::UGameViewportClient*)(ctx.rcx);
 
-                    // Get console key
-                    if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
-                    {
-                        spdlog::info("Console enabled: Access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
-                    }
-                    else if (!SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
-                    {
-                        spdlog::info("Console enabled but no console key is bound.\nAdd this: \n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde\nto %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini");
-                    }
+                        if (viewport->ViewportConsole)
+                        {
+                            return;
+                        }
 
-                    SDK::UEngine* Engine = SDK::UEngine::GetEngine();
-                    SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
-                    viewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
+                        // Get console key
+                        if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
+                        {
+                            spdlog::info("Console enabled: Access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
+                        }
+                        else if (!SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
+                        {
+                            spdlog::info("Console enabled but no console key is bound.\nAdd this: \n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde\nto %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini");
+                        }
+
+                        SDK::UEngine* Engine = SDK::UEngine::GetEngine();
+                        SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
+                        viewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
+                    }
                 });
         }
         else if (!ConstructConsoleScanResult)
