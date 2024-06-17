@@ -93,6 +93,7 @@ void* RenTexPostLoad_Hooked(uint8_t* thisptr)
     renTex->SizeY = iCurrentResY;
 
     spdlog::info("Render Texture 2D Resolution: {}: New render texture resolution = {}x{}", renTex->GetName(), renTex->SizeX, renTex->SizeY);
+    
     // Run original function
     return RenTexPostLoad.stdcall<void*>(thisptr);
 }
@@ -705,19 +706,19 @@ void GraphicalTweaks()
                     {
                         // r.AmbientOcclusion.HalfRes=0
                         *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)) = 0;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)+0x4) = 0;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr) + 0x4) = 0;
                         // r.DefaultFeature.AntiAliasing=2
                         *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)) = 2;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x4) = 2;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr) + 0x4) = 2;
                         // r.VolumetricClouds - 0x230 = r.VertexDeformationOutputsVelocity
-                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x230) = 1;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x22C) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr) - 0x230) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr) - 0x22C) = 1;
 
                         if (bEnableGen5TAAU)
                         {
                             // r.TemporalAA.R11G11B10History - 0x320 = r.TemporalAA.Algorithm
-                            *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x320) = 1;
-                            *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x31C) = 1;
+                            *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr) - 0x320) = 1;
+                            *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr) - 0x31C) = 1;
                         }
                     }
                 }
@@ -728,10 +729,10 @@ void GraphicalTweaks()
                     {
                         // r.Shadow.MaxCSMResolution
                         *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)) = iShadowResolution;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)) = iShadowResolution;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) + 0x4) = iShadowResolution;
                         // r.Shadow.MaxCSMResolution - 0x50 = r.Shadow.MaxResolution
-                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x50) = iShadowResolution;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x4C) = iShadowResolution;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) - 0x50) = iShadowResolution;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) - 0x4C) = iShadowResolution;
                     }
                 }
                 // Ambient Occlusion
@@ -741,13 +742,13 @@ void GraphicalTweaks()
                     {
                         // r.AmbientOcclusion.Method	
                         *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr) + 0x4) = 1;
 
                         if (bGTAOHalfRes)
                         {
                             // r.AmbientOcclusion.Method - 0x5A0 = r.GTAO.Downsample
-                            *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x5A0) = 1;
-                            *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x59C) = 1;
+                            *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr) - 0x5A0) = 1;
+                            *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr) - 0x59C) = 1;
                         }
                     }
                 }
@@ -759,10 +760,10 @@ void GraphicalTweaks()
                     {
                         // foliage.LODDistanceScale
                         *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
-                        *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
+                        *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr) + 0x4) = fFoliageDistanceScale;
                         // r.Shadow.MaxCSMResolution + 0x230 = r.ViewDistanceScale
-                        *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)+0x230) = fViewDistanceScale;
-                        *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)+0x234) = fViewDistanceScale;
+                        *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) + 0x230) = fViewDistanceScale;
+                        *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) + 0x234) = fViewDistanceScale;
                     }
                 }
 
