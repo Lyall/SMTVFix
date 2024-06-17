@@ -464,15 +464,6 @@ void HUD()
                 {
                     SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
 
-                    if (obj->IsA(SDK::UWB_EncountScene_C::StaticClass()))
-                    {
-                        auto encount = (SDK::UWB_EncountScene_C*)obj;
-                        auto widget = (SDK::UPanelWidget*)encount->WidgetTree->RootWidget;
-                        auto slot = (SDK::UCanvasPanelSlot*)widget->Slots[1];
-                        //slot->LayoutData.Offsets.Right = 1080.00f * fAspectRatio;
-                        //slot->LayoutData.Offsets.Right = 1080.00f * fAspectRatio;
-                    }
-
                     // Intro Skip
                     if (bIntroSkip && !bHasSkippedIntro)
                     {
@@ -618,7 +609,7 @@ void HUD()
             spdlog::error("HUD: PauseBG: Pattern scan failed.");
         }
 
-        /*
+        // Battle Transition Blur
         uint8_t* EncountPanelSlotScanResult = Memory::PatternScan(baseModule, "49 ?? ?? 49 ?? ?? FF 90 ?? ?? ?? ?? 49 ?? ?? 49 ?? ?? 44 0F ?? ??");
         if (EncountPanelSlotScanResult)
         {
@@ -634,10 +625,16 @@ void HUD()
                         if (obj->IsA(SDK::UCanvasPanelSlot::StaticClass()))
                         {
                             auto panelSlot = (SDK::UCanvasPanelSlot*)obj;
-                            int i = 0;
-                            if (panelSlot->GetFullName().contains("Encount"))
+                            if (panelSlot->GetFullName().contains("WB_EncountScene_C.WidgetTree.CanvasPanel_0.CanvasPanelSlot_1"))
                             {
-                                panelSlot->LayoutData.Offsets.Right = 1080.00 * fAspectRatio;
+                                if (fAspectRatio > fNativeAspect)
+                                {
+                                    panelSlot->LayoutData.Offsets.Right = 1080.00 * fAspectRatio;
+                                }
+                                else if (fAspectRatio < fNativeAspect)
+                                {
+                                    panelSlot->LayoutData.Offsets.Bottom = 1920.00f / fAspectRatio;
+                                }
                             }
                         }
                     }
@@ -647,7 +644,6 @@ void HUD()
         {
             spdlog::error("HUD: EncountPanelSlot: Pattern scan failed.");
         }
-        */
     }
 }
 
