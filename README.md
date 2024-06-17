@@ -34,6 +34,13 @@ This is a fix for Shin Megami Tensei V: Vengeance that adds ultrawide/narrow dis
 ## Configuration
 - See **SMTVFix.ini** to adjust settings for the fix.
 
+#### Console
+- To make use of the developer console, you'll need to bind a key to use it. You'll need to add this to `%LOCALAPPDATA%\SMT5V\Saved\Config\WindowsNoEditor\Input.ini`:
+```ini
+[/Script/Engine.InputSettings]
+ConsoleKeys=Tilde
+```
+
 ## Known Issues
 Please report any issues you see.
 This list will contain bugs which may or may not be fixed.
