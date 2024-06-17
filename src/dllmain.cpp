@@ -25,7 +25,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.8.5";
+std::string sFixVer = "0.8.6";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
@@ -81,6 +81,21 @@ uintptr_t VertexMotionVectorsCVARAddr;
 uintptr_t MaxShadowCSMResolutionCVARAddr;
 uintptr_t AOMethodCVARAddr;
 uintptr_t FoliageDistanceCVARAddr;
+
+SafetyHookInline RenTexPostLoad{};
+void* RenTexPostLoad_Hooked(uint8_t* thisptr)
+{
+    auto renTex = (SDK::UTextureRenderTarget2D*)thisptr;
+
+    spdlog::info("Render Texture 2D Resolution: {}: Old render texture resolution = {}x{}", renTex->GetName(), renTex->SizeX, renTex->SizeY);
+
+    renTex->SizeX = iCurrentResX;
+    renTex->SizeY = iCurrentResY;
+
+    spdlog::info("Render Texture 2D Resolution: {}: New render texture resolution = {}x{}", renTex->GetName(), renTex->SizeX, renTex->SizeY);
+    // Run original function
+    return RenTexPostLoad.stdcall<void*>(thisptr);
+}
 
 void Logging()
 {
@@ -421,6 +436,18 @@ void AspectFOV()
 
 void HUD()
 {
+    // Render Texture 2D Resolution
+    uint8_t* RenTex2DScanResult = Memory::PatternScan(baseModule, "8B ?? ?? ?? 00 00 44 ?? ?? ?? ?? ?? ?? 41 ?? ?? 8B ?? ?? ?? 00 00 44 ?? ?? ?? 66 ?? ?? ??");
+    if (RenTex2DScanResult)
+    {
+        RenTexPostLoad = safetyhook::create_inline(reinterpret_cast<void*>(RenTex2DScanResult), RenTexPostLoad_Hooked);
+        spdlog::info("Render Texture 2D Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)RenTex2DScanResult - (uintptr_t)baseModule);
+    }
+    else if (!RenTex2DScanResult)
+    {
+        spdlog::error("Render Texture 2D Resolution: Pattern scan failed.");
+    }
+
     // Center HUD
     uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3") + 0xA;
     if (HUDPositionScanResult)
@@ -436,6 +463,15 @@ void HUD()
                 {
                     SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
 
+                    if (obj->IsA(SDK::UWB_EncountScene_C::StaticClass()))
+                    {
+                        auto encount = (SDK::UWB_EncountScene_C*)obj;
+                        auto widget = (SDK::UPanelWidget*)encount->WidgetTree->RootWidget;
+                        auto slot = (SDK::UCanvasPanelSlot*)widget->Slots[1];
+                        //slot->LayoutData.Offsets.Right = 1080.00f * fAspectRatio;
+                        //slot->LayoutData.Offsets.Right = 1080.00f * fAspectRatio;
+                    }
+
                     // Intro Skip
                     if (bIntroSkip && !bHasSkippedIntro)
                     {
@@ -443,6 +479,7 @@ void HUD()
                         {
                             auto LogoScreen = (SDK::UWBP_LogoScreen_C*)(ctx.rcx);
                             LogoScreen->bComplete = true;
+                            spdlog::info("Intro Skip: Skipped intro logos.");
                             bHasSkippedIntro = true;
                         }
                     }
@@ -579,6 +616,37 @@ void HUD()
         {
             spdlog::error("HUD: PauseBG: Pattern scan failed.");
         }
+
+        /*
+        uint8_t* EncountPanelSlotScanResult = Memory::PatternScan(baseModule, "49 ?? ?? 49 ?? ?? FF 90 ?? ?? ?? ?? 49 ?? ?? 49 ?? ?? 44 0F ?? ??");
+        if (EncountPanelSlotScanResult)
+        {
+            spdlog::info("HUD: EncountPanelSlot: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)EncountPanelSlotScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid EncountPanelSlotMidHook{};
+            EncountPanelSlotMidHook = safetyhook::create_mid(EncountPanelSlotScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    if (ctx.r14)
+                    {
+                        SDK::UObject* obj = (SDK::UObject*)ctx.r14;
+                        if (obj->IsA(SDK::UCanvasPanelSlot::StaticClass()))
+                        {
+                            auto panelSlot = (SDK::UCanvasPanelSlot*)obj;
+                            int i = 0;
+                            if (panelSlot->GetFullName().contains("Encount"))
+                            {
+                                panelSlot->LayoutData.Offsets.Right = 1080.00 * fAspectRatio;
+                            }
+                        }
+                    }
+                });
+        }
+        else if (!EncountPanelSlotScanResult)
+        {
+            spdlog::error("HUD: EncountPanelSlot: Pattern scan failed.");
+        }
+        */
     }
 }
 
@@ -613,8 +681,7 @@ void GraphicalTweaks()
         spdlog::info("CVARS: r.AmbientOcclusion.Method: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AOMethodCVARScanResult - (uintptr_t)baseModule);
 
         FoliageDistanceCVARAddr = Memory::GetAbsolute((uintptr_t)FoliageDistanceCVARScanResult + 0x3);
-        spdlog::info("CVARS: r.AmbientOcclusion.Method: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FoliageDistanceCVARScanResult - (uintptr_t)baseModule);
-
+        spdlog::info("CVARS: foliage.LODDistanceScale: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FoliageDistanceCVARScanResult - (uintptr_t)baseModule);
     }
     else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult || !TAAUAlgorithmCVARScanResult || !VertexMotionVectorsCVARScanResult)
     {
@@ -632,60 +699,71 @@ void GraphicalTweaks()
             [](SafetyHookContext& ctx)
             {
                 // TAA
-                if (bEnableTAA && HalfResAOCVARAddr && AntiAliasingCVARAddr && TAAUAlgorithmCVARAddr && VertexMotionVectorsCVARAddr)
+                if (bEnableTAA)
                 {
-                    // r.AmbientOcclusion.HalfRes=0
-                    *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)) = 0;
-                    *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)+0x4) = 0;
-                    // r.DefaultFeature.AntiAliasing=2
-                    *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)) = 2;
-                    *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x4) = 2;
-                    // r.VolumetricClouds - 0x230 = r.VertexDeformationOutputsVelocity
-                    *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x230) = 1;
-                    *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x22C) = 1;
-
-                    if (bEnableGen5TAAU)
+                    if (HalfResAOCVARAddr && AntiAliasingCVARAddr && TAAUAlgorithmCVARAddr && VertexMotionVectorsCVARAddr)
                     {
-                        // r.TemporalAA.R11G11B10History - 0x320 = r.TemporalAA.Algorithm
-                        *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x320) = 1;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x31C) = 1;
+                        // r.AmbientOcclusion.HalfRes=0
+                        *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)) = 0;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(HalfResAOCVARAddr)+0x4) = 0;
+                        // r.DefaultFeature.AntiAliasing=2
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)) = 2;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AntiAliasingCVARAddr)+0x4) = 2;
+                        // r.VolumetricClouds - 0x230 = r.VertexDeformationOutputsVelocity
+                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x230) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(VertexMotionVectorsCVARAddr)-0x22C) = 1;
+
+                        if (bEnableGen5TAAU)
+                        {
+                            // r.TemporalAA.R11G11B10History - 0x320 = r.TemporalAA.Algorithm
+                            *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x320) = 1;
+                            *reinterpret_cast<int*>(*(uintptr_t*)(TAAUAlgorithmCVARAddr)-0x31C) = 1;
+                        }
                     }
                 }
-
                 // Shadows
-                if (MaxShadowCSMResolutionCVARAddr && bShadowQuality)
+                if (bShadowQuality)
                 {
-                    // r.Shadow.MaxCSMResolution
-                    *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)) = iShadowResolution;
-                    *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)) = iShadowResolution;
-                    // r.Shadow.MaxCSMResolution - 0x50 = r.Shadow.MaxResolution
-                    *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x50) = iShadowResolution;
-                    *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x4C) = iShadowResolution;
-                }
-
-                // Ambient Occlusion
-                if (AOMethodCVARAddr && bEnableGTAO)
-                {
-                    // r.AmbientOcclusion.Method	
-                    *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
-                    *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
-                    if (bGTAOHalfRes)
+                    if (MaxShadowCSMResolutionCVARAddr)
                     {
-                        // r.AmbientOcclusion.Method - 0x5A0 = r.GTAO.Downsample
-                        *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x5A0) = 1;
-                        *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x59C) = 1;
+                        // r.Shadow.MaxCSMResolution
+                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)) = iShadowResolution;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)) = iShadowResolution;
+                        // r.Shadow.MaxCSMResolution - 0x50 = r.Shadow.MaxResolution
+                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x50) = iShadowResolution;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)-0x4C) = iShadowResolution;
+                    }
+                }
+                // Ambient Occlusion
+                if (bEnableGTAO)
+                {
+                    if (AOMethodCVARAddr)
+                    {
+                        // r.AmbientOcclusion.Method	
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
+                        *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)) = 1;
+
+                        if (bGTAOHalfRes)
+                        {
+                            // r.AmbientOcclusion.Method - 0x5A0 = r.GTAO.Downsample
+                            *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x5A0) = 1;
+                            *reinterpret_cast<int*>(*(uintptr_t*)(AOMethodCVARAddr)-0x59C) = 1;
+                        }
                     }
                 }
 
                 // LOD
-                if (FoliageDistanceCVARAddr && MaxShadowCSMResolutionCVARAddr && bAdjustLOD)
+                if (bAdjustLOD)
                 {
-                    // foliage.LODDistanceScale
-                    *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
-                    *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
-                    // r.Shadow.MaxCSMResolution + 0x230 = r.ViewDistanceScale
-                    *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) + 0x230) = fViewDistanceScale;
-                    *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) + 0x234) = fViewDistanceScale;
+                    if (FoliageDistanceCVARAddr && MaxShadowCSMResolutionCVARAddr)
+                    {
+                        // foliage.LODDistanceScale
+                        *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
+                        *reinterpret_cast<float*>(*(uintptr_t*)(FoliageDistanceCVARAddr)) = fFoliageDistanceScale;
+                        // r.Shadow.MaxCSMResolution + 0x230 = r.ViewDistanceScale
+                        *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)+0x230) = fViewDistanceScale;
+                        *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr)+0x234) = fViewDistanceScale;
+                    }
                 }
 
                 // Screen Percentage
@@ -788,6 +866,7 @@ void IntroSkip()
             i++;
             if (i == 20)
             {
+                spdlog::info("Intro Skip: Failed to find intro movie function.");
                 break;
             }
         }
@@ -805,8 +884,7 @@ void IntroSkip()
                     spdlog::info("Intro Skip: Skipped intro movie.");
                 }
             });
-    }
-    
+    } 
 }
 
 DWORD __stdcall Main(void*)
