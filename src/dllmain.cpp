@@ -287,8 +287,8 @@ void CurrentResolution()
                 iCurrentResX = (int)ctx.r10;
                 iCurrentResY = (int)ctx.r9;
 
-                iCurrentResX /= fScreenPercentage / 100;
-                iCurrentResY /= fScreenPercentage / 100;
+                iCurrentResX /= (int)fScreenPercentage / 100;
+                iCurrentResY /= (int)fScreenPercentage / 100;
 
                 // Calculate aspect ratio
                 fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
@@ -377,12 +377,13 @@ void AspectFOV()
                         if (obj->IsA(SDK::AProjectPlayerCameraManager_C::StaticClass()))
                         {
                             SDK::AProjectPlayerCameraManager_C* camManager = (SDK::AProjectPlayerCameraManager_C*)(ctx.rdi);
+
                             // Check if "Standard" camera angle
                             if (camManager->DEF_Distance == 580.00f && camManager->DEF_FOV == 60.00f && camManager->DEF_Height == 73.00f)
                             {
-                                camManager->Camera_Standard_Preset.M_CameraDistance = fAdjustDist;              // Default = 580
-                                camManager->Camera_Standard_Preset.M_CameraFOV = fAdjustFOV;                    // Default = 60
-                                camManager->Camera_Standard_Preset.M_CameraRootHeight = fAdjustHeight;          // Default = 73
+                                camManager->Camera_Standard_Preset.M_CameraDistance = (UC::int32)fAdjustDist;              // Default = 580
+                                camManager->Camera_Standard_Preset.M_CameraFOV = (UC::int32)fAdjustFOV;                    // Default = 60
+                                camManager->Camera_Standard_Preset.M_CameraRootHeight = (UC::int32)fAdjustHeight;          // Default = 73
                                 camManager->SetCameraFOV(SDK::E_OPTION_CONTENT_FOV_TYPE::E_OPTION_CONTENT_FOV_TYPE_STANDARD);
                             }
                         }
@@ -629,7 +630,7 @@ void HUD()
                             {
                                 if (fAspectRatio > fNativeAspect)
                                 {
-                                    panelSlot->LayoutData.Offsets.Right = 1080.00 * fAspectRatio;
+                                    panelSlot->LayoutData.Offsets.Right = 1080.00f * fAspectRatio;
                                 }
                                 else if (fAspectRatio < fNativeAspect)
                                 {
