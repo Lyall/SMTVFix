@@ -15,6 +15,7 @@
 #include "SDK/WB_Loading_classes.hpp"
 #include "SDK/WB_MsgWindow_classes.hpp"
 #include "SDK/WB_MsgSelectMenu_classes.hpp"
+#include "SDK/SpriteStudio6_classes.hpp"
 
 HMODULE baseModule = GetModuleHandle(NULL);
 HMODULE thisModule;
@@ -452,8 +453,7 @@ void HUD()
                         {
                             auto messageWindow = (SDK::UWB_MsgWindow_C*)obj;
                             auto selectWidget = messageWindow->MsgSelectMenu->SsPlayerWidgetIcon;
-                            // bScissor
-                            *reinterpret_cast<BYTE*>((uintptr_t)selectWidget + 0x3D5) = 1;
+                            selectWidget->bScissor = true;
                         }
 
                         // Check for whitelisted classes and skip centering them
@@ -512,7 +512,35 @@ void HUD()
             spdlog::error("HUD: Markers: Pattern scan failed.");
         }
 
-        // Pause background
+        // HUD Backgrounds
+        uint8_t* HUDBackgroundsScanResult = Memory::PatternScan(baseModule, "C3 F2 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? F2 0F ?? ?? ?? ?? F2 0F ?? ?? 48 ?? ??") + 0x9;
+        if (HUDBackgroundsScanResult)
+        {
+            spdlog::info("HUD: HUDBackgrounds: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDBackgroundsScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid HUDBackgroundsMidHook{};
+            HUDBackgroundsMidHook = safetyhook::create_mid(HUDBackgroundsScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    if (ctx.xmm0.f32[0] == 2200.00f && ctx.xmm0.f32[1] == 1200.00f)
+                    {
+                        if (fAspectRatio > fNativeAspect)
+                        {
+                            ctx.xmm0.f32[0] = 1200.00f * fAspectRatio;
+                        }
+                        else if (fAspectRatio < fNativeAspect)
+                        {
+                            ctx.xmm0.f32[1] = 2200.00f / fAspectRatio;
+                        }
+                    }
+                });
+        }
+        else if (!HUDBackgroundsScanResult)
+        {
+            spdlog::error("HUD: HUDBackgrounds: Pattern scan failed.");
+        }
+
+        // Pause Background
         uint8_t* PauseBGScanResult = Memory::PatternScan(baseModule, "F3 0F ?? ?? ?? ?? ?? ?? 48 8D ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ??") + 0x15;
         if (PauseBGScanResult)
         {
