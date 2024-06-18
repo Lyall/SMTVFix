@@ -79,7 +79,7 @@ struct BPI_TutorialWindowCtrl2_C_BPI_GetScrollState final
 {
 public:
 	bool                                          IsRequiredScroll;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3D7C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37D7[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ScrollPosRate;                                     // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_TutorialWindowCtrl2_C_BPI_GetScrollState) == 0x000004, "Wrong alignment on BPI_TutorialWindowCtrl2_C_BPI_GetScrollState");
@@ -202,9 +202,9 @@ struct BPI_TutorialWindowCtrl2_C_BPI_SetText_ReleasedKamui final
 {
 public:
 	bool                                          IsOpenedByEvent;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3D7D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37D8[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   InEventMsgLabel;                                   // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D7E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37D9[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 InOpenedKamuiID;                                   // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(BPI_TutorialWindowCtrl2_C_BPI_SetText_ReleasedKamui) == 0x000008, "Wrong alignment on BPI_TutorialWindowCtrl2_C_BPI_SetText_ReleasedKamui");

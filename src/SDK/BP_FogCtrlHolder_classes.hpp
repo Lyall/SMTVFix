@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ST_HeightFogParameter_structs.hpp"
+#include "ST_DirectionalLightParameter_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_DirectionalLightParameter_structs.hpp"
+#include "ST_HeightFogParameter_structs.hpp"
 
 
 namespace SDK

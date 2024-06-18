@@ -26,7 +26,7 @@ public:
 	class UAnimSequenceBase*                      ModAnim_9_D7B8282A4E3E88A32F95FF81172D8C28;        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   ModSocketName_11_B731042345ACC4979F778CAA54ABB9D5; // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPairTargetLocationOverride_13_076C43CB45862E9C2E0B5FADCA2C1A4B; // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5D11[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C13[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PairTargetLocation_16_6B5FD35449230E2E77558DAA95466C0E; // 0x0024(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsIgnoreSideScale_18_CA41C0404E4AF709E11CD5B9D13ED4C2; // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

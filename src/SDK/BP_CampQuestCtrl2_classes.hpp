@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "E_CATEGORYWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_CampQuest_CtrlState_structs.hpp"
 #include "Project_structs.hpp"
 #include "Project_classes.hpp"
-#include "E_CampQuest_CtrlState_structs.hpp"
+#include "E_CATEGORYWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 
 
 namespace SDK
@@ -31,7 +31,7 @@ public:
 	E_WIDGET_PRIO                                 WidgetPrio;                                        // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MISSION_MAJOR_TYPE                          NowQuestType;                                      // 0x0291(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CampQuest_CtrlState                         QuestCtrlState;                                    // 0x0292(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C9B[0x1];                                     // 0x0293(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_905C[0x1];                                     // 0x0293(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DispTopIdx;                                        // 0x0294(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NowSelectIndex;                                    // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SlotDrawNum_Main;                                  // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -39,9 +39,9 @@ public:
 	int32                                         LastSelectIdx_Main;                                // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         LastSelectIdx_Sub;                                 // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CampQuest_CtrlState                         QuestCtrlState_Previous;                           // 0x02AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C9C[0x3];                                     // 0x02AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_905D[0x3];                                     // 0x02AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SubState;                                          // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C9D[0x4];                                     // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_905E[0x4];                                     // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBtnHelpInfo>                   NowBtnHelpInfo;                                    // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

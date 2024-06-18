@@ -32,12 +32,12 @@ public:
 	class UCharaFloatingComponent_C*              Floating;                                          // 0x0A88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ActivateDyingParticle();
-	void ReceiveBeginPlay();
-	void BndEvt__DevilMovement_K2Node_ComponentBoundEvent_0_CharaMovementUpdatedSignature__DelegateSignature();
-	void PlaySpeakingMotion();
-	void ActivateAttachedParticles();
 	void ExecuteUbergraph_Dev038(int32 EntryPoint);
+	void ActivateAttachedParticles();
+	void PlaySpeakingMotion();
+	void BndEvt__DevilMovement_K2Node_ComponentBoundEvent_0_CharaMovementUpdatedSignature__DelegateSignature();
+	void ReceiveBeginPlay();
+	void ActivateDyingParticle();
 
 public:
 	static class UClass* StaticClass()

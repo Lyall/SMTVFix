@@ -22,11 +22,11 @@ struct BP_CampTopCamera_C_UserConstructionScript final
 {
 public:
 	bool                                          CallFunc_IsOriginalMovieResolution_ReturnValue;    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BB2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F55[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWeightedBlendable                     K2Node_MakeStruct_WeightedBlendable;               // 0x0008(0x0010)(NoDestructor)
 	TArray<struct FWeightedBlendable>             K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
 	struct FWeightedBlendables                    K2Node_MakeStruct_WeightedBlendables;              // 0x0028(0x0010)()
-	uint8                                         Pad_8BB3[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F56[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPostProcessSettings                   K2Node_MakeStruct_PostProcessSettings;             // 0x0040(0x0560)()
 };
 static_assert(alignof(BP_CampTopCamera_C_UserConstructionScript) == 0x000010, "Wrong alignment on BP_CampTopCamera_C_UserConstructionScript");

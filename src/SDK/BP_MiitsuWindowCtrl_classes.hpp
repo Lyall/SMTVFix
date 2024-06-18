@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_MakkaWindowAnimState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Project_classes.hpp"
-#include "E_MakkaWindowAnimState_structs.hpp"
 
 
 namespace SDK
@@ -27,7 +27,7 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UWB_MiitsuWIndow_C*                     WB_MiitsuWIndow;                                   // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsDelayOpenTotalWindow;                            // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_80F1[0x3];                                     // 0x0239(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_841E[0x3];                                     // 0x0239(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TotalWindowDelayCnt;                               // 0x023C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

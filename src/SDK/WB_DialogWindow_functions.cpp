@@ -517,9 +517,9 @@ void UWB_DialogWindow_C::DecDialogSelect()
 // Function WB_DialogWindow.WB_DialogWindow_C.SetDialogSelectCursorOffset
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Defaultcursorpos                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   DefaultCursorPos                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_DialogWindow_C::SetDialogSelectCursorOffset(int32 Defaultcursorpos)
+void UWB_DialogWindow_C::SetDialogSelectCursorOffset(int32 DefaultCursorPos)
 {
 	static class UFunction* Func = nullptr;
 
@@ -528,7 +528,7 @@ void UWB_DialogWindow_C::SetDialogSelectCursorOffset(int32 Defaultcursorpos)
 
 	Params::WB_DialogWindow_C_SetDialogSelectCursorOffset Parms{};
 
-	Parms.Defaultcursorpos = Defaultcursorpos;
+	Parms.DefaultCursorPos = DefaultCursorPos;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

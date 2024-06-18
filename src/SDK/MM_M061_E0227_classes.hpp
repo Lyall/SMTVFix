@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_EventMissionBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_EventMissionBase_classes.hpp"
 
 
 namespace SDK
@@ -24,7 +24,7 @@ class AMM_M061_E0227_C final : public ABP_EventMissionBase_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_MM_M061_E0227_C;                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         SelectIndex;                                       // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BC11[0x4];                                     // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E72[0x4];                                     // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    MissionMessageAsset;                               // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

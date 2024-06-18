@@ -31,7 +31,7 @@ public:
 	bool                                          IsActorLight_21_0EE10330409AD549069C61B9E0E4B307;  // 0x0036(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsParty_31_CBA4059548680E5BC0FF2FA4B2CD7B9A;       // 0x0037(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsMagatsuhi_46_81DB187B43BB32A151FB67B0AB074D8A;   // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3115[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DA8[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveLinearColor*                      Color_24_E0236CF84A174635FCEF3CA645067475;         // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            Intensity_27_3405AA8447E4DDE89D8557AAE2E28C55;     // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            Radius_29_84593E17488F356B3E87BBB3FA19E28C;        // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

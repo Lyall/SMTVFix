@@ -438,9 +438,9 @@ void UWB_MsgWindow_C::DecSelect()
 // Function WB_MsgWindow.WB_MsgWindow_C.SetSelectCursorOffsest
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Defaultcursorpos                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   DefaultCursorPos                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_MsgWindow_C::SetSelectCursorOffsest(int32 Defaultcursorpos)
+void UWB_MsgWindow_C::SetSelectCursorOffsest(int32 DefaultCursorPos)
 {
 	static class UFunction* Func = nullptr;
 
@@ -449,7 +449,7 @@ void UWB_MsgWindow_C::SetSelectCursorOffsest(int32 Defaultcursorpos)
 
 	Params::WB_MsgWindow_C_SetSelectCursorOffsest Parms{};
 
-	Parms.Defaultcursorpos = Defaultcursorpos;
+	Parms.DefaultCursorPos = DefaultCursorPos;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

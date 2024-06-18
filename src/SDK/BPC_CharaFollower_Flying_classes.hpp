@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "BPC_CharaFollower_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "E_CharaFollowerState_structs.hpp"
-#include "BPC_CharaFollower_classes.hpp"
 #include "Project_structs.hpp"
 
 
@@ -32,56 +32,56 @@ public:
 	bool                                          AvoidBack;                                         // 0x0383(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Detour_Right_Record;                               // 0x0384(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Detour_Leftt_Record;                               // 0x0385(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_481C[0x2];                                     // 0x0386(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DDE8[0x2];                                     // 0x0386(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FloatAngle;                                        // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                DetourVector;                                      // 0x038C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         FloatAngleTarget;                                  // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          OnGround;                                          // 0x039C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_481D[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DDE9[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         GravitySpeed_ForGroundType;                        // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         PrevVelocity;                                      // 0x03A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         WalkStartCounter;                                  // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_481E[0x4];                                     // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DDEA[0x4];                                     // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystemComponent*               DashEffect;                                        // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UParticleSystem>         DashEffect_Soft;                                   // 0x03B8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          IsDashEffect;                                      // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_481F[0x3];                                     // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DDEB[0x3];                                     // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                GroundTarget;                                      // 0x03E4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NotSlowly;                                         // 0x03F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4820[0x3];                                     // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DDEC[0x3];                                     // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                HitImpactNormal;                                   // 0x03F4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MotionPos;                                         // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         PrevMotionPos;                                     // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AvoidNPC;                                          // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          OnNPC;                                             // 0x0409(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4821[0x2];                                     // 0x040A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DDED[0x2];                                     // 0x040A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                AvoidedNPC_PlayerPos;                              // 0x040C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AfterWarp();
-	void ChangeFollowerState(E_CharaFollowerState State, class AActor* Param_TargetActor);
-	void CalcGiveupFollowing_ForGroundType(bool* Giveup);
-	void IsCheckObstacle_WhenGotoGimmick(bool* CheckObstacle_WhenGotoGimmick);
-	void BPI_WarpNaviDevilBasePos(bool CalcOnGround, bool* NewParam);
-	void UpdateDashEffect();
-	void CheckLoopMotion(bool* Loop);
-	void CalcFall_ForGroundType(const struct FVector& InLocation, struct FVector* OutLocation);
-	void CalcOnGround(const struct FVector& InLocation, struct FVector* OutLocation);
-	void CheckGroundType(bool* GroundType);
-	void ResetMoveParam();
-	void OnLoaded_6E8E0874402C10BA5673C0B97FB96BD6(class UObject* Loaded);
-	void Tick_DecideMotion();
-	void PlayIdleMotion();
-	void Tick_DecideNextPos();
-	void Tick_DecideTargetRotate();
-	void Tick_DecideTargetPos();
-	void Tick_DecideState();
-	void Tick_DecideVelocity();
-	void BPI_TeleportNaviLocationAndRotation(const struct FVector& Location, const struct FRotator& Rotation, bool Param_StopUntilPlayerMove);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void Tick_CalcWarp();
 	void ExecuteUbergraph_BPC_CharaFollower_Flying(int32 EntryPoint);
+	void Tick_CalcWarp();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void BPI_TeleportNaviLocationAndRotation(const struct FVector& Location, const struct FRotator& Rotation, bool Param_StopUntilPlayerMove);
+	void Tick_DecideVelocity();
+	void Tick_DecideState();
+	void Tick_DecideTargetPos();
+	void Tick_DecideTargetRotate();
+	void Tick_DecideNextPos();
+	void PlayIdleMotion();
+	void Tick_DecideMotion();
+	void OnLoaded_6E8E0874402C10BA5673C0B97FB96BD6(class UObject* Loaded);
+	void ResetMoveParam();
+	void CheckGroundType(bool* GroundType);
+	void CalcOnGround(const struct FVector& InLocation, struct FVector* OutLocation);
+	void CalcFall_ForGroundType(const struct FVector& InLocation, struct FVector* OutLocation);
+	void CheckLoopMotion(bool* Loop);
+	void UpdateDashEffect();
+	void BPI_WarpNaviDevilBasePos(bool CalcOnGround, bool* NewParam);
+	void IsCheckObstacle_WhenGotoGimmick(bool* CheckObstacle_WhenGotoGimmick);
+	void CalcGiveupFollowing_ForGroundType(bool* Giveup);
+	void ChangeFollowerState(E_CharaFollowerState State, class AActor* Param_TargetActor);
+	void AfterWarp();
 
 public:
 	static class UClass* StaticClass()

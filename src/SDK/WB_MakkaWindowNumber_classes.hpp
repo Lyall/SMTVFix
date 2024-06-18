@@ -34,7 +34,7 @@ public:
 	float                                         DigitWidthInterval;                                // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsDraw_PlusSign;                                   // 0x029C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsReflect_SignColor;                               // 0x029D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7F9E[0x2];                                     // 0x029E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_826C[0x2];                                     // 0x029E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Debug_DispNumber;                                  // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Debug_NumberColor;                                 // 0x02A4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

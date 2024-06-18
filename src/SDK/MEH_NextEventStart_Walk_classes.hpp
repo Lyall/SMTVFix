@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "E_MAP_DEBUG_MES_TYPE_structs.hpp"
 #include "MapEventHit_Type_Walk_classes.hpp"
 #include "E_MAP_PLAYER_TYPE_structs.hpp"
 #include "Project_structs.hpp"
-#include "E_MAP_DEBUG_MES_TYPE_structs.hpp"
 #include "E_MAP_SYSTEMRESIDENT_ID_structs.hpp"
 
 
@@ -40,6 +40,10 @@ public:
 	int32                                         MapEventID_;                                       // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void BPI_SpawnEncountActor(const TArray<int32>& EnemyIdList, int32 EncountID, const struct FTransform& SpawnTransform, class AActor* EncountPawn, E_BTL_SYMBOL_ENCOUNT SymbolEncountType, bool ManualWhenNotEscape, bool HitMapAttack, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi);
+	void BPI_SetMapCommon(class AActor* Actor);
+	void OnReady();
+	void ExecuteUbergraph_MEH_NextEventStart_Walk(int32 EntryPoint);
 	void BPI_CheckNaviDevil(bool* NaviDevil);
 	void BPI_CheckMiman(bool* Miman);
 	void BPI_CheckMissionEvent(bool* MissionEvent);
@@ -179,10 +183,6 @@ public:
 	void BPI_SetEncountON();
 	void BPI_SetEncountOff();
 	void BPI_ReturnFromBtl();
-	void BPI_SpawnEncountActor(const TArray<int32>& EnemyIdList, int32 EncountID, const struct FTransform& SpawnTransform, class AActor* EncountPawn, E_BTL_SYMBOL_ENCOUNT SymbolEncountType, bool ManualWhenNotEscape, bool HitMapAttack, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi);
-	void BPI_SetMapCommon(class AActor* Actor);
-	void OnReady();
-	void ExecuteUbergraph_MEH_NextEventStart_Walk(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

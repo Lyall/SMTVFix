@@ -79,20 +79,6 @@ void ABP_NaviDevilGimmick_Tutorial_C::Timeline_Camera__FinishedFunc()
 }
 
 
-// Function BP_NaviDevilGimmick_Tutorial.BP_NaviDevilGimmick_Tutorial_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_NaviDevilGimmick_Tutorial_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilGimmick_Tutorial_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_NaviDevilGimmick_Tutorial.BP_NaviDevilGimmick_Tutorial_C.CallOuterTutorial
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -130,6 +116,20 @@ void ABP_NaviDevilGimmick_Tutorial_C::CallInnerMovedTutorial()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_NaviDevilGimmick_Tutorial_C", "CallInnerMovedTutorial");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_NaviDevilGimmick_Tutorial.BP_NaviDevilGimmick_Tutorial_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_NaviDevilGimmick_Tutorial_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_NaviDevilGimmick_Tutorial_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

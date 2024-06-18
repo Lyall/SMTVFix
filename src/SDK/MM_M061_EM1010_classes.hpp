@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_EventMissionBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_EventMissionBase_classes.hpp"
 #include "Project_structs.hpp"
 
 
@@ -25,7 +25,7 @@ class AMM_M061_EM1010_C final : public ABP_EventMissionBase_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_MM_M061_EM1010_C;                   // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         SelectIndex;                                       // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC4C[0x4];                                     // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AB73[0x4];                                     // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    SystemMessageAsset;                                // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UScriptMessageAsset*                    MissionMessageAsset;                               // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_MissionEventBase_C*                 MissionEvent;                                      // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -37,7 +37,7 @@ public:
 	class ABP_AutoRotateFocus_C*                  Auto_Rotate_Ctrl;                                  // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Change_BGM;                                        // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          CameraFocusEnd;                                    // 0x0379(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_AC4D[0x6];                                     // 0x037A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AB74[0x6];                                     // 0x037A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ATargetPoint*>                   Target_Seq;                                        // 0x0380(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	class ALevelSequenceActor*                    SequencerActor;                                    // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ADevilBase_C*                           SpawnYoko;                                         // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

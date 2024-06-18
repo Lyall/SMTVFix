@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_EventMissionBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_EventMissionBase_classes.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ public:
 	class FName                                   Local_Flag;                                        // 0x0334(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Item_Id;                                           // 0x033C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EffectStop;                                        // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A5AE[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A619[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_FindItemObject_C*                   FindItem;                                          // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

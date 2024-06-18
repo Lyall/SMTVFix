@@ -23,7 +23,7 @@ struct FSymbolActPattern final
 {
 public:
 	E_Symbol_ActPattern                           ActPattern_8_20261F4D40405425EC4D0199F424B5DB;     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_640B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6455[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NextSec_15_4A68E5C0492C7E955FD1E9BAD4444C0E;       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         NextSecRandom_18_0DF23DB941A9BFEAB82B32A3A6DA2365; // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Value_7_A49C42E9410B9E86FDA084A0BE7A6077;          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

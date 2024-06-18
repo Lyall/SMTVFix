@@ -43,7 +43,7 @@ static_assert(offsetof(UMovieSceneGeometryCacheSection, Params) == 0x0000E8, "Me
 class UMovieSceneGeometryCacheTrack final : public UMovieSceneNameableTrack
 {
 public:
-	uint8                                         Pad_1248[0x8];                                     // 0x0090(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1259[0x8];                                     // 0x0090(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:

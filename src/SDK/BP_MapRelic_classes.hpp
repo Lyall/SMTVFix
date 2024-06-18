@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "E_RelicColor_structs.hpp"
 #include "Engine_structs.hpp"
 #include "E_MapGimmickHideReason_structs.hpp"
 #include "Project_structs.hpp"
-#include "E_RelicColor_structs.hpp"
 #include "MapEventHit_Type_AAction_classes.hpp"
 
 
@@ -37,14 +37,14 @@ public:
 	int32                                         SaveID_Start;                                      // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SaveId;                                            // 0x041C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CalcSaveID;                                        // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5500[0x3];                                     // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37DA[0x3];                                     // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Index_BP_MapRelic_C;                               // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ManualMapID;                                       // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseManualMapID;                                    // 0x042C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5501[0x3];                                     // 0x042D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37DB[0x3];                                     // 0x042D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRelicData                             RelicData;                                         // 0x0430(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
 	E_RelicColor                                  RelicColor;                                        // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5502[0x3];                                     // 0x0459(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37DC[0x3];                                     // 0x0459(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HideReason;                                        // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Gaze;                                              // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 

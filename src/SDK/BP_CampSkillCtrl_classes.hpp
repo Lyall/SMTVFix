@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_CAMPSKILLCTRL_GSTATUS_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_CAMPSKILLCTRL_GSTATUS_structs.hpp"
 #include "E_SORTWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "Project_structs.hpp"
 #include "Project_classes.hpp"
@@ -35,7 +35,7 @@ public:
 	E_CAMPSKILLCTRL_GSTATUS                       Changegstatus;                                     // 0x02F2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsGstatusChange;                                   // 0x02F3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsAddWidget;                                       // 0x02F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D03[0x3];                                     // 0x02F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_368B[0x3];                                     // 0x02F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SortType;                                          // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CalcUseSkillNumber;                                // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Waitmessagestep;                                   // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -50,32 +50,15 @@ public:
 	float                                         MW_WaitFastTime;                                   // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MW_WaitCloseTime;                                  // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCloseSortWindow;                                 // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D04[0x3];                                     // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_368C[0x3];                                     // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Partynumber;                                       // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Mousewvalue;                                       // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Selectedskilltype;                                 // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SORTWINDOW_MOUSE_EVENT_TYPE                 Sortmouseparam;                                    // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D05[0x3];                                     // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_368D[0x3];                                     // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSortMouseBaseData                     Sortmousework;                                     // 0x0334(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ICampSkillIsInSortMenu(bool* OutSort);
-	void ICampSkillSetSkillSelectButtonHelp(int32 InNumber, bool InInitialize, bool* OutParam);
-	void ICampSkillSetPartyNumber(int32 InPartyNumber, bool* OutParam);
-	void ICampSkillIsClosedSortWindow(bool* OutClosed);
-	void ICampSkillIsOpenStatus(bool* CallStatusOpen);
-	void ICampSkillIsListAnimation(bool* OutIsAnimation);
-	void ICampSkillIsWaitPartyEnd(bool* OutEnd);
-	void ICampSkillGetListFadeOut(bool* OutFlag);
-	void ICampSkillUtsusemiProc(bool* OutIsCanseled);
-	void IIsCampSkillMoveCursor(bool* OutMoved);
-	void ICampSkillGetSelectedNkmIndex(int32* OutNkmIndex);
-	void ICampSkillGetReasonForCansel(E_CAMPSKILLLIST_CANSELTYPE* OutParam);
-	void IIsCampSkillUseSkillProc(bool* OutUsed);
-	void ICampSkillGetSelectedSkillId(int32* OutSkillId);
-	void ICampSkillProc(bool* OutIsCanseled);
-	void ICampSkillIsFinished(bool* OutFinished);
-	void UnlockSortMouse();
 	void LockSortMouse();
 	void GetSortMouseParameter(E_SORTWINDOW_MOUSE_EVENT_TYPE MouseEventType, int32 SelectLstIdx, int32 SelectSlotIdx, int32 ListScrollOffset);
 	void IsSkillListRectArea(bool* OutParam);
@@ -167,6 +150,23 @@ public:
 	void CreateWidget();
 	void BIESetInitializeListAnimation(int32 InIndex, int32 InType, bool InCursorOn);
 	void ExecuteUbergraph_BP_CampSkillCtrl(int32 EntryPoint);
+	void ICampSkillIsInSortMenu(bool* OutSort);
+	void ICampSkillSetSkillSelectButtonHelp(int32 InNumber, bool InInitialize, bool* OutParam);
+	void ICampSkillSetPartyNumber(int32 InPartyNumber, bool* OutParam);
+	void ICampSkillIsClosedSortWindow(bool* OutClosed);
+	void ICampSkillIsOpenStatus(bool* CallStatusOpen);
+	void ICampSkillIsListAnimation(bool* OutIsAnimation);
+	void ICampSkillIsWaitPartyEnd(bool* OutEnd);
+	void ICampSkillGetListFadeOut(bool* OutFlag);
+	void ICampSkillUtsusemiProc(bool* OutIsCanseled);
+	void IIsCampSkillMoveCursor(bool* OutMoved);
+	void ICampSkillGetSelectedNkmIndex(int32* OutNkmIndex);
+	void ICampSkillGetReasonForCansel(E_CAMPSKILLLIST_CANSELTYPE* OutParam);
+	void IIsCampSkillUseSkillProc(bool* OutUsed);
+	void ICampSkillGetSelectedSkillId(int32* OutSkillId);
+	void ICampSkillProc(bool* OutIsCanseled);
+	void ICampSkillIsFinished(bool* OutFinished);
+	void UnlockSortMouse();
 
 public:
 	static class UClass* StaticClass()

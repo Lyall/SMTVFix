@@ -490,10 +490,10 @@ public:
 	TArray<class UImage*>                         FluctuationLckNums;                                // 0x1170(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	int32                                         ConstRightItemDistance;                            // 0x1180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              ConstSkillSlot;                                    // 0x1184(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82C8[0x4];                                     // 0x118C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9123[0x4];                                     // 0x118C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UImage*>                         RightSlotSkillCostNums;                            // 0x1190(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	int32                                         AnimCurrent_RightSkillSlot;                        // 0x11A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82C9[0x4];                                     // 0x11A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9124[0x4];                                     // 0x11A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UImage*>                         RightMpCostNums_0;                                 // 0x11A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<class UImage*>                         RightMpCostNums_1;                                 // 0x11B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<class UImage*>                         RightMpCostNums_2;                                 // 0x11C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
@@ -512,10 +512,10 @@ public:
 	float                                         M_RightSlotDeltaSeconds;                           // 0x1298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SkillSlotCurrent;                                  // 0x129C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ConstStatusFullOpenFlag;                           // 0x12A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82CA[0x4];                                     // 0x12A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9125[0x4];                                     // 0x12A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    M_ConditionNameAsset;                              // 0x12A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_UI_STATUS_PAGE_TYPE                         M_UIType;                                          // 0x12B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82CB[0x7];                                     // 0x12B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9126[0x7];                                     // 0x12B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> M_HelpWindow;                                      // 0x12B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class UUIStatusCtrlDataObjBase*               M_UIStatusCtrlObj;                                 // 0x12C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UImage*>                         ParentMpCostNums_1;                                // 0x12D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
@@ -532,7 +532,7 @@ public:
 	int32                                         AnimCurrent_ParentSkillSlot;                       // 0x1380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_ParentSlotDeltaSeconds;                          // 0x1384(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Test_SkillSwapAnimEnd;                             // 0x1388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82CC[0x3];                                     // 0x1389(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9127[0x3];                                     // 0x1389(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Const_SlotMax;                                     // 0x138C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_FaceIconSlideTime;                               // 0x1390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         M_NextSkillFlashNum;                               // 0x1394(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -547,18 +547,18 @@ public:
 	struct FLinearColor                           Const_ColorBEFF4C;                                 // 0x13C4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         M_SkillSwapPtn;                                    // 0x13D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_UI_STATUS_PAGE_TYPE                         M_ChangeAnimReq;                                   // 0x13D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82CD[0x3];                                     // 0x13D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9128[0x3];                                     // 0x13D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_ChangePageRequest;                               // 0x13DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_UseCursor;                                       // 0x13E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_IsUsedSlotCursor;                                // 0x13E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82CE[0x6];                                     // 0x13E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9129[0x6];                                     // 0x13E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    M_StatusMessageAsset;                              // 0x13E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_EnableHelpWindow;                                // 0x13F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82CF[0x7];                                     // 0x13F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_912A[0x7];                                     // 0x13F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    M_DevilProfile;                                    // 0x13F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UScriptMessageAsset*                    M_MapAreaName;                                     // 0x1400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsEndNextSkillFlash;                             // 0x1408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82D0[0x3];                                     // 0x1409(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_912B[0x3];                                     // 0x1409(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_LvAnimType;                                      // 0x140C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UImage*>                         M_BadIcons;                                        // 0x1410(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<class UTextBlock*>                     M_ResistancesBadText;                              // 0x1420(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
@@ -571,13 +571,13 @@ public:
 	float                                         Const_SwapWaitTime;                                // 0x1448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_WithTitle;                                       // 0x144C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_UseLvUpGimmerParts;                              // 0x144D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82D1[0x2];                                     // 0x144E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_912C[0x2];                                     // 0x144E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_5ParaMaxGaugeFrame;                              // 0x1450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         M_InIndex;                                         // 0x1454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             Disp_OnMovedRightScrollBarByMouse;                 // 0x1458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             Disp_OnClickedRightSlot;                           // 0x1468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         M_BiographyRowMax;                                 // 0x1478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82D2[0x4];                                     // 0x147C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_912D[0x4];                                     // 0x147C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             Disp_OnHoveredRightSlot;                           // 0x1480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             Disp_OnMovedParentScrollBarByMouse;                // 0x1490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             Disp_OnClickedParentSlot;                          // 0x14A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -588,15 +588,72 @@ public:
 	FMulticastInlineDelegateProperty_             Disp_OnClickedFacePanel;                           // 0x14F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         M_FaceIconMove;                                    // 0x1500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_EnableMouseHover;                                // 0x1504(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82D3[0x3];                                     // 0x1505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_912E[0x3];                                     // 0x1505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         M_ResultHelpClosePastTime;                         // 0x1508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         M_InheritIconType;                                 // 0x150C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_GamePadIconMode;                                 // 0x150D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_KeyboardLanguage                            M_KyeboardLanguage;                                // 0x150E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82D4[0x1];                                     // 0x150F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_912F[0x1];                                     // 0x150F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             Disp_GardenResultFlashStart;                       // 0x1510(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
+	void UpdateConditionCursor(int32 TopIndex, bool* Dummy);
+	void ChangePage(bool* Dummy);
+	void CloseStatus_Common(bool* Dummy);
+	void HideUI_Common(bool* Dummy);
+	void ChangeChara_Common(int32 MoveLR, bool UseLRAnim, bool* Dummy);
+	void OpenStatus_Common(const class UUIStatusCtrlDataObjBase*& StatusCtrlObj, bool WithTitle, bool* Dummy);
+	void UpdateSkillSwap(int32 TopIndex, bool IsHolding, bool* Dummy);
+	void EndSwap(int32 TopIndex, bool* Dummy);
+	void IsEndSwapSlide(bool* End);
+	void SwapRightSlot(int32 HoldSlot, int32 CursorSlot, bool* Dummy);
+	void UpdateBiography(int32 Offset, int32* NewOffset);
+	void BindFuncGardenResultFeedInUI(class FName AnimPackName, class FName AnimationName, int32 AnimPackIndex, int32 AnimationIndex);
+	void GetStatsListHover(int32* Param_Index);
+	void SetBtnIconType(bool IsGamePad, bool UpdateLR, bool UpdateInheritEnd);
+	void GetHoverIndex(int32* Right, int32* Parent);
+	void GetWheelListHover(bool* Parent, bool* Right);
+	void UpdateFaceIcon(int32 Move, class UUIStatusCtrlDataObjBase*& InputPin);
+	void GardenResult_SkipInAnim(bool UseFluctuation, bool* Complete);
+	void GardenResult_ShowUpParam(class UUIStatusCtrlDataObjBase* StatusCtrlObj, bool UseFluctuation);
+	void UpdateSkillSlot_ExSkillStart(class UUIStatusCtrlDataObjBase* DataObj, int32 TopIndex, E_UI_STATUS_PAGE_TYPE PageType);
+	void GetPartsParentSlotButton(int32 Param_Index, class UButtonS5** ButtonS5_Right);
+	void GetPartsRightSlotButton(int32 Param_Index, class UButtonS5** ButtonS5_Right);
+	void BindFunc_OnMovedParentScrollBarByMouse(float InScrollRate);
+	void UpdateRightSlotOffsetByMouse(int32 Offset);
+	void BindFunc_OnMovedRightScrollBarByMouse(float InScrollRate);
+	void SetSlotKamuiSwitch(TArray<class UImage*>& CostImageList, class USsPlayerWidget*& CostSSP, int32 IsOn);
+	void PartsAnimSlotItem_Variable(class USsPlayerWidget* SlotSSPlayer, E_UI_STATUS_SLOT SlotType, int32 AnimNum, int32 StartFrame);
+	void PlayCommonPartsAnimation_VariableStartFrame(class USsPlayerWidget*& TargetSSPlayer, int32 AnimNum, int32 StartFrame);
+	void Update5ParaMaxFrame(bool Reset);
+	void CloseAllAnimPartsImmediate();
+	void CancelPageChangeAnim();
+	void BindFuncFluctiuationOpen(class FName AnimPackName, class FName AnimationName, int32 AnimPackIndex, int32 AnimationIndex);
+	void ReturnInheritUI(class UUIStatusCtrlDataObjBase*& StatusDataObj, int32 ParentTopIndex, int32 ChildTopIndex);
+	void ResetSlotColor(int32 Param_Index);
+	void VisualizationUI(int32 TopIndex, bool IsHolding);
+	void SetFaceIconData(class UUIStatusCtrlDataObjBase*& UIStatusCtrlObj, int32 Move, bool UseLRAnim);
+	void UpdateSwapIcon(class UUIStatusCtrlDataObjBase*& Obj, int32 TopIndex, bool IsHolding);
+	float SwapRateConverter(float Time, int32 Distance);
+	void SwapPartsRightSlot(int32 Src, int32 Dst);
+	void ResultFunc_UpdateParamForGetSkill(class UUIStatusCtrlDataObjBase*& StatusDataObj);
+	void CloseCursor(class UUIStatusCtrlDataObjBase* DataObj, int32 TopIndex);
+	void ShowStatus_ResistancesInherit(class UUIStatusCtrlDataObjBase*& StatusDataObj);
+	void ResultFunc_RotationNextSkillSlot(bool UseSlot4);
+	void ResultFunc_StartNextSkillFlashAnim(int32 Max);
+	void ResultFunc_UpdateNextSkillSlotPos(class UWidget* Widget, int32 Param_Index, float AddPosRate);
+	void ResultFunc_UpdateNewSkillText();
+	void GetPartsResistancesBadText(int32 Param_Index, class UTextBlock** Text);
+	void GetPartsBadIconImage(int32 Param_Index, class UImage** Image);
+	void SetUtsusemiData_SimpleStatus(int32 AnimNum, class UUIStatusCtrlDataObjBase* Param_M_UIStatusCtrlObj);
+	void ResultFunc_UpdateNextSkillFlash();
+	void PartsAnimNextSlotFlash(int32 Param_Index);
+	void TestUIOpen(class UUIStatusCtrlDataObjBase* Param_M_UIStatusCtrlObj);
+	void Close_Inherit(bool Immediate);
+	void ShowParentSkillSlotOnly_Inherit(class UUIStatusCtrlDataObjBase* In_CtrlDataObj);
+	void ShowFusionResult_Inherit(class UUIStatusCtrlDataObjBase* DataObj);
+	void SetEmptyNum3_SimpleStatus(TArray<class UImage*>& ImageList);
+	void SetEmptyData_SimpleStatus(int32 AnimNum);
 	float AffinitiesPos(int32 Param_Index);
 	void PartsAnimPlayerSelectOptionParts(int32 AnimNum, class UUIStatusCtrlDataObjBase* UIStatusCtrlObj);
 	float GetRightScrollBarRate(E_UI_STATUS_PAGE_TYPE PageType, class UUIStatusCtrlDataObjBase* StatusCtrlDataObj, int32 Offset);
@@ -833,63 +890,6 @@ public:
 	void Disp_OnMovedParentScrollBarByMouse__DelegateSignature(int32 NewParam);
 	void Disp_OnClickedRightSlot__DelegateSignature(int32 Param_Index);
 	void Disp_OnMovedRightScrollBarByMouse__DelegateSignature(int32 NewOffset);
-	void UpdateConditionCursor(int32 TopIndex, bool* Dummy);
-	void ChangePage(bool* Dummy);
-	void CloseStatus_Common(bool* Dummy);
-	void HideUI_Common(bool* Dummy);
-	void ChangeChara_Common(int32 MoveLR, bool UseLRAnim, bool* Dummy);
-	void OpenStatus_Common(const class UUIStatusCtrlDataObjBase*& StatusCtrlObj, bool WithTitle, bool* Dummy);
-	void UpdateSkillSwap(int32 TopIndex, bool IsHolding, bool* Dummy);
-	void EndSwap(int32 TopIndex, bool* Dummy);
-	void IsEndSwapSlide(bool* End);
-	void SwapRightSlot(int32 HoldSlot, int32 CursorSlot, bool* Dummy);
-	void UpdateBiography(int32 Offset, int32* NewOffset);
-	void BindFuncGardenResultFeedInUI(class FName AnimPackName, class FName AnimationName, int32 AnimPackIndex, int32 AnimationIndex);
-	void GetStatsListHover(int32* Param_Index);
-	void SetBtnIconType(bool IsGamePad, bool UpdateLR, bool UpdateInheritEnd);
-	void GetHoverIndex(int32* Right, int32* Parent);
-	void GetWheelListHover(bool* Parent, bool* Right);
-	void UpdateFaceIcon(int32 Move, class UUIStatusCtrlDataObjBase*& InputPin);
-	void GardenResult_SkipInAnim(bool UseFluctuation, bool* Complete);
-	void GardenResult_ShowUpParam(class UUIStatusCtrlDataObjBase* StatusCtrlObj, bool UseFluctuation);
-	void UpdateSkillSlot_ExSkillStart(class UUIStatusCtrlDataObjBase* DataObj, int32 TopIndex, E_UI_STATUS_PAGE_TYPE PageType);
-	void GetPartsParentSlotButton(int32 Param_Index, class UButtonS5** ButtonS5_Right);
-	void GetPartsRightSlotButton(int32 Param_Index, class UButtonS5** ButtonS5_Right);
-	void BindFunc_OnMovedParentScrollBarByMouse(float InScrollRate);
-	void UpdateRightSlotOffsetByMouse(int32 Offset);
-	void BindFunc_OnMovedRightScrollBarByMouse(float InScrollRate);
-	void SetSlotKamuiSwitch(TArray<class UImage*>& CostImageList, class USsPlayerWidget*& CostSSP, int32 IsOn);
-	void PartsAnimSlotItem_Variable(class USsPlayerWidget* SlotSSPlayer, E_UI_STATUS_SLOT SlotType, int32 AnimNum, int32 StartFrame);
-	void PlayCommonPartsAnimation_VariableStartFrame(class USsPlayerWidget*& TargetSSPlayer, int32 AnimNum, int32 StartFrame);
-	void Update5ParaMaxFrame(bool Reset);
-	void CloseAllAnimPartsImmediate();
-	void CancelPageChangeAnim();
-	void BindFuncFluctiuationOpen(class FName AnimPackName, class FName AnimationName, int32 AnimPackIndex, int32 AnimationIndex);
-	void ReturnInheritUI(class UUIStatusCtrlDataObjBase*& StatusDataObj, int32 ParentTopIndex, int32 ChildTopIndex);
-	void ResetSlotColor(int32 Param_Index);
-	void VisualizationUI(int32 TopIndex, bool IsHolding);
-	void SetFaceIconData(class UUIStatusCtrlDataObjBase*& UIStatusCtrlObj, int32 Move, bool UseLRAnim);
-	void UpdateSwapIcon(class UUIStatusCtrlDataObjBase*& Obj, int32 TopIndex, bool IsHolding);
-	float SwapRateConverter(float Time, int32 Distance);
-	void SwapPartsRightSlot(int32 Src, int32 Dst);
-	void ResultFunc_UpdateParamForGetSkill(class UUIStatusCtrlDataObjBase*& StatusDataObj);
-	void CloseCursor(class UUIStatusCtrlDataObjBase* DataObj, int32 TopIndex);
-	void ShowStatus_ResistancesInherit(class UUIStatusCtrlDataObjBase*& StatusDataObj);
-	void ResultFunc_RotationNextSkillSlot(bool UseSlot4);
-	void ResultFunc_StartNextSkillFlashAnim(int32 Max);
-	void ResultFunc_UpdateNextSkillSlotPos(class UWidget* Widget, int32 Param_Index, float AddPosRate);
-	void ResultFunc_UpdateNewSkillText();
-	void GetPartsResistancesBadText(int32 Param_Index, class UTextBlock** Text);
-	void GetPartsBadIconImage(int32 Param_Index, class UImage** Image);
-	void SetUtsusemiData_SimpleStatus(int32 AnimNum, class UUIStatusCtrlDataObjBase* Param_M_UIStatusCtrlObj);
-	void ResultFunc_UpdateNextSkillFlash();
-	void PartsAnimNextSlotFlash(int32 Param_Index);
-	void TestUIOpen(class UUIStatusCtrlDataObjBase* Param_M_UIStatusCtrlObj);
-	void Close_Inherit(bool Immediate);
-	void ShowParentSkillSlotOnly_Inherit(class UUIStatusCtrlDataObjBase* In_CtrlDataObj);
-	void ShowFusionResult_Inherit(class UUIStatusCtrlDataObjBase* DataObj);
-	void SetEmptyNum3_SimpleStatus(TArray<class UImage*>& ImageList);
-	void SetEmptyData_SimpleStatus(int32 AnimNum);
 
 public:
 	static class UClass* StaticClass()

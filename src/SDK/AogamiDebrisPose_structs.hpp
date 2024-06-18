@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_AogamiDebrisMotion_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "E_AogamiDebrisMotion_structs.hpp"
 
 
 namespace SDK
@@ -23,7 +23,7 @@ struct FAogamiDebrisPose final
 {
 public:
 	E_AogamiDebrisMotion                          MotionID_12_652BB28144C9183F056013AA61D7782C;      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E52[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9540[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UAnimSequence>           AnimSequence_13_D5562A034A32287B194C70A8E8222BF3;  // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class USkeletalMesh>           SkeletalMesh_14_9365A93A493DEA67C33B979BE61B2B32;  // 0x0030(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FVector                                CollisonOffset_15_9D33D9154121D14F220FC1B984C21E2D; // 0x0058(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

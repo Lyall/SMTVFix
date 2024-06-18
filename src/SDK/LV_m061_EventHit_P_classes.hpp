@@ -25,7 +25,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0228(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TArray<class AMEC_CALL_EVENT_IN_C*>           EventHit_StartOFF;                                 // 0x0230(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	int32                                         Event_Checker;                                     // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F9C[0x4];                                     // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DD0D[0x4];                                     // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMM_M200_EN0100_C*                      MM_M200_EN0100_2_ExecuteUbergraph_LV_m061_EventHit_P_RefProperty; // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMM_M061_E0262_C*                       MM_M061_E0262_ExecuteUbergraph_LV_m061_EventHit_P_RefProperty; // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMM_M061_E0242_C*                       MM_M061_E0242_2_ExecuteUbergraph_LV_m061_EventHit_P_RefProperty; // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Project_structs.hpp"
-#include "BP_EventMissionBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_EventMissionBase_classes.hpp"
 
 
 namespace SDK
@@ -25,13 +25,13 @@ class ABP_EventNaviDevil289_Moshobou_C final : public ABP_EventMissionBase_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EventNaviDevil289_Moshobou_C;    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         SelectIndex;                                       // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D31[0x4];                                     // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B824[0x4];                                     // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    NaviMessageAsset;                                  // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  Spawn;                                             // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_NAVI_DEVIL                                  NaviDevilType;                                     // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D32[0x3];                                     // 0x0341(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B825[0x3];                                     // 0x0341(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FNaviDevilData                         NaviDevilData;                                     // 0x0344(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         Pad_4D33[0x4];                                     // 0x0354(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B826[0x4];                                     // 0x0354(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_AutoRotateFocus_C*                  AutoRotateCtrl;                                    // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SpawnPawn;                                         // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 

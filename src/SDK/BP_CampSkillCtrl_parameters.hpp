@@ -18,327 +18,6 @@
 namespace SDK::Params
 {
 
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsInSortMenu
-// 0x0003 (0x0003 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillIsInSortMenu final
-{
-public:
-	bool                                          OutSort;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          RetFlag;                                           // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsInSortMenu");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu) == 0x000003, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsInSortMenu");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu, OutSort) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsInSortMenu::OutSort' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu, RetFlag) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillIsInSortMenu::RetFlag' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'BP_CampSkillCtrl_C_ICampSkillIsInSortMenu::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillSetSkillSelectButtonHelp
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp final
-{
-public:
-	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InInitialize;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          OutParam;                                          // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp) == 0x000008, "Wrong size on BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp, InNumber) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp::InNumber' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp, InInitialize) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp::InInitialize' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp, OutParam) == 0x000005, "Member 'BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp::OutParam' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillSetPartyNumber
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillSetPartyNumber final
-{
-public:
-	int32                                         InPartyNumber;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OutParam;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillSetPartyNumber) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillSetPartyNumber");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillSetPartyNumber) == 0x000008, "Wrong size on BP_CampSkillCtrl_C_ICampSkillSetPartyNumber");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetPartyNumber, InPartyNumber) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillSetPartyNumber::InPartyNumber' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetPartyNumber, OutParam) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillSetPartyNumber::OutParam' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsClosedSortWindow
-// 0x0002 (0x0002 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow final
-{
-public:
-	bool                                          OutClosed;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Retparam;                                          // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow, OutClosed) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow::OutClosed' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow, Retparam) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow::Retparam' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsOpenStatus
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillIsOpenStatus final
-{
-public:
-	bool                                          CallStatusOpen;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsOpenStatus) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsOpenStatus");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsOpenStatus) == 0x000001, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsOpenStatus");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsOpenStatus, CallStatusOpen) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsOpenStatus::CallStatusOpen' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsListAnimation
-// 0x0002 (0x0002 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillIsListAnimation final
-{
-public:
-	bool                                          OutIsAnimation;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsListAnimation_ReturnValue;              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsListAnimation) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsListAnimation");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsListAnimation) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsListAnimation");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsListAnimation, OutIsAnimation) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsListAnimation::OutIsAnimation' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsListAnimation, CallFunc_IsListAnimation_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillIsListAnimation::CallFunc_IsListAnimation_ReturnValue' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsWaitPartyEnd
-// 0x0002 (0x0002 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd final
-{
-public:
-	bool                                          OutEnd;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsSkillListAnimationEnd_OutFinished;      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd, OutEnd) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd::OutEnd' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd, CallFunc_IsSkillListAnimationEnd_OutFinished) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd::CallFunc_IsSkillListAnimationEnd_OutFinished' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillGetListFadeOut
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillGetListFadeOut final
-{
-public:
-	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillGetListFadeOut) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillGetListFadeOut");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillGetListFadeOut) == 0x000001, "Wrong size on BP_CampSkillCtrl_C_ICampSkillGetListFadeOut");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetListFadeOut, OutFlag) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillGetListFadeOut::OutFlag' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillUtsusemiProc
-// 0x00C0 (0x00C0 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillUtsusemiProc final
-{
-public:
-	bool                                          OutIsCanseled;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D06[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Oldcursor;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Canseled;                                          // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetMovingCursor_ReturnValue;              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D07[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetMouseWheelAxis_Axis;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSkillListRectArea_OutParam;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D08[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMouseWheelParameter_ReturnValue;       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue;           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_FloatFloat_ReturnValue;          // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D09[0x1];                                     // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetUtsusemiCursorDispIndex_ReturnValue;   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetUtsusemiCursorListIndex_ReturnValue;   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D0A[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMouseHovered_OutIndex;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D0B[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_1;         // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetMovingCursor_ReturnValue_1;            // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D0C[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetUtsusemiCursorListIndex_ReturnValue_1; // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetUtsusemiCursorListIndex_ReturnValue_2; // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D0D[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UProjectUIManager*                      CallFunc_Get_ReturnValue_1;                        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue;        // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D0E[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D0F[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D10[0x1];                                     // 0x0093(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue_1;      // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D11[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetUtsusemiCursorDispIndex_ReturnValue_1; // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RestartUtsusemiSkillList_ReturnValue;     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D12[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue_2;      // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_2;         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D13[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_3;         // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_4;         // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_5;         // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetIconHelpStatus_ReturnValue;            // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_SwitchInteger_CmpSuccess_1;                 // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc) == 0x000008, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillUtsusemiProc");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc) == 0x0000C0, "Wrong size on BP_CampSkillCtrl_C_ICampSkillUtsusemiProc");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, OutIsCanseled) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::OutIsCanseled' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, Oldcursor) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::Oldcursor' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, Canseled) == 0x000008, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::Canseled' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_SetMovingCursor_ReturnValue) == 0x000009, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_SetMovingCursor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetMouseWheelAxis_Axis) == 0x00000C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetMouseWheelAxis_Axis' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_IsSkillListRectArea_OutParam) == 0x000010, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_IsSkillListRectArea_OutParam' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetMouseWheelParameter_ReturnValue) == 0x000014, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetMouseWheelParameter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue) == 0x000018, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00001C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x00001D, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_NotEqual_FloatFloat_ReturnValue) == 0x00001E, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_NotEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorDispIndex_ReturnValue) == 0x000020, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorDispIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorListIndex_ReturnValue) == 0x000024, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorListIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000028, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetMouseHovered_OutIndex) == 0x00002C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetMouseHovered_OutIndex' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_BooleanAND_ReturnValue) == 0x000030, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_Subtract_IntInt_ReturnValue) == 0x000034, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_1) == 0x000038, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_NotEqual_IntInt_ReturnValue) == 0x00003C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_SetMovingCursor_ReturnValue_1) == 0x00003D, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_SetMovingCursor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_Get_ReturnValue) == 0x000040, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_Get_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorListIndex_ReturnValue_1) == 0x000048, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorListIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorListIndex_ReturnValue_2) == 0x00004C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorListIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_NotEqual_IntInt_ReturnValue_1) == 0x000050, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_NotEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_Get_ReturnValue_1) == 0x000058, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_Get_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiSkillCount_ReturnValue) == 0x000060, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiSkillCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, K2Node_DynamicCast_AsBPI_UIManager) == 0x000068, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::K2Node_DynamicCast_AsBPI_UIManager' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x00007C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor) == 0x000080, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000090, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_BooleanAND_ReturnValue_1) == 0x000091, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000092, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiSkillCount_ReturnValue_1) == 0x000094, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiSkillCount_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000098, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorDispIndex_ReturnValue_1) == 0x00009C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorDispIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_RestartUtsusemiSkillList_ReturnValue) == 0x0000A0, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_RestartUtsusemiSkillList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiSkillCount_ReturnValue_2) == 0x0000A4, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiSkillCount_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_2) == 0x0000A8, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x0000AC, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_3) == 0x0000B0, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_4) == 0x0000B4, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_5) == 0x0000B8, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_SetIconHelpStatus_ReturnValue) == 0x0000BC, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_SetIconHelpStatus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, K2Node_SwitchInteger_CmpSuccess) == 0x0000BD, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, K2Node_SwitchInteger_CmpSuccess_1) == 0x0000BE, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::K2Node_SwitchInteger_CmpSuccess_1' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.IIsCampSkillMoveCursor
-// 0x0002 (0x0002 - 0x0000)
-struct BP_CampSkillCtrl_C_IIsCampSkillMoveCursor final
-{
-public:
-	bool                                          OutMoved;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_IIsCampSkillMoveCursor) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_IIsCampSkillMoveCursor");
-static_assert(sizeof(BP_CampSkillCtrl_C_IIsCampSkillMoveCursor) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_IIsCampSkillMoveCursor");
-static_assert(offsetof(BP_CampSkillCtrl_C_IIsCampSkillMoveCursor, OutMoved) == 0x000000, "Member 'BP_CampSkillCtrl_C_IIsCampSkillMoveCursor::OutMoved' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_IIsCampSkillMoveCursor, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_IIsCampSkillMoveCursor::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillGetSelectedNkmIndex
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex final
-{
-public:
-	int32                                         OutNkmIndex;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetCursorNkmIndex_ReturnValue;            // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex) == 0x000008, "Wrong size on BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex, OutNkmIndex) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex::OutNkmIndex' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex, CallFunc_GetCursorNkmIndex_ReturnValue) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex::CallFunc_GetCursorNkmIndex_ReturnValue' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillGetReasonForCansel
-// 0x0002 (0x0002 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel final
-{
-public:
-	E_CAMPSKILLLIST_CANSELTYPE                    OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_CAMPSKILLLIST_CANSELTYPE                    CallFunc_GetReasonForCansel_ReturnValue;           // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel, OutParam) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel::OutParam' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel, CallFunc_GetReasonForCansel_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel::CallFunc_GetReasonForCansel_ReturnValue' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.IIsCampSkillUseSkillProc
-// 0x0002 (0x0002 - 0x0000)
-struct BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc final
-{
-public:
-	bool                                          OutUsed;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc");
-static_assert(sizeof(BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc");
-static_assert(offsetof(BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc, OutUsed) == 0x000000, "Member 'BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc::OutUsed' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillGetSelectedSkillId
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId final
-{
-public:
-	int32                                         OutSkillId;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetCursorSkillId_ReturnValue;             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId) == 0x000008, "Wrong size on BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId, OutSkillId) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId::OutSkillId' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId, CallFunc_GetCursorSkillId_ReturnValue) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId::CallFunc_GetCursorSkillId_ReturnValue' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillProc
-// 0x0003 (0x0003 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillProc final
-{
-public:
-	bool                                          OutIsCanseled;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_ResetParameterAvailabelFlag_ReturnValue;  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillProc) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillProc");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillProc) == 0x000003, "Wrong size on BP_CampSkillCtrl_C_ICampSkillProc");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillProc, OutIsCanseled) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillProc::OutIsCanseled' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillProc, CallFunc_ResetParameterAvailabelFlag_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillProc::CallFunc_ResetParameterAvailabelFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillProc, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'BP_CampSkillCtrl_C_ICampSkillProc::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsFinished
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CampSkillCtrl_C_ICampSkillIsFinished final
-{
-public:
-	bool                                          OutFinished;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsFinished) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsFinished");
-static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsFinished) == 0x000001, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsFinished");
-static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsFinished, OutFinished) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsFinished::OutFinished' has a wrong offset!");
-
-// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.UnlockSortMouse
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CampSkillCtrl_C_UnlockSortMouse final
-{
-public:
-	bool                                          CallFunc_SortMouseUnlockSortMouse_ReturnValue;     // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_CampSkillCtrl_C_UnlockSortMouse) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_UnlockSortMouse");
-static_assert(sizeof(BP_CampSkillCtrl_C_UnlockSortMouse) == 0x000001, "Wrong size on BP_CampSkillCtrl_C_UnlockSortMouse");
-static_assert(offsetof(BP_CampSkillCtrl_C_UnlockSortMouse, CallFunc_SortMouseUnlockSortMouse_ReturnValue) == 0x000000, "Member 'BP_CampSkillCtrl_C_UnlockSortMouse::CallFunc_SortMouseUnlockSortMouse_ReturnValue' has a wrong offset!");
-
 // Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.LockSortMouse
 // 0x0001 (0x0001 - 0x0000)
 struct BP_CampSkillCtrl_C_LockSortMouse final
@@ -356,7 +35,7 @@ struct BP_CampSkillCtrl_C_GetSortMouseParameter final
 {
 public:
 	E_SORTWINDOW_MOUSE_EVENT_TYPE                 MouseEventType;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D14[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_368E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SelectLstIdx;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectSlotIdx;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ListScrollOffset;                                  // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -400,10 +79,10 @@ struct BP_CampSkillCtrl_C_UpdateMW_FastState final
 {
 public:
 	bool                                          OnFast;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D15[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_368F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D16[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3690[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_MSgCtrl_UpdateMW_FastEffect_IsDispEffect; // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -424,7 +103,7 @@ struct BP_CampSkillCtrl_C_UpdateMW_AutoWait final
 public:
 	float                                         CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D17[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3691[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_UpdateMW_AutoWait) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_UpdateMW_AutoWait");
@@ -481,7 +160,7 @@ public:
 	int32                                         CallFunc_BPL_SortWindow2_GetAppliedSetting_AppliedSetting; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SORT_WINDOW_SORT_ORDER                      CallFunc_BPL_SortWindow2_GetAppliedSetting_AppliedOrder; // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSortType_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D18[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3692[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_BPL_SortWindow2_GetAppliedSetting_AppliedSetting_1; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SORT_WINDOW_SORT_ORDER                      CallFunc_BPL_SortWindow2_GetAppliedSetting_AppliedOrder_1; // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSortSkillList_ReturnValue;             // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -509,7 +188,7 @@ public:
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D19[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3693[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_SetNoSkillHelpMessage) == 0x000008, "Wrong alignment on BP_CampSkillCtrl_C_SetNoSkillHelpMessage");
@@ -569,81 +248,81 @@ struct BP_CampSkillCtrl_C_Gstatus_WaitCampSkillMessage final
 {
 public:
 	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D1A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3694[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D1B[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3695[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_1;                        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_1;              // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D1C[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3696[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor_1;   // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ICommonHelpWindowIsOpened_OutFinished;    // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D1D[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3697[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D1E[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3698[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D1F[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3699[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_2;              // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D20[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_369A[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectUIManager*                      CallFunc_BPI_GetUIManager_UIManager;               // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_3;              // 0x00B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D21[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_369B[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_4;              // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D22[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_369C[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_BPI_GetUIManager_UIManager_1;             // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_BPI_GetMsgCtrl_OutActor;                  // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_5;              // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D23[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_369D[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BPI_GetMsgCtrl_OutActor_1;                // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl;                 // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D24[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_369E[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl_1;               // 0x0128(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IIsFinishedWindowOut_OutFinished;         // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_UpdateMW_FastState_OnFast;                // 0x013A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D25[0x1];                                     // 0x013B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_369F[0x1];                                     // 0x013B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable_1;                               // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_MSgCtrl_UpdateMW_AutoState_IsAutoMW;      // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_MsgCtrl_UpdateMW_DispOff_IsVisibleMW;     // 0x0145(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D26[0x2];                                     // 0x0146(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A0[0x2];                                     // 0x0146(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D27[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A1[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_6;              // 0x0158(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D28[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A2[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_BPI_GetUIManager_UIManager_2;             // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_7;              // 0x0178(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D29[0x6];                                     // 0x018A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A3[0x6];                                     // 0x018A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BPI_GetMsgCtrl_OutActor_2;                // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl_2;               // 0x0198(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D2A[0x7];                                     // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A4[0x7];                                     // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl_3;               // 0x01B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IIsCompletedMsg_OutFinished;              // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x01C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchInteger_CmpSuccess_1;                 // 0x01C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_MSgCtrl_UpdateMW_AutoState_IsAutoMW_1;    // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D2B[0x3];                                     // 0x01C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A5[0x3];                                     // 0x01C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_MsgCtrl_UpdateMW_DispOff_IsVisibleMW_1;   // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D2C[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A6[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_MsgCtrl_GetAutoWaitTIme_ReturnValue;      // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_2;                               // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess_2;                 // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -722,37 +401,37 @@ struct BP_CampSkillCtrl_C_Gstatus_CampSkillMessage final
 public:
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D2D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A7[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_MSgCtrl_UpdateMW_AutoState_IsAutoMW;      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D2E[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A8[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_MsgCtrl_UpdateMW_DispOff_IsVisibleMW;     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ICommonHelpWindowIsClosed_OutFinished;    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_CAMPSKILLLIST_CANSELTYPE                    CallFunc_GetReasonForCansel_ReturnValue;           // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D2F[0x5];                                     // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36A9[0x5];                                     // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_1;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D30[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36AA[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_BPI_GetUIManager_UIManager;               // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_2;              // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D31[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36AB[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BPI_GetMsgCtrl_OutActor;                  // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl;                 // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D32[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36AC[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl_1;               // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D33[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36AD[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl_2;               // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D34[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36AE[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl_3;               // 0x00D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D35[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36AF[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl_4;               // 0x00E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IIsFinishedWindowIn_OutFinished;          // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -826,30 +505,30 @@ public:
 	int32                                         CallFunc_SortMouseGetParameter_ReturnValue_1;      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSortType_ReturnValue;                  // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetSortType_ReturnValue_1;                // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D36[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B0[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetSortType_ReturnValue;                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SortMouseIsParameterAvailabel_ReturnValue; // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D37[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B1[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetSortType_ReturnValue_1;                // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BPL_SortWindow2_GetCursorIdx_ListIndex;   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSortMovingCursor_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D38[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B2[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetCursorIndexAtBothEnds_ReturnValue;     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MoveSortType_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetCursorIndexAtBothEnds_ReturnValue_1;   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetSortType_ReturnValue_2;                // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MoveSortType_ReturnValue_1;               // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D39[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B3[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetSortType_ReturnValue_3;                // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSortMovingCursor_ReturnValue_1;        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D3A[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B4[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D3B[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B5[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetSortType_ReturnValue_4;                // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_MoveSortType_ReturnValue_2;               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -898,23 +577,23 @@ struct BP_CampSkillCtrl_C_Gstatus_CalcSortSkill final
 public:
 	class ABP_CommonUI_EventCtrl_C*               CallFunc_GetCommonUI_EventCtrl_outActor;           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSortType_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D3C[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B6[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(E_SORTWINDOW_MOUSE_EVENT_TYPE MouseEventType, int32 SelectLstIdx, int32 SelectSlotIdx, int32 ListScrollOffset)> K2Node_CreateDelegate_OutputDelegate;              // 0x000C(0x0010)(ZeroConstructor, NoDestructor)
 	int32                                         CallFunc_BPL_SortWindow2_GetAppliedSetting_AppliedSetting; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SORT_WINDOW_SORT_ORDER                      CallFunc_BPL_SortWindow2_GetAppliedSetting_AppliedOrder; // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D3D[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B7[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D3E[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B8[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetSortType_ReturnValue;                  // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ICommonHelpWindowIsClosed_OutFinished;    // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D3F[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36B9[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetCanBeUseSkillNumber_ReturnValue;       // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CalcCanBeUseSkill_ReturnValue;            // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D40[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36BA[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_Gstatus_CalcSortSkill) == 0x000008, "Wrong alignment on BP_CampSkillCtrl_C_Gstatus_CalcSortSkill");
@@ -944,14 +623,14 @@ public:
 	int32                                         CallFunc_GetUseSkillCount_ReturnValue;             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D41[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36BB[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetCursorListIndex_ReturnValue;           // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetCursorDispIndex_ReturnValue;           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Conv_IntToFloat_ReturnValue_1;            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D42[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36BC[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_CalcScrollBarRate) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_CalcScrollBarRate");
@@ -987,13 +666,13 @@ struct BP_CampSkillCtrl_C_SetUtsusemiSkillHelpMessage final
 {
 public:
 	int32                                         CallFunc_GetUtsusemiCursorSkillId_ReturnValue;     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D43[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36BD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D44[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36BE[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D45[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36BF[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_SetUtsusemiSkillHelpMessage) == 0x000008, "Wrong alignment on BP_CampSkillCtrl_C_SetUtsusemiSkillHelpMessage");
@@ -1014,79 +693,79 @@ public:
 	float                                         CallFunc_GetMouseWheelAxis_Axis;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMouseWheelParameter_ReturnValue;       // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_FloatFloat_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D46[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C0[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_MoveCursorOffset_ReturnValue;             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetScrollBarValue_OutValue;               // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_CalcScrollBarClicked_ReturnValue;         // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D47[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C1[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_MoveCursorOffset_ReturnValue_1;           // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsSkillListRectArea_OutParam;             // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D48[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C2[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_MoveCursorOffset_ReturnValue_2;           // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetUseSkillCount_ReturnValue;             // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MoveCursorOffset_ReturnValue_3;           // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D49[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C3[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetCursorDispIndex_ReturnValue;           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMouseOnClicked_OutIndex;               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMouseHovered_OutIndex;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D4A[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C4[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MoveCursor_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D4B[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C5[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_1;                        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D4C[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C6[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_1;              // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D4D[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C7[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor_1;   // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue_2;                        // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMagatsuhiGaugeMode_ReturnValue;        // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetIconHelpStatus_ReturnValue;            // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D4E[0x3];                                     // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C8[0x3];                                     // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue_3;                        // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetCursorListIndex_ReturnValue;           // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_2;            // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D4F[0x3];                                     // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36C9[0x3];                                     // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetCursorListIndex_ReturnValue_1;         // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_StartFadeOutListAnimation_ReturnValue;    // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_StopListAnimation_ReturnValue;            // 0x00DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D50[0x2];                                     // 0x00DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36CA[0x2];                                     // 0x00DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetUseSkillCount_ReturnValue_1;           // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetMovingCursor_ReturnValue;              // 0x00E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetMovingCursor_ReturnValue_1;            // 0x00E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetMovingCursor_ReturnValue_2;            // 0x00E7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetMovingCursor_ReturnValue_3;            // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D51[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36CB[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D52[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36CC[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_2;              // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D53[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36CD[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue_4;                        // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectUIManager*                      CallFunc_BPI_GetUIManager_UIManager;               // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_3;              // 0x0128(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D54[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36CE[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BPI_GetMsgCtrl_OutActor;                  // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue_5;                        // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl;                 // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D55[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36CF[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MsgCtrl_C>        K2Node_DynamicCast_AsBPI_Msg_Ctrl_1;               // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetSelectedDarkmaskOn_ReturnValue;        // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D56[0x2];                                     // 0x017A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D0[0x2];                                     // 0x017A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_CanBeUsedSelectedSkill_ReturnValue;       // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MoveCursor_ReturnValue_1;                 // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_MoveCursor_ReturnValue_2;                 // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1171,13 +850,13 @@ struct BP_CampSkillCtrl_C_SetSkillHelpMessage final
 {
 public:
 	int32                                         CallFunc_GetCursorSkillId_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D57[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D58[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D2[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D59[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D3[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_SetSkillHelpMessage) == 0x000008, "Wrong alignment on BP_CampSkillCtrl_C_SetSkillHelpMessage");
@@ -1252,7 +931,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreateFusionResultSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D5A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInUnknown;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1268,7 +947,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdateFusionResultSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D5B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInUnknown;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1284,7 +963,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreateFusionResultMagatsuhiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D5C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInUnknown;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1300,7 +979,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdateFusionResultMagatsuhiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D5D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D7[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInUnknown;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1316,7 +995,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreateDevilBookSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D5E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D8[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InDevilBookType;                                   // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1332,7 +1011,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdateDevilBookSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D5F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36D9[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InDevilBookType;                                   // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1348,7 +1027,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreateDevilBookMagatsuhiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D60[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36DA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InDevilBookType;                                   // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1364,7 +1043,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdateDevilBookMagatsuhiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D61[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36DB[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InDevilBookType;                                   // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1393,7 +1072,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreateUtsusemiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D62[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36DC[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillCreateUtsusemiSkillList) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillCreateUtsusemiSkillList");
@@ -1407,7 +1086,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdateUtsusemiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D63[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36DD[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillUpdateUtsusemiSkillList) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillUpdateUtsusemiSkillList");
@@ -1434,7 +1113,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreateUtsusemiSkillListForCampOnly final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D64[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36DE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillCreateUtsusemiSkillListForCampOnly) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillCreateUtsusemiSkillListForCampOnly");
@@ -1448,7 +1127,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdateUtsusemiSkillListForCampOnly final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D65[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36DF[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillUpdateUtsusemiSkillListForCampOnly) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillUpdateUtsusemiSkillListForCampOnly");
@@ -1462,7 +1141,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreatePartySkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D66[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InNkmIndex;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillCreatePartySkillList) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillCreatePartySkillList");
@@ -1476,7 +1155,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdatePartySkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D67[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InNkmIndex;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillUpdatePartySkillList) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillUpdatePartySkillList");
@@ -1490,7 +1169,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreatePartyMagatsuhiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D68[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InNkmIndex;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillCreatePartyMagatsuhiSkillList) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillCreatePartyMagatsuhiSkillList");
@@ -1504,7 +1183,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdatePartyMagatsuhiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D69[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InNkmIndex;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillUpdatePartyMagatsuhiSkillList) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillUpdatePartyMagatsuhiSkillList");
@@ -1518,7 +1197,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreateAnalyzeSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPriorty;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D6A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InInitialize;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1547,7 +1226,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdateAnalyzeSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPriorty;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D6B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillUpdateAnalyzeSkillList) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillUpdateAnalyzeSkillList");
@@ -1561,7 +1240,7 @@ struct BP_CampSkillCtrl_C_ICampSkillCreateAnalyzeMagatsuhiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D6C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InInitialize;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1577,7 +1256,7 @@ struct BP_CampSkillCtrl_C_ICampSkillUpdateAnalyzeMagatsuhiSkillList final
 {
 public:
 	E_WIDGET_PRIO                                 InPriority;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D6D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E7[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InDevilId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillUpdateAnalyzeMagatsuhiSkillList) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillUpdateAnalyzeMagatsuhiSkillList");
@@ -1619,7 +1298,7 @@ struct BP_CampSkillCtrl_C_InitializeSkillListAnimation final
 {
 public:
 	bool                                          InSelectCursorAnimation;                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D6E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E8[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InType;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CampSkillCtrl_C_InitializeSkillListAnimation) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_InitializeSkillListAnimation");
@@ -1901,7 +1580,7 @@ public:
 	int32                                         K2Node_Event_InType;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_InCursorOn;                           // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_11;                            // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D6F[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36E9[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_11;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InDevilBookType_3;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CreateDevilBookSkillList_ReturnValue;     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1910,22 +1589,22 @@ public:
 	bool                                          CallFunc_SetFusionResultSkillPanel_ReturnValue;    // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetFusionResultSkillPanel_ReturnValue_1;  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_10;                            // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D70[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36EA[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_10;                         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InDevilBookType_2;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_9;                             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D71[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36EB[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_9;                          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InDevilBookType_1;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CreateDevilBookSkillList_ReturnValue_1;   // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CreateDevilBookMagatsuhiSkillList_ReturnValue; // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_8;                             // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D72[0x1];                                     // 0x0037(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36EC[0x1];                                     // 0x0037(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_8;                          // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InDevilBookType;                      // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CreateDevilBookMagatsuhiSkillList_ReturnValue_1; // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_1;            // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D73[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36ED[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InMode;                               // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InRatio;                              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetFusionResultSkillPanel_ReturnValue_2;  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1948,77 +1627,77 @@ public:
 	int32                                         CallFunc_GetUtsusemiCursorDispIndex_ReturnValue;   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue;        // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D74[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36EE[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_6;                             // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D75[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36EF[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_6;                          // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetUtsusemiDevilId_ReturnValue_1;         // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D76[0x6];                                     // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F0[0x6];                                     // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_5;            // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CreateUtsusemiSkillList_ReturnValue_1;    // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetUtsusemiSkillPanel_ReturnValue_1;      // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D77[0x1];                                     // 0x00AB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F1[0x1];                                     // 0x00AB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetUtsusemiCursorDispIndex_ReturnValue_1; // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue_1;      // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_UpdateSkillListAnimation_ReturnValue_3;   // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D78[0x2];                                     // 0x00B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F2[0x2];                                     // 0x00B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_1;                        // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_UpdateSkillListAnimation_ReturnValue_4;   // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D79[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F3[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_1;              // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D7A[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F4[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor_1;   // 0x00E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetUtsusemiCursorDispIndex_ReturnValue_2; // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue_2;      // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D7B[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F5[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIndex_16;                           // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InType_4;                             // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_UpdateSkillListAnimation_ReturnValue_5;   // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D7C[0x3];                                     // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F6[0x3];                                     // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_2;                        // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_12;                            // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D7D[0x3];                                     // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F7[0x3];                                     // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_12;                         // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bInUnknown;                           // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D7E[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F8[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_2;              // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CreateFusionResultMagatsuhiSkillList_ReturnValue; // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D7F[0x6];                                     // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36F9[0x6];                                     // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor_2;   // 0x0138(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_6;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_13;                            // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D80[0x2];                                     // 0x014A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36FA[0x2];                                     // 0x014A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_13;                         // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bInUnknown_1;                         // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D81[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36FB[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_3;                        // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CreateFusionResultMagatsuhiSkillList_ReturnValue_1; // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D82[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36FC[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_3;              // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_7;            // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D83[0x6];                                     // 0x017A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36FD[0x6];                                     // 0x017A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor_3;   // 0x0180(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetSkillDisplayNumber_ReturnValue;        // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_2;        // 0x0194(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_5;                             // 0x0195(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D84[0x2];                                     // 0x0196(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36FE[0x2];                                     // 0x0196(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_5;                          // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_4;                             // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D85[0x3];                                     // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36FF[0x3];                                     // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_4;                          // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetUtsusemiDevilId_ReturnValue_2;         // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetUtsusemiDevilId_ReturnValue_3;         // 0x01A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_14;                            // 0x01A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D86[0x1];                                     // 0x01A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3700[0x1];                                     // 0x01A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_14;                         // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bInUnknown_2;                         // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CreateFusionResultSkillList_ReturnValue;  // 0x01AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2034,7 +1713,7 @@ public:
 	bool                                          CallFunc_StopListAnimation_ReturnValue_2;          // 0x01B7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_StartFadeOutListAnimation_ReturnValue_1;  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_3;                             // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D87[0x2];                                     // 0x01BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3701[0x2];                                     // 0x01BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InNkmIndex_3;                         // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CreatePartySkillList_ReturnValue;         // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_11;           // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2043,12 +1722,12 @@ public:
 	int32                                         K2Node_Event_InNkmIndex_2;                         // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CreatePartySkillList_ReturnValue_1;       // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_12;           // 0x01C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D88[0x6];                                     // 0x01CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3702[0x6];                                     // 0x01CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CampSkillList_C*                    CallFunc_GetCampSkillList_OutList;                 // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetPartySkillPanel_ReturnValue_1;         // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_UpdateSkillListAnimation_ReturnValue_7;   // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_15;                            // 0x01DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D89[0x1];                                     // 0x01DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3703[0x1];                                     // 0x01DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_15;                         // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bInUnknown_3;                         // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetPartySkillPanel_ReturnValue_2;         // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2057,10 +1736,10 @@ public:
 	bool                                          CallFunc_SetPartySkillPanel_ReturnValue_3;         // 0x01E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_UpdateSkillListAnimation_ReturnValue_8;   // 0x01E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio_1;                             // 0x01E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D8A[0x1];                                     // 0x01E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3704[0x1];                                     // 0x01E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InNkmIndex_1;                         // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WIDGET_PRIO                                 K2Node_Event_InPrio;                               // 0x01EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D8B[0x3];                                     // 0x01ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3705[0x3];                                     // 0x01ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InNkmIndex;                           // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CreatePartyMagatsuhiSkillList_ReturnValue; // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CreatePartyMagatsuhiSkillList_ReturnValue_1; // 0x01F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2069,7 +1748,7 @@ public:
 	bool                                          CallFunc_StopListAnimation_ReturnValue_3;          // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_StartFadeOutListAnimation_ReturnValue_2;  // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPriorty_1;                          // 0x01FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D8C[0x1];                                     // 0x01FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3706[0x1];                                     // 0x01FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_3;                          // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_InInitialize_1;                       // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CreateAnalyzeSkillList_ReturnValue;       // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2082,52 +1761,52 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_4;              // 0x0210(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D8D[0x7];                                     // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3707[0x7];                                     // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_BPI_GetUIManager_UIManager;               // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_5;              // 0x0230(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D8E[0x7];                                     // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3708[0x7];                                     // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BPI_GetMagatsuhiGaugeCtrl_outActor;       // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MagatsuhiGaugeCtrl_C> K2Node_DynamicCast_AsBPI_Magatsuhi_Gauge_Ctrl;     // 0x0250(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetAnalyzeSkillPanel_ReturnValue_1;       // 0x0261(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D8F[0x6];                                     // 0x0262(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3709[0x6];                                     // 0x0262(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WIDGET_PRIO                                 K2Node_Event_InPriorty;                            // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D90[0x3];                                     // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_370A[0x3];                                     // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_2;                          // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_6;              // 0x0278(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CreateAnalyzeSkillList_ReturnValue_1;     // 0x0289(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D91[0x6];                                     // 0x028A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_370B[0x6];                                     // 0x028A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_BPI_GetUIManager_UIManager_1;             // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetAnalyzeDevilId_ReturnValue_1;          // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D92[0x7];                                     // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_370C[0x7];                                     // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_7;              // 0x02A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D93[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_370D[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BPI_GetMagatsuhiGaugeCtrl_outActor_1;     // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_17;           // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D94[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_370E[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MagatsuhiGaugeCtrl_C> K2Node_DynamicCast_AsBPI_Magatsuhi_Gauge_Ctrl_1;   // 0x02C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_UpdateSkillListAnimation_ReturnValue_9;   // 0x02D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetAnalyzeSkillPanel_ReturnValue_2;       // 0x02DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D95[0x1];                                     // 0x02DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_370F[0x1];                                     // 0x02DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIndex_17;                           // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InUseType_3;                          // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetSkillDisplayNumber_ReturnValue_1;      // 0x02E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_3;        // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D96[0x7];                                     // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3710[0x7];                                     // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CampSkillWindow_C*                  CallFunc_Create_ReturnValue;                       // 0x02F0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetAnalyzeSkillPanel_ReturnValue_3;       // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_UpdateSkillListAnimation_ReturnValue_10;  // 0x02F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPriority_2;                         // 0x02FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D97[0x1];                                     // 0x02FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3711[0x1];                                     // 0x02FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId_1;                          // 0x02FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_InInitialize;                         // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 K2Node_Event_InPriority_1;                         // 0x0301(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D98[0x2];                                     // 0x0302(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3712[0x2];                                     // 0x0302(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InDevilId;                            // 0x0304(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CreateAnalyzeMagatsuhiSkillList_ReturnValue; // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetAnalyzeDevilId_ReturnValue_2;          // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2135,14 +1814,14 @@ public:
 	bool                                          CallFunc_CreateAnalyzeMagatsuhiSkillList_ReturnValue_1; // 0x030B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetAnalyzeDevilId_ReturnValue_3;          // 0x030C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_19;           // 0x030D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D99[0x2];                                     // 0x030E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3713[0x2];                                     // 0x030E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIndex_15;                           // 0x0310(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InType_3;                             // 0x0314(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InAnimeType;                          // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_InCursorOn_1;                         // 0x031C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D9A[0x3];                                     // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3714[0x3];                                     // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InType_2;                             // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D9B[0x4];                                     // 0x0324(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3715[0x4];                                     // 0x0324(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CampSkillList_C*                    CallFunc_GetCampSkillList_OutList_1;               // 0x0328(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSelectedDarkmaskOff_ReturnValue;       // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetSelectedDarkmaskOff_ReturnValue_1;     // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2151,13 +1830,13 @@ public:
 	int32                                         K2Node_CustomEvent_InTYpe;                         // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSkillPanel_ReturnValue;                // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_StartListAnimation_ReturnValue;           // 0x0339(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D9C[0x2];                                     // 0x033A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3716[0x2];                                     // 0x033A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetCursorDispIndex_ReturnValue;           // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetSkillPanel_ReturnValue_1;              // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D9D[0x3];                                     // 0x0341(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3717[0x3];                                     // 0x0341(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetCursorDispIndex_ReturnValue_1;         // 0x0344(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIndex_14;                           // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8D9E[0x4];                                     // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3718[0x4];                                     // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CampSkillList_C*                    CallFunc_GetCampSkillList_OutList_2;               // 0x0350(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_CampSkillList_C*                    CallFunc_GetCampSkillList_OutList_3;               // 0x0358(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2166,7 +1845,7 @@ public:
 	bool                                          CallFunc_CreateSkillList_ReturnValue;              // 0x0363(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue_20;           // 0x0364(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetSkillPanel_ReturnValue_2;              // 0x0365(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D9F[0x2];                                     // 0x0366(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3719[0x2];                                     // 0x0366(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetCursorDispIndex_ReturnValue_2;         // 0x0368(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIndex_13;                           // 0x036C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIndex_12;                           // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2176,7 +1855,7 @@ public:
 	int32                                         K2Node_Event_InIndex_10;                           // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIndex_9;                            // 0x0384(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_InHelpMessage;                        // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8DA0[0x7];                                     // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_371A[0x7];                                     // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CampSkillList_C*                    CallFunc_GetCampSkillList_OutList_4;               // 0x0390(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InIndex_8;                            // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InUseSkill_4;                         // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2190,11 +1869,11 @@ public:
 	int32                                         K2Node_Event_InTekiseiParam_2;                     // 0x03BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InUseType_2;                          // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_InDispOnFlag_3;                       // 0x03C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8DA1[0x3];                                     // 0x03C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_371B[0x3];                                     // 0x03C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIndex_4;                            // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InType_1;                             // 0x03CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_InitializeSkillListCursor_ReturnValue;    // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8DA2[0x3];                                     // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_371C[0x3];                                     // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIndex_3;                            // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InSkillId_1;                          // 0x03D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InFaceIconId_2;                       // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2204,7 +1883,7 @@ public:
 	int32                                         K2Node_Event_InUseType_1;                          // 0x03EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_InDispOnFlag_2;                       // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_InitializeMagatsuhiGauge_ReturnValue;     // 0x03F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8DA3[0x2];                                     // 0x03F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_371D[0x2];                                     // 0x03F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIndex_2;                            // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InBlankType;                          // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InFaceIconId_1;                       // 0x03FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2212,7 +1891,7 @@ public:
 	bool                                          K2Node_Event_InDispOnFlag_1;                       // 0x0404(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_InDispOnFaceIcon;                     // 0x0405(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_InDispOnMagatsuhi;                    // 0x0406(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8DA4[0x1];                                     // 0x0407(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_371E[0x1];                                     // 0x0407(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_InIndex_1;                            // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InSkillId;                            // 0x040C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InFaceIconId;                         // 0x0410(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2221,7 +1900,7 @@ public:
 	int32                                         K2Node_Event_InTekiseiParam;                       // 0x041C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_InUseType;                            // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_InDispOnFlag;                         // 0x0424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8DA5[0x3];                                     // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_371F[0x3];                                     // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsListAnimation_ReturnValue;              // 0x042C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -2500,6 +2179,327 @@ static_assert(offsetof(BP_CampSkillCtrl_C_ExecuteUbergraph_BP_CampSkillCtrl, K2N
 static_assert(offsetof(BP_CampSkillCtrl_C_ExecuteUbergraph_BP_CampSkillCtrl, K2Node_Event_InDispOnFlag) == 0x000424, "Member 'BP_CampSkillCtrl_C_ExecuteUbergraph_BP_CampSkillCtrl::K2Node_Event_InDispOnFlag' has a wrong offset!");
 static_assert(offsetof(BP_CampSkillCtrl_C_ExecuteUbergraph_BP_CampSkillCtrl, K2Node_Event_DeltaSeconds) == 0x000428, "Member 'BP_CampSkillCtrl_C_ExecuteUbergraph_BP_CampSkillCtrl::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(BP_CampSkillCtrl_C_ExecuteUbergraph_BP_CampSkillCtrl, CallFunc_IsListAnimation_ReturnValue) == 0x00042C, "Member 'BP_CampSkillCtrl_C_ExecuteUbergraph_BP_CampSkillCtrl::CallFunc_IsListAnimation_ReturnValue' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsInSortMenu
+// 0x0003 (0x0003 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillIsInSortMenu final
+{
+public:
+	bool                                          OutSort;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          RetFlag;                                           // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsInSortMenu");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu) == 0x000003, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsInSortMenu");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu, OutSort) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsInSortMenu::OutSort' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu, RetFlag) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillIsInSortMenu::RetFlag' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsInSortMenu, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'BP_CampSkillCtrl_C_ICampSkillIsInSortMenu::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillSetSkillSelectButtonHelp
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp final
+{
+public:
+	int32                                         InNumber;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InInitialize;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          OutParam;                                          // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp) == 0x000008, "Wrong size on BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp, InNumber) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp::InNumber' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp, InInitialize) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp::InInitialize' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp, OutParam) == 0x000005, "Member 'BP_CampSkillCtrl_C_ICampSkillSetSkillSelectButtonHelp::OutParam' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillSetPartyNumber
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillSetPartyNumber final
+{
+public:
+	int32                                         InPartyNumber;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OutParam;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillSetPartyNumber) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillSetPartyNumber");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillSetPartyNumber) == 0x000008, "Wrong size on BP_CampSkillCtrl_C_ICampSkillSetPartyNumber");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetPartyNumber, InPartyNumber) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillSetPartyNumber::InPartyNumber' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillSetPartyNumber, OutParam) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillSetPartyNumber::OutParam' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsClosedSortWindow
+// 0x0002 (0x0002 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow final
+{
+public:
+	bool                                          OutClosed;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Retparam;                                          // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow, OutClosed) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow::OutClosed' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow, Retparam) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillIsClosedSortWindow::Retparam' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsOpenStatus
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillIsOpenStatus final
+{
+public:
+	bool                                          CallStatusOpen;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsOpenStatus) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsOpenStatus");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsOpenStatus) == 0x000001, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsOpenStatus");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsOpenStatus, CallStatusOpen) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsOpenStatus::CallStatusOpen' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsListAnimation
+// 0x0002 (0x0002 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillIsListAnimation final
+{
+public:
+	bool                                          OutIsAnimation;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsListAnimation_ReturnValue;              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsListAnimation) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsListAnimation");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsListAnimation) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsListAnimation");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsListAnimation, OutIsAnimation) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsListAnimation::OutIsAnimation' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsListAnimation, CallFunc_IsListAnimation_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillIsListAnimation::CallFunc_IsListAnimation_ReturnValue' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsWaitPartyEnd
+// 0x0002 (0x0002 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd final
+{
+public:
+	bool                                          OutEnd;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsSkillListAnimationEnd_OutFinished;      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd, OutEnd) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd::OutEnd' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd, CallFunc_IsSkillListAnimationEnd_OutFinished) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillIsWaitPartyEnd::CallFunc_IsSkillListAnimationEnd_OutFinished' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillGetListFadeOut
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillGetListFadeOut final
+{
+public:
+	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillGetListFadeOut) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillGetListFadeOut");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillGetListFadeOut) == 0x000001, "Wrong size on BP_CampSkillCtrl_C_ICampSkillGetListFadeOut");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetListFadeOut, OutFlag) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillGetListFadeOut::OutFlag' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillUtsusemiProc
+// 0x00C0 (0x00C0 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillUtsusemiProc final
+{
+public:
+	bool                                          OutIsCanseled;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3720[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Oldcursor;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Canseled;                                          // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SetMovingCursor_ReturnValue;              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3721[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMouseWheelAxis_Axis;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSkillListRectArea_OutParam;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3722[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMouseWheelParameter_ReturnValue;       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue;           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_FloatFloat_ReturnValue;          // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3723[0x1];                                     // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetUtsusemiCursorDispIndex_ReturnValue;   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetUtsusemiCursorListIndex_ReturnValue;   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3724[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMouseHovered_OutIndex;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3725[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_1;         // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SetMovingCursor_ReturnValue_1;            // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3726[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetUtsusemiCursorListIndex_ReturnValue_1; // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetUtsusemiCursorListIndex_ReturnValue_2; // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3727[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UProjectUIManager*                      CallFunc_Get_ReturnValue_1;                        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue;        // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3728[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0068(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3729[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_CommonHelpWindowCtrl_C> CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor;     // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_372A[0x1];                                     // 0x0093(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue_1;      // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_372B[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetUtsusemiCursorDispIndex_ReturnValue_1; // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RestartUtsusemiSkillList_ReturnValue;     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_372C[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetUtsusemiSkillCount_ReturnValue_2;      // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_2;         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_372D[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_3;         // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_4;         // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MoveUtsusemiCursor_ReturnValue_5;         // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetIconHelpStatus_ReturnValue;            // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchInteger_CmpSuccess_1;                 // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc) == 0x000008, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillUtsusemiProc");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc) == 0x0000C0, "Wrong size on BP_CampSkillCtrl_C_ICampSkillUtsusemiProc");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, OutIsCanseled) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::OutIsCanseled' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, Oldcursor) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::Oldcursor' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, Canseled) == 0x000008, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::Canseled' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_SetMovingCursor_ReturnValue) == 0x000009, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_SetMovingCursor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetMouseWheelAxis_Axis) == 0x00000C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetMouseWheelAxis_Axis' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_IsSkillListRectArea_OutParam) == 0x000010, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_IsSkillListRectArea_OutParam' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetMouseWheelParameter_ReturnValue) == 0x000014, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetMouseWheelParameter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue) == 0x000018, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00001C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x00001D, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_NotEqual_FloatFloat_ReturnValue) == 0x00001E, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_NotEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorDispIndex_ReturnValue) == 0x000020, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorDispIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorListIndex_ReturnValue) == 0x000024, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorListIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000028, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetMouseHovered_OutIndex) == 0x00002C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetMouseHovered_OutIndex' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_BooleanAND_ReturnValue) == 0x000030, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_Subtract_IntInt_ReturnValue) == 0x000034, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_1) == 0x000038, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_NotEqual_IntInt_ReturnValue) == 0x00003C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_SetMovingCursor_ReturnValue_1) == 0x00003D, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_SetMovingCursor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_Get_ReturnValue) == 0x000040, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_Get_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorListIndex_ReturnValue_1) == 0x000048, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorListIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorListIndex_ReturnValue_2) == 0x00004C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorListIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_NotEqual_IntInt_ReturnValue_1) == 0x000050, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_NotEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_Get_ReturnValue_1) == 0x000058, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_Get_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiSkillCount_ReturnValue) == 0x000060, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiSkillCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, K2Node_DynamicCast_AsBPI_UIManager) == 0x000068, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::K2Node_DynamicCast_AsBPI_UIManager' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x00007C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor) == 0x000080, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_BPI_GetCommonHelpWindowCtrl_OutActor' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000090, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_BooleanAND_ReturnValue_1) == 0x000091, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000092, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiSkillCount_ReturnValue_1) == 0x000094, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiSkillCount_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000098, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiCursorDispIndex_ReturnValue_1) == 0x00009C, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiCursorDispIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_RestartUtsusemiSkillList_ReturnValue) == 0x0000A0, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_RestartUtsusemiSkillList_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_GetUtsusemiSkillCount_ReturnValue_2) == 0x0000A4, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_GetUtsusemiSkillCount_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_2) == 0x0000A8, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x0000AC, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_3) == 0x0000B0, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_4) == 0x0000B4, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_MoveUtsusemiCursor_ReturnValue_5) == 0x0000B8, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_MoveUtsusemiCursor_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, CallFunc_SetIconHelpStatus_ReturnValue) == 0x0000BC, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::CallFunc_SetIconHelpStatus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, K2Node_SwitchInteger_CmpSuccess) == 0x0000BD, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillUtsusemiProc, K2Node_SwitchInteger_CmpSuccess_1) == 0x0000BE, "Member 'BP_CampSkillCtrl_C_ICampSkillUtsusemiProc::K2Node_SwitchInteger_CmpSuccess_1' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.IIsCampSkillMoveCursor
+// 0x0002 (0x0002 - 0x0000)
+struct BP_CampSkillCtrl_C_IIsCampSkillMoveCursor final
+{
+public:
+	bool                                          OutMoved;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_IIsCampSkillMoveCursor) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_IIsCampSkillMoveCursor");
+static_assert(sizeof(BP_CampSkillCtrl_C_IIsCampSkillMoveCursor) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_IIsCampSkillMoveCursor");
+static_assert(offsetof(BP_CampSkillCtrl_C_IIsCampSkillMoveCursor, OutMoved) == 0x000000, "Member 'BP_CampSkillCtrl_C_IIsCampSkillMoveCursor::OutMoved' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_IIsCampSkillMoveCursor, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_IIsCampSkillMoveCursor::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillGetSelectedNkmIndex
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex final
+{
+public:
+	int32                                         OutNkmIndex;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCursorNkmIndex_ReturnValue;            // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex) == 0x000008, "Wrong size on BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex, OutNkmIndex) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex::OutNkmIndex' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex, CallFunc_GetCursorNkmIndex_ReturnValue) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillGetSelectedNkmIndex::CallFunc_GetCursorNkmIndex_ReturnValue' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillGetReasonForCansel
+// 0x0002 (0x0002 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel final
+{
+public:
+	E_CAMPSKILLLIST_CANSELTYPE                    OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_CAMPSKILLLIST_CANSELTYPE                    CallFunc_GetReasonForCansel_ReturnValue;           // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel, OutParam) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel::OutParam' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel, CallFunc_GetReasonForCansel_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillGetReasonForCansel::CallFunc_GetReasonForCansel_ReturnValue' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.IIsCampSkillUseSkillProc
+// 0x0002 (0x0002 - 0x0000)
+struct BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc final
+{
+public:
+	bool                                          OutUsed;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc");
+static_assert(sizeof(BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc) == 0x000002, "Wrong size on BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc");
+static_assert(offsetof(BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc, OutUsed) == 0x000000, "Member 'BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc::OutUsed' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_IIsCampSkillUseSkillProc::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillGetSelectedSkillId
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId final
+{
+public:
+	int32                                         OutSkillId;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCursorSkillId_ReturnValue;             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId) == 0x000004, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId) == 0x000008, "Wrong size on BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId, OutSkillId) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId::OutSkillId' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId, CallFunc_GetCursorSkillId_ReturnValue) == 0x000004, "Member 'BP_CampSkillCtrl_C_ICampSkillGetSelectedSkillId::CallFunc_GetCursorSkillId_ReturnValue' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillProc
+// 0x0003 (0x0003 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillProc final
+{
+public:
+	bool                                          OutIsCanseled;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_ResetParameterAvailabelFlag_ReturnValue;  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillProc) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillProc");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillProc) == 0x000003, "Wrong size on BP_CampSkillCtrl_C_ICampSkillProc");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillProc, OutIsCanseled) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillProc::OutIsCanseled' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillProc, CallFunc_ResetParameterAvailabelFlag_ReturnValue) == 0x000001, "Member 'BP_CampSkillCtrl_C_ICampSkillProc::CallFunc_ResetParameterAvailabelFlag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillProc, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'BP_CampSkillCtrl_C_ICampSkillProc::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.ICampSkillIsFinished
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CampSkillCtrl_C_ICampSkillIsFinished final
+{
+public:
+	bool                                          OutFinished;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_ICampSkillIsFinished) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_ICampSkillIsFinished");
+static_assert(sizeof(BP_CampSkillCtrl_C_ICampSkillIsFinished) == 0x000001, "Wrong size on BP_CampSkillCtrl_C_ICampSkillIsFinished");
+static_assert(offsetof(BP_CampSkillCtrl_C_ICampSkillIsFinished, OutFinished) == 0x000000, "Member 'BP_CampSkillCtrl_C_ICampSkillIsFinished::OutFinished' has a wrong offset!");
+
+// Function BP_CampSkillCtrl.BP_CampSkillCtrl_C.UnlockSortMouse
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CampSkillCtrl_C_UnlockSortMouse final
+{
+public:
+	bool                                          CallFunc_SortMouseUnlockSortMouse_ReturnValue;     // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CampSkillCtrl_C_UnlockSortMouse) == 0x000001, "Wrong alignment on BP_CampSkillCtrl_C_UnlockSortMouse");
+static_assert(sizeof(BP_CampSkillCtrl_C_UnlockSortMouse) == 0x000001, "Wrong size on BP_CampSkillCtrl_C_UnlockSortMouse");
+static_assert(offsetof(BP_CampSkillCtrl_C_UnlockSortMouse, CallFunc_SortMouseUnlockSortMouse_ReturnValue) == 0x000000, "Member 'BP_CampSkillCtrl_C_UnlockSortMouse::CallFunc_SortMouseUnlockSortMouse_ReturnValue' has a wrong offset!");
 
 }
 

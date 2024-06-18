@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BP_EventMissionBase_classes.hpp"
-#include "Engine_structs.hpp"
 #include "E_MakkaWindowAnimState_structs.hpp"
+#include "Engine_structs.hpp"
+#include "BP_EventMissionBase_classes.hpp"
 
 
 namespace SDK

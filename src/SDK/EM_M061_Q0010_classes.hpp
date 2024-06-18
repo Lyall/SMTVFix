@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_EventMissionBase_Hit_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -25,7 +25,7 @@ class AEM_M061_Q0010_C final : public ABP_EventMissionBase_Hit_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_EM_M061_Q0010_C;                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         SelectIndex;                                       // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29F7[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7DA3[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    MissionMessageAsset;                               // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class ACameraActor*>                   Camera;                                            // 0x02E0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class ATargetPoint*>                   Target;                                            // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
@@ -42,7 +42,7 @@ public:
 	float                                         New_FOV;                                           // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               DefDevRot;                                         // 0x034C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FRotator                               PLRot;                                             // 0x0358(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_29F8[0x4];                                     // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7DA4[0x4];                                     // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_EventCameraBlend_C*                 CameraBlender;                                     // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ADevilBase_C*                           SpawnDevilBase;                                    // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

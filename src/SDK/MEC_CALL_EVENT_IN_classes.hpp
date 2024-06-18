@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MEC_INOUT_classes.hpp"
 #include "Engine_structs.hpp"
+#include "MEC_INOUT_classes.hpp"
 
 
 namespace SDK
@@ -26,7 +26,7 @@ public:
 	class UMEC_FLAG_C*                            MEC_FLAG;                                          // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UMEC_CALL_EVENT_C*                      MEC_CALL_EVENT;                                    // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	int32                                         MapEventID;                                        // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C93B[0x4];                                     // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A3B[0x4];                                     // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           ON_Flag;                                           // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class FName>                           OFF_Flag;                                          // 0x03F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 

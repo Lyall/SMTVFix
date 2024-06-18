@@ -46,7 +46,7 @@ public:
 	TScriptInterface<class IBPI_AICommand_C>      RetValue;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_BPL_GetBIBattleMain_retValue;             // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPL_GetBIBattleMain_success;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5864[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5349[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_AICommand_C>      CallFunc_BI_GetAICommand_ret;                      // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BtlAI_Base_C_GetBPIAICommand) == 0x000008, "Wrong alignment on BtlAI_Base_C_GetBPIAICommand");

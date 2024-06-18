@@ -22,7 +22,7 @@ struct BPI_DevilAssetTableInstanceAccessor_C_BI_GetDevilAsset final
 {
 public:
 	int32                                         DevilAssetID;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34CA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3059[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDevilAssetTable_Raw                   AssetData;                                         // 0x0008(0x00B0)(Parm, OutParm)
 	bool                                          IsValid;                                           // 0x00B8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

@@ -12,12 +12,12 @@
 
 #include "Engine_structs.hpp"
 #include "E_PLAYER_MOVEMENT_STATE_structs.hpp"
+#include "E_MapAction_Pla603_structs.hpp"
 #include "Project_structs.hpp"
 #include "E_Pla603_InitialForm_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PlayerBase_classes.hpp"
 #include "E_Pla603_Weapon_structs.hpp"
-#include "E_MapAction_Pla603_structs.hpp"
 
 
 namespace SDK
@@ -48,11 +48,11 @@ public:
 	class UPla603_AnimBP_C*                       AnimBP;                                            // 0x0A58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSliding_forEffect;                                // 0x0A60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bEdgeGripRightAfterRelease;                        // 0x0A61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_810B[0x6];                                     // 0x0A62(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8467[0x6];                                     // 0x0A62(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystemComponent*               AttackTrail;                                       // 0x0A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 HairParameter;                                     // 0x0A70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableHairPhysics;                                // 0x0A78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_810C[0x3];                                     // 0x0A79(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8468[0x3];                                     // 0x0A79(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRuntimeKawaiiHairParameter            CurrentHairParameter;                              // 0x0A7C(0x007C)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, NoDestructor)
 	struct FVector                                CurrentAddForce;                                   // 0x0AF8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CurrentJumpForce;                                  // 0x0B04(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -60,28 +60,28 @@ public:
 	struct FVector                                CurrentSlidingForce;                               // 0x0B1C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CurrentAttackForce;                                // 0x0B28(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bLastOnGround;                                     // 0x0B34(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_810D[0x3];                                     // 0x0B35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8469[0x3];                                     // 0x0B35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SlidingDecalCount;                                 // 0x0B38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_810E[0x4];                                     // 0x0B3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_846A[0x4];                                     // 0x0B3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDecalComponent*                        LastSlidingDecal;                                  // 0x0B40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            RotationSpeedCurve;                                // 0x0B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bAcceptCancelAttack;                               // 0x0B50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_810F[0x7];                                     // 0x0B51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_846B[0x7];                                     // 0x0B51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystemComponent*               EstomaParticle;                                    // 0x0B58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bLastJumping;                                      // 0x0B60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8110[0x7];                                     // 0x0B61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_846C[0x7];                                     // 0x0B61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAtomComponent*                         EstomaSE;                                          // 0x0B68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UParticleSystemComponent*               RiberamaParticle;                                  // 0x0B70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAtomComponent*                         RiberamaSE;                                        // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_Pla603_InitialForm                          InitialForm;                                       // 0x0B80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          bTsukuyomiForm;                                    // 0x0B81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8111[0x6];                                     // 0x0B82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_846D[0x6];                                     // 0x0B82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystem*                        SlidingEffect;                                     // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSlidingEffectON;                                  // 0x0B90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8112[0x7];                                     // 0x0B91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_846E[0x7];                                     // 0x0B91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystemComponent*               DownViewEffect;                                    // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          View_WeaponMaterial;                               // 0x0BA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8113[0x3];                                     // 0x0BA1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_846F[0x3];                                     // 0x0BA1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         WeaponMaterialIndex;                               // 0x0BA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<bool>                                  View_Weapons;                                      // 0x0BA8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<float>                                 View_WeaponValues;                                 // 0x0BB8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)

@@ -49,7 +49,7 @@ public:
 	bool                                          IsExistScrollBar;                                  // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsListAnimation;                                   // 0x0319(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsItScrollBar;                                     // 0x031A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_62DD[0x1];                                     // 0x031B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9363[0x1];                                     // 0x031B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Scrollbarvalue;                                    // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

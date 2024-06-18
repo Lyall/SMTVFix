@@ -62,14 +62,11 @@ public:
 	int32                                         Stockmax;                                          // 0x0384(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsExistScrollBar;                                  // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsItScrollBar;                                     // 0x0389(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89FC[0x2];                                     // 0x038A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90C7[0x2];                                     // 0x038A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Scrollbarvalue;                                    // 0x038C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnClickedMouseEvent;                               // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WB_CampCharaPanel(int32 EntryPoint);
-	void OnClickedMouseEvent__DelegateSignature(bool InClickedUp);
 	void On_Clicked_Item_Num_Selector(bool IsClicked_UP);
 	void UnbindItemNumSelectorEvent();
 	void BindItemNumSelectorEvent();
@@ -112,6 +109,9 @@ public:
 	void BndEvt__SsPlayerDevilStock_K2Node_ComponentBoundEvent_8_SsWidgetEndPlaySignature2__DelegateSignature(class FName AnimPackName, class FName AnimationName, int32 AnimPackIndex, int32 AnimationIndex);
 	void BndEvt__SsPlayerWidget_AnalyzeNoData_K2Node_ComponentBoundEvent_0_SsWidgetEndPlaySignature2__DelegateSignature(class FName AnimPackName, class FName AnimationName, int32 AnimPackIndex, int32 AnimationIndex);
 	void BndEvt__SsPlayerScroll_K2Node_ComponentBoundEvent_0_SsWidgetEndPlaySignature2__DelegateSignature(class FName AnimPackName, class FName AnimationName, int32 AnimPackIndex, int32 AnimationIndex);
+	void Construct();
+	void ExecuteUbergraph_WB_CampCharaPanel(int32 EntryPoint);
+	void OnClickedMouseEvent__DelegateSignature(bool InClickedUp);
 
 public:
 	static class UClass* StaticClass()

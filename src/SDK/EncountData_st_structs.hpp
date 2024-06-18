@@ -22,7 +22,7 @@ struct FEncountData_st final
 {
 public:
 	bool                                          M_IsSymbol_1_B6E401004EB8445B85737F870AC53F1B;     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5865[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6456[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 EnemyList_5_30044E834842031C2C758B9EBB41B6EE;      // 0x0008(0x0010)(Edit, BlueprintVisible)
 	int32                                         EncountId_12_3F34C16C417CF23698AB698BB5AD0C58;     // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FEncountPointStruct                    EncountDir_15_1FC227F4442D90F54E6925AB0795B6B5;    // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

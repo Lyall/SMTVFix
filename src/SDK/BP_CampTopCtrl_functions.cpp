@@ -17,69 +17,6 @@
 namespace SDK
 {
 
-// Function BP_CampTopCtrl.BP_CampTopCtrl_C.ICampTopIsReturnTitle
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    OutReturnTitle                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_CampTopCtrl_C::ICampTopIsReturnTitle(bool* OutReturnTitle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CampTopCtrl_C", "ICampTopIsReturnTitle");
-
-	Params::BP_CampTopCtrl_C_ICampTopIsReturnTitle Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutReturnTitle != nullptr)
-		*OutReturnTitle = Parms.OutReturnTitle;
-}
-
-
-// Function BP_CampTopCtrl.BP_CampTopCtrl_C.ICampTopGetUsedPillar
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    OutParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_CampTopCtrl_C::ICampTopGetUsedPillar(bool* OutParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CampTopCtrl_C", "ICampTopGetUsedPillar");
-
-	Params::BP_CampTopCtrl_C_ICampTopGetUsedPillar Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutParam != nullptr)
-		*OutParam = Parms.OutParam;
-}
-
-
-// Function BP_CampTopCtrl.BP_CampTopCtrl_C.ICampTopIsFinished
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    OutFinished                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_CampTopCtrl_C::ICampTopIsFinished(bool* OutFinished)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CampTopCtrl_C", "ICampTopIsFinished");
-
-	Params::BP_CampTopCtrl_C_ICampTopIsFinished Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutFinished != nullptr)
-		*OutFinished = Parms.OutFinished;
-}
-
-
 // Function BP_CampTopCtrl.BP_CampTopCtrl_C.GSubstatus_CampChangeParameter
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1696,6 +1633,69 @@ void ABP_CampTopCtrl_C::ExecuteUbergraph_BP_CampTopCtrl(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CampTopCtrl.BP_CampTopCtrl_C.ICampTopIsReturnTitle
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    OutReturnTitle                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_CampTopCtrl_C::ICampTopIsReturnTitle(bool* OutReturnTitle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CampTopCtrl_C", "ICampTopIsReturnTitle");
+
+	Params::BP_CampTopCtrl_C_ICampTopIsReturnTitle Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutReturnTitle != nullptr)
+		*OutReturnTitle = Parms.OutReturnTitle;
+}
+
+
+// Function BP_CampTopCtrl.BP_CampTopCtrl_C.ICampTopGetUsedPillar
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    OutParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_CampTopCtrl_C::ICampTopGetUsedPillar(bool* OutParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CampTopCtrl_C", "ICampTopGetUsedPillar");
+
+	Params::BP_CampTopCtrl_C_ICampTopGetUsedPillar Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutParam != nullptr)
+		*OutParam = Parms.OutParam;
+}
+
+
+// Function BP_CampTopCtrl.BP_CampTopCtrl_C.ICampTopIsFinished
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    OutFinished                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_CampTopCtrl_C::ICampTopIsFinished(bool* OutFinished)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CampTopCtrl_C", "ICampTopIsFinished");
+
+	Params::BP_CampTopCtrl_C_ICampTopIsFinished Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutFinished != nullptr)
+		*OutFinished = Parms.OutFinished;
 }
 
 }

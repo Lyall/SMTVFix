@@ -119,7 +119,7 @@ struct FPaperFlipbookKeyFrame final
 public:
 	class UPaperSprite*                           Sprite;                                            // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FrameRun;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_103E[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_106D[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperFlipbookKeyFrame) == 0x000008, "Wrong alignment on FPaperFlipbookKeyFrame");
 static_assert(sizeof(FPaperFlipbookKeyFrame) == 0x000010, "Wrong size on FPaperFlipbookKeyFrame");
@@ -150,7 +150,7 @@ struct FPaperSpriteSocket final
 public:
 	struct FTransform                             LocalTransform;                                    // 0x0000(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	class FName                                   SocketName;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_103F[0x8];                                     // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_106E[0x8];                                     // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperSpriteSocket) == 0x000010, "Wrong alignment on FPaperSpriteSocket");
 static_assert(sizeof(FPaperSpriteSocket) == 0x000040, "Wrong size on FPaperSpriteSocket");
@@ -168,7 +168,7 @@ public:
 	int32                                         Y;                                                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Width;                                             // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Height;                                            // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1040[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_106F[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperSpriteAtlasSlot) == 0x000008, "Wrong alignment on FPaperSpriteAtlasSlot");
 static_assert(sizeof(FPaperSpriteAtlasSlot) == 0x000040, "Wrong size on FPaperSpriteAtlasSlot");
@@ -190,10 +190,10 @@ public:
 	float                                         MinimumAngle;                                      // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaximumAngle;                                      // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableCollision;                                  // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1041[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1070[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CollisionOffset;                                   // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DrawOrder;                                         // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1042[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1071[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperTerrainMaterialRule) == 0x000008, "Wrong alignment on FPaperTerrainMaterialRule");
 static_assert(sizeof(FPaperTerrainMaterialRule) == 0x000038, "Wrong size on FPaperTerrainMaterialRule");
@@ -213,7 +213,7 @@ struct FPaperTileInfo final
 public:
 	class UPaperTileSet*                          TileSet;                                           // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PackedTileIndex;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1043[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1072[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperTileInfo) == 0x000008, "Wrong alignment on FPaperTileInfo");
 static_assert(sizeof(FPaperTileInfo) == 0x000010, "Wrong size on FPaperTileInfo");
@@ -227,7 +227,7 @@ struct FPaperTileSetTerrain final
 public:
 	class FString                                 TerrainName;                                       // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CenterTileIndex;                                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1044[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1073[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperTileSetTerrain) == 0x000008, "Wrong alignment on FPaperTileSetTerrain");
 static_assert(sizeof(FPaperTileSetTerrain) == 0x000018, "Wrong size on FPaperTileSetTerrain");
@@ -240,13 +240,13 @@ struct FSpriteGeometryShape final
 {
 public:
 	ESpriteShapeType                              ShapeType;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1045[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1074[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector2D>                      Vertices;                                          // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FVector2D                              BoxSize;                                           // 0x0018(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              BoxPosition;                                       // 0x0020(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Rotation;                                          // 0x0028(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bNegativeWinding;                                  // 0x002C(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1046[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1075[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSpriteGeometryShape) == 0x000008, "Wrong alignment on FSpriteGeometryShape");
 static_assert(sizeof(FSpriteGeometryShape) == 0x000030, "Wrong size on FSpriteGeometryShape");
@@ -264,15 +264,15 @@ struct FSpriteGeometryCollection final
 public:
 	TArray<struct FSpriteGeometryShape>           Shapes;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	ESpritePolygonMode                            GeometryType;                                      // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1047[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1076[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PixelsPerSubdivisionX;                             // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PixelsPerSubdivisionY;                             // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAvoidVertexMerging;                               // 0x001C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1048[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1077[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         AlphaThreshold;                                    // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DetailAmount;                                      // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SimplifyEpsilon;                                   // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1049[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1078[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSpriteGeometryCollection) == 0x000008, "Wrong alignment on FSpriteGeometryCollection");
 static_assert(sizeof(FSpriteGeometryCollection) == 0x000030, "Wrong size on FSpriteGeometryCollection");
@@ -293,7 +293,7 @@ public:
 	class FName                                   UserDataName;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSpriteGeometryCollection              CollisionData;                                     // 0x0008(0x0030)(Edit, NativeAccessSpecifierPublic)
 	uint8                                         TerrainMembership[0x4];                            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_104A[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1079[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperTileMetadata) == 0x000008, "Wrong alignment on FPaperTileMetadata");
 static_assert(sizeof(FPaperTileMetadata) == 0x000040, "Wrong size on FPaperTileMetadata");
@@ -307,11 +307,11 @@ struct alignas(0x10) FSpriteDrawCallRecord final
 {
 public:
 	struct FVector                                Destination;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_104B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_107A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               BaseTexture;                                       // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_104C[0x30];                                    // 0x0018(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_107B[0x30];                                    // 0x0018(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 Color;                                             // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_104D[0x84];                                    // 0x004C(0x0084)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_107C[0x84];                                    // 0x004C(0x0084)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSpriteDrawCallRecord) == 0x000010, "Wrong alignment on FSpriteDrawCallRecord");
 static_assert(sizeof(FSpriteDrawCallRecord) == 0x0000D0, "Wrong size on FSpriteDrawCallRecord");
@@ -324,7 +324,7 @@ static_assert(offsetof(FSpriteDrawCallRecord, Color) == 0x000048, "Member 'FSpri
 struct alignas(0x08) FSpriteAssetInitParameters final
 {
 public:
-	uint8                                         Pad_104E[0x40];                                    // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_107D[0x40];                                    // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSpriteAssetInitParameters) == 0x000008, "Wrong alignment on FSpriteAssetInitParameters");
 static_assert(sizeof(FSpriteAssetInitParameters) == 0x000040, "Wrong size on FSpriteAssetInitParameters");

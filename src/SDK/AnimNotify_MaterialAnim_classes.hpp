@@ -24,12 +24,12 @@ class UAnimNotify_MaterialAnim_C final : public UAnimNotify
 {
 public:
 	E_CHARA_MATERIAL_ANIMATION_SLOT               MaterialAnimSlot;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_49D4[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A366[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 MaterialElementNo;                                 // 0x0040(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 	TArray<struct FMaterialAnimSetting_T>         MaterialAnimSetting;                               // 0x0050(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 	bool                                          IsForward;                                         // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          IsOnlyFirstTime;                                   // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_49D5[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A367[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OptionNotifyName;                                  // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:

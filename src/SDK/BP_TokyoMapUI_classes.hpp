@@ -33,10 +33,6 @@ public:
 	bool                                          IsShowingPlaceName;                                // 0x0281(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void Start();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_TokyoMapUI(int32 EntryPoint);
 	void UpdateButtonHelp();
 	void ShowButtonHelp(bool SkipAnimation);
 	void Add_IconMission(const struct FVector& ActorLocation, int32 MissionId, class AActor* Param_Owner);
@@ -54,6 +50,10 @@ public:
 	void CreateUI();
 	void OnLoaded_C475E009499091F7F90930B59748C128(TSubclassOf<class UObject> Loaded);
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void Start();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_TokyoMapUI(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

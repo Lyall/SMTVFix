@@ -31,7 +31,7 @@ public:
 	float                                         OuterRadius;                                       // 0x024C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bOverlapInnerSphere;                               // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bOverlapOuterSphere;                               // 0x0251(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_205B[0x2];                                     // 0x0252(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94C7[0x2];                                     // 0x0252(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InnerScale;                                        // 0x0254(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

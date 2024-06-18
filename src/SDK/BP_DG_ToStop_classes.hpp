@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "MapEventHit_Type_SHit_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Project_structs.hpp"
 
 
@@ -27,23 +27,23 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_DG_ToStop_C;                     // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	float                                         StopRateTimeLine_StopRate_9394162A4755B31B27ED0D973ED6E1E2; // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            StopRateTimeLine__Direction_9394162A4755B31B27ED0D973ED6E1E2; // 0x039C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA18[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     StopRateTimeline;                                  // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C6A4[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     StopRateTimeLine;                                  // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FPrimaryAssetId                        EnvMove;                                           // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FPrimaryAssetId                        EnvStop;                                           // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         EffectDuration;                                    // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA19[0x4];                                     // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C6A5[0x4];                                     // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ModelRef;                                          // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMinimapIconTableHelper                IconHelper;                                        // 0x03D8(0x000C)(Edit, BlueprintVisible, NoDestructor)
-	uint8                                         Pad_CA1A[0x4];                                     // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C6A6[0x4];                                     // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPrimaryAssetId>                EffectLevelArray;                                  // 0x03E8(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_BP_DG_ToStop(int32 EntryPoint);
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void EventHitAction();
-	void StopRateTimeline__UpdateFunc();
-	void StopRateTimeline__FinishedFunc();
+	void StopRateTimeLine__UpdateFunc();
+	void StopRateTimeLine__FinishedFunc();
 	void UserConstructionScript();
 	void LinkModel();
 	void StopParticles();
@@ -67,7 +67,7 @@ static_assert(sizeof(ABP_DG_ToStop_C) == 0x0003F8, "Wrong size on ABP_DG_ToStop_
 static_assert(offsetof(ABP_DG_ToStop_C, UberGraphFrame_BP_DG_ToStop_C) == 0x000390, "Member 'ABP_DG_ToStop_C::UberGraphFrame_BP_DG_ToStop_C' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToStop_C, StopRateTimeLine_StopRate_9394162A4755B31B27ED0D973ED6E1E2) == 0x000398, "Member 'ABP_DG_ToStop_C::StopRateTimeLine_StopRate_9394162A4755B31B27ED0D973ED6E1E2' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToStop_C, StopRateTimeLine__Direction_9394162A4755B31B27ED0D973ED6E1E2) == 0x00039C, "Member 'ABP_DG_ToStop_C::StopRateTimeLine__Direction_9394162A4755B31B27ED0D973ED6E1E2' has a wrong offset!");
-static_assert(offsetof(ABP_DG_ToStop_C, StopRateTimeline) == 0x0003A0, "Member 'ABP_DG_ToStop_C::StopRateTimeline' has a wrong offset!");
+static_assert(offsetof(ABP_DG_ToStop_C, StopRateTimeLine) == 0x0003A0, "Member 'ABP_DG_ToStop_C::StopRateTimeLine' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToStop_C, EnvMove) == 0x0003A8, "Member 'ABP_DG_ToStop_C::EnvMove' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToStop_C, EnvStop) == 0x0003B8, "Member 'ABP_DG_ToStop_C::EnvStop' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToStop_C, EffectDuration) == 0x0003C8, "Member 'ABP_DG_ToStop_C::EffectDuration' has a wrong offset!");

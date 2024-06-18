@@ -23,7 +23,7 @@ struct AssetTagsSubsystem_CollectionExists final
 public:
 	class FName                                   Param_Name;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1331[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1310[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AssetTagsSubsystem_CollectionExists) == 0x000004, "Wrong alignment on AssetTagsSubsystem_CollectionExists");
 static_assert(sizeof(AssetTagsSubsystem_CollectionExists) == 0x00000C, "Wrong size on AssetTagsSubsystem_CollectionExists");

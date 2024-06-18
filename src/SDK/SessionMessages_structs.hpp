@@ -21,7 +21,7 @@ namespace SDK
 struct FSessionServiceLogUnsubscribe final
 {
 public:
-	uint8                                         Pad_24A2[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24F3[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSessionServiceLogUnsubscribe) == 0x000001, "Wrong alignment on FSessionServiceLogUnsubscribe");
 static_assert(sizeof(FSessionServiceLogUnsubscribe) == 0x000001, "Wrong size on FSessionServiceLogUnsubscribe");
@@ -31,7 +31,7 @@ static_assert(sizeof(FSessionServiceLogUnsubscribe) == 0x000001, "Wrong size on 
 struct FSessionServiceLogSubscribe final
 {
 public:
-	uint8                                         Pad_24A3[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24F4[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSessionServiceLogSubscribe) == 0x000001, "Wrong alignment on FSessionServiceLogSubscribe");
 static_assert(sizeof(FSessionServiceLogSubscribe) == 0x000001, "Wrong size on FSessionServiceLogSubscribe");
@@ -46,7 +46,7 @@ public:
 	struct FGuid                                  InstanceID;                                        // 0x0018(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        TimeSeconds;                                       // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Verbosity;                                         // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24A4[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24F5[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSessionServiceLog) == 0x000008, "Wrong alignment on FSessionServiceLog");
 static_assert(sizeof(FSessionServiceLog) == 0x000038, "Wrong size on FSessionServiceLog");
@@ -62,7 +62,7 @@ struct FSessionServicePong final
 {
 public:
 	bool                                          Authorized;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24A5[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24F6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BuildDate;                                         // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DeviceName;                                        // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  InstanceID;                                        // 0x0028(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -72,7 +72,7 @@ public:
 	class FString                                 SessionName;                                       // 0x0068(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 SessionOwner;                                      // 0x0078(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Standalone;                                        // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24A6[0x7];                                     // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24F7[0x7];                                     // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSessionServicePong) == 0x000008, "Wrong alignment on FSessionServicePong");
 static_assert(sizeof(FSessionServicePong) == 0x000090, "Wrong size on FSessionServicePong");

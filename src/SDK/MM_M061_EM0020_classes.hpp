@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_EventMissionBase_HitAction_classes.hpp"
+#include "Engine_structs.hpp"
 #include "Project_structs.hpp"
 
 
@@ -25,7 +25,7 @@ class AMM_M061_EM0020_C final : public ABP_EventMissionBase_HitAction_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_MM_M061_EM0020_C;                   // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         Select_Index;                                      // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9EC0[0x4];                                     // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B4E[0x4];                                     // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    SystemMessageAsset;                                // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UScriptMessageAsset*                    MissionMessageAsset;                               // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_MissionEventBase_C*                 Mission_Event;                                     // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

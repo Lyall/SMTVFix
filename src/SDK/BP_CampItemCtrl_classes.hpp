@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "E_CATEGORYWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "Engine_structs.hpp"
-#include "E_CAMPITEMCTRL_GSTATUS_structs.hpp"
 #include "Project_structs.hpp"
 #include "Project_classes.hpp"
+#include "E_CAMPITEMCTRL_GSTATUS_structs.hpp"
+#include "E_CATEGORYWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "E_SORTWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 
 
@@ -43,7 +43,7 @@ public:
 	int32                                         Waitfadeout;                                       // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFadeOut;                                         // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsCreateWidget;                                    // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_46AC[0x2];                                     // 0x0322(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4112[0x2];                                     // 0x0322(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Padbuttond;                                        // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Substatus;                                         // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MW_WaitAutoTime_;                                  // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -53,10 +53,10 @@ public:
 	int32                                         Reselectstatus;                                    // 0x033C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Selecteditemtype;                                  // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SORTWINDOW_MOUSE_EVENT_TYPE                 Sortmouseparam;                                    // 0x0344(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46AD[0x3];                                     // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4113[0x3];                                     // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSortMouseBaseData                     Sortmousework;                                     // 0x0348(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
 	E_CATEGORYWINDOW_MOUSE_EVENT_TYPE             Mouse_Event_Type;                                  // 0x035C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46AE[0x3];                                     // 0x035D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4114[0x3];                                     // 0x035D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Select_Category_Icon;                              // 0x0360(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCategoryWindow;                                  // 0x0364(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 WidgetPriority;                                    // 0x0365(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

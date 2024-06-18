@@ -22,7 +22,7 @@ struct FST_AmuletTutorialMsgInfo final
 {
 public:
 	E_AmuletTutorial_MsgType                      AmuletType_15_3C0FA4114BC9AD78CB952FBB5781AC36;    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C14[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37CE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ItemID_18_96BC327B47AA5E7C886304B2EBF0B1F2;        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   MsgLabel_Title_8_AC2389134F41B62BC98662B6D80A57C9; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   MsgLabel_MainText_9_E41006F2489D3AD41680B0BEF7B0D3A5; // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

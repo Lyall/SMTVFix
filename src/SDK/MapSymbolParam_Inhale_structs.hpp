@@ -26,7 +26,7 @@ public:
 	float                                         InhaleDistanceMax_12_1ACBAE24428616E2BFE64A994984747B; // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHARA_MOTION_ID                             InhaleMotion_13_3F10AFEA4E91079A9C9B03A1838B61FD;  // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHARA_MOTION_ID                             InhaleEndMotion_16_FEBAFE0B433F7E5C7ED07F8309E8447F; // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6991[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A65[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UParticleSystem>         InhaleEffect_20_C0E2E51E4F163FC2B32FED9179A8211F;  // 0x0010(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class FName                                   InhaleEffectSocket_23_14EA742A47D4695301B1588D9C413FCD; // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UMaterialInterface>      InhaleDecal_29_CF8BCF1D4220755104AAC59667658B80;   // 0x0040(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)

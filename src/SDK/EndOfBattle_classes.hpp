@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_EndOfBattle_C;                      // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	float                                         MagatukaPost_Alpha_A5233DA84F11634D375F40B3524C92E0; // 0x0940(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            MagatukaPost__Direction_A5233DA84F11634D375F40B3524C92E0; // 0x0944(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_75DF[0x3];                                     // 0x0945(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7773[0x3];                                     // 0x0945(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     MagatukaPost;                                      // 0x0948(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

@@ -22,7 +22,7 @@ struct FDeadActionParticles_T final
 {
 public:
 	E_BTL_DEAD_EFFECT                             DeadType_6_3E0D3BD1469180CC55F8F8A8865EF1CE;       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_253B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_251C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TSoftObjectPtr<class UParticleSystem>> Particle_32_59C0C9534D8B3FB93124DC9949F2E563;      // 0x0008(0x0010)(Edit, BlueprintVisible)
 	TSoftObjectPtr<class USoundAtomCue>           SE_16_25CB62A147CE0424051D7581D477BFB9;            // 0x0018(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class FName                                   SocketName_9_4B854009409F0B56A1463C9A10156304;     // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

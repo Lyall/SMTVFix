@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Project_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "E_MoonAgeAnimationState_structs.hpp"
 #include "MEC_BaseTask_classes.hpp"
+#include "E_MoonAgeAnimationState_structs.hpp"
 #include "E_TutorialWindow_WidgetState_structs.hpp"
 
 
@@ -30,7 +30,7 @@ public:
 	TArray<int32>                                 ItemList;                                          // 0x0220(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UWB_RyuketsuBase_C*                     UI;                                                // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRyuketsuData                          RyuketsuData;                                      // 0x0238(0x003C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	uint8                                         Pad_91A0[0xC];                                     // 0x0274(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9819[0xC];                                     // 0x0274(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             WarpPos;                                           // 0x0280(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class UWB_RyuketsuFirst_C*                    FirstUI;                                           // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RyuketsuID;                                        // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -45,7 +45,7 @@ public:
 	FMulticastInlineDelegateProperty_             EvtDis_WarpEffect;                                 // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         DLC_Type;                                          // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LocationWindowHide;                                // 0x03CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_91A1[0x3];                                     // 0x03CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_981A[0x3];                                     // 0x03CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UScriptMessageAsset>     AogamiScriptMsg_Soft;                              // 0x03D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class UScriptMessageAsset*                    AogamiScriptMsg;                                   // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             EvtDis_AogamiTalk;                                 // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)

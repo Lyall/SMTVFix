@@ -18,69 +18,6 @@
 namespace SDK::Params
 {
 
-// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_TokyoMapUI_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_TokyoMapUI_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_TokyoMapUI_C_ReceiveTick");
-static_assert(sizeof(BP_TokyoMapUI_C_ReceiveTick) == 0x000004, "Wrong size on BP_TokyoMapUI_C_ReceiveTick");
-static_assert(offsetof(BP_TokyoMapUI_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_TokyoMapUI_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ExecuteUbergraph_BP_TokyoMapUI
-// 0x0098 (0x0098 - 0x0000)
-struct BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2237[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UObject>                    K2Node_CustomEvent_Loaded;                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
-	class UClass*                                 Temp_class_Variable;                               // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2238[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AProjectGameMode_C*                     K2Node_DynamicCast_AsProject_Game_Mode;            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsActionPadCheck_Success;                 // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2239[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_223A[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(TSubclassOf<class UObject> Loaded)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0064(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_BPI_CheckMapPause_IsPause;                // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_223B[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetMapCommon_rerutn_1;                    // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_1;             // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_CheckMapPause_IsPause_1;              // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI) == 0x000008, "Wrong alignment on BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI");
-static_assert(sizeof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI) == 0x000098, "Wrong size on BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, EntryPoint) == 0x000000, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_CustomEvent_Loaded) == 0x000008, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_CustomEvent_Loaded' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, Temp_class_Variable) == 0x000020, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::Temp_class_Variable' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_Event_EndPlayReason) == 0x000028, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_Event_DeltaSeconds) == 0x00002C, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_GetGameMode_ReturnValue) == 0x000030, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_GetGameMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_AsProject_Game_Mode) == 0x000038, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_AsProject_Game_Mode' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_IsActionPadCheck_Success) == 0x000041, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_IsActionPadCheck_Success' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_GetMapCommon_rerutn) == 0x000048, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000050, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_CreateDelegate_OutputDelegate_1) == 0x000064, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_BPI_CheckMapPause_IsPause) == 0x000074, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_BPI_CheckMapPause_IsPause' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_GetMapCommon_rerutn_1) == 0x000078, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_GetMapCommon_rerutn_1' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_AsBPI_Map_Common_1) == 0x000080, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_AsBPI_Map_Common_1' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_bSuccess_2) == 0x000090, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_BPI_CheckMapPause_IsPause_1) == 0x000091, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_BPI_CheckMapPause_IsPause_1' has a wrong offset!");
-
 // Function BP_TokyoMapUI.BP_TokyoMapUI_C.UpdateButtonHelp
 // 0x0002 (0x0002 - 0x0000)
 struct BP_TokyoMapUI_C_UpdateButtonHelp final
@@ -200,11 +137,11 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_223C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6193[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EndView_NewParam;                         // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_223D[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6194[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -225,14 +162,14 @@ struct BP_TokyoMapUI_C_StartView final
 {
 public:
 	bool                                          First;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_223E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6195[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_StartView_NewParam;                       // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_223F[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6196[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -254,16 +191,16 @@ struct BP_TokyoMapUI_C_SortIcon final
 {
 public:
 	bool                                          Inserted;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2240[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6197[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MyPriority;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2241[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6198[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2242[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6199[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -275,30 +212,30 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2243[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_619A[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item_1;                         // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue;              // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2244[0x2];                                     // 0x0066(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_619B[0x2];                                     // 0x0066(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2245[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_619C[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item_2;                         // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item_3;                         // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetPriority_Priority;                     // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2246[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_619D[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetPriority_Priority_1;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2247[0x3];                                     // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_619E[0x3];                                     // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2248[0x2];                                     // 0x009E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_619F[0x2];                                     // 0x009E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item_4;                         // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -356,7 +293,7 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2249[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61A0[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -377,10 +314,10 @@ struct BP_TokyoMapUI_C_DeleteIcon final
 public:
 	class AActor*                                 Param_Owner;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_224A[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61A1[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_224B[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61A2[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -412,7 +349,7 @@ struct BP_TokyoMapUI_C_Add_IconTalk final
 public:
 	struct FVector                                ActorLocation;                                     // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   InactiveFlag;                                      // 0x000C(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_224C[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61A3[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Param_Owner;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_TokyoMap_Icon_C*                    CallFunc_Create_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -445,10 +382,10 @@ struct BP_TokyoMapUI_C_CreateUI final
 public:
 	TSubclassOf<class UObject>                    CallFunc_Conv_SoftClassReferenceToClass_ReturnValue; // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                          CallFunc_AddToWidgetPrio_ReturnValue;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_224D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61A4[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_ClassDynamicCast_AsWB_Tokyo_Map_UIBase;     // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_224E[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61A5[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_TokyoMapUIBase_C*                   CallFunc_Create_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -482,6 +419,69 @@ public:
 static_assert(alignof(BP_TokyoMapUI_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_TokyoMapUI_C_ReceiveEndPlay");
 static_assert(sizeof(BP_TokyoMapUI_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_TokyoMapUI_C_ReceiveEndPlay");
 static_assert(offsetof(BP_TokyoMapUI_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_TokyoMapUI_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+
+// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_TokyoMapUI_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_TokyoMapUI_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_TokyoMapUI_C_ReceiveTick");
+static_assert(sizeof(BP_TokyoMapUI_C_ReceiveTick) == 0x000004, "Wrong size on BP_TokyoMapUI_C_ReceiveTick");
+static_assert(offsetof(BP_TokyoMapUI_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_TokyoMapUI_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ExecuteUbergraph_BP_TokyoMapUI
+// 0x0098 (0x0098 - 0x0000)
+struct BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61A6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    K2Node_CustomEvent_Loaded;                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
+	class UClass*                                 Temp_class_Variable;                               // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61A7[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AProjectGameMode_C*                     K2Node_DynamicCast_AsProject_Game_Mode;            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsActionPadCheck_Success;                 // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_61A8[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_61A9[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TSubclassOf<class UObject> Loaded)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0064(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_BPI_CheckMapPause_IsPause;                // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_61AA[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetMapCommon_rerutn_1;                    // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_1;             // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_CheckMapPause_IsPause_1;              // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI) == 0x000008, "Wrong alignment on BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI");
+static_assert(sizeof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI) == 0x000098, "Wrong size on BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, EntryPoint) == 0x000000, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_CustomEvent_Loaded) == 0x000008, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_CustomEvent_Loaded' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, Temp_class_Variable) == 0x000020, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::Temp_class_Variable' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_Event_EndPlayReason) == 0x000028, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_Event_DeltaSeconds) == 0x00002C, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_GetGameMode_ReturnValue) == 0x000030, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_GetGameMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_AsProject_Game_Mode) == 0x000038, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_AsProject_Game_Mode' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_IsActionPadCheck_Success) == 0x000041, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_IsActionPadCheck_Success' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_GetMapCommon_rerutn) == 0x000048, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000050, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_CreateDelegate_OutputDelegate_1) == 0x000064, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_BPI_CheckMapPause_IsPause) == 0x000074, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_BPI_CheckMapPause_IsPause' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_GetMapCommon_rerutn_1) == 0x000078, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_GetMapCommon_rerutn_1' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_AsBPI_Map_Common_1) == 0x000080, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_AsBPI_Map_Common_1' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, K2Node_DynamicCast_bSuccess_2) == 0x000090, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI, CallFunc_BPI_CheckMapPause_IsPause_1) == 0x000091, "Member 'BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI::CallFunc_BPI_CheckMapPause_IsPause_1' has a wrong offset!");
 
 }
 

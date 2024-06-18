@@ -34,15 +34,15 @@ public:
 	struct FLinearColor                           ShadowColorAndOpacity;                             // 0x01F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void()>                             ShadowColorAndOpacityDelegate;                     // 0x0208(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         MinDesiredWidth;                                   // 0x0218(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_164[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_169[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRichTextImageInfo>             InsertImageInfo;                                   // 0x0220(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FRichText_TextAndBrushIconListInfo> TextAndBrushIconList;                              // 0x0230(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bAutoLocalizedMargin;                              // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWrapWithInvalidationPanel;                        // 0x0241(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReveal;                                           // 0x0242(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_165[0x1];                                      // 0x0243(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16A[0x1];                                      // 0x0243(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RevealedIndex;                                     // 0x0244(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_166[0x398];                                    // 0x0248(0x0398)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16B[0x398];                                    // 0x0248(0x0398)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearInsertText(const class FString& Tag);

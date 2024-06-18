@@ -24,7 +24,7 @@ class AMM_M061_EM2384_C final : public ABP_DevilControlBase_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_MM_M061_EM2384_C;                   // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         SelectIndex;                                       // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_ADCF[0x4];                                     // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A1B[0x4];                                     // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACameraActor*                           CameraActor;                                       // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ALevelSequenceActor*                    SequenceActor;                                     // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ATargetPoint*                           Target;                                            // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

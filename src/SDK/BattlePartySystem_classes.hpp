@@ -27,15 +27,15 @@ class UBattlePartySystem_C final : public UBattlePartySystemComponentBase
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         Const_BtlUnitMax;                                  // 0x06F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7668[0x4];                                     // 0x06FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_77E7[0x4];                                     // 0x06FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<int32, class ABattleTargetDevilInfoActor_C*> M_EnemyInfo;                                       // 0x0700(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FVector                                M_CommandTargetLocation;                           // 0x0750(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                M_PlayerSideAveLocation;                           // 0x075C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                M_EnemySideAveLocation;                            // 0x0768(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7669[0x4];                                     // 0x0774(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_77E8[0x4];                                     // 0x0774(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, struct FVector>           M_PlayerSideAveArray_0;                            // 0x0778(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<class FString, struct FVector>           M_EnemySideAveArray_0;                             // 0x07C8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         Pad_766A[0x8];                                     // 0x0818(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_77E9[0x8];                                     // 0x0818(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             M_CommandBoxTransform;                             // 0x0820(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	TArray<class ASkeletalMeshActor*>             TsukuyomiWeapons;                                  // 0x0850(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 

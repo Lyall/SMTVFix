@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CharaBaseLight_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CharaBaseLight_classes.hpp"
 
 
 namespace SDK
@@ -47,7 +47,7 @@ public:
 	bool                                          RandomCreateParts;                                 // 0x04CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          RandomCreateAnimation;                             // 0x04CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          RandomCreateScale;                                 // 0x04CE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_51D9[0x1];                                     // 0x04CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D32[0x1];                                     // 0x04CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 FaceList;                                          // 0x04D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<int32>                                 HairList;                                          // 0x04E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<int32>                                 BodyList;                                          // 0x04F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -66,7 +66,7 @@ public:
 	struct FLinearColor                           FaceColor;                                         // 0x0554(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           HairColor;                                         // 0x0564(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           BodyColor;                                         // 0x0574(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51DA[0x4];                                     // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D33[0x4];                                     // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FLinearColor>                   FaceColorList;                                     // 0x0588(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FLinearColor>                   HairColorList;                                     // 0x0598(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FLinearColor>                   BodyColorList;                                     // 0x05A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)

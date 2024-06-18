@@ -17,6 +17,96 @@
 namespace SDK
 {
 
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_SpawnEncountActor
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<int32>                           EnemyIdList                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   EncountID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// class AActor*                           EncountPawn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_BTL_SYMBOL_ENCOUNT                    SymbolEncountType                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ManualWhenNotEscape                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    HitMapAttack                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FChainEncountInfo                ChainEncountInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    Magatsuhi                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AMEH_NextEventStart_Walk_C::BPI_SpawnEncountActor(const TArray<int32>& EnemyIdList, int32 EncountID, const struct FTransform& SpawnTransform, class AActor* EncountPawn, E_BTL_SYMBOL_ENCOUNT SymbolEncountType, bool ManualWhenNotEscape, bool HitMapAttack, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "BPI_SpawnEncountActor");
+
+	Params::MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor Parms{};
+
+	Parms.EnemyIdList = std::move(EnemyIdList);
+	Parms.EncountID = EncountID;
+	Parms.SpawnTransform = std::move(SpawnTransform);
+	Parms.EncountPawn = EncountPawn;
+	Parms.SymbolEncountType = SymbolEncountType;
+	Parms.ManualWhenNotEscape = ManualWhenNotEscape;
+	Parms.HitMapAttack = HitMapAttack;
+	Parms.ChainEncountInfo = std::move(ChainEncountInfo);
+	Parms.Magatsuhi = Magatsuhi;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_SetMapCommon
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AMEH_NextEventStart_Walk_C::BPI_SetMapCommon(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "BPI_SetMapCommon");
+
+	Params::MEH_NextEventStart_Walk_C_BPI_SetMapCommon Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.OnReady
+// (BlueprintCallable, BlueprintEvent)
+
+void AMEH_NextEventStart_Walk_C::OnReady()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "OnReady");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.ExecuteUbergraph_MEH_NextEventStart_Walk
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AMEH_NextEventStart_Walk_C::ExecuteUbergraph_MEH_NextEventStart_Walk(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "ExecuteUbergraph_MEH_NextEventStart_Walk");
+
+	Params::MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_CheckNaviDevil
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -2928,96 +3018,6 @@ void AMEH_NextEventStart_Walk_C::BPI_ReturnFromBtl()
 		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "BPI_ReturnFromBtl");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_SpawnEncountActor
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<int32>                           EnemyIdList                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// int32                                   EncountID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// class AActor*                           EncountPawn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// E_BTL_SYMBOL_ENCOUNT                    SymbolEncountType                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ManualWhenNotEscape                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    HitMapAttack                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FChainEncountInfo                ChainEncountInfo                                       (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    Magatsuhi                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMEH_NextEventStart_Walk_C::BPI_SpawnEncountActor(const TArray<int32>& EnemyIdList, int32 EncountID, const struct FTransform& SpawnTransform, class AActor* EncountPawn, E_BTL_SYMBOL_ENCOUNT SymbolEncountType, bool ManualWhenNotEscape, bool HitMapAttack, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "BPI_SpawnEncountActor");
-
-	Params::MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor Parms{};
-
-	Parms.EnemyIdList = std::move(EnemyIdList);
-	Parms.EncountID = EncountID;
-	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.EncountPawn = EncountPawn;
-	Parms.SymbolEncountType = SymbolEncountType;
-	Parms.ManualWhenNotEscape = ManualWhenNotEscape;
-	Parms.HitMapAttack = HitMapAttack;
-	Parms.ChainEncountInfo = std::move(ChainEncountInfo);
-	Parms.Magatsuhi = Magatsuhi;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_SetMapCommon
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AMEH_NextEventStart_Walk_C::BPI_SetMapCommon(class AActor* Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "BPI_SetMapCommon");
-
-	Params::MEH_NextEventStart_Walk_C_BPI_SetMapCommon Parms{};
-
-	Parms.Actor = Actor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.OnReady
-// (BlueprintCallable, BlueprintEvent)
-
-void AMEH_NextEventStart_Walk_C::OnReady()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "OnReady");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.ExecuteUbergraph_MEH_NextEventStart_Walk
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AMEH_NextEventStart_Walk_C::ExecuteUbergraph_MEH_NextEventStart_Walk(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "ExecuteUbergraph_MEH_NextEventStart_Walk");
-
-	Params::MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

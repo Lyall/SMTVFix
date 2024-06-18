@@ -23,7 +23,7 @@ namespace SDK
 class alignas(0x10) UMEC_BaseTask_C : public USceneComponent
 {
 public:
-	uint8                                         Pad_8529[0x8];                                     // 0x01F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E5C[0x8];                                     // 0x01F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0200(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	FMulticastInlineDelegateProperty_             EndTask;                                           // 0x0208(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 

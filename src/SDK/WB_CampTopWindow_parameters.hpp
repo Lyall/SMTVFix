@@ -17,236 +17,6 @@
 namespace SDK::Params
 {
 
-// Function WB_CampTopWindow.WB_CampTopWindow_C.SetInstanceParts
-// 0x0014 (0x0014 - 0x0000)
-struct WB_CampTopWindow_C_SetInstanceParts final
-{
-public:
-	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimPackName;  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimationName; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_CampTopWindow_C_SetInstanceParts) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_SetInstanceParts");
-static_assert(sizeof(WB_CampTopWindow_C_SetInstanceParts) == 0x000014, "Wrong size on WB_CampTopWindow_C_SetInstanceParts");
-static_assert(offsetof(WB_CampTopWindow_C_SetInstanceParts, CallFunc_GetPlayingAnimationName_OutAnimPackName) == 0x000000, "Member 'WB_CampTopWindow_C_SetInstanceParts::CallFunc_GetPlayingAnimationName_OutAnimPackName' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetInstanceParts, CallFunc_GetPlayingAnimationName_OutAnimationName) == 0x000008, "Member 'WB_CampTopWindow_C_SetInstanceParts::CallFunc_GetPlayingAnimationName_OutAnimationName' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetInstanceParts, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000010, "Member 'WB_CampTopWindow_C_SetInstanceParts::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.GetInstanceParts
-// 0x0018 (0x0018 - 0x0000)
-struct WB_CampTopWindow_C_GetInstanceParts final
-{
-public:
-	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimPackName;  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimationName; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetInstancePartPlayFrame_ReturnValue;     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_CampTopWindow_C_GetInstanceParts) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_GetInstanceParts");
-static_assert(sizeof(WB_CampTopWindow_C_GetInstanceParts) == 0x000018, "Wrong size on WB_CampTopWindow_C_GetInstanceParts");
-static_assert(offsetof(WB_CampTopWindow_C_GetInstanceParts, CallFunc_GetPlayingAnimationName_OutAnimPackName) == 0x000000, "Member 'WB_CampTopWindow_C_GetInstanceParts::CallFunc_GetPlayingAnimationName_OutAnimPackName' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetInstanceParts, CallFunc_GetPlayingAnimationName_OutAnimationName) == 0x000008, "Member 'WB_CampTopWindow_C_GetInstanceParts::CallFunc_GetPlayingAnimationName_OutAnimationName' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetInstanceParts, CallFunc_GetInstancePartPlayFrame_ReturnValue) == 0x000010, "Member 'WB_CampTopWindow_C_GetInstanceParts::CallFunc_GetInstancePartPlayFrame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetInstanceParts, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000014, "Member 'WB_CampTopWindow_C_GetInstanceParts::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.GetTopMenuQuestionButtonMouse
-// 0x0020 (0x0020 - 0x0000)
-struct WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse final
-{
-public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8298[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UButtonS5*                              OutParam;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UButtonS5*                              RetValue;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse");
-static_assert(sizeof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse) == 0x000020, "Wrong size on WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse");
-static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse::InIndex' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse, OutParam) == 0x000008, "Member 'WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse::OutParam' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse, RetValue) == 0x000010, "Member 'WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse::RetValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse, K2Node_SwitchInteger_CmpSuccess) == 0x000018, "Member 'WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.Get System Menu List Button Mouse
-// 0x0020 (0x0020 - 0x0000)
-struct WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse final
-{
-public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8299[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UButtonS5*                              OutButton;                                         // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UButtonS5*                              Retbutton;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse");
-static_assert(sizeof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse) == 0x000020, "Wrong size on WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse");
-static_assert(offsetof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse::InIndex' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse, OutButton) == 0x000008, "Member 'WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse::OutButton' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse, Retbutton) == 0x000010, "Member 'WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse::Retbutton' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse, K2Node_SwitchInteger_CmpSuccess) == 0x000018, "Member 'WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.GetTopMenuListButtonMouse
-// 0x0020 (0x0020 - 0x0000)
-struct WB_CampTopWindow_C_GetTopMenuListButtonMouse final
-{
-public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_829A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UButtonS5*                              OutButtonMouse;                                    // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UButtonS5*                              Retbuttonmouse;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_CampTopWindow_C_GetTopMenuListButtonMouse) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_GetTopMenuListButtonMouse");
-static_assert(sizeof(WB_CampTopWindow_C_GetTopMenuListButtonMouse) == 0x000020, "Wrong size on WB_CampTopWindow_C_GetTopMenuListButtonMouse");
-static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuListButtonMouse, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_GetTopMenuListButtonMouse::InIndex' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuListButtonMouse, OutButtonMouse) == 0x000008, "Member 'WB_CampTopWindow_C_GetTopMenuListButtonMouse::OutButtonMouse' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuListButtonMouse, Retbuttonmouse) == 0x000010, "Member 'WB_CampTopWindow_C_GetTopMenuListButtonMouse::Retbuttonmouse' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuListButtonMouse, K2Node_SwitchInteger_CmpSuccess) == 0x000018, "Member 'WB_CampTopWindow_C_GetTopMenuListButtonMouse::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.GetMenuIndexByRect
-// 0x00A0 (0x00A0 - 0x0000)
-struct WB_CampTopWindow_C_GetMenuIndexByRect final
-{
-public:
-	float                                         InX;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         InY;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         OutMenuIndex;                                      // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PosY;                                              // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PosX;                                              // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_829B[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USsPlayerWidget*                        Sspwidjet;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         LoopIndex;                                         // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_829C[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetDesiredSize_ReturnValue;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetViewportSize_SizeX;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetViewportSize_SizeY;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_X;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y;                          // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue_1;              // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_1;            // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetPosition_ReturnValue;                  // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_X_1;                        // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInsideRectAngle_ReturnValue;            // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_829D[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USsPlayerWidget*                        CallFunc_GetTopMenuListSSPlayer_OutSSPlayer;       // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_829E[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USsPlayerWidget*                        CallFunc_GetSystemMenuListSSPlayer_OutWidget;      // 0x0090(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_829F[0x2];                                     // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_CampTopWindow_C_GetMenuIndexByRect) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_GetMenuIndexByRect");
-static_assert(sizeof(WB_CampTopWindow_C_GetMenuIndexByRect) == 0x0000A0, "Wrong size on WB_CampTopWindow_C_GetMenuIndexByRect");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, InX) == 0x000000, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::InX' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, InY) == 0x000004, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::InY' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, OutMenuIndex) == 0x000008, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::OutMenuIndex' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, PosY) == 0x00000C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::PosY' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, PosX) == 0x000010, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::PosX' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, Sspwidjet) == 0x000018, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::Sspwidjet' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, LoopIndex) == 0x000020, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::LoopIndex' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetPlayerController_ReturnValue) == 0x000028, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetDesiredSize_ReturnValue) == 0x000030, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetDesiredSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetViewportSize_SizeX) == 0x000038, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetViewportSize_SizeX' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetViewportSize_SizeY) == 0x00003C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetViewportSize_SizeY' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_BreakVector2D_X) == 0x000040, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_BreakVector2D_Y) == 0x000044, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Divide_IntInt_ReturnValue) == 0x000048, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Divide_IntInt_ReturnValue_1) == 0x00004C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Divide_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000050, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x000054, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000058, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetPosition_ReturnValue) == 0x000060, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetPosition_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_BreakVector2D_X_1) == 0x000068, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_BreakVector2D_Y_1) == 0x00006C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Add_FloatFloat_ReturnValue) == 0x000070, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000074, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_IsInsideRectAngle_ReturnValue) == 0x000078, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_IsInsideRectAngle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Add_IntInt_ReturnValue) == 0x00007C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetTopMenuListSSPlayer_OutSSPlayer) == 0x000080, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetTopMenuListSSPlayer_OutSSPlayer' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Subtract_IntInt_ReturnValue) == 0x000088, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetSystemMenuListSSPlayer_OutWidget) == 0x000090, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetSystemMenuListSSPlayer_OutWidget' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000098, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Less_IntInt_ReturnValue) == 0x000099, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, Temp_int_Variable) == 0x00009C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::Temp_int_Variable' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.SetTopMenuCursorPlayOn
-// 0x0014 (0x0014 - 0x0000)
-struct WB_CampTopWindow_C_SetTopMenuCursorPlayOn final
-{
-public:
-	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimPackName;  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimationName; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Play_ReturnValue;                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_SetTopMenuCursorPlayOn");
-static_assert(sizeof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn) == 0x000014, "Wrong size on WB_CampTopWindow_C_SetTopMenuCursorPlayOn");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn, CallFunc_GetPlayingAnimationName_OutAnimPackName) == 0x000000, "Member 'WB_CampTopWindow_C_SetTopMenuCursorPlayOn::CallFunc_GetPlayingAnimationName_OutAnimPackName' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn, CallFunc_GetPlayingAnimationName_OutAnimationName) == 0x000008, "Member 'WB_CampTopWindow_C_SetTopMenuCursorPlayOn::CallFunc_GetPlayingAnimationName_OutAnimationName' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn, CallFunc_Play_ReturnValue) == 0x000010, "Member 'WB_CampTopWindow_C_SetTopMenuCursorPlayOn::CallFunc_Play_ReturnValue' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.SetTopMenuPlayOn
-// 0x0030 (0x0030 - 0x0000)
-struct WB_CampTopWindow_C_SetTopMenuPlayOn final
-{
-public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InType;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82A0[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USsPlayerWidget*                        CallFunc_GetTopMenuListSSPlayer_OutSSPlayer;       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UButtonS5*                              CallFunc_GetTopMenuListButtonMouse_OutButtonMouse; // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Play_ReturnValue;                         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82A1[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UButtonS5*                              CallFunc_GetTopMenuQuestionButtonMouse_OutParam;   // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_CampTopWindow_C_SetTopMenuPlayOn) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_SetTopMenuPlayOn");
-static_assert(sizeof(WB_CampTopWindow_C_SetTopMenuPlayOn) == 0x000030, "Wrong size on WB_CampTopWindow_C_SetTopMenuPlayOn");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::InIndex' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, InType) == 0x000004, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::InType' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000008, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_GetTopMenuListSSPlayer_OutSSPlayer) == 0x000010, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_GetTopMenuListSSPlayer_OutSSPlayer' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_GetTopMenuListButtonMouse_OutButtonMouse) == 0x000018, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_GetTopMenuListButtonMouse_OutButtonMouse' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_Play_ReturnValue) == 0x000020, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_Play_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_Play_ReturnValue_1) == 0x000021, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_Play_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_GetTopMenuQuestionButtonMouse_OutParam) == 0x000028, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_GetTopMenuQuestionButtonMouse_OutParam' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuSetQuestion
-// 0x0008 (0x0008 - 0x0000)
-struct WB_CampTopWindow_C_TopMenuSetQuestion final
-{
-public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_CampTopWindow_C_TopMenuSetQuestion) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_TopMenuSetQuestion");
-static_assert(sizeof(WB_CampTopWindow_C_TopMenuSetQuestion) == 0x000008, "Wrong size on WB_CampTopWindow_C_TopMenuSetQuestion");
-static_assert(offsetof(WB_CampTopWindow_C_TopMenuSetQuestion, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_TopMenuSetQuestion::InIndex' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_TopMenuSetQuestion, K2Node_SwitchInteger_CmpSuccess) == 0x000004, "Member 'WB_CampTopWindow_C_TopMenuSetQuestion::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.IsTopMenuPanelVisibility
-// 0x0002 (0x0002 - 0x0000)
-struct WB_CampTopWindow_C_IsTopMenuPanelVisibility final
-{
-public:
-	bool                                          OutVisibility;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_CampTopWindow_C_IsTopMenuPanelVisibility) == 0x000001, "Wrong alignment on WB_CampTopWindow_C_IsTopMenuPanelVisibility");
-static_assert(sizeof(WB_CampTopWindow_C_IsTopMenuPanelVisibility) == 0x000002, "Wrong size on WB_CampTopWindow_C_IsTopMenuPanelVisibility");
-static_assert(offsetof(WB_CampTopWindow_C_IsTopMenuPanelVisibility, OutVisibility) == 0x000000, "Member 'WB_CampTopWindow_C_IsTopMenuPanelVisibility::OutVisibility' has a wrong offset!");
-static_assert(offsetof(WB_CampTopWindow_C_IsTopMenuPanelVisibility, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WB_CampTopWindow_C_IsTopMenuPanelVisibility::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-
 // Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuPanelOff
 // 0x0014 (0x0014 - 0x0000)
 struct WB_CampTopWindow_C_TopMenuPanelOff final
@@ -311,12 +81,12 @@ public:
 	int32                                         InColorType;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USsPlayerWidget*                        CallFunc_GetSystemMenuListSSPlayer_OutWidget;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82A2[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82A3[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC5[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CampTopWindow_C_ChangeSubMenuColor) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_ChangeSubMenuColor");
@@ -340,12 +110,12 @@ public:
 	int32                                         InColorType;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USsPlayerWidget*                        CallFunc_GetTopMenuListSSPlayer_OutSSPlayer;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82A4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC6[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82A5[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC7[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CampTopWindow_C_ChangeTopMenuColor) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_ChangeTopMenuColor");
@@ -396,7 +166,7 @@ struct WB_CampTopWindow_C_Set_Sub_Menu_Play_Animation final
 {
 public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82A6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UButtonS5*                              CallFunc_Get_System_Menu_List_Button_Mouse_OutButton; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USsPlayerWidget*                        CallFunc_GetSystemMenuListSSPlayer_OutWidget;      // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimPackName;  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -420,12 +190,12 @@ public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InType;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82A7[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC9[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USsPlayerWidget*                        CallFunc_GetTopMenuListSSPlayer_OutSSPlayer;       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UButtonS5*                              CallFunc_GetTopMenuListButtonMouse_OutButtonMouse; // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue;                         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82A8[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BCA[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UButtonS5*                              CallFunc_GetTopMenuQuestionButtonMouse_OutParam;   // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CampTopWindow_C_SetTopMenuPlayAnimation) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_SetTopMenuPlayAnimation");
@@ -524,7 +294,7 @@ public:
 	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimationName; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetInstancePartPlayFrame_ReturnValue;     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue;                         // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82A9[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BCB[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UButtonS5*                              CallFunc_Get_System_Menu_List_Button_Mouse_OutButton; // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -557,7 +327,7 @@ struct WB_CampTopWindow_C_GetSystemMenuListSSPlayer final
 {
 public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82AA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BCC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USsPlayerWidget*                        OutWidget;                                         // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USsPlayerWidget*                        Ssplayerwidet;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -600,7 +370,7 @@ public:
 	struct FVector2D                              OutVector2D;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Vec2d;                                             // 0x000C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82AB[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BCD[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetSSPPositionDataByPartsName_OutVec;     // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_GetSSPPositionDataByPartsName_OutVec_1;   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_GetSSPPositionDataByPartsName_OutVec_2;   // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -686,10 +456,10 @@ public:
 	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimPackName;  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimationName; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82AC[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BCE[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82AD[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BCF[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UButtonS5*                              CallFunc_GetTopMenuQuestionButtonMouse_OutParam;   // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UButtonS5*                              CallFunc_GetTopMenuListButtonMouse_OutButtonMouse; // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USsPlayerWidget*                        CallFunc_GetTopMenuListSSPlayer_OutSSPlayer;       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -721,7 +491,7 @@ struct WB_CampTopWindow_C_GetTopMenuListSSPlayer final
 {
 public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82AE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USsPlayerWidget*                        OutSSPlayer;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USsPlayerWidget*                        SsPlayerWidget;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -757,10 +527,10 @@ struct WB_CampTopWindow_C_ChangeTopMenuPanel final
 public:
 	int32                                         InType;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InDirectPlay;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82AF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD1[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           Menulist;                                          // 0x0008(0x0010)(Edit, BlueprintVisible)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B0[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD2[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           K2Node_MakeArray_Array;                            // 0x0020(0x0010)(ReferenceParm)
 	bool                                          CallFunc_Play_ReturnValue;                         // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1385,7 +1155,7 @@ public:
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex_12;      // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess_2;                    // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchName_CmpSuccess_3;                    // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B1[0x2];                                     // 0x014A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD3[0x2];                                     // 0x014A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_11;        // 0x014C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_11;       // 0x0154(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_11;       // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1396,7 +1166,7 @@ public:
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex_10;      // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess_4;                    // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchName_CmpSuccess_5;                    // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B2[0x2];                                     // 0x017E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD4[0x2];                                     // 0x017E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_9;         // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_9;        // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_9;        // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1407,28 +1177,28 @@ public:
 	bool                                          CallFunc_Play_ReturnValue_4;                       // 0x019B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_5;                       // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_6;                       // 0x019D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B3[0x2];                                     // 0x019E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD5[0x2];                                     // 0x019E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_8;         // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_8;        // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_8;        // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex_8;       // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess_7;                    // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_7;                       // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B4[0x2];                                     // 0x01BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD6[0x2];                                     // 0x01BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_7;         // 0x01BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_7;        // 0x01C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_7;        // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex_7;       // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess_8;                    // 0x01D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_8;                       // 0x01D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B5[0x2];                                     // 0x01D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD7[0x2];                                     // 0x01D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_6;         // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_6;        // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_6;        // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex_6;       // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess_9;                    // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_9;                       // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B6[0x2];                                     // 0x01F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD8[0x2];                                     // 0x01F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_5;         // 0x01F4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_5;        // 0x01FC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_5;        // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1439,7 +1209,7 @@ public:
 	int32                                         K2Node_ComponentBoundEvent_AnimationIndex_4;       // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess_10;                   // 0x0224(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchName_CmpSuccess_11;                   // 0x0225(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B7[0x2];                                     // 0x0226(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BD9[0x2];                                     // 0x0226(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_AnimPackName_3;         // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_ComponentBoundEvent_AnimationName_3;        // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_AnimPackIndex_3;        // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1453,10 +1223,10 @@ public:
 	bool                                          CallFunc_Play_ReturnValue_10;                      // 0x025A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_11;                      // 0x025B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_12;                      // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B8[0x3];                                     // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BDA[0x3];                                     // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstancePartPlayFrame_ReturnValue;     // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue_13;                      // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82B9[0x3];                                     // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BDB[0x3];                                     // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              K2Node_ComponentBoundEvent_Pos_14;                 // 0x0268(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              K2Node_ComponentBoundEvent_UV_14;                  // 0x0270(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              K2Node_ComponentBoundEvent_Pos_15;                 // 0x0278(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1480,11 +1250,11 @@ public:
 	bool                                          CallFunc_Play_ReturnValue_14;                      // 0x02EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Play_ReturnValue_15;                      // 0x02EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x02EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82BA[0x3];                                     // 0x02ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BDC[0x3];                                     // 0x02ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x02F0(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x032C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_82BB[0x3];                                     // 0x032D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BDD[0x3];                                     // 0x032D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1680,6 +1450,236 @@ public:
 static_assert(alignof(WB_CampTopWindow_C_CampTopMMouseOnClicked__DelegateSignature) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_CampTopMMouseOnClicked__DelegateSignature");
 static_assert(sizeof(WB_CampTopWindow_C_CampTopMMouseOnClicked__DelegateSignature) == 0x000004, "Wrong size on WB_CampTopWindow_C_CampTopMMouseOnClicked__DelegateSignature");
 static_assert(offsetof(WB_CampTopWindow_C_CampTopMMouseOnClicked__DelegateSignature, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_CampTopMMouseOnClicked__DelegateSignature::InIndex' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.SetInstanceParts
+// 0x0014 (0x0014 - 0x0000)
+struct WB_CampTopWindow_C_SetInstanceParts final
+{
+public:
+	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimPackName;  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimationName; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_CampTopWindow_C_SetInstanceParts) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_SetInstanceParts");
+static_assert(sizeof(WB_CampTopWindow_C_SetInstanceParts) == 0x000014, "Wrong size on WB_CampTopWindow_C_SetInstanceParts");
+static_assert(offsetof(WB_CampTopWindow_C_SetInstanceParts, CallFunc_GetPlayingAnimationName_OutAnimPackName) == 0x000000, "Member 'WB_CampTopWindow_C_SetInstanceParts::CallFunc_GetPlayingAnimationName_OutAnimPackName' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetInstanceParts, CallFunc_GetPlayingAnimationName_OutAnimationName) == 0x000008, "Member 'WB_CampTopWindow_C_SetInstanceParts::CallFunc_GetPlayingAnimationName_OutAnimationName' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetInstanceParts, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000010, "Member 'WB_CampTopWindow_C_SetInstanceParts::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.GetInstanceParts
+// 0x0018 (0x0018 - 0x0000)
+struct WB_CampTopWindow_C_GetInstanceParts final
+{
+public:
+	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimPackName;  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimationName; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetInstancePartPlayFrame_ReturnValue;     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_CampTopWindow_C_GetInstanceParts) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_GetInstanceParts");
+static_assert(sizeof(WB_CampTopWindow_C_GetInstanceParts) == 0x000018, "Wrong size on WB_CampTopWindow_C_GetInstanceParts");
+static_assert(offsetof(WB_CampTopWindow_C_GetInstanceParts, CallFunc_GetPlayingAnimationName_OutAnimPackName) == 0x000000, "Member 'WB_CampTopWindow_C_GetInstanceParts::CallFunc_GetPlayingAnimationName_OutAnimPackName' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetInstanceParts, CallFunc_GetPlayingAnimationName_OutAnimationName) == 0x000008, "Member 'WB_CampTopWindow_C_GetInstanceParts::CallFunc_GetPlayingAnimationName_OutAnimationName' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetInstanceParts, CallFunc_GetInstancePartPlayFrame_ReturnValue) == 0x000010, "Member 'WB_CampTopWindow_C_GetInstanceParts::CallFunc_GetInstancePartPlayFrame_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetInstanceParts, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000014, "Member 'WB_CampTopWindow_C_GetInstanceParts::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.GetTopMenuQuestionButtonMouse
+// 0x0020 (0x0020 - 0x0000)
+struct WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5BDE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UButtonS5*                              OutParam;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UButtonS5*                              RetValue;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse");
+static_assert(sizeof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse) == 0x000020, "Wrong size on WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse");
+static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse::InIndex' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse, OutParam) == 0x000008, "Member 'WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse::OutParam' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse, RetValue) == 0x000010, "Member 'WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse::RetValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse, K2Node_SwitchInteger_CmpSuccess) == 0x000018, "Member 'WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.Get System Menu List Button Mouse
+// 0x0020 (0x0020 - 0x0000)
+struct WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5BDF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UButtonS5*                              OutButton;                                         // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UButtonS5*                              Retbutton;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse");
+static_assert(sizeof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse) == 0x000020, "Wrong size on WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse");
+static_assert(offsetof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse::InIndex' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse, OutButton) == 0x000008, "Member 'WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse::OutButton' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse, Retbutton) == 0x000010, "Member 'WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse::Retbutton' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse, K2Node_SwitchInteger_CmpSuccess) == 0x000018, "Member 'WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.GetTopMenuListButtonMouse
+// 0x0020 (0x0020 - 0x0000)
+struct WB_CampTopWindow_C_GetTopMenuListButtonMouse final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5BE0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UButtonS5*                              OutButtonMouse;                                    // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UButtonS5*                              Retbuttonmouse;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_CampTopWindow_C_GetTopMenuListButtonMouse) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_GetTopMenuListButtonMouse");
+static_assert(sizeof(WB_CampTopWindow_C_GetTopMenuListButtonMouse) == 0x000020, "Wrong size on WB_CampTopWindow_C_GetTopMenuListButtonMouse");
+static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuListButtonMouse, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_GetTopMenuListButtonMouse::InIndex' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuListButtonMouse, OutButtonMouse) == 0x000008, "Member 'WB_CampTopWindow_C_GetTopMenuListButtonMouse::OutButtonMouse' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuListButtonMouse, Retbuttonmouse) == 0x000010, "Member 'WB_CampTopWindow_C_GetTopMenuListButtonMouse::Retbuttonmouse' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetTopMenuListButtonMouse, K2Node_SwitchInteger_CmpSuccess) == 0x000018, "Member 'WB_CampTopWindow_C_GetTopMenuListButtonMouse::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.GetMenuIndexByRect
+// 0x00A0 (0x00A0 - 0x0000)
+struct WB_CampTopWindow_C_GetMenuIndexByRect final
+{
+public:
+	float                                         InX;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         InY;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         OutMenuIndex;                                      // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PosY;                                              // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PosX;                                              // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5BE1[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USsPlayerWidget*                        Sspwidjet;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LoopIndex;                                         // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5BE2[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetDesiredSize_ReturnValue;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetViewportSize_SizeX;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetViewportSize_SizeY;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y;                          // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue_1;              // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_1;            // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetPosition_ReturnValue;                  // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_1;                        // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInsideRectAngle_ReturnValue;            // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5BE3[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USsPlayerWidget*                        CallFunc_GetTopMenuListSSPlayer_OutSSPlayer;       // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5BE4[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USsPlayerWidget*                        CallFunc_GetSystemMenuListSSPlayer_OutWidget;      // 0x0090(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5BE5[0x2];                                     // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_CampTopWindow_C_GetMenuIndexByRect) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_GetMenuIndexByRect");
+static_assert(sizeof(WB_CampTopWindow_C_GetMenuIndexByRect) == 0x0000A0, "Wrong size on WB_CampTopWindow_C_GetMenuIndexByRect");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, InX) == 0x000000, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::InX' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, InY) == 0x000004, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::InY' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, OutMenuIndex) == 0x000008, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::OutMenuIndex' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, PosY) == 0x00000C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::PosY' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, PosX) == 0x000010, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::PosX' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, Sspwidjet) == 0x000018, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::Sspwidjet' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, LoopIndex) == 0x000020, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::LoopIndex' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetPlayerController_ReturnValue) == 0x000028, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetDesiredSize_ReturnValue) == 0x000030, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetDesiredSize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetViewportSize_SizeX) == 0x000038, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetViewportSize_SizeX' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetViewportSize_SizeY) == 0x00003C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetViewportSize_SizeY' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_BreakVector2D_X) == 0x000040, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_BreakVector2D_Y) == 0x000044, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Divide_IntInt_ReturnValue) == 0x000048, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Divide_IntInt_ReturnValue_1) == 0x00004C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Divide_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000050, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x000054, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000058, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetPosition_ReturnValue) == 0x000060, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetPosition_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_BreakVector2D_X_1) == 0x000068, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_BreakVector2D_X_1' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_BreakVector2D_Y_1) == 0x00006C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Add_FloatFloat_ReturnValue) == 0x000070, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000074, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_IsInsideRectAngle_ReturnValue) == 0x000078, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_IsInsideRectAngle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Add_IntInt_ReturnValue) == 0x00007C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetTopMenuListSSPlayer_OutSSPlayer) == 0x000080, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetTopMenuListSSPlayer_OutSSPlayer' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Subtract_IntInt_ReturnValue) == 0x000088, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_GetSystemMenuListSSPlayer_OutWidget) == 0x000090, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_GetSystemMenuListSSPlayer_OutWidget' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000098, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, CallFunc_Less_IntInt_ReturnValue) == 0x000099, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_GetMenuIndexByRect, Temp_int_Variable) == 0x00009C, "Member 'WB_CampTopWindow_C_GetMenuIndexByRect::Temp_int_Variable' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.SetTopMenuCursorPlayOn
+// 0x0014 (0x0014 - 0x0000)
+struct WB_CampTopWindow_C_SetTopMenuCursorPlayOn final
+{
+public:
+	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimPackName;  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetPlayingAnimationName_OutAnimationName; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Play_ReturnValue;                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_SetTopMenuCursorPlayOn");
+static_assert(sizeof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn) == 0x000014, "Wrong size on WB_CampTopWindow_C_SetTopMenuCursorPlayOn");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn, CallFunc_GetPlayingAnimationName_OutAnimPackName) == 0x000000, "Member 'WB_CampTopWindow_C_SetTopMenuCursorPlayOn::CallFunc_GetPlayingAnimationName_OutAnimPackName' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn, CallFunc_GetPlayingAnimationName_OutAnimationName) == 0x000008, "Member 'WB_CampTopWindow_C_SetTopMenuCursorPlayOn::CallFunc_GetPlayingAnimationName_OutAnimationName' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuCursorPlayOn, CallFunc_Play_ReturnValue) == 0x000010, "Member 'WB_CampTopWindow_C_SetTopMenuCursorPlayOn::CallFunc_Play_ReturnValue' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.SetTopMenuPlayOn
+// 0x0030 (0x0030 - 0x0000)
+struct WB_CampTopWindow_C_SetTopMenuPlayOn final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InType;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5BE6[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USsPlayerWidget*                        CallFunc_GetTopMenuListSSPlayer_OutSSPlayer;       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UButtonS5*                              CallFunc_GetTopMenuListButtonMouse_OutButtonMouse; // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Play_ReturnValue;                         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5BE7[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UButtonS5*                              CallFunc_GetTopMenuQuestionButtonMouse_OutParam;   // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_CampTopWindow_C_SetTopMenuPlayOn) == 0x000008, "Wrong alignment on WB_CampTopWindow_C_SetTopMenuPlayOn");
+static_assert(sizeof(WB_CampTopWindow_C_SetTopMenuPlayOn) == 0x000030, "Wrong size on WB_CampTopWindow_C_SetTopMenuPlayOn");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::InIndex' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, InType) == 0x000004, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::InType' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000008, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_GetTopMenuListSSPlayer_OutSSPlayer) == 0x000010, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_GetTopMenuListSSPlayer_OutSSPlayer' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_GetTopMenuListButtonMouse_OutButtonMouse) == 0x000018, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_GetTopMenuListButtonMouse_OutButtonMouse' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_Play_ReturnValue) == 0x000020, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_Play_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_Play_ReturnValue_1) == 0x000021, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_Play_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_SetTopMenuPlayOn, CallFunc_GetTopMenuQuestionButtonMouse_OutParam) == 0x000028, "Member 'WB_CampTopWindow_C_SetTopMenuPlayOn::CallFunc_GetTopMenuQuestionButtonMouse_OutParam' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuSetQuestion
+// 0x0008 (0x0008 - 0x0000)
+struct WB_CampTopWindow_C_TopMenuSetQuestion final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_CampTopWindow_C_TopMenuSetQuestion) == 0x000004, "Wrong alignment on WB_CampTopWindow_C_TopMenuSetQuestion");
+static_assert(sizeof(WB_CampTopWindow_C_TopMenuSetQuestion) == 0x000008, "Wrong size on WB_CampTopWindow_C_TopMenuSetQuestion");
+static_assert(offsetof(WB_CampTopWindow_C_TopMenuSetQuestion, InIndex) == 0x000000, "Member 'WB_CampTopWindow_C_TopMenuSetQuestion::InIndex' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_TopMenuSetQuestion, K2Node_SwitchInteger_CmpSuccess) == 0x000004, "Member 'WB_CampTopWindow_C_TopMenuSetQuestion::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.IsTopMenuPanelVisibility
+// 0x0002 (0x0002 - 0x0000)
+struct WB_CampTopWindow_C_IsTopMenuPanelVisibility final
+{
+public:
+	bool                                          OutVisibility;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_CampTopWindow_C_IsTopMenuPanelVisibility) == 0x000001, "Wrong alignment on WB_CampTopWindow_C_IsTopMenuPanelVisibility");
+static_assert(sizeof(WB_CampTopWindow_C_IsTopMenuPanelVisibility) == 0x000002, "Wrong size on WB_CampTopWindow_C_IsTopMenuPanelVisibility");
+static_assert(offsetof(WB_CampTopWindow_C_IsTopMenuPanelVisibility, OutVisibility) == 0x000000, "Member 'WB_CampTopWindow_C_IsTopMenuPanelVisibility::OutVisibility' has a wrong offset!");
+static_assert(offsetof(WB_CampTopWindow_C_IsTopMenuPanelVisibility, CallFunc_IsVisible_ReturnValue) == 0x000001, "Member 'WB_CampTopWindow_C_IsTopMenuPanelVisibility::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
 
 }
 

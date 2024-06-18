@@ -31,12 +31,12 @@ public:
 	struct FEncountArea_Default_Base              Base_39_1D9127AE44720C5B274270883730486A;          // 0x0000(0x0014)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FEncountArea_Default_ComeRange         ComeRange_60_F38F3BEE4410484F2750C490D31BE506;     // 0x0014(0x0028)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FEncountArea_Default_SpawnPattern      SpawnPattern_42_7727C0BB4E2362119C4F9198F3D67658;  // 0x003C(0x0010)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8FEF[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_95D1[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEncountArea_Default_ActPattern        ActPattern_45_8CC7262B4A71FBC8185F79BF857D66B6;    // 0x0050(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FEncountArea_Default_DiscoveryPattern  DiscoveryPattern_48_027A987A483CF42AFDE23B863DDEE25D; // 0x0070(0x0018)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FEncountArea_Default_GiveUp            GiveUpPattern_51_7E8C46F54FDECDB82E506883C9B3789C; // 0x0088(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FEncountArea_Default_Reborn            RebornPattern_54_385487524ADD2558E464BFB3B0EBB090; // 0x0098(0x0001)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8FF0[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_95D2[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEncountArea_Default_NoRoute           NoRoutePattern_57_F52B6108499494F4F672BC9F77C065E0; // 0x00A0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
 static_assert(alignof(FEncountArea_Default) == 0x000008, "Wrong alignment on FEncountArea_Default");

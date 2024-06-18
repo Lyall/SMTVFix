@@ -25,7 +25,7 @@ namespace SDK
 class UDev304_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_9E91[0x8];                                     // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A36C[0x8];                                     // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02C8(0x0030)()
 	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x02F8(0x0020)()
@@ -43,12 +43,12 @@ public:
 	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x0838(0x00C8)()
 	E_CHARA_ANIMATION_MODE                        ModeCurrent;                                       // 0x0900(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	E_CHARA_ANIMATION_MODE                        ModePrevious;                                      // 0x0901(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	uint8                                         Pad_9E92[0x2];                                     // 0x0902(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A36D[0x2];                                     // 0x0902(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ModeBlendTime;                                     // 0x0904(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      DefaultAnimation;                                  // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      MumbleAnimation;                                   // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MumbleEnable;                                      // 0x0918(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9E93[0x3];                                     // 0x0919(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A36E[0x3];                                     // 0x0919(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MumbleAlpha;                                       // 0x091C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FTransform                             PrimayBoneOffset;                                  // 0x0920(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class FName                                   PrimaryBoneName;                                   // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

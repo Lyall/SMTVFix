@@ -54,7 +54,7 @@ struct BP_EncountAreaDaath_Box_C_CalcSpawnPointList final
 {
 public:
 	bool                                          LineTrace;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_948B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E7A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FTransform>                     Param_SpawnPointList;                              // 0x0008(0x0010)(Parm, OutParm)
 	TArray<struct FTransform>                     L_Pos;                                             // 0x0018(0x0010)(Edit, BlueprintVisible)
 };

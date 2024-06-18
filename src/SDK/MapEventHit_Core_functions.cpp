@@ -17,6 +17,82 @@
 namespace SDK
 {
 
+// Function MapEventHit_Core.MapEventHit_Core_C.ExecuteUbergraph_MapEventHit_Core
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AMapEventHit_Core_C::ExecuteUbergraph_MapEventHit_Core(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "ExecuteUbergraph_MapEventHit_Core");
+
+	Params::MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.CallTaskEnd__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::CallTaskEnd__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "CallTaskEnd__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitOut__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::CallEventHitOut__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitOut__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitIn__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::CallEventHitIn__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitIn__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitAction__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::CallEventHitAction__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitAction__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MapEventHit_Core.MapEventHit_Core_C.IsEventHitPaused
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -315,82 +391,6 @@ void AMapEventHit_Core_C::HitON()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("MapEventHit_Core_C", "HitON");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.ExecuteUbergraph_MapEventHit_Core
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AMapEventHit_Core_C::ExecuteUbergraph_MapEventHit_Core(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "ExecuteUbergraph_MapEventHit_Core");
-
-	Params::MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.CallTaskEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void AMapEventHit_Core_C::CallTaskEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "CallTaskEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitOut__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void AMapEventHit_Core_C::CallEventHitOut__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitOut__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitIn__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void AMapEventHit_Core_C::CallEventHitIn__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitIn__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitAction__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void AMapEventHit_Core_C::CallEventHitAction__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitAction__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

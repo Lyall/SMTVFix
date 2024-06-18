@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "BP_NaviDevilGimmick_IgnorePause_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BP_NaviDevilGimmick_IgnorePause_classes.hpp"
 
 
 namespace SDK
@@ -26,11 +26,11 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_NaviDevilGimmick_Tutorial_C;     // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	float                                         Timeline_Camera_Alpha_FF528779455D85CA89B79599E13821F4; // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Timeline_Camera__Direction_FF528779455D85CA89B79599E13821F4; // 0x04B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AE0[0x3];                                     // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9C68[0x3];                                     // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     Timeline_Camera;                                   // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                FollowHitSize_ForTutorial;                         // 0x04C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MovedTutorial;                                     // 0x04CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5AE1[0x3];                                     // 0x04CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9C69[0x3];                                     // 0x04CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               PrevCameraRotation;                                // 0x04D0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FRotator                               TargetCameraRotation;                              // 0x04DC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
@@ -39,10 +39,10 @@ public:
 	void ForceMovedInnerTutorial();
 	void Timeline_Camera__UpdateFunc();
 	void Timeline_Camera__FinishedFunc();
-	void UserConstructionScript();
 	void CallOuterTutorial();
 	void CallInnerTutorial();
 	void CallInnerMovedTutorial();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

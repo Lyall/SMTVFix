@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "MagatsukaParam_structs.hpp"
 #include "MagatsukaSymbolPoint_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "MagatsukaParam_structs.hpp"
 #include "BP_EncountArea_Dungeon_classes.hpp"
 #include "Project_structs.hpp"
 
@@ -28,16 +28,16 @@ class ABP_EncountArea_Magatsuka_C final : public ABP_EncountArea_Dungeon_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EncountArea_Magatsuka_C;         // 0x0C40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          Discovery;                                         // 0x0C48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_948C[0x3];                                     // 0x0C49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26FC[0x3];                                     // 0x0C49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMagatsukaParam                        MagatsukaParam;                                    // 0x0C4C(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FMagatsukaSymbolPoint>          SymbolPointList;                                   // 0x0C58(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          MagatsukaCenter;                                   // 0x0C68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_948D[0x7];                                     // 0x0C69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26FD[0x7];                                     // 0x0C69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector2D>                      DevilLocationList;                                 // 0x0C70(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	float                                         DevilSpawnDelay;                                   // 0x0C80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DelaySpawnCnt;                                     // 0x0C84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SymbolBlankIndex;                                  // 0x0C88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_948E[0x4];                                     // 0x0C8C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26FE[0x4];                                     // 0x0C8C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  SpawnPointFixList;                                 // 0x0C90(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FVector>                        SpawnPos_JustBefore;                               // 0x0CA0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         FixNum;                                            // 0x0CB0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -63,9 +63,9 @@ public:
 	void GetEncountPack(int32 ArrayIndex, E_MITAMA_ENCOUNT MitamaType, struct FPackEncount* Pack, int32* Param_PackId);
 	void CheckFly(bool* IsFly);
 	void GetMoverData(const struct FVector& Pos, bool Respawn, struct FSymbolMoverData* Param_MoverData);
-	void BPI_CheckEncountAreaOverlap(bool* Param_Overlap);
 	void CheckFloatingIK_OFF(int32 SpawnListIndex, bool* Param_FloatingIK_OFF);
 	void CheckImmediateUpdateFloatingIK_WhenCameraIn(int32 SpawnListIndex, bool* ImmediateUpdateFloatingIK);
+	void BPI_CheckEncountAreaOverlap(bool* Param_Overlap);
 	void BPI_CheckMagatsukaEncountArea(bool* Magatsuka);
 
 public:

@@ -38,7 +38,7 @@ static_assert(sizeof(UMeshDescription) == 0x000028, "Wrong size on UMeshDescript
 class UMeshDescriptionBase : public UObject
 {
 public:
-	uint8                                         Pad_215B[0x368];                                   // 0x0028(0x0368)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_205B[0x368];                                   // 0x0028(0x0368)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ComputePolygonTriangulation(const struct FPolygonID& PolygonID);

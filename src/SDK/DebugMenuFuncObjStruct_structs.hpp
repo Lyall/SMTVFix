@@ -22,7 +22,7 @@ public:
 	class FName                                   PathName_13_5959B0D74A68DC7391D4729069C96549;      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   FuncObj_12_88CC869C43E695165180CAAC9CAB0B63;       // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          NoAddDebugMenuItem_11_39BA18974A633DF9006C87B98E276C1A; // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_472E[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CA6[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   DispName_JP_18_9FC46166432D45458314FE8065E2510A;   // 0x0034(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   DispName_EN_19_1A3B58374EAB15F946B42887F4283D33;   // 0x003C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

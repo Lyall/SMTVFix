@@ -379,27 +379,6 @@ void ABP_EncountArea_Magatsuka_C::GetMoverData(const struct FVector& Pos, bool R
 }
 
 
-// Function BP_EncountArea_Magatsuka.BP_EncountArea_Magatsuka_C.BPI_CheckEncountAreaOverlap
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Param_Overlap                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EncountArea_Magatsuka_C::BPI_CheckEncountAreaOverlap(bool* Param_Overlap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EncountArea_Magatsuka_C", "BPI_CheckEncountAreaOverlap");
-
-	Params::BP_EncountArea_Magatsuka_C_BPI_CheckEncountAreaOverlap Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_Overlap != nullptr)
-		*Param_Overlap = Parms.Param_Overlap;
-}
-
-
 // Function BP_EncountArea_Magatsuka.BP_EncountArea_Magatsuka_C.CheckFloatingIK_OFF
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -445,6 +424,27 @@ void ABP_EncountArea_Magatsuka_C::CheckImmediateUpdateFloatingIK_WhenCameraIn(in
 
 	if (ImmediateUpdateFloatingIK != nullptr)
 		*ImmediateUpdateFloatingIK = Parms.ImmediateUpdateFloatingIK;
+}
+
+
+// Function BP_EncountArea_Magatsuka.BP_EncountArea_Magatsuka_C.BPI_CheckEncountAreaOverlap
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Param_Overlap                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EncountArea_Magatsuka_C::BPI_CheckEncountAreaOverlap(bool* Param_Overlap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EncountArea_Magatsuka_C", "BPI_CheckEncountAreaOverlap");
+
+	Params::BP_EncountArea_Magatsuka_C_BPI_CheckEncountAreaOverlap Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_Overlap != nullptr)
+		*Param_Overlap = Parms.Param_Overlap;
 }
 
 

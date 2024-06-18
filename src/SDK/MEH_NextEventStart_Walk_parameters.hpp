@@ -23,6 +23,375 @@
 namespace SDK::Params
 {
 
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_SpawnEncountActor
+// 0x0090 (0x0090 - 0x0000)
+struct MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor final
+{
+public:
+	TArray<int32>                                 EnemyIdList;                                       // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         EncountID;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EC9[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SpawnTransform;                                    // 0x0020(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	class AActor*                                 EncountPawn;                                       // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_BTL_SYMBOL_ENCOUNT                          SymbolEncountType;                                 // 0x0058(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ManualWhenNotEscape;                               // 0x0059(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          HitMapAttack;                                      // 0x005A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ECA[0x5];                                     // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FChainEncountInfo                      ChainEncountInfo;                                  // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          Magatsuhi;                                         // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor) == 0x000010, "Wrong alignment on MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor");
+static_assert(sizeof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor) == 0x000090, "Wrong size on MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, EnemyIdList) == 0x000000, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::EnemyIdList' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, EncountID) == 0x000010, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::EncountID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, SpawnTransform) == 0x000020, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::SpawnTransform' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, EncountPawn) == 0x000050, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::EncountPawn' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, SymbolEncountType) == 0x000058, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::SymbolEncountType' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, ManualWhenNotEscape) == 0x000059, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::ManualWhenNotEscape' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, HitMapAttack) == 0x00005A, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::HitMapAttack' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, ChainEncountInfo) == 0x000060, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::ChainEncountInfo' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, Magatsuhi) == 0x000080, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::Magatsuhi' has a wrong offset!");
+
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_SetMapCommon
+// 0x0008 (0x0008 - 0x0000)
+struct MEH_NextEventStart_Walk_C_BPI_SetMapCommon final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(MEH_NextEventStart_Walk_C_BPI_SetMapCommon) == 0x000008, "Wrong alignment on MEH_NextEventStart_Walk_C_BPI_SetMapCommon");
+static_assert(sizeof(MEH_NextEventStart_Walk_C_BPI_SetMapCommon) == 0x000008, "Wrong size on MEH_NextEventStart_Walk_C_BPI_SetMapCommon");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SetMapCommon, Actor) == 0x000000, "Member 'MEH_NextEventStart_Walk_C_BPI_SetMapCommon::Actor' has a wrong offset!");
+
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.ExecuteUbergraph_MEH_NextEventStart_Walk
+// 0x0A20 (0x0A20 - 0x0000)
+struct MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_MAP_PLAYER_TYPE                             K2Node_Event_Type;                                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7ECB[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
+	E_MAP_DEBUG_MES_TYPE                          K2Node_Event_MesType;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_PlayerMoveEnable;                     // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_PlayerCameraEnable;                   // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_PlayerVisible;                        // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_MoonTimeEnable;                       // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_SymbolEnable;                         // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_AllMapStop;                           // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_AllObjectHidden;                      // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_TopCamera;                            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_MissionCheckDisable;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_StartSymbolAIDisable;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_ReturnPlayerPosition_1;               // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_UI_Immediate_1;                       // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ECC[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_EventEncountID_3;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7ECD[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             K2Node_Event_SpawnTransform_2;                     // 0x0030(0x0030)(IsPlainOldData, NoDestructor)
+	int32                                         K2Node_Event_NextEventID_1;                        // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_NowEventID_1;                         // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_Manual_1;                             // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ECE[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_EventId;                              // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_RestarPoint;                          // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_BattlePoint_1;                        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_Enable_5;                             // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_Enable_4;                             // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ECF[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_MapEventID;                           // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsFade;                               // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	E_MAP_PLAYER_TYPE                             K2Node_Event_Hero;                                 // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7ED0[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPrimaryAssetId>                K2Node_Event_LevelList_1;                          // 0x0090(0x0010)(ConstParm, ReferenceParm)
+	TArray<class FName>                           K2Node_Event_NameList;                             // 0x00A0(0x0010)(ConstParm, ReferenceParm)
+	int32                                         K2Node_Event_MapID_2;                              // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_AreaID_1;                             // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_Enable_3;                             // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_Enable_2;                             // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ED1[0x6];                                     // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPrimaryAssetId>                K2Node_Event_LevelList;                            // 0x00C0(0x0010)(ConstParm, ReferenceParm)
+	TArray<class FName>                           K2Node_Event_LevelNameList;                        // 0x00D0(0x0010)(ConstParm, ReferenceParm)
+	int32                                         K2Node_Event_MapID_1;                              // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_AreaID;                               // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_Enable_1;                             // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_Enable;                               // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ED2[0x6];                                     // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FEventBattleListStruct>         K2Node_Event_BTLActor;                             // 0x00F0(0x0010)(ConstParm, ReferenceParm)
+	struct FTransform                             K2Node_Event_PlayerPos;                            // 0x0100(0x0030)(IsPlainOldData, NoDestructor)
+	class AActor*                                 K2Node_Event_actor_2;                              // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsEnable;                             // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ED3[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UJsonDataCtrl*                          K2Node_Event_Json_1;                               // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Event_Json;                                 // 0x0148(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_MapEventID_;                          // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7ED4[0x4];                                     // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_ReStartPoint;                         // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_BattlePoint;                          // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_InitFade;                             // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_WaitEvent;                            // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ED5[0x2];                                     // 0x0172(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_EncountID_3;                          // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 K2Node_Event_EnemyList_2;                          // 0x0178(0x0010)(ConstParm, ReferenceParm)
+	int32                                         K2Node_Event_SafeZoneID_2;                         // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_ManualSafeZone_3;                     // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	E_BTL_SYMBOL_ENCOUNT                          K2Node_Event_EncountType_2;                        // 0x018D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_HitMapAttack_3;                       // 0x018E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_AutoSave;                             // 0x018F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_ReturnPlayerPosition;                 // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_UI_Immediate;                         // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ED6[0x2];                                     // 0x0192(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_EncountAdd;                           // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_MagatukaNum;                          // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsMapChange;                          // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ED7[0x3];                                     // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_WarpPoint_2;                          // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_FromEvent;                            // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_OtherMapReturn;                       // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_LightParam                         K2Node_Event_Next;                                 // 0x01AC(0x0318)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_LightParam                         K2Node_Event_Prev;                                 // 0x04C4(0x0318)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_NextAreaId_1;                         // 0x07DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_WarpPoint_1;                          // 0x07E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_FadeInTime_2;                         // 0x07E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_EncountID_2;                          // 0x07E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7ED8[0x4];                                     // 0x07EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_Event_EnemyList_1;                          // 0x07F0(0x0010)(ConstParm, ReferenceParm)
+	int32                                         K2Node_Event_SafeZoneID_1;                         // 0x0800(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_ManualSafeZone_2;                     // 0x0804(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7ED9[0x3];                                     // 0x0805(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FChainEncountInfo                      K2Node_Event_ChainEncountInfo_1;                   // 0x0808(0x0020)()
+	bool                                          K2Node_Event_Magatsuhi_1;                          // 0x0828(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_PlayerFirst;                          // 0x0829(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EDA[0x6];                                     // 0x082A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_actor_1;                              // 0x0830(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_Alpha_1;                              // 0x0838(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_TakaraID;                             // 0x083C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_Index;                                // 0x0840(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_Alpha;                                // 0x0844(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_Event_ActorLocation_1;                      // 0x0848(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_InactiveFlag;                         // 0x0854(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EDB[0x4];                                     // 0x085C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_Owner_2;                              // 0x0860(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_Owner_1;                              // 0x0868(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_EncountID_1;                          // 0x0870(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EDC[0x4];                                     // 0x0874(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_Event_EnemyList;                            // 0x0878(0x0010)(ConstParm, ReferenceParm)
+	int32                                         K2Node_Event_SafeZoneID;                           // 0x0888(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_ManualSafeZone_1;                     // 0x088C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	E_BTL_SYMBOL_ENCOUNT                          K2Node_Event_EncountType_1;                        // 0x088D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EDD[0x2];                                     // 0x088E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_EventEncountID_2;                     // 0x0890(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EDE[0xC];                                     // 0x0894(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             K2Node_Event_SpawnTransform_1;                     // 0x08A0(0x0030)(IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_ManualWhenNotEscape_1;                // 0x08D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_HitMapAttack_2;                       // 0x08D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	E_BTL_SYMBOL_ENCOUNT                          K2Node_Event_EncountType;                          // 0x08D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EDF[0x1];                                     // 0x08D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_EventEncountID_1;                     // 0x08D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_SafeZoeID;                            // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_ManualSafeZone;                       // 0x08DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_HitMapAttack_1;                       // 0x08DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EE0[0x2];                                     // 0x08DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_MapID;                                // 0x08E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_MAP_SYSTEMRESIDENT_ID                       K2Node_Event_Enum;                                 // 0x08E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EE1[0x3];                                     // 0x08E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_DataId_1;                             // 0x08E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_DataId;                               // 0x08EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_WarpPoint;                            // 0x08F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_FadeInTime_1;                         // 0x08F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_FadeInTime;                           // 0x08F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_Event_ActorLocation;                        // 0x08FC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_MissionId;                            // 0x0908(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EE2[0x4];                                     // 0x090C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_Owner;                                // 0x0910(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_EventEncountID;                       // 0x0918(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_NextEventID;                          // 0x091C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_NowEventID;                           // 0x0920(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_Manual;                               // 0x0924(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_ChallengeMode;                        // 0x0925(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_Visible;                              // 0x0926(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EE3[0x1];                                     // 0x0927(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_NextMapId;                            // 0x0928(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_NextAreaId;                           // 0x092C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_FadeCancel;                           // 0x0930(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EE4[0x7];                                     // 0x0931(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0938(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0940(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0950(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_inFadeCancel;                         // 0x0951(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_Stop;                                 // 0x0952(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_Hidden;                               // 0x0953(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EE5[0x4];                                     // 0x0954(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_Event_EnemyIdList;                          // 0x0958(0x0010)(ConstParm, ReferenceParm)
+	int32                                         K2Node_Event_EncountID;                            // 0x0968(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EE6[0x4];                                     // 0x096C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             K2Node_Event_SpawnTransform;                       // 0x0970(0x0030)(IsPlainOldData, NoDestructor)
+	class AActor*                                 K2Node_Event_EncountPawn;                          // 0x09A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_BTL_SYMBOL_ENCOUNT                          K2Node_Event_SymbolEncountType;                    // 0x09A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_ManualWhenNotEscape;                  // 0x09A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_HitMapAttack;                         // 0x09AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EE7[0x5];                                     // 0x09AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FChainEncountInfo                      K2Node_Event_ChainEncountInfo;                     // 0x09B0(0x0020)()
+	bool                                          K2Node_Event_Magatsuhi;                            // 0x09D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EE8[0x7];                                     // 0x09D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_actor;                                // 0x09D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn_1;                    // 0x09E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_1;             // 0x09E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x09F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EE9[0x7];                                     // 0x09F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0A00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BPI_IsEventPlay_IsPlay;                   // 0x0A08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7EEA[0x7];                                     // 0x0A09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACustomPawn*                            K2Node_DynamicCast_AsCustom_Pawn;                  // 0x0A10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0A18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk) == 0x000010, "Wrong alignment on MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk");
+static_assert(sizeof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk) == 0x000A20, "Wrong size on MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, EntryPoint) == 0x000000, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::EntryPoint' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Type) == 0x000004, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Type' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MesType) == 0x000018, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MesType' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerMoveEnable) == 0x000019, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerMoveEnable' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerCameraEnable) == 0x00001A, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerCameraEnable' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerVisible) == 0x00001B, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerVisible' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MoonTimeEnable) == 0x00001C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MoonTimeEnable' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SymbolEnable) == 0x00001D, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SymbolEnable' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AllMapStop) == 0x00001E, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AllMapStop' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AllObjectHidden) == 0x00001F, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AllObjectHidden' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_TopCamera) == 0x000020, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_TopCamera' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MissionCheckDisable) == 0x000021, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MissionCheckDisable' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_StartSymbolAIDisable) == 0x000022, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_StartSymbolAIDisable' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ReturnPlayerPosition_1) == 0x000023, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ReturnPlayerPosition_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_UI_Immediate_1) == 0x000024, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_UI_Immediate_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventEncountID_3) == 0x000028, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventEncountID_3' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SpawnTransform_2) == 0x000030, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SpawnTransform_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextEventID_1) == 0x000060, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextEventID_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NowEventID_1) == 0x000064, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NowEventID_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Manual_1) == 0x000068, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Manual_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventId) == 0x00006C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventId' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_RestarPoint) == 0x000070, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_RestarPoint' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_BattlePoint_1) == 0x000078, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_BattlePoint_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_5) == 0x000080, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_5' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_4) == 0x000081, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_4' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapEventID) == 0x000084, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapEventID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_IsFade) == 0x000088, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_IsFade' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Hero) == 0x000089, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Hero' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_LevelList_1) == 0x000090, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_LevelList_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NameList) == 0x0000A0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NameList' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapID_2) == 0x0000B0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapID_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AreaID_1) == 0x0000B4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AreaID_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_3) == 0x0000B8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_3' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_2) == 0x0000B9, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_LevelList) == 0x0000C0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_LevelList' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_LevelNameList) == 0x0000D0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_LevelNameList' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapID_1) == 0x0000E0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapID_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AreaID) == 0x0000E4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AreaID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_1) == 0x0000E8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable) == 0x0000E9, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_BTLActor) == 0x0000F0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_BTLActor' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerPos) == 0x000100, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerPos' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_actor_2) == 0x000130, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_actor_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_IsEnable) == 0x000138, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_IsEnable' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Json_1) == 0x000140, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Json_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Json) == 0x000148, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Json' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapEventID_) == 0x000158, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapEventID_' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ReStartPoint) == 0x000160, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ReStartPoint' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_BattlePoint) == 0x000168, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_BattlePoint' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_InitFade) == 0x000170, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_InitFade' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_WaitEvent) == 0x000171, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_WaitEvent' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountID_3) == 0x000174, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountID_3' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EnemyList_2) == 0x000178, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EnemyList_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SafeZoneID_2) == 0x000188, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SafeZoneID_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualSafeZone_3) == 0x00018C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualSafeZone_3' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountType_2) == 0x00018D, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountType_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_HitMapAttack_3) == 0x00018E, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_HitMapAttack_3' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AutoSave) == 0x00018F, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AutoSave' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ReturnPlayerPosition) == 0x000190, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ReturnPlayerPosition' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_UI_Immediate) == 0x000191, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_UI_Immediate' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountAdd) == 0x000194, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountAdd' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MagatukaNum) == 0x000198, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MagatukaNum' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_IsMapChange) == 0x00019C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_IsMapChange' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_WarpPoint_2) == 0x0001A0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_WarpPoint_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FromEvent) == 0x0001A4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FromEvent' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_OtherMapReturn) == 0x0001A8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_OtherMapReturn' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Next) == 0x0001AC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Next' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Prev) == 0x0004C4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Prev' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextAreaId_1) == 0x0007DC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextAreaId_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_WarpPoint_1) == 0x0007E0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_WarpPoint_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FadeInTime_2) == 0x0007E4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FadeInTime_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountID_2) == 0x0007E8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountID_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EnemyList_1) == 0x0007F0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EnemyList_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SafeZoneID_1) == 0x000800, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SafeZoneID_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualSafeZone_2) == 0x000804, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualSafeZone_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ChainEncountInfo_1) == 0x000808, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ChainEncountInfo_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Magatsuhi_1) == 0x000828, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Magatsuhi_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerFirst) == 0x000829, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerFirst' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_actor_1) == 0x000830, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_actor_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Alpha_1) == 0x000838, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Alpha_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_TakaraID) == 0x00083C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_TakaraID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Index) == 0x000840, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Index' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Alpha) == 0x000844, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Alpha' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ActorLocation_1) == 0x000848, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ActorLocation_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_InactiveFlag) == 0x000854, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_InactiveFlag' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Owner_2) == 0x000860, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Owner_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Owner_1) == 0x000868, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Owner_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountID_1) == 0x000870, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountID_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EnemyList) == 0x000878, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EnemyList' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SafeZoneID) == 0x000888, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SafeZoneID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualSafeZone_1) == 0x00088C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualSafeZone_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountType_1) == 0x00088D, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountType_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventEncountID_2) == 0x000890, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventEncountID_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SpawnTransform_1) == 0x0008A0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SpawnTransform_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualWhenNotEscape_1) == 0x0008D0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualWhenNotEscape_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_HitMapAttack_2) == 0x0008D1, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_HitMapAttack_2' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountType) == 0x0008D2, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountType' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventEncountID_1) == 0x0008D4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventEncountID_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SafeZoeID) == 0x0008D8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SafeZoeID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualSafeZone) == 0x0008DC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualSafeZone' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_HitMapAttack_1) == 0x0008DD, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_HitMapAttack_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapID) == 0x0008E0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enum) == 0x0008E4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enum' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_DataId_1) == 0x0008E8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_DataId_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_DataId) == 0x0008EC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_DataId' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_WarpPoint) == 0x0008F0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_WarpPoint' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FadeInTime_1) == 0x0008F4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FadeInTime_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FadeInTime) == 0x0008F8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FadeInTime' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ActorLocation) == 0x0008FC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ActorLocation' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MissionId) == 0x000908, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MissionId' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Owner) == 0x000910, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Owner' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventEncountID) == 0x000918, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventEncountID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextEventID) == 0x00091C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextEventID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NowEventID) == 0x000920, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NowEventID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Manual) == 0x000924, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Manual' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ChallengeMode) == 0x000925, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ChallengeMode' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Visible) == 0x000926, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Visible' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextMapId) == 0x000928, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextMapId' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextAreaId) == 0x00092C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextAreaId' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FadeCancel) == 0x000930, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FadeCancel' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, CallFunc_GetMapCommon_rerutn) == 0x000938, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000940, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_bSuccess) == 0x000950, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_inFadeCancel) == 0x000951, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_inFadeCancel' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Stop) == 0x000952, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Stop' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Hidden) == 0x000953, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Hidden' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EnemyIdList) == 0x000958, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EnemyIdList' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountID) == 0x000968, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountID' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SpawnTransform) == 0x000970, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SpawnTransform' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountPawn) == 0x0009A0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountPawn' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SymbolEncountType) == 0x0009A8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SymbolEncountType' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualWhenNotEscape) == 0x0009A9, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualWhenNotEscape' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_HitMapAttack) == 0x0009AA, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_HitMapAttack' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ChainEncountInfo) == 0x0009B0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ChainEncountInfo' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Magatsuhi) == 0x0009D0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Magatsuhi' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_actor) == 0x0009D8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_actor' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, CallFunc_GetMapCommon_rerutn_1) == 0x0009E0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::CallFunc_GetMapCommon_rerutn_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_AsBPI_Map_Common_1) == 0x0009E8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_AsBPI_Map_Common_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_bSuccess_1) == 0x0009F8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, CallFunc_GetPlayerPawn_ReturnValue) == 0x000A00, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, CallFunc_BPI_IsEventPlay_IsPlay) == 0x000A08, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::CallFunc_BPI_IsEventPlay_IsPlay' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_AsCustom_Pawn) == 0x000A10, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_AsCustom_Pawn' has a wrong offset!");
+static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_bSuccess_2) == 0x000A18, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+
 // Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_CheckNaviDevil
 // 0x0001 (0x0001 - 0x0000)
 struct MEH_NextEventStart_Walk_C_BPI_CheckNaviDevil final
@@ -390,7 +759,7 @@ struct MEH_NextEventStart_Walk_C_BPI_CheckAActionLock final
 {
 public:
 	bool                                          Lock;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_897C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 AActionActor;                                      // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MEH_NextEventStart_Walk_C_BPI_CheckAActionLock) == 0x000008, "Wrong alignment on MEH_NextEventStart_Walk_C_BPI_CheckAActionLock");
@@ -404,7 +773,7 @@ struct MEH_NextEventStart_Walk_C_BPI_SetAActionLock final
 {
 public:
 	bool                                          Lock;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_897D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 AActionActor;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewParam1;                                         // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -813,10 +1182,10 @@ struct MEH_NextEventStart_Walk_C_UserConstructionScript final
 {
 public:
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_897E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EED[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScriptMessage                         CallFunc_Array_Get_Item;                           // 0x0008(0x0040)()
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_897F[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEE[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0070(0x0018)()
@@ -900,7 +1269,7 @@ struct MEH_NextEventStart_Walk_C_BPI_CallEventEncount final
 {
 public:
 	int32                                         EventEncountId;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8980[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EEF[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	int32                                         NextEventID;                                       // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NowEventID;                                        // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -920,7 +1289,7 @@ struct MEH_NextEventStart_Walk_C_BPI_CallKokubouEvent final
 {
 public:
 	int32                                         EventId;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8981[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 RestarPoint;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 Param_BattlePoint;                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1117,7 +1486,7 @@ struct MEH_NextEventStart_Walk_C_BPI_CallMapEvent final
 {
 public:
 	int32                                         Param_MapEventID_;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8982[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Param_ReStartPoint;                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 Param_BattlePoint;                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InitFade;                                          // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1137,7 +1506,7 @@ struct MEH_NextEventStart_Walk_C_BPI_CallEncountForMagatsuka final
 {
 public:
 	int32                                         EncountID;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8983[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 EnemyList;                                         // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         SafeZoneID;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ManualSafeZone;                                    // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1187,7 +1556,7 @@ struct MEH_NextEventStart_Walk_C_BI_SetMapChange final
 {
 public:
 	bool                                          IsMapChange;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8984[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         WarpPoint;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FromEvent;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherMapReturn;                                    // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1233,11 +1602,11 @@ struct MEH_NextEventStart_Walk_C_BPI_CallEncountForNaviDevil final
 {
 public:
 	int32                                         EncountID;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8985[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 EnemyList;                                         // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         SafeZoneID;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ManualSafeZone;                                    // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8986[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF5[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FChainEncountInfo                      ChainEncountInfo;                                  // 0x0020(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          Magatsuhi;                                         // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          PlayerFirst;                                       // 0x0041(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1305,7 +1674,7 @@ struct MEH_NextEventStart_Walk_C_BPI_TokyoLargeMapAddIconTalk final
 public:
 	struct FVector                                ActorLocation;                                     // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   InactiveFlag;                                      // 0x000C(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8987[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF6[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Param_Owner;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MEH_NextEventStart_Walk_C_BPI_TokyoLargeMapAddIconTalk) == 0x000008, "Wrong alignment on MEH_NextEventStart_Walk_C_BPI_TokyoLargeMapAddIconTalk");
@@ -1331,7 +1700,7 @@ struct MEH_NextEventStart_Walk_C_BPI_CallEncountForDebug final
 {
 public:
 	int32                                         EncountID;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8988[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 EnemyList;                                         // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         SafeZoneID;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ManualSafeZone;                                    // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1351,7 +1720,7 @@ struct MEH_NextEventStart_Walk_C_BPI_CallEventEncount_ForUniqueSymbol final
 {
 public:
 	int32                                         EventEncountId;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8989[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF8[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	bool                                          ManualWhenNotEscape;                               // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          HitMapAttack;                                      // 0x0041(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1524,375 +1893,6 @@ static_assert(alignof(MEH_NextEventStart_Walk_C_BPI_MapPlayerStop) == 0x000001, 
 static_assert(sizeof(MEH_NextEventStart_Walk_C_BPI_MapPlayerStop) == 0x000002, "Wrong size on MEH_NextEventStart_Walk_C_BPI_MapPlayerStop");
 static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_MapPlayerStop, Stop) == 0x000000, "Member 'MEH_NextEventStart_Walk_C_BPI_MapPlayerStop::Stop' has a wrong offset!");
 static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_MapPlayerStop, Param_Hidden) == 0x000001, "Member 'MEH_NextEventStart_Walk_C_BPI_MapPlayerStop::Param_Hidden' has a wrong offset!");
-
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_SpawnEncountActor
-// 0x0090 (0x0090 - 0x0000)
-struct MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor final
-{
-public:
-	TArray<int32>                                 EnemyIdList;                                       // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         EncountID;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_898A[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SpawnTransform;                                    // 0x0020(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	class AActor*                                 EncountPawn;                                       // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_BTL_SYMBOL_ENCOUNT                          SymbolEncountType;                                 // 0x0058(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ManualWhenNotEscape;                               // 0x0059(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          HitMapAttack;                                      // 0x005A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_898B[0x5];                                     // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FChainEncountInfo                      ChainEncountInfo;                                  // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          Magatsuhi;                                         // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor) == 0x000010, "Wrong alignment on MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor");
-static_assert(sizeof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor) == 0x000090, "Wrong size on MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, EnemyIdList) == 0x000000, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::EnemyIdList' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, EncountID) == 0x000010, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::EncountID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, SpawnTransform) == 0x000020, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, EncountPawn) == 0x000050, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::EncountPawn' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, SymbolEncountType) == 0x000058, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::SymbolEncountType' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, ManualWhenNotEscape) == 0x000059, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::ManualWhenNotEscape' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, HitMapAttack) == 0x00005A, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::HitMapAttack' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, ChainEncountInfo) == 0x000060, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::ChainEncountInfo' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor, Magatsuhi) == 0x000080, "Member 'MEH_NextEventStart_Walk_C_BPI_SpawnEncountActor::Magatsuhi' has a wrong offset!");
-
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.BPI_SetMapCommon
-// 0x0008 (0x0008 - 0x0000)
-struct MEH_NextEventStart_Walk_C_BPI_SetMapCommon final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(MEH_NextEventStart_Walk_C_BPI_SetMapCommon) == 0x000008, "Wrong alignment on MEH_NextEventStart_Walk_C_BPI_SetMapCommon");
-static_assert(sizeof(MEH_NextEventStart_Walk_C_BPI_SetMapCommon) == 0x000008, "Wrong size on MEH_NextEventStart_Walk_C_BPI_SetMapCommon");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_BPI_SetMapCommon, Actor) == 0x000000, "Member 'MEH_NextEventStart_Walk_C_BPI_SetMapCommon::Actor' has a wrong offset!");
-
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.ExecuteUbergraph_MEH_NextEventStart_Walk
-// 0x0A20 (0x0A20 - 0x0000)
-struct MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_MAP_PLAYER_TYPE                             K2Node_Event_Type;                                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_898C[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
-	E_MAP_DEBUG_MES_TYPE                          K2Node_Event_MesType;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_PlayerMoveEnable;                     // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_PlayerCameraEnable;                   // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_PlayerVisible;                        // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_MoonTimeEnable;                       // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_SymbolEnable;                         // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_AllMapStop;                           // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_AllObjectHidden;                      // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_TopCamera;                            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_MissionCheckDisable;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_StartSymbolAIDisable;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_ReturnPlayerPosition_1;               // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_UI_Immediate_1;                       // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_898D[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_EventEncountID_3;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_898E[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             K2Node_Event_SpawnTransform_2;                     // 0x0030(0x0030)(IsPlainOldData, NoDestructor)
-	int32                                         K2Node_Event_NextEventID_1;                        // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_NowEventID_1;                         // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_Manual_1;                             // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_898F[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_EventId;                              // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_RestarPoint;                          // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_BattlePoint_1;                        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_Enable_5;                             // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_Enable_4;                             // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8990[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_MapEventID;                           // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsFade;                               // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	E_MAP_PLAYER_TYPE                             K2Node_Event_Hero;                                 // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8991[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPrimaryAssetId>                K2Node_Event_LevelList_1;                          // 0x0090(0x0010)(ConstParm, ReferenceParm)
-	TArray<class FName>                           K2Node_Event_NameList;                             // 0x00A0(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_Event_MapID_2;                              // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_AreaID_1;                             // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_Enable_3;                             // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_Enable_2;                             // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8992[0x6];                                     // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPrimaryAssetId>                K2Node_Event_LevelList;                            // 0x00C0(0x0010)(ConstParm, ReferenceParm)
-	TArray<class FName>                           K2Node_Event_LevelNameList;                        // 0x00D0(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_Event_MapID_1;                              // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_AreaID;                               // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_Enable_1;                             // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_Enable;                               // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8993[0x6];                                     // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FEventBattleListStruct>         K2Node_Event_BTLActor;                             // 0x00F0(0x0010)(ConstParm, ReferenceParm)
-	struct FTransform                             K2Node_Event_PlayerPos;                            // 0x0100(0x0030)(IsPlainOldData, NoDestructor)
-	class AActor*                                 K2Node_Event_actor_2;                              // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsEnable;                             // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8994[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UJsonDataCtrl*                          K2Node_Event_Json_1;                               // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 K2Node_Event_Json;                                 // 0x0148(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_MapEventID_;                          // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8995[0x4];                                     // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_ReStartPoint;                         // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_BattlePoint;                          // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_InitFade;                             // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_WaitEvent;                            // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8996[0x2];                                     // 0x0172(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_EncountID_3;                          // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<int32>                                 K2Node_Event_EnemyList_2;                          // 0x0178(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_Event_SafeZoneID_2;                         // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_ManualSafeZone_3;                     // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	E_BTL_SYMBOL_ENCOUNT                          K2Node_Event_EncountType_2;                        // 0x018D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_HitMapAttack_3;                       // 0x018E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_AutoSave;                             // 0x018F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_ReturnPlayerPosition;                 // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_UI_Immediate;                         // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8997[0x2];                                     // 0x0192(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_EncountAdd;                           // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_MagatukaNum;                          // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsMapChange;                          // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8998[0x3];                                     // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_WarpPoint_2;                          // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_FromEvent;                            // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_OtherMapReturn;                       // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_LightParam                         K2Node_Event_Next;                                 // 0x01AC(0x0318)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_LightParam                         K2Node_Event_Prev;                                 // 0x04C4(0x0318)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_NextAreaId_1;                         // 0x07DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_WarpPoint_1;                          // 0x07E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_FadeInTime_2;                         // 0x07E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_EncountID_2;                          // 0x07E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8999[0x4];                                     // 0x07EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_Event_EnemyList_1;                          // 0x07F0(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_Event_SafeZoneID_1;                         // 0x0800(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_ManualSafeZone_2;                     // 0x0804(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_899A[0x3];                                     // 0x0805(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FChainEncountInfo                      K2Node_Event_ChainEncountInfo_1;                   // 0x0808(0x0020)()
-	bool                                          K2Node_Event_Magatsuhi_1;                          // 0x0828(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_PlayerFirst;                          // 0x0829(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_899B[0x6];                                     // 0x082A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_actor_1;                              // 0x0830(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_Alpha_1;                              // 0x0838(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_TakaraID;                             // 0x083C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_Index;                                // 0x0840(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_Alpha;                                // 0x0844(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Event_ActorLocation_1;                      // 0x0848(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_InactiveFlag;                         // 0x0854(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_899C[0x4];                                     // 0x085C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_Owner_2;                              // 0x0860(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_Owner_1;                              // 0x0868(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_EncountID_1;                          // 0x0870(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_899D[0x4];                                     // 0x0874(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_Event_EnemyList;                            // 0x0878(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_Event_SafeZoneID;                           // 0x0888(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_ManualSafeZone_1;                     // 0x088C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	E_BTL_SYMBOL_ENCOUNT                          K2Node_Event_EncountType_1;                        // 0x088D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_899E[0x2];                                     // 0x088E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_EventEncountID_2;                     // 0x0890(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_899F[0xC];                                     // 0x0894(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             K2Node_Event_SpawnTransform_1;                     // 0x08A0(0x0030)(IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_ManualWhenNotEscape_1;                // 0x08D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_HitMapAttack_2;                       // 0x08D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	E_BTL_SYMBOL_ENCOUNT                          K2Node_Event_EncountType;                          // 0x08D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89A0[0x1];                                     // 0x08D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_EventEncountID_1;                     // 0x08D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_SafeZoeID;                            // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_ManualSafeZone;                       // 0x08DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_HitMapAttack_1;                       // 0x08DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89A1[0x2];                                     // 0x08DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_MapID;                                // 0x08E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_MAP_SYSTEMRESIDENT_ID                       K2Node_Event_Enum;                                 // 0x08E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89A2[0x3];                                     // 0x08E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_DataId_1;                             // 0x08E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_DataId;                               // 0x08EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_WarpPoint;                            // 0x08F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_FadeInTime_1;                         // 0x08F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_FadeInTime;                           // 0x08F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Event_ActorLocation;                        // 0x08FC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_MissionId;                            // 0x0908(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89A3[0x4];                                     // 0x090C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_Owner;                                // 0x0910(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_EventEncountID;                       // 0x0918(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_NextEventID;                          // 0x091C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_NowEventID;                           // 0x0920(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_Manual;                               // 0x0924(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_ChallengeMode;                        // 0x0925(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_Visible;                              // 0x0926(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89A4[0x1];                                     // 0x0927(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_NextMapId;                            // 0x0928(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_NextAreaId;                           // 0x092C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_FadeCancel;                           // 0x0930(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89A5[0x7];                                     // 0x0931(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0938(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0940(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0950(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_inFadeCancel;                         // 0x0951(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_Stop;                                 // 0x0952(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_Hidden;                               // 0x0953(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89A6[0x4];                                     // 0x0954(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_Event_EnemyIdList;                          // 0x0958(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_Event_EncountID;                            // 0x0968(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89A7[0x4];                                     // 0x096C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             K2Node_Event_SpawnTransform;                       // 0x0970(0x0030)(IsPlainOldData, NoDestructor)
-	class AActor*                                 K2Node_Event_EncountPawn;                          // 0x09A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_BTL_SYMBOL_ENCOUNT                          K2Node_Event_SymbolEncountType;                    // 0x09A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_ManualWhenNotEscape;                  // 0x09A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_HitMapAttack;                         // 0x09AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89A8[0x5];                                     // 0x09AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FChainEncountInfo                      K2Node_Event_ChainEncountInfo;                     // 0x09B0(0x0020)()
-	bool                                          K2Node_Event_Magatsuhi;                            // 0x09D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89A9[0x7];                                     // 0x09D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_actor;                                // 0x09D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn_1;                    // 0x09E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_1;             // 0x09E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x09F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89AA[0x7];                                     // 0x09F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0A00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BPI_IsEventPlay_IsPlay;                   // 0x0A08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89AB[0x7];                                     // 0x0A09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACustomPawn*                            K2Node_DynamicCast_AsCustom_Pawn;                  // 0x0A10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0A18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk) == 0x000010, "Wrong alignment on MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk");
-static_assert(sizeof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk) == 0x000A20, "Wrong size on MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, EntryPoint) == 0x000000, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::EntryPoint' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Type) == 0x000004, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Type' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MesType) == 0x000018, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MesType' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerMoveEnable) == 0x000019, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerMoveEnable' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerCameraEnable) == 0x00001A, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerCameraEnable' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerVisible) == 0x00001B, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerVisible' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MoonTimeEnable) == 0x00001C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MoonTimeEnable' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SymbolEnable) == 0x00001D, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SymbolEnable' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AllMapStop) == 0x00001E, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AllMapStop' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AllObjectHidden) == 0x00001F, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AllObjectHidden' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_TopCamera) == 0x000020, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_TopCamera' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MissionCheckDisable) == 0x000021, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MissionCheckDisable' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_StartSymbolAIDisable) == 0x000022, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_StartSymbolAIDisable' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ReturnPlayerPosition_1) == 0x000023, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ReturnPlayerPosition_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_UI_Immediate_1) == 0x000024, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_UI_Immediate_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventEncountID_3) == 0x000028, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventEncountID_3' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SpawnTransform_2) == 0x000030, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SpawnTransform_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextEventID_1) == 0x000060, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextEventID_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NowEventID_1) == 0x000064, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NowEventID_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Manual_1) == 0x000068, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Manual_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventId) == 0x00006C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventId' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_RestarPoint) == 0x000070, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_RestarPoint' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_BattlePoint_1) == 0x000078, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_BattlePoint_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_5) == 0x000080, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_5' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_4) == 0x000081, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_4' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapEventID) == 0x000084, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapEventID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_IsFade) == 0x000088, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_IsFade' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Hero) == 0x000089, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Hero' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_LevelList_1) == 0x000090, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_LevelList_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NameList) == 0x0000A0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NameList' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapID_2) == 0x0000B0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapID_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AreaID_1) == 0x0000B4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AreaID_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_3) == 0x0000B8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_3' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_2) == 0x0000B9, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_LevelList) == 0x0000C0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_LevelList' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_LevelNameList) == 0x0000D0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_LevelNameList' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapID_1) == 0x0000E0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapID_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AreaID) == 0x0000E4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AreaID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable_1) == 0x0000E8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enable) == 0x0000E9, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enable' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_BTLActor) == 0x0000F0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_BTLActor' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerPos) == 0x000100, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerPos' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_actor_2) == 0x000130, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_actor_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_IsEnable) == 0x000138, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_IsEnable' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Json_1) == 0x000140, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Json_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Json) == 0x000148, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Json' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapEventID_) == 0x000158, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapEventID_' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ReStartPoint) == 0x000160, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ReStartPoint' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_BattlePoint) == 0x000168, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_BattlePoint' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_InitFade) == 0x000170, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_InitFade' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_WaitEvent) == 0x000171, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_WaitEvent' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountID_3) == 0x000174, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountID_3' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EnemyList_2) == 0x000178, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EnemyList_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SafeZoneID_2) == 0x000188, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SafeZoneID_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualSafeZone_3) == 0x00018C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualSafeZone_3' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountType_2) == 0x00018D, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountType_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_HitMapAttack_3) == 0x00018E, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_HitMapAttack_3' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_AutoSave) == 0x00018F, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_AutoSave' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ReturnPlayerPosition) == 0x000190, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ReturnPlayerPosition' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_UI_Immediate) == 0x000191, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_UI_Immediate' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountAdd) == 0x000194, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountAdd' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MagatukaNum) == 0x000198, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MagatukaNum' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_IsMapChange) == 0x00019C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_IsMapChange' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_WarpPoint_2) == 0x0001A0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_WarpPoint_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FromEvent) == 0x0001A4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FromEvent' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_OtherMapReturn) == 0x0001A8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_OtherMapReturn' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Next) == 0x0001AC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Next' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Prev) == 0x0004C4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Prev' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextAreaId_1) == 0x0007DC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextAreaId_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_WarpPoint_1) == 0x0007E0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_WarpPoint_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FadeInTime_2) == 0x0007E4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FadeInTime_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountID_2) == 0x0007E8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountID_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EnemyList_1) == 0x0007F0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EnemyList_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SafeZoneID_1) == 0x000800, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SafeZoneID_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualSafeZone_2) == 0x000804, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualSafeZone_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ChainEncountInfo_1) == 0x000808, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ChainEncountInfo_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Magatsuhi_1) == 0x000828, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Magatsuhi_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_PlayerFirst) == 0x000829, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_PlayerFirst' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_actor_1) == 0x000830, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_actor_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Alpha_1) == 0x000838, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Alpha_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_TakaraID) == 0x00083C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_TakaraID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Index) == 0x000840, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Index' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Alpha) == 0x000844, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Alpha' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ActorLocation_1) == 0x000848, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ActorLocation_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_InactiveFlag) == 0x000854, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_InactiveFlag' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Owner_2) == 0x000860, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Owner_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Owner_1) == 0x000868, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Owner_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountID_1) == 0x000870, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountID_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EnemyList) == 0x000878, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EnemyList' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SafeZoneID) == 0x000888, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SafeZoneID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualSafeZone_1) == 0x00088C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualSafeZone_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountType_1) == 0x00088D, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountType_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventEncountID_2) == 0x000890, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventEncountID_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SpawnTransform_1) == 0x0008A0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SpawnTransform_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualWhenNotEscape_1) == 0x0008D0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualWhenNotEscape_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_HitMapAttack_2) == 0x0008D1, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_HitMapAttack_2' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountType) == 0x0008D2, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountType' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventEncountID_1) == 0x0008D4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventEncountID_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SafeZoeID) == 0x0008D8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SafeZoeID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualSafeZone) == 0x0008DC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualSafeZone' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_HitMapAttack_1) == 0x0008DD, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_HitMapAttack_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MapID) == 0x0008E0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MapID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Enum) == 0x0008E4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Enum' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_DataId_1) == 0x0008E8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_DataId_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_DataId) == 0x0008EC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_DataId' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_WarpPoint) == 0x0008F0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_WarpPoint' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FadeInTime_1) == 0x0008F4, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FadeInTime_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FadeInTime) == 0x0008F8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FadeInTime' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ActorLocation) == 0x0008FC, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ActorLocation' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_MissionId) == 0x000908, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_MissionId' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Owner) == 0x000910, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Owner' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EventEncountID) == 0x000918, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EventEncountID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextEventID) == 0x00091C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextEventID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NowEventID) == 0x000920, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NowEventID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Manual) == 0x000924, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Manual' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ChallengeMode) == 0x000925, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ChallengeMode' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Visible) == 0x000926, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Visible' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextMapId) == 0x000928, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextMapId' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_NextAreaId) == 0x00092C, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_NextAreaId' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_FadeCancel) == 0x000930, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_FadeCancel' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, CallFunc_GetMapCommon_rerutn) == 0x000938, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000940, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_bSuccess) == 0x000950, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_inFadeCancel) == 0x000951, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_inFadeCancel' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Stop) == 0x000952, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Stop' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Hidden) == 0x000953, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Hidden' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EnemyIdList) == 0x000958, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EnemyIdList' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountID) == 0x000968, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountID' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SpawnTransform) == 0x000970, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SpawnTransform' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_EncountPawn) == 0x0009A0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_EncountPawn' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_SymbolEncountType) == 0x0009A8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_SymbolEncountType' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ManualWhenNotEscape) == 0x0009A9, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ManualWhenNotEscape' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_HitMapAttack) == 0x0009AA, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_HitMapAttack' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_ChainEncountInfo) == 0x0009B0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_ChainEncountInfo' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_Magatsuhi) == 0x0009D0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_Magatsuhi' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_Event_actor) == 0x0009D8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_Event_actor' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, CallFunc_GetMapCommon_rerutn_1) == 0x0009E0, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::CallFunc_GetMapCommon_rerutn_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_AsBPI_Map_Common_1) == 0x0009E8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_AsBPI_Map_Common_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_bSuccess_1) == 0x0009F8, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, CallFunc_GetPlayerPawn_ReturnValue) == 0x000A00, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, CallFunc_BPI_IsEventPlay_IsPlay) == 0x000A08, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::CallFunc_BPI_IsEventPlay_IsPlay' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_AsCustom_Pawn) == 0x000A10, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_AsCustom_Pawn' has a wrong offset!");
-static_assert(offsetof(MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk, K2Node_DynamicCast_bSuccess_2) == 0x000A18, "Member 'MEH_NextEventStart_Walk_C_ExecuteUbergraph_MEH_NextEventStart_Walk::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
 }
 

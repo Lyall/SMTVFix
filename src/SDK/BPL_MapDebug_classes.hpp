@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "Project_structs.hpp"
 #include "E_MapSymbolLevelDiff_structs.hpp"
+#include "Project_structs.hpp"
 
 
 namespace SDK

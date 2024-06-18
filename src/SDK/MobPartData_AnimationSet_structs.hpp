@@ -20,7 +20,7 @@ struct FMobPartData_AnimationSet final
 {
 public:
 	int32                                         ID_2_55C3410E4F35AD286379019C14839511;             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_288E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26FB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UStaticMesh>             LeftHandProp_6_E7599D0E42518FA0B4898280D4B1B91F;   // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UStaticMesh>             RightHandProp_7_51EE60FC4A5AA6EF0A2BE586402F0316;  // 0x0030(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TArray<TSoftObjectPtr<class UAnimSequence>>   Animations_11_2D5B570B4A984887CD96E29FEFA35ED8;    // 0x0058(0x0010)(Edit, BlueprintVisible)

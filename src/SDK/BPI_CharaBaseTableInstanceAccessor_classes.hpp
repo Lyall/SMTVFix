@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "E_DEVIL_PERFORMANCE_TYPE_structs.hpp"
 #include "Project_structs.hpp"
+#include "E_DEVIL_PERFORMANCE_TYPE_structs.hpp"
 
 
 namespace SDK

@@ -24,7 +24,7 @@ struct FEncountPostTableData final
 public:
 	E_BTL_ENEMY_FIELD                             Field_3_3D6D0FAD430A74577D1B62998336A435;          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseDefault_6_7F20ED6B457A3ADB889490BF7E69A9EF;     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5AD8[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_558E[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        PostArray_12_8DC948FF4F7784271893519CC26A6240;     // 0x0008(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FVector>                        AddPostArray_13_555A3EFA4158A44B47B54B86E135FBE8;  // 0x0018(0x0010)(Edit, BlueprintVisible)
 };

@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "E_SORTWINDOW_ANIM_STATE_structs.hpp"
-#include "E_CATEGORYWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "Project_structs.hpp"
 #include "Project_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE_structs.hpp"
+#include "E_CATEGORYWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "E_SORTWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 
 
@@ -35,13 +35,13 @@ public:
 	class UWB_HealRecoveryAll_C*                  WBHealRecoveryAll;                                 // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Panelindex;                                        // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHAR_GL_FLAG                                battleentryflag;                                   // 0x04CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43B4[0x3];                                     // 0x04CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F43[0x3];                                     // 0x04CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Localindex;                                        // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Movesrccursorindex;                                // 0x04D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CAMPCHARAPANELCTRL_GSTATUS                  Maingstatus;                                       // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CAMPCHARAPANELCTRL_GSTATUS                  Changegstatus;                                     // 0x04D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsGstatusChange;                                   // 0x04DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43B5[0x1];                                     // 0x04DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F44[0x1];                                     // 0x04DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Padbutton;                                         // 0x04DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Padcursor;                                         // 0x04E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Movedstcursorindex;                                // 0x04E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -59,26 +59,26 @@ public:
 	struct FVector2D                              Mainpanelpos;                                      // 0x0514(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Stockpanelpos;                                     // 0x051C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CreatePanelFlag;                                   // 0x0524(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43B6[0x3];                                     // 0x0525(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F45[0x3];                                     // 0x0525(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Analyzepos;                                        // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsAnalyzeSkillList;                                // 0x0530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43B7[0x3];                                     // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F46[0x3];                                     // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AnalyzeDevilId;                                    // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPartySkillList;                                  // 0x0538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43B8[0x3];                                     // 0x0539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F47[0x3];                                     // 0x0539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Utsusemipos;                                       // 0x053C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUtsusemiSkillList;                               // 0x0544(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43B9[0x3];                                     // 0x0545(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F48[0x3];                                     // 0x0545(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         UtsusemiDevilId;                                   // 0x0548(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PadLR;                                             // 0x054C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AnalyzeNodataOnFlag;                               // 0x0550(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43BA[0x7];                                     // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F49[0x7];                                     // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUIStatusCtrlDataObjCampParty*          M_StatusData;                                      // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 M_StatusCtrlActor;                                 // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 M_StatusCharaModelChangerActor;                    // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUIStatusCtrlDataObjSimple*             M_AStatusData;                                     // 0x0570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_UICloseCount;                                    // 0x0578(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43BB[0x4];                                     // 0x057C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F4A[0x4];                                     // 0x057C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_StatusUICtrl_C>   M_StatusCtrl;                                      // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	TScriptInterface<class IBPI_StatusCharaChanger_C> M_StatusCharaModelChanger;                         // 0x0590(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	int32                                         AnimationMode;                                     // 0x05A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -89,37 +89,37 @@ public:
 	int32                                         Miitsugstatus;                                     // 0x05B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Usedeltacounter;                                   // 0x05B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsChangeSStatus;                                   // 0x05BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43BC[0x3];                                     // 0x05BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F4B[0x3];                                     // 0x05BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SStatusStep;                                       // 0x05C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SStatusType;                                       // 0x05C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_SimpeStatus_C>    BPISimpleStatus;                                   // 0x05C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsDeleteSStatusSkillList;                          // 0x05D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43BD[0x3];                                     // 0x05D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F4C[0x3];                                     // 0x05D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Srccursorindexbackup;                              // 0x05DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Srcoffsetcursorbackup;                             // 0x05E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Localoffset;                                       // 0x05E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         HelpType;                                          // 0x05E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUpdateUtsusemiHelpMessage;                       // 0x05EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsUpdateAnalyzeHelpMessage;                        // 0x05ED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43BE[0x2];                                     // 0x05EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F4D[0x2];                                     // 0x05EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Subgstatus;                                        // 0x05F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Padbuttond;                                        // 0x05F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SStatusStep0;                                      // 0x05F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMainTitleOff;                                    // 0x05FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsMainTitleOn;                                     // 0x05FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43BF[0x2];                                     // 0x05FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F4E[0x2];                                     // 0x05FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Analyzesubgstatus;                                 // 0x0600(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsDeleteStatusItemList;                            // 0x0604(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsRestartItemList;                                 // 0x0605(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43C0[0x2];                                     // 0x0606(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F4F[0x2];                                     // 0x0606(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Statuscursortype;                                  // 0x0608(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsRestartSkillList;                                // 0x060C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsMenuBGOn;                                        // 0x060D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsMenuBGOff;                                       // 0x060E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43C1[0x1];                                     // 0x060F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F50[0x1];                                     // 0x060F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Usesummonindexbk;                                  // 0x0610(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInParty;                                         // 0x0614(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43C2[0x3];                                     // 0x0615(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F51[0x3];                                     // 0x0615(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Kmoveindex;                                        // 0x0618(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Initanalyze;                                       // 0x061C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Sortsubstatus;                                     // 0x0620(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -128,166 +128,37 @@ public:
 	float                                         MW_WaitCloseTime;                                  // 0x062C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Statusstep;                                        // 0x0630(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsItemHelpDisp;                                    // 0x0634(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43C3[0x3];                                     // 0x0635(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F52[0x3];                                     // 0x0635(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Padupdown;                                         // 0x0638(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Statuscount;                                       // 0x063C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInitializePanel;                                 // 0x0640(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43C4[0x3];                                     // 0x0641(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F53[0x3];                                     // 0x0641(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Sortcount;                                         // 0x0644(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_StatusEnvironment_C*                Environment;                                       // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLoadingEnv;                                      // 0x0650(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43C5[0x3];                                     // 0x0651(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F54[0x3];                                     // 0x0651(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Initsubstatus;                                     // 0x0654(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Initsubindex;                                      // 0x0658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInitialized;                                     // 0x065C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_SORTWINDOW_MOUSE_EVENT_TYPE                 Sortmouseparam;                                    // 0x065D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43C6[0x2];                                     // 0x065E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F55[0x2];                                     // 0x065E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSortMouseBaseData                     Sortmousework;                                     // 0x0660(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          IsScrollBarHovered;                                // 0x0674(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_CATEGORYWINDOW_MOUSE_EVENT_TYPE             Mouse_Event_Type;                                  // 0x0675(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43C7[0x2];                                     // 0x0676(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F56[0x2];                                     // 0x0676(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Select_Category_Icon;                              // 0x0678(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCategoryWindow;                                  // 0x067C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43C8[0x3];                                     // 0x067D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F57[0x3];                                     // 0x067D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Oldtype;                                           // 0x0680(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Moveindex;                                         // 0x0684(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE         Sortskillsearchparam;                              // 0x0688(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43C9[0x3];                                     // 0x0689(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F58[0x3];                                     // 0x0689(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Itemsubstatus;                                     // 0x068C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Itempos;                                           // 0x0690(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Mainitemnumpos;                                    // 0x0694(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              Stockitemnumpos;                                   // 0x069C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ICampCharaPanelSetItemNumPosition(const struct FVector2D& InMainPosition, const struct FVector2D& InStockPosition, bool* OutParam);
-	void ICampCharaPanelGetMaxNumberOfItem(int32* OutLevel);
-	void ICampCharaPanelIsChangeParameter(bool* OutFlag);
-	void ICampCharaPanelLevelUpVisibleOff(bool* OutFlag);
-	void ICampCharaPanelRestartLevelUpVisible(bool* OutFlag);
-	void ICampCharaPanelRestartLevelUp(bool* OutFlag);
-	void ICampCharaPanelIsLevelUp(bool* OutLevelUp);
-	void ICampCharaPanelResetPartyMouseFlag(bool* OutParam);
-	void ICampCharaPanelResetPartyMouseFocus(bool* OutParam);
-	void ICampCharaPanelSetPartyMouseFocus(bool* OutParam);
-	void ICampCharaPanelInitializeProc(bool* OutParam);
-	void ICampCharaPanelIsInitialized(bool* OutFinished);
-	void ICampCharaPanelResetUnselectablePanel(bool* OutParam);
-	void ICampCharaPanelResetAllActorPanel(bool* OutParam);
-	void ICampCharaPanelGetPanelDispNumber(int32* OutNumber);
-	void ICampCharaPanelCalcCharaPanelMove(int32 InType, bool* OutParam);
-	void ICampCharaPanelResetStateItemHelp(bool* OutParam);
-	void ICampCharaPanelIsStateItemHelp(bool* OutParam);
-	void ICampCharaPanelSetAnalyzeButtoneHelp(bool* OutParam);
-	void ICampCharaPanelUpdate(bool* OutParam);
-	void ICampCharaPanelSetPartyOffsetByNkmIndex(int32 InNkmIndex, bool* OutParam);
-	void ICampCharaPanelResetAllNewIcon(bool* OutParam);
-	void ICampCharaPanelIsFinishedCharaPanel(bool* OutFinished);
-	void ICampCharaPanelSetSkillReserveHPMPParam(bool* OutParam);
-	void ICampCharaPanelResetMenuBGOffFlag(bool* OutParam);
-	void ICampCharaPanelResetMenuBGOnFlag(bool* OutParam);
-	void ICampCharaPanelIsMenuBGOff(bool* OutParam);
-	void ICampCharaPanelIsMenuBGOn(bool* OutParam);
-	void ICampCharaPanelIsRestartSkillList(bool* OutParam);
-	void ICampCharaPanelIsRestartItemList(bool* OutParam);
-	void ICampCharaPanelIsDeleteStatusItemList(bool* OutDelete);
-	void ICampCharaPanelResetTitleOnFlag(bool* OutParam);
-	void ICampCharaPanelIsMainTitleOn(bool* OutParam);
-	void ICampCharaPanelResetTitleOffFlag(bool* OutParam);
-	void ICampCharaPanelIsMainTitleOff(bool* OutParam);
-	void ICampCharaPanelSkillUserStatusCtrInit(int32 NkmIndex, bool IsParty, bool* Dummy);
-	void ICampCharaPanelSkillUserStatusCtrlStart(bool* Dummy);
-	void ICampCharaPanelSkillUserStatusCtrl(bool* IsEnd);
-	void ICampCharaPanelIsDeleteSStatusSkillList(bool* OutDelete);
-	void ICampCharaPanelGetSStatusStep(int32* OutStep);
-	void ICampCharaPanelGetSStatusType(int32* OutType);
-	void ICampCharaPanelGetUtsusemiCount(int32* OutNumber);
-	void ICampCharaPanelGetAnalyzeCount(int32* OutNumber);
-	void ICampCharaPanelIsNewIconOfAllUtsusemiOff(bool* OutParam);
-	void ICampCharaPanelIsNewIconOfAllAnalyzesOff(bool* OutParam);
-	void IIsCampCharaPanelSelectedUtsusemiSkillList(bool* OutParam);
-	void ICampCharaPanelGetUtsusemiDevilId(int32* OutDevilId);
-	void IIsCampCharaPanelSetUtsusemiSkillList(bool* OutParam);
-	void ICampCharaPanelUtsusemiProc(bool* IsCanseled);
-	void ICampCharaPanelGetPartyNkmIndex(int32* OutNkmIndex);
-	void IIsCampCharaPanelSetPartySkillList(bool* OutParam);
-	void ICampCharaPanelGetAnalyzeDevilId(int32* OutDevilId);
-	void IIsCampCharaPanelSetAnalyzeSkillList(bool* OutParam);
-	void ICampCharaPanelAnalyzeProc(bool* IsCanseled);
-	void ICampCharaPanelSkillGetCanselType(int32* OutType);
-	void IIsCampCharaPanelSkillWaitTargetList(bool* OutParam);
-	void ICampCharaPanelSkillUseProc(bool* IsCanseled);
-	void IICampCharaPaneltemGetCanselType(int32* OutType);
-	void IIsCampCharaPaneltemWaitTargetList(bool* OutParam);
-	void ICampCharaPanelItemUseProc(bool* IsCanseled);
-	void ICampCharaPanelProc(bool* IsCanseled);
-	void CheckMultipleItemButtonHelp();
-	void GetItemFirstTarget(int32 InIndex, int32* OutIndex);
-	void ClickedItemNumSelector(bool InClickedUp);
-	void UnbindItemNumSelectorEvent();
-	void BindItemNumSelectorEvent();
-	void SetMultipleItemSelectorPosition(int32 InIndex);
-	void CreateItemTargetList(int32 InFirstCursor);
-	void Gstatus_MultipleSelectionItem();
-	void Gstatus_ChangeParameter();
-	void Gstatus_ItemLevelUp();
-	void ItemSelectionProc(bool InDesideSEFlag);
-	void AnalyzeNewIconOff(int32 InEnemyType, int32 InCursorOffset, int32 InIndex);
-	void GetExtSortMouseParameter(E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE MouseEventType, int32 SelectLstIdx, int32 SelectSlotIdx, int32 ListScrollOffset, int32 SelectElementIdx);
-	void CalcUStatusButtonHelp(bool InOnlyUseFadeIn, int32 InType);
-	void ChangeAnalyzeCategoryWindow();
-	void ResetCategoryParameter();
-	void Analyze_Category_Window_Clicked(E_CATEGORYWINDOW_MOUSE_EVENT_TYPE MouseEventType, int32 SelectCategoryIcon);
-	void IsMouseClickedByMessageProc(bool* OutFinished);
-	void UnlockSortMouse();
-	void LockSortMouse();
-	void Get_Sort_Mouse_Parameter(E_SORTWINDOW_MOUSE_EVENT_TYPE MouseEventType, int32 SelectLstIdx, int32 SelectSlotIdx, int32 ListScrollOffset);
-	void CalcMouseWheelUtsusemi(int32* OutIndex);
-	void CalcMouseWheelAnalyze(int32* OutIndex);
-	void CalcMouseWheel(int32 InType, bool* OutCalcFlag, int32* OutIndex);
-	void IsPartyRectArea(bool* OutParam);
-	void GetMouseOnHovered(int32* OutIndex);
-	void GetMouseOnClicked(int32* OutIndex);
-	void ResetPartyMouseFlag();
-	void ResetPartyMouseFocus();
-	void SetPartyMouseFocus();
-	void Gstatus_ExtChangeSortUtsusemi();
-	void Gstatus_ExtSortUtsusemi();
-	void Gstatus_ExtSortSelectUtsusemi();
-	void Gstatus_ExtCalcSortUtsusemi();
-	void InitializeProc_StatusCharaModel();
-	void InitializeProc_StatusUI();
-	void InitializeProc_StatusCtrl();
-	void InitializeProc_StatusObj();
-	void InitializeProc_AllHealWindow();
-	void InitializeProc_PanelAttach();
-	void InitializeProc(bool* OutFinished);
-	void IsDispDeleteStockPanel(bool* OutParam);
-	void IsFinishedStatusEnd(bool* OutFinished);
-	void MovingCharaCursorCheckTopMenu();
-	void Padcheckcharamove();
-	void CalcCharaPanelMove();
-	void ClearSkillEffectAllSelectPanel();
-	void UpdateSkillEffectAllSelectPanel(bool InCreateFlag);
-	void ClearItemEffectAllSelectPanel();
-	void UpdateItemEffectAllSelectPanel(bool InCreateFlag);
-	void UpdateMW_FastState(bool* OnFast);
-	void UpdateMW_AutoWait();
-	void SetRecoveryAllAnimation();
-	void InitializeDeadPanelUnselectable(bool InUnselectablePanelOn, int32 InNkmIndex, int32 InIndex, bool* OutCheck);
-	void WaitFadeOutAStatus(bool InFinished, bool* OutFinished);
-	void SetFadeOutAStatus();
-	void IsFinishedPanelFadeIn(bool* OutFinished);
-	void CalcSelectedSkillPanel(int32 InSrc, int32 InOffset);
-	void CheckItemButtonHelp();
-	void CalcItemButtonHelp();
-	void CheckSkillButtonHelp();
-	void CalcSkillButtonHelp();
-	void MovingCharaCursorCheck(int32 InType);
-	void IsPanelDraw(int32 InIndex, int32 InCursorOffset, int32 InCheckCursorOffset, bool* OutRange);
-	void CalcAnalyzeBible(int32 InIndex, bool InParty);
-	void ResetTopMenuParam();
-	void SetTopMenuParam();
-	void CalcSelectedPanel(int32 InSrc, int32 InOffset);
 	void CalcPanelScrollBarRate(int32 InType);
 	void CheckPanelScrollBar(bool InDirectPlay);
 	void RestartNewIcon();
@@ -453,6 +324,135 @@ public:
 	void InitializeProcEvt_StatusUI();
 	void InitializeProcEvt_StatusCharaModel();
 	void ExecuteUbergraph_BP_CampCharaPanelCtrl(int32 EntryPoint);
+	void ICampCharaPanelSetItemNumPosition(const struct FVector2D& InMainPosition, const struct FVector2D& InStockPosition, bool* OutParam);
+	void ICampCharaPanelGetMaxNumberOfItem(int32* OutLevel);
+	void ICampCharaPanelIsChangeParameter(bool* OutFlag);
+	void ICampCharaPanelLevelUpVisibleOff(bool* OutFlag);
+	void ICampCharaPanelRestartLevelUpVisible(bool* OutFlag);
+	void ICampCharaPanelRestartLevelUp(bool* OutFlag);
+	void ICampCharaPanelIsLevelUp(bool* OutLevelUp);
+	void ICampCharaPanelResetPartyMouseFlag(bool* OutParam);
+	void ICampCharaPanelResetPartyMouseFocus(bool* OutParam);
+	void ICampCharaPanelSetPartyMouseFocus(bool* OutParam);
+	void ICampCharaPanelInitializeProc(bool* OutParam);
+	void ICampCharaPanelIsInitialized(bool* OutFinished);
+	void ICampCharaPanelResetUnselectablePanel(bool* OutParam);
+	void ICampCharaPanelResetAllActorPanel(bool* OutParam);
+	void ICampCharaPanelGetPanelDispNumber(int32* OutNumber);
+	void ICampCharaPanelCalcCharaPanelMove(int32 InType, bool* OutParam);
+	void ICampCharaPanelResetStateItemHelp(bool* OutParam);
+	void ICampCharaPanelIsStateItemHelp(bool* OutParam);
+	void ICampCharaPanelSetAnalyzeButtoneHelp(bool* OutParam);
+	void ICampCharaPanelUpdate(bool* OutParam);
+	void ICampCharaPanelSetPartyOffsetByNkmIndex(int32 InNkmIndex, bool* OutParam);
+	void ICampCharaPanelResetAllNewIcon(bool* OutParam);
+	void ICampCharaPanelIsFinishedCharaPanel(bool* OutFinished);
+	void ICampCharaPanelSetSkillReserveHPMPParam(bool* OutParam);
+	void ICampCharaPanelResetMenuBGOffFlag(bool* OutParam);
+	void ICampCharaPanelResetMenuBGOnFlag(bool* OutParam);
+	void ICampCharaPanelIsMenuBGOff(bool* OutParam);
+	void ICampCharaPanelIsMenuBGOn(bool* OutParam);
+	void ICampCharaPanelIsRestartSkillList(bool* OutParam);
+	void ICampCharaPanelIsRestartItemList(bool* OutParam);
+	void ICampCharaPanelIsDeleteStatusItemList(bool* OutDelete);
+	void ICampCharaPanelResetTitleOnFlag(bool* OutParam);
+	void ICampCharaPanelIsMainTitleOn(bool* OutParam);
+	void ICampCharaPanelResetTitleOffFlag(bool* OutParam);
+	void ICampCharaPanelIsMainTitleOff(bool* OutParam);
+	void ICampCharaPanelSkillUserStatusCtrInit(int32 NkmIndex, bool IsParty, bool* Dummy);
+	void ICampCharaPanelSkillUserStatusCtrlStart(bool* Dummy);
+	void ICampCharaPanelSkillUserStatusCtrl(bool* IsEnd);
+	void ICampCharaPanelIsDeleteSStatusSkillList(bool* OutDelete);
+	void ICampCharaPanelGetSStatusStep(int32* OutStep);
+	void ICampCharaPanelGetSStatusType(int32* OutType);
+	void ICampCharaPanelGetUtsusemiCount(int32* OutNumber);
+	void ICampCharaPanelGetAnalyzeCount(int32* OutNumber);
+	void ICampCharaPanelIsNewIconOfAllUtsusemiOff(bool* OutParam);
+	void ICampCharaPanelIsNewIconOfAllAnalyzesOff(bool* OutParam);
+	void IIsCampCharaPanelSelectedUtsusemiSkillList(bool* OutParam);
+	void ICampCharaPanelGetUtsusemiDevilId(int32* OutDevilId);
+	void IIsCampCharaPanelSetUtsusemiSkillList(bool* OutParam);
+	void ICampCharaPanelUtsusemiProc(bool* IsCanseled);
+	void ICampCharaPanelGetPartyNkmIndex(int32* OutNkmIndex);
+	void IIsCampCharaPanelSetPartySkillList(bool* OutParam);
+	void ICampCharaPanelGetAnalyzeDevilId(int32* OutDevilId);
+	void IIsCampCharaPanelSetAnalyzeSkillList(bool* OutParam);
+	void ICampCharaPanelAnalyzeProc(bool* IsCanseled);
+	void ICampCharaPanelSkillGetCanselType(int32* OutType);
+	void IIsCampCharaPanelSkillWaitTargetList(bool* OutParam);
+	void ICampCharaPanelSkillUseProc(bool* IsCanseled);
+	void IICampCharaPaneltemGetCanselType(int32* OutType);
+	void IIsCampCharaPaneltemWaitTargetList(bool* OutParam);
+	void ICampCharaPanelItemUseProc(bool* IsCanseled);
+	void ICampCharaPanelProc(bool* IsCanseled);
+	void CheckMultipleItemButtonHelp();
+	void GetItemFirstTarget(int32 InIndex, int32* OutIndex);
+	void ClickedItemNumSelector(bool InClickedUp);
+	void UnbindItemNumSelectorEvent();
+	void BindItemNumSelectorEvent();
+	void SetMultipleItemSelectorPosition(int32 InIndex);
+	void CreateItemTargetList(int32 InFirstCursor);
+	void Gstatus_MultipleSelectionItem();
+	void Gstatus_ChangeParameter();
+	void Gstatus_ItemLevelUp();
+	void ItemSelectionProc(bool InDesideSEFlag);
+	void AnalyzeNewIconOff(int32 InEnemyType, int32 InCursorOffset, int32 InIndex);
+	void GetExtSortMouseParameter(E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE MouseEventType, int32 SelectLstIdx, int32 SelectSlotIdx, int32 ListScrollOffset, int32 SelectElementIdx);
+	void CalcUStatusButtonHelp(bool InOnlyUseFadeIn, int32 InType);
+	void ChangeAnalyzeCategoryWindow();
+	void ResetCategoryParameter();
+	void Analyze_Category_Window_Clicked(E_CATEGORYWINDOW_MOUSE_EVENT_TYPE MouseEventType, int32 SelectCategoryIcon);
+	void IsMouseClickedByMessageProc(bool* OutFinished);
+	void UnlockSortMouse();
+	void LockSortMouse();
+	void Get_Sort_Mouse_Parameter(E_SORTWINDOW_MOUSE_EVENT_TYPE MouseEventType, int32 SelectLstIdx, int32 SelectSlotIdx, int32 ListScrollOffset);
+	void CalcMouseWheelUtsusemi(int32* OutIndex);
+	void CalcMouseWheelAnalyze(int32* OutIndex);
+	void CalcMouseWheel(int32 InType, bool* OutCalcFlag, int32* OutIndex);
+	void IsPartyRectArea(bool* OutParam);
+	void GetMouseOnHovered(int32* OutIndex);
+	void GetMouseOnClicked(int32* OutIndex);
+	void ResetPartyMouseFlag();
+	void ResetPartyMouseFocus();
+	void SetPartyMouseFocus();
+	void Gstatus_ExtChangeSortUtsusemi();
+	void Gstatus_ExtSortUtsusemi();
+	void Gstatus_ExtSortSelectUtsusemi();
+	void Gstatus_ExtCalcSortUtsusemi();
+	void InitializeProc_StatusCharaModel();
+	void InitializeProc_StatusUI();
+	void InitializeProc_StatusCtrl();
+	void InitializeProc_StatusObj();
+	void InitializeProc_AllHealWindow();
+	void InitializeProc_PanelAttach();
+	void InitializeProc(bool* OutFinished);
+	void IsDispDeleteStockPanel(bool* OutParam);
+	void IsFinishedStatusEnd(bool* OutFinished);
+	void MovingCharaCursorCheckTopMenu();
+	void Padcheckcharamove();
+	void CalcCharaPanelMove();
+	void ClearSkillEffectAllSelectPanel();
+	void UpdateSkillEffectAllSelectPanel(bool InCreateFlag);
+	void ClearItemEffectAllSelectPanel();
+	void UpdateItemEffectAllSelectPanel(bool InCreateFlag);
+	void UpdateMW_FastState(bool* OnFast);
+	void UpdateMW_AutoWait();
+	void SetRecoveryAllAnimation();
+	void InitializeDeadPanelUnselectable(bool InUnselectablePanelOn, int32 InNkmIndex, int32 InIndex, bool* OutCheck);
+	void WaitFadeOutAStatus(bool InFinished, bool* OutFinished);
+	void SetFadeOutAStatus();
+	void IsFinishedPanelFadeIn(bool* OutFinished);
+	void CalcSelectedSkillPanel(int32 InSrc, int32 InOffset);
+	void CheckItemButtonHelp();
+	void CalcItemButtonHelp();
+	void CheckSkillButtonHelp();
+	void CalcSkillButtonHelp();
+	void MovingCharaCursorCheck(int32 InType);
+	void IsPanelDraw(int32 InIndex, int32 InCursorOffset, int32 InCheckCursorOffset, bool* OutRange);
+	void CalcAnalyzeBible(int32 InIndex, bool InParty);
+	void ResetTopMenuParam();
+	void SetTopMenuParam();
+	void CalcSelectedPanel(int32 InSrc, int32 InOffset);
 
 public:
 	static class UClass* StaticClass()

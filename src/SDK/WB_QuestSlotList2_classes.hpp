@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Project_structs.hpp"
 #include "E_CampQuest_SsAnimState_structs.hpp"
+#include "Project_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -43,16 +43,16 @@ public:
 	float                                         SlotPaddingY;                                      // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SlotDispNum;                                       // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         OnCursorIdx;                                       // 0x02F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8ACE[0x4];                                     // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8445[0x4];                                     // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FCampQuestListData>             Debug_ListInfo;                                    // 0x02F8(0x0010)(Edit, BlueprintVisible)
 	int32                                         Debug_OnCursorIdx;                                 // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CampQuest_SsAnimState                       SlotAnimState;                                     // 0x030C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8ACF[0x3];                                     // 0x030D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8446[0x3];                                     // 0x030D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FrameIn_Interval;                                  // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         FrameIn_TimeCounter;                               // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FrameIn_SlotCounter;                               // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsDesignTime;                                      // 0x031C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8AD0[0x3];                                     // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8447[0x3];                                     // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnHoveredMouseToSlot;                              // 0x0320(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:

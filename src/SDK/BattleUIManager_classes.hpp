@@ -28,7 +28,7 @@ public:
 	TArray<class ABattleNumberActor_C*>           M_NumberActor;                                     // 0x00B8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	int32                                         M_SpawnIndex;                                      // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_InitializeFinished;                              // 0x00CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3B78[0x3];                                     // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3776[0x3];                                     // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   M_ObjectName;                                      // 0x00D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class UClass*                                 M_ObjectClass;                                     // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class ABattleUtilIconActor_C*>         M_UtilIconActor;                                   // 0x0100(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)

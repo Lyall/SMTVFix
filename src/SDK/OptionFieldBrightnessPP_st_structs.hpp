@@ -22,7 +22,7 @@ struct FOptionFieldBrightnessPP_st final
 {
 public:
 	class APostProcessVolume*                     PostProcessVolume_5_95D2D05A4855FB0B395A118921392FE4; // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC6[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8B18[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector4                               DefaultGainColor_7_1BF628A742EC34563490239C29D7C7C0; // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MainEnv_9_35BB273D43347D6BCFBD86BB0DC37DEC;        // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

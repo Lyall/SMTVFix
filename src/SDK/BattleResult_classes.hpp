@@ -27,7 +27,7 @@ public:
 	struct FBtlResultData                         M_ResultData;                                      // 0x0130(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FBtlParty>                      M_ResultParty;                                     // 0x0180(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          IsFinish;                                          // 0x0190(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7600[0x7];                                     // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7794[0x7];                                     // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             NewStartDispatcher;                                // 0x0198(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class ABP_ResultMain_C*                       M_NewResultMain;                                   // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<uint8>                                 Playerdevilarray;                                  // 0x01B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)

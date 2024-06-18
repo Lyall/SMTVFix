@@ -204,7 +204,7 @@ struct BPI_BattleParty_C_BI_DelFlag final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_PARTY_STAT                              Flag;                                              // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_333C[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EDD[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NoUse;                                             // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_DelFlag) == 0x000004, "Wrong alignment on BPI_BattleParty_C_BI_DelFlag");
@@ -235,7 +235,7 @@ struct BPI_BattleParty_C_BI_AddFlag2 final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_PARTY_STAT2                             Flag;                                              // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_333D[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EDE[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_AddFlag2) == 0x000004, "Wrong alignment on BPI_BattleParty_C_BI_AddFlag2");
@@ -251,7 +251,7 @@ struct BPI_BattleParty_C_BI_DelFlag2 final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_PARTY_STAT2                             Flag;                                              // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_333E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EDF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Ret;                                               // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_DelFlag2) == 0x000004, "Wrong alignment on BPI_BattleParty_C_BI_DelFlag2");
@@ -298,7 +298,7 @@ struct BPI_BattleParty_C_BI_GetPartyUnit final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_333F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaBaseAccessor_C> RetValue;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetPartyUnit) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetPartyUnit");
@@ -325,7 +325,7 @@ struct BPI_BattleParty_C_BI_GetCharaData final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3340[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlCharData                           RetValue;                                          // 0x0008(0x0148)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetCharaData) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetCharaData");
@@ -339,7 +339,7 @@ struct BPI_BattleParty_C_BI_GetPartyData final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3341[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE2[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlParty                              RetValue;                                          // 0x0010(0x0320)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetPartyData) == 0x000010, "Wrong alignment on BPI_BattleParty_C_BI_GetPartyData");
@@ -515,7 +515,7 @@ struct BPI_BattleParty_C_BI_GetName final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3342[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   RetValue;                                          // 0x0008(0x0018)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetName) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetName");
@@ -578,7 +578,7 @@ struct BPI_BattleParty_C_BI_SetPartyUnit final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3343[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaBaseAccessor_C> InUnit;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         DevilID;                                           // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_CHAR_TYPE                               Type;                                              // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -600,7 +600,7 @@ struct BPI_BattleParty_C_BI_SetPartyHomeTransform final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3344[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE5[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Data;                                              // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	bool                                          RetValue;                                          // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -700,7 +700,7 @@ struct BPI_BattleParty_C_BI_GetUseableSkillList final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3345[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  RetValue;                                          // 0x0008(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetUseableSkillList) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetUseableSkillList");
@@ -785,7 +785,7 @@ struct BPI_BattleParty_C_BI_GetPartyTransform final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3346[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE7[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RetValue;                                          // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetPartyTransform) == 0x000010, "Wrong alignment on BPI_BattleParty_C_BI_GetPartyTransform");
@@ -910,7 +910,7 @@ struct BPI_BattleParty_C_BI_ConditionMapGetSkillID final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_CNT                                     Type;                                              // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3347[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE8[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RetValue;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_ConditionMapGetSkillID) == 0x000004, "Wrong alignment on BPI_BattleParty_C_BI_ConditionMapGetSkillID");
@@ -1069,7 +1069,7 @@ struct BPI_BattleParty_C_BI_GetUseableSubSkillList final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3348[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EE9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  RetValue;                                          // 0x0008(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetUseableSubSkillList) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetUseableSubSkillList");
@@ -1150,7 +1150,7 @@ struct BPI_BattleParty_C_BI_GetActListForRelativeScale final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3349[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EEA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 RetValue;                                          // 0x0008(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetActListForRelativeScale) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetActListForRelativeScale");
@@ -1257,7 +1257,7 @@ struct BPI_BattleParty_C_BI_AddIsInfieldList final
 {
 public:
 	E_BTL_SIDE                                    Side;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_334A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EEB[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PartyIndex;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1273,7 +1273,7 @@ struct BPI_BattleParty_C_BI_GetSideActList final
 {
 public:
 	E_BTL_SIDE                                    Side;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_334B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EEC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 RetValue;                                          // 0x0008(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetSideActList) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetSideActList");
@@ -1430,7 +1430,7 @@ struct BPI_BattleParty_C_BI_GetSideIsTargetList final
 {
 public:
 	E_BTL_SIDE                                    Side;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_334C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EED[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 List;                                              // 0x0008(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetSideIsTargetList) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetSideIsTargetList");
@@ -1457,7 +1457,7 @@ struct BPI_BattleParty_C_BI_DelIsInFieldList final
 {
 public:
 	E_BTL_SIDE                                    Side;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_334D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EEE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PartyIndex;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NoUse;                                             // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -1499,7 +1499,7 @@ struct BPI_BattleParty_C_BI_EnemyInfoDrawSwitchAishouNoticeAll final
 {
 public:
 	int32                                         ActorIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_334E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EEF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<E_ATTRIBUTE_TYPE>                      DefenceAishou;                                     // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          IsShowAll;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Sw;                                                // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1605,7 +1605,7 @@ struct BPI_BattleParty_C_BI_GetNameAddID final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_334F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Param_Name;                                        // 0x0008(0x0018)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetNameAddID) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetNameAddID");
@@ -1619,7 +1619,7 @@ struct BPI_BattleParty_C_BI_GetAllIsInFieldPartyData final
 {
 public:
 	bool                                          IsTargetOnly;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3350[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBtlParty>                      PartyData;                                         // 0x0008(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetAllIsInFieldPartyData) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetAllIsInFieldPartyData");
@@ -1698,7 +1698,7 @@ struct BPI_BattleParty_C_BI_GetPartyHomeTransform final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3351[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF2[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Home;                                              // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetPartyHomeTransform) == 0x000010, "Wrong alignment on BPI_BattleParty_C_BI_GetPartyHomeTransform");
@@ -1738,7 +1738,7 @@ struct BPI_BattleParty_C_BI_GetMitamaAnalyzeData final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3352[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnalyzeData                           AnalyzeData;                                       // 0x0008(0x0050)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetMitamaAnalyzeData) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetMitamaAnalyzeData");
@@ -1753,7 +1753,7 @@ struct BPI_BattleParty_C_BI_GetKuishibariCureHP final
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_KUISHIBARI_LEVEL                            Level;                                             // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3353[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF4[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CureHp;                                            // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetKuishibariCureHP) == 0x000004, "Wrong alignment on BPI_BattleParty_C_BI_GetKuishibariCureHP");
@@ -1807,7 +1807,7 @@ struct BPI_BattleParty_C_BI_GetMagatsuhiDevilAnalyzeData final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3354[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnalyzeData                           AnalyzeData;                                       // 0x0008(0x0050)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetMagatsuhiDevilAnalyzeData) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetMagatsuhiDevilAnalyzeData");
@@ -1821,7 +1821,7 @@ struct BPI_BattleParty_C_BI_GetMagatsuhiDevilDropItemID final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3355[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 ItemIDArray;                                       // 0x0008(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetMagatsuhiDevilDropItemID) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetMagatsuhiDevilDropItemID");
@@ -1835,7 +1835,7 @@ struct BPI_BattleParty_C_BI_GetMagatsuhiDevilMagatsuhiSkill final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3356[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 SkillIDArray;                                      // 0x0008(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetMagatsuhiDevilMagatsuhiSkill) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetMagatsuhiDevilMagatsuhiSkill");
@@ -1903,7 +1903,7 @@ struct BPI_BattleParty_C_BI_GetBossRushChallengeModeAnalyzeData final
 {
 public:
 	int32                                         PartyIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3357[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EF8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnalyzeData                           AnalyzeData;                                       // 0x0008(0x0050)(Parm, OutParm)
 };
 static_assert(alignof(BPI_BattleParty_C_BI_GetBossRushChallengeModeAnalyzeData) == 0x000008, "Wrong alignment on BPI_BattleParty_C_BI_GetBossRushChallengeModeAnalyzeData");

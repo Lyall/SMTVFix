@@ -22,7 +22,7 @@ class UAnimNotify_ChangeEnableCharaDecal_C final : public UAnimNotify
 {
 public:
 	bool                                          Visible;                                           // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_1E9[0x7];                                      // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A35A[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         ComponentNames;                                    // 0x0040(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 	bool                                          HideInGame;                                        // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          IsFirstTimeOnly;                                   // 0x0051(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)

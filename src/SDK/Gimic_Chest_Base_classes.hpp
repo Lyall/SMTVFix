@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "E_MapGimmickHideReason_structs.hpp"
-#include "MapEventHit_Type_SHit_classes.hpp"
 #include "Project_structs.hpp"
+#include "MapEventHit_Type_SHit_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -35,13 +35,13 @@ public:
 	class USceneComponent*                        BoxScene;                                          // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         Timeline_Clear_Alpha_207E6C544F9897D92F97F38A670DF17E; // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Timeline_Clear__Direction_207E6C544F9897D92F97F38A670DF17E; // 0x03CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9B2[0x3];                                     // 0x03CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DBE[0x3];                                     // 0x03CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     Timeline_Clear;                                    // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Suichoku;                                          // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C9B3[0x3];                                     // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DBF[0x3];                                     // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               LocalKatamuki;                                     // 0x03DC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Katamukeru;                                        // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C9B4[0x7];                                     // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DC0[0x7];                                     // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInstanceDynamic*>       DMIList;                                           // 0x03F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FVector                                HitLocation;                                       // 0x0400(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                HitNormal;                                         // 0x040C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -52,7 +52,7 @@ public:
 	struct FPieceData                             PieceData;                                         // 0x0430(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	bool                                          IsOpen;                                            // 0x043C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          NotLimit;                                          // 0x043D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C9B5[0x2];                                     // 0x043E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DC1[0x2];                                     // 0x043E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PrevNum;                                           // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SaveId;                                            // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         AfterFlag;                                         // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -61,7 +61,7 @@ public:
 	struct FTakaraData                            TakaraData;                                        // 0x0454(0x0024)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	bool                                          Visible;                                           // 0x0478(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          SimpleEvent;                                       // 0x0479(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C9B6[0x6];                                     // 0x047A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DC2[0x6];                                     // 0x047A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 MovePiece_First;                                   // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MeshClear;                                         // 0x0488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ReadyToDestroy_ByPiece;                            // 0x0489(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -69,14 +69,14 @@ public:
 	bool                                          bCalledInfo_ByPiece;                               // 0x048B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	int32                                         HideReason;                                        // 0x048C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          VisibleFirstCheck;                                 // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C9B7[0x3];                                     // 0x0491(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DC3[0x3];                                     // 0x0491(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxDrawDistance;                                   // 0x0494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ManualMaxDrawDistance;                             // 0x0498(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          OverlapAfterLoad;                                  // 0x0499(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C9B8[0x6];                                     // 0x049A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DC4[0x6];                                     // 0x049A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_DG_RoomRotator_C*                   RoomRotator;                                       // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BaseCeiling;                                       // 0x04A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C9B9[0x3];                                     // 0x04A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DC5[0x3];                                     // 0x04A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMinimapIconTableHelper                IconHelper;                                        // 0x04AC(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	bool                                          OnceInitIcon;                                      // 0x04B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 

@@ -22,7 +22,7 @@ struct FEncountArea_Default_DiscoveryPattern final
 {
 public:
 	E_Symbol_Discovery                            DiscoveryPattern_25_D8DA7D014E6AED09A0D34EB72ACA7972; // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8FEE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_95CE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         EyeAngle_28_C243EC3D4DC53D5110BF26B6633215F6;      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         EyeLength_30_E58C7B814CDD5BCC792FB08972520594;     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         EyeWidth_32_13994C684C97A0D9EEDEF187C2754A94;      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

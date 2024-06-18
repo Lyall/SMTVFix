@@ -12,8 +12,8 @@
 
 #include "DaathTypeList_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "MapEventHit_Type_SHit_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Project_structs.hpp"
 
 
@@ -28,14 +28,14 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_DG_ToMove_C;                     // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	float                                         StopRateTimeline_StopRate_BD227A6543EF3F2BF1377D935F053607; // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            StopRateTimeline__Direction_BD227A6543EF3F2BF1377D935F053607; // 0x039C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B6C7[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     StopRateTimeline;                                  // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C6B8[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     StopRateTimeLine;                                  // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FPrimaryAssetId                        EnvStop;                                           // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         EffectDuration;                                    // 0x03B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B6C8[0x4];                                     // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C6B9[0x4];                                     // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ModelRef;                                          // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMinimapIconTableHelper                IconHelper;                                        // 0x03C8(0x000C)(Edit, BlueprintVisible, NoDestructor)
-	uint8                                         Pad_B6C9[0x4];                                     // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C6BA[0x4];                                     // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPrimaryAssetId>                EffectLevelArray;                                  // 0x03D8(0x0010)(Edit, BlueprintVisible)
 	float                                         TIME_LINE_SPEED;                                   // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TIME_LINE_WAIT;                                    // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -44,8 +44,8 @@ public:
 	void ExecuteUbergraph_BP_DG_ToMove(int32 EntryPoint);
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void EventHitAction();
-	void StopRateTimeline__UpdateFunc();
-	void StopRateTimeline__FinishedFunc();
+	void StopRateTimeLine__UpdateFunc();
+	void StopRateTimeLine__FinishedFunc();
 	void UserConstructionScript();
 	void LinkModel();
 	void MoveParticles();
@@ -69,7 +69,7 @@ static_assert(sizeof(ABP_DG_ToMove_C) == 0x0003F0, "Wrong size on ABP_DG_ToMove_
 static_assert(offsetof(ABP_DG_ToMove_C, UberGraphFrame_BP_DG_ToMove_C) == 0x000390, "Member 'ABP_DG_ToMove_C::UberGraphFrame_BP_DG_ToMove_C' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToMove_C, StopRateTimeline_StopRate_BD227A6543EF3F2BF1377D935F053607) == 0x000398, "Member 'ABP_DG_ToMove_C::StopRateTimeline_StopRate_BD227A6543EF3F2BF1377D935F053607' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToMove_C, StopRateTimeline__Direction_BD227A6543EF3F2BF1377D935F053607) == 0x00039C, "Member 'ABP_DG_ToMove_C::StopRateTimeline__Direction_BD227A6543EF3F2BF1377D935F053607' has a wrong offset!");
-static_assert(offsetof(ABP_DG_ToMove_C, StopRateTimeline) == 0x0003A0, "Member 'ABP_DG_ToMove_C::StopRateTimeline' has a wrong offset!");
+static_assert(offsetof(ABP_DG_ToMove_C, StopRateTimeLine) == 0x0003A0, "Member 'ABP_DG_ToMove_C::StopRateTimeLine' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToMove_C, EnvStop) == 0x0003A8, "Member 'ABP_DG_ToMove_C::EnvStop' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToMove_C, EffectDuration) == 0x0003B8, "Member 'ABP_DG_ToMove_C::EffectDuration' has a wrong offset!");
 static_assert(offsetof(ABP_DG_ToMove_C, ModelRef) == 0x0003C0, "Member 'ABP_DG_ToMove_C::ModelRef' has a wrong offset!");

@@ -25,7 +25,7 @@ class AMM_M061_E0243_C final : public ABP_EventMissionBase_Direct_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_MM_M061_E0243_C;                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         SelectIndex;                                       // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6357[0x4];                                     // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_97EC[0x4];                                     // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    SystemMessageAsset;                                // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class ACameraActor*>                   Camera;                                            // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class ATargetPoint*>                   Target;                                            // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
@@ -33,7 +33,7 @@ public:
 	class USoundAtomCue*                          BGM_Cue;                                           // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   UniteCtrl_Soft;                                    // 0x0308(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	struct FRyuketsuData                          NewVar_0;                                          // 0x0330(0x003C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	uint8                                         Pad_6358[0x4];                                     // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_97ED[0x4];                                     // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 DefCamera;                                         // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_EventCameraBlend_C*                 CameraBlender;                                     // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

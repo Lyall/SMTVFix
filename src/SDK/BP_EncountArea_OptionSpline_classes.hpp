@@ -24,7 +24,7 @@ public:
 	class USplineComponent*                       Spline;                                            // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	bool                                          SplineLoop;                                        // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_900E[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_95EF[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ABP_EncountArea_OptionHit_C*>    OtherDiscoveryHitList;                             // 0x0238(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 
 public:

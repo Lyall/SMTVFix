@@ -39,11 +39,11 @@ public:
 	int32                                         Oldcursor;                                         // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Localcursor;                                       // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Localmax;                                          // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_344A[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_62E4[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWB_MsgSelect_C*>                Msgselectwork;                                     // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          IsBuildLater;                                      // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_344B[0x3];                                     // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Defaultcursorpos;                                  // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_62E5[0x3];                                     // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         DefaultCursorPos;                                  // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnAnyItemClicked;                                  // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnAnyItemSelected;                                 // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
@@ -63,7 +63,7 @@ public:
 	void MessageSelectEnd();
 	void AddSelect();
 	void DecSelect();
-	void SetSelectCursorOffset(int32 Param_Defaultcursorpos, bool InInitPositionFlag);
+	void SetSelectCursorOffset(int32 Param_DefaultCursorPos, bool InInitPositionFlag);
 	void SetSelectMessage(class UScriptMessageAsset* ScriptMessageAsset, class FName Selectitem0, class FName Selectitem1, class FName Selectitem2, class FName Selectitem3, class FName Selectitem4, class FName Selectitem5, class FName Selectitem6, class FName Selectitem7);
 	void SetSelectCursorText(int32 CursorPos);
 	void SetSelectNewIcon(bool Argnewicon0, bool Argnewicon1, bool Argnewicon2, bool Argnewicon3, bool Argnewicon4);
@@ -120,7 +120,7 @@ static_assert(offsetof(UWB_MsgSelectMenu_C, Localcursor) == 0x0002CC, "Member 'U
 static_assert(offsetof(UWB_MsgSelectMenu_C, Localmax) == 0x0002D0, "Member 'UWB_MsgSelectMenu_C::Localmax' has a wrong offset!");
 static_assert(offsetof(UWB_MsgSelectMenu_C, Msgselectwork) == 0x0002D8, "Member 'UWB_MsgSelectMenu_C::Msgselectwork' has a wrong offset!");
 static_assert(offsetof(UWB_MsgSelectMenu_C, IsBuildLater) == 0x0002E8, "Member 'UWB_MsgSelectMenu_C::IsBuildLater' has a wrong offset!");
-static_assert(offsetof(UWB_MsgSelectMenu_C, Defaultcursorpos) == 0x0002EC, "Member 'UWB_MsgSelectMenu_C::Defaultcursorpos' has a wrong offset!");
+static_assert(offsetof(UWB_MsgSelectMenu_C, DefaultCursorPos) == 0x0002EC, "Member 'UWB_MsgSelectMenu_C::DefaultCursorPos' has a wrong offset!");
 static_assert(offsetof(UWB_MsgSelectMenu_C, OnAnyItemClicked) == 0x0002F0, "Member 'UWB_MsgSelectMenu_C::OnAnyItemClicked' has a wrong offset!");
 static_assert(offsetof(UWB_MsgSelectMenu_C, OnAnyItemSelected) == 0x000300, "Member 'UWB_MsgSelectMenu_C::OnAnyItemSelected' has a wrong offset!");
 

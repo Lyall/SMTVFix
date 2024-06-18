@@ -26,20 +26,20 @@ public:
 	class UArrowComponent*                        Arrow;                                             // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         _______0___Track_0_B594B434495027C44983C1935D6238DD; // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            _______0__Direction_B594B434495027C44983C1935D6238DD; // 0x0394(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89AC[0x3];                                     // 0x0395(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8704[0x3];                                     // 0x0395(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     _______0;                                          // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MoveEnable;                                        // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Walk_Manual;                                       // 0x03A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void FlagCh(bool* OK);
-	void ReceiveBeginPlay();
 	void _______0__FinishedFunc();
 	void _______0__UpdateFunc();
 	void BndEvt__Hit_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void Play();
 	void CallPlayWalkManual();
 	void ExecuteUbergraph_MapEventHit_Type_Walk(int32 EntryPoint);
+	void FlagCh(bool* OK);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

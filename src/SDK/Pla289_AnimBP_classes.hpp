@@ -26,7 +26,7 @@ namespace SDK
 class UPla289_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_9A64[0x8];                                     // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C26[0x8];                                     // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x02C8(0x0020)()
 	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x02E8(0x0020)()
@@ -65,18 +65,18 @@ public:
 	struct FRotator                               RootDeltaRotation;                                 // 0x0DC8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FVector                                RootOffset;                                        // 0x0DD4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LookAtEnable;                                      // 0x0DE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9A65[0x3];                                     // 0x0DE1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C27[0x3];                                     // 0x0DE1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MovementSpeed;                                     // 0x0DE4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                MovementInput;                                     // 0x0DE8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsRunMotion;                                       // 0x0DF4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9A66[0x3];                                     // 0x0DF5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C28[0x3];                                     // 0x0DF5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         RunMotionRate;                                     // 0x0DF8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9A67[0x4];                                     // 0x0DFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C29[0x4];                                     // 0x0DFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPoseAsset*                             TwistPoseAsset;                                    // 0x0E00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCustomPoseWeightTable*                 PoseWeightTable;                                   // 0x0E08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BodyIKAlpha;                                       // 0x0E10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BodyIKEnable;                                      // 0x0E14(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9A68[0x3];                                     // 0x0E15(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C2A[0x3];                                     // 0x0E15(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UPoseAsset*>                     TwistPoseList;                                     // 0x0E18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

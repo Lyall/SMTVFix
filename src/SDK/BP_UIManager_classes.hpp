@@ -29,7 +29,7 @@ public:
 	TSoftClassPtr<class UClass>                   M_CommonFadeWidget;                                // 0x0178(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   M_ScreenFadeObj;                                   // 0x01A0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	struct FColor                                 M_FadeBackColor;                                   // 0x01C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C84[0x4];                                     // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4567[0x4];                                     // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   M_CommonWindowCtrl;                                // 0x01D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   M_CommonHelpWindowCtrl;                            // 0x01F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   M_DialogWindowCtrl;                                // 0x0220(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)

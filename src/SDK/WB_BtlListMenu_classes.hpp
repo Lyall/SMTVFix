@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "BtlUIItemData_structs.hpp"
-#include "Btl_ListMenuPool_T_structs.hpp"
-#include "BtlUISkill_UseData_st_structs.hpp"
-#include "UMG_classes.hpp"
 #include "Btl_ListMenu_T_structs.hpp"
+#include "Engine_structs.hpp"
+#include "BtlUISkill_UseData_st_structs.hpp"
+#include "Btl_ListMenuPool_T_structs.hpp"
+#include "BtlUIItemData_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
@@ -39,11 +39,11 @@ public:
 	class UWB_BtlListMenuPart_C*                  WB_Cursor;                                         // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWB_ScrollBar_C*                        WB_ScrollBar;                                      // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          IsSkill;                                           // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5A31[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_549E[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBtl_ListMenuPool_T>            MenuPartsPool;                                     // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          IsPartsCreated;                                    // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsAppeared;                                        // 0x02D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5A32[0x2];                                     // 0x02DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_549F[0x2];                                     // 0x02DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CursorIndex;                                       // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FBtlUISkill_UseData_st>         SkillData;                                         // 0x02E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FBtlUIItemData>                 ItemData;                                          // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -53,7 +53,7 @@ public:
 	float                                         ScrollPos;                                         // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInputEnable;                                     // 0x031C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsCursorMovable;                                   // 0x031D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5A33[0x2];                                     // 0x031E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54A0[0x2];                                     // 0x031E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             Evt_SetHelpMes;                                    // 0x0320(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<class UWB_BtlListMenuPart_C*>          ReservedRemoveParts;                               // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	int32                                         MaxListLength;                                     // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -61,7 +61,7 @@ public:
 	bool                                          IsListMoving;                                      // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Disappeared;                                       // 0x0349(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsScrollMoving;                                    // 0x034A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5A34[0x5];                                     // 0x034B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54A1[0x5];                                     // 0x034B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             Evt_OnListMenuCursorMove;                          // 0x0350(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             Evt_OnListMenuSelected;                            // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 

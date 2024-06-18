@@ -22,11 +22,11 @@ class UBPL_BattleRotationUtilities_C final : public UBlueprintFunctionLibrary
 {
 public:
 	static struct FRotator Find_Look_at_Rotation_with_UpVec(const struct FVector& Start, const struct FVector& Target, const struct FVector& UpVec, class UObject* __WorldContext);
-	static void RInterp_To_with_UpVec(const struct FRotator& Current, const struct FRotator& Target, float Delta_Time, float Interp_Speed, const struct FVector& Up_Vec, class UObject* __WorldContext, struct FRotator* Return_Value);
-	static void RInterp_To_with_UpVec_Fix(const struct FRotator& Current, const struct FRotator& Target, float Delta_Time, float Interp_Speed, const struct FVector& Up_Vec, class UObject* __WorldContext, struct FRotator* Return_Value);
+	static void RInterp_To_with_UpVec(const struct FRotator& Current, const struct FRotator& Target, float Delta_time, float Interp_Speed, const struct FVector& Up_Vec, class UObject* __WorldContext, struct FRotator* Return_Value);
+	static void RInterp_To_with_UpVec_Fix(const struct FRotator& Current, const struct FRotator& Target, float Delta_time, float Interp_Speed, const struct FVector& Up_Vec, class UObject* __WorldContext, struct FRotator* Return_Value);
 	static struct FRotator Find_Look_at_Rotation_with_UpVec_Fix(const struct FVector& Start, const struct FVector& Target, const struct FVector& UpVec, class UObject* __WorldContext);
 	static void RotateTransformByAxisAndDeg(const struct FTransform& InTrans, const struct FVector& Axis, float Deg, class UObject* __WorldContext, struct FTransform* RotatedTrans);
-	static void RInterp_To_UpVec_Considered(const struct FRotator& Current, const struct FRotator& Target, float Delta_Time, float Interp_Speed, class UObject* __WorldContext, struct FRotator* Return_Value);
+	static void RInterp_To_UpVec_Considered(const struct FRotator& Current, const struct FRotator& Target, float Delta_time, float Interp_Speed, class UObject* __WorldContext, struct FRotator* Return_Value);
 	static struct FRotator Find_Look_at_Rotation_ZOnly(const struct FVector& Start, const struct FVector& Target, const struct FVector& UpVec, bool ZOnly, class UObject* __WorldContext);
 
 public:

@@ -30,9 +30,9 @@ public:
 	struct FPrimaryAssetId                        EnvLevelID;                                        // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FPrimaryAssetId>                AreaEnvLevelIDs;                                   // 0x00D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          OptionBrightnessActive;                            // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_80BB[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8AFA[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPrimaryAssetId                        SpecialEnvLevelID;                                 // 0x00E4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_80BC[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8AFB[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FOptionFieldBrightnessPP_st>    PostInfoList;                                      // 0x00F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FPrimaryAssetId>                GardenEnvLevelIDs;                                 // 0x0108(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 

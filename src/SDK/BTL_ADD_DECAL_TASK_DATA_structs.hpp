@@ -27,7 +27,7 @@ public:
 	struct FRotator                               Rotation_10_1D599BC14C84CCD1F086448D07AF988C;      // 0x0018(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         RotationRandMin_13_46EAB1444FA0532B2EB31B97A6438F16; // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RotationRandMax_15_A44D336646E5F8ABC4100A997F56D9A8; // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5ECE[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F39[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleSkillActionBase_C> SkillAction_18_3D0BDC054FEF585DB7F2A2B58A94860D;   // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(FBTL_ADD_DECAL_TASK_DATA) == 0x000008, "Wrong alignment on FBTL_ADD_DECAL_TASK_DATA");

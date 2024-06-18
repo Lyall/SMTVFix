@@ -71,29 +71,29 @@ void ABP_DG_ToMove_C::EventHitAction()
 }
 
 
-// Function BP_DG_ToMove.BP_DG_ToMove_C.StopRateTimeline__UpdateFunc
+// Function BP_DG_ToMove.BP_DG_ToMove_C.StopRateTimeLine__UpdateFunc
 // (BlueprintEvent)
 
-void ABP_DG_ToMove_C::StopRateTimeline__UpdateFunc()
+void ABP_DG_ToMove_C::StopRateTimeLine__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DG_ToMove_C", "StopRateTimeline__UpdateFunc");
+		Func = Class->GetFunction("BP_DG_ToMove_C", "StopRateTimeLine__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_DG_ToMove.BP_DG_ToMove_C.StopRateTimeline__FinishedFunc
+// Function BP_DG_ToMove.BP_DG_ToMove_C.StopRateTimeLine__FinishedFunc
 // (BlueprintEvent)
 
-void ABP_DG_ToMove_C::StopRateTimeline__FinishedFunc()
+void ABP_DG_ToMove_C::StopRateTimeLine__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DG_ToMove_C", "StopRateTimeline__FinishedFunc");
+		Func = Class->GetFunction("BP_DG_ToMove_C", "StopRateTimeLine__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

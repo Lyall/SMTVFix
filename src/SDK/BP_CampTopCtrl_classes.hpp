@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "E_CAMPTOPCTRL_GSTATUS_structs.hpp"
 #include "Engine_structs.hpp"
-#include "E_SaveLoadEndType_structs.hpp"
-#include "Project_structs.hpp"
-#include "Project_classes.hpp"
+#include "E_CAMPTOPCTRL_GSTATUS_structs.hpp"
 #include "E_CAMP_SYSTEM_STATE_structs.hpp"
 #include "E_CampQuest_CtrlState_structs.hpp"
+#include "Project_structs.hpp"
+#include "Project_classes.hpp"
+#include "E_SaveLoadEndType_structs.hpp"
 
 
 namespace SDK
@@ -33,92 +33,89 @@ public:
 	bool                                          IsGstatusChange;                                   // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_CAMPTOPCTRL_GSTATUS                         Maingstatus;                                       // 0x02A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CAMPTOPCTRL_GSTATUS                         Changegstatus;                                     // 0x02A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8BB4[0x5];                                     // 0x02A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F57[0x5];                                     // 0x02A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   SORCampCharaPanelCtrl;                             // 0x02A8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CampCharaPanelCtrl_C> BPICampCharaPanelCtrl;                             // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsLoadedActor;                                     // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_WIDGET_PRIO                                 WidgetPriority;                                    // 0x02E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8BB5[0x2];                                     // 0x02E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F58[0x2];                                     // 0x02E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Topmenucursor;                                     // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Padbutton;                                         // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Padcursor;                                         // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFinished;                                        // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BB6[0x7];                                     // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F59[0x7];                                     // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   SORCampItemCtrl;                                   // 0x02F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CampItemCtrl_C>   BPICampItemCtrl;                                   // 0x0320(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsLoadedCharaPanel;                                // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsLoadedCampItemCtrl;                              // 0x0331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsLoadedCampSkillCtrl;                             // 0x0332(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BB7[0x5];                                     // 0x0333(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F5A[0x5];                                     // 0x0333(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 DestroyCampCharaPanelCtrl;                         // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 DestroyCampItemCtrl;                               // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectedItemId;                                    // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsedPillar;                                      // 0x034C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BB8[0x3];                                     // 0x034D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F5B[0x3];                                     // 0x034D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   SORCampSkillCtrl;                                  // 0x0350(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CampSkillCtrl_C>  BPICampSkillCtrl;                                  // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class AActor*                                 DestroyCampSkillCtrl;                              // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Oldskillnkmindex;                                  // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8BB9[0x4];                                     // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F5C[0x4];                                     // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   SORCampQuestCtrl2;                                 // 0x0398(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class AActor*                                 DestroyCampQuestCtrl2;                             // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CampQuestCtrl2_C> BPICampQuestCtrl2;                                 // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsLoadedCampQuestCtrl;                             // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BBA[0x3];                                     // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F5D[0x3];                                     // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Systemmenucursor;                                  // 0x03DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Testcounter;                                       // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_loadFadeTime;                                    // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_canSystemTick;                                   // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_CAMP_SYSTEM_STATE                           M_systemState;                                     // 0x03E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8BBB[0x6];                                     // 0x03EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F5E[0x6];                                     // 0x03EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   M_optionCtrl_Soft;                                 // 0x03F0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class AActor*                                 M_optionCtrl;                                      // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsNewIconUtsusemi;                                 // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsNewIconQuest;                                    // 0x0421(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsNewIconAnalyze;                                  // 0x0422(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BBC[0x5];                                     // 0x0423(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F5F[0x5];                                     // 0x0423(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIMovieCtrl_C>    BPIMovieCtrl;                                      // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EnableMovieCtrl;                                   // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BBD[0x3];                                     // 0x0439(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F60[0x3];                                     // 0x0439(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TopMenuInitColorType;                              // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Endwaitcounter;                                    // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Substatus;                                         // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Confirmgstatus;                                    // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsBackSystemMenu;                                  // 0x044C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsJmupTitle;                                       // 0x044D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BBE[0x2];                                     // 0x044E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F61[0x2];                                     // 0x044E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Returntitlestep;                                   // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Adddeltatime;                                      // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Countuptime;                                       // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Itemusesubstatus;                                  // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInitializedOpen;                                 // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BBF[0x3];                                     // 0x0461(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F62[0x3];                                     // 0x0461(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Substep;                                           // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   SORSaveCtrl;                                       // 0x0468(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class AActor*                                 SaveCtrl;                                          // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsNewIconSkill;                                    // 0x0498(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsNewIconItem;                                     // 0x0499(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsNewIconParty;                                    // 0x049A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BC0[0x1];                                     // 0x049B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F63[0x1];                                     // 0x049B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Topmenumouseindex;                                 // 0x049C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Systemmenumouseindex;                              // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8BC1[0x4];                                     // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F64[0x4];                                     // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   SORCampHelpCtrl;                                   // 0x04A8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CampHelpCtrl_C>   BPICampHelpCtrl;                                   // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class AActor*                                 DestroyCampHelpCtrl;                               // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLoadedCampHelpCtrl;                              // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsGarden;                                          // 0x04E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsNotSave;                                         // 0x04EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BC2[0x5];                                     // 0x04EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F65[0x5];                                     // 0x04EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   SORCampResult;                                     // 0x04F0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class AActor*                                 CampResult;                                        // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PrevMapId;                                         // 0x0520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PrevAreaId;                                        // 0x0524(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ICampTopIsReturnTitle(bool* OutReturnTitle);
-	void ICampTopGetUsedPillar(bool* OutParam);
-	void ICampTopIsFinished(bool* OutFinished);
 	void GSubstatus_CampChangeParameter(bool* OurFinished);
 	void GSubstatus_CampResult(bool* OurFinished);
 	void CalcIconHelp(bool* OutProc);
@@ -217,6 +214,9 @@ public:
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_CampTopCtrl(int32 EntryPoint);
+	void ICampTopIsReturnTitle(bool* OutReturnTitle);
+	void ICampTopGetUsedPillar(bool* OutParam);
+	void ICampTopIsFinished(bool* OutFinished);
 
 public:
 	static class UClass* StaticClass()

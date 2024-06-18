@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SymbolActPattern_structs.hpp"
 #include "SymbolSplinePointAct_structs.hpp"
 #include "E_Symbol_Discovery_structs.hpp"
-#include "SymbolActPattern_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -27,32 +27,32 @@ public:
 	TArray<struct FSymbolActPattern>              FirstActPatterns_32_FA397D674A6CBBDAA280AAA7953436C4; // 0x0000(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FSymbolActPattern>              SecondActPatterns_34_5F696A1840D7E0FBE7C345B7F8290D35; // 0x0010(0x0010)(Edit, BlueprintVisible)
 	E_Symbol_Discovery                            DiscoveryPattern_8_89895D334DF697DA2DEDB3866E78FF51; // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6318[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61E6[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         EyeAngle_12_B9C90E994E8516850E5D8FBC1F3EC487;      // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         EyeLength_13_8844CF0A4CE07904597CB6B9EDAF10E3;     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6319[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61E7[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         SummonAreaList_24_F26EBC714F454B1644A622B6F16334F0; // 0x0030(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<struct FSymbolSplinePointAct>          SplinePointAct_28_262EB9E9401A876CE6E3B796991970D0; // 0x0040(0x0010)(Edit, BlueprintVisible)
 	bool                                          WallKantsu_42_CDCAF982450835B3863BC587A92C8345;    // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_631A[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61E8[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DiscoveryTeam_46_23E7C9194532DFF02CE196805AABD4AA; // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSymbolActPattern>              GiveUpPatterns_50_8849DAD04DAE76886EF6AFA244A50C3D; // 0x0058(0x0010)(Edit, BlueprintVisible)
 	int32                                         SpawnSplinePoint_53_3129A17D46877963DF9334B697006416; // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFirstDiscovery_55_09B562E54DE14FC00D9217A6DE19E855; // 0x006C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_631B[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61E9[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSymbolActPattern>              NoRoutePatterns_60_28F96121408BD081F056E0AA730907B0; // 0x0070(0x0010)(Edit, BlueprintVisible)
 	bool                                          IsSpeedRandom_62_93BD5A444A20D6A3BCBF83A1F963A9FF; // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_631C[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61EA[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         EyeWidth_66_78930648431B24DFD7947BAD7853D32B;      // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         EyeHeight_70_D0C486CE440DFC3765FFBAA20F550322;     // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_631D[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61EB[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         ChainDiscoveryAreas_75_B677CA1845A4CFFEB4E4F79944F2716B; // 0x0090(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	bool                                          IsFly_77_59DD43EB425BAA6BA98B688CE098DDD1;         // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsTalkStart_79_C8BB29F54438AD08F224BB92794B83A6;   // 0x00A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ReSpawn_92_E52877B942DAA255D531D28C2857A89B;       // 0x00A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Discovery_LevelDifference_95_430093B64C48E29F2912338D7CCC2223; // 0x00A3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          DirtEffect_97_239764ED48877FC4F8E224ABFA630A2B;    // 0x00A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_631E[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61EC[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnLocation_100_3D0230054B50AB97CEC46CAC3DA4744A; // 0x00A8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnLocationManual_103_5F7ED6A24D926BB9F3CE6DBE8CE6506F; // 0x00B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

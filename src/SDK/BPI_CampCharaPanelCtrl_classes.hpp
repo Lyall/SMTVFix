@@ -22,23 +22,6 @@ namespace SDK
 class IBPI_CampCharaPanelCtrl_C final : public IInterface
 {
 public:
-	void ICampCharaPanelSetItemNumPosition(const struct FVector2D& InMainPosition, const struct FVector2D& InStockPosition, bool* OutParam);
-	void ICampCharaPanelGetMaxNumberOfItem(int32* OutLevel);
-	void ICampCharaPanelIsChangeParameter(bool* OutFlag);
-	void ICampCharaPanelLevelUpVisibleOff(bool* OutFlag);
-	void ICampCharaPanelRestartLevelUpVisible(bool* OutFlag);
-	void ICampCharaPanelRestartLevelUp(bool* OutFlag);
-	void ICampCharaPanelIsLevelUp(bool* OutLevelUp);
-	void ICampCharaPanelResetPartyMouseFlag(bool* OutParam);
-	void ICampCharaPanelResetPartyMouseFocus(bool* OutParam);
-	void ICampCharaPanelSetPartyMouseFocus(bool* OutParam);
-	void ICampCharaPanelInitializeProc(bool* OutParam);
-	void ICampCharaPanelIsInitialized(bool* OutFinished);
-	void ICampCharaPanelResetUnselectablePanel(bool* OutParam);
-	void ICampCharaPanelResetAllActorPanel(bool* OutParam);
-	void ICampCharaPanelGetPanelDispNumber(int32* OutNumber);
-	void ICampCharaPanelCalcCharaPanelMove(int32 InType, bool* OutParam);
-	void ICampCharaPanelResetStateItemHelp(bool* OutParam);
 	void ICampCharaPanelIsStateItemHelp(bool* OutParam);
 	void ICampCharaPanelSetAnalyzeButtoneHelp(bool* OutParam);
 	void ICampCharaPanelUpdate(bool* OutParam);
@@ -107,6 +90,23 @@ public:
 	void ICampCharaPanelRemove();
 	void ICampCharaPanelSetPanelType(int32 InIndex, int32 InType);
 	void ICampCharaPanelCreate(E_WIDGET_PRIO InPrio, const struct FVector2D& InMainPosition, const struct FVector2D& InStockPosition);
+	void ICampCharaPanelSetItemNumPosition(const struct FVector2D& InMainPosition, const struct FVector2D& InStockPosition, bool* OutParam);
+	void ICampCharaPanelGetMaxNumberOfItem(int32* OutLevel);
+	void ICampCharaPanelIsChangeParameter(bool* OutFlag);
+	void ICampCharaPanelLevelUpVisibleOff(bool* OutFlag);
+	void ICampCharaPanelRestartLevelUpVisible(bool* OutFlag);
+	void ICampCharaPanelRestartLevelUp(bool* OutFlag);
+	void ICampCharaPanelIsLevelUp(bool* OutLevelUp);
+	void ICampCharaPanelResetPartyMouseFlag(bool* OutParam);
+	void ICampCharaPanelResetPartyMouseFocus(bool* OutParam);
+	void ICampCharaPanelSetPartyMouseFocus(bool* OutParam);
+	void ICampCharaPanelInitializeProc(bool* OutParam);
+	void ICampCharaPanelIsInitialized(bool* OutFinished);
+	void ICampCharaPanelResetUnselectablePanel(bool* OutParam);
+	void ICampCharaPanelResetAllActorPanel(bool* OutParam);
+	void ICampCharaPanelGetPanelDispNumber(int32* OutNumber);
+	void ICampCharaPanelCalcCharaPanelMove(int32 InType, bool* OutParam);
+	void ICampCharaPanelResetStateItemHelp(bool* OutParam);
 
 public:
 	static class UClass* StaticClass()

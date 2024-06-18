@@ -25,7 +25,7 @@ class ABP_NaviDevilCtrl_C final : public ABP_NaviDevilCtrlBase_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          CheckGimmickExist;                                 // 0x0278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BD5D[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_875E[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FNaviDevilGimmickActors>        GimmickInfo;                                       // 0x0280(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

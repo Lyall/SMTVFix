@@ -21,7 +21,7 @@ struct EsNPC_m061_34_C_ExecuteUbergraph_esNPC_m061_34 final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetActive_IsActive;                       // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9DEC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A13E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Character_SpawnActor;                     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(EsNPC_m061_34_C_ExecuteUbergraph_esNPC_m061_34) == 0x000008, "Wrong alignment on EsNPC_m061_34_C_ExecuteUbergraph_esNPC_m061_34");

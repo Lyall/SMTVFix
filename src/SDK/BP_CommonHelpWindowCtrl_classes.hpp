@@ -34,7 +34,7 @@ public:
 	bool                                          IsFinishedOpenWindow;                              // 0x023B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsFinishedCloseWindow;                             // 0x023C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsAddWidgetFlag;                                   // 0x023D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7ED8[0x2];                                     // 0x023E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7EF9[0x2];                                     // 0x023E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    CHelpWindowSIndexSMA;                              // 0x0240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UScriptMessageAsset*                    CHelpWindowSLabelSMA;                              // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UScriptMessageAsset*                    CHelpWindowSRIndexSMA;                             // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -22,24 +22,24 @@ struct BPL_DevilDMAssetTable_C_GetDevilDMAssetID final
 {
 public:
 	int32                                         DevilID;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_305D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B11[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UDestructibleMesh>       DM;                                                // 0x0010(0x0028)(Parm, OutParm, HasGetValueTypeHash)
 	bool                                          IsValid;                                           // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_305E[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B12[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UDestructibleMesh>       Lo_DMAsset;                                        // 0x0040(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         Lo_DevilID;                                        // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_305F[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Lo_DevilId;                                        // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6B13[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_DevilAssetTableInstanceAccessor_C> CallFunc_GetDevilAssetTableInstance_Instance;      // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GetDevilAssetTableInstance_isValid;       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3060[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B14[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UDestructibleMesh>       CallFunc_FindMDAsset_AssetData;                    // 0x0088(0x0028)(HasGetValueTypeHash)
 	struct FDevilAssetTable_Raw                   CallFunc_BI_GetDevilAsset_AssetData;               // 0x00B0(0x00B0)()
 	bool                                          CallFunc_BI_GetDevilAsset_IsValid;                 // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CopySoftObjRef_ReturnValue;               // 0x0162(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValidSoftObjRef_ReturnValue;            // 0x0163(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3061[0x4];                                     // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B15[0x4];                                     // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_LeftPad_ReturnValue;                      // 0x0178(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -53,7 +53,7 @@ static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, __WorldContext
 static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, DM) == 0x000010, "Member 'BPL_DevilDMAssetTable_C_GetDevilDMAssetID::DM' has a wrong offset!");
 static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, IsValid) == 0x000038, "Member 'BPL_DevilDMAssetTable_C_GetDevilDMAssetID::IsValid' has a wrong offset!");
 static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, Lo_DMAsset) == 0x000040, "Member 'BPL_DevilDMAssetTable_C_GetDevilDMAssetID::Lo_DMAsset' has a wrong offset!");
-static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, Lo_DevilID) == 0x000068, "Member 'BPL_DevilDMAssetTable_C_GetDevilDMAssetID::Lo_DevilID' has a wrong offset!");
+static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, Lo_DevilId) == 0x000068, "Member 'BPL_DevilDMAssetTable_C_GetDevilDMAssetID::Lo_DevilId' has a wrong offset!");
 static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, CallFunc_GetDevilAssetTableInstance_Instance) == 0x000070, "Member 'BPL_DevilDMAssetTable_C_GetDevilDMAssetID::CallFunc_GetDevilAssetTableInstance_Instance' has a wrong offset!");
 static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, CallFunc_GetDevilAssetTableInstance_isValid) == 0x000080, "Member 'BPL_DevilDMAssetTable_C_GetDevilDMAssetID::CallFunc_GetDevilAssetTableInstance_isValid' has a wrong offset!");
 static_assert(offsetof(BPL_DevilDMAssetTable_C_GetDevilDMAssetID, CallFunc_FindMDAsset_AssetData) == 0x000088, "Member 'BPL_DevilDMAssetTable_C_GetDevilDMAssetID::CallFunc_FindMDAsset_AssetData' has a wrong offset!");
@@ -74,12 +74,12 @@ struct BPL_DevilDMAssetTable_C_FindMDAsset final
 {
 public:
 	int32                                         EnemyID;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3062[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B16[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UDestructibleMesh>       AssetData;                                         // 0x0010(0x0028)(Parm, OutParm, HasGetValueTypeHash)
 	TSoftObjectPtr<class UDestructibleMesh>       DMAsset;                                           // 0x0038(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3063[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B17[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0068(0x0010)(ReferenceParm)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FDevilAssetTable_Raw                   CallFunc_GetDataTableRowFromName_OutRow;           // 0x0080(0x00B0)()

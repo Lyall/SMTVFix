@@ -17,74 +17,6 @@
 namespace SDK
 {
 
-// Function BP_TokyoMapUI.BP_TokyoMapUI_C.Start
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_TokyoMapUI_C::Start()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TokyoMapUI_C", "Start");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TokyoMapUI_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TokyoMapUI_C", "ReceiveTick");
-
-	Params::BP_TokyoMapUI_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_TokyoMapUI_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TokyoMapUI_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ExecuteUbergraph_BP_TokyoMapUI
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TokyoMapUI_C::ExecuteUbergraph_BP_TokyoMapUI(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TokyoMapUI_C", "ExecuteUbergraph_BP_TokyoMapUI");
-
-	Params::BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_TokyoMapUI.BP_TokyoMapUI_C.UpdateButtonHelp
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -380,6 +312,74 @@ void ABP_TokyoMapUI_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 	Params::BP_TokyoMapUI_C_ReceiveEndPlay Parms{};
 
 	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TokyoMapUI.BP_TokyoMapUI_C.Start
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_TokyoMapUI_C::Start()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TokyoMapUI_C", "Start");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TokyoMapUI_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TokyoMapUI_C", "ReceiveTick");
+
+	Params::BP_TokyoMapUI_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_TokyoMapUI_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TokyoMapUI_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_TokyoMapUI.BP_TokyoMapUI_C.ExecuteUbergraph_BP_TokyoMapUI
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_TokyoMapUI_C::ExecuteUbergraph_BP_TokyoMapUI(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TokyoMapUI_C", "ExecuteUbergraph_BP_TokyoMapUI");
+
+	Params::BP_TokyoMapUI_C_ExecuteUbergraph_BP_TokyoMapUI Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

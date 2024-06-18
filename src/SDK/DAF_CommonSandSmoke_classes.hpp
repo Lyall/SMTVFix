@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_DAF_CommonSandSmoke_C;              // 0x0230(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TArray<EObjectTypeQuery>                      Obj;                                               // 0x0238(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          Fix;                                               // 0x0248(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_94F2[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9B04[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           NewVar_0;                                          // 0x024C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

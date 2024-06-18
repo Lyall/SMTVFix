@@ -29,7 +29,7 @@ public:
 	class UWB_ScreenTransition_C*                 M_screenTransitionWidget;                          // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_isComplete;                                      // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_isFadeFinish;                                    // 0x0241(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3119[0x2];                                     // 0x0242(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DAA[0x2];                                     // 0x0242(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_requestGrabCount;                                // 0x0244(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             M_captureTexture;                                  // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

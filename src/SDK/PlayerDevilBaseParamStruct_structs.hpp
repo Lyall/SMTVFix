@@ -28,7 +28,7 @@ public:
 	float                                         Deceleration_16_37BEDC654C579AD6B9BA7582B2EF89E5;  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         StepupHeightThreshold_27_5C8EDD31450BA226E25F85AC33ED388D; // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          FloatingIKEnable_19_748AFFA94A3D17829A01DA8526D1B0FA; // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9A48[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45F7[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FloatingIKUpSpeed_24_540D88B0475FCF9C5717A5AA9B40E4B9; // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         FloatingIKDownSpeed_30_36002D9047E7533A821EF4836121DC54; // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RunMotionRate_29_00BBB9E6452BED75AD78F6B426EC1F7F; // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

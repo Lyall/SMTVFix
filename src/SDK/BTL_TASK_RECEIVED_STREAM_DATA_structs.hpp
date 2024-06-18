@@ -22,7 +22,7 @@ struct FBTL_TASK_RECEIVED_STREAM_DATA final
 {
 public:
 	E_BTL_TASK_COM                                Command_3_E9153AEF4EE07C5F2A0064BFA00F10F2;        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5ECD[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_203B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PecID_11_14961C1A49CE8619137A40B1CBF42CE8;         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBtlTaskData                           Stream_12_4BFDC01444C7AB1B304DB3A669FA3749;        // 0x0008(0x0030)(Edit, BlueprintVisible)
 	struct FBtlTaskData                           Stream2_15_00E3149D4E7412469DB049AE9783D605;       // 0x0038(0x0030)(Edit, BlueprintVisible)

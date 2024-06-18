@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	EBgmScene                                     BeforeBGMScene;                                    // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_962D[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5CB2[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 ItemId;                                            // 0x0238(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<int32>                                 ItemCnt;                                           // 0x0248(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class ABP_ResultMain_C*                       ResultMain;                                        // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

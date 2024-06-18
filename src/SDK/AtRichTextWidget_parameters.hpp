@@ -92,7 +92,7 @@ struct AtRichText_IsUseInsertImage final
 public:
 	int32                                         ImageIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_167[0x3];                                      // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16C[0x3];                                      // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AtRichText_IsUseInsertImage) == 0x000004, "Wrong alignment on AtRichText_IsUseInsertImage");
 static_assert(sizeof(AtRichText_IsUseInsertImage) == 0x000008, "Wrong size on AtRichText_IsUseInsertImage");
@@ -250,7 +250,7 @@ struct AtRichText_SetInsertText final
 public:
 	class FString                                 Tag;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_168[0x4];                                      // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16D[0x4];                                      // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   InText;                                            // 0x0018(0x0018)(Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AtRichText_SetInsertText) == 0x000008, "Wrong alignment on AtRichText_SetInsertText");

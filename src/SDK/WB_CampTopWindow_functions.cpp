@@ -17,293 +17,6 @@
 namespace SDK
 {
 
-// Function WB_CampTopWindow.WB_CampTopWindow_C.SetInstanceParts
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::SetInstanceParts()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "SetInstanceParts");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.GetInstanceParts
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::GetInstanceParts()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "GetInstanceParts");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.GetTopMenuQuestionButtonMouse
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UButtonS5*                        OutParam                                               (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_CampTopWindow_C::GetTopMenuQuestionButtonMouse(int32 InIndex, class UButtonS5** OutParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "GetTopMenuQuestionButtonMouse");
-
-	Params::WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse Parms{};
-
-	Parms.InIndex = InIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutParam != nullptr)
-		*OutParam = Parms.OutParam;
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.DisableSystemMenuMouseFocus
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::DisableSystemMenuMouseFocus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "DisableSystemMenuMouseFocus");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.EnableSystemMenuMouseFocus
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::EnableSystemMenuMouseFocus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "EnableSystemMenuMouseFocus");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.Get System Menu List Button Mouse
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UButtonS5*                        OutButton                                              (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_CampTopWindow_C::Get_System_Menu_List_Button_Mouse(int32 InIndex, class UButtonS5** OutButton)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "Get System Menu List Button Mouse");
-
-	Params::WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse Parms{};
-
-	Parms.InIndex = InIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutButton != nullptr)
-		*OutButton = Parms.OutButton;
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.DisableTopMenuMouseFocus
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::DisableTopMenuMouseFocus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "DisableTopMenuMouseFocus");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.EnableTopMenuMouseFocus
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::EnableTopMenuMouseFocus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "EnableTopMenuMouseFocus");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.GetTopMenuListButtonMouse
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UButtonS5*                        OutButtonMouse                                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_CampTopWindow_C::GetTopMenuListButtonMouse(int32 InIndex, class UButtonS5** OutButtonMouse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "GetTopMenuListButtonMouse");
-
-	Params::WB_CampTopWindow_C_GetTopMenuListButtonMouse Parms{};
-
-	Parms.InIndex = InIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutButtonMouse != nullptr)
-		*OutButtonMouse = Parms.OutButtonMouse;
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.GetMenuIndexByRect
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   InX                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   InY                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   OutMenuIndex                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_CampTopWindow_C::GetMenuIndexByRect(float InX, float InY, int32* OutMenuIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "GetMenuIndexByRect");
-
-	Params::WB_CampTopWindow_C_GetMenuIndexByRect Parms{};
-
-	Parms.InX = InX;
-	Parms.InY = InY;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutMenuIndex != nullptr)
-		*OutMenuIndex = Parms.OutMenuIndex;
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.SetTopMenuCursorPlayOn
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::SetTopMenuCursorPlayOn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "SetTopMenuCursorPlayOn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.SetTopMenuPlayOn
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_CampTopWindow_C::SetTopMenuPlayOn(int32 InIndex, int32 InType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "SetTopMenuPlayOn");
-
-	Params::WB_CampTopWindow_C_SetTopMenuPlayOn Parms{};
-
-	Parms.InIndex = InIndex;
-	Parms.InType = InType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuSetQuestion
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_CampTopWindow_C::TopMenuSetQuestion(int32 InIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "TopMenuSetQuestion");
-
-	Params::WB_CampTopWindow_C_TopMenuSetQuestion Parms{};
-
-	Parms.InIndex = InIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuBGOut
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::TopMenuBGOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "TopMenuBGOut");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuBGIn
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_CampTopWindow_C::TopMenuBGIn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "TopMenuBGIn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_CampTopWindow.WB_CampTopWindow_C.IsTopMenuPanelVisibility
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    OutVisibility                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UWB_CampTopWindow_C::IsTopMenuPanelVisibility(bool* OutVisibility)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CampTopWindow_C", "IsTopMenuPanelVisibility");
-
-	Params::WB_CampTopWindow_C_IsTopMenuPanelVisibility Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutVisibility != nullptr)
-		*OutVisibility = Parms.OutVisibility;
-}
-
-
 // Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuPanelOff
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -2007,6 +1720,293 @@ void UWB_CampTopWindow_C::CampTopMMouseOnClicked__DelegateSignature(int32 InInde
 	Parms.InIndex = InIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.SetInstanceParts
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::SetInstanceParts()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "SetInstanceParts");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.GetInstanceParts
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::GetInstanceParts()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "GetInstanceParts");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.GetTopMenuQuestionButtonMouse
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UButtonS5*                        OutParam                                               (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_CampTopWindow_C::GetTopMenuQuestionButtonMouse(int32 InIndex, class UButtonS5** OutParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "GetTopMenuQuestionButtonMouse");
+
+	Params::WB_CampTopWindow_C_GetTopMenuQuestionButtonMouse Parms{};
+
+	Parms.InIndex = InIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutParam != nullptr)
+		*OutParam = Parms.OutParam;
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.DisableSystemMenuMouseFocus
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::DisableSystemMenuMouseFocus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "DisableSystemMenuMouseFocus");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.EnableSystemMenuMouseFocus
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::EnableSystemMenuMouseFocus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "EnableSystemMenuMouseFocus");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.Get System Menu List Button Mouse
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UButtonS5*                        OutButton                                              (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_CampTopWindow_C::Get_System_Menu_List_Button_Mouse(int32 InIndex, class UButtonS5** OutButton)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "Get System Menu List Button Mouse");
+
+	Params::WB_CampTopWindow_C_Get_System_Menu_List_Button_Mouse Parms{};
+
+	Parms.InIndex = InIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutButton != nullptr)
+		*OutButton = Parms.OutButton;
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.DisableTopMenuMouseFocus
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::DisableTopMenuMouseFocus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "DisableTopMenuMouseFocus");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.EnableTopMenuMouseFocus
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::EnableTopMenuMouseFocus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "EnableTopMenuMouseFocus");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.GetTopMenuListButtonMouse
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UButtonS5*                        OutButtonMouse                                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_CampTopWindow_C::GetTopMenuListButtonMouse(int32 InIndex, class UButtonS5** OutButtonMouse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "GetTopMenuListButtonMouse");
+
+	Params::WB_CampTopWindow_C_GetTopMenuListButtonMouse Parms{};
+
+	Parms.InIndex = InIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutButtonMouse != nullptr)
+		*OutButtonMouse = Parms.OutButtonMouse;
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.GetMenuIndexByRect
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   InX                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   InY                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OutMenuIndex                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_CampTopWindow_C::GetMenuIndexByRect(float InX, float InY, int32* OutMenuIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "GetMenuIndexByRect");
+
+	Params::WB_CampTopWindow_C_GetMenuIndexByRect Parms{};
+
+	Parms.InX = InX;
+	Parms.InY = InY;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutMenuIndex != nullptr)
+		*OutMenuIndex = Parms.OutMenuIndex;
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.SetTopMenuCursorPlayOn
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::SetTopMenuCursorPlayOn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "SetTopMenuCursorPlayOn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.SetTopMenuPlayOn
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InType                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_CampTopWindow_C::SetTopMenuPlayOn(int32 InIndex, int32 InType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "SetTopMenuPlayOn");
+
+	Params::WB_CampTopWindow_C_SetTopMenuPlayOn Parms{};
+
+	Parms.InIndex = InIndex;
+	Parms.InType = InType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuSetQuestion
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InIndex                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_CampTopWindow_C::TopMenuSetQuestion(int32 InIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "TopMenuSetQuestion");
+
+	Params::WB_CampTopWindow_C_TopMenuSetQuestion Parms{};
+
+	Parms.InIndex = InIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuBGOut
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::TopMenuBGOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "TopMenuBGOut");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.TopMenuBGIn
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_CampTopWindow_C::TopMenuBGIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "TopMenuBGIn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_CampTopWindow.WB_CampTopWindow_C.IsTopMenuPanelVisibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    OutVisibility                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWB_CampTopWindow_C::IsTopMenuPanelVisibility(bool* OutVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_CampTopWindow_C", "IsTopMenuPanelVisibility");
+
+	Params::WB_CampTopWindow_C_IsTopMenuPanelVisibility Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutVisibility != nullptr)
+		*OutVisibility = Parms.OutVisibility;
 }
 
 }

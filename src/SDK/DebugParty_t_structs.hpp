@@ -26,7 +26,7 @@ struct FDebugParty_t final
 public:
 	bool                                          InvokeFullTestSetting_43_C84462944FDEE7FBBC20E295B1D5246A; // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          UseCurrentPartyData_45_25AD79DC42B17F1A5E4E4E84BCC269E6; // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5622[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5102[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HeroLevel_2_5F1F31DF47CD6375F5C09BA5FDE0B461;      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 HeroSkill_5_4B29BA474810016DEC7229B578D2CEA7;      // 0x0008(0x0010)(Edit, BlueprintVisible)
 	TArray<int32>                                 HeroAutoSkill_7_74C71428414A4A78B73CDF9908F29A43;  // 0x0018(0x0010)(Edit, BlueprintVisible)
@@ -34,7 +34,7 @@ public:
 	TArray<int32>                                 HeroSkillTekisei_11_C158BECB468CA80040A502817877D97F; // 0x0038(0x0010)(Edit, BlueprintVisible)
 	TArray<int32>                                 HeroParam_22_61A184704011E3EF072AF990978DD539;     // 0x0048(0x0010)(Edit, BlueprintVisible)
 	int32                                         SkillSource_39_0E92BA464C8C853B1FBC84BDEFEA0334;   // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5623[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5103[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FDebugParty_Nkm_t>              Nkm_14_FA2A9AA0448E55FDDE9AC98C6817DEF6;           // 0x0060(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FDebugParty_Item_t>             Item_17_24B1F1674621D6E8C4CDF08902C0C9A2;          // 0x0070(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FDebugPartySkillLIb_t>          SkillLib_29_BD38943B4C098EAA89C6F8A3DDB1F79C;      // 0x0080(0x0010)(Edit, BlueprintVisible)

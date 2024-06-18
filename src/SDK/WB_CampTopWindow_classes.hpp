@@ -71,39 +71,23 @@ public:
 	class USsPlayerWidget*                        SsPlayerSTitle;                                    // 0x03C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class USsPlayerWidget*                        SsPlayerTopMenu;                                   // 0x03D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          IsPositionSet;                                     // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8294[0x3];                                     // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC0[0x3];                                     // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Submenuposition;                                   // 0x03DC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8295[0x4];                                     // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC1[0x4];                                     // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FLinearColor>                   Localcolortabledata;                               // 0x03E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	float                                         Instancetime;                                      // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         bgfadestat;                                        // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         bgrenderopa;                                       // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8296[0x4];                                     // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC2[0x4];                                     // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           Topmenunametable;                                  // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	float                                         Instancepartsframerate;                            // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8297[0x4];                                     // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC3[0x4];                                     // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             CampTopMMouseOnClicked;                            // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CampTopMMouseOnHovered;                            // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CampTopSMouseOnClicked;                            // 0x0440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CampTopSMouseOnHovered;                            // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetInstanceParts();
-	void GetInstanceParts();
-	void GetTopMenuQuestionButtonMouse(int32 InIndex, class UButtonS5** OutParam);
-	void DisableSystemMenuMouseFocus();
-	void EnableSystemMenuMouseFocus();
-	void Get_System_Menu_List_Button_Mouse(int32 InIndex, class UButtonS5** OutButton);
-	void DisableTopMenuMouseFocus();
-	void EnableTopMenuMouseFocus();
-	void GetTopMenuListButtonMouse(int32 InIndex, class UButtonS5** OutButtonMouse);
-	void GetMenuIndexByRect(float InX, float InY, int32* OutMenuIndex);
-	void SetTopMenuCursorPlayOn();
-	void SetTopMenuPlayOn(int32 InIndex, int32 InType);
-	void TopMenuSetQuestion(int32 InIndex);
-	void TopMenuBGOut();
-	void TopMenuBGIn();
-	void IsTopMenuPanelVisibility(bool* OutVisibility);
 	void TopMenuPanelOff();
 	void TopMenuNewIconOff(int32 InIndex);
 	void TopMenuNewIconOn(int32 InIndex, float InRate);
@@ -191,6 +175,22 @@ public:
 	void CampTopSMouseOnClicked__DelegateSignature(int32 InIndex);
 	void CampTopMMouseOnHovered__DelegateSignature(int32 InIndex);
 	void CampTopMMouseOnClicked__DelegateSignature(int32 InIndex);
+	void SetInstanceParts();
+	void GetInstanceParts();
+	void GetTopMenuQuestionButtonMouse(int32 InIndex, class UButtonS5** OutParam);
+	void DisableSystemMenuMouseFocus();
+	void EnableSystemMenuMouseFocus();
+	void Get_System_Menu_List_Button_Mouse(int32 InIndex, class UButtonS5** OutButton);
+	void DisableTopMenuMouseFocus();
+	void EnableTopMenuMouseFocus();
+	void GetTopMenuListButtonMouse(int32 InIndex, class UButtonS5** OutButtonMouse);
+	void GetMenuIndexByRect(float InX, float InY, int32* OutMenuIndex);
+	void SetTopMenuCursorPlayOn();
+	void SetTopMenuPlayOn(int32 InIndex, int32 InType);
+	void TopMenuSetQuestion(int32 InIndex);
+	void TopMenuBGOut();
+	void TopMenuBGIn();
+	void IsTopMenuPanelVisibility(bool* OutVisibility);
 
 public:
 	static class UClass* StaticClass()

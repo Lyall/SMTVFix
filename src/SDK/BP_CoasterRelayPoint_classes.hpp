@@ -38,7 +38,7 @@ public:
 	TArray<class UMaterialInstanceDynamic*>       DMIs;                                              // 0x0288(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          Visible_ForHit;                                    // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Visible_ForRiding;                                 // 0x0299(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31D1[0x6];                                     // 0x029A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E60[0x6];                                     // 0x029A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             EvtDis_CallVisible;                                // 0x02A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:

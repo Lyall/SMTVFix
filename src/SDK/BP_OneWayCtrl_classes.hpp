@@ -29,7 +29,7 @@ public:
 	class FName                                   OnFlag;                                            // 0x0240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FName>                           BlockProfiles;                                     // 0x0248(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FVector                                MoveNormal;                                        // 0x0258(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_961C[0x4];                                     // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9B07[0x4];                                     // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ATriggerBase*                           ForceOnFlagTrigger;                                // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

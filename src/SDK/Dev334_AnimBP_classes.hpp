@@ -25,7 +25,7 @@ namespace SDK
 class UDev334_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_9DC3[0x8];                                     // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0D8[0x8];                                     // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02C8(0x0030)()
 	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x02F8(0x0020)()
@@ -51,13 +51,13 @@ public:
 	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x11F8(0x00C8)()
 	E_CHARA_ANIMATION_MODE                        ModeCurrent;                                       // 0x12C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	E_CHARA_ANIMATION_MODE                        ModePrevious;                                      // 0x12C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	uint8                                         Pad_9DC4[0x2];                                     // 0x12C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0D9[0x2];                                     // 0x12C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ModeBlendTime;                                     // 0x12C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      DefaultAnimation;                                  // 0x12C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RootOffsetEnable;                                  // 0x12D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                RootOffset;                                        // 0x12D4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LegIKEnable;                                       // 0x12E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9DC5[0x3];                                     // 0x12E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0DA[0x3];                                     // 0x12E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LegIKAlpha;                                        // 0x12E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FVector                                LeftLegIKEffectorLocation;                         // 0x12E8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                RightLegIKEffectorLocation;                        // 0x12F4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -66,15 +66,15 @@ public:
 	struct FRotator                               LeftLegIKEffectorRotation;                         // 0x1318(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FRotator                               RightLegIKEffectorRotation;                        // 0x1324(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          HeadIKEnable;                                      // 0x1330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9DC6[0x3];                                     // 0x1331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0DB[0x3];                                     // 0x1331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         HeadIKAlpha;                                       // 0x1334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 	struct FRotator                               HeadIKRotation;                                    // 0x1338(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FRotator                               RootDeltaRotation;                                 // 0x1344(0x000C)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          LookAtEnable;                                      // 0x1350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9DC7[0x7];                                     // 0x1351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0DC[0x7];                                     // 0x1351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimSequenceBase*                      MumbleAnimation;                                   // 0x1358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MumbleEnable;                                      // 0x1360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9DC8[0x3];                                     // 0x1361(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0DD[0x3];                                     // 0x1361(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MumbleAlpha;                                       // 0x1364(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
 
 public:

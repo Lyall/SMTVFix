@@ -28,7 +28,7 @@ public:
 	class UImage*                                 Image_Btn;                                         // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	E_BTN_HELP_MAPPING_KEY_TYPE                   BtnIconType;                                       // 0x0270(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_ICON_SIZE                               BtnIconSize2;                                      // 0x0271(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7B9A[0x2];                                     // 0x0272(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7D82[0x2];                                     // 0x0272(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           BtnColor;                                          // 0x0274(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_OPTION_CONTENT_BUTTON_ICON_TYPE             Debug_PlatformType;                                // 0x0284(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_OPTION_CONTENT_BUTTON_ICON_TYPE             PlatformTextureType;                               // 0x0285(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

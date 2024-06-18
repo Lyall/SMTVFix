@@ -21,7 +21,7 @@ namespace SDK
 class ABP_MapTakaraLarge_C final : public AGimic_Chest_Base_C
 {
 public:
-	uint8                                         Pad_3D7F[0x3];                                     // 0x04B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C06[0x3];                                     // 0x04B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TakaraID;                                          // 0x04BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

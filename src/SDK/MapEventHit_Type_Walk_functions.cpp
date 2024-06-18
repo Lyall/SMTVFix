@@ -17,41 +17,6 @@
 namespace SDK
 {
 
-// Function MapEventHit_Type_Walk.MapEventHit_Type_Walk_C.FlagCh
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    OK                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMapEventHit_Type_Walk_C::FlagCh(bool* OK)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Type_Walk_C", "FlagCh");
-
-	Params::MapEventHit_Type_Walk_C_FlagCh Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OK != nullptr)
-		*OK = Parms.OK;
-}
-
-
-// Function MapEventHit_Type_Walk.MapEventHit_Type_Walk_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AMapEventHit_Type_Walk_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Type_Walk_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function MapEventHit_Type_Walk.MapEventHit_Type_Walk_C.¿¤àé¤ó_0__FinishedFunc
 // (BlueprintEvent)
 
@@ -155,6 +120,41 @@ void AMapEventHit_Type_Walk_C::ExecuteUbergraph_MapEventHit_Type_Walk(int32 Entr
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MapEventHit_Type_Walk.MapEventHit_Type_Walk_C.FlagCh
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    OK                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AMapEventHit_Type_Walk_C::FlagCh(bool* OK)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Type_Walk_C", "FlagCh");
+
+	Params::MapEventHit_Type_Walk_C_FlagCh Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OK != nullptr)
+		*OK = Parms.OK;
+}
+
+
+// Function MapEventHit_Type_Walk.MapEventHit_Type_Walk_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AMapEventHit_Type_Walk_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Type_Walk_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

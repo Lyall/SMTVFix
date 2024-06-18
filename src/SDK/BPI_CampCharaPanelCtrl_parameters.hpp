@@ -17,199 +17,6 @@
 namespace SDK::Params
 {
 
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelSetItemNumPosition
-// 0x0014 (0x0014 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition final
-{
-public:
-	struct FVector2D                              InMainPosition;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              InStockPosition;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OutParam;                                          // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition) == 0x000014, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition, InMainPosition) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition::InMainPosition' has a wrong offset!");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition, InStockPosition) == 0x000008, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition::InStockPosition' has a wrong offset!");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition, OutParam) == 0x000010, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition::OutParam' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelGetMaxNumberOfItem
-// 0x0004 (0x0004 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem final
-{
-public:
-	int32                                         OutLevel;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem) == 0x000004, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem, OutLevel) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem::OutLevel' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelIsChangeParameter
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter final
-{
-public:
-	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter, OutFlag) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter::OutFlag' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelLevelUpVisibleOff
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff final
-{
-public:
-	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff, OutFlag) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff::OutFlag' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelRestartLevelUpVisible
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible final
-{
-public:
-	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible, OutFlag) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible::OutFlag' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelRestartLevelUp
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp final
-{
-public:
-	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp, OutFlag) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp::OutFlag' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelIsLevelUp
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp final
-{
-public:
-	bool                                          OutLevelUp;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp, OutLevelUp) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp::OutLevelUp' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetPartyMouseFlag
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag final
-{
-public:
-	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag::OutParam' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetPartyMouseFocus
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus final
-{
-public:
-	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus::OutParam' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelSetPartyMouseFocus
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus final
-{
-public:
-	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus::OutParam' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelInitializeProc
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc final
-{
-public:
-	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc::OutParam' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelIsInitialized
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized final
-{
-public:
-	bool                                          OutFinished;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized, OutFinished) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized::OutFinished' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetUnselectablePanel
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel final
-{
-public:
-	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel::OutParam' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetAllActorPanel
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel final
-{
-public:
-	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel::OutParam' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelGetPanelDispNumber
-// 0x0004 (0x0004 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber final
-{
-public:
-	int32                                         OutNumber;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber) == 0x000004, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber, OutNumber) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber::OutNumber' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelCalcCharaPanelMove
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove final
-{
-public:
-	int32                                         InType;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OutParam;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove) == 0x000008, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove, InType) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove::InType' has a wrong offset!");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove, OutParam) == 0x000004, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove::OutParam' has a wrong offset!");
-
-// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetStateItemHelp
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp final
-{
-public:
-	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp");
-static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp");
-static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp::OutParam' has a wrong offset!");
-
 // Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelIsStateItemHelp
 // 0x0001 (0x0001 - 0x0000)
 struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsStateItemHelp final
@@ -653,7 +460,7 @@ struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreateUtsusemiPanel final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DBA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90C4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              InMainPosition;                                    // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreateUtsusemiPanel) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreateUtsusemiPanel");
@@ -722,7 +529,7 @@ struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreateAnalyzePanel final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DBB[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90C5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              InMainPosition;                                    // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreateAnalyzePanel) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreateAnalyzePanel");
@@ -872,7 +679,7 @@ struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreate final
 {
 public:
 	E_WIDGET_PRIO                                 InPrio;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DBC[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90C6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              InMainPosition;                                    // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              InStockPosition;                                   // 0x000C(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -881,6 +688,199 @@ static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreate) == 0x000014
 static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreate, InPrio) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreate::InPrio' has a wrong offset!");
 static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreate, InMainPosition) == 0x000004, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreate::InMainPosition' has a wrong offset!");
 static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreate, InStockPosition) == 0x00000C, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelCreate::InStockPosition' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelSetItemNumPosition
+// 0x0014 (0x0014 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition final
+{
+public:
+	struct FVector2D                              InMainPosition;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              InStockPosition;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OutParam;                                          // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition) == 0x000014, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition, InMainPosition) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition::InMainPosition' has a wrong offset!");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition, InStockPosition) == 0x000008, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition::InStockPosition' has a wrong offset!");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition, OutParam) == 0x000010, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetItemNumPosition::OutParam' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelGetMaxNumberOfItem
+// 0x0004 (0x0004 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem final
+{
+public:
+	int32                                         OutLevel;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem) == 0x000004, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem, OutLevel) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetMaxNumberOfItem::OutLevel' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelIsChangeParameter
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter final
+{
+public:
+	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter, OutFlag) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsChangeParameter::OutFlag' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelLevelUpVisibleOff
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff final
+{
+public:
+	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff, OutFlag) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelLevelUpVisibleOff::OutFlag' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelRestartLevelUpVisible
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible final
+{
+public:
+	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible, OutFlag) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUpVisible::OutFlag' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelRestartLevelUp
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp final
+{
+public:
+	bool                                          OutFlag;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp, OutFlag) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelRestartLevelUp::OutFlag' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelIsLevelUp
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp final
+{
+public:
+	bool                                          OutLevelUp;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp, OutLevelUp) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsLevelUp::OutLevelUp' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetPartyMouseFlag
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag final
+{
+public:
+	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFlag::OutParam' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetPartyMouseFocus
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus final
+{
+public:
+	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetPartyMouseFocus::OutParam' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelSetPartyMouseFocus
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus final
+{
+public:
+	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelSetPartyMouseFocus::OutParam' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelInitializeProc
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc final
+{
+public:
+	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelInitializeProc::OutParam' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelIsInitialized
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized final
+{
+public:
+	bool                                          OutFinished;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized, OutFinished) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelIsInitialized::OutFinished' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetUnselectablePanel
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel final
+{
+public:
+	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetUnselectablePanel::OutParam' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetAllActorPanel
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel final
+{
+public:
+	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetAllActorPanel::OutParam' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelGetPanelDispNumber
+// 0x0004 (0x0004 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber final
+{
+public:
+	int32                                         OutNumber;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber) == 0x000004, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber, OutNumber) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelGetPanelDispNumber::OutNumber' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelCalcCharaPanelMove
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove final
+{
+public:
+	int32                                         InType;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OutParam;                                          // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove) == 0x000004, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove) == 0x000008, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove, InType) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove::InType' has a wrong offset!");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove, OutParam) == 0x000004, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelCalcCharaPanelMove::OutParam' has a wrong offset!");
+
+// Function BPI_CampCharaPanelCtrl.BPI_CampCharaPanelCtrl_C.ICampCharaPanelResetStateItemHelp
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp final
+{
+public:
+	bool                                          OutParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp) == 0x000001, "Wrong alignment on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp");
+static_assert(sizeof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp) == 0x000001, "Wrong size on BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp");
+static_assert(offsetof(BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp, OutParam) == 0x000000, "Member 'BPI_CampCharaPanelCtrl_C_ICampCharaPanelResetStateItemHelp::OutParam' has a wrong offset!");
 
 }
 

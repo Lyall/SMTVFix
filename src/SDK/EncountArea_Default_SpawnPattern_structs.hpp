@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "E_Symbol_Spawn_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -23,7 +23,7 @@ struct FEncountArea_Default_SpawnPattern final
 {
 public:
 	E_Symbol_Spawn                                SpawnPattern_11_12D85CE342CB866F165E5297957AE0DA;  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49B9[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_410F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                SpawnHitSize_14_DE0B7FE74455878FAA0137A42FA23F88;  // 0x0004(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FEncountArea_Default_SpawnPattern) == 0x000004, "Wrong alignment on FEncountArea_Default_SpawnPattern");

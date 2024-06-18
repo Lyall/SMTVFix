@@ -32,7 +32,7 @@ public:
 	int32                                         Far_SideA_Num;                                     // 0x0250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MapOut;                                            // 0x0254(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          MapIn;                                             // 0x0255(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_DD0F[0x2];                                     // 0x0256(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55F0[0x2];                                     // 0x0256(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class ADAF_CommonSandDust_C*                  Dust;                                              // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Rand;                                              // 0x0260(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

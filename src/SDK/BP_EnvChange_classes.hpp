@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "DaathTypeList_structs.hpp"
 #include "Engine_structs.hpp"
+#include "DaathTypeList_structs.hpp"
 #include "ST_LightParam_structs.hpp"
 #include "MapEventHit_Type_INOUT_classes.hpp"
 
@@ -26,7 +26,7 @@ class ABP_EnvChange_C final : public AMapEventHit_Type_INOUT_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EnvChange_C;                     // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	EDaathTypeList                                Type;                                              // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B01[0x3];                                     // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94A6[0x3];                                     // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FST_LightParam                         NextParam;                                         // 0x03C4(0x0318)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FST_LightParam                         PrevParam;                                         // 0x06DC(0x0318)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FST_LightParam                         NowParam;                                          // 0x09F4(0x0318)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

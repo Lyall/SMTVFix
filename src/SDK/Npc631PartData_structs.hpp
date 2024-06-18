@@ -20,12 +20,12 @@ struct FNpc631PartData final
 {
 public:
 	int32                                         ID_6_01563B2548D70C81A0C79AB150A1F723;             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DC4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94EE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class USkeletalMesh>           Mesh_7_1261914F49BB68102E2816980A90D822;           // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          Light_10_D6F9421444BA004DD1A515A130AF738D;         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8DC5[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94EF[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   LightSocket_12_5DD2E1EC428AB1B6CE4E99BF42940375;   // 0x0034(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DC6[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94F0[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UParticleSystem>         Effect_20_042B7C664A24F73BE09D7C84485484C0;        // 0x0040(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class FName                                   EffectSocket_17_0A09555043165E4FF804A6AF37EAB1D4;  // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

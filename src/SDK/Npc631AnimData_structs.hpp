@@ -20,7 +20,7 @@ struct FNpc631AnimData final
 {
 public:
 	int32                                         ID_3_7D63470D4A184A05F386489266EEEA25;             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DED[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94F1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UAnimSequence>           Anim_5_BCD9770B43D20500CB7FB0BC81582A08;           // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          UseWhenTalking_9_CA08E46D44AB79B2AFE1B69AB9BBC8F0; // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          HeadIK_WhenTalk_14_6A4787954F6868516BC5D6B11BB48CAD; // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)

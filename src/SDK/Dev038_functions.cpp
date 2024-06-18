@@ -17,43 +17,35 @@
 namespace SDK
 {
 
-// Function Dev038.Dev038_C.ActivateDyingParticle
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Dev038.Dev038_C.ExecuteUbergraph_Dev038
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ADev038_C::ActivateDyingParticle()
+void ADev038_C::ExecuteUbergraph_Dev038(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Dev038_C", "ActivateDyingParticle");
+		Func = Class->GetFunction("Dev038_C", "ExecuteUbergraph_Dev038");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Dev038_C_ExecuteUbergraph_Dev038 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Dev038.Dev038_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function Dev038.Dev038_C.ActivateAttachedParticles
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ADev038_C::ReceiveBeginPlay()
+void ADev038_C::ActivateAttachedParticles()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Dev038_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Dev038.Dev038_C.BndEvt__DevilMovement_K2Node_ComponentBoundEvent_0_CharaMovementUpdatedSignature__DelegateSignature
-// (BlueprintEvent)
-
-void ADev038_C::BndEvt__DevilMovement_K2Node_ComponentBoundEvent_0_CharaMovementUpdatedSignature__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Dev038_C", "BndEvt__DevilMovement_K2Node_ComponentBoundEvent_0_CharaMovementUpdatedSignature__DelegateSignature");
+		Func = Class->GetFunction("Dev038_C", "ActivateAttachedParticles");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,37 +65,45 @@ void ADev038_C::PlaySpeakingMotion()
 }
 
 
-// Function Dev038.Dev038_C.ActivateAttachedParticles
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Dev038.Dev038_C.BndEvt__DevilMovement_K2Node_ComponentBoundEvent_0_CharaMovementUpdatedSignature__DelegateSignature
+// (BlueprintEvent)
 
-void ADev038_C::ActivateAttachedParticles()
+void ADev038_C::BndEvt__DevilMovement_K2Node_ComponentBoundEvent_0_CharaMovementUpdatedSignature__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Dev038_C", "ActivateAttachedParticles");
+		Func = Class->GetFunction("Dev038_C", "BndEvt__DevilMovement_K2Node_ComponentBoundEvent_0_CharaMovementUpdatedSignature__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Dev038.Dev038_C.ExecuteUbergraph_Dev038
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Dev038.Dev038_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ADev038_C::ExecuteUbergraph_Dev038(int32 EntryPoint)
+void ADev038_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Dev038_C", "ExecuteUbergraph_Dev038");
+		Func = Class->GetFunction("Dev038_C", "ReceiveBeginPlay");
 
-	Params::Dev038_C_ExecuteUbergraph_Dev038 Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function Dev038.Dev038_C.ActivateDyingParticle
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ADev038_C::ActivateDyingParticle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Dev038_C", "ActivateDyingParticle");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

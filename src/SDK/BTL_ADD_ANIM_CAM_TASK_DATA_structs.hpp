@@ -22,7 +22,7 @@ public:
 	class UCameraAnimationAsset*                  PrimaryCamera_9_4EC4265D47111F88B7356C8DE54E0FA8;  // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCameraAnimationAsset*                  SecondaryCamera_10_97DCA2C9424CF11166EFF58EB75F00E3; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LerpAlpha_13_AFD7535D4B61D45CFC72098ABD335F1B;     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2747[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6000[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 VisiblePartyIndexes_18_66B2BEF745521BF68A179AB66B007E8B; // 0x0018(0x0010)(Edit, BlueprintVisible)
 	TArray<int32>                                 InvisiblePartyIndexes_20_FA7594584A18BCBDBEC221BA063653B2; // 0x0028(0x0010)(Edit, BlueprintVisible)
 	bool                                          CleanUp_22_EDD4E2BB43C810BEB97D359CE54A3D0F;       // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_CampQuest_CtrlState_structs.hpp"
 #include "Project_structs.hpp"
+#include "E_CampQuest_CtrlState_structs.hpp"
 
 
 namespace SDK::Params

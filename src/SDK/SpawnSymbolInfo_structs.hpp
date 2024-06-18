@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SymbolActRecord_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Project_structs.hpp"
-#include "SymbolActRecord_structs.hpp"
 
 
 namespace SDK
@@ -25,21 +25,21 @@ struct FSpawnSymbolInfo final
 public:
 	class ACustomPawn*                            Symbol_2_A3A78F894A1FAC8DBE99988D78D4A746;         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsEntry_5_D0E49F3D4008500D2EE64EB2C2A22C07;        // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6986[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6957[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Index_8_47F04B1C459C33DE779470986D597E20;          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         EncountID_11_54FB144349C4BF3C521FDB8874438847;     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SymbolID_12_77CF6609404B3FC79FBF69922DF36B42;      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Dead_15_E938D4094359F545729DE1AF44510C5E;          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6987[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6958[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                StartLocation_18_C3E5519344202866464158B1138BF6F0; // 0x001C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6988[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6959[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnTransform_21_E680CDEB46D3D53753F29197B32010C1; // 0x0030(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
 	E_MITAMA_ENCOUNT                              MitamaType_38_1F392C5F423E65208B0566B9F152B82C;    // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          StopSpawn_42_AF8A79594C0211FFDA0EA883CD44F299;     // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6989[0x2];                                     // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_695A[0x2];                                     // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PackID_31_377C984A412AFCF4EFCDF6A4379B9866;        // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReqSpawn_33_F7281E094CFABEB06690D09EDDE73F28;      // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_698A[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_695B[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSymbolActRecord                       ActRecord_36_5C22E82945C94F60660AE587F94C22BE;     // 0x0070(0x0020)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          LastBattleSymbol_40_364EBF144788682BD8AB32B06927BA26; // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          MitamaCalcEnd_44_C40A8AF14903C329472334B8F6BA63C8; // 0x0091(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)

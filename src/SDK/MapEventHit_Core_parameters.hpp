@@ -17,16 +17,98 @@
 namespace SDK::Params
 {
 
+// Function MapEventHit_Core.MapEventHit_Core_C.ExecuteUbergraph_MapEventHit_Core
+// 0x0098 (0x0098 - 0x0000)
+struct MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CallFunc_GetChildComponent_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_Active;                               // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bool;                                 // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_Hidden;                               // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FLinearColor                           K2Node_CustomEvent_Value;                          // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDebugVolumeHidden_Hidden;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_256E[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMEC_BaseTask_C*                        CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_256F[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2570[0x1];                                     // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x004C(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_2571[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_1;                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2572[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IS_EDITOR_BUILD_ReturnValue;              // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2573[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMEC_BaseTask_C*                        K2Node_DynamicCast_AsMEC_Base_Task;                // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2574[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_GetChildComponent_ReturnValue_1;          // 0x0088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core) == 0x000008, "Wrong alignment on MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core");
+static_assert(sizeof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core) == 0x000098, "Wrong size on MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, EntryPoint) == 0x000000, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::EntryPoint' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_GetChildComponent_ReturnValue) == 0x000008, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_GetChildComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_Event_Active) == 0x000015, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_Event_Active' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_Event_bool) == 0x000016, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_Event_bool' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_Event_Hidden) == 0x000017, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_Event_Hidden' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_CustomEvent_Value) == 0x000018, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_CustomEvent_Value' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_GetDebugVolumeHidden_Hidden) == 0x000028, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_GetDebugVolumeHidden_Hidden' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_1) == 0x000029, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_2) == 0x00002A, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Temp_bool_Variable) == 0x00002B, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Not_PreBool_ReturnValue) == 0x00002C, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Get_Item) == 0x000030, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Add_IntInt_ReturnValue_1) == 0x000038, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_LastIndex_ReturnValue) == 0x00003C, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000040, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Temp_int_Array_Index_Variable) == 0x000044, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_3) == 0x000048, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_4) == 0x000049, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_5) == 0x00004A, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_CreateDelegate_OutputDelegate) == 0x00004C, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Get_Item_1) == 0x000060, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Less_IntInt_ReturnValue) == 0x00006C, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Temp_int_Variable) == 0x000070, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IS_EDITOR_BUILD_ReturnValue) == 0x000074, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IS_EDITOR_BUILD_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_DynamicCast_AsMEC_Base_Task) == 0x000078, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_DynamicCast_AsMEC_Base_Task' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_GetChildComponent_ReturnValue_1) == 0x000088, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_GetChildComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_6) == 0x000094, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+
 // Function MapEventHit_Core.MapEventHit_Core_C.IsEventHitPaused
 // 0x0030 (0x0030 - 0x0000)
 struct MapEventHit_Core_C_IsEventHitPaused final
 {
 public:
 	bool                                          Paused;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89B6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2575[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89B7[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2576[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPI_CheckMapPause_IsPause;                // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -48,7 +130,7 @@ struct MapEventHit_Core_C_IsMyArea final
 {
 public:
 	bool                                          Param_IsMyArea;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89B8[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2577[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetAreaID_ReturnValue;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -101,7 +183,7 @@ public:
 	TArray<class UStaticMeshComponent*>           DbgPlane;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89B9[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2578[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetMapEventHitTableData_Name1;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0018)()
 	float                                         CallFunc_BreakVector_X;                            // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -112,10 +194,10 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_Divide_ByteByte_ReturnValue;              // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89BA[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2579[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 K2Node_MakeStruct_Color;                           // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x007C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89BB[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_257A[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UStaticMeshComponent*>           K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm, ContainsInstancedReference)
 	float                                         CallFunc_BreakVector_X_1;                          // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y_1;                          // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -132,18 +214,18 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue_8;          // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x00DC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Array_Get_Item;                           // 0x00E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89BC[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_257B[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        K2Node_MakeArray_Array_1;                          // 0x00F8(0x0010)(ReferenceParm)
 	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_1;                         // 0x0108(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89BD[0x4];                                     // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_257C[0x4];                                     // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Array_Get_Item_2;                         // 0x012C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0138(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89BE[0x3];                                     // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_257D[0x3];                                     // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0148(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -240,88 +322,6 @@ public:
 static_assert(alignof(MapEventHit_Core_C_ReShapeColor) == 0x000004, "Wrong alignment on MapEventHit_Core_C_ReShapeColor");
 static_assert(sizeof(MapEventHit_Core_C_ReShapeColor) == 0x000010, "Wrong size on MapEventHit_Core_C_ReShapeColor");
 static_assert(offsetof(MapEventHit_Core_C_ReShapeColor, Value) == 0x000000, "Member 'MapEventHit_Core_C_ReShapeColor::Value' has a wrong offset!");
-
-// Function MapEventHit_Core.MapEventHit_Core_C.ExecuteUbergraph_MapEventHit_Core
-// 0x0098 (0x0098 - 0x0000)
-struct MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CallFunc_GetChildComponent_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_Active;                               // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bool;                                 // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_Hidden;                               // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FLinearColor                           K2Node_CustomEvent_Value;                          // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDebugVolumeHidden_Hidden;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89BF[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMEC_BaseTask_C*                        CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89C0[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89C1[0x1];                                     // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x004C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_89C2[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_1;                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89C3[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IS_EDITOR_BUILD_ReturnValue;              // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89C4[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMEC_BaseTask_C*                        K2Node_DynamicCast_AsMEC_Base_Task;                // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89C5[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_GetChildComponent_ReturnValue_1;          // 0x0088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core) == 0x000008, "Wrong alignment on MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core");
-static_assert(sizeof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core) == 0x000098, "Wrong size on MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, EntryPoint) == 0x000000, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::EntryPoint' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_GetChildComponent_ReturnValue) == 0x000008, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_GetChildComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_Event_Active) == 0x000015, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_Event_Active' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_Event_bool) == 0x000016, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_Event_bool' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_Event_Hidden) == 0x000017, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_Event_Hidden' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_CustomEvent_Value) == 0x000018, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_CustomEvent_Value' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_GetDebugVolumeHidden_Hidden) == 0x000028, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_GetDebugVolumeHidden_Hidden' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_1) == 0x000029, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_2) == 0x00002A, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Temp_bool_Variable) == 0x00002B, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Not_PreBool_ReturnValue) == 0x00002C, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Get_Item) == 0x000030, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Add_IntInt_ReturnValue_1) == 0x000038, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_LastIndex_ReturnValue) == 0x00003C, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000040, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Temp_int_Array_Index_Variable) == 0x000044, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_3) == 0x000048, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_4) == 0x000049, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_5) == 0x00004A, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_CreateDelegate_OutputDelegate) == 0x00004C, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Get_Item_1) == 0x000060, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Less_IntInt_ReturnValue) == 0x00006C, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Temp_int_Variable) == 0x000070, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IS_EDITOR_BUILD_ReturnValue) == 0x000074, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IS_EDITOR_BUILD_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_DynamicCast_AsMEC_Base_Task) == 0x000078, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_DynamicCast_AsMEC_Base_Task' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_GetChildComponent_ReturnValue_1) == 0x000088, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_GetChildComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_6) == 0x000094, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
 
 }
 

@@ -24,7 +24,7 @@ public:
 	struct FVector                                Start;                                             // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Target;                                            // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                UpVec;                                             // 0x0018(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_304B[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CFC[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               ReturnValue;                                       // 0x0030(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x003C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -47,24 +47,24 @@ struct BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec final
 public:
 	struct FRotator                               Current;                                           // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               Target;                                            // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         Delta_Time;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Delta_time;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Interp_Speed;                                      // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Up_Vec;                                            // 0x0020(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_304C[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CFD[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               Return_Value;                                      // 0x0038(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0044(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_304D[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CFE[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue;        // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_304E[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CFF[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x006C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0078(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_VectorVector_ReturnValue;      // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_304F[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D00[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0088(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotFromXZ_ReturnValue;                // 0x0094(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -72,7 +72,7 @@ static_assert(alignof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec) == 0x
 static_assert(sizeof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec) == 0x0000A0, "Wrong size on BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec, Current) == 0x000000, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec::Current' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec, Target) == 0x00000C, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec::Target' has a wrong offset!");
-static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec, Delta_Time) == 0x000018, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec::Delta_Time' has a wrong offset!");
+static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec, Delta_time) == 0x000018, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec::Delta_time' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec, Interp_Speed) == 0x00001C, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec::Interp_Speed' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec, Up_Vec) == 0x000020, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec::Up_Vec' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec, __WorldContext) == 0x000030, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec::__WorldContext' has a wrong offset!");
@@ -96,24 +96,24 @@ struct BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix final
 public:
 	struct FRotator                               Current;                                           // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               Target;                                            // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         Delta_Time;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Delta_time;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Interp_Speed;                                      // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Up_Vec;                                            // 0x0020(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3050[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D01[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               Return_Value;                                      // 0x0038(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0044(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3051[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D02[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue;        // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3052[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D03[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x006C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0078(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_VectorVector_ReturnValue;      // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3053[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D04[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0088(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotFromZX_ReturnValue;                // 0x0094(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -121,7 +121,7 @@ static_assert(alignof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix) =
 static_assert(sizeof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix) == 0x0000A0, "Wrong size on BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix, Current) == 0x000000, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix::Current' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix, Target) == 0x00000C, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix::Target' has a wrong offset!");
-static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix, Delta_Time) == 0x000018, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix::Delta_Time' has a wrong offset!");
+static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix, Delta_time) == 0x000018, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix::Delta_time' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix, Interp_Speed) == 0x00001C, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix::Interp_Speed' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix, Up_Vec) == 0x000020, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix::Up_Vec' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix, __WorldContext) == 0x000030, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_with_UpVec_Fix::__WorldContext' has a wrong offset!");
@@ -146,7 +146,7 @@ public:
 	struct FVector                                Start;                                             // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Target;                                            // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                UpVec;                                             // 0x0018(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3054[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D05[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               ReturnValue;                                       // 0x0030(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x003C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -171,10 +171,10 @@ public:
 	struct FVector                                Axis;                                              // 0x0030(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Deg;                                               // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3055[0x8];                                     // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D06[0x8];                                     // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RotatedTrans;                                      // 0x0050(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 	struct FRotator                               CallFunc_RotatorFromAxisAndAngle_ReturnValue;      // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3056[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D07[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0090(0x0030)(IsPlainOldData, NoDestructor)
 	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x00C0(0x0030)(IsPlainOldData, NoDestructor)
 };
@@ -196,17 +196,17 @@ struct BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered final
 public:
 	struct FRotator                               Current;                                           // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               Target;                                            // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         Delta_Time;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Delta_time;                                        // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Interp_Speed;                                      // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               Return_Value;                                      // 0x0028(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3057[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D08[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue;        // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3058[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D09[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetUpVector_ReturnValue_1;                // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -222,7 +222,7 @@ static_assert(alignof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered)
 static_assert(sizeof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered) == 0x0000C8, "Wrong size on BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered, Current) == 0x000000, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered::Current' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered, Target) == 0x00000C, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered::Target' has a wrong offset!");
-static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered, Delta_Time) == 0x000018, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered::Delta_Time' has a wrong offset!");
+static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered, Delta_time) == 0x000018, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered::Delta_time' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered, Interp_Speed) == 0x00001C, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered::Interp_Speed' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered, __WorldContext) == 0x000020, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered::__WorldContext' has a wrong offset!");
 static_assert(offsetof(BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered, Return_Value) == 0x000028, "Member 'BPL_BattleRotationUtilities_C_RInterp_To_UpVec_Considered::Return_Value' has a wrong offset!");
@@ -251,11 +251,11 @@ public:
 	struct FVector                                Target;                                            // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                UpVec;                                             // 0x0018(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ZOnly;                                             // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3059[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0A[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               ReturnValue;                                       // 0x0030(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_305A[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0B[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue; // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_ProjectPointOnToPlane_ReturnValue;        // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue_1; // 0x0058(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)

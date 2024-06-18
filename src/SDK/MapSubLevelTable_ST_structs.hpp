@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "MapAreaResident_ST_structs.hpp"
 #include "MapSubLevelGarden_ST_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "MapUnResident_ST_structs.hpp"
-#include "MapSubLevelMinimap_ST_structs.hpp"
+#include "MapAreaResident_ST_structs.hpp"
 #include "MapSystemResident_ST_structs.hpp"
+#include "MapSubLevelMinimap_ST_structs.hpp"
+#include "MapUnResident_ST_structs.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ struct FMapSubLevelTable_ST final
 public:
 	int32                                         MapID_2_875799C243A678CA77477BB6D83F6EF9;          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FPrimaryAssetId                        PersistentLevel_28_A610C02E461DB24BA09549987A7CB45E; // 0x0004(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B77[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3775[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPrimaryAssetId>                ResidentLevel_6_E2E959194A18205E7F0E0786CB25FA51;  // 0x0018(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FPrimaryAssetId>                ResidentBattleHideLevel_41_5FCCE279495189B7F2D736895BDB4F0F; // 0x0028(0x0010)(Edit, BlueprintVisible)
 	struct FMapAreaResident_ST                    AreaResidentLevel_25_8CE35D0340B17D40CEE91EB2C95A9B60; // 0x0038(0x00B0)(Edit, BlueprintVisible, HasGetValueTypeHash)

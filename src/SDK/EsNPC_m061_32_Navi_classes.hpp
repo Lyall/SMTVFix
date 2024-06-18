@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Project_structs.hpp"
-#include "BP_EventMissionBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_EventMissionBase_classes.hpp"
 
 
 namespace SDK
@@ -25,12 +25,12 @@ class AEsNPC_m061_32_Navi_C final : public ABP_EventMissionBase_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_EsNPC_m061_32_Navi_C;               // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	int32                                         SelectIndex;                                       // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B919[0x4];                                     // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1EE[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ADevilBase_C*                           SpawnActor;                                        // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UScriptMessageAsset*                    MissionMessageAsset;                               // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_AutoRotateFocus_C*                  Auto_Rot_Ctrl;                                     // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CameraFocusEnd;                                    // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B91A[0x3];                                     // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1EF[0x3];                                      // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FNaviDevilData                         NaviDevilData;                                     // 0x034C(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	E_NAVI_DEVIL                                  Navi_Devil_ID;                                     // 0x035C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "E_MapGimmickHideReason_structs.hpp"
-#include "E_AogamiDebrisMotion_structs.hpp"
-#include "Project_structs.hpp"
 #include "AogamiDebrisPose_structs.hpp"
+#include "E_MapGimmickHideReason_structs.hpp"
+#include "Project_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_AogamiDebrisMotion_structs.hpp"
 #include "MapEventHit_Type_AAction_classes.hpp"
 
 
@@ -35,34 +35,34 @@ public:
 	class USceneComponent*                        Gaze_Point;                                        // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        WallCheckPoint;                                    // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Timeline_CameraInside__Direction_98AFB4E545839306509AEC9E0254A187; // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB7[0x7];                                     // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9541[0x7];                                     // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     Timeline_CameraInside;                             // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Timeline_Effect_Alpha_F12756554A77A3D8AD4BEBB05FDA0C96; // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Timeline_Effect__Direction_F12756554A77A3D8AD4BEBB05FDA0C96; // 0x0424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB8[0x3];                                     // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9542[0x3];                                     // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     Timeline_Effect;                                   // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         HideReason;                                        // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Gaze;                                              // 0x0434(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4EB9[0x3];                                     // 0x0435(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9543[0x3];                                     // 0x0435(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ManualMapID;                                       // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseManualMapID;                                    // 0x043C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4EBA[0x3];                                     // 0x043D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9544[0x3];                                     // 0x043D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Index_BP_AogamiDebris_C;                           // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TableIndex;                                        // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAogamiDebrisData                      AogamiDebrisData;                                  // 0x0448(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	bool                                          MapPauseCheck;                                     // 0x045C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_AogamiDebrisMotion                          Motion;                                            // 0x045D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MeshVisible;                                       // 0x045E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4EBB[0x1];                                     // 0x045F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9545[0x1];                                     // 0x045F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 SkeltalMesh;                                       // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAogamiDebrisPose                      DataTable;                                         // 0x0468(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TArray<class UMaterialInstanceDynamic*>       DMIs;                                              // 0x04E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          EffectVisible;                                     // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4EBC[0x3];                                     // 0x04F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9546[0x3];                                     // 0x04F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LightDefaultIntensity;                             // 0x04F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UParticleSystemComponent*               Particle;                                          // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          OnceScaleSetting;                                  // 0x0500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4EBD[0x7];                                     // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9547[0x7];                                     // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAtomCue*                          LoopCue;                                           // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundAtomCue*                          GetCue;                                            // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BlockContinuousAAction;                            // 0x0518(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

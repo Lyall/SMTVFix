@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_MEH_TYPE_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_MEH_TYPE_structs.hpp"
 
 
 namespace SDK

@@ -79,7 +79,7 @@ struct BPI_SkillSearchSortCtrl_C_BPI_DecideCurrentSlot final
 {
 public:
 	bool                                          IsPlaySE;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_258A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2569[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DecidedSkillID;                                    // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_SkillSearchSortCtrl_C_BPI_DecideCurrentSlot) == 0x000004, "Wrong alignment on BPI_SkillSearchSortCtrl_C_BPI_DecideCurrentSlot");
