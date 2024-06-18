@@ -287,8 +287,8 @@ void CurrentResolution()
                 iCurrentResX = (int)ctx.r10;
                 iCurrentResY = (int)ctx.r9;
 
-                iCurrentResX /= (int)fScreenPercentage / 100;
-                iCurrentResY /= (int)fScreenPercentage / 100;
+                iCurrentResX /= fScreenPercentage / 100;
+                iCurrentResY /= fScreenPercentage / 100;
 
                 // Calculate aspect ratio
                 fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
@@ -691,7 +691,6 @@ void GraphicalTweaks()
     if (ScreenPercentageScanResult)
     {
         spdlog::info("Screen Percentage: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ScreenPercentageScanResult - (uintptr_t)baseModule);
-
         static SafetyHookMid ScreenPercentageMidHook{};
         ScreenPercentageMidHook = safetyhook::create_mid(ScreenPercentageScanResult + 0x3,
             [](SafetyHookContext& ctx)
@@ -763,7 +762,7 @@ void GraphicalTweaks()
                         *reinterpret_cast<float*>(*(uintptr_t*)(MaxShadowCSMResolutionCVARAddr) + 0x234) = fViewDistanceScale;
                     }
                 }
-
+                
                 // Screen Percentage
                 if (bScreenPercentage)
                 {
