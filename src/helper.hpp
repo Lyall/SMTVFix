@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "SDK/Basic.hpp"
 
 namespace Memory
 {
@@ -132,5 +133,32 @@ namespace Util
             return { devMode.dmPelsWidth, devMode.dmPelsHeight };
 
         return {};
+    }
+}
+
+namespace Unreal
+{
+    struct FConsoleObject
+    {
+        void* Vft;
+        SDK::FString Description;
+    };
+
+    SDK::TMap<SDK::FString, FConsoleObject*> GetConsoleObjects(uintptr_t singletonAddr)
+    {
+        SDK::uint8** Singleton = reinterpret_cast<SDK::uint8**>(singletonAddr);
+
+        return *reinterpret_cast<SDK::TMap<SDK::FString, FConsoleObject*>*>(*Singleton + 8);
+    }
+
+    uintptr_t FindCVAR(std::string CVAR, SDK::TMap<SDK::FString, FConsoleObject*> ConsoleObjects)
+    {
+        for (auto& Pair : ConsoleObjects)
+        {
+            if (Pair.Key().ToString() == CVAR)
+            {
+                return (uintptr_t)Pair.Value();
+            }
+        }
     }
 }
