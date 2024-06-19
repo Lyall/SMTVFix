@@ -72,7 +72,6 @@ float fHUDHeightOffset;
 // Variables
 int iCurrentResX;
 int iCurrentResY;
-UTextureRenderTarget2D* battleTransitionTex;
 
 // CVAR addresses
 SDK::TMap<SDK::FString, Unreal::FConsoleObject*> ConsoleObjects;
@@ -83,11 +82,6 @@ void* RenTexPostLoad_Hooked(uint8_t* thisptr)
     auto renTex = (SDK::UTextureRenderTarget2D*)thisptr;
 
     spdlog::info("Render Texture 2D Resolution: {}: Old render texture resolution = {}x{}", renTex->GetName(), renTex->SizeX, renTex->SizeY);
-
-    if (renTex->SizeX == 1280 && renTex->SizeY == 720)
-    {
-        battleTransitionTex = renTex;
-    }
 
     if (bFixBattleTransition)
     {
