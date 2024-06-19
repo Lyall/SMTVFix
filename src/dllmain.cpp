@@ -75,17 +75,7 @@ int iOldResX;
 int iOldResY;
 
 // CVAR addresses
-uintptr_t AntiAliasingCVARAddr;
-uintptr_t HalfResAOCVARAddr;
-uintptr_t TAAUAlgorithmCVARAddr;
-uintptr_t VertexMotionVectorsCVARAddr;
-uintptr_t MaxShadowResolutionCVARAddr;
-uintptr_t MaxShadowCSMResolutionCVARAddr;
-uintptr_t AOMethodCVARAddr;
-uintptr_t HalfResGTAOCVARAddr;
-uintptr_t FoliageDistanceCVARAddr;
-uintptr_t ViewDistanceCVARAddr;
-uintptr_t ScreenPercentageCVARAddr;
+SDK::TMap<SDK::FString, Unreal::FConsoleObject*> ConsoleObjects;
 
 SafetyHookInline RenTexPostLoad{};
 void* RenTexPostLoad_Hooked(uint8_t* thisptr)
@@ -655,59 +645,6 @@ void HUD()
 
 void GraphicalTweaks()
 {
-    // CVARs
-    uint8_t* AntiAliasingCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 4C ?? ?? ?? ?? 74 ?? FF 15 ?? ?? ?? ?? 33 ?? 3B ?? ?? ?? ?? ?? 0F ?? ?? EB ?? 33 ??");
-    uint8_t* HalfResAOCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 83 ?? ?? 00 7E ??");
-    uint8_t* HalfResGTAOCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 39 ?? ?? 8B ?? ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 40 0F ?? ?? FF ??");
-    uint8_t* TAAUAlgorithmCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 49 ?? ?? 49 ?? ?? 48 ?? ?? 83 ?? ?? 00 74 ?? 48 ?? ?? E8 ?? ?? ?? ??");
-    uint8_t* VertexMotionVectorsCVARScanResult = Memory::PatternScan(baseModule, "0F 87 ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ?? 48 ?? ?? 0F 84 ?? ?? ?? ?? 48 ?? ?? FF 90 ?? ?? ?? ?? 85 ??") + 0x6;
-    //uint8_t* MaxShadowResolutionCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 44 ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ?? 44 ?? ?? ?? ?? 0F ?? ?? ?? ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ??");
-    //uint8_t* MaxShadowCSMResolutionCVARScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? ?? ?? 44 ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ?? 44 ?? ?? ?? ?? 0F ?? ?? ?? ?? ?? 42 ?? ?? ?? 39 ?? ?? ?? ?? ??");
-    //uint8_t* ViewDistanceCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? E8 ?? ?? ?? ?? 45 ?? ?? ??");
-    uint8_t* AOMethodCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 83 ?? ?? 01 75 ?? 83 ?? ?? ?? ?? ?? 03");
-    uint8_t* FoliageDistanceCVARScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? E8 ?? ?? ?? ?? 45 ?? ?? ??");
-    uint8_t* ScreenPercentageCVARScanResult = Memory::PatternScan(baseModule, "0F 8F ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ?? 48 8D ?? ?? ?? ?? ?? 0F ?? ?? 48 8D ?? ?? ?? F3 0F ?? ?? 66 ?? ?? ?? ?? E8 ?? ?? ?? ?? 83 ?? ?? ?? 00 48 8D ?? ?? ?? ?? ?? 48 ?? ?? 41 ?? ?? ?? ?? 01") + 0x6;
-    if (AntiAliasingCVARScanResult && HalfResAOCVARScanResult && TAAUAlgorithmCVARScanResult && VertexMotionVectorsCVARScanResult)
-    {
-        AntiAliasingCVARAddr = Memory::GetAbsolute((uintptr_t)AntiAliasingCVARScanResult + 0x3) - 0x8;
-        spdlog::info("CVARS: r.DefaultFeature.AntiAliasing: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AntiAliasingCVARAddr - (uintptr_t)baseModule);
-
-        HalfResAOCVARAddr = Memory::GetAbsolute((uintptr_t)HalfResAOCVARScanResult + 0x3) - 0x8;
-        spdlog::info("CVARS: r.AmbientOcclusion.HalfRes: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HalfResAOCVARAddr - (uintptr_t)baseModule);
-
-        TAAUAlgorithmCVARAddr = Memory::GetAbsolute((uintptr_t)TAAUAlgorithmCVARScanResult + 0x3) - 0x8;
-        spdlog::info("CVARS: r.TemporalAA.Algorithm: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)TAAUAlgorithmCVARAddr - (uintptr_t)baseModule);
-        
-        VertexMotionVectorsCVARAddr = Memory::GetAbsolute((uintptr_t)VertexMotionVectorsCVARScanResult + 0x3);
-        spdlog::info("CVARS: r.VertexDeformationOutputsVelocity: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)VertexMotionVectorsCVARAddr - (uintptr_t)baseModule);
-
-        ViewDistanceCVARAddr = (uintptr_t)baseModule + 0x4363440;
-        spdlog::info("CVARS: r.ViewDistanceScale: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ViewDistanceCVARAddr - (uintptr_t)baseModule);
-     
-        MaxShadowResolutionCVARAddr = (uintptr_t)baseModule + 0x4363380;
-        spdlog::info("CVARS: r.Shadow.MaxResolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MaxShadowResolutionCVARAddr - (uintptr_t)baseModule);
-
-        MaxShadowCSMResolutionCVARAddr = (uintptr_t)baseModule + 0x4363398;
-        spdlog::info("CVARS: r.Shadow.MaxCSMResolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MaxShadowCSMResolutionCVARAddr - (uintptr_t)baseModule);
-
-        HalfResGTAOCVARAddr = Memory::GetAbsolute((uintptr_t)HalfResGTAOCVARScanResult + 0x3) - 0x8;
-        spdlog::info("CVARS: r.GTAO.Downsample: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HalfResGTAOCVARAddr - (uintptr_t)baseModule);
-        
-        AOMethodCVARAddr = Memory::GetAbsolute((uintptr_t)AOMethodCVARScanResult + 0x3) - 0x8;
-        spdlog::info("CVARS: r.AmbientOcclusion.Method: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AOMethodCVARAddr - (uintptr_t)baseModule);
-
-        FoliageDistanceCVARAddr = Memory::GetAbsolute((uintptr_t)FoliageDistanceCVARScanResult + 0x3) - 0x8;
-        spdlog::info("CVARS: foliage.LODDistanceScale: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FoliageDistanceCVARAddr - (uintptr_t)baseModule);
-
-        ScreenPercentageCVARAddr = Memory::GetAbsolute((uintptr_t)ScreenPercentageCVARScanResult + 0x3);
-        spdlog::info("CVARS: r.ScreenPercentage: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ScreenPercentageCVARAddr - (uintptr_t)baseModule);
-
-    }
-    else if (!AntiAliasingCVARScanResult || !HalfResAOCVARScanResult || !TAAUAlgorithmCVARScanResult || !VertexMotionVectorsCVARScanResult)
-    {
-        spdlog::error("CVARS: Pattern scan failed.");
-    }
-
     // Set CVARs
     uint8_t* SetCVARSScanResult = Memory::PatternScan(baseModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3");
     if (SetCVARSScanResult)
@@ -718,115 +655,7 @@ void GraphicalTweaks()
         SetCVARSMidHook = safetyhook::create_mid(SetCVARSScanResult + 0x3,
             [](SafetyHookContext& ctx)
             {
-                if (bEnableTAA)
-                {
-                    // r.DefaultFeature.AntiAliasing
-                    auto* AntiAliasingCVAR = *reinterpret_cast<IConsoleVariable**>(AntiAliasingCVARAddr);
-                    if (AntiAliasingCVAR && AntiAliasingCVAR->GetInt() != 2)
-                    {
-                        AntiAliasingCVAR->SetFlags(ECVF_SetByConstructor);
-                        AntiAliasingCVAR->Set(L"2");
-                        spdlog::info("Set CVARS: Set r.DefaultFeature.AntiAliasing to {}", AntiAliasingCVAR->GetInt());
-                    }
-
-                    // r.VertexDeformationOutputsVelocity
-                    auto* VertexMotionVectorsCVAR = *reinterpret_cast<IConsoleVariable**>(VertexMotionVectorsCVARAddr);
-                    if (VertexMotionVectorsCVAR && VertexMotionVectorsCVAR->GetInt() != 1)
-                    {
-                        VertexMotionVectorsCVAR->SetFlags(ECVF_SetByConstructor);
-                        VertexMotionVectorsCVAR->Set(L"1");
-                        spdlog::info("Set CVARS: Set r.VertexDeformationOutputsVelocity to {}", VertexMotionVectorsCVAR->GetInt());
-                    }
-
-                    // r.AmbientOcclusion.HalfRes
-                    auto* HalfResAOCVAR = *reinterpret_cast<IConsoleVariable**>(HalfResAOCVARAddr);
-                    if (HalfResAOCVAR && HalfResAOCVAR->GetInt() != 0)
-                    {
-                        HalfResAOCVAR->SetFlags(ECVF_SetByConstructor);
-                        HalfResAOCVAR->Set(L"0");
-                        spdlog::info("Set CVARS: Set r.AmbientOcclusion.HalfRes to {}", HalfResAOCVAR->GetInt());
-                    }
-
-                    if (bEnableGen5TAAU)
-                    {
-                        // r.TemporalAA.Algorithm
-                        auto* TAAUAlgorithmCVAR = *reinterpret_cast<IConsoleVariable**>(TAAUAlgorithmCVARAddr);
-                        if (TAAUAlgorithmCVAR && TAAUAlgorithmCVAR->GetInt() != 1)
-                        {
-                            TAAUAlgorithmCVAR->SetFlags(ECVF_SetByConstructor);
-                            TAAUAlgorithmCVAR->Set(L"1");
-                            spdlog::info("Set CVARS: Set r.TemporalAA.Algorithm to {}", TAAUAlgorithmCVAR->GetInt());
-                        }
-                    }
-                }
-
-                if (bEnableGTAO)
-                {
-                    // r.AmbientOcclusion.Method
-                    auto* AOMethodCVAR = *reinterpret_cast<IConsoleVariable**>(AOMethodCVARAddr);
-                    if (AOMethodCVAR && AOMethodCVAR->GetInt() != 1)
-                    {
-                        AOMethodCVAR->SetFlags(ECVF_SetByConstructor);
-                        AOMethodCVAR->Set(L"1");
-                        spdlog::info("Set CVARS: Set r.AmbientOcclusion.Method to {}", AOMethodCVAR->GetInt());
-                    }
-
-                    if (bGTAOHalfRes)
-                    {
-                        // r.GTAO.Downsample
-                        auto* HalfResGTAOCVAR = *reinterpret_cast<IConsoleVariable**>(HalfResGTAOCVARAddr);
-                        if (HalfResGTAOCVAR && HalfResGTAOCVAR->GetInt() != 1)
-                        {
-                            HalfResGTAOCVAR->SetFlags(ECVF_SetByConstructor);
-                            HalfResGTAOCVAR->Set(L"1");
-                            spdlog::info("Set CVARS: Set r.GTAO.Downsample to {}", HalfResGTAOCVAR->GetInt());
-                        }
-                    }
-                }
-
-                if (bAdjustLOD)
-                {
-                    // foliage.LODDistanceScale
-                    auto* FoliageDistanceCVAR = *reinterpret_cast<IConsoleVariable**>(FoliageDistanceCVARAddr);
-                    if (FoliageDistanceCVAR && FoliageDistanceCVAR->GetFloat() != fFoliageDistanceScale)
-                    {
-                        FoliageDistanceCVAR->SetFlags(ECVF_SetByConstructor);
-                        FoliageDistanceCVAR->Set(std::to_wstring(fFoliageDistanceScale).c_str());
-                        spdlog::info("Set CVARS: Set foliage.LODDistanceScale to {}", FoliageDistanceCVAR->GetFloat());
-                    }
-
-                    // r.ViewDistanceScale
-                    auto* ViewDistanceCVAR = *reinterpret_cast<IConsoleVariable**>(ViewDistanceCVARAddr);
-                    if (ViewDistanceCVARAddr && ViewDistanceCVAR->GetFloat() != fViewDistanceScale)
-                    {
-                        ViewDistanceCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        ViewDistanceCVAR->Set(std::to_wstring(fViewDistanceScale).c_str());
-                        spdlog::info("Set CVARS: Set r.ViewDistanceScale to {}", ViewDistanceCVAR->GetFloat());
-                    }
-                }
-
-                if (bShadowQuality)
-                {
-                    // r.Shadow.MaxCSMResolution
-                    auto* MaxShadowCSMResolutionCVAR = *reinterpret_cast<IConsoleVariable**>(MaxShadowCSMResolutionCVARAddr);
-                    if (MaxShadowCSMResolutionCVAR && MaxShadowCSMResolutionCVAR->GetInt() != iShadowResolution)
-                    {
-                        MaxShadowCSMResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        MaxShadowCSMResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
-                        spdlog::info("Set CVARS: Set r.Shadow.MaxCSMResolution to {}", MaxShadowCSMResolutionCVAR->GetInt());
-                    }
-                    // r.Shadow.MaxResolution
-                    auto* MaxShadowResolutionCVAR = *reinterpret_cast<IConsoleVariable**>(MaxShadowResolutionCVARAddr);
-                    if (MaxShadowResolutionCVAR && MaxShadowResolutionCVAR->GetInt() != iShadowResolution)
-                    {
-                        MaxShadowResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        MaxShadowResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
-                        spdlog::info("Set CVARS: Set r.Shadow.MaxResolution to {}", MaxShadowResolutionCVAR->GetInt());
-                    }
-                }
-
-                // r.ScreenPercentage
-                auto* ScreenPercentageCVAR = *reinterpret_cast<IConsoleVariable**>(ScreenPercentageCVARAddr);
+                auto ScreenPercentageCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects));
                 if (ScreenPercentageCVAR)
                 {
                     if (bScreenPercentage && ScreenPercentageCVAR->GetFloat() != fScreenPercentage)
@@ -839,6 +668,104 @@ void GraphicalTweaks()
                     // Grab screen percentage in case it was set by the user
                     fScreenPercentage = ScreenPercentageCVAR->GetFloat();
                 }
+         
+                if (bEnableTAA)
+                {
+                    auto AntiAliasingCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.DefaultFeature.AntiAliasing", ConsoleObjects));
+                    if (AntiAliasingCVAR && AntiAliasingCVAR->GetInt() != 2)
+                    {
+                        AntiAliasingCVAR->SetFlags(ECVF_SetByConstructor);
+                        AntiAliasingCVAR->Set(L"2");
+                        spdlog::info("Set CVARS: Set r.DefaultFeature.AntiAliasing to {}", AntiAliasingCVAR->GetInt());
+                    }
+
+                    auto VertexMotionVectorsCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.VertexDeformationOutputsVelocity", ConsoleObjects));
+                    if (VertexMotionVectorsCVAR && VertexMotionVectorsCVAR->GetInt() != 1)
+                    {
+                        VertexMotionVectorsCVAR->SetFlags(ECVF_SetByConstructor);
+                        VertexMotionVectorsCVAR->Set(L"1");
+                        spdlog::info("Set CVARS: Set r.VertexDeformationOutputsVelocity to {}", VertexMotionVectorsCVAR->GetInt());
+                    }
+
+                    auto HalfResAOCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.AmbientOcclusion.HalfRes", ConsoleObjects));
+                    if (HalfResAOCVAR && HalfResAOCVAR->GetInt() != 0)
+                    {
+                        HalfResAOCVAR->SetFlags(ECVF_SetByConstructor);
+                        HalfResAOCVAR->Set(L"0");
+                        spdlog::info("Set CVARS: Set r.AmbientOcclusion.HalfRes to {}", HalfResAOCVAR->GetInt());
+                    }
+
+                    if (bEnableGen5TAAU)
+                    {
+                        auto TAAUAlgorithmCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.TemporalAA.Algorithm", ConsoleObjects));
+                        if (TAAUAlgorithmCVAR && TAAUAlgorithmCVAR->GetInt() != 1)
+                        {
+                            TAAUAlgorithmCVAR->SetFlags(ECVF_SetByConstructor);
+                            TAAUAlgorithmCVAR->Set(L"1");
+                            spdlog::info("Set CVARS: Set r.TemporalAA.Algorithm to {}", TAAUAlgorithmCVAR->GetInt());
+                        }
+                    }
+                }
+
+                if (bEnableGTAO)
+                {
+                    auto AOMethodCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.AmbientOcclusion.Method", ConsoleObjects));
+                    if (AOMethodCVAR && AOMethodCVAR->GetInt() != 1)
+                    {
+                        AOMethodCVAR->SetFlags(ECVF_SetByConstructor);
+                        AOMethodCVAR->Set(L"1");
+                        spdlog::info("Set CVARS: Set r.AmbientOcclusion.Method to {}", AOMethodCVAR->GetInt());
+                    }
+
+                    if (bGTAOHalfRes)
+                    {
+                        auto HalfResGTAOCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.GTAO.Downsample", ConsoleObjects));
+                        if (HalfResGTAOCVAR && HalfResGTAOCVAR->GetInt() != 1)
+                        {
+                            HalfResGTAOCVAR->SetFlags(ECVF_SetByConstructor);
+                            HalfResGTAOCVAR->Set(L"1");
+                            spdlog::info("Set CVARS: Set r.GTAO.Downsample to {}", HalfResGTAOCVAR->GetInt());
+                        }
+                    }
+                }
+
+                if (bAdjustLOD)
+                {
+                    auto FoliageDistanceCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("foliage.LODDistanceScale", ConsoleObjects));
+                    if (FoliageDistanceCVAR && FoliageDistanceCVAR->GetFloat() != fFoliageDistanceScale)
+                    {
+                        FoliageDistanceCVAR->SetFlags(ECVF_SetByConstructor);
+                        FoliageDistanceCVAR->Set(std::to_wstring(fFoliageDistanceScale).c_str());
+                        spdlog::info("Set CVARS: Set foliage.LODDistanceScale to {}", FoliageDistanceCVAR->GetFloat());
+                    }
+
+                    auto ViewDistanceCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ViewDistanceScale", ConsoleObjects));
+                    if (ViewDistanceCVARAddr && ViewDistanceCVAR->GetFloat() != fViewDistanceScale)
+                    {
+                        ViewDistanceCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        ViewDistanceCVAR->Set(std::to_wstring(fViewDistanceScale).c_str());
+                        spdlog::info("Set CVARS: Set r.ViewDistanceScale to {}", ViewDistanceCVAR->GetFloat());
+                    }
+                }
+
+                if (bShadowQuality)
+                {
+                    auto MaxShadowCSMResolutionCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.Shadow.MaxCSMResolution", ConsoleObjects));
+                    if (MaxShadowCSMResolutionCVAR && MaxShadowCSMResolutionCVAR->GetInt() != iShadowResolution)
+                    {
+                        MaxShadowCSMResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        MaxShadowCSMResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
+                        spdlog::info("Set CVARS: Set r.Shadow.MaxCSMResolution to {}", MaxShadowCSMResolutionCVAR->GetInt());
+                    }
+
+                    auto MaxShadowResolutionCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.Shadow.MaxResolution", ConsoleObjects));
+                    if (MaxShadowResolutionCVAR && MaxShadowResolutionCVAR->GetInt() != iShadowResolution)
+                    {
+                        MaxShadowResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        MaxShadowResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
+                        spdlog::info("Set CVARS: Set r.Shadow.MaxResolution to {}", MaxShadowResolutionCVAR->GetInt());
+                    }
+                }
             });
     }
     else if (!SetCVARSScanResult)
@@ -849,6 +776,22 @@ void GraphicalTweaks()
 
 void Misc()
 {
+    // IConsoleManager Singleton
+    uint8_t* ConsoleManagerSingletonScanResult = Memory::PatternScan(baseModule, "48 83 ?? ?? 48 83 3D ?? ?? ?? ?? 00 0F 85 ?? ?? ?? ?? B9 ?? ?? ?? ?? 48 89 ?? ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 48 ?? ??");
+    if (ConsoleManagerSingletonScanResult)
+    {
+        spdlog::info("IConsoleManager Singleton: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ConsoleManagerSingletonScanResult - (uintptr_t)baseModule);
+        uintptr_t SingletonAddr = Memory::GetAbsolute((uintptr_t)ConsoleManagerSingletonScanResult + 0x7) + 0x1;
+        spdlog::info("IConsoleManager Singleton: Singleton address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)SingletonAddr - (uintptr_t)baseModule);
+
+        // Cache all console objects
+        ConsoleObjects = Unreal::GetConsoleObjects(SingletonAddr);
+    }
+    else if (!ConsoleManagerSingletonScanResult)
+    {
+        spdlog::error("IConsoleManager Singleton: Pattern scan failed.");
+    }
+
     if (bEnableConsole)
     {
         // Construct Console
