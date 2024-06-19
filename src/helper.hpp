@@ -160,5 +160,6 @@ namespace Unreal
                 return (uintptr_t)Pair.Value();
             }
         }
+        return 0;
     }
 }
