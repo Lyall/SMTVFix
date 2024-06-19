@@ -651,13 +651,14 @@ void HUD()
 void GraphicalTweaks()
 {
     // Set CVARs
-    uint8_t* SetCVARSScanResult = Memory::PatternScan(baseModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3");
+    // GameplayStatics::OpenLevel
+    uint8_t* SetCVARSScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? 4C 8D ?? ?? 48 8B ?? ?? 44 0F ?? ?? E8 ?? ?? ?? ?? 48 8B ?? ?? 48 85 ?? 74 ?? E8 ?? ?? ?? ??");
     if (SetCVARSScanResult)
     {
         spdlog::info("Set CVARS: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)SetCVARSScanResult - (uintptr_t)baseModule);
 
         static SafetyHookMid SetCVARSMidHook{};
-        SetCVARSMidHook = safetyhook::create_mid(SetCVARSScanResult + 0x3,
+        SetCVARSMidHook = safetyhook::create_mid(SetCVARSScanResult,
             [](SafetyHookContext& ctx)
             {
                 auto ScreenPercentageCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects));
