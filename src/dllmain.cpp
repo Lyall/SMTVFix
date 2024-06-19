@@ -26,7 +26,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.8.7";
+std::string sFixVer = "0.8.8";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
@@ -51,6 +51,7 @@ bool bAdjustCam;
 float fAdjustDist;
 float fAdjustFOV;
 float fAdjustHeight;
+bool bForceMovieRes;
 bool bShadowQuality;
 int iShadowResolution;
 bool bEnableGTAO;
@@ -175,6 +176,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["Adjust Player Camera"], "Distance", fAdjustDist);
     inipp::get_value(ini.sections["Adjust Player Camera"], "FOV", fAdjustFOV);
     inipp::get_value(ini.sections["Adjust Player Camera"], "Height", fAdjustHeight);
+    inipp::get_value(ini.sections["Force 4K Movies"], "Enabled", bForceMovieRes);
     inipp::get_value(ini.sections["Screen Percentage"], "Enabled", bScreenPercentage);
     inipp::get_value(ini.sections["Screen Percentage"], "Value", fScreenPercentage);
     inipp::get_value(ini.sections["Enable TAA"], "Enabled", bEnableTAA);
@@ -216,6 +218,7 @@ void ReadConfig()
         fAdjustHeight = std::clamp(fAdjustHeight, (float)1, (float)10000);
         spdlog::warn("Config Parse: fAdjustHeight value invalid, clamped to {}", fAdjustHeight);
     }
+    spdlog::info("Config Parse: bForceMovieRes: {}", bForceMovieRes);
     spdlog::info("Config Parse: bScreenPercentage: {}", bScreenPercentage);
     spdlog::info("Config Parse: fScreenPercentage: {}", fScreenPercentage);
     if (fScreenPercentage < (float)10 || fScreenPercentage >(float)400)
@@ -865,7 +868,7 @@ void Misc()
     if (bDisableMenuFPSCap)
     {
         // Disable FrameRateManager changing t.MaxFPS to 60
-        uint8_t* FramerateChangeScanResult = Memory::PatternScan(baseModule, "44 ?? ?? ?? 0F ?? ?? ?? ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ?? ");
+        uint8_t* FramerateChangeScanResult = Memory::PatternScan(baseModule, "44 ?? ?? ?? 0F ?? ?? ?? ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ??");
         if (FramerateChangeScanResult)
         {
             spdlog::info("Menu Framerate Cap: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FramerateChangeScanResult - (uintptr_t)baseModule);
@@ -882,6 +885,24 @@ void Misc()
             spdlog::error("Menu Framerate Cap: Pattern scan failed.");
         }
     }
+
+    if (bForceMovieRes)
+    {
+        // Always play 4K movies
+        // EventFunctionLibrary::IsOriginalMovieResolution()
+        uint8_t* MovieResolutionScanResult = Memory::PatternScan(baseModule, "81 ?? ?? D0 07 00 00 0F ?? ?? 48 83 ?? ?? C3");
+        if (MovieResolutionScanResult)
+        {
+            spdlog::info("Movie Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MovieResolutionScanResult - (uintptr_t)baseModule);
+            Memory::Write((uintptr_t)MovieResolutionScanResult + 0x3, (int)0);
+            spdlog::info("Movie Resolution: Patched instruction.");
+        }
+        else if (!MovieResolutionScanResult)
+        {
+            spdlog::error("Movie Resolution: Pattern scan failed.");
+        }
+    }
+
 }
 
 void IntroSkip()
