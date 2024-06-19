@@ -38,6 +38,7 @@ std::pair DesktopDimensions = { 0,0 };
 bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
+bool bFixBattleTransition;
 bool bIntroSkip;
 bool bIntroSkipMovie;
 bool bEnableConsole;
@@ -71,8 +72,6 @@ float fHUDHeightOffset;
 // Variables
 int iCurrentResX;
 int iCurrentResY;
-int iOldResX;
-int iOldResY;
 UTextureRenderTarget2D* battleTransitionTex;
 
 // CVAR addresses
@@ -90,10 +89,13 @@ void* RenTexPostLoad_Hooked(uint8_t* thisptr)
         battleTransitionTex = renTex;
     }
 
-    renTex->SizeX = iCurrentResX;
-    renTex->SizeY = iCurrentResY;
-    spdlog::info("Render Texture 2D Resolution: {}: New render texture resolution = {}x{}", renTex->GetName(), renTex->SizeX, renTex->SizeY);
-    
+    if (bFixBattleTransition)
+    {
+        renTex->SizeX = DesktopDimensions.first;
+        renTex->SizeY = DesktopDimensions.second;
+        spdlog::info("Render Texture 2D Resolution: {}: New render texture resolution = {}x{}", renTex->GetName(), renTex->SizeX, renTex->SizeY);
+    }
+
     // Run original function
     return RenTexPostLoad.stdcall<void*>(thisptr);
 }
@@ -171,6 +173,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
     inipp::get_value(ini.sections["Fix FOV"], "Enabled", bFixFOV);
+    inipp::get_value(ini.sections["Fix Battle Transition"], "Enabled", bFixBattleTransition);
     inipp::get_value(ini.sections["Adjust Player Camera"], "Enabled", bAdjustCam);
     inipp::get_value(ini.sections["Adjust Player Camera"], "Distance", fAdjustDist);
     inipp::get_value(ini.sections["Adjust Player Camera"], "FOV", fAdjustFOV);
@@ -195,6 +198,7 @@ void ReadConfig()
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
     spdlog::info("Config Parse: bFixFOV: {}", bFixFOV);
+    spdlog::info("Config Parse: bFixBattleTransition: {}", bFixBattleTransition);
     spdlog::info("Config Parse: bAdjustCam: {}", bAdjustCam);
     spdlog::info("Config Parse: fAdjustFOV: {}", fAdjustFOV);
     if (fAdjustFOV < (float)1 || fAdjustFOV >(float)180)
@@ -250,8 +254,22 @@ void ReadConfig()
 
     // Grab desktop resolution/aspect
     DesktopDimensions = Util::GetPhysicalDesktopDimensions();
-    iCurrentResX = DesktopDimensions.first;
-    iCurrentResY = DesktopDimensions.second;
+}
+
+void CalculateAspectRatio(int ResX, int ResY)
+{
+    // Get screen percentage
+    auto ScreenPercentageCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects));
+    if (ScreenPercentageCVAR)
+    {
+        fScreenPercentage = ScreenPercentageCVAR->GetFloat();
+    }
+
+    iCurrentResX = ResX;
+    iCurrentResY = ResY;
+
+    iCurrentResX /= fScreenPercentage / 100;
+    iCurrentResY /= fScreenPercentage / 100;
 
     // Calculate aspect ratio
     fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
@@ -269,6 +287,19 @@ void ReadConfig()
         fHUDWidthOffset = 0;
         fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
     }
+
+    // Log details about current resolution
+    spdlog::info("----------");
+    spdlog::info("Current Resolution: Base Resolution: {}x{}", iCurrentResX, iCurrentResY);
+    spdlog::info("Current Resolution: fScreenPercentage: {}", fScreenPercentage);
+    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX * fScreenPercentage / 100, iCurrentResY * fScreenPercentage / 100);
+    spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
+    spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
+    spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
+    spdlog::info("Current Resolution: fHUDHeight: {}", fHUDHeight);
+    spdlog::info("Current Resolution: fHUDWidthOffset: {}", fHUDWidthOffset);
+    spdlog::info("Current Resolution: fHUDHeightOffset: {}", fHUDHeightOffset);
+    spdlog::info("----------");
 }
 
 void CurrentResolution()
@@ -288,49 +319,9 @@ void CurrentResolution()
                 int iResY = (int)ctx.r9;
 
                 // Only log on resolution change since this function runs all the time.
-                if (iResX != iOldResX || iResY != iOldResY)
+                if (iResX != iCurrentResX || iResY != iCurrentResY)
                 {
-                    auto ScreenPercentageCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects));
-                    if (ScreenPercentageCVAR)
-                    {
-                        fScreenPercentage = ScreenPercentageCVAR->GetFloat();
-                    }
-
-                    iOldResX = iCurrentResX = iResX;
-                    iOldResY = iCurrentResY = iResY;
-
-                    iCurrentResX /= fScreenPercentage / 100;
-                    iCurrentResY /= fScreenPercentage / 100;
-
-                    // Calculate aspect ratio
-                    fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
-                    fAspectMultiplier = fAspectRatio / fNativeAspect;
-
-                    // HUD variables
-                    fHUDWidth = iCurrentResY * fNativeAspect;
-                    fHUDHeight = (float)iCurrentResY;
-                    fHUDWidthOffset = (float)(iCurrentResX - fHUDWidth) / 2;
-                    fHUDHeightOffset = 0;
-                    if (fAspectRatio < fNativeAspect)
-                    {
-                        fHUDWidth = (float)iCurrentResX;
-                        fHUDHeight = (float)iCurrentResX / fNativeAspect;
-                        fHUDWidthOffset = 0;
-                        fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
-                    }
-
-                    // Log details about current resolution
-                    spdlog::info("----------");
-                    spdlog::info("Current Resolution: Base Resolution: {}x{}", iCurrentResX, iCurrentResY);
-                    spdlog::info("Current Resolution: fScreenPercentage: {}", fScreenPercentage);
-                    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX * fScreenPercentage / 100, iCurrentResY * fScreenPercentage / 100);
-                    spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
-                    spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
-                    spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
-                    spdlog::info("Current Resolution: fHUDHeight: {}", fHUDHeight);
-                    spdlog::info("Current Resolution: fHUDWidthOffset: {}", fHUDWidthOffset);
-                    spdlog::info("Current Resolution: fHUDHeightOffset: {}", fHUDHeightOffset);
-                    spdlog::info("----------");
+                    CalculateAspectRatio(iResX, iResY);
                 }
             });
     }
