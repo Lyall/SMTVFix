@@ -73,6 +73,7 @@ int iCurrentResX;
 int iCurrentResY;
 int iOldResX;
 int iOldResY;
+UTextureRenderTarget2D* battleTransitionTex;
 
 // CVAR addresses
 SDK::TMap<SDK::FString, Unreal::FConsoleObject*> ConsoleObjects;
@@ -84,9 +85,13 @@ void* RenTexPostLoad_Hooked(uint8_t* thisptr)
 
     spdlog::info("Render Texture 2D Resolution: {}: Old render texture resolution = {}x{}", renTex->GetName(), renTex->SizeX, renTex->SizeY);
 
+    if (renTex->SizeX == 1280 && renTex->SizeY == 720)
+    {
+        battleTransitionTex = renTex;
+    }
+
     renTex->SizeX = iCurrentResX;
     renTex->SizeY = iCurrentResY;
-
     spdlog::info("Render Texture 2D Resolution: {}: New render texture resolution = {}x{}", renTex->GetName(), renTex->SizeX, renTex->SizeY);
     
     // Run original function
@@ -740,11 +745,19 @@ void GraphicalTweaks()
                     }
 
                     auto ViewDistanceCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ViewDistanceScale", ConsoleObjects));
-                    if (ViewDistanceCVARAddr && ViewDistanceCVAR->GetFloat() != fViewDistanceScale)
+                    if (ViewDistanceCVAR && ViewDistanceCVAR->GetFloat() != fViewDistanceScale)
                     {
                         ViewDistanceCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                         ViewDistanceCVAR->Set(std::to_wstring(fViewDistanceScale).c_str());
                         spdlog::info("Set CVARS: Set r.ViewDistanceScale to {}", ViewDistanceCVAR->GetFloat());
+                    }
+
+                    auto SkeletalMeshLODBiasCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.SkeletalMeshLODBias", ConsoleObjects));
+                    if (SkeletalMeshLODBiasCVAR && SkeletalMeshLODBiasCVAR->GetInt() != -1)
+                    {
+                        SkeletalMeshLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        SkeletalMeshLODBiasCVAR->Set(L"-1");
+                        spdlog::info("Set CVARS: Set r.SkeletalMeshLODBias to {}", SkeletalMeshLODBiasCVAR->GetInt());
                     }
                 }
 
