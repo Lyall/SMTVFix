@@ -73,6 +73,8 @@ float fHUDHeightOffset;
 // Variables
 int iCurrentResX;
 int iCurrentResY;
+int iOldResX;
+int iOldResY;
 
 // CVAR addresses
 SDK::TMap<SDK::FString, Unreal::FConsoleObject*> ConsoleObjects;
@@ -267,8 +269,8 @@ void CalculateAspectRatio(int ResX, int ResY)
         fScreenPercentage = ScreenPercentageCVAR->GetFloat();
     }
 
-    iCurrentResX = ResX;
-    iCurrentResY = ResY;
+    iOldResX = iCurrentResX = ResX;
+    iOldResY = iCurrentResY = ResY;
 
     iCurrentResX /= fScreenPercentage / 100;
     iCurrentResY /= fScreenPercentage / 100;
@@ -321,7 +323,7 @@ void CurrentResolution()
                 int iResY = (int)ctx.r9;
 
                 // Only log on resolution change since this function runs all the time.
-                if (iResX != iCurrentResX || iResY != iCurrentResY)
+                if (iResX != iOldResX || iResY != iOldResY)
                 {
                     CalculateAspectRatio(iResX, iResY);
                 }
