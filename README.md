@@ -45,6 +45,8 @@ ConsoleKeys=Tilde
 Please report any issues you see.
 This list will contain bugs which may or may not be fixed.
 
+- Battle transition may display at wrong aspect ratio if you have changed aspect ratio after booting the game. Restart the game to fix this.
+
 ### Ultrawide/Narrower Issues
 - Map background does not span screen.
 
