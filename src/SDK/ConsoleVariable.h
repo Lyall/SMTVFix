@@ -161,5 +161,4 @@ namespace SDK
 			Set(InValue, CurFlags);
 		}
 	};
-
 }
