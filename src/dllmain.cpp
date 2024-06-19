@@ -58,6 +58,7 @@ bool bGTAOHalfRes;
 bool bAdjustLOD;
 float fFoliageDistanceScale;
 float fViewDistanceScale;
+int iSSAOLevel;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -181,6 +182,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["Level of Detail"], "Enabled", bAdjustLOD);
     inipp::get_value(ini.sections["Level of Detail"], "Foliage", fFoliageDistanceScale);
     inipp::get_value(ini.sections["Level of Detail"], "ViewDistance", fViewDistanceScale);
+    inipp::get_value(ini.sections["Ambient Occlusion Quality"], "Levels", iSSAOLevel);
     inipp::get_value(ini.sections["GTAO Ambient Occlusion"], "Enabled", bEnableGTAO);
     inipp::get_value(ini.sections["GTAO Ambient Occlusion"], "HalfRes", bGTAOHalfRes);
 
@@ -244,6 +246,12 @@ void ReadConfig()
     }
     spdlog::info("Config Parse: bEnableGTAO: {}", bEnableGTAO);
     spdlog::info("Config Parse: bGTAOHalfRes: {}", bGTAOHalfRes);
+    spdlog::info("Config Parse: iSSAOLevel: {}", iSSAOLevel);
+    if (iSSAOLevel < 1 || iSSAOLevel > 3)
+    {
+        iSSAOLevel = std::clamp(iSSAOLevel, 1, 3);
+        spdlog::warn("Config Parse: iSSAOLevel value invalid, clamped to {}", iSSAOLevel);
+    }
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -752,6 +760,17 @@ void GraphicalTweaks()
                         SkeletalMeshLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                         SkeletalMeshLODBiasCVAR->Set(L"-1");
                         spdlog::info("Set CVARS: Set r.SkeletalMeshLODBias to {}", SkeletalMeshLODBiasCVAR->GetInt());
+                    }
+                }
+
+                if (iSSAOLevel != 1)
+                {
+                    auto SSAOLevelsCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.AmbientOcclusionLevels", ConsoleObjects));
+                    if (SSAOLevelsCVAR && SSAOLevelsCVAR->GetInt() != iSSAOLevel)
+                    {
+                        SSAOLevelsCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        SSAOLevelsCVAR->Set(std::to_wstring(iSSAOLevel).c_str());
+                        spdlog::info("Set CVARS: Set r.AmbientOcclusionLevels to {}", SSAOLevelsCVAR->GetInt());
                     }
                 }
 
