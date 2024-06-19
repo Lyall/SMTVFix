@@ -17,66 +17,89 @@
 namespace SDK
 {
 
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.DestroyNaviDevil_BeforeEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.EvtDis_DeleteNaviDevil__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_NaviDevilCtrlBase_C::DestroyNaviDevil_BeforeEvent()
+void ABP_NaviDevilCtrlBase_C::EvtDis_DeleteNaviDevil__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "DestroyNaviDevil_BeforeEvent");
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "EvtDis_DeleteNaviDevil__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.RespawnNaviDevil_AfterEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.EvtDis_SpawnNaviDevil__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_NaviDevilCtrlBase_C::RespawnNaviDevil_AfterEvent()
+void ABP_NaviDevilCtrlBase_C::EvtDis_SpawnNaviDevil__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "RespawnNaviDevil_AfterEvent");
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "EvtDis_SpawnNaviDevil__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.CalcNaviGimmickExist_Other
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.ChangeNaviDevil_FromEnum
 // (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_NaviDevilCtrlBase_C::CalcNaviGimmickExist_Other()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "CalcNaviGimmickExist_Other");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.GetGimmickInfoList
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FNaviDevilGimmickActors>  List                                                   (Parm, OutParm)
+// E_NAVI_DEVIL                            NaviDevil                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CalcOnGround                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_NaviDevilCtrlBase_C::GetGimmickInfoList(TArray<struct FNaviDevilGimmickActors>* List)
+void ABP_NaviDevilCtrlBase_C::ChangeNaviDevil_FromEnum(E_NAVI_DEVIL NaviDevil, bool CalcOnGround)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "GetGimmickInfoList");
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "ChangeNaviDevil_FromEnum");
 
-	Params::BP_NaviDevilCtrlBase_C_GetGimmickInfoList Parms{};
+	Params::BP_NaviDevilCtrlBase_C_ChangeNaviDevil_FromEnum Parms{};
+
+	Parms.NaviDevil = NaviDevil;
+	Parms.CalcOnGround = CalcOnGround;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (List != nullptr)
-		*List = std::move(Parms.List);
+
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.ClearNaviDevil
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_NaviDevilCtrlBase_C::ClearNaviDevil()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "ClearNaviDevil");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.ChangeNaviDevil_FromPawn
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_NAVI_DEVIL                            NaviDevil                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_NaviDevilCtrlBase_C::ChangeNaviDevil_FromPawn(class APawn* Pawn, E_NAVI_DEVIL NaviDevil)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "ChangeNaviDevil_FromPawn");
+
+	Params::BP_NaviDevilCtrlBase_C_ChangeNaviDevil_FromPawn Parms{};
+
+	Parms.Pawn = Pawn;
+	Parms.NaviDevil = NaviDevil;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -106,87 +129,64 @@ void ABP_NaviDevilCtrlBase_C::CalcNaviGimmickExist_FromCategory(TArray<int32>& C
 }
 
 
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.ChangeNaviDevil_FromPawn
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.GetGimmickInfoList
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// E_NAVI_DEVIL                            NaviDevil                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FNaviDevilGimmickActors>  List                                                   (Parm, OutParm)
 
-void ABP_NaviDevilCtrlBase_C::ChangeNaviDevil_FromPawn(class APawn* Pawn, E_NAVI_DEVIL NaviDevil)
+void ABP_NaviDevilCtrlBase_C::GetGimmickInfoList(TArray<struct FNaviDevilGimmickActors>* List)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "ChangeNaviDevil_FromPawn");
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "GetGimmickInfoList");
 
-	Params::BP_NaviDevilCtrlBase_C_ChangeNaviDevil_FromPawn Parms{};
-
-	Parms.Pawn = Pawn;
-	Parms.NaviDevil = NaviDevil;
+	Params::BP_NaviDevilCtrlBase_C_GetGimmickInfoList Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (List != nullptr)
+		*List = std::move(Parms.List);
 }
 
 
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.ClearNaviDevil
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.CalcNaviGimmickExist_Other
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_NaviDevilCtrlBase_C::ClearNaviDevil()
+void ABP_NaviDevilCtrlBase_C::CalcNaviGimmickExist_Other()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "ClearNaviDevil");
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "CalcNaviGimmickExist_Other");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.ChangeNaviDevil_FromEnum
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.RespawnNaviDevil_AfterEvent
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// E_NAVI_DEVIL                            NaviDevil                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CalcOnGround                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_NaviDevilCtrlBase_C::ChangeNaviDevil_FromEnum(E_NAVI_DEVIL NaviDevil, bool CalcOnGround)
+void ABP_NaviDevilCtrlBase_C::RespawnNaviDevil_AfterEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "ChangeNaviDevil_FromEnum");
-
-	Params::BP_NaviDevilCtrlBase_C_ChangeNaviDevil_FromEnum Parms{};
-
-	Parms.NaviDevil = NaviDevil;
-	Parms.CalcOnGround = CalcOnGround;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.EvtDis_SpawnNaviDevil__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void ABP_NaviDevilCtrlBase_C::EvtDis_SpawnNaviDevil__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "EvtDis_SpawnNaviDevil__DelegateSignature");
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "RespawnNaviDevil_AfterEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.EvtDis_DeleteNaviDevil__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function BP_NaviDevilCtrlBase.BP_NaviDevilCtrlBase_C.DestroyNaviDevil_BeforeEvent
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_NaviDevilCtrlBase_C::EvtDis_DeleteNaviDevil__DelegateSignature()
+void ABP_NaviDevilCtrlBase_C::DestroyNaviDevil_BeforeEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "EvtDis_DeleteNaviDevil__DelegateSignature");
+		Func = Class->GetFunction("BP_NaviDevilCtrlBase_C", "DestroyNaviDevil_BeforeEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

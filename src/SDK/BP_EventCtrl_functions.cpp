@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function BP_EventCtrl.BP_EventCtrl_C.SetPosition
+// Function BP_EventCtrl.BP_EventCtrl_C.PlayStart
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           PositionActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventCtrl_C::SetPosition(class AActor* PositionActor)
+void ABP_EventCtrl_C::PlayStart()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventCtrl_C", "SetPosition");
+		Func = Class->GetFunction("BP_EventCtrl_C", "PlayStart");
 
-	Params::BP_EventCtrl_C_SetPosition Parms{};
-
-	Parms.PositionActor = PositionActor;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -58,17 +52,23 @@ void ABP_EventCtrl_C::IsFinish(bool* Param_Finish)
 }
 
 
-// Function BP_EventCtrl.BP_EventCtrl_C.PlayStart
+// Function BP_EventCtrl.BP_EventCtrl_C.SetPosition
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           PositionActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventCtrl_C::PlayStart()
+void ABP_EventCtrl_C::SetPosition(class AActor* PositionActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventCtrl_C", "PlayStart");
+		Func = Class->GetFunction("BP_EventCtrl_C", "SetPosition");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_EventCtrl_C_SetPosition Parms{};
+
+	Parms.PositionActor = PositionActor;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -21,9 +21,9 @@ namespace SDK
 class UBPL_EventView_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void SearchContinueEventStartId(int32 MapEventID, class UObject* __WorldContext, int32* EventId);
-	static void GetEventViewStartTransform(int32 MapEventID, class UObject* __WorldContext, bool* Ret, struct FTransform* Transform);
 	static void CheckEventView_ContinueEventFirst(int32 MapEventID, class UObject* __WorldContext, bool* Ret);
+	static void GetEventViewStartTransform(int32 MapEventID, class UObject* __WorldContext, bool* Ret, struct FTransform* Transform);
+	static void SearchContinueEventStartId(int32 MapEventID, class UObject* __WorldContext, int32* EventId);
 
 public:
 	static class UClass* StaticClass()

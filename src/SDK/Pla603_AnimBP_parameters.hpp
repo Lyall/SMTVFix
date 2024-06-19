@@ -20,553 +20,6 @@
 namespace SDK::Params
 {
 
-// Function Pla603_AnimBP.Pla603_AnimBP_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
-struct Pla603_AnimBP_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              Param_AnimGraph;                                   // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_AnimGraph) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_AnimGraph");
-static_assert(sizeof(Pla603_AnimBP_C_AnimGraph) == 0x000010, "Wrong size on Pla603_AnimBP_C_AnimGraph");
-static_assert(offsetof(Pla603_AnimBP_C_AnimGraph, Param_AnimGraph) == 0x000000, "Member 'Pla603_AnimBP_C_AnimGraph::Param_AnimGraph' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.CheckIdle
-// 0x0002 (0x0002 - 0x0000)
-struct Pla603_AnimBP_C_CheckIdle final
-{
-public:
-	bool                                          Idle;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_CheckIdle) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_CheckIdle");
-static_assert(sizeof(Pla603_AnimBP_C_CheckIdle) == 0x000002, "Wrong size on Pla603_AnimBP_C_CheckIdle");
-static_assert(offsetof(Pla603_AnimBP_C_CheckIdle, Idle) == 0x000000, "Member 'Pla603_AnimBP_C_CheckIdle::Idle' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_CheckIdle, CallFunc_BooleanAND_ReturnValue) == 0x000001, "Member 'Pla603_AnimBP_C_CheckIdle::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetBoneMotionEnable
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_SetBoneMotionEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetBoneMotionEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetBoneMotionEnable");
-static_assert(sizeof(Pla603_AnimBP_C_SetBoneMotionEnable) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetBoneMotionEnable");
-static_assert(offsetof(Pla603_AnimBP_C_SetBoneMotionEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetBoneMotionEnable::Enable' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRootOffsetEnable
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_SetRootOffsetEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetRootOffsetEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetRootOffsetEnable");
-static_assert(sizeof(Pla603_AnimBP_C_SetRootOffsetEnable) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetRootOffsetEnable");
-static_assert(offsetof(Pla603_AnimBP_C_SetRootOffsetEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetRootOffsetEnable::Enable' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRootOffset
-// 0x0018 (0x0018 - 0x0000)
-struct Pla603_AnimBP_C_SetRootOffset final
-{
-public:
-	struct FVector                                Offset;                                            // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               DeltaRotation;                                     // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetRootOffset) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetRootOffset");
-static_assert(sizeof(Pla603_AnimBP_C_SetRootOffset) == 0x000018, "Wrong size on Pla603_AnimBP_C_SetRootOffset");
-static_assert(offsetof(Pla603_AnimBP_C_SetRootOffset, Offset) == 0x000000, "Member 'Pla603_AnimBP_C_SetRootOffset::Offset' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetRootOffset, DeltaRotation) == 0x00000C, "Member 'Pla603_AnimBP_C_SetRootOffset::DeltaRotation' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetLegIKEnable
-// 0x0002 (0x0002 - 0x0000)
-struct Pla603_AnimBP_C_SetLegIKEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Immediately;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetLegIKEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetLegIKEnable");
-static_assert(sizeof(Pla603_AnimBP_C_SetLegIKEnable) == 0x000002, "Wrong size on Pla603_AnimBP_C_SetLegIKEnable");
-static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetLegIKEnable::Enable' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEnable, Immediately) == 0x000001, "Member 'Pla603_AnimBP_C_SetLegIKEnable::Immediately' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetLegIKEffector
-// 0x001C (0x001C - 0x0000)
-struct Pla603_AnimBP_C_SetLegIKEffector final
-{
-public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Location;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               DeltaRotation;                                     // 0x0010(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetLegIKEffector) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetLegIKEffector");
-static_assert(sizeof(Pla603_AnimBP_C_SetLegIKEffector) == 0x00001C, "Wrong size on Pla603_AnimBP_C_SetLegIKEffector");
-static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEffector, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetLegIKEffector::Param_Index' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEffector, Location) == 0x000004, "Member 'Pla603_AnimBP_C_SetLegIKEffector::Location' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEffector, DeltaRotation) == 0x000010, "Member 'Pla603_AnimBP_C_SetLegIKEffector::DeltaRotation' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetLegIKTarget
-// 0x0010 (0x0010 - 0x0000)
-struct Pla603_AnimBP_C_SetLegIKTarget final
-{
-public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Location;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetLegIKTarget) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetLegIKTarget");
-static_assert(sizeof(Pla603_AnimBP_C_SetLegIKTarget) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetLegIKTarget");
-static_assert(offsetof(Pla603_AnimBP_C_SetLegIKTarget, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetLegIKTarget::Param_Index' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetLegIKTarget, Location) == 0x000004, "Member 'Pla603_AnimBP_C_SetLegIKTarget::Location' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetBodyIKEnable
-// 0x0002 (0x0002 - 0x0000)
-struct Pla603_AnimBP_C_SetBodyIKEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Immediately;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetBodyIKEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetBodyIKEnable");
-static_assert(sizeof(Pla603_AnimBP_C_SetBodyIKEnable) == 0x000002, "Wrong size on Pla603_AnimBP_C_SetBodyIKEnable");
-static_assert(offsetof(Pla603_AnimBP_C_SetBodyIKEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetBodyIKEnable::Enable' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetBodyIKEnable, Immediately) == 0x000001, "Member 'Pla603_AnimBP_C_SetBodyIKEnable::Immediately' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetFloatingIKPerch
-// 0x0004 (0x0004 - 0x0000)
-struct Pla603_AnimBP_C_SetFloatingIKPerch final
-{
-public:
-	float                                         Alpha;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetFloatingIKPerch) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetFloatingIKPerch");
-static_assert(sizeof(Pla603_AnimBP_C_SetFloatingIKPerch) == 0x000004, "Wrong size on Pla603_AnimBP_C_SetFloatingIKPerch");
-static_assert(offsetof(Pla603_AnimBP_C_SetFloatingIKPerch, Alpha) == 0x000000, "Member 'Pla603_AnimBP_C_SetFloatingIKPerch::Alpha' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetPrimaryWorldOffsetBoneTrans
-// 0x0040 (0x0040 - 0x0000)
-struct Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans final
-{
-public:
-	struct FTransform                             Trans;                                             // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         BlendAlpha;                                        // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans) == 0x000010, "Wrong alignment on Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans");
-static_assert(sizeof(Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans) == 0x000040, "Wrong size on Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans");
-static_assert(offsetof(Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans, Trans) == 0x000000, "Member 'Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans::Trans' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans, BlendAlpha) == 0x000030, "Member 'Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans::BlendAlpha' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEnableBoneTrans
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_SetEnableBoneTrans final
-{
-public:
-	bool                                          IsEnable;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetEnableBoneTrans) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetEnableBoneTrans");
-static_assert(sizeof(Pla603_AnimBP_C_SetEnableBoneTrans) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetEnableBoneTrans");
-static_assert(offsetof(Pla603_AnimBP_C_SetEnableBoneTrans, IsEnable) == 0x000000, "Member 'Pla603_AnimBP_C_SetEnableBoneTrans::IsEnable' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetWorldOffsetBoneTranses
-// 0x0020 (0x0020 - 0x0000)
-struct Pla603_AnimBP_C_SetWorldOffsetBoneTranses final
-{
-public:
-	TArray<struct FTransform>                     Transes;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<float>                                 TransAlphas;                                       // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetWorldOffsetBoneTranses) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetWorldOffsetBoneTranses");
-static_assert(sizeof(Pla603_AnimBP_C_SetWorldOffsetBoneTranses) == 0x000020, "Wrong size on Pla603_AnimBP_C_SetWorldOffsetBoneTranses");
-static_assert(offsetof(Pla603_AnimBP_C_SetWorldOffsetBoneTranses, Transes) == 0x000000, "Member 'Pla603_AnimBP_C_SetWorldOffsetBoneTranses::Transes' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetWorldOffsetBoneTranses, TransAlphas) == 0x000010, "Member 'Pla603_AnimBP_C_SetWorldOffsetBoneTranses::TransAlphas' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetInvalidLegIK
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetInvalidLegIK final
-{
-public:
-	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8502[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetInvalidLegIK) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetInvalidLegIK");
-static_assert(sizeof(Pla603_AnimBP_C_SetInvalidLegIK) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetInvalidLegIK");
-static_assert(offsetof(Pla603_AnimBP_C_SetInvalidLegIK, Invalid) == 0x000000, "Member 'Pla603_AnimBP_C_SetInvalidLegIK::Invalid' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetInvalidLegIK, Param_Index) == 0x000004, "Member 'Pla603_AnimBP_C_SetInvalidLegIK::Param_Index' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadIKRotationTick
-// 0x0014 (0x0014 - 0x0000)
-struct Pla603_AnimBP_C_SetHeadIKRotationTick final
-{
-public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Rotation;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         DeltaTime;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetHeadIKRotationTick) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetHeadIKRotationTick");
-static_assert(sizeof(Pla603_AnimBP_C_SetHeadIKRotationTick) == 0x000014, "Wrong size on Pla603_AnimBP_C_SetHeadIKRotationTick");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotationTick, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadIKRotationTick::Param_Index' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotationTick, Rotation) == 0x000004, "Member 'Pla603_AnimBP_C_SetHeadIKRotationTick::Rotation' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotationTick, DeltaTime) == 0x000010, "Member 'Pla603_AnimBP_C_SetHeadIKRotationTick::DeltaTime' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.InvalidLookAt
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_InvalidLookAt final
-{
-public:
-	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_InvalidLookAt) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_InvalidLookAt");
-static_assert(sizeof(Pla603_AnimBP_C_InvalidLookAt) == 0x000001, "Wrong size on Pla603_AnimBP_C_InvalidLookAt");
-static_assert(offsetof(Pla603_AnimBP_C_InvalidLookAt, Invalid) == 0x000000, "Member 'Pla603_AnimBP_C_InvalidLookAt::Invalid' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.ChangeTwistAsset
-// 0x0004 (0x0004 - 0x0000)
-struct Pla603_AnimBP_C_ChangeTwistAsset final
-{
-public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_ChangeTwistAsset) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_ChangeTwistAsset");
-static_assert(sizeof(Pla603_AnimBP_C_ChangeTwistAsset) == 0x000004, "Wrong size on Pla603_AnimBP_C_ChangeTwistAsset");
-static_assert(offsetof(Pla603_AnimBP_C_ChangeTwistAsset, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_ChangeTwistAsset::Param_Index' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadIKInterpSpeed
-// 0x0004 (0x0004 - 0x0000)
-struct Pla603_AnimBP_C_SetHeadIKInterpSpeed final
-{
-public:
-	float                                         NewSpeed;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetHeadIKInterpSpeed) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetHeadIKInterpSpeed");
-static_assert(sizeof(Pla603_AnimBP_C_SetHeadIKInterpSpeed) == 0x000004, "Wrong size on Pla603_AnimBP_C_SetHeadIKInterpSpeed");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKInterpSpeed, NewSpeed) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadIKInterpSpeed::NewSpeed' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMumbleEnable
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_SetMumbleEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetMumbleEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetMumbleEnable");
-static_assert(sizeof(Pla603_AnimBP_C_SetMumbleEnable) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetMumbleEnable");
-static_assert(offsetof(Pla603_AnimBP_C_SetMumbleEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetMumbleEnable::Enable' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMumbleAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetMumbleAnimation final
-{
-public:
-	class UAnimSequenceBase*                      Animation;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetMumbleAnimation) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetMumbleAnimation");
-static_assert(sizeof(Pla603_AnimBP_C_SetMumbleAnimation) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetMumbleAnimation");
-static_assert(offsetof(Pla603_AnimBP_C_SetMumbleAnimation, Animation) == 0x000000, "Member 'Pla603_AnimBP_C_SetMumbleAnimation::Animation' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRunMotionRate
-// 0x0004 (0x0004 - 0x0000)
-struct Pla603_AnimBP_C_SetRunMotionRate final
-{
-public:
-	float                                         RunRate;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetRunMotionRate) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetRunMotionRate");
-static_assert(sizeof(Pla603_AnimBP_C_SetRunMotionRate) == 0x000004, "Wrong size on Pla603_AnimBP_C_SetRunMotionRate");
-static_assert(offsetof(Pla603_AnimBP_C_SetRunMotionRate, RunRate) == 0x000000, "Member 'Pla603_AnimBP_C_SetRunMotionRate::RunRate' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEventMotionSpace
-// 0x0010 (0x0010 - 0x0000)
-struct Pla603_AnimBP_C_SetEventMotionSpace final
-{
-public:
-	class UBlendSpace*                            BlendSpace;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Param_Index;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetEventMotionSpace) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetEventMotionSpace");
-static_assert(sizeof(Pla603_AnimBP_C_SetEventMotionSpace) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetEventMotionSpace");
-static_assert(offsetof(Pla603_AnimBP_C_SetEventMotionSpace, BlendSpace) == 0x000000, "Member 'Pla603_AnimBP_C_SetEventMotionSpace::BlendSpace' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetEventMotionSpace, Param_Index) == 0x000008, "Member 'Pla603_AnimBP_C_SetEventMotionSpace::Param_Index' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEventMotionTap
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_SetEventMotionTap final
-{
-public:
-	bool                                          TapFlag;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetEventMotionTap) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetEventMotionTap");
-static_assert(sizeof(Pla603_AnimBP_C_SetEventMotionTap) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetEventMotionTap");
-static_assert(offsetof(Pla603_AnimBP_C_SetEventMotionTap, TapFlag) == 0x000000, "Member 'Pla603_AnimBP_C_SetEventMotionTap::TapFlag' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEventMotionVal
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetEventMotionVal final
-{
-public:
-	struct FVector2D                              Input;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetEventMotionVal) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetEventMotionVal");
-static_assert(sizeof(Pla603_AnimBP_C_SetEventMotionVal) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetEventMotionVal");
-static_assert(offsetof(Pla603_AnimBP_C_SetEventMotionVal, Input) == 0x000000, "Member 'Pla603_AnimBP_C_SetEventMotionVal::Input' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.PlayMapAction
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_PlayMapAction final
-{
-public:
-	E_MapAction_Pla603                            Action;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_PlayMapAction) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_PlayMapAction");
-static_assert(sizeof(Pla603_AnimBP_C_PlayMapAction) == 0x000001, "Wrong size on Pla603_AnimBP_C_PlayMapAction");
-static_assert(offsetof(Pla603_AnimBP_C_PlayMapAction, Action) == 0x000000, "Member 'Pla603_AnimBP_C_PlayMapAction::Action' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.TickMapAction
-// 0x0004 (0x0004 - 0x0000)
-struct Pla603_AnimBP_C_TickMapAction final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_TickMapAction) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_TickMapAction");
-static_assert(sizeof(Pla603_AnimBP_C_TickMapAction) == 0x000004, "Wrong size on Pla603_AnimBP_C_TickMapAction");
-static_assert(offsetof(Pla603_AnimBP_C_TickMapAction, DeltaSeconds) == 0x000000, "Member 'Pla603_AnimBP_C_TickMapAction::DeltaSeconds' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMovementTurnState
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetMovementTurnState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8503[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Angle;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetMovementTurnState) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetMovementTurnState");
-static_assert(sizeof(Pla603_AnimBP_C_SetMovementTurnState) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetMovementTurnState");
-static_assert(offsetof(Pla603_AnimBP_C_SetMovementTurnState, State) == 0x000000, "Member 'Pla603_AnimBP_C_SetMovementTurnState::State' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetMovementTurnState, Angle) == 0x000004, "Member 'Pla603_AnimBP_C_SetMovementTurnState::Angle' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.BlueprintUpdateAnimation
-// 0x0004 (0x0004 - 0x0000)
-struct Pla603_AnimBP_C_BlueprintUpdateAnimation final
-{
-public:
-	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_BlueprintUpdateAnimation");
-static_assert(sizeof(Pla603_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on Pla603_AnimBP_C_BlueprintUpdateAnimation");
-static_assert(offsetof(Pla603_AnimBP_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'Pla603_AnimBP_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadIKRotation
-// 0x0010 (0x0010 - 0x0000)
-struct Pla603_AnimBP_C_SetHeadIKRotation final
-{
-public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Rotation;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetHeadIKRotation) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetHeadIKRotation");
-static_assert(sizeof(Pla603_AnimBP_C_SetHeadIKRotation) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetHeadIKRotation");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotation, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadIKRotation::Param_Index' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotation, Rotation) == 0x000004, "Member 'Pla603_AnimBP_C_SetHeadIKRotation::Rotation' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEyeIKRotation
-// 0x0010 (0x0010 - 0x0000)
-struct Pla603_AnimBP_C_SetEyeIKRotation final
-{
-public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Rotation;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetEyeIKRotation) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetEyeIKRotation");
-static_assert(sizeof(Pla603_AnimBP_C_SetEyeIKRotation) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetEyeIKRotation");
-static_assert(offsetof(Pla603_AnimBP_C_SetEyeIKRotation, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetEyeIKRotation::Param_Index' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetEyeIKRotation, Rotation) == 0x000004, "Member 'Pla603_AnimBP_C_SetEyeIKRotation::Rotation' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetAnimationMode
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetAnimationMode final
-{
-public:
-	E_CHARA_ANIMATION_MODE                        Mode;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8504[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BlendTime;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetAnimationMode) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetAnimationMode");
-static_assert(sizeof(Pla603_AnimBP_C_SetAnimationMode) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetAnimationMode");
-static_assert(offsetof(Pla603_AnimBP_C_SetAnimationMode, Mode) == 0x000000, "Member 'Pla603_AnimBP_C_SetAnimationMode::Mode' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetAnimationMode, BlendTime) == 0x000004, "Member 'Pla603_AnimBP_C_SetAnimationMode::BlendTime' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadIKEnable
-// 0x0002 (0x0002 - 0x0000)
-struct Pla603_AnimBP_C_SetHeadIKEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Immediately;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetHeadIKEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetHeadIKEnable");
-static_assert(sizeof(Pla603_AnimBP_C_SetHeadIKEnable) == 0x000002, "Wrong size on Pla603_AnimBP_C_SetHeadIKEnable");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadIKEnable::Enable' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKEnable, Immediately) == 0x000001, "Member 'Pla603_AnimBP_C_SetHeadIKEnable::Immediately' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEyeIKEnable
-// 0x0002 (0x0002 - 0x0000)
-struct Pla603_AnimBP_C_SetEyeIKEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Immediately;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetEyeIKEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetEyeIKEnable");
-static_assert(sizeof(Pla603_AnimBP_C_SetEyeIKEnable) == 0x000002, "Wrong size on Pla603_AnimBP_C_SetEyeIKEnable");
-static_assert(offsetof(Pla603_AnimBP_C_SetEyeIKEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetEyeIKEnable::Enable' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetEyeIKEnable, Immediately) == 0x000001, "Member 'Pla603_AnimBP_C_SetEyeIKEnable::Immediately' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRotateAlphaInterpSpeed
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetRotateAlphaInterpSpeed final
-{
-public:
-	float                                         StartSpeed;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         EndSpeed;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetRotateAlphaInterpSpeed) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetRotateAlphaInterpSpeed");
-static_assert(sizeof(Pla603_AnimBP_C_SetRotateAlphaInterpSpeed) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetRotateAlphaInterpSpeed");
-static_assert(offsetof(Pla603_AnimBP_C_SetRotateAlphaInterpSpeed, StartSpeed) == 0x000000, "Member 'Pla603_AnimBP_C_SetRotateAlphaInterpSpeed::StartSpeed' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetRotateAlphaInterpSpeed, EndSpeed) == 0x000004, "Member 'Pla603_AnimBP_C_SetRotateAlphaInterpSpeed::EndSpeed' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRotateIdleAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetRotateIdleAnimation final
-{
-public:
-	class UAnimSequenceBase*                      RotateIdle;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetRotateIdleAnimation) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetRotateIdleAnimation");
-static_assert(sizeof(Pla603_AnimBP_C_SetRotateIdleAnimation) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetRotateIdleAnimation");
-static_assert(offsetof(Pla603_AnimBP_C_SetRotateIdleAnimation, RotateIdle) == 0x000000, "Member 'Pla603_AnimBP_C_SetRotateIdleAnimation::RotateIdle' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRotateBlend
-// 0x0010 (0x0010 - 0x0000)
-struct Pla603_AnimBP_C_SetRotateBlend final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8505[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Val;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBlendSpace1D*                          BlendSpace;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetRotateBlend) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetRotateBlend");
-static_assert(sizeof(Pla603_AnimBP_C_SetRotateBlend) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetRotateBlend");
-static_assert(offsetof(Pla603_AnimBP_C_SetRotateBlend, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetRotateBlend::Enable' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetRotateBlend, Val) == 0x000004, "Member 'Pla603_AnimBP_C_SetRotateBlend::Val' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetRotateBlend, BlendSpace) == 0x000008, "Member 'Pla603_AnimBP_C_SetRotateBlend::BlendSpace' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetDefaultAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetDefaultAnimation final
-{
-public:
-	class UAnimSequenceBase*                      Animation;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetDefaultAnimation) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetDefaultAnimation");
-static_assert(sizeof(Pla603_AnimBP_C_SetDefaultAnimation) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetDefaultAnimation");
-static_assert(offsetof(Pla603_AnimBP_C_SetDefaultAnimation, Animation) == 0x000000, "Member 'Pla603_AnimBP_C_SetDefaultAnimation::Animation' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetLookAtEnable
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_SetLookAtEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetLookAtEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetLookAtEnable");
-static_assert(sizeof(Pla603_AnimBP_C_SetLookAtEnable) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetLookAtEnable");
-static_assert(offsetof(Pla603_AnimBP_C_SetLookAtEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetLookAtEnable::Enable' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetPoseWeightTable
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetPoseWeightTable final
-{
-public:
-	class UCustomPoseWeightTable*                 Param_PoseWeightTable;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetPoseWeightTable) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetPoseWeightTable");
-static_assert(sizeof(Pla603_AnimBP_C_SetPoseWeightTable) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetPoseWeightTable");
-static_assert(offsetof(Pla603_AnimBP_C_SetPoseWeightTable, Param_PoseWeightTable) == 0x000000, "Member 'Pla603_AnimBP_C_SetPoseWeightTable::Param_PoseWeightTable' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMovementVelocity
-// 0x0018 (0x0018 - 0x0000)
-struct Pla603_AnimBP_C_SetMovementVelocity final
-{
-public:
-	struct FVector                                IdealVelocity;                                     // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Input;                                             // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetMovementVelocity) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetMovementVelocity");
-static_assert(sizeof(Pla603_AnimBP_C_SetMovementVelocity) == 0x000018, "Wrong size on Pla603_AnimBP_C_SetMovementVelocity");
-static_assert(offsetof(Pla603_AnimBP_C_SetMovementVelocity, IdealVelocity) == 0x000000, "Member 'Pla603_AnimBP_C_SetMovementVelocity::IdealVelocity' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetMovementVelocity, Input) == 0x00000C, "Member 'Pla603_AnimBP_C_SetMovementVelocity::Input' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMovementRotation
-// 0x0018 (0x0018 - 0x0000)
-struct Pla603_AnimBP_C_SetMovementRotation final
-{
-public:
-	struct FRotator                               MomentRotation;                                    // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               SlopeRotation;                                     // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetMovementRotation) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetMovementRotation");
-static_assert(sizeof(Pla603_AnimBP_C_SetMovementRotation) == 0x000018, "Wrong size on Pla603_AnimBP_C_SetMovementRotation");
-static_assert(offsetof(Pla603_AnimBP_C_SetMovementRotation, MomentRotation) == 0x000000, "Member 'Pla603_AnimBP_C_SetMovementRotation::MomentRotation' has a wrong offset!");
-static_assert(offsetof(Pla603_AnimBP_C_SetMovementRotation, SlopeRotation) == 0x00000C, "Member 'Pla603_AnimBP_C_SetMovementRotation::SlopeRotation' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMovementState
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_SetMovementState final
-{
-public:
-	E_PLAYER_MOVEMENT_STATE                       State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetMovementState) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetMovementState");
-static_assert(sizeof(Pla603_AnimBP_C_SetMovementState) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetMovementState");
-static_assert(offsetof(Pla603_AnimBP_C_SetMovementState, State) == 0x000000, "Member 'Pla603_AnimBP_C_SetMovementState::State' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.TriggerLanding
-// 0x0004 (0x0004 - 0x0000)
-struct Pla603_AnimBP_C_TriggerLanding final
-{
-public:
-	float                                         JumpHeight;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_TriggerLanding) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_TriggerLanding");
-static_assert(sizeof(Pla603_AnimBP_C_TriggerLanding) == 0x000004, "Wrong size on Pla603_AnimBP_C_TriggerLanding");
-static_assert(offsetof(Pla603_AnimBP_C_TriggerLanding, JumpHeight) == 0x000000, "Member 'Pla603_AnimBP_C_TriggerLanding::JumpHeight' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadBlendAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct Pla603_AnimBP_C_SetHeadBlendAnimation final
-{
-public:
-	class UAnimSequenceBase*                      Animation;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetHeadBlendAnimation) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetHeadBlendAnimation");
-static_assert(sizeof(Pla603_AnimBP_C_SetHeadBlendAnimation) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetHeadBlendAnimation");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadBlendAnimation, Animation) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadBlendAnimation::Animation' has a wrong offset!");
-
-// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadBlendFlag
-// 0x0001 (0x0001 - 0x0000)
-struct Pla603_AnimBP_C_SetHeadBlendFlag final
-{
-public:
-	bool                                          BlendFlag;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Pla603_AnimBP_C_SetHeadBlendFlag) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetHeadBlendFlag");
-static_assert(sizeof(Pla603_AnimBP_C_SetHeadBlendFlag) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetHeadBlendFlag");
-static_assert(offsetof(Pla603_AnimBP_C_SetHeadBlendFlag, BlendFlag) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadBlendFlag::BlendFlag' has a wrong offset!");
-
 // Function Pla603_AnimBP.Pla603_AnimBP_C.SetExpressionEnable
 // 0x0008 (0x0008 - 0x0000)
 struct Pla603_AnimBP_C_SetExpressionEnable final
@@ -625,16 +78,16 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_Invalid;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8506[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_668A[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_Index_5;                              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_Index_6;                              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               K2Node_Event_Rotation_2;                           // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_DeltaTime;                            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_NewSpeed;                             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_Invalid_1;                            // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8507[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_668B[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_Index_7;                              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8508[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_668C[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FTransform>                     K2Node_Event_Transes;                              // 0x0030(0x0010)(ConstParm, ReferenceParm)
 	TArray<float>                                 K2Node_Event_TransAlphas;                          // 0x0040(0x0010)(ConstParm, ReferenceParm)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -642,42 +95,42 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8509[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_668D[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue; // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue;        // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_850A[0x2];                                     // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_668E[0x2];                                     // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_1; // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_850B[0xC];                                     // 0x0064(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_668F[0xC];                                     // 0x0064(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             K2Node_Event_Trans;                                // 0x0070(0x0030)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_BlendAlpha;                           // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_1;      // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_850C[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6690[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_2; // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_2;      // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_850D[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6691[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_3; // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_3;      // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_850E[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6692[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_Alpha;                                // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_4; // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_4;      // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_850F[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6693[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakVector2D_X;                          // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector2D_Y;                          // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8510[0x3];                                     // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6694[0x3];                                     // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Abs_ReturnValue;                          // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8511[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6695[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SelectFloat_ReturnValue_1;                // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SelectFloat_ReturnValue_2;                // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue; // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_DegAsin_ReturnValue;                      // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_5;      // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8512[0x3];                                     // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6696[0x3];                                     // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable;                                // 0x00FC(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -685,33 +138,33 @@ public:
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_5; // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_6;      // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8513[0x2];                                     // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6697[0x2];                                     // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_6; // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_7;      // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8514[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6698[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8515[0x3];                                     // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6699[0x3];                                     // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_7; // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_8;      // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8516[0x3];                                     // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_669A[0x3];                                     // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Temp_float_Variable;                               // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8517[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_669B[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_8; // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_9;      // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8518[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_669C[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_9; // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_10;     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_Enable_5;                             // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0143(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8519[0x4];                                     // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_669D[0x4];                                     // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimSequenceBase*                      K2Node_Event_Animation_2;                          // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0152(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_851A[0x1];                                     // 0x0153(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_669E[0x1];                                     // 0x0153(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_RunRate;                              // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -722,7 +175,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x015E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_6;        // 0x015F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_851B[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_669F[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBlendSpace*                            K2Node_Event_BlendSpace_1;                         // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_Index_4;                              // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_7;        // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -730,7 +183,7 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_8;        // 0x0176(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_TapFlag;                              // 0x0177(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_11;                // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_851C[0x3];                                     // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A0[0x3];                                     // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              K2Node_Event_Input_1;                              // 0x017C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_9;        // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_12;                // 0x0185(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -750,27 +203,27 @@ public:
 	struct FVector                                K2Node_Event_Location;                             // 0x019C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_10;       // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_11;       // 0x01A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_851D[0x2];                                     // 0x01AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A1[0x2];                                     // 0x01AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_Index_9;                              // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_Event_Location_1;                           // 0x01B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               K2Node_Event_DeltaRotation;                        // 0x01BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_10; // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_851E[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A2[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_VSize_ReturnValue;                        // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_13;                // 0x01D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_1;    // 0x01D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_851F[0x1];                                     // 0x01D7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A3[0x1];                                     // 0x01D7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_11; // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_2;       // 0x01DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8520[0x3];                                     // 0x01DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A4[0x3];                                     // 0x01DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_VSize_ReturnValue_1;                      // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_VSize_ReturnValue_2;                      // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_2;    // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_3;    // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x01EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8521[0x1];                                     // 0x01EB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A5[0x1];                                     // 0x01EB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_12; // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_3;       // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_12;       // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -778,15 +231,15 @@ public:
 	bool                                          K2Node_Event_Immediately_3;                        // 0x01F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_13; // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_4;       // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8522[0x3];                                     // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A6[0x3];                                     // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_VSize_ReturnValue_3;                      // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_4;    // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_13;       // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8523[0x1];                                     // 0x0203(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A7[0x1];                                     // 0x0203(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_14; // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_5;       // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8524[0x3];                                     // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A8[0x3];                                     // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_VSize_ReturnValue_4;                      // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_Event_Offset;                               // 0x0210(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               K2Node_Event_DeltaRotation_1;                      // 0x021C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -795,46 +248,46 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x022A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x022B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8525[0x3];                                     // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A9[0x3];                                     // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_DeltaSeconds;                   // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8526[0x4];                                     // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66AA[0x4];                                     // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APla603_C*                              K2Node_DynamicCast_AsPla_603;                      // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8527[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66AB[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_FMax_ReturnValue;                         // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_6;    // 0x0254(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8528[0x3];                                     // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66AC[0x3];                                     // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_FMin_ReturnValue;                         // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Select_Default;                             // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FInterpTo_Constant_ReturnValue;           // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_14;       // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_State_1;                              // 0x0265(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8529[0x2];                                     // 0x0266(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66AD[0x2];                                     // 0x0266(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_Angle;                                // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaTimeX;                           // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_1;            // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Temp_float_Variable_1;                             // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_852A[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66AE[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaAnimation_C> K2Node_DynamicCast_AsBPI_Chara_Animation;          // 0x0280(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_852B[0x7];                                     // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66AF[0x7];                                     // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaAnimation_C> K2Node_DynamicCast_AsBPI_Chara_Animation_1;        // 0x0298(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_852C[0x7];                                     // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B0[0x7];                                     // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCustomPoseWeightTable*                 CallFunc_SpawnObject_ReturnValue;                  // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ACustomPawn*                            K2Node_DynamicCast_AsCustom_Pawn;                  // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_852D[0x6];                                     // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B1[0x6];                                     // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerBase_C*                          K2Node_DynamicCast_AsPlayer_Base;                  // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x02D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_852E[0x6];                                     // 0x02D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B2[0x6];                                     // 0x02D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerBase_C*                          K2Node_DynamicCast_AsPlayer_Base_1;                // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_852F[0x3];                                     // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B3[0x3];                                     // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x02E4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CharaAnimation_C> CallFunc_UpdateAnimation_self_CastInput;           // 0x02F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_BreakVector_X;                            // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -845,41 +298,41 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0324(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8530[0x3];                                     // 0x0325(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B4[0x3];                                     // 0x0325(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_Index_2;                              // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               K2Node_Event_Rotation;                             // 0x032C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_CHARA_ANIMATION_MODE                        K2Node_Event_Mode;                                 // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8531[0x3];                                     // 0x0339(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B5[0x3];                                     // 0x0339(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_BlendTime;                            // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess_1;                 // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_Enable_4;                             // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_Immediately_1;                        // 0x0342(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_Enable_3;                             // 0x0343(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_Immediately;                          // 0x0344(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8532[0x3];                                     // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B6[0x3];                                     // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_StartSpeed;                           // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_EndSpeed;                             // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      K2Node_Event_RotateIdle;                           // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_Enable_2;                             // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8533[0x3];                                     // 0x0359(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B7[0x3];                                     // 0x0359(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_Val;                                  // 0x035C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBlendSpace1D*                          K2Node_Event_BlendSpace;                           // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      K2Node_Event_Animation_1;                          // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_Enable_1;                             // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_14;                // 0x0371(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_15;                // 0x0372(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8534[0x1];                                     // 0x0373(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B8[0x1];                                     // 0x0373(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue;             // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_1;           // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FInterpTo_ReturnValue;                    // 0x037C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FInterpTo_ReturnValue_1;                  // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8535[0x4];                                     // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66B9[0x4];                                     // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCustomPoseWeightTable*                 K2Node_Event_PoseWeightTable;                      // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_16;                // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8536[0x3];                                     // 0x0391(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66BA[0x3];                                     // 0x0391(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_2;           // 0x0394(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_17;                // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8537[0x3];                                     // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66BB[0x3];                                     // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_3;           // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_Event_IdealVelocity;                        // 0x03A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_Event_Input;                                // 0x03AC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -895,25 +348,25 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x03EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_PLAYER_MOVEMENT_STATE                       K2Node_Event_State;                                // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_Enable_8;                             // 0x03F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8538[0x2];                                     // 0x03F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66BC[0x2];                                     // 0x03F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x03F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8539[0x2];                                     // 0x03FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66BD[0x2];                                     // 0x03FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_JumpHeight;                           // 0x03FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      K2Node_Event_Animation;                            // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_BlendFlag;                            // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0409(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_853A[0x2];                                     // 0x040A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66BE[0x2];                                     // 0x040A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_15; // 0x040C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_12;     // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_853B[0x3];                                     // 0x0411(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66BF[0x3];                                     // 0x0411(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_MakeLiteralFloat_ReturnValue;             // 0x0414(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_2;         // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_853C[0x3];                                     // 0x0419(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C0[0x3];                                     // 0x0419(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_MakeLiteralFloat_ReturnValue_1;           // 0x041C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_853D[0x3];                                     // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C1[0x3];                                     // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x042C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -923,11 +376,11 @@ public:
 	float                                         CallFunc_Abs_ReturnValue_2;                        // 0x043C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_3;         // 0x0440(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_Enable_9;                             // 0x0441(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_853E[0x2];                                     // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C2[0x2];                                     // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SelectFloat_ReturnValue_3;                // 0x0444(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0448(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x044C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_853F[0x3];                                     // 0x044D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C3[0x3];                                     // 0x044D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_FInterpTo_Constant_ReturnValue_1;         // 0x0450(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Temp_float_Variable_2;                             // 0x0454(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_2;            // 0x0458(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -935,24 +388,24 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0470(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x0471(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x0472(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8540[0x5];                                     // 0x0473(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C4[0x5];                                     // 0x0473(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_3;            // 0x0478(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_4;            // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PlayerAnimNotifyReceiver_C> K2Node_DynamicCast_AsBPI_Player_Anim_Notify_Receiver_1; // 0x0488(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0498(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8541[0x7];                                     // 0x0499(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C5[0x7];                                     // 0x0499(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PlayerAnimNotifyReceiver_C> K2Node_DynamicCast_AsBPI_Player_Anim_Notify_Receiver_2; // 0x04A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x04B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8542[0x3];                                     // 0x04B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C6[0x3];                                     // 0x04B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_Index_1;                              // 0x04B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_Enable;                               // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8543[0x3];                                     // 0x04B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C7[0x3];                                     // 0x04B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_Index;                                // 0x04BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_LidExpressionAttenuate;               // 0x04C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_LipExpressionAttenuate;               // 0x04C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess_2;                 // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchInteger_CmpSuccess_3;                 // 0x04C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8544[0x2];                                     // 0x04CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C8[0x2];                                     // 0x04CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_4;           // 0x04CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FInterpTo_ReturnValue_3;                  // 0x04D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_MapRangeClamped_ReturnValue;              // 0x04D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -964,41 +417,41 @@ public:
 	float                                         CallFunc_SelectFloat_ReturnValue_4;                // 0x04E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Temp_float_Variable_3;                             // 0x04E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FInterpTo_ReturnValue_4;                  // 0x04E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8545[0x4];                                     // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66C9[0x4];                                     // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_5;            // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_PlayerAnimNotifyReceiver_C> K2Node_DynamicCast_AsBPI_Player_Anim_Notify_Receiver_3; // 0x04F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8546[0x7];                                     // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66CA[0x7];                                     // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PlayerAnimNotifyReceiver_C> K2Node_DynamicCast_AsBPI_Player_Anim_Notify_Receiver_4; // 0x0510(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0520(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8547[0x7];                                     // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66CB[0x7];                                     // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_PlayerAnimNotifyReceiver_C> K2Node_DynamicCast_AsBPI_Player_Anim_Notify_Receiver_5; // 0x0528(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8548[0x3];                                     // 0x0539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66CC[0x3];                                     // 0x0539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x053C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Temp_float_Variable_4;                             // 0x0540(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8549[0x4];                                     // 0x0544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66CD[0x4];                                     // 0x0544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_6;            // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerBase_C*                          K2Node_DynamicCast_AsPlayer_Base_2;                // 0x0550(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_854A[0x7];                                     // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66CE[0x7];                                     // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerBase_C*                          K2Node_DynamicCast_AsPlayer_Base_3;                // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_13;                    // 0x0568(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_854B[0x7];                                     // 0x0569(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66CF[0x7];                                     // 0x0569(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerBase_C*                          K2Node_DynamicCast_AsPlayer_Base_4;                // 0x0570(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_14;                    // 0x0578(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_854C[0x3];                                     // 0x0579(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66D0[0x3];                                     // 0x0579(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x057C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_RandomFloatInRange_ReturnValue_1;         // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_7;    // 0x0584(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_854D[0x3];                                     // 0x0585(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66D1[0x3];                                     // 0x0585(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_16; // 0x0588(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_6;       // 0x058C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_FloatFloat_ReturnValue_13;     // 0x058D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_854E[0x2];                                     // 0x058E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66D2[0x2];                                     // 0x058E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRuntimeKawaiiHairParameter            K2Node_CustomEvent_InParam;                        // 0x0590(0x007C)(ConstParm, NoDestructor)
 	bool                                          Temp_bool_Variable_4;                              // 0x060C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_854F[0x3];                                     // 0x060D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66D3[0x3];                                     // 0x060D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Select_Default_2;                           // 0x0610(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_16;       // 0x0614(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0615(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -1313,6 +766,553 @@ static_assert(offsetof(Pla603_AnimBP_C_ExecuteUbergraph_Pla603_AnimBP, K2Node_Se
 static_assert(offsetof(Pla603_AnimBP_C_ExecuteUbergraph_Pla603_AnimBP, CallFunc_EqualEqual_ByteByte_ReturnValue_16) == 0x000614, "Member 'Pla603_AnimBP_C_ExecuteUbergraph_Pla603_AnimBP::CallFunc_EqualEqual_ByteByte_ReturnValue_16' has a wrong offset!");
 static_assert(offsetof(Pla603_AnimBP_C_ExecuteUbergraph_Pla603_AnimBP, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x000615, "Member 'Pla603_AnimBP_C_ExecuteUbergraph_Pla603_AnimBP::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(Pla603_AnimBP_C_ExecuteUbergraph_Pla603_AnimBP, CallFunc_BooleanAND_ReturnValue_18) == 0x000616, "Member 'Pla603_AnimBP_C_ExecuteUbergraph_Pla603_AnimBP::CallFunc_BooleanAND_ReturnValue_18' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct Pla603_AnimBP_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              Param_AnimGraph;                                   // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_AnimGraph) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_AnimGraph");
+static_assert(sizeof(Pla603_AnimBP_C_AnimGraph) == 0x000010, "Wrong size on Pla603_AnimBP_C_AnimGraph");
+static_assert(offsetof(Pla603_AnimBP_C_AnimGraph, Param_AnimGraph) == 0x000000, "Member 'Pla603_AnimBP_C_AnimGraph::Param_AnimGraph' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.CheckIdle
+// 0x0002 (0x0002 - 0x0000)
+struct Pla603_AnimBP_C_CheckIdle final
+{
+public:
+	bool                                          Idle;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_CheckIdle) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_CheckIdle");
+static_assert(sizeof(Pla603_AnimBP_C_CheckIdle) == 0x000002, "Wrong size on Pla603_AnimBP_C_CheckIdle");
+static_assert(offsetof(Pla603_AnimBP_C_CheckIdle, Idle) == 0x000000, "Member 'Pla603_AnimBP_C_CheckIdle::Idle' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_CheckIdle, CallFunc_BooleanAND_ReturnValue) == 0x000001, "Member 'Pla603_AnimBP_C_CheckIdle::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetBoneMotionEnable
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_SetBoneMotionEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetBoneMotionEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetBoneMotionEnable");
+static_assert(sizeof(Pla603_AnimBP_C_SetBoneMotionEnable) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetBoneMotionEnable");
+static_assert(offsetof(Pla603_AnimBP_C_SetBoneMotionEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetBoneMotionEnable::Enable' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRootOffsetEnable
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_SetRootOffsetEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetRootOffsetEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetRootOffsetEnable");
+static_assert(sizeof(Pla603_AnimBP_C_SetRootOffsetEnable) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetRootOffsetEnable");
+static_assert(offsetof(Pla603_AnimBP_C_SetRootOffsetEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetRootOffsetEnable::Enable' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRootOffset
+// 0x0018 (0x0018 - 0x0000)
+struct Pla603_AnimBP_C_SetRootOffset final
+{
+public:
+	struct FVector                                Offset;                                            // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               DeltaRotation;                                     // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetRootOffset) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetRootOffset");
+static_assert(sizeof(Pla603_AnimBP_C_SetRootOffset) == 0x000018, "Wrong size on Pla603_AnimBP_C_SetRootOffset");
+static_assert(offsetof(Pla603_AnimBP_C_SetRootOffset, Offset) == 0x000000, "Member 'Pla603_AnimBP_C_SetRootOffset::Offset' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetRootOffset, DeltaRotation) == 0x00000C, "Member 'Pla603_AnimBP_C_SetRootOffset::DeltaRotation' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetLegIKEnable
+// 0x0002 (0x0002 - 0x0000)
+struct Pla603_AnimBP_C_SetLegIKEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Immediately;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetLegIKEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetLegIKEnable");
+static_assert(sizeof(Pla603_AnimBP_C_SetLegIKEnable) == 0x000002, "Wrong size on Pla603_AnimBP_C_SetLegIKEnable");
+static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetLegIKEnable::Enable' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEnable, Immediately) == 0x000001, "Member 'Pla603_AnimBP_C_SetLegIKEnable::Immediately' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetLegIKEffector
+// 0x001C (0x001C - 0x0000)
+struct Pla603_AnimBP_C_SetLegIKEffector final
+{
+public:
+	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Location;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               DeltaRotation;                                     // 0x0010(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetLegIKEffector) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetLegIKEffector");
+static_assert(sizeof(Pla603_AnimBP_C_SetLegIKEffector) == 0x00001C, "Wrong size on Pla603_AnimBP_C_SetLegIKEffector");
+static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEffector, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetLegIKEffector::Param_Index' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEffector, Location) == 0x000004, "Member 'Pla603_AnimBP_C_SetLegIKEffector::Location' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetLegIKEffector, DeltaRotation) == 0x000010, "Member 'Pla603_AnimBP_C_SetLegIKEffector::DeltaRotation' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetLegIKTarget
+// 0x0010 (0x0010 - 0x0000)
+struct Pla603_AnimBP_C_SetLegIKTarget final
+{
+public:
+	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Location;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetLegIKTarget) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetLegIKTarget");
+static_assert(sizeof(Pla603_AnimBP_C_SetLegIKTarget) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetLegIKTarget");
+static_assert(offsetof(Pla603_AnimBP_C_SetLegIKTarget, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetLegIKTarget::Param_Index' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetLegIKTarget, Location) == 0x000004, "Member 'Pla603_AnimBP_C_SetLegIKTarget::Location' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetBodyIKEnable
+// 0x0002 (0x0002 - 0x0000)
+struct Pla603_AnimBP_C_SetBodyIKEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Immediately;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetBodyIKEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetBodyIKEnable");
+static_assert(sizeof(Pla603_AnimBP_C_SetBodyIKEnable) == 0x000002, "Wrong size on Pla603_AnimBP_C_SetBodyIKEnable");
+static_assert(offsetof(Pla603_AnimBP_C_SetBodyIKEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetBodyIKEnable::Enable' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetBodyIKEnable, Immediately) == 0x000001, "Member 'Pla603_AnimBP_C_SetBodyIKEnable::Immediately' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetFloatingIKPerch
+// 0x0004 (0x0004 - 0x0000)
+struct Pla603_AnimBP_C_SetFloatingIKPerch final
+{
+public:
+	float                                         Alpha;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetFloatingIKPerch) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetFloatingIKPerch");
+static_assert(sizeof(Pla603_AnimBP_C_SetFloatingIKPerch) == 0x000004, "Wrong size on Pla603_AnimBP_C_SetFloatingIKPerch");
+static_assert(offsetof(Pla603_AnimBP_C_SetFloatingIKPerch, Alpha) == 0x000000, "Member 'Pla603_AnimBP_C_SetFloatingIKPerch::Alpha' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetPrimaryWorldOffsetBoneTrans
+// 0x0040 (0x0040 - 0x0000)
+struct Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans final
+{
+public:
+	struct FTransform                             Trans;                                             // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         BlendAlpha;                                        // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans) == 0x000010, "Wrong alignment on Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans");
+static_assert(sizeof(Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans) == 0x000040, "Wrong size on Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans");
+static_assert(offsetof(Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans, Trans) == 0x000000, "Member 'Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans::Trans' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans, BlendAlpha) == 0x000030, "Member 'Pla603_AnimBP_C_SetPrimaryWorldOffsetBoneTrans::BlendAlpha' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEnableBoneTrans
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_SetEnableBoneTrans final
+{
+public:
+	bool                                          IsEnable;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetEnableBoneTrans) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetEnableBoneTrans");
+static_assert(sizeof(Pla603_AnimBP_C_SetEnableBoneTrans) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetEnableBoneTrans");
+static_assert(offsetof(Pla603_AnimBP_C_SetEnableBoneTrans, IsEnable) == 0x000000, "Member 'Pla603_AnimBP_C_SetEnableBoneTrans::IsEnable' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetWorldOffsetBoneTranses
+// 0x0020 (0x0020 - 0x0000)
+struct Pla603_AnimBP_C_SetWorldOffsetBoneTranses final
+{
+public:
+	TArray<struct FTransform>                     Transes;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<float>                                 TransAlphas;                                       // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetWorldOffsetBoneTranses) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetWorldOffsetBoneTranses");
+static_assert(sizeof(Pla603_AnimBP_C_SetWorldOffsetBoneTranses) == 0x000020, "Wrong size on Pla603_AnimBP_C_SetWorldOffsetBoneTranses");
+static_assert(offsetof(Pla603_AnimBP_C_SetWorldOffsetBoneTranses, Transes) == 0x000000, "Member 'Pla603_AnimBP_C_SetWorldOffsetBoneTranses::Transes' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetWorldOffsetBoneTranses, TransAlphas) == 0x000010, "Member 'Pla603_AnimBP_C_SetWorldOffsetBoneTranses::TransAlphas' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetInvalidLegIK
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetInvalidLegIK final
+{
+public:
+	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_66D4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Param_Index;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetInvalidLegIK) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetInvalidLegIK");
+static_assert(sizeof(Pla603_AnimBP_C_SetInvalidLegIK) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetInvalidLegIK");
+static_assert(offsetof(Pla603_AnimBP_C_SetInvalidLegIK, Invalid) == 0x000000, "Member 'Pla603_AnimBP_C_SetInvalidLegIK::Invalid' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetInvalidLegIK, Param_Index) == 0x000004, "Member 'Pla603_AnimBP_C_SetInvalidLegIK::Param_Index' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadIKRotationTick
+// 0x0014 (0x0014 - 0x0000)
+struct Pla603_AnimBP_C_SetHeadIKRotationTick final
+{
+public:
+	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Rotation;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         DeltaTime;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetHeadIKRotationTick) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetHeadIKRotationTick");
+static_assert(sizeof(Pla603_AnimBP_C_SetHeadIKRotationTick) == 0x000014, "Wrong size on Pla603_AnimBP_C_SetHeadIKRotationTick");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotationTick, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadIKRotationTick::Param_Index' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotationTick, Rotation) == 0x000004, "Member 'Pla603_AnimBP_C_SetHeadIKRotationTick::Rotation' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotationTick, DeltaTime) == 0x000010, "Member 'Pla603_AnimBP_C_SetHeadIKRotationTick::DeltaTime' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.InvalidLookAt
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_InvalidLookAt final
+{
+public:
+	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_InvalidLookAt) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_InvalidLookAt");
+static_assert(sizeof(Pla603_AnimBP_C_InvalidLookAt) == 0x000001, "Wrong size on Pla603_AnimBP_C_InvalidLookAt");
+static_assert(offsetof(Pla603_AnimBP_C_InvalidLookAt, Invalid) == 0x000000, "Member 'Pla603_AnimBP_C_InvalidLookAt::Invalid' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.ChangeTwistAsset
+// 0x0004 (0x0004 - 0x0000)
+struct Pla603_AnimBP_C_ChangeTwistAsset final
+{
+public:
+	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_ChangeTwistAsset) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_ChangeTwistAsset");
+static_assert(sizeof(Pla603_AnimBP_C_ChangeTwistAsset) == 0x000004, "Wrong size on Pla603_AnimBP_C_ChangeTwistAsset");
+static_assert(offsetof(Pla603_AnimBP_C_ChangeTwistAsset, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_ChangeTwistAsset::Param_Index' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadIKInterpSpeed
+// 0x0004 (0x0004 - 0x0000)
+struct Pla603_AnimBP_C_SetHeadIKInterpSpeed final
+{
+public:
+	float                                         NewSpeed;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetHeadIKInterpSpeed) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetHeadIKInterpSpeed");
+static_assert(sizeof(Pla603_AnimBP_C_SetHeadIKInterpSpeed) == 0x000004, "Wrong size on Pla603_AnimBP_C_SetHeadIKInterpSpeed");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKInterpSpeed, NewSpeed) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadIKInterpSpeed::NewSpeed' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMumbleEnable
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_SetMumbleEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetMumbleEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetMumbleEnable");
+static_assert(sizeof(Pla603_AnimBP_C_SetMumbleEnable) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetMumbleEnable");
+static_assert(offsetof(Pla603_AnimBP_C_SetMumbleEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetMumbleEnable::Enable' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMumbleAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetMumbleAnimation final
+{
+public:
+	class UAnimSequenceBase*                      Animation;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetMumbleAnimation) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetMumbleAnimation");
+static_assert(sizeof(Pla603_AnimBP_C_SetMumbleAnimation) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetMumbleAnimation");
+static_assert(offsetof(Pla603_AnimBP_C_SetMumbleAnimation, Animation) == 0x000000, "Member 'Pla603_AnimBP_C_SetMumbleAnimation::Animation' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRunMotionRate
+// 0x0004 (0x0004 - 0x0000)
+struct Pla603_AnimBP_C_SetRunMotionRate final
+{
+public:
+	float                                         RunRate;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetRunMotionRate) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetRunMotionRate");
+static_assert(sizeof(Pla603_AnimBP_C_SetRunMotionRate) == 0x000004, "Wrong size on Pla603_AnimBP_C_SetRunMotionRate");
+static_assert(offsetof(Pla603_AnimBP_C_SetRunMotionRate, RunRate) == 0x000000, "Member 'Pla603_AnimBP_C_SetRunMotionRate::RunRate' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEventMotionSpace
+// 0x0010 (0x0010 - 0x0000)
+struct Pla603_AnimBP_C_SetEventMotionSpace final
+{
+public:
+	class UBlendSpace*                            BlendSpace;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Param_Index;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetEventMotionSpace) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetEventMotionSpace");
+static_assert(sizeof(Pla603_AnimBP_C_SetEventMotionSpace) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetEventMotionSpace");
+static_assert(offsetof(Pla603_AnimBP_C_SetEventMotionSpace, BlendSpace) == 0x000000, "Member 'Pla603_AnimBP_C_SetEventMotionSpace::BlendSpace' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetEventMotionSpace, Param_Index) == 0x000008, "Member 'Pla603_AnimBP_C_SetEventMotionSpace::Param_Index' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEventMotionTap
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_SetEventMotionTap final
+{
+public:
+	bool                                          TapFlag;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetEventMotionTap) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetEventMotionTap");
+static_assert(sizeof(Pla603_AnimBP_C_SetEventMotionTap) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetEventMotionTap");
+static_assert(offsetof(Pla603_AnimBP_C_SetEventMotionTap, TapFlag) == 0x000000, "Member 'Pla603_AnimBP_C_SetEventMotionTap::TapFlag' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEventMotionVal
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetEventMotionVal final
+{
+public:
+	struct FVector2D                              Input;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetEventMotionVal) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetEventMotionVal");
+static_assert(sizeof(Pla603_AnimBP_C_SetEventMotionVal) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetEventMotionVal");
+static_assert(offsetof(Pla603_AnimBP_C_SetEventMotionVal, Input) == 0x000000, "Member 'Pla603_AnimBP_C_SetEventMotionVal::Input' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.PlayMapAction
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_PlayMapAction final
+{
+public:
+	E_MapAction_Pla603                            Action;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_PlayMapAction) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_PlayMapAction");
+static_assert(sizeof(Pla603_AnimBP_C_PlayMapAction) == 0x000001, "Wrong size on Pla603_AnimBP_C_PlayMapAction");
+static_assert(offsetof(Pla603_AnimBP_C_PlayMapAction, Action) == 0x000000, "Member 'Pla603_AnimBP_C_PlayMapAction::Action' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.TickMapAction
+// 0x0004 (0x0004 - 0x0000)
+struct Pla603_AnimBP_C_TickMapAction final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_TickMapAction) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_TickMapAction");
+static_assert(sizeof(Pla603_AnimBP_C_TickMapAction) == 0x000004, "Wrong size on Pla603_AnimBP_C_TickMapAction");
+static_assert(offsetof(Pla603_AnimBP_C_TickMapAction, DeltaSeconds) == 0x000000, "Member 'Pla603_AnimBP_C_TickMapAction::DeltaSeconds' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMovementTurnState
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetMovementTurnState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_66D5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Angle;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetMovementTurnState) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetMovementTurnState");
+static_assert(sizeof(Pla603_AnimBP_C_SetMovementTurnState) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetMovementTurnState");
+static_assert(offsetof(Pla603_AnimBP_C_SetMovementTurnState, State) == 0x000000, "Member 'Pla603_AnimBP_C_SetMovementTurnState::State' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetMovementTurnState, Angle) == 0x000004, "Member 'Pla603_AnimBP_C_SetMovementTurnState::Angle' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.BlueprintUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct Pla603_AnimBP_C_BlueprintUpdateAnimation final
+{
+public:
+	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_BlueprintUpdateAnimation");
+static_assert(sizeof(Pla603_AnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on Pla603_AnimBP_C_BlueprintUpdateAnimation");
+static_assert(offsetof(Pla603_AnimBP_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'Pla603_AnimBP_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadIKRotation
+// 0x0010 (0x0010 - 0x0000)
+struct Pla603_AnimBP_C_SetHeadIKRotation final
+{
+public:
+	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Rotation;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetHeadIKRotation) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetHeadIKRotation");
+static_assert(sizeof(Pla603_AnimBP_C_SetHeadIKRotation) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetHeadIKRotation");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotation, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadIKRotation::Param_Index' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKRotation, Rotation) == 0x000004, "Member 'Pla603_AnimBP_C_SetHeadIKRotation::Rotation' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEyeIKRotation
+// 0x0010 (0x0010 - 0x0000)
+struct Pla603_AnimBP_C_SetEyeIKRotation final
+{
+public:
+	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Rotation;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetEyeIKRotation) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetEyeIKRotation");
+static_assert(sizeof(Pla603_AnimBP_C_SetEyeIKRotation) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetEyeIKRotation");
+static_assert(offsetof(Pla603_AnimBP_C_SetEyeIKRotation, Param_Index) == 0x000000, "Member 'Pla603_AnimBP_C_SetEyeIKRotation::Param_Index' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetEyeIKRotation, Rotation) == 0x000004, "Member 'Pla603_AnimBP_C_SetEyeIKRotation::Rotation' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetAnimationMode
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetAnimationMode final
+{
+public:
+	E_CHARA_ANIMATION_MODE                        Mode;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_66D6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BlendTime;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetAnimationMode) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetAnimationMode");
+static_assert(sizeof(Pla603_AnimBP_C_SetAnimationMode) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetAnimationMode");
+static_assert(offsetof(Pla603_AnimBP_C_SetAnimationMode, Mode) == 0x000000, "Member 'Pla603_AnimBP_C_SetAnimationMode::Mode' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetAnimationMode, BlendTime) == 0x000004, "Member 'Pla603_AnimBP_C_SetAnimationMode::BlendTime' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadIKEnable
+// 0x0002 (0x0002 - 0x0000)
+struct Pla603_AnimBP_C_SetHeadIKEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Immediately;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetHeadIKEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetHeadIKEnable");
+static_assert(sizeof(Pla603_AnimBP_C_SetHeadIKEnable) == 0x000002, "Wrong size on Pla603_AnimBP_C_SetHeadIKEnable");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadIKEnable::Enable' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadIKEnable, Immediately) == 0x000001, "Member 'Pla603_AnimBP_C_SetHeadIKEnable::Immediately' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetEyeIKEnable
+// 0x0002 (0x0002 - 0x0000)
+struct Pla603_AnimBP_C_SetEyeIKEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Immediately;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetEyeIKEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetEyeIKEnable");
+static_assert(sizeof(Pla603_AnimBP_C_SetEyeIKEnable) == 0x000002, "Wrong size on Pla603_AnimBP_C_SetEyeIKEnable");
+static_assert(offsetof(Pla603_AnimBP_C_SetEyeIKEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetEyeIKEnable::Enable' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetEyeIKEnable, Immediately) == 0x000001, "Member 'Pla603_AnimBP_C_SetEyeIKEnable::Immediately' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRotateAlphaInterpSpeed
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetRotateAlphaInterpSpeed final
+{
+public:
+	float                                         StartSpeed;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         EndSpeed;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetRotateAlphaInterpSpeed) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetRotateAlphaInterpSpeed");
+static_assert(sizeof(Pla603_AnimBP_C_SetRotateAlphaInterpSpeed) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetRotateAlphaInterpSpeed");
+static_assert(offsetof(Pla603_AnimBP_C_SetRotateAlphaInterpSpeed, StartSpeed) == 0x000000, "Member 'Pla603_AnimBP_C_SetRotateAlphaInterpSpeed::StartSpeed' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetRotateAlphaInterpSpeed, EndSpeed) == 0x000004, "Member 'Pla603_AnimBP_C_SetRotateAlphaInterpSpeed::EndSpeed' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRotateIdleAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetRotateIdleAnimation final
+{
+public:
+	class UAnimSequenceBase*                      RotateIdle;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetRotateIdleAnimation) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetRotateIdleAnimation");
+static_assert(sizeof(Pla603_AnimBP_C_SetRotateIdleAnimation) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetRotateIdleAnimation");
+static_assert(offsetof(Pla603_AnimBP_C_SetRotateIdleAnimation, RotateIdle) == 0x000000, "Member 'Pla603_AnimBP_C_SetRotateIdleAnimation::RotateIdle' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetRotateBlend
+// 0x0010 (0x0010 - 0x0000)
+struct Pla603_AnimBP_C_SetRotateBlend final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_66D7[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Val;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlendSpace1D*                          BlendSpace;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetRotateBlend) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetRotateBlend");
+static_assert(sizeof(Pla603_AnimBP_C_SetRotateBlend) == 0x000010, "Wrong size on Pla603_AnimBP_C_SetRotateBlend");
+static_assert(offsetof(Pla603_AnimBP_C_SetRotateBlend, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetRotateBlend::Enable' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetRotateBlend, Val) == 0x000004, "Member 'Pla603_AnimBP_C_SetRotateBlend::Val' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetRotateBlend, BlendSpace) == 0x000008, "Member 'Pla603_AnimBP_C_SetRotateBlend::BlendSpace' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetDefaultAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetDefaultAnimation final
+{
+public:
+	class UAnimSequenceBase*                      Animation;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetDefaultAnimation) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetDefaultAnimation");
+static_assert(sizeof(Pla603_AnimBP_C_SetDefaultAnimation) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetDefaultAnimation");
+static_assert(offsetof(Pla603_AnimBP_C_SetDefaultAnimation, Animation) == 0x000000, "Member 'Pla603_AnimBP_C_SetDefaultAnimation::Animation' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetLookAtEnable
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_SetLookAtEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetLookAtEnable) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetLookAtEnable");
+static_assert(sizeof(Pla603_AnimBP_C_SetLookAtEnable) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetLookAtEnable");
+static_assert(offsetof(Pla603_AnimBP_C_SetLookAtEnable, Enable) == 0x000000, "Member 'Pla603_AnimBP_C_SetLookAtEnable::Enable' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetPoseWeightTable
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetPoseWeightTable final
+{
+public:
+	class UCustomPoseWeightTable*                 Param_PoseWeightTable;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetPoseWeightTable) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetPoseWeightTable");
+static_assert(sizeof(Pla603_AnimBP_C_SetPoseWeightTable) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetPoseWeightTable");
+static_assert(offsetof(Pla603_AnimBP_C_SetPoseWeightTable, Param_PoseWeightTable) == 0x000000, "Member 'Pla603_AnimBP_C_SetPoseWeightTable::Param_PoseWeightTable' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMovementVelocity
+// 0x0018 (0x0018 - 0x0000)
+struct Pla603_AnimBP_C_SetMovementVelocity final
+{
+public:
+	struct FVector                                IdealVelocity;                                     // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Input;                                             // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetMovementVelocity) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetMovementVelocity");
+static_assert(sizeof(Pla603_AnimBP_C_SetMovementVelocity) == 0x000018, "Wrong size on Pla603_AnimBP_C_SetMovementVelocity");
+static_assert(offsetof(Pla603_AnimBP_C_SetMovementVelocity, IdealVelocity) == 0x000000, "Member 'Pla603_AnimBP_C_SetMovementVelocity::IdealVelocity' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetMovementVelocity, Input) == 0x00000C, "Member 'Pla603_AnimBP_C_SetMovementVelocity::Input' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMovementRotation
+// 0x0018 (0x0018 - 0x0000)
+struct Pla603_AnimBP_C_SetMovementRotation final
+{
+public:
+	struct FRotator                               MomentRotation;                                    // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               SlopeRotation;                                     // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetMovementRotation) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_SetMovementRotation");
+static_assert(sizeof(Pla603_AnimBP_C_SetMovementRotation) == 0x000018, "Wrong size on Pla603_AnimBP_C_SetMovementRotation");
+static_assert(offsetof(Pla603_AnimBP_C_SetMovementRotation, MomentRotation) == 0x000000, "Member 'Pla603_AnimBP_C_SetMovementRotation::MomentRotation' has a wrong offset!");
+static_assert(offsetof(Pla603_AnimBP_C_SetMovementRotation, SlopeRotation) == 0x00000C, "Member 'Pla603_AnimBP_C_SetMovementRotation::SlopeRotation' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetMovementState
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_SetMovementState final
+{
+public:
+	E_PLAYER_MOVEMENT_STATE                       State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetMovementState) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetMovementState");
+static_assert(sizeof(Pla603_AnimBP_C_SetMovementState) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetMovementState");
+static_assert(offsetof(Pla603_AnimBP_C_SetMovementState, State) == 0x000000, "Member 'Pla603_AnimBP_C_SetMovementState::State' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.TriggerLanding
+// 0x0004 (0x0004 - 0x0000)
+struct Pla603_AnimBP_C_TriggerLanding final
+{
+public:
+	float                                         JumpHeight;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_TriggerLanding) == 0x000004, "Wrong alignment on Pla603_AnimBP_C_TriggerLanding");
+static_assert(sizeof(Pla603_AnimBP_C_TriggerLanding) == 0x000004, "Wrong size on Pla603_AnimBP_C_TriggerLanding");
+static_assert(offsetof(Pla603_AnimBP_C_TriggerLanding, JumpHeight) == 0x000000, "Member 'Pla603_AnimBP_C_TriggerLanding::JumpHeight' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadBlendAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct Pla603_AnimBP_C_SetHeadBlendAnimation final
+{
+public:
+	class UAnimSequenceBase*                      Animation;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetHeadBlendAnimation) == 0x000008, "Wrong alignment on Pla603_AnimBP_C_SetHeadBlendAnimation");
+static_assert(sizeof(Pla603_AnimBP_C_SetHeadBlendAnimation) == 0x000008, "Wrong size on Pla603_AnimBP_C_SetHeadBlendAnimation");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadBlendAnimation, Animation) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadBlendAnimation::Animation' has a wrong offset!");
+
+// Function Pla603_AnimBP.Pla603_AnimBP_C.SetHeadBlendFlag
+// 0x0001 (0x0001 - 0x0000)
+struct Pla603_AnimBP_C_SetHeadBlendFlag final
+{
+public:
+	bool                                          BlendFlag;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(Pla603_AnimBP_C_SetHeadBlendFlag) == 0x000001, "Wrong alignment on Pla603_AnimBP_C_SetHeadBlendFlag");
+static_assert(sizeof(Pla603_AnimBP_C_SetHeadBlendFlag) == 0x000001, "Wrong size on Pla603_AnimBP_C_SetHeadBlendFlag");
+static_assert(offsetof(Pla603_AnimBP_C_SetHeadBlendFlag, BlendFlag) == 0x000000, "Member 'Pla603_AnimBP_C_SetHeadBlendFlag::BlendFlag' has a wrong offset!");
 
 // Function Pla603_AnimBP.Pla603_AnimBP_C.GetMumbleAnimation
 // 0x0008 (0x0008 - 0x0000)

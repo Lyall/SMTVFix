@@ -21,10 +21,10 @@ namespace SDK
 class IBPI_EventStaff_C final : public IInterface
 {
 public:
-	void BI_StaffPlay(class USoundAtomCue* BGM);
-	void BI_StaffStop();
-	void BI_StaffPause(bool Puase);
 	void BI_StaffIsFinished(bool* IsFinished);
+	void BI_StaffPause(bool Puase);
+	void BI_StaffStop();
+	void BI_StaffPlay(class USoundAtomCue* BGM);
 
 public:
 	static class UClass* StaticClass()

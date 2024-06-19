@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BPI_CharaFacialComponent.BPI_CharaFacialComponent_C.GetFacialComponent
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_CharaFacialComponent_C_GetFacialComponent final
-{
-public:
-	class USkeletalMeshComponent*                 FacialMesh;                                        // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPI_CharaFacialComponent_C_GetFacialComponent) == 0x000008, "Wrong alignment on BPI_CharaFacialComponent_C_GetFacialComponent");
-static_assert(sizeof(BPI_CharaFacialComponent_C_GetFacialComponent) == 0x000008, "Wrong size on BPI_CharaFacialComponent_C_GetFacialComponent");
-static_assert(offsetof(BPI_CharaFacialComponent_C_GetFacialComponent, FacialMesh) == 0x000000, "Member 'BPI_CharaFacialComponent_C_GetFacialComponent::FacialMesh' has a wrong offset!");
-
 // Function BPI_CharaFacialComponent.BPI_CharaFacialComponent_C.AddFacialComponent
 // 0x0008 (0x0008 - 0x0000)
 struct BPI_CharaFacialComponent_C_AddFacialComponent final
@@ -35,6 +24,17 @@ public:
 static_assert(alignof(BPI_CharaFacialComponent_C_AddFacialComponent) == 0x000004, "Wrong alignment on BPI_CharaFacialComponent_C_AddFacialComponent");
 static_assert(sizeof(BPI_CharaFacialComponent_C_AddFacialComponent) == 0x000008, "Wrong size on BPI_CharaFacialComponent_C_AddFacialComponent");
 static_assert(offsetof(BPI_CharaFacialComponent_C_AddFacialComponent, ExpressionID) == 0x000000, "Member 'BPI_CharaFacialComponent_C_AddFacialComponent::ExpressionID' has a wrong offset!");
+
+// Function BPI_CharaFacialComponent.BPI_CharaFacialComponent_C.GetFacialComponent
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_CharaFacialComponent_C_GetFacialComponent final
+{
+public:
+	class USkeletalMeshComponent*                 FacialMesh;                                        // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPI_CharaFacialComponent_C_GetFacialComponent) == 0x000008, "Wrong alignment on BPI_CharaFacialComponent_C_GetFacialComponent");
+static_assert(sizeof(BPI_CharaFacialComponent_C_GetFacialComponent) == 0x000008, "Wrong size on BPI_CharaFacialComponent_C_GetFacialComponent");
+static_assert(offsetof(BPI_CharaFacialComponent_C_GetFacialComponent, FacialMesh) == 0x000000, "Member 'BPI_CharaFacialComponent_C_GetFacialComponent::FacialMesh' has a wrong offset!");
 
 }
 

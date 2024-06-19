@@ -21,12 +21,12 @@ namespace SDK
 class IBPI_MapEventHit_C final : public IInterface
 {
 public:
-	void EventHitActivate(bool Active);
-	void HiddenVolume(bool Hidden);
-	void DebugView(bool Bool);
-	void EventHitOUT();
-	void EventHitIN();
 	void EventHitAction();
+	void EventHitIN();
+	void EventHitOUT();
+	void DebugView(bool Bool);
+	void HiddenVolume(bool Hidden);
+	void EventHitActivate(bool Active);
 
 public:
 	static class UClass* StaticClass()

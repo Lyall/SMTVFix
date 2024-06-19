@@ -17,6 +17,62 @@
 namespace SDK
 {
 
+// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitAction__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::CallEventHitAction__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitAction__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitIn__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::CallEventHitIn__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitIn__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitOut__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::CallEventHitOut__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitOut__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.CallTaskEnd__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::CallTaskEnd__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "CallTaskEnd__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MapEventHit_Core.MapEventHit_Core_C.ExecuteUbergraph_MapEventHit_Core
 // (Final, UbergraphFunction)
 // Parameters:
@@ -37,250 +93,91 @@ void AMapEventHit_Core_C::ExecuteUbergraph_MapEventHit_Core(int32 EntryPoint)
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.CallTaskEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.HitON
+// (BlueprintCallable, BlueprintEvent)
 
-void AMapEventHit_Core_C::CallTaskEnd__DelegateSignature()
+void AMapEventHit_Core_C::HitON()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "CallTaskEnd__DelegateSignature");
+		Func = Class->GetFunction("MapEventHit_Core_C", "HitON");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitOut__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.HitOFF
+// (BlueprintCallable, BlueprintEvent)
 
-void AMapEventHit_Core_C::CallEventHitOut__DelegateSignature()
+void AMapEventHit_Core_C::HitOFF()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitOut__DelegateSignature");
+		Func = Class->GetFunction("MapEventHit_Core_C", "HitOFF");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitIn__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.NextCallTask
+// (BlueprintCallable, BlueprintEvent)
 
-void AMapEventHit_Core_C::CallEventHitIn__DelegateSignature()
+void AMapEventHit_Core_C::NextCallTask()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitIn__DelegateSignature");
+		Func = Class->GetFunction("MapEventHit_Core_C", "NextCallTask");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.CallEventHitAction__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.TaskManager
+// (BlueprintCallable, BlueprintEvent)
 
-void AMapEventHit_Core_C::CallEventHitAction__DelegateSignature()
+void AMapEventHit_Core_C::TaskManager()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "CallEventHitAction__DelegateSignature");
+		Func = Class->GetFunction("MapEventHit_Core_C", "TaskManager");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.IsEventHitPaused
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function MapEventHit_Core.MapEventHit_Core_C.startTask
+// (BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::StartTask()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "startTask");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.ReShapeColor
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Paused                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FLinearColor                     Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AMapEventHit_Core_C::IsEventHitPaused(bool* Paused)
+void AMapEventHit_Core_C::ReShapeColor(const struct FLinearColor& Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "IsEventHitPaused");
+		Func = Class->GetFunction("MapEventHit_Core_C", "ReShapeColor");
 
-	Params::MapEventHit_Core_C_IsEventHitPaused Parms{};
+	Params::MapEventHit_Core_C_ReShapeColor Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Paused != nullptr)
-		*Paused = Parms.Paused;
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.IsMyArea
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    Param_IsMyArea                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMapEventHit_Core_C::IsMyArea(bool* Param_IsMyArea)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "IsMyArea");
-
-	Params::MapEventHit_Core_C_IsMyArea Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_IsMyArea != nullptr)
-		*Param_IsMyArea = Parms.Param_IsMyArea;
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.hidden
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NewHidden                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMapEventHit_Core_C::Hidden(bool NewHidden)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "hidden");
-
-	Params::MapEventHit_Core_C_Hidden Parms{};
-
-	Parms.NewHidden = NewHidden;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.FlagCh
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    OK                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMapEventHit_Core_C::FlagCh(bool* OK)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "FlagCh");
-
-	Params::MapEventHit_Core_C_FlagCh Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OK != nullptr)
-		*OK = Parms.OK;
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AMapEventHit_Core_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.EventHitAction
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AMapEventHit_Core_C::EventHitAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "EventHitAction");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.EventHitIN
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AMapEventHit_Core_C::EventHitIN()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "EventHitIN");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.EventHitOUT
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AMapEventHit_Core_C::EventHitOUT()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "EventHitOUT");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.EventHitActivate
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMapEventHit_Core_C::EventHitActivate(bool Active)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "EventHitActivate");
-
-	Params::MapEventHit_Core_C_EventHitActivate Parms{};
-
-	Parms.Active = Active;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AMapEventHit_Core_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapEventHit_Core.MapEventHit_Core_C.DebugView
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Bool                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMapEventHit_Core_C::DebugView(bool Bool)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "DebugView");
-
-	Params::MapEventHit_Core_C_DebugView Parms{};
-
-	Parms.Bool = Bool;
+	Parms.Value = std::move(Value);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -306,93 +203,196 @@ void AMapEventHit_Core_C::HiddenVolume(bool Param_Hidden)
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.ReShapeColor
-// (BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.DebugView
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor                     Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Bool                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AMapEventHit_Core_C::ReShapeColor(const struct FLinearColor& Value)
+void AMapEventHit_Core_C::DebugView(bool Bool)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "ReShapeColor");
+		Func = Class->GetFunction("MapEventHit_Core_C", "DebugView");
 
-	Params::MapEventHit_Core_C_ReShapeColor Parms{};
+	Params::MapEventHit_Core_C_DebugView Parms{};
 
-	Parms.Value = std::move(Value);
+	Parms.Bool = Bool;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.startTask
-// (BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AMapEventHit_Core_C::StartTask()
+void AMapEventHit_Core_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "startTask");
+		Func = Class->GetFunction("MapEventHit_Core_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.TaskManager
-// (BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.EventHitActivate
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AMapEventHit_Core_C::TaskManager()
+void AMapEventHit_Core_C::EventHitActivate(bool Active)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "TaskManager");
+		Func = Class->GetFunction("MapEventHit_Core_C", "EventHitActivate");
+
+	Params::MapEventHit_Core_C_EventHitActivate Parms{};
+
+	Parms.Active = Active;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.EventHitOUT
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AMapEventHit_Core_C::EventHitOUT()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "EventHitOUT");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.NextCallTask
-// (BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.EventHitIN
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AMapEventHit_Core_C::NextCallTask()
+void AMapEventHit_Core_C::EventHitIN()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "NextCallTask");
+		Func = Class->GetFunction("MapEventHit_Core_C", "EventHitIN");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.HitOFF
-// (BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.EventHitAction
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AMapEventHit_Core_C::HitOFF()
+void AMapEventHit_Core_C::EventHitAction()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "HitOFF");
+		Func = Class->GetFunction("MapEventHit_Core_C", "EventHitAction");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapEventHit_Core.MapEventHit_Core_C.HitON
-// (BlueprintCallable, BlueprintEvent)
+// Function MapEventHit_Core.MapEventHit_Core_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void AMapEventHit_Core_C::HitON()
+void AMapEventHit_Core_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapEventHit_Core_C", "HitON");
+		Func = Class->GetFunction("MapEventHit_Core_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.FlagCh
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    OK                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AMapEventHit_Core_C::FlagCh(bool* OK)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "FlagCh");
+
+	Params::MapEventHit_Core_C_FlagCh Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OK != nullptr)
+		*OK = Parms.OK;
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.hidden
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NewHidden                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AMapEventHit_Core_C::Hidden(bool NewHidden)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "hidden");
+
+	Params::MapEventHit_Core_C_Hidden Parms{};
+
+	Parms.NewHidden = NewHidden;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.IsMyArea
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    Param_IsMyArea                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AMapEventHit_Core_C::IsMyArea(bool* Param_IsMyArea)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "IsMyArea");
+
+	Params::MapEventHit_Core_C_IsMyArea Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_IsMyArea != nullptr)
+		*Param_IsMyArea = Parms.Param_IsMyArea;
+}
+
+
+// Function MapEventHit_Core.MapEventHit_Core_C.IsEventHitPaused
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    Paused                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AMapEventHit_Core_C::IsEventHitPaused(bool* Paused)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapEventHit_Core_C", "IsEventHitPaused");
+
+	Params::MapEventHit_Core_C_IsEventHitPaused Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Paused != nullptr)
+		*Paused = Parms.Paused;
 }
 
 }

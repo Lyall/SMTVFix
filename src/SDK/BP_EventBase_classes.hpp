@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "EventRateTable_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "E_EVENT_PLAY_STEP_structs.hpp"
@@ -18,7 +17,7 @@
 #include "E_EVENT_FADE_END_STEP_structs.hpp"
 #include "EventSelection_structs.hpp"
 #include "EventImportantSelectionLR_structs.hpp"
-#include "E_PLAYER_MANAGER_TYPE_structs.hpp"
+#include "EventRateTable_structs.hpp"
 #include "EventTableStrInt_structs.hpp"
 #include "E_EVENT_UNITE_TYPE_structs.hpp"
 #include "ChangeFadeVolume_structs.hpp"
@@ -27,6 +26,7 @@
 #include "E_EVENT_SELECTION_EX_TYPE_structs.hpp"
 #include "EventVisibleLevel_structs.hpp"
 #include "E_IK_TYPE_LIST_structs.hpp"
+#include "E_PLAYER_MANAGER_TYPE_structs.hpp"
 
 
 namespace SDK
@@ -47,12 +47,12 @@ public:
 	class AActor*                                 PositionOffset;                                    // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UsePositionOffset;                                 // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_EVENT_PLAY_STEP                             E_PlayStep;                                        // 0x0241(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C5D[0x6];                                     // 0x0242(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698C[0x6];                                     // 0x0242(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FEventMessage>                  MessageList;                                       // 0x0248(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         MessageListNo;                                     // 0x0258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MessageListMax;                                    // 0x025C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Selectcursor;                                      // 0x0260(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C5E[0x4];                                     // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698D[0x4];                                     // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ALevelSequenceActor*                    SequenceActor;                                     // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         PrevPlayRate;                                      // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         NewPlayRate;                                       // 0x0274(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -64,19 +64,19 @@ public:
 	bool                                          FastFlag;                                          // 0x0292(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          SkipBlock;                                         // 0x0293(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UseMessage;                                        // 0x0294(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C5F[0x3];                                     // 0x0295(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698E[0x3];                                     // 0x0295(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SaveSelectCursor;                                  // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DrawSceneName;                                     // 0x029C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C60[0x3];                                     // 0x029D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698F[0x3];                                     // 0x029D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PushBGM;                                           // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseSkip;                                           // 0x02A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C61[0x3];                                     // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6990[0x3];                                     // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ABP_EventVoice_C*>               VoiceCtrl;                                         // 0x02A8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	bool                                          FadeEnd;                                           // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_EVENT_FADE_END_STEP                         FadeEndStep;                                       // 0x02B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InputLock;                                         // 0x02BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          DebugMode;                                         // 0x02BB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C62[0x4];                                     // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6991[0x4];                                     // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_EventTest_C*                        DebugWB;                                           // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectionLRStep;                                   // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectionLRCursor;                                 // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -85,29 +85,29 @@ public:
 	TArray<class AAtomSound*>                     SelectionLRVoiceL;                                 // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	TArray<class AAtomSound*>                     SelectionLRVoiceR;                                 // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	bool                                          SelectionLRFirst;                                  // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C63[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6992[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AAtomSound*                             SelectionLRVoiceObj;                               // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectionLRVoiceIndex;                             // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C64[0x4];                                     // 0x0354(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6993[0x4];                                     // 0x0354(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACharaBase_C*                           SelectionChara;                                    // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AAtomSound*                             SelectionBaseVoice;                                // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FEventSelection>                SelectionCtrl;                                     // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         SelectionStep;                                     // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C65[0x4];                                     // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6994[0x4];                                     // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AAtomSound*                             SelectionSideVoice;                                // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SelectionInput;                                    // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          InitSystem;                                        // 0x0389(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsForceAuto;                                       // 0x038A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C66[0x1];                                     // 0x038B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6995[0x1];                                     // 0x038B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         BlurInvalid;                                       // 0x038C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BlurAmount;                                        // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BlurMax;                                           // 0x0394(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         PerObjectSize;                                     // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          KeyInvalid;                                        // 0x039C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C67[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6996[0x3];                                     // 0x039D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           SceneColor;                                        // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ForceEnd;                                          // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C68[0x7];                                     // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6997[0x7];                                     // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UAtomComponent*>                 AtomList;                                          // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<class UAtomComponent*>                 AtomListNoLoop;                                    // 0x03C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	float                                         AutoDelay;                                         // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -115,22 +115,22 @@ public:
 	int32                                         DebugCutSkip;                                      // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         DebugPlayTimeAll;                                  // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DebugPlayRate;                                     // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C69[0x7];                                     // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6998[0x7];                                     // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_EventMessage_C*                    SimpleText;                                        // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FEventRateTable>                RateTable;                                         // 0x03F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          AutoShake;                                         // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UseShake;                                          // 0x0409(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C6A[0x6];                                     // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6999[0x6];                                     // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 ShakeClass;                                        // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ShakeScale;                                        // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C6B[0x4];                                     // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_699A[0x4];                                     // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMatineeCameraShake*                    ShakeInst;                                         // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShakeImmediately;                                  // 0x0428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C6C[0x7];                                     // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_699B[0x7];                                     // 0x0429(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 EventId;                                           // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          RefleshFlag;                                       // 0x0440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UniteAccident;                                     // 0x0441(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C6D[0x2];                                     // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_699C[0x2];                                     // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         UniteResult;                                       // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         OnestDevil;                                        // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TwondDevil;                                        // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -139,7 +139,7 @@ public:
 	float                                         SkipTime;                                          // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SkipFadeEnd;                                       // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          SkipEnable;                                        // 0x0469(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C6E[0x6];                                     // 0x046A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_699D[0x6];                                     // 0x046A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerBase_C*                          ActivePlayer;                                      // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MessageElapsedTime;                                // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CFadeCurrentColor;                                 // 0x047C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -148,16 +148,16 @@ public:
 	float                                         CFadeEndTime;                                      // 0x04AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CFadePassageTime;                                  // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CFadeActive;                                       // 0x04B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C6F[0x3];                                     // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_699E[0x3];                                     // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_EventColorFade_C*                   CFadeWidget;                                       // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LastFade;                                          // 0x04C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C70[0x3];                                     // 0x04C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_699F[0x3];                                     // 0x04C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ThreerdDevil;                                      // 0x04C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FourthDevil;                                       // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_EVENT_UNITE_TYPE                            UniteType;                                         // 0x04CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C71[0x3];                                     // 0x04CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A0[0x3];                                     // 0x04CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DefaultMaxFPS;                                     // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C72[0x4];                                     // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A1[0x4];                                     // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FChangeFadeVolume>              SoundVolumeTime;                                   // 0x04D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	float                                         HighSpeed;                                         // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         VoiceVolume;                                       // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -165,7 +165,7 @@ public:
 	float                                         BGMVolume;                                         // 0x04F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseHighSpeed;                                      // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ReturnDefSpeed;                                    // 0x04F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C73[0x2];                                     // 0x04FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A2[0x2];                                     // 0x04FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         FastForward;                                       // 0x04FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         NowSlomo;                                          // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NowHighSpeed;                                      // 0x0504(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -176,22 +176,22 @@ public:
 	bool                                          CamBlurOff;                                        // 0x0509(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor)
 	bool                                          CamBlurCheck;                                      // 0x050A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          DebugVoiceTiming;                                  // 0x050B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C74[0x4];                                     // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A3[0x4];                                     // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDataTable*                             DebugVoiceTimingTable;                             // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DebugPlayerWarp;                                   // 0x0518(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C75[0x7];                                     // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A4[0x7];                                     // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDataTable*                             VoiceFixData;                                      // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseVoiceFrameFix;                                  // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UseLevelTick;                                      // 0x0529(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          DebugUseText;                                      // 0x052A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C76[0x5];                                     // 0x052B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A5[0x5];                                     // 0x052B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_EventPause_C*                       EventPause;                                        // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseFadeEnd;                                        // 0x0538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_EVENT_SELECTION_EX_TYPE                     SelectionExType;                                   // 0x0539(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C77[0x2];                                     // 0x053A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A6[0x2];                                     // 0x053A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SelectionExMax;                                    // 0x053C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectionExNow;                                    // 0x0540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C78[0x4];                                     // 0x0544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A7[0x4];                                     // 0x0544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FEventVisibleLevel>             VisibleLevel;                                      // 0x0548(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         BGMAisacFade;                                      // 0x0558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BGMAisacVal;                                       // 0x055C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -200,29 +200,29 @@ public:
 	class FName                                   LipAssetPath;                                      // 0x0570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseAssetPath;                                      // 0x0578(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          DebugDrawSkipEnable;                               // 0x0579(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C79[0x6];                                     // 0x057A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A8[0x6];                                     // 0x057A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         DebugVoiceTimingLog;                               // 0x0580(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          IsMovieText;                                       // 0x0590(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C7A[0x7];                                     // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69A9[0x7];                                     // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FChangeFadeVolume>              SoundVolumeEase;                                   // 0x0598(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          DebugTextAlpha0;                                   // 0x05A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C7B[0x7];                                     // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69AA[0x7];                                     // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UManaComponent*                         ManaComponent;                                     // 0x05B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseAutoFade;                                       // 0x05B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C7C[0x7];                                     // 0x05B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69AB[0x7];                                     // 0x05B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInstanceDynamic*>       DMIList;                                           // 0x05C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class USoundAtomCueSheet*                     CueSheet;                                          // 0x05D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MapPostProcessIndex;                               // 0x05D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C7D[0x4];                                     // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69AC[0x4];                                     // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     PostProcessMaterial;                               // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UniteSkip;                                         // 0x05E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsStepFinal;                                       // 0x05E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C7E[0x6];                                     // 0x05EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69AD[0x6];                                     // 0x05EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AAtomSound*>                     ArrayAutoSE;                                       // 0x05F0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	int32                                         MaxFPS;                                            // 0x0600(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DebugMaxFPS;                                       // 0x0604(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InGuestMember;                                     // 0x0608(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C7F[0x3];                                     // 0x0609(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69AE[0x3];                                     // 0x0609(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CopyAperture;                                      // 0x060C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                         CopyApertureFHD;                                   // 0x0610(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                         CopyAperture4K;                                    // 0x0614(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
@@ -231,167 +231,167 @@ public:
 	bool                                          UseBattleFade;                                     // 0x0628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          StepFinalFadeCheck;                                // 0x0629(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsNextBattle;                                      // 0x062A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C80[0x5];                                     // 0x062B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69AF[0x5];                                     // 0x062B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 EventStaff;                                        // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          StaffSkip;                                         // 0x0638(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          TalkPart;                                          // 0x0639(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          PendingFinish;                                     // 0x063A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void BI_EB_PlayStart(bool* NoUse);
-	void BI_EB_IsFinish(bool* Param_Finish);
-	void PlaySelectionSoundEnter(bool SoundFlag);
-	void PlaySelectionSoundSelect(bool SoundFlag);
-	void GetFinish(bool* IsFinish);
-	bool IsTalkPart();
-	void SetStaffSkip(bool Use, class AActor* Param_EventStaff);
-	void SetUniteSkip(bool Use);
-	void DebugOutputTextTime();
-	bool IsPauseMovieEvent();
-	bool IsPlayingMovieEvent();
-	void DebugPrintAperture();
-	void InterpolationEvent(int32 Type);
-	void ChangeMovieLanguage(const class FString& Culture);
-	void ChangeMapPostProcessEx(class UMaterialInterface* Param_PostProcessMaterial, TArray<class FName>& ParameterName, TArray<float>& Value);
-	void RevertMapPostProcess();
-	void ChangeMapPostProcess(int32 Daath, float DownIntensity, float TopIntensity);
-	void SetMotionBlur(bool Switch);
-	bool CheckPauseEvent();
-	void SetFontAlpha(float Alpha);
-	void FadeOutBattle();
-	void ChangeCueVolumeEase(EOptionVolumeCategory Category, float Volume, float Time);
-	void CheckMovieText();
-	void MovieText(int32 MessageID);
-	void GetMessageWidget(class UWB_Message_C** Param_MessageWidget);
-	void DebugDrawSkip();
-	void InitPlayerPosition(class AActor* PositionActor);
-	void SetSearchAssetPath(class FName Param_VoiceAssetPath, class FName Param_LipAssetPath);
-	void StartChooseSE(class USoundAtomCue* Sound);
-	void StopCueENV(float FadeTime, bool NoBGM);
-	void PlayCueENV(const class FString& SoundID, float Volume, float Pitch, float Time);
-	void ClearTemporaryText();
-	void DrawTemporaryText(int32 MessageID);
-	void VisibleLevelFinal();
-	void VisibleLevelInit();
-	void AddVisibleLevel(class FName LevelName, bool Visible);
-	void ProcSelectionEx(bool SoundFlag, int32* Return, bool* Enter);
-	void InitSelectionEx(E_EVENT_SELECTION_EX_TYPE SelectType, int32 SelectMax);
-	void SetSkipEnable(bool Enable);
-	void Set_Event_Pause(bool Puase, bool Stop);
-	void GetTextFixTime(int32 Param_Index, float* FixTime);
-	void DebugTextTime();
-	void DebugSlomoFunc();
-	void SetUniteDevils(bool Accident, int32 ResultDevil, int32 Onest, int32 Twond, int32 Threerd, int32 Fourth);
-	void ChangeMaterialCore(class UMeshComponent* Mesh, class UDataTable* DataTable, bool UseColor, const struct FLinearColor& Color);
-	void AttachMesh(class FName Tag, class FName SrcMesh, class FName DestMesh, class FName DestBone);
-	void SetIKEnable(E_IK_TYPE_LIST Type, bool Enable, bool Immediately, class FName Tag);
-	void ChangeColorFade(const struct FLinearColor& FinalColor, float Time, bool Additive);
-	void SetColorFade(const struct FLinearColor& FirstColor, const struct FLinearColor& FinalColor, float Time, bool Additive);
-	void ChangeCueVolumeTime(EOptionVolumeCategory Category, float Volume, float Time);
-	void CheckSkip(bool* Return);
-	void EnterSkip();
-	void StopDefaultBlink(class FName Tag);
-	void PlayDefaultBlink(class FName Tag);
-	void GetEventTableItem(TArray<struct FEventTableStrInt>& Table, const class FString& Object, bool* Find, int32* Value);
-	void ClearCharaForcedLOD();
-	void SetCharaForcedLOD();
-	void MakeRateTable();
-	void PlayMotionMob(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float OffsetTime, float EventTime, float Param_PlayRate);
-	void Reflesh();
-	void ClearBindingActors(TArray<class FName>& BindingActors);
-	void SetBindingActors(TArray<class FName>& BindingActors, class AActor* EventCtrl);
-	void SetNormalUnite(int32 OnestDevilID, int32 TwondDevilID, int32 ResultId, bool Accident);
-	void EventFlagSetUp(const class FString& Param_EventId, bool Last);
-	void StopShake();
-	void PlayShake();
-	void SetRate(const class FString& ObjectName, float Rate);
-	void GetRate(const class FString& ObjectName, float* Rate);
-	void SimpleTextOff();
-	void SimpleTextOn(int32 ID);
-	void DebugPrintRate();
-	void ChangeCueVolume(EOptionVolumeCategory Category, float Volume);
-	void StopCueBGM(float FadeTime, bool NoBGM);
-	void PlayCueBGM(const class FString& SoundID, float Volume, float Pitch, float Time);
-	void DebugPrintTime();
-	void CutFinalize(class AActor* LevelSelf);
-	void PlayMotionProp(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float OffsetTime, float EventTime, float Param_PlayRate);
-	void PlayMotionConv(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime, float Param_PlayRate);
-	void SetVolumeCueLoop(const class FString& SoundID, float Volume);
-	void StopCueLoop(const class FString& SoundID);
-	void PlayCueLoop(const class FString& SoundID, float Volume, float Pitch);
-	void PlayCue(const class FString& SoundID, float Volume, float Pitch, float Time);
-	void Set_Force_End();
-	void DebugForceFinish();
-	void ResetBlurInvalid();
-	void SetBlurInvalid();
-	void DebugAddSoundKey();
-	void DebugOpenWindow();
-	void ClearMaterial(class FName Tag);
-	void ChangeMaterial(class FName Tag, class UDataTable* Table);
-	void AutoMotion(class FName Tag, bool IsLoop, float BlendTime, float OffsetTime, float EventTime);
-	void AddSelection(class UImage* Image, class ABP_EventLookAt_C* LookAt, class FName Facial, class UAnimSequence* Motion, class AEmitter* Emitter, int32 NextStep, E_ACTION_MAPPING_TYPE InputKey, TArray<class AAtomSound*>& VoiceSE);
-	void ProcSelection(float DeltaSeconds, bool* IsEnd, int32* Next);
-	void InitSelection(class FName CharaTag, class AAtomSound* BaseVoiceSE);
-	void _GetSelectionVoiceArray(TArray<class AAtomSound*>& VoiceArray, class AAtomSound** Voice);
-	void SetSelectionLRVoiceRight(class AAtomSound* Voice);
-	void SetSelectionLRVoiceLeft(class AAtomSound* Voice);
-	void SetSelectionLRVoiceBase(class AAtomSound* Voice);
-	void ProcSelectionLR(float DeltaSeconds, bool* IsEnd, int32* Next);
-	void InitSelectionLR(class ACharaBase_C* Chara, class UImage* LeftImage, class UImage* RightImage, class ABP_EventLookAt_C* LeftLookAt, class ABP_EventLookAt_C* RightLookAt, class AEmitter* LeftEffect, class AEmitter* RightEffect, int32 LeftGoToStep, int32 RightGoToStep, E_ACTION_MAPPING_TYPE LeftKey, E_ACTION_MAPPING_TYPE RightKey);
-	void DebugPrintInfo(const class FString& UserData);
-	void DebugFlagControl(const class FText& Text, class FName Left, bool L_Flag, class FName Right, bool R_Flag, class FName Up, bool U_Flag, class FName Down, bool D_Flag, bool* Next);
-	void DebugTextOff();
-	void DebugTextOn(const class FText& Text);
-	void GetInput(E_ACTION_MAPPING_TYPE Action, bool* Return);
-	void TerminateSE();
-	void TerminateVoice();
-	void UpdateVoice();
-	void PlayVoice(class FName Voice, class FName CharaTag);
-	void ChangeVolume(EGameVolumeCategory Category, float Volume);
-	void StopPriorityBGM(float FadeTime);
-	void PlayPriorityBGM(class FName SoundID, float FadeTime);
-	void PlayBGM(class FName SoundID, float FadeTime);
-	void Facial(class FName Tag, class FName Param_Facial);
-	void PlayMotionID(class FName Tag, class UAnimSequenceBase* AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime);
-	void SelectBranch(int32 Select1, int32 Select2, int32 Select3, int32 Select4, int32* Return);
-	void LookAtChara(class FName CharaTag, class FName TargetTag, class FName Socket, bool Immediately);
-	void LookAtActor(class FName CharaTag, class FName TargetTag, bool Immediately);
-	void PlayMotion(class FName Tag, class FName AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime);
-	void PlaySE(class FName SoundID);
-	void SetDummyMessage(float StartTime);
-	void OneSequencer();
-	void EndSequence();
-	void IsEndSequence(bool* End);
-	void SetSelectMessage(int32 MessageID_1, int32 MessageID_2, int32 MessageID_3, int32 MessageID_4);
-	void SetMessage(int32 MessageID, float StartTime, bool Param_SkipBlock, bool System, class FName CharaTag, bool ForceAuto, float Param_AutoDelay);
-	void IsNextSelect(bool* Return);
-	void IsNextMessage(bool* Next);
-	void GetNextMessageID(int32* MessageID, bool* Param_SkipBlock, bool* System, class FName* CharaTag, bool* ForceAuto, float* Param_AutoDelay);
-	void GetNextMessageTime(float* NextTime);
-	void ChangePlayRate(float Param_PlayRate);
-	void DrawSelect();
-	void ClearText(bool VoiceOnlyStop);
-	void DrawText(int32 MessageID, bool System, class FName CharaTag, bool ForceAuto, float Param_AutoDelay);
-	void WaitSequence(bool PrintTime);
-	void PlaySequence(class ALevelSequenceActor* Sequencer, class ACineCameraActor* CineCamera, const struct FMovieSceneObjectBindingID& BindID, bool Param_FadeEnd, bool* Play);
-	void Set_Activate(bool Param_Activate);
-	void StepFinal(bool IsFade, bool AutoFadeOut, bool NoResetVolume, bool NoStopPrioBGM);
-	void StepFirst(const class FString& Param_EventId, bool NoBGM, bool NoChangeScene, bool NoAutoFade, bool PlayerHidden, int32 Param_MaxFPS, bool* Next);
-	void SetMessageAsset(class UScriptMessageAsset* NewParam);
-	void InitMessage();
-	void Initialize(class UScriptMessageAsset* Param_MessageAsset);
-	void SetPosition(class AActor* PositionActor);
-	void IsFinish(bool* Param_Finish);
-	void PlayStart();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void AutoPlaySE(const class FString& SoundID, float Volume, float Pitch, float Time);
-	void PauseMovie();
-	void StartPauseMovieEvent();
-	void EndPauseMovieEvent();
-	void CE_DebugOutputTextTIme();
 	void ExecuteUbergraph_BP_EventBase(int32 EntryPoint);
+	void CE_DebugOutputTextTIme();
+	void EndPauseMovieEvent();
+	void StartPauseMovieEvent();
+	void PauseMovie();
+	void AutoPlaySE(const class FString& SoundID, float Volume, float Pitch, float Time);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void PlayStart();
+	void IsFinish(bool* Param_Finish);
+	void SetPosition(class AActor* PositionActor);
+	void Initialize(class UScriptMessageAsset* Param_MessageAsset);
+	void InitMessage();
+	void SetMessageAsset(class UScriptMessageAsset* NewParam);
+	void StepFirst(const class FString& Param_EventId, bool NoBGM, bool NoChangeScene, bool NoAutoFade, bool PlayerHidden, int32 Param_MaxFPS, bool* Next);
+	void StepFinal(bool IsFade, bool AutoFadeOut, bool NoResetVolume, bool NoStopPrioBGM);
+	void Set_Activate(bool Param_Activate);
+	void PlaySequence(class ALevelSequenceActor* Sequencer, class ACineCameraActor* CineCamera, const struct FMovieSceneObjectBindingID& BindID, bool Param_FadeEnd, bool* Play);
+	void WaitSequence(bool PrintTime);
+	void DrawText(int32 MessageID, bool System, class FName CharaTag, bool ForceAuto, float Param_AutoDelay);
+	void ClearText(bool VoiceOnlyStop);
+	void DrawSelect();
+	void ChangePlayRate(float Param_PlayRate);
+	void GetNextMessageTime(float* NextTime);
+	void GetNextMessageID(int32* MessageID, bool* Param_SkipBlock, bool* System, class FName* CharaTag, bool* ForceAuto, float* Param_AutoDelay);
+	void IsNextMessage(bool* Next);
+	void IsNextSelect(bool* Return);
+	void SetMessage(int32 MessageID, float StartTime, bool Param_SkipBlock, bool System, class FName CharaTag, bool ForceAuto, float Param_AutoDelay);
+	void SetSelectMessage(int32 MessageID_1, int32 MessageID_2, int32 MessageID_3, int32 MessageID_4);
+	void IsEndSequence(bool* End);
+	void EndSequence();
+	void OneSequencer();
+	void SetDummyMessage(float StartTime);
+	void PlaySE(class FName SoundID);
+	void PlayMotion(class FName Tag, class FName AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime);
+	void LookAtActor(class FName CharaTag, class FName TargetTag, bool Immediately);
+	void LookAtChara(class FName CharaTag, class FName TargetTag, class FName Socket, bool Immediately);
+	void SelectBranch(int32 Select1, int32 Select2, int32 Select3, int32 Select4, int32* Return);
+	void PlayMotionID(class FName Tag, class UAnimSequenceBase* AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime);
+	void Facial(class FName Tag, class FName Param_Facial);
+	void PlayBGM(class FName SoundID, float FadeTime);
+	void PlayPriorityBGM(class FName SoundID, float FadeTime);
+	void StopPriorityBGM(float FadeTime);
+	void ChangeVolume(EGameVolumeCategory Category, float Volume);
+	void PlayVoice(class FName Voice, class FName CharaTag);
+	void UpdateVoice();
+	void TerminateVoice();
+	void TerminateSE();
+	void GetInput(E_ACTION_MAPPING_TYPE Action, bool* Return);
+	void DebugTextOn(const class FText& Text);
+	void DebugTextOff();
+	void DebugFlagControl(const class FText& Text, class FName Left, bool L_Flag, class FName Right, bool R_Flag, class FName Up, bool U_Flag, class FName Down, bool D_Flag, bool* Next);
+	void DebugPrintInfo(const class FString& UserData);
+	void InitSelectionLR(class ACharaBase_C* Chara, class UImage* LeftImage, class UImage* RightImage, class ABP_EventLookAt_C* LeftLookAt, class ABP_EventLookAt_C* RightLookAt, class AEmitter* LeftEffect, class AEmitter* RightEffect, int32 LeftGoToStep, int32 RightGoToStep, E_ACTION_MAPPING_TYPE LeftKey, E_ACTION_MAPPING_TYPE RightKey);
+	void ProcSelectionLR(float DeltaSeconds, bool* IsEnd, int32* Next);
+	void SetSelectionLRVoiceBase(class AAtomSound* Voice);
+	void SetSelectionLRVoiceLeft(class AAtomSound* Voice);
+	void SetSelectionLRVoiceRight(class AAtomSound* Voice);
+	void _GetSelectionVoiceArray(TArray<class AAtomSound*>& VoiceArray, class AAtomSound** Voice);
+	void InitSelection(class FName CharaTag, class AAtomSound* BaseVoiceSE);
+	void ProcSelection(float DeltaSeconds, bool* IsEnd, int32* Next);
+	void AddSelection(class UImage* Image, class ABP_EventLookAt_C* LookAt, class FName Facial, class UAnimSequence* Motion, class AEmitter* Emitter, int32 NextStep, E_ACTION_MAPPING_TYPE InputKey, TArray<class AAtomSound*>& VoiceSE);
+	void AutoMotion(class FName Tag, bool IsLoop, float BlendTime, float OffsetTime, float EventTime);
+	void ChangeMaterial(class FName Tag, class UDataTable* Table);
+	void ClearMaterial(class FName Tag);
+	void DebugOpenWindow();
+	void DebugAddSoundKey();
+	void SetBlurInvalid();
+	void ResetBlurInvalid();
+	void DebugForceFinish();
+	void Set_Force_End();
+	void PlayCue(const class FString& SoundID, float Volume, float Pitch, float Time);
+	void PlayCueLoop(const class FString& SoundID, float Volume, float Pitch);
+	void StopCueLoop(const class FString& SoundID);
+	void SetVolumeCueLoop(const class FString& SoundID, float Volume);
+	void PlayMotionConv(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime, float Param_PlayRate);
+	void PlayMotionProp(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float OffsetTime, float EventTime, float Param_PlayRate);
+	void CutFinalize(class AActor* LevelSelf);
+	void DebugPrintTime();
+	void PlayCueBGM(const class FString& SoundID, float Volume, float Pitch, float Time);
+	void StopCueBGM(float FadeTime, bool NoBGM);
+	void ChangeCueVolume(EOptionVolumeCategory Category, float Volume);
+	void DebugPrintRate();
+	void SimpleTextOn(int32 ID);
+	void SimpleTextOff();
+	void GetRate(const class FString& ObjectName, float* Rate);
+	void SetRate(const class FString& ObjectName, float Rate);
+	void PlayShake();
+	void StopShake();
+	void EventFlagSetUp(const class FString& Param_EventId, bool Last);
+	void SetNormalUnite(int32 OnestDevilID, int32 TwondDevilID, int32 ResultId, bool Accident);
+	void SetBindingActors(TArray<class FName>& BindingActors, class AActor* EventCtrl);
+	void ClearBindingActors(TArray<class FName>& BindingActors);
+	void Reflesh();
+	void PlayMotionMob(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float OffsetTime, float EventTime, float Param_PlayRate);
+	void MakeRateTable();
+	void SetCharaForcedLOD();
+	void ClearCharaForcedLOD();
+	void GetEventTableItem(TArray<struct FEventTableStrInt>& Table, const class FString& Object, bool* Find, int32* Value);
+	void PlayDefaultBlink(class FName Tag);
+	void StopDefaultBlink(class FName Tag);
+	void EnterSkip();
+	void CheckSkip(bool* Return);
+	void ChangeCueVolumeTime(EOptionVolumeCategory Category, float Volume, float Time);
+	void SetColorFade(const struct FLinearColor& FirstColor, const struct FLinearColor& FinalColor, float Time, bool Additive);
+	void ChangeColorFade(const struct FLinearColor& FinalColor, float Time, bool Additive);
+	void SetIKEnable(E_IK_TYPE_LIST Type, bool Enable, bool Immediately, class FName Tag);
+	void AttachMesh(class FName Tag, class FName SrcMesh, class FName DestMesh, class FName DestBone);
+	void ChangeMaterialCore(class UMeshComponent* Mesh, class UDataTable* DataTable, bool UseColor, const struct FLinearColor& Color);
+	void SetUniteDevils(bool Accident, int32 ResultDevil, int32 Onest, int32 Twond, int32 Threerd, int32 Fourth);
+	void DebugSlomoFunc();
+	void DebugTextTime();
+	void GetTextFixTime(int32 Param_Index, float* FixTime);
+	void Set_Event_Pause(bool Puase, bool Stop);
+	void SetSkipEnable(bool Enable);
+	void InitSelectionEx(E_EVENT_SELECTION_EX_TYPE SelectType, int32 SelectMax);
+	void ProcSelectionEx(bool SoundFlag, int32* Return, bool* Enter);
+	void AddVisibleLevel(class FName LevelName, bool Visible);
+	void VisibleLevelInit();
+	void VisibleLevelFinal();
+	void DrawTemporaryText(int32 MessageID);
+	void ClearTemporaryText();
+	void PlayCueENV(const class FString& SoundID, float Volume, float Pitch, float Time);
+	void StopCueENV(float FadeTime, bool NoBGM);
+	void StartChooseSE(class USoundAtomCue* Sound);
+	void SetSearchAssetPath(class FName Param_VoiceAssetPath, class FName Param_LipAssetPath);
+	void InitPlayerPosition(class AActor* PositionActor);
+	void DebugDrawSkip();
+	void GetMessageWidget(class UWB_Message_C** Param_MessageWidget);
+	void MovieText(int32 MessageID);
+	void CheckMovieText();
+	void ChangeCueVolumeEase(EOptionVolumeCategory Category, float Volume, float Time);
+	void FadeOutBattle();
+	void SetFontAlpha(float Alpha);
+	bool CheckPauseEvent();
+	void SetMotionBlur(bool Switch);
+	void ChangeMapPostProcess(int32 Daath, float DownIntensity, float TopIntensity);
+	void RevertMapPostProcess();
+	void ChangeMapPostProcessEx(class UMaterialInterface* Param_PostProcessMaterial, TArray<class FName>& ParameterName, TArray<float>& Value);
+	void ChangeMovieLanguage(const class FString& Culture);
+	void InterpolationEvent(int32 Type);
+	void DebugPrintAperture();
+	bool IsPlayingMovieEvent();
+	bool IsPauseMovieEvent();
+	void DebugOutputTextTime();
+	void SetUniteSkip(bool Use);
+	void SetStaffSkip(bool Use, class AActor* Param_EventStaff);
+	bool IsTalkPart();
+	void GetFinish(bool* IsFinish);
+	void PlaySelectionSoundSelect(bool SoundFlag);
+	void PlaySelectionSoundEnter(bool SoundFlag);
+	void BI_EB_IsFinish(bool* Param_Finish);
+	void BI_EB_PlayStart(bool* NoUse);
 
 public:
 	static class UClass* StaticClass()

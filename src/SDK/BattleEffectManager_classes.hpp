@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "BTL_EFFECT_PLAY_PARAM_structs.hpp"
-#include "Project_structs.hpp"
-#include "Project_classes.hpp"
 #include "BTL_EFFECT_DATA_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BTL_LIGHT_PLAY_PARAM_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Project_structs.hpp"
+#include "Project_classes.hpp"
+#include "BTL_EFFECT_PLAY_PARAM_structs.hpp"
 #include "BattleResidentEffect_structs.hpp"
 
 
@@ -30,31 +30,31 @@ class UBattleEffectManager_C final : public UBattleActorComponentBase
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TArray<struct FBTL_EFFECT_DATA>               M_SkillAction;                                     // 0x00B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         Pad_7921[0x8];                                     // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5DD2[0x8];                                     // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             M_Transform;                                       // 0x00D0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class ABattleSkillActionBase_C*               M_SpawnResult;                                     // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         M_TestID;                                          // 0x0108(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7922[0x4];                                     // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5DD3[0x4];                                     // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   M_EffectName;                                      // 0x0110(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UClass*                                 M_SkillActionBase;                                 // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         PlayRate;                                          // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7923[0x4];                                     // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5DD4[0x4];                                     // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<E_BAD_STATUS, struct FBattleResidentEffect> M_BstOnHitArray;                                   // 0x0138(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<E_BAD_STATUS, struct FBattleResidentEffect> M_BstOnLoopArray;                                  // 0x0188(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<E_BAD_STATUS, struct FBattleResidentEffect> M_BstOnCure;                                       // 0x01D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<E_BAD_STATUS, struct FBattleResidentEffect> M_BstOnDamage;                                     // 0x0228(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         M_BstLoadIndex;                                    // 0x0278(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7924[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5DD5[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 M_AttackName;                                      // 0x0280(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class FName                                   M_LoadSkillName;                                   // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   M_LoadData;                                        // 0x0298(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          M_IsSkillSkip;                                     // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7925[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5DD6[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBTL_EFFECT_PLAY_PARAM>         M_EffectPlayParam;                                 // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FBTL_LIGHT_PLAY_PARAM>          M_LightPlayParam;                                  // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          M_EnableUpdate;                                    // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_IsUsedAnimCam;                                   // 0x02E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7926[0x6];                                     // 0x02EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5DD7[0x6];                                     // 0x02EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         M_TrashActor;                                      // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	TArray<class UActorComponent*>                M_TrashComponent;                                  // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 

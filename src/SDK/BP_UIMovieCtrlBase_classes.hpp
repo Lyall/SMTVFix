@@ -29,16 +29,16 @@ public:
 	bool                                          M_Loop;                                            // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_IsPlaying;                                       // 0x0239(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_StopReq;                                         // 0x023A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_93CD[0x5];                                     // 0x023B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6EB6[0x5];                                     // 0x023B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UManaTexture*                           M_MovieTexture2160;                                // 0x0240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void IsPlaying(bool* Param_IsPlaying);
-	void UserConstructionScript();
-	void Play(bool Loop);
-	void Stop();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_UIMovieCtrlBase(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void Stop();
+	void Play(bool Loop);
+	void UserConstructionScript();
+	void IsPlaying(bool* Param_IsPlaying);
 
 public:
 	static class UClass* StaticClass()

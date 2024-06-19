@@ -36,16 +36,16 @@ struct WB_DebugMenu_ItemBase_C_ExecuteUbergraph_WB_DebugMenu_ItemBase final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E92[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E48[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 Temp_class_Variable;                               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(TSubclassOf<class UObject> Loaded)> K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
 	class UClass*                                 K2Node_ClassDynamicCast_AsDebug_Func_Base_Obj;     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E93[0x6];                                      // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E49[0x6];                                      // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetItemData_ItemData;                     // 0x0030(0x00D0)()
 	bool                                          CallFunc_IsValidSoftClassReference_ReturnValue;    // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E94[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E4A[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDebugMenuItemData                     CallFunc_GetItemData_ItemData_1;                   // 0x0108(0x00D0)()
 	TSubclassOf<class UObject>                    K2Node_CustomEvent_Loaded;                         // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                          CallFunc_ExecFunc_ReturnValue;                     // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -153,7 +153,7 @@ struct WB_DebugMenu_ItemBase_C_UpDataViewState final
 {
 public:
 	bool                                          IsView;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E95[0x3];                                      // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E4B[0x3];                                      // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Pos;                                               // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_DebugMenu_ItemBase_C_UpDataViewState) == 0x000004, "Wrong alignment on WB_DebugMenu_ItemBase_C_UpDataViewState");
@@ -189,7 +189,7 @@ struct WB_DebugMenu_ItemBase_C_ChangePageState final
 {
 public:
 	bool                                          IsView;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E96[0x3];                                      // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E4C[0x3];                                      // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              PagePos;                                           // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_DebugMenu_ItemBase_C_ChangePageState) == 0x000004, "Wrong alignment on WB_DebugMenu_ItemBase_C_ChangePageState");

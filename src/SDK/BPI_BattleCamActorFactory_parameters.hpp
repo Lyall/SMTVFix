@@ -23,7 +23,7 @@ struct BPI_BattleCamActorFactory_C_BI_SpawnRailActorPrevBattle final
 {
 public:
 	E_BTL_CAM_TYPE                                CamType;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F12[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C0D[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OriginTransform;                                   // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	TArray<TScriptInterface<class IBPI_CharaBaseAccessor_C>> UnitList;                                          // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<struct FTransform>                     UnitTrans;                                         // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)

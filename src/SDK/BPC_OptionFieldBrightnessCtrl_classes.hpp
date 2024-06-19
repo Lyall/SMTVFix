@@ -30,29 +30,29 @@ public:
 	struct FPrimaryAssetId                        EnvLevelID;                                        // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FPrimaryAssetId>                AreaEnvLevelIDs;                                   // 0x00D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          OptionBrightnessActive;                            // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8AFA[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B98[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPrimaryAssetId                        SpecialEnvLevelID;                                 // 0x00E4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8AFB[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B99[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FOptionFieldBrightnessPP_st>    PostInfoList;                                      // 0x00F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FPrimaryAssetId>                GardenEnvLevelIDs;                                 // 0x0108(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void BPI_SetOptionBrightnessActive(bool Active, bool* NewParam);
-	void BPI_MultiplyBrightness_SelectPP(class APostProcessVolume* PostProcess, bool* NewParam);
-	void OnGardenEnvLevelLoaded();
-	void UpdateBrightnessVolume();
-	void OnEnvLevelLoaded_Base(class ULevelStreaming* Level);
-	void OnBattleEnvLevelLoaded();
-	void OnAreaEnvLevelLoaded();
-	void OnSpecialEnvLevelLoaded();
-	void OnMainEnvLevelLoaded();
-	void GetDefaultGainColor(const struct FOptionFieldBrightnessPP_st& Info, struct FVector4* Color);
-	void SetOptionBrightnessActive(bool Active);
-	void ResetBrightness();
-	void MultiplyBrightness_SelectPP(class APostProcessVolume* PostProcess);
-	void MultiplyBrightness();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void MultiplyBrightness();
+	void MultiplyBrightness_SelectPP(class APostProcessVolume* PostProcess);
+	void ResetBrightness();
+	void SetOptionBrightnessActive(bool Active);
+	void GetDefaultGainColor(const struct FOptionFieldBrightnessPP_st& Info, struct FVector4* Color);
+	void OnMainEnvLevelLoaded();
+	void OnSpecialEnvLevelLoaded();
+	void OnAreaEnvLevelLoaded();
+	void OnBattleEnvLevelLoaded();
+	void OnEnvLevelLoaded_Base(class ULevelStreaming* Level);
+	void UpdateBrightnessVolume();
+	void OnGardenEnvLevelLoaded();
+	void BPI_MultiplyBrightness_SelectPP(class APostProcessVolume* PostProcess, bool* NewParam);
+	void BPI_SetOptionBrightnessActive(bool Active, bool* NewParam);
 
 public:
 	static class UClass* StaticClass()

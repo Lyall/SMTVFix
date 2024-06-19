@@ -17,40 +17,49 @@
 namespace SDK
 {
 
-// Function BP_MapAutoHeal.BP_MapAutoHeal_C.CheckVictim
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_MapAutoHeal.BP_MapAutoHeal_C.ExecuteUbergraph_BP_MapAutoHeal
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Dead                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    DecreaseHP                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapAutoHeal_C::CheckVictim(bool* Dead, bool* DecreaseHP)
+void ABP_MapAutoHeal_C::ExecuteUbergraph_BP_MapAutoHeal(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapAutoHeal_C", "CheckVictim");
+		Func = Class->GetFunction("BP_MapAutoHeal_C", "ExecuteUbergraph_BP_MapAutoHeal");
 
-	Params::BP_MapAutoHeal_C_CheckVictim Parms{};
+	Params::BP_MapAutoHeal_C_ExecuteUbergraph_BP_MapAutoHeal Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Dead != nullptr)
-		*Dead = Parms.Dead;
-
-	if (DecreaseHP != nullptr)
-		*DecreaseHP = Parms.DecreaseHP;
 }
 
 
-// Function BP_MapAutoHeal.BP_MapAutoHeal_C.PlayOpenDialogSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MapAutoHeal.BP_MapAutoHeal_C.End
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_MapAutoHeal_C::PlayOpenDialogSE()
+void ABP_MapAutoHeal_C::End()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapAutoHeal_C", "PlayOpenDialogSE");
+		Func = Class->GetFunction("BP_MapAutoHeal_C", "End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MapAutoHeal.BP_MapAutoHeal_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_MapAutoHeal_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapAutoHeal_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -76,51 +85,42 @@ void ABP_MapAutoHeal_C::OnLoaded_05CE4B6841AB4841B2084BAECF5A50DA(class UObject*
 }
 
 
-// Function BP_MapAutoHeal.BP_MapAutoHeal_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_MapAutoHeal.BP_MapAutoHeal_C.PlayOpenDialogSE
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapAutoHeal_C::ReceiveBeginPlay()
+void ABP_MapAutoHeal_C::PlayOpenDialogSE()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapAutoHeal_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_MapAutoHeal_C", "PlayOpenDialogSE");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapAutoHeal.BP_MapAutoHeal_C.End
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_MapAutoHeal_C::End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapAutoHeal_C", "End");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MapAutoHeal.BP_MapAutoHeal_C.ExecuteUbergraph_BP_MapAutoHeal
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_MapAutoHeal.BP_MapAutoHeal_C.CheckVictim
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Dead                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    DecreaseHP                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_MapAutoHeal_C::ExecuteUbergraph_BP_MapAutoHeal(int32 EntryPoint)
+void ABP_MapAutoHeal_C::CheckVictim(bool* Dead, bool* DecreaseHP)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapAutoHeal_C", "ExecuteUbergraph_BP_MapAutoHeal");
+		Func = Class->GetFunction("BP_MapAutoHeal_C", "CheckVictim");
 
-	Params::BP_MapAutoHeal_C_ExecuteUbergraph_BP_MapAutoHeal Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::BP_MapAutoHeal_C_CheckVictim Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Dead != nullptr)
+		*Dead = Parms.Dead;
+
+	if (DecreaseHP != nullptr)
+		*DecreaseHP = Parms.DecreaseHP;
 }
 
 }

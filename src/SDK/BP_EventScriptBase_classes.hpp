@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "BP_EventAreaActor_classes.hpp"
 #include "Engine_structs.hpp"
-#include "Project_structs.hpp"
 #include "E_EVENT_TOILETMARK_TYPE_structs.hpp"
+#include "Project_structs.hpp"
+#include "BP_EventAreaActor_classes.hpp"
 
 
 namespace SDK
@@ -21,7 +21,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_EventScriptBase.BP_EventScriptBase_C
 // 0x0078 (0x02F0 - 0x0278)
-class ABP_EventScriptBase_C : public ABP_EventAreaActor_C
+class ABP_EventScriptBase_C final : public ABP_EventAreaActor_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -33,18 +33,18 @@ public:
 	class UScriptMessageAsset*                    MessageAsset;                                      // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          PlayerCamera;                                      // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          PlayerVisible;                                     // 0x02B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C06[0x6];                                     // 0x02B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B55[0x6];                                     // 0x02B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         ActorList;                                         // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	bool                                          UseLookAt;                                         // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UsePlayerRotation;                                 // 0x02C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UseRefresh;                                        // 0x02CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	EBgmScene                                     PrevBGMScene;                                      // 0x02CB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_AActionWindowType                           WindowType;                                        // 0x02CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C07[0x3];                                     // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B56[0x3];                                     // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   WindowTypeLabel;                                   // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseWindowType;                                     // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UseFacingAngle;                                    // 0x02D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C08[0x2];                                     // 0x02DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B57[0x2];                                     // 0x02DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TalkIconId;                                        // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         AreaId;                                            // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   TalkedFlag;                                        // 0x02E4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -53,47 +53,47 @@ public:
 	bool                                          TickEnableWhenCloseWindow;                         // 0x02EE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void BI_SetInvalidWindow(bool Invalid, bool* NoUse);
-	void ForceSpawnScript(bool* NoUse);
-	void BI_CheckActiveArea(bool* Param_IsActive);
-	void BI_SpawnScript(bool* NoUse);
-	void BI_DeleteScript(bool* NoUse);
-	void BI_FadeOutWhite(float Time, bool* Ret);
-	void BI_FadeInWhite(float Time, bool* Ret);
-	void BI_FadeOutBlack(float Time, bool* Ret);
-	void BI_FadeInBlack(float Time, bool* Ret);
-	void SpawnReflesh(bool* NoUse);
-	void SetPlayerLookAt(bool Enable);
-	void BPI_CheckMissionEvent(bool* MissionEvent);
-	void RegisterTalkIcon(class AActor* ThreeDCharacter);
-	void AddCharacter(class AActor* Character, class FName Tag);
-	void SetMessage(class UScriptMessageAsset* Param_MessageAsset);
-	void SetDataTable(class UDataTable* Param_DataTable);
-	void GetActive(bool* Param_IsActive);
-	void SetLookAt(bool LookAt);
-	void Character(class UClass* Param_Class, float PosX, float PosY, float PosZ, float RotZ, class FName Tag, class AActor** SpawnActor);
-	void Initialize(bool Param_PlayerCamera, bool Param_PlayerVisible);
-	void OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D(class UObject* Loaded);
-	void OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E(class UObject* Loaded);
-	void CheckActive();
-	void DestroyKeyFree();
-	void PlayDeadMotion(bool Active);
-	void BI_ChangeMaterialAlice();
-	void BI_RecalcOverlap();
-	void StartScript();
-	void EndScript();
-	void ReadyScript();
-	void AreaIN();
-	void AreaOut();
-	void CallDeactivate();
-	void Deactivate();
-	void ReceiveTick(float DeltaSeconds);
-	void ActionIn();
-	void ActionOut();
-	void ReceiveBeginPlay();
-	void SetInvalidWindow(bool Invalid);
-	void ToiletMark(E_EVENT_TOILETMARK_TYPE Type, class FName Tag);
 	void ExecuteUbergraph_BP_EventScriptBase(int32 EntryPoint);
+	void ToiletMark(E_EVENT_TOILETMARK_TYPE Type, class FName Tag);
+	void SetInvalidWindow(bool Invalid);
+	void ReceiveBeginPlay();
+	void ActionOut();
+	void ActionIn();
+	void ReceiveTick(float DeltaSeconds);
+	void Deactivate();
+	void CallDeactivate();
+	void AreaOut();
+	void AreaIN();
+	void ReadyScript();
+	void EndScript();
+	void StartScript();
+	void BI_RecalcOverlap();
+	void BI_ChangeMaterialAlice();
+	void PlayDeadMotion(bool Active);
+	void DestroyKeyFree();
+	void CheckActive();
+	void OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E(class UObject* Loaded);
+	void OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D(class UObject* Loaded);
+	void Initialize(bool Param_PlayerCamera, bool Param_PlayerVisible);
+	void Character(class UClass* Param_Class, float PosX, float PosY, float PosZ, float RotZ, class FName Tag, class AActor** SpawnActor);
+	void SetLookAt(bool LookAt);
+	void GetActive(bool* Param_IsActive);
+	void SetDataTable(class UDataTable* Param_DataTable);
+	void SetMessage(class UScriptMessageAsset* Param_MessageAsset);
+	void AddCharacter(class AActor* Character, class FName Tag);
+	void RegisterTalkIcon(class AActor* ThreeDCharacter);
+	void BPI_CheckMissionEvent(bool* MissionEvent);
+	void SetPlayerLookAt(bool Enable);
+	void SpawnReflesh(bool* NoUse);
+	void BI_FadeInBlack(float Time, bool* Ret);
+	void BI_FadeOutBlack(float Time, bool* Ret);
+	void BI_FadeInWhite(float Time, bool* Ret);
+	void BI_FadeOutWhite(float Time, bool* Ret);
+	void BI_DeleteScript(bool* NoUse);
+	void BI_SpawnScript(bool* NoUse);
+	void BI_CheckActiveArea(bool* Param_IsActive);
+	void ForceSpawnScript(bool* NoUse);
+	void BI_SetInvalidWindow(bool Invalid, bool* NoUse);
 
 public:
 	static class UClass* StaticClass()

@@ -227,7 +227,7 @@ struct BPI_SortWindowCtrl2_C_BPI_GetAppliedSetting final
 {
 public:
 	E_SORT_WINDOW_SORT_TYPE                       InSortScene;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C2F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37C2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AppliedSetting;                                    // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SORT_WINDOW_SORT_ORDER                      AppliedOrder;                                      // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -243,7 +243,7 @@ struct BPI_SortWindowCtrl2_C_BPI_SetScrollOffsetPattern final
 {
 public:
 	E_SORTWINDOW_SCROLL_OFFSET_PATTERN            InOffssetPattern;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C30[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37C3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ScrollOffset;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_SortWindowCtrl2_C_BPI_SetScrollOffsetPattern) == 0x000004, "Wrong alignment on BPI_SortWindowCtrl2_C_BPI_SetScrollOffsetPattern");

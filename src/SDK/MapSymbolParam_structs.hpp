@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MapSymbolDiscoveryMotion_structs.hpp"
 #include "Project_structs.hpp"
+#include "MapSymbolDiscoveryMotion_structs.hpp"
 #include "MapSymbolParam_Inhale_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -38,7 +38,7 @@ public:
 	float                                         AttackCollision_ChangeTime_47_A65C5701464C6F6900C4B1BBE8CBF51A; // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AttackCollision_ReturnTime_49_8A764C074A194653E1B9AF89443764F1; // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHARA_MOTION_ID                             AttackMotionID_82_B265863C4FEB2AF3E0681A83D6D5096D; // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A66[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5221[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MotionBlendTime_30_6E49A558411DFAF97EAC3DB7684E03F2; // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TurnSpeed_31_B6251F5448BC8A42741C4C9646A4365F;     // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MovingTurnSpeed_34_CBD370044FE0C820DC0DDBA0172E4E9F; // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

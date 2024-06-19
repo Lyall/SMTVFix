@@ -17,6 +17,40 @@
 namespace SDK
 {
 
+// Function BPI_CharaFacialComponent.BPI_CharaFacialComponent_C.AddFacialComponent
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             ExpressionID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_CharaFacialComponent_C::AddFacialComponent(class FName ExpressionID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_CharaFacialComponent_C", "AddFacialComponent");
+
+	Params::BPI_CharaFacialComponent_C_AddFacialComponent Parms{};
+
+	Parms.ExpressionID = ExpressionID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_CharaFacialComponent.BPI_CharaFacialComponent_C.DestroyFacialComponent
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_CharaFacialComponent_C::DestroyFacialComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_CharaFacialComponent_C", "DestroyFacialComponent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BPI_CharaFacialComponent.BPI_CharaFacialComponent_C.GetFacialComponent
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -35,40 +69,6 @@ void IBPI_CharaFacialComponent_C::GetFacialComponent(class USkeletalMeshComponen
 
 	if (FacialMesh != nullptr)
 		*FacialMesh = Parms.FacialMesh;
-}
-
-
-// Function BPI_CharaFacialComponent.BPI_CharaFacialComponent_C.DestroyFacialComponent
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_CharaFacialComponent_C::DestroyFacialComponent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_CharaFacialComponent_C", "DestroyFacialComponent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_CharaFacialComponent.BPI_CharaFacialComponent_C.AddFacialComponent
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             ExpressionID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_CharaFacialComponent_C::AddFacialComponent(class FName ExpressionID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_CharaFacialComponent_C", "AddFacialComponent");
-
-	Params::BPI_CharaFacialComponent_C_AddFacialComponent Parms{};
-
-	Parms.ExpressionID = ExpressionID;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

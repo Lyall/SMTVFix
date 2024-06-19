@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function LV_MapCommonCtrl.LV_MapCommonCtrl_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ALV_MapCommonCtrl_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LV_MapCommonCtrl_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function LV_MapCommonCtrl.LV_MapCommonCtrl_C.ExecuteUbergraph_LV_MapCommonCtrl
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void ALV_MapCommonCtrl_C::ExecuteUbergraph_LV_MapCommonCtrl(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LV_MapCommonCtrl.LV_MapCommonCtrl_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ALV_MapCommonCtrl_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LV_MapCommonCtrl_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

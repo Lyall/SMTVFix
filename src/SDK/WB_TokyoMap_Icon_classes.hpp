@@ -33,18 +33,18 @@ public:
 	E_TOKYO_ICON_TYPE                             IconType;                                          // 0x028C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateIcon();
-	void SetMissionId(int32 Param_MissionId);
-	void SetIconType(E_TOKYO_ICON_TYPE Param_IconType);
-	void GetPriority(int32* Param_Priority);
-	void Update();
-	void SetInactiveFlag(class FName InactiveFlagName);
-	void UpdatePosition();
-	void SetTalkOffIcon();
-	void SetTalkIcon();
-	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_WB_TokyoMap_Icon(int32 EntryPoint);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Construct();
+	void SetTalkIcon();
+	void SetTalkOffIcon();
+	void UpdatePosition();
+	void SetInactiveFlag(class FName InactiveFlagName);
+	void Update();
+	void GetPriority(int32* Param_Priority);
+	void SetIconType(E_TOKYO_ICON_TYPE Param_IconType);
+	void SetMissionId(int32 Param_MissionId);
+	void UpdateIcon();
 
 public:
 	static class UClass* StaticClass()

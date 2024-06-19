@@ -22,8 +22,8 @@ namespace SDK
 class IBPI_MapGimmick_C final : public IInterface
 {
 public:
-	void BPI_HideGimmick(E_MapGimmickHideReason HideReason);
 	void BPI_ShowGimmick(E_MapGimmickHideReason HideReason);
+	void BPI_HideGimmick(E_MapGimmickHideReason HideReason);
 
 public:
 	static class UClass* StaticClass()

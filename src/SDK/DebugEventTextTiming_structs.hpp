@@ -20,7 +20,7 @@ struct FDebugEventTextTiming final
 {
 public:
 	float                                         PlayTime_2_ABC3352F42B6B9FBFA918482D9032416;       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7D81[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2150[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 TextLabel_5_C754F05A4A8BB084BE3763BE5B1D3C49;      // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FDebugEventTextTiming) == 0x000008, "Wrong alignment on FDebugEventTextTiming");

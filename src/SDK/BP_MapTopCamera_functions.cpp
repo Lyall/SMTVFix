@@ -17,124 +17,216 @@
 namespace SDK
 {
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.FieldVisibilityOnFinish
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ExecuteUbergraph_BP_MapTopCamera
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::FieldVisibilityOnFinish()
+void ABP_MapTopCamera_C::ExecuteUbergraph_BP_MapTopCamera(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "FieldVisibilityOnFinish");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ExecuteUbergraph_BP_MapTopCamera");
+
+	Params::BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.OnFinishTop
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MapTopCamera_C::OnFinishTop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "OnFinishTop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.FieldVisibilityOnStart
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MapTopCamera.BP_MapTopCamera_C.OnStartTop
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::FieldVisibilityOnStart()
+void ABP_MapTopCamera_C::OnStartTop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "FieldVisibilityOnStart");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "OnStartTop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyConsoleVariables_debug
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MapTopCamera_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ReceiveTick");
+
+	Params::BP_MapTopCamera_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.Start
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::ApplyConsoleVariables_debug()
+void ABP_MapTopCamera_C::Start()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ApplyConsoleVariables_debug");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "Start");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetConsoleVariables
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MapTopCamera_C::ProcessInput(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput");
+
+	Params::BP_MapTopCamera_C_ProcessInput Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.Deactivate
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::ResetConsoleVariables()
+void ABP_MapTopCamera_C::Deactivate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ResetConsoleVariables");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "Deactivate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyConsoleVariables
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Height
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::ApplyConsoleVariables()
+void ABP_MapTopCamera_C::ProcessInput_Height(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ApplyConsoleVariables");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput_Height");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_MapTopCamera_C_ProcessInput_Height Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetConsoleVariables
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Horizontal
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::GetConsoleVariables()
+void ABP_MapTopCamera_C::ProcessInput_Horizontal(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetConsoleVariables");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput_Horizontal");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_MapTopCamera_C_ProcessInput_Horizontal Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalDistanceModifier
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Target
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MapTopCamera_C::ProcessInput_Target(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput_Target");
+
+	Params::BP_MapTopCamera_C_ProcessInput_Target Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalSpeed
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                                   Modifier                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Speed                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::GetHorizontalDistanceModifier(float* Modifier)
+void ABP_MapTopCamera_C::GetHorizontalSpeed(float* Speed)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetHorizontalDistanceModifier");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetHorizontalSpeed");
 
-	Params::BP_MapTopCamera_C_GetHorizontalDistanceModifier Parms{};
+	Params::BP_MapTopCamera_C_GetHorizontalSpeed Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Modifier != nullptr)
-		*Modifier = Parms.Modifier;
+	if (Speed != nullptr)
+		*Speed = Parms.Speed;
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetStartHeight
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetDefaultHeight
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                                   Height                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::GetStartHeight(float* Height)
+void ABP_MapTopCamera_C::GetDefaultHeight(float* Height)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetStartHeight");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetDefaultHeight");
 
-	Params::BP_MapTopCamera_C_GetStartHeight Parms{};
+	Params::BP_MapTopCamera_C_GetDefaultHeight Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -143,19 +235,131 @@ void ABP_MapTopCamera_C::GetStartHeight(float* Height)
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHeightDistanceMin
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalDistanceLimit
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                                   Height                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Limit                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::GetHeightDistanceMin(float* Height)
+void ABP_MapTopCamera_C::GetHorizontalDistanceLimit(float* Limit)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetHeightDistanceMin");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetHorizontalDistanceLimit");
 
-	Params::BP_MapTopCamera_C_GetHeightDistanceMin Parms{};
+	Params::BP_MapTopCamera_C_GetHorizontalDistanceLimit Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Limit != nullptr)
+		*Limit = Parms.Limit;
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.IsNorthUp
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    Param_IsNorthUp                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_MapTopCamera_C::IsNorthUp(bool* Param_IsNorthUp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "IsNorthUp");
+
+	Params::BP_MapTopCamera_C_IsNorthUp Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_IsNorthUp != nullptr)
+		*Param_IsNorthUp = Parms.Param_IsNorthUp;
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetBlendTime
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   Seconds                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MapTopCamera_C::GetBlendTime(float* Seconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetBlendTime");
+
+	Params::BP_MapTopCamera_C_GetBlendTime Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Seconds != nullptr)
+		*Seconds = Parms.Seconds;
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetBlendExp
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   BlendExp                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MapTopCamera_C::GetBlendExp(float* BlendExp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetBlendExp");
+
+	Params::BP_MapTopCamera_C_GetBlendExp Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (BlendExp != nullptr)
+		*BlendExp = Parms.BlendExp;
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.Init Camera Param
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_MapTopCamera_C::Init_Camera_Param()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "Init Camera Param");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyTransitionDebugParam
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_MapTopCamera_C::ApplyTransitionDebugParam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ApplyTransitionDebugParam");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetDefaultFOVY
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   Height                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_MapTopCamera_C::GetDefaultFOVY(float* Height)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetDefaultFOVY");
+
+	Params::BP_MapTopCamera_C_GetDefaultFOVY Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -164,59 +368,73 @@ void ABP_MapTopCamera_C::GetHeightDistanceMin(float* Height)
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetFoliageLOD
+// Function BP_MapTopCamera.BP_MapTopCamera_C.OpenButtonHelp
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::ResetFoliageLOD()
+void ABP_MapTopCamera_C::OpenButtonHelp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ResetFoliageLOD");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "OpenButtonHelp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetLOD
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInputInconHelp
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::ResetLOD()
+void ABP_MapTopCamera_C::ProcessInputInconHelp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ResetLOD");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInputInconHelp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.SetFoliageLOD
+// Function BP_MapTopCamera.BP_MapTopCamera_C.UpdateButtonHelp
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Param_IconShowing                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_MapTopCamera_C::SetFoliageLOD()
+void ABP_MapTopCamera_C::UpdateButtonHelp(bool Param_IconShowing)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "SetFoliageLOD");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "UpdateButtonHelp");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_MapTopCamera_C_UpdateButtonHelp Parms{};
+
+	Parms.Param_IconShowing = Param_IconShowing;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.SetLOD
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_ActorHorizontal
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ForceUpdate                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_MapTopCamera_C::SetLOD()
+void ABP_MapTopCamera_C::ProcessInput_ActorHorizontal(float DeltaSeconds, bool ForceUpdate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "SetLOD");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput_ActorHorizontal");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_MapTopCamera_C_ProcessInput_ActorHorizontal Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.ForceUpdate = ForceUpdate;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -250,89 +468,75 @@ void ABP_MapTopCamera_C::TryTrace(const struct FVector& PrevLocation, const stru
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_ActorHorizontal
+// Function BP_MapTopCamera.BP_MapTopCamera_C.SetLOD
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ForceUpdate                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_MapTopCamera_C::ProcessInput_ActorHorizontal(float DeltaSeconds, bool ForceUpdate)
+void ABP_MapTopCamera_C::SetLOD()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput_ActorHorizontal");
-
-	Params::BP_MapTopCamera_C_ProcessInput_ActorHorizontal Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-	Parms.ForceUpdate = ForceUpdate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.UpdateButtonHelp
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Param_IconShowing                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_MapTopCamera_C::UpdateButtonHelp(bool Param_IconShowing)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "UpdateButtonHelp");
-
-	Params::BP_MapTopCamera_C_UpdateButtonHelp Parms{};
-
-	Parms.Param_IconShowing = Param_IconShowing;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInputInconHelp
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_MapTopCamera_C::ProcessInputInconHelp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInputInconHelp");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "SetLOD");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.OpenButtonHelp
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MapTopCamera.BP_MapTopCamera_C.SetFoliageLOD
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::OpenButtonHelp()
+void ABP_MapTopCamera_C::SetFoliageLOD()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "OpenButtonHelp");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "SetFoliageLOD");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetDefaultFOVY
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetLOD
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MapTopCamera_C::ResetLOD()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ResetLOD");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetFoliageLOD
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MapTopCamera_C::ResetFoliageLOD()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ResetFoliageLOD");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHeightDistanceMin
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                                   Height                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::GetDefaultFOVY(float* Height)
+void ABP_MapTopCamera_C::GetHeightDistanceMin(float* Height)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetDefaultFOVY");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetHeightDistanceMin");
 
-	Params::BP_MapTopCamera_C_GetDefaultFOVY Parms{};
+	Params::BP_MapTopCamera_C_GetHeightDistanceMin Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -341,131 +545,19 @@ void ABP_MapTopCamera_C::GetDefaultFOVY(float* Height)
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyTransitionDebugParam
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_MapTopCamera_C::ApplyTransitionDebugParam()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ApplyTransitionDebugParam");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.Init Camera Param
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_MapTopCamera_C::Init_Camera_Param()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "Init Camera Param");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetBlendExp
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float                                   BlendExp                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MapTopCamera_C::GetBlendExp(float* BlendExp)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetBlendExp");
-
-	Params::BP_MapTopCamera_C_GetBlendExp Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (BlendExp != nullptr)
-		*BlendExp = Parms.BlendExp;
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetBlendTime
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float                                   Seconds                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MapTopCamera_C::GetBlendTime(float* Seconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetBlendTime");
-
-	Params::BP_MapTopCamera_C_GetBlendTime Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Seconds != nullptr)
-		*Seconds = Parms.Seconds;
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.IsNorthUp
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    Param_IsNorthUp                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_MapTopCamera_C::IsNorthUp(bool* Param_IsNorthUp)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "IsNorthUp");
-
-	Params::BP_MapTopCamera_C_IsNorthUp Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_IsNorthUp != nullptr)
-		*Param_IsNorthUp = Parms.Param_IsNorthUp;
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalDistanceLimit
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float                                   Limit                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MapTopCamera_C::GetHorizontalDistanceLimit(float* Limit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetHorizontalDistanceLimit");
-
-	Params::BP_MapTopCamera_C_GetHorizontalDistanceLimit Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Limit != nullptr)
-		*Limit = Parms.Limit;
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetDefaultHeight
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetStartHeight
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                                   Height                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::GetDefaultHeight(float* Height)
+void ABP_MapTopCamera_C::GetStartHeight(float* Height)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetDefaultHeight");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetStartHeight");
 
-	Params::BP_MapTopCamera_C_GetDefaultHeight Parms{};
+	Params::BP_MapTopCamera_C_GetStartHeight Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -474,200 +566,108 @@ void ABP_MapTopCamera_C::GetDefaultHeight(float* Height)
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalSpeed
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalDistanceModifier
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                                   Speed                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Modifier                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::GetHorizontalSpeed(float* Speed)
+void ABP_MapTopCamera_C::GetHorizontalDistanceModifier(float* Modifier)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "GetHorizontalSpeed");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetHorizontalDistanceModifier");
 
-	Params::BP_MapTopCamera_C_GetHorizontalSpeed Parms{};
+	Params::BP_MapTopCamera_C_GetHorizontalDistanceModifier Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Speed != nullptr)
-		*Speed = Parms.Speed;
+	if (Modifier != nullptr)
+		*Modifier = Parms.Modifier;
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Target
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MapTopCamera_C::ProcessInput_Target(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput_Target");
-
-	Params::BP_MapTopCamera_C_ProcessInput_Target Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Horizontal
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MapTopCamera_C::ProcessInput_Horizontal(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput_Horizontal");
-
-	Params::BP_MapTopCamera_C_ProcessInput_Horizontal Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Height
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MapTopCamera_C::ProcessInput_Height(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput_Height");
-
-	Params::BP_MapTopCamera_C_ProcessInput_Height Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.Deactivate
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetConsoleVariables
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::Deactivate()
+void ABP_MapTopCamera_C::GetConsoleVariables()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "Deactivate");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "GetConsoleVariables");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyConsoleVariables
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MapTopCamera_C::ApplyConsoleVariables()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ApplyConsoleVariables");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetConsoleVariables
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MapTopCamera_C::ResetConsoleVariables()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ResetConsoleVariables");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyConsoleVariables_debug
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTopCamera_C::ProcessInput(float DeltaSeconds)
+void ABP_MapTopCamera_C::ApplyConsoleVariables_debug()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ProcessInput");
-
-	Params::BP_MapTopCamera_C_ProcessInput Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.Start
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_MapTopCamera_C::Start()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "Start");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "ApplyConsoleVariables_debug");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_MapTopCamera.BP_MapTopCamera_C.FieldVisibilityOnStart
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::ReceiveTick(float DeltaSeconds)
+void ABP_MapTopCamera_C::FieldVisibilityOnStart()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ReceiveTick");
-
-	Params::BP_MapTopCamera_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.OnStartTop
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_MapTopCamera_C::OnStartTop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "OnStartTop");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "FieldVisibilityOnStart");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.OnFinishTop
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MapTopCamera.BP_MapTopCamera_C.FieldVisibilityOnFinish
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MapTopCamera_C::OnFinishTop()
+void ABP_MapTopCamera_C::FieldVisibilityOnFinish()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "OnFinishTop");
+		Func = Class->GetFunction("BP_MapTopCamera_C", "FieldVisibilityOnFinish");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ExecuteUbergraph_BP_MapTopCamera
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MapTopCamera_C::ExecuteUbergraph_BP_MapTopCamera(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTopCamera_C", "ExecuteUbergraph_BP_MapTopCamera");
-
-	Params::BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

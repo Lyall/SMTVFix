@@ -17,390 +17,361 @@
 namespace SDK
 {
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_SetInvalidWindow
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ExecuteUbergraph_BP_EventScriptBase
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Invalid                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventScriptBase_C::BI_SetInvalidWindow(bool Invalid, bool* NoUse)
+void ABP_EventScriptBase_C::ExecuteUbergraph_BP_EventScriptBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_SetInvalidWindow");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "ExecuteUbergraph_BP_EventScriptBase");
 
-	Params::BP_EventScriptBase_C_BI_SetInvalidWindow Parms{};
+	Params::BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase Parms{};
 
-	Parms.Invalid = Invalid;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NoUse != nullptr)
-		*NoUse = Parms.NoUse;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ForceSpawnScript
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::ForceSpawnScript(bool* NoUse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "ForceSpawnScript");
-
-	Params::BP_EventScriptBase_C_ForceSpawnScript Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NoUse != nullptr)
-		*NoUse = Parms.NoUse;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_CheckActiveArea
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Param_IsActive                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::BI_CheckActiveArea(bool* Param_IsActive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_CheckActiveArea");
-
-	Params::BP_EventScriptBase_C_BI_CheckActiveArea Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_IsActive != nullptr)
-		*Param_IsActive = Parms.Param_IsActive;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_SpawnScript
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::BI_SpawnScript(bool* NoUse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_SpawnScript");
-
-	Params::BP_EventScriptBase_C_BI_SpawnScript Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NoUse != nullptr)
-		*NoUse = Parms.NoUse;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_DeleteScript
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::BI_DeleteScript(bool* NoUse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_DeleteScript");
-
-	Params::BP_EventScriptBase_C_BI_DeleteScript Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NoUse != nullptr)
-		*NoUse = Parms.NoUse;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeOutWhite
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::BI_FadeOutWhite(float Time, bool* Ret)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_FadeOutWhite");
-
-	Params::BP_EventScriptBase_C_BI_FadeOutWhite Parms{};
-
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Ret != nullptr)
-		*Ret = Parms.Ret;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeInWhite
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::BI_FadeInWhite(float Time, bool* Ret)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_FadeInWhite");
-
-	Params::BP_EventScriptBase_C_BI_FadeInWhite Parms{};
-
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Ret != nullptr)
-		*Ret = Parms.Ret;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeOutBlack
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::BI_FadeOutBlack(float Time, bool* Ret)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_FadeOutBlack");
-
-	Params::BP_EventScriptBase_C_BI_FadeOutBlack Parms{};
-
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Ret != nullptr)
-		*Ret = Parms.Ret;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeInBlack
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::BI_FadeInBlack(float Time, bool* Ret)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_FadeInBlack");
-
-	Params::BP_EventScriptBase_C_BI_FadeInBlack Parms{};
-
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Ret != nullptr)
-		*Ret = Parms.Ret;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SpawnReflesh
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::SpawnReflesh(bool* NoUse)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "SpawnReflesh");
-
-	Params::BP_EventScriptBase_C_SpawnReflesh Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NoUse != nullptr)
-		*NoUse = Parms.NoUse;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetPlayerLookAt
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::SetPlayerLookAt(bool Enable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "SetPlayerLookAt");
-
-	Params::BP_EventScriptBase_C_SetPlayerLookAt Parms{};
-
-	Parms.Enable = Enable;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BPI_CheckMissionEvent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ToiletMark
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    MissionEvent                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::BPI_CheckMissionEvent(bool* MissionEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BPI_CheckMissionEvent");
-
-	Params::BP_EventScriptBase_C_BPI_CheckMissionEvent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (MissionEvent != nullptr)
-		*MissionEvent = Parms.MissionEvent;
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.RegisterTalkIcon
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           ThreeDCharacter                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventScriptBase_C::RegisterTalkIcon(class AActor* ThreeDCharacter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "RegisterTalkIcon");
-
-	Params::BP_EventScriptBase_C_RegisterTalkIcon Parms{};
-
-	Parms.ThreeDCharacter = ThreeDCharacter;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.AddCharacter
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_EVENT_TOILETMARK_TYPE                 Type                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventScriptBase_C::AddCharacter(class AActor* Character, class FName Tag)
+void ABP_EventScriptBase_C::ToiletMark(E_EVENT_TOILETMARK_TYPE Type, class FName Tag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "AddCharacter");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "ToiletMark");
 
-	Params::BP_EventScriptBase_C_AddCharacter Parms{};
+	Params::BP_EventScriptBase_C_ToiletMark Parms{};
 
-	Parms.Character = Character;
+	Parms.Type = Type;
 	Parms.Tag = Tag;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetMessage
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetInvalidWindow
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UScriptMessageAsset*              Param_MessageAsset                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Invalid                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventScriptBase_C::SetMessage(class UScriptMessageAsset* Param_MessageAsset)
+void ABP_EventScriptBase_C::SetInvalidWindow(bool Invalid)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "SetMessage");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "SetInvalidWindow");
 
-	Params::BP_EventScriptBase_C_SetMessage Parms{};
+	Params::BP_EventScriptBase_C_SetInvalidWindow Parms{};
 
-	Parms.Param_MessageAsset = Param_MessageAsset;
+	Parms.Invalid = Invalid;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetDataTable
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UDataTable*                       Param_DataTable                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_EventScriptBase_C::SetDataTable(class UDataTable* Param_DataTable)
+void ABP_EventScriptBase_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "SetDataTable");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "ReceiveBeginPlay");
 
-	Params::BP_EventScriptBase_C_SetDataTable Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Param_DataTable = Param_DataTable;
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ActionOut
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::ActionOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "ActionOut");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ActionIn
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::ActionIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "ActionIn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventScriptBase_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "ReceiveTick");
+
+	Params::BP_EventScriptBase_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.GetActive
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Param_IsActive                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.Deactivate
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_EventScriptBase_C::GetActive(bool* Param_IsActive)
+void ABP_EventScriptBase_C::Deactivate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "GetActive");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "Deactivate");
 
-	Params::BP_EventScriptBase_C_GetActive Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_IsActive != nullptr)
-		*Param_IsActive = Parms.Param_IsActive;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetLookAt
+// Function BP_EventScriptBase.BP_EventScriptBase_C.CallDeactivate
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    LookAt                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventScriptBase_C::SetLookAt(bool LookAt)
+void ABP_EventScriptBase_C::CallDeactivate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "SetLookAt");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "CallDeactivate");
 
-	Params::BP_EventScriptBase_C_SetLookAt Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.LookAt = LookAt;
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.AreaOut
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::AreaOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "AreaOut");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.AreaIN
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::AreaIN()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "AreaIN");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ReadyScript
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::ReadyScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "ReadyScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.EndScript
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::EndScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "EndScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.StartScript
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::StartScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "StartScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_RecalcOverlap
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::BI_RecalcOverlap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_RecalcOverlap");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_ChangeMaterialAlice
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::BI_ChangeMaterialAlice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_ChangeMaterialAlice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.PlayDeadMotion
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::PlayDeadMotion(bool Active)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "PlayDeadMotion");
+
+	Params::BP_EventScriptBase_C_PlayDeadMotion Parms{};
+
+	Parms.Active = Active;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.DestroyKeyFree
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::DestroyKeyFree()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "DestroyKeyFree");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.CheckActive
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventScriptBase_C::CheckActive()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "CheckActive");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventScriptBase_C::OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E");
+
+	Params::BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventScriptBase_C::OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D");
+
+	Params::BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Param_PlayerCamera                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Param_PlayerVisible                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::Initialize(bool Param_PlayerCamera, bool Param_PlayerVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "Initialize");
+
+	Params::BP_EventScriptBase_C_Initialize Parms{};
+
+	Parms.Param_PlayerCamera = Param_PlayerCamera;
+	Parms.Param_PlayerVisible = Param_PlayerVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -440,363 +411,392 @@ void ABP_EventScriptBase_C::Character(class UClass* Param_Class, float PosX, flo
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.Initialize
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetLookAt
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_PlayerCamera                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    Param_PlayerVisible                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    LookAt                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventScriptBase_C::Initialize(bool Param_PlayerCamera, bool Param_PlayerVisible)
+void ABP_EventScriptBase_C::SetLookAt(bool LookAt)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "Initialize");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "SetLookAt");
 
-	Params::BP_EventScriptBase_C_Initialize Parms{};
+	Params::BP_EventScriptBase_C_SetLookAt Parms{};
 
-	Parms.Param_PlayerCamera = Param_PlayerCamera;
-	Parms.Param_PlayerVisible = Param_PlayerVisible;
+	Parms.LookAt = LookAt;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.GetActive
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_IsActive                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventScriptBase_C::OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D(class UObject* Loaded)
+void ABP_EventScriptBase_C::GetActive(bool* Param_IsActive)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "GetActive");
 
-	Params::BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D Parms{};
+	Params::BP_EventScriptBase_C_GetActive Parms{};
 
-	Parms.Loaded = Loaded;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_IsActive != nullptr)
+		*Param_IsActive = Parms.Param_IsActive;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetDataTable
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UDataTable*                       Param_DataTable                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventScriptBase_C::SetDataTable(class UDataTable* Param_DataTable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "SetDataTable");
+
+	Params::BP_EventScriptBase_C_SetDataTable Parms{};
+
+	Parms.Param_DataTable = Param_DataTable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetMessage
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UScriptMessageAsset*              Param_MessageAsset                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventScriptBase_C::OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E(class UObject* Loaded)
+void ABP_EventScriptBase_C::SetMessage(class UScriptMessageAsset* Param_MessageAsset)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "SetMessage");
 
-	Params::BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E Parms{};
+	Params::BP_EventScriptBase_C_SetMessage Parms{};
 
-	Parms.Loaded = Loaded;
+	Parms.Param_MessageAsset = Param_MessageAsset;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.CheckActive
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::CheckActive()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "CheckActive");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.DestroyKeyFree
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::DestroyKeyFree()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "DestroyKeyFree");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.PlayDeadMotion
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.AddCharacter
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::PlayDeadMotion(bool Active)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "PlayDeadMotion");
-
-	Params::BP_EventScriptBase_C_PlayDeadMotion Parms{};
-
-	Parms.Active = Active;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_ChangeMaterialAlice
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::BI_ChangeMaterialAlice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_ChangeMaterialAlice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_RecalcOverlap
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::BI_RecalcOverlap()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_RecalcOverlap");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.StartScript
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::StartScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "StartScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.EndScript
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::EndScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "EndScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ReadyScript
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::ReadyScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "ReadyScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.AreaIN
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::AreaIN()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "AreaIN");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.AreaOut
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::AreaOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "AreaOut");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.CallDeactivate
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::CallDeactivate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "CallDeactivate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.Deactivate
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::Deactivate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "Deactivate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventScriptBase_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "ReceiveTick");
-
-	Params::BP_EventScriptBase_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ActionIn
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::ActionIn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "ActionIn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ActionOut
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventScriptBase_C::ActionOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "ActionOut");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_EventScriptBase_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetInvalidWindow
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Invalid                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventScriptBase_C::SetInvalidWindow(bool Invalid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "SetInvalidWindow");
-
-	Params::BP_EventScriptBase_C_SetInvalidWindow Parms{};
-
-	Parms.Invalid = Invalid;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ToiletMark
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// E_EVENT_TOILETMARK_TYPE                 Type                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventScriptBase_C::ToiletMark(E_EVENT_TOILETMARK_TYPE Type, class FName Tag)
+void ABP_EventScriptBase_C::AddCharacter(class AActor* Character, class FName Tag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "ToiletMark");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "AddCharacter");
 
-	Params::BP_EventScriptBase_C_ToiletMark Parms{};
+	Params::BP_EventScriptBase_C_AddCharacter Parms{};
 
-	Parms.Type = Type;
+	Parms.Character = Character;
 	Parms.Tag = Tag;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ExecuteUbergraph_BP_EventScriptBase
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_EventScriptBase.BP_EventScriptBase_C.RegisterTalkIcon
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           ThreeDCharacter                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventScriptBase_C::ExecuteUbergraph_BP_EventScriptBase(int32 EntryPoint)
+void ABP_EventScriptBase_C::RegisterTalkIcon(class AActor* ThreeDCharacter)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventScriptBase_C", "ExecuteUbergraph_BP_EventScriptBase");
+		Func = Class->GetFunction("BP_EventScriptBase_C", "RegisterTalkIcon");
 
-	Params::BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase Parms{};
+	Params::BP_EventScriptBase_C_RegisterTalkIcon Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.ThreeDCharacter = ThreeDCharacter;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BPI_CheckMissionEvent
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    MissionEvent                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BPI_CheckMissionEvent(bool* MissionEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BPI_CheckMissionEvent");
+
+	Params::BP_EventScriptBase_C_BPI_CheckMissionEvent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MissionEvent != nullptr)
+		*MissionEvent = Parms.MissionEvent;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetPlayerLookAt
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::SetPlayerLookAt(bool Enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "SetPlayerLookAt");
+
+	Params::BP_EventScriptBase_C_SetPlayerLookAt Parms{};
+
+	Parms.Enable = Enable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SpawnReflesh
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::SpawnReflesh(bool* NoUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "SpawnReflesh");
+
+	Params::BP_EventScriptBase_C_SpawnReflesh Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NoUse != nullptr)
+		*NoUse = Parms.NoUse;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeInBlack
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BI_FadeInBlack(float Time, bool* Ret)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_FadeInBlack");
+
+	Params::BP_EventScriptBase_C_BI_FadeInBlack Parms{};
+
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Ret != nullptr)
+		*Ret = Parms.Ret;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeOutBlack
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BI_FadeOutBlack(float Time, bool* Ret)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_FadeOutBlack");
+
+	Params::BP_EventScriptBase_C_BI_FadeOutBlack Parms{};
+
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Ret != nullptr)
+		*Ret = Parms.Ret;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeInWhite
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BI_FadeInWhite(float Time, bool* Ret)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_FadeInWhite");
+
+	Params::BP_EventScriptBase_C_BI_FadeInWhite Parms{};
+
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Ret != nullptr)
+		*Ret = Parms.Ret;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeOutWhite
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BI_FadeOutWhite(float Time, bool* Ret)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_FadeOutWhite");
+
+	Params::BP_EventScriptBase_C_BI_FadeOutWhite Parms{};
+
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Ret != nullptr)
+		*Ret = Parms.Ret;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_DeleteScript
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BI_DeleteScript(bool* NoUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_DeleteScript");
+
+	Params::BP_EventScriptBase_C_BI_DeleteScript Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NoUse != nullptr)
+		*NoUse = Parms.NoUse;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_SpawnScript
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BI_SpawnScript(bool* NoUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_SpawnScript");
+
+	Params::BP_EventScriptBase_C_BI_SpawnScript Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NoUse != nullptr)
+		*NoUse = Parms.NoUse;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_CheckActiveArea
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Param_IsActive                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BI_CheckActiveArea(bool* Param_IsActive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_CheckActiveArea");
+
+	Params::BP_EventScriptBase_C_BI_CheckActiveArea Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_IsActive != nullptr)
+		*Param_IsActive = Parms.Param_IsActive;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ForceSpawnScript
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::ForceSpawnScript(bool* NoUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "ForceSpawnScript");
+
+	Params::BP_EventScriptBase_C_ForceSpawnScript Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NoUse != nullptr)
+		*NoUse = Parms.NoUse;
+}
+
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_SetInvalidWindow
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Invalid                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventScriptBase_C::BI_SetInvalidWindow(bool Invalid, bool* NoUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventScriptBase_C", "BI_SetInvalidWindow");
+
+	Params::BP_EventScriptBase_C_BI_SetInvalidWindow Parms{};
+
+	Parms.Invalid = Invalid;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NoUse != nullptr)
+		*NoUse = Parms.NoUse;
 }
 
 }

@@ -12,8 +12,8 @@
 
 #include "Project_structs.hpp"
 #include "Project_classes.hpp"
-#include "Engine_structs.hpp"
 #include "ST_BtnHelp_ChangeInfo2_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ST_BtnHelp_ColorInfo_byIdx_structs.hpp"
 
 
@@ -36,7 +36,7 @@ public:
 	bool                                          IsReserveColor_Vertical;                           // 0x0264(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsChange_Horizontal;                               // 0x0265(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsChange_Vertical;                                 // 0x0266(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7E5A[0x1];                                     // 0x0267(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6448[0x1];                                     // 0x0267(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FST_BtnHelp_ChangeInfo2                ChangeInfo_Horizontal;                             // 0x0268(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	struct FST_BtnHelp_ChangeInfo2                ChangeInfo_Vertical;                               // 0x0288(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TArray<struct FST_BtnHelp_ColorInfo_byIdx>    ReserveColorInfo_Horizontal;                       // 0x02A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)

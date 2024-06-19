@@ -29,11 +29,11 @@ public:
 	TArray<class UMapdebugWindowMesBase_C*>       Chaild;                                            // 0x0288(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void MakeWindow();
-	void Construct();
-	void UpdateWindow();
-	void DeleteWindow();
 	void ExecuteUbergraph_MapDebugWindow(int32 EntryPoint);
+	void DeleteWindow();
+	void UpdateWindow();
+	void Construct();
+	void MakeWindow();
 
 public:
 	static class UClass* StaticClass()

@@ -34,12 +34,12 @@ public:
 	bool                                          CheckSE;                                           // 0x0273(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void CheckVictim(bool* Dead, bool* DecreaseHP);
-	void PlayOpenDialogSE();
-	void OnLoaded_05CE4B6841AB4841B2084BAECF5A50DA(class UObject* Loaded);
-	void ReceiveBeginPlay();
-	void End();
 	void ExecuteUbergraph_BP_MapAutoHeal(int32 EntryPoint);
+	void End();
+	void ReceiveBeginPlay();
+	void OnLoaded_05CE4B6841AB4841B2084BAECF5A50DA(class UObject* Loaded);
+	void PlayOpenDialogSE();
+	void CheckVictim(bool* Dead, bool* DecreaseHP);
 
 public:
 	static class UClass* StaticClass()

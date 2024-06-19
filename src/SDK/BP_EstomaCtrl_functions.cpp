@@ -17,85 +17,91 @@
 namespace SDK
 {
 
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.LogMagatsuhi
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.ExecuteUbergraph_BP_EstomaCtrl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EstomaCtrl_C::LogMagatsuhi()
+void ABP_EstomaCtrl_C::ExecuteUbergraph_BP_EstomaCtrl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "LogMagatsuhi");
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "ExecuteUbergraph_BP_EstomaCtrl");
+
+	Params::BP_EstomaCtrl_C_ExecuteUbergraph_BP_EstomaCtrl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.EndEstoma
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EstomaCtrl_C::EndEstoma()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "EndEstoma");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.GetMagatsuhi_WhenChangeMoon
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   Magatsuhi                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_EstomaCtrl_C::GetMagatsuhi_WhenChangeMoon(int32* Magatsuhi)
+void ABP_EstomaCtrl_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "GetMagatsuhi_WhenChangeMoon");
-
-	Params::BP_EstomaCtrl_C_GetMagatsuhi_WhenChangeMoon Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Magatsuhi != nullptr)
-		*Magatsuhi = Parms.Magatsuhi;
-}
-
-
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.GetMagatsuhi_WhenUsed
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   Magatsuhi                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EstomaCtrl_C::GetMagatsuhi_WhenUsed(int32* Magatsuhi)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "GetMagatsuhi_WhenUsed");
-
-	Params::BP_EstomaCtrl_C_GetMagatsuhi_WhenUsed Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Magatsuhi != nullptr)
-		*Magatsuhi = Parms.Magatsuhi;
-}
-
-
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.CloseAActionWindow
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EstomaCtrl_C::CloseAActionWindow()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "CloseAActionWindow");
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.OpenAActionWindow
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.CallEndButton
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_EstomaCtrl_C::OpenAActionWindow()
+void ABP_EstomaCtrl_C::CallEndButton()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "OpenAActionWindow");
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "CallEndButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.RestartEstoma_FromOtherMap
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EstomaCtrl_C::RestartEstoma_FromOtherMap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "RestartEstoma_FromOtherMap");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.CallStartButton
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EstomaCtrl_C::CallStartButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "CallStartButton");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,93 +127,87 @@ void ABP_EstomaCtrl_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.CallStartButton
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.OpenAActionWindow
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_EstomaCtrl_C::CallStartButton()
+void ABP_EstomaCtrl_C::OpenAActionWindow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "CallStartButton");
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "OpenAActionWindow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.RestartEstoma_FromOtherMap
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.CloseAActionWindow
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_EstomaCtrl_C::RestartEstoma_FromOtherMap()
+void ABP_EstomaCtrl_C::CloseAActionWindow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "RestartEstoma_FromOtherMap");
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "CloseAActionWindow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.CallEndButton
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EstomaCtrl_C::CallEndButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "CallEndButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_EstomaCtrl_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.EndEstoma
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EstomaCtrl_C::EndEstoma()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "EndEstoma");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EstomaCtrl.BP_EstomaCtrl_C.ExecuteUbergraph_BP_EstomaCtrl
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.GetMagatsuhi_WhenUsed
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Magatsuhi                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EstomaCtrl_C::ExecuteUbergraph_BP_EstomaCtrl(int32 EntryPoint)
+void ABP_EstomaCtrl_C::GetMagatsuhi_WhenUsed(int32* Magatsuhi)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EstomaCtrl_C", "ExecuteUbergraph_BP_EstomaCtrl");
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "GetMagatsuhi_WhenUsed");
 
-	Params::BP_EstomaCtrl_C_ExecuteUbergraph_BP_EstomaCtrl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::BP_EstomaCtrl_C_GetMagatsuhi_WhenUsed Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Magatsuhi != nullptr)
+		*Magatsuhi = Parms.Magatsuhi;
+}
+
+
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.GetMagatsuhi_WhenChangeMoon
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   Magatsuhi                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EstomaCtrl_C::GetMagatsuhi_WhenChangeMoon(int32* Magatsuhi)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "GetMagatsuhi_WhenChangeMoon");
+
+	Params::BP_EstomaCtrl_C_GetMagatsuhi_WhenChangeMoon Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Magatsuhi != nullptr)
+		*Magatsuhi = Parms.Magatsuhi;
+}
+
+
+// Function BP_EstomaCtrl.BP_EstomaCtrl_C.LogMagatsuhi
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EstomaCtrl_C::LogMagatsuhi()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EstomaCtrl_C", "LogMagatsuhi");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

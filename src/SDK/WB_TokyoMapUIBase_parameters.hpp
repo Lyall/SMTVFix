@@ -14,18 +14,29 @@
 namespace SDK::Params
 {
 
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.HidePlaceNameByDataId
-// 0x0008 (0x0008 - 0x0000)
-struct WB_TokyoMapUIBase_C_HidePlaceNameByDataId final
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.StartView
+// 0x0002 (0x0002 - 0x0000)
+struct WB_TokyoMapUIBase_C_StartView final
 {
 public:
-	int32                                         DataId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NoUse;                                             // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          First;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          NewParam;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(WB_TokyoMapUIBase_C_HidePlaceNameByDataId) == 0x000004, "Wrong alignment on WB_TokyoMapUIBase_C_HidePlaceNameByDataId");
-static_assert(sizeof(WB_TokyoMapUIBase_C_HidePlaceNameByDataId) == 0x000008, "Wrong size on WB_TokyoMapUIBase_C_HidePlaceNameByDataId");
-static_assert(offsetof(WB_TokyoMapUIBase_C_HidePlaceNameByDataId, DataId) == 0x000000, "Member 'WB_TokyoMapUIBase_C_HidePlaceNameByDataId::DataId' has a wrong offset!");
-static_assert(offsetof(WB_TokyoMapUIBase_C_HidePlaceNameByDataId, NoUse) == 0x000004, "Member 'WB_TokyoMapUIBase_C_HidePlaceNameByDataId::NoUse' has a wrong offset!");
+static_assert(alignof(WB_TokyoMapUIBase_C_StartView) == 0x000001, "Wrong alignment on WB_TokyoMapUIBase_C_StartView");
+static_assert(sizeof(WB_TokyoMapUIBase_C_StartView) == 0x000002, "Wrong size on WB_TokyoMapUIBase_C_StartView");
+static_assert(offsetof(WB_TokyoMapUIBase_C_StartView, First) == 0x000000, "Member 'WB_TokyoMapUIBase_C_StartView::First' has a wrong offset!");
+static_assert(offsetof(WB_TokyoMapUIBase_C_StartView, NewParam) == 0x000001, "Member 'WB_TokyoMapUIBase_C_StartView::NewParam' has a wrong offset!");
+
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.EndView
+// 0x0001 (0x0001 - 0x0000)
+struct WB_TokyoMapUIBase_C_EndView final
+{
+public:
+	bool                                          NewParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WB_TokyoMapUIBase_C_EndView) == 0x000001, "Wrong alignment on WB_TokyoMapUIBase_C_EndView");
+static_assert(sizeof(WB_TokyoMapUIBase_C_EndView) == 0x000001, "Wrong size on WB_TokyoMapUIBase_C_EndView");
+static_assert(offsetof(WB_TokyoMapUIBase_C_EndView, NewParam) == 0x000000, "Member 'WB_TokyoMapUIBase_C_EndView::NewParam' has a wrong offset!");
 
 // Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.ShowPlaceNameByDataId
 // 0x0008 (0x0008 - 0x0000)
@@ -40,29 +51,18 @@ static_assert(sizeof(WB_TokyoMapUIBase_C_ShowPlaceNameByDataId) == 0x000008, "Wr
 static_assert(offsetof(WB_TokyoMapUIBase_C_ShowPlaceNameByDataId, DataId) == 0x000000, "Member 'WB_TokyoMapUIBase_C_ShowPlaceNameByDataId::DataId' has a wrong offset!");
 static_assert(offsetof(WB_TokyoMapUIBase_C_ShowPlaceNameByDataId, NoUse) == 0x000004, "Member 'WB_TokyoMapUIBase_C_ShowPlaceNameByDataId::NoUse' has a wrong offset!");
 
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.EndView
-// 0x0001 (0x0001 - 0x0000)
-struct WB_TokyoMapUIBase_C_EndView final
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.HidePlaceNameByDataId
+// 0x0008 (0x0008 - 0x0000)
+struct WB_TokyoMapUIBase_C_HidePlaceNameByDataId final
 {
 public:
-	bool                                          NewParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         DataId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NoUse;                                             // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(WB_TokyoMapUIBase_C_EndView) == 0x000001, "Wrong alignment on WB_TokyoMapUIBase_C_EndView");
-static_assert(sizeof(WB_TokyoMapUIBase_C_EndView) == 0x000001, "Wrong size on WB_TokyoMapUIBase_C_EndView");
-static_assert(offsetof(WB_TokyoMapUIBase_C_EndView, NewParam) == 0x000000, "Member 'WB_TokyoMapUIBase_C_EndView::NewParam' has a wrong offset!");
-
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.StartView
-// 0x0002 (0x0002 - 0x0000)
-struct WB_TokyoMapUIBase_C_StartView final
-{
-public:
-	bool                                          First;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          NewParam;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WB_TokyoMapUIBase_C_StartView) == 0x000001, "Wrong alignment on WB_TokyoMapUIBase_C_StartView");
-static_assert(sizeof(WB_TokyoMapUIBase_C_StartView) == 0x000002, "Wrong size on WB_TokyoMapUIBase_C_StartView");
-static_assert(offsetof(WB_TokyoMapUIBase_C_StartView, First) == 0x000000, "Member 'WB_TokyoMapUIBase_C_StartView::First' has a wrong offset!");
-static_assert(offsetof(WB_TokyoMapUIBase_C_StartView, NewParam) == 0x000001, "Member 'WB_TokyoMapUIBase_C_StartView::NewParam' has a wrong offset!");
+static_assert(alignof(WB_TokyoMapUIBase_C_HidePlaceNameByDataId) == 0x000004, "Wrong alignment on WB_TokyoMapUIBase_C_HidePlaceNameByDataId");
+static_assert(sizeof(WB_TokyoMapUIBase_C_HidePlaceNameByDataId) == 0x000008, "Wrong size on WB_TokyoMapUIBase_C_HidePlaceNameByDataId");
+static_assert(offsetof(WB_TokyoMapUIBase_C_HidePlaceNameByDataId, DataId) == 0x000000, "Member 'WB_TokyoMapUIBase_C_HidePlaceNameByDataId::DataId' has a wrong offset!");
+static_assert(offsetof(WB_TokyoMapUIBase_C_HidePlaceNameByDataId, NoUse) == 0x000004, "Member 'WB_TokyoMapUIBase_C_HidePlaceNameByDataId::NoUse' has a wrong offset!");
 
 }
 

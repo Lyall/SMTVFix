@@ -16,15 +16,15 @@
 namespace SDK
 {
 
-// Function BPI_EventMiman.BPI_EventMiman_C.BPI_UpdateIconView
+// Function BPI_EventMiman.BPI_EventMiman_C.BPI_ShowAgainMiman
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_EventMiman_C::BPI_UpdateIconView()
+void IBPI_EventMiman_C::BPI_ShowAgainMiman()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_EventMiman_C", "BPI_UpdateIconView");
+		Func = Class->GetFunction("BPI_EventMiman_C", "BPI_ShowAgainMiman");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -44,15 +44,15 @@ void IBPI_EventMiman_C::BPI_HideMiman()
 }
 
 
-// Function BPI_EventMiman.BPI_EventMiman_C.BPI_ShowAgainMiman
+// Function BPI_EventMiman.BPI_EventMiman_C.BPI_UpdateIconView
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_EventMiman_C::BPI_ShowAgainMiman()
+void IBPI_EventMiman_C::BPI_UpdateIconView()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_EventMiman_C", "BPI_ShowAgainMiman");
+		Func = Class->GetFunction("BPI_EventMiman_C", "BPI_UpdateIconView");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

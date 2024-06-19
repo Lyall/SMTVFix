@@ -27,7 +27,7 @@ public:
 	struct FTransform                             M_CameraOffsetTransform;                           // 0x0270(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	TArray<struct FCustomSplinePoint>             M_SplinePoint;                                     // 0x02A0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 	struct FRigRailPlayInfo                       M_SpawnPlayInfo;                                   // 0x02B0(0x0034)(Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_2D10[0xC];                                     // 0x02E4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A31[0xC];                                     // 0x02E4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             M_CameraTransform;                                 // 0x02F0(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	float                                         M_AdjustScale;                                     // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 

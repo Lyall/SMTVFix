@@ -21,11 +21,11 @@ namespace SDK
 class UBPL_Estoma_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void BPL_UnlockEstomaLight(class UObject* __WorldContext, bool* Unlock);
-	static void BPL_EndEstomaEffect(bool bPlaySE, class UObject* __WorldContext);
-	static void BPL_BeginEstomaEffect(bool bPlaySE, class UObject* __WorldContext);
-	static void BPL_EndEstoma(class UObject* __WorldContext);
 	static void BPL_BeginEstoma(class UObject* __WorldContext);
+	static void BPL_EndEstoma(class UObject* __WorldContext);
+	static void BPL_BeginEstomaEffect(bool bPlaySE, class UObject* __WorldContext);
+	static void BPL_EndEstomaEffect(bool bPlaySE, class UObject* __WorldContext);
+	static void BPL_UnlockEstomaLight(class UObject* __WorldContext, bool* Unlock);
 
 public:
 	static class UClass* StaticClass()

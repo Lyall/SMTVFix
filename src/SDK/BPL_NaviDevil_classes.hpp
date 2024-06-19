@@ -22,17 +22,17 @@ namespace SDK
 class UBPL_NaviDevil_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void SetVisibility_NaviEffect(bool Visible, class UObject* __WorldContext);
-	static void DestroyNaviDevil_BeforeEvent(class UObject* __WorldContext);
-	static void RespawnNaviDevil_AfterEvent(class UObject* __WorldContext);
-	static void UpdateNaviMinimapIcon(E_NAVI_DEVIL Navi, bool FlagSwitch, bool NaviNotChange, class UObject* __WorldContext);
-	static void LotNaviGimmickExist(class UObject* __WorldContext);
-	static void WarpNaviDevilBasePosition(bool CalcOnGround, class UObject* __WorldContext);
-	static void ChangeNaviDevilScale(class AActor* Pawn, E_NAVI_DEVIL NaviType, class UObject* __WorldContext);
-	static void DestroyNaviDevil(class UObject* __WorldContext);
-	static void ChangeNaviDevil_FromPawn(class APawn* Pawn, E_NAVI_DEVIL NaviDevil, class UObject* __WorldContext);
-	static void SpawnNaviDevil(E_NAVI_DEVIL NaviDevil, class UObject* __WorldContext);
 	static void SetVisibilityNaviDevil(bool Visible, class UObject* __WorldContext);
+	static void SpawnNaviDevil(E_NAVI_DEVIL NaviDevil, class UObject* __WorldContext);
+	static void ChangeNaviDevil_FromPawn(class APawn* Pawn, E_NAVI_DEVIL NaviDevil, class UObject* __WorldContext);
+	static void DestroyNaviDevil(class UObject* __WorldContext);
+	static void ChangeNaviDevilScale(class AActor* Pawn, E_NAVI_DEVIL NaviType, class UObject* __WorldContext);
+	static void WarpNaviDevilBasePosition(bool CalcOnGround, class UObject* __WorldContext);
+	static void LotNaviGimmickExist(class UObject* __WorldContext);
+	static void UpdateNaviMinimapIcon(E_NAVI_DEVIL Navi, bool FlagSwitch, bool NaviNotChange, class UObject* __WorldContext);
+	static void RespawnNaviDevil_AfterEvent(class UObject* __WorldContext);
+	static void DestroyNaviDevil_BeforeEvent(class UObject* __WorldContext);
+	static void SetVisibility_NaviEffect(bool Visible, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

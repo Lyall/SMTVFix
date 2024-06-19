@@ -23,7 +23,7 @@ public:
 	TArray<int32>                                 TagParams;                                         // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TSoftObjectPtr<class USoundAtomCue>           OpenSE;                                            // 0x0018(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	bool                                          RemoveSameInfo;                                    // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4110[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3BC4[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RemoveSameInfoID;                                  // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_MapInfoWinCtrl_C_BPI_OpenMapInfo) == 0x000008, "Wrong alignment on BPI_MapInfoWinCtrl_C_BPI_OpenMapInfo");

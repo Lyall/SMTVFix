@@ -23,19 +23,19 @@ namespace SDK
 class IBPI_SaveLoadCtrl_C final : public IInterface
 {
 public:
-	void GetMediator(class UObject** Mediator);
-	void IsStartedFieldReturnFade(bool* IsStarted);
-	void IsSetUpComplete(bool* OutValue);
-	void StartSaveInherit();
-	void SetupInherit();
-	void OffLoadScreen();
-	void OnLoadScreen();
-	void SetupSaveMenu(E_SAVE_LOCATION InLocation);
-	void SetHiddenCommonWidget();
-	void IsCancel(bool* OutValue);
-	void StartLoadMenu();
-	void IsEndSaveLoad(E_SaveLoadEndType* OutEndType);
 	void SetupLoadMenu(E_Load_LOCATION InLocation);
+	void IsEndSaveLoad(E_SaveLoadEndType* OutEndType);
+	void StartLoadMenu();
+	void IsCancel(bool* OutValue);
+	void SetHiddenCommonWidget();
+	void SetupSaveMenu(E_SAVE_LOCATION InLocation);
+	void OnLoadScreen();
+	void OffLoadScreen();
+	void SetupInherit();
+	void StartSaveInherit();
+	void IsSetUpComplete(bool* OutValue);
+	void IsStartedFieldReturnFade(bool* IsStarted);
+	void GetMediator(class UObject** Mediator);
 
 public:
 	static class UClass* StaticClass()

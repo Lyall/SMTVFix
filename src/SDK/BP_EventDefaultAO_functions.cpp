@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BP_EventDefaultAO.BP_EventDefaultAO_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_EventDefaultAO.BP_EventDefaultAO_C.ExecuteUbergraph_BP_EventDefaultAO
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventDefaultAO_C::ReceiveBeginPlay()
+void ABP_EventDefaultAO_C::ExecuteUbergraph_BP_EventDefaultAO(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventDefaultAO_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_EventDefaultAO_C", "ExecuteUbergraph_BP_EventDefaultAO");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void ABP_EventDefaultAO_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 }
 
 
-// Function BP_EventDefaultAO.BP_EventDefaultAO_C.ExecuteUbergraph_BP_EventDefaultAO
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_EventDefaultAO.BP_EventDefaultAO_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_EventDefaultAO_C::ExecuteUbergraph_BP_EventDefaultAO(int32 EntryPoint)
+void ABP_EventDefaultAO_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventDefaultAO_C", "ExecuteUbergraph_BP_EventDefaultAO");
+		Func = Class->GetFunction("BP_EventDefaultAO_C", "ReceiveBeginPlay");
 
-	Params::BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

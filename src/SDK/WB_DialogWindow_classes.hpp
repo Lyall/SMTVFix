@@ -65,7 +65,7 @@ public:
 	void SetDialogSelectMenuByIndex(int32 InMenuNumber, int32 InInitCursorPosition, class UScriptMessageAsset* InScriptMessageAsset, TArray<int32>& InSelectItemIndex);
 	void AddDialogSelect();
 	void DecDialogSelect();
-	void SetDialogSelectCursorOffset(int32 DefaultCursorPos);
+	void SetDialogSelectCursorOffset(int32 Defaultcursorpos);
 	void SetDialogSelectMenuOff();
 	void DecidesDialogSelectCursor(int32* OutParam);
 	void SetInitPosition();

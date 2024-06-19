@@ -17,29 +17,29 @@
 namespace SDK
 {
 
-// Function BPL_EventView.BPL_EventView_C.SearchContinueEventStartId
+// Function BPL_EventView.BPL_EventView_C.CheckEventView_ContinueEventFirst
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   MapEventID                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   EventId                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UBPL_EventView_C::SearchContinueEventStartId(int32 MapEventID, class UObject* __WorldContext, int32* EventId)
+void UBPL_EventView_C::CheckEventView_ContinueEventFirst(int32 MapEventID, class UObject* __WorldContext, bool* Ret)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_EventView_C", "SearchContinueEventStartId");
+		Func = StaticClass()->GetFunction("BPL_EventView_C", "CheckEventView_ContinueEventFirst");
 
-	Params::BPL_EventView_C_SearchContinueEventStartId Parms{};
+	Params::BPL_EventView_C_CheckEventView_ContinueEventFirst Parms{};
 
 	Parms.MapEventID = MapEventID;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (EventId != nullptr)
-		*EventId = Parms.EventId;
+	if (Ret != nullptr)
+		*Ret = Parms.Ret;
 }
 
 
@@ -73,29 +73,29 @@ void UBPL_EventView_C::GetEventViewStartTransform(int32 MapEventID, class UObjec
 }
 
 
-// Function BPL_EventView.BPL_EventView_C.CheckEventView_ContinueEventFirst
+// Function BPL_EventView.BPL_EventView_C.SearchContinueEventStartId
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   MapEventID                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EventId                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPL_EventView_C::CheckEventView_ContinueEventFirst(int32 MapEventID, class UObject* __WorldContext, bool* Ret)
+void UBPL_EventView_C::SearchContinueEventStartId(int32 MapEventID, class UObject* __WorldContext, int32* EventId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_EventView_C", "CheckEventView_ContinueEventFirst");
+		Func = StaticClass()->GetFunction("BPL_EventView_C", "SearchContinueEventStartId");
 
-	Params::BPL_EventView_C_CheckEventView_ContinueEventFirst Parms{};
+	Params::BPL_EventView_C_SearchContinueEventStartId Parms{};
 
 	Parms.MapEventID = MapEventID;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Ret != nullptr)
-		*Ret = Parms.Ret;
+	if (EventId != nullptr)
+		*EventId = Parms.EventId;
 }
 
 }

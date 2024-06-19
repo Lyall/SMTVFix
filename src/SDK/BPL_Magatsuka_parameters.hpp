@@ -16,143 +16,21 @@
 namespace SDK::Params
 {
 
-// Function BPL_Magatsuka.BPL_Magatsuka_C.ShowMagatsukaAll
-// 0x0050 (0x0050 - 0x0000)
-struct BPL_Magatsuka_C_ShowMagatsukaAll final
+// Function BPL_Magatsuka.BPL_Magatsuka_C.ChangeBGM_MagatsukaOrMap
+// 0x0018 (0x0018 - 0x0000)
+struct BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap final
 {
 public:
-	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          Show;                                              // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5326[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5327[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_Magatsuka_C>      K2Node_DynamicCast_AsBPI_Magatsuka;                // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5328[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFadeType                                     FadeType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6919[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Magatsuka_C_ShowMagatsukaAll) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_ShowMagatsukaAll");
-static_assert(sizeof(BPL_Magatsuka_C_ShowMagatsukaAll) == 0x000050, "Wrong size on BPL_Magatsuka_C_ShowMagatsukaAll");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, Actors) == 0x000000, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::Actors' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, Show) == 0x000010, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::Show' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, __WorldContext) == 0x000018, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, Temp_int_Array_Index_Variable) == 0x000024, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, CallFunc_Array_Get_Item) == 0x000030, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, K2Node_DynamicCast_AsBPI_Magatsuka) == 0x000038, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::K2Node_DynamicCast_AsBPI_Magatsuka' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, CallFunc_Less_IntInt_ReturnValue) == 0x000049, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, CallFunc_Add_IntInt_ReturnValue) == 0x00004C, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BPL_Magatsuka.BPL_Magatsuka_C.RecalcMagatsukaGaze
-// 0x0048 (0x0048 - 0x0000)
-struct BPL_Magatsuka_C_RecalcMagatsukaGaze final
-{
-public:
-	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5329[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_Magatsuka_C>      K2Node_DynamicCast_AsBPI_Magatsuka;                // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_532A[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPL_Magatsuka_C_RecalcMagatsukaGaze) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_RecalcMagatsukaGaze");
-static_assert(sizeof(BPL_Magatsuka_C_RecalcMagatsukaGaze) == 0x000048, "Wrong size on BPL_Magatsuka_C_RecalcMagatsukaGaze");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, Actors) == 0x000000, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::Actors' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, __WorldContext) == 0x000010, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, CallFunc_Array_Get_Item) == 0x000028, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, K2Node_DynamicCast_AsBPI_Magatsuka) == 0x000030, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::K2Node_DynamicCast_AsBPI_Magatsuka' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, CallFunc_Less_IntInt_ReturnValue) == 0x000041, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BPL_Magatsuka.BPL_Magatsuka_C.ReleaseMagatsukaGaze
-// 0x0048 (0x0048 - 0x0000)
-struct BPL_Magatsuka_C_ReleaseMagatsukaGaze final
-{
-public:
-	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_532B[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_Magatsuka_C>      K2Node_DynamicCast_AsBPI_Magatsuka;                // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_532C[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPL_Magatsuka_C_ReleaseMagatsukaGaze) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_ReleaseMagatsukaGaze");
-static_assert(sizeof(BPL_Magatsuka_C_ReleaseMagatsukaGaze) == 0x000048, "Wrong size on BPL_Magatsuka_C_ReleaseMagatsukaGaze");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, Actors) == 0x000000, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::Actors' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, __WorldContext) == 0x000010, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, CallFunc_Array_Get_Item) == 0x000028, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, K2Node_DynamicCast_AsBPI_Magatsuka) == 0x000030, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::K2Node_DynamicCast_AsBPI_Magatsuka' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, CallFunc_Less_IntInt_ReturnValue) == 0x000041, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BPL_Magatsuka.BPL_Magatsuka_C.OtherScene_To_MagatsukaFound
-// 0x0070 (0x0070 - 0x0000)
-struct BPL_Magatsuka_C_OtherScene_To_MagatsukaFound final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         CallFunc_GetAllActorsWithInterface_OutActors;      // 0x0008(0x0010)(ReferenceParm)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_532D[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_532E[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BPI_CheckMagatsukaDiscoveryCnt_Discovery; // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_532F[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MagatsukaFoundEffect_C> K2Node_DynamicCast_AsBPI_Magatsuka_Found_Effect;   // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5330[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5331[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_OtherScene_To_MagatsukaFound");
-static_assert(sizeof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound) == 0x000070, "Wrong size on BPL_Magatsuka_C_OtherScene_To_MagatsukaFound");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, __WorldContext) == 0x000000, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_GetAllActorsWithInterface_OutActors) == 0x000008, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_GetAllActorsWithInterface_OutActors' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_GetMapCommon_rerutn) == 0x000018, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000028, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_BPI_CheckMagatsukaDiscoveryCnt_Discovery) == 0x000040, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_BPI_CheckMagatsukaDiscoveryCnt_Discovery' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_Array_Get_Item) == 0x000048, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, K2Node_DynamicCast_AsBPI_Magatsuka_Found_Effect) == 0x000050, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::K2Node_DynamicCast_AsBPI_Magatsuka_Found_Effect' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, Temp_int_Loop_Counter_Variable) == 0x000064, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap");
+static_assert(sizeof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap) == 0x000018, "Wrong size on BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap");
+static_assert(offsetof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap, FadeType) == 0x000000, "Member 'BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap::FadeType' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap, __WorldContext) == 0x000008, "Member 'BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap, CallFunc_Get_ReturnValue) == 0x000010, "Member 'BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap::CallFunc_Get_ReturnValue' has a wrong offset!");
 
 // Function BPL_Magatsuka.BPL_Magatsuka_C.MagatsukaFound_To_OtherScene
 // 0x0070 (0x0070 - 0x0000)
@@ -163,20 +41,20 @@ public:
 	TArray<class AActor*>                         CallFunc_GetAllActorsWithInterface_OutActors;      // 0x0008(0x0010)(ReferenceParm)
 	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5332[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_691A[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5333[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_691B[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BPI_CheckMagatsukaDiscoveryCnt_Discovery; // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5334[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_691C[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MagatsukaFoundEffect_C> K2Node_DynamicCast_AsBPI_Magatsuka_Found_Effect;   // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5335[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_691D[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5336[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_691E[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPL_Magatsuka_C_MagatsukaFound_To_OtherScene) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_MagatsukaFound_To_OtherScene");
@@ -196,21 +74,143 @@ static_assert(offsetof(BPL_Magatsuka_C_MagatsukaFound_To_OtherScene, Temp_int_Lo
 static_assert(offsetof(BPL_Magatsuka_C_MagatsukaFound_To_OtherScene, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'BPL_Magatsuka_C_MagatsukaFound_To_OtherScene::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BPL_Magatsuka_C_MagatsukaFound_To_OtherScene, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'BPL_Magatsuka_C_MagatsukaFound_To_OtherScene::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
-// Function BPL_Magatsuka.BPL_Magatsuka_C.ChangeBGM_MagatsukaOrMap
-// 0x0018 (0x0018 - 0x0000)
-struct BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap final
+// Function BPL_Magatsuka.BPL_Magatsuka_C.OtherScene_To_MagatsukaFound
+// 0x0070 (0x0070 - 0x0000)
+struct BPL_Magatsuka_C_OtherScene_To_MagatsukaFound final
 {
 public:
-	EFadeType                                     FadeType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5337[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         CallFunc_GetAllActorsWithInterface_OutActors;      // 0x0008(0x0010)(ReferenceParm)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_691F[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6920[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BPI_CheckMagatsukaDiscoveryCnt_Discovery; // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6921[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MagatsukaFoundEffect_C> K2Node_DynamicCast_AsBPI_Magatsuka_Found_Effect;   // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6922[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6923[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap");
-static_assert(sizeof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap) == 0x000018, "Wrong size on BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap");
-static_assert(offsetof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap, FadeType) == 0x000000, "Member 'BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap::FadeType' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap, __WorldContext) == 0x000008, "Member 'BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap, CallFunc_Get_ReturnValue) == 0x000010, "Member 'BPL_Magatsuka_C_ChangeBGM_MagatsukaOrMap::CallFunc_Get_ReturnValue' has a wrong offset!");
+static_assert(alignof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_OtherScene_To_MagatsukaFound");
+static_assert(sizeof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound) == 0x000070, "Wrong size on BPL_Magatsuka_C_OtherScene_To_MagatsukaFound");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, __WorldContext) == 0x000000, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_GetAllActorsWithInterface_OutActors) == 0x000008, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_GetAllActorsWithInterface_OutActors' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_GetMapCommon_rerutn) == 0x000018, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000028, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_BPI_CheckMagatsukaDiscoveryCnt_Discovery) == 0x000040, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_BPI_CheckMagatsukaDiscoveryCnt_Discovery' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_Array_Get_Item) == 0x000048, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, K2Node_DynamicCast_AsBPI_Magatsuka_Found_Effect) == 0x000050, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::K2Node_DynamicCast_AsBPI_Magatsuka_Found_Effect' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, K2Node_DynamicCast_bSuccess_1) == 0x000060, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, Temp_int_Loop_Counter_Variable) == 0x000064, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_OtherScene_To_MagatsukaFound, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'BPL_Magatsuka_C_OtherScene_To_MagatsukaFound::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BPL_Magatsuka.BPL_Magatsuka_C.ReleaseMagatsukaGaze
+// 0x0048 (0x0048 - 0x0000)
+struct BPL_Magatsuka_C_ReleaseMagatsukaGaze final
+{
+public:
+	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6924[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_Magatsuka_C>      K2Node_DynamicCast_AsBPI_Magatsuka;                // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6925[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPL_Magatsuka_C_ReleaseMagatsukaGaze) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_ReleaseMagatsukaGaze");
+static_assert(sizeof(BPL_Magatsuka_C_ReleaseMagatsukaGaze) == 0x000048, "Wrong size on BPL_Magatsuka_C_ReleaseMagatsukaGaze");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, Actors) == 0x000000, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::Actors' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, __WorldContext) == 0x000010, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, CallFunc_Array_Get_Item) == 0x000028, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, K2Node_DynamicCast_AsBPI_Magatsuka) == 0x000030, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::K2Node_DynamicCast_AsBPI_Magatsuka' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, CallFunc_Less_IntInt_ReturnValue) == 0x000041, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ReleaseMagatsukaGaze, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BPL_Magatsuka_C_ReleaseMagatsukaGaze::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BPL_Magatsuka.BPL_Magatsuka_C.RecalcMagatsukaGaze
+// 0x0048 (0x0048 - 0x0000)
+struct BPL_Magatsuka_C_RecalcMagatsukaGaze final
+{
+public:
+	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6926[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_Magatsuka_C>      K2Node_DynamicCast_AsBPI_Magatsuka;                // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6927[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPL_Magatsuka_C_RecalcMagatsukaGaze) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_RecalcMagatsukaGaze");
+static_assert(sizeof(BPL_Magatsuka_C_RecalcMagatsukaGaze) == 0x000048, "Wrong size on BPL_Magatsuka_C_RecalcMagatsukaGaze");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, Actors) == 0x000000, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::Actors' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, __WorldContext) == 0x000010, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, CallFunc_Array_Get_Item) == 0x000028, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, K2Node_DynamicCast_AsBPI_Magatsuka) == 0x000030, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::K2Node_DynamicCast_AsBPI_Magatsuka' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, CallFunc_Less_IntInt_ReturnValue) == 0x000041, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_RecalcMagatsukaGaze, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BPL_Magatsuka_C_RecalcMagatsukaGaze::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BPL_Magatsuka.BPL_Magatsuka_C.ShowMagatsukaAll
+// 0x0050 (0x0050 - 0x0000)
+struct BPL_Magatsuka_C_ShowMagatsukaAll final
+{
+public:
+	TArray<class AActor*>                         Actors;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          Show;                                              // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6928[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6929[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_Magatsuka_C>      K2Node_DynamicCast_AsBPI_Magatsuka;                // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_692A[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPL_Magatsuka_C_ShowMagatsukaAll) == 0x000008, "Wrong alignment on BPL_Magatsuka_C_ShowMagatsukaAll");
+static_assert(sizeof(BPL_Magatsuka_C_ShowMagatsukaAll) == 0x000050, "Wrong size on BPL_Magatsuka_C_ShowMagatsukaAll");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, Actors) == 0x000000, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::Actors' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, Show) == 0x000010, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::Show' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, __WorldContext) == 0x000018, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, Temp_int_Array_Index_Variable) == 0x000024, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, CallFunc_Array_Get_Item) == 0x000030, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, K2Node_DynamicCast_AsBPI_Magatsuka) == 0x000038, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::K2Node_DynamicCast_AsBPI_Magatsuka' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, CallFunc_Less_IntInt_ReturnValue) == 0x000049, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_Magatsuka_C_ShowMagatsukaAll, CallFunc_Add_IntInt_ReturnValue) == 0x00004C, "Member 'BPL_Magatsuka_C_ShowMagatsukaAll::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

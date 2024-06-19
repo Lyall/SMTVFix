@@ -19,13 +19,13 @@ namespace SDK
 
 // BlueprintGeneratedClass MapEventHit_Type_INOUT.MapEventHit_Type_INOUT_C
 // 0x0038 (0x03B8 - 0x0380)
-class AMapEventHit_Type_INOUT_C : public AMapEventHit_Core_C
+class AMapEventHit_Type_INOUT_C final : public AMapEventHit_Core_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_MapEventHit_Type_INOUT_C;           // 0x0380(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        MEC_TASK_OUT;                                      // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	bool                                          Enable_0;                                          // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2ED1[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6854[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        OutTask;                                           // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMEC_BaseTask_C*>                OutTaskList;                                       // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	int32                                         TaskIndexOut;                                      // 0x03B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -34,18 +34,18 @@ public:
 	bool                                          bRecalc_AfterLoaded;                               // 0x03B6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void FlagCh(bool* OK);
-	void ReceiveBeginPlay();
-	void BndEvt__Hit_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__Hit_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-	void StartTaskOut();
-	void TaskManagerOut();
-	void NextCallOutTask();
-	void ManualBeginOverlap();
-	void RecalcOverlap();
-	void OnUnPause_AfterLoad();
-	void ManualEndOverlap();
 	void ExecuteUbergraph_MapEventHit_Type_INOUT(int32 EntryPoint);
+	void ManualEndOverlap();
+	void OnUnPause_AfterLoad();
+	void RecalcOverlap();
+	void ManualBeginOverlap();
+	void NextCallOutTask();
+	void TaskManagerOut();
+	void StartTaskOut();
+	void BndEvt__Hit_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void BndEvt__Hit_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ReceiveBeginPlay();
+	void FlagCh(bool* OK);
 
 public:
 	static class UClass* StaticClass()

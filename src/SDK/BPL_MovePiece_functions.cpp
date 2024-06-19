@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BPL_MovePiece.BPL_MovePiece_C.HideMovePieceAll
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPL_MovePiece_C::HideMovePieceAll(class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_MovePiece_C", "HideMovePieceAll");
-
-	Params::BPL_MovePiece_C_HideMovePieceAll Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPL_MovePiece.BPL_MovePiece_C.ShowAgainMovePieceAll
 // (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -50,6 +30,26 @@ void UBPL_MovePiece_C::ShowAgainMovePieceAll(class UObject* __WorldContext)
 		Func = StaticClass()->GetFunction("BPL_MovePiece_C", "ShowAgainMovePieceAll");
 
 	Params::BPL_MovePiece_C_ShowAgainMovePieceAll Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPL_MovePiece.BPL_MovePiece_C.HideMovePieceAll
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPL_MovePiece_C::HideMovePieceAll(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPL_MovePiece_C", "HideMovePieceAll");
+
+	Params::BPL_MovePiece_C_HideMovePieceAll Parms{};
 
 	Parms.__WorldContext = __WorldContext;
 

@@ -17,46 +17,6 @@
 namespace SDK::Params
 {
 
-// Function BP_EventPause.BP_EventPause_C.TickHelp
-// 0x000C (0x000C - 0x0000)
-struct BP_EventPause_C_TickHelp final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A1[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventPause_C_TickHelp) == 0x000004, "Wrong alignment on BP_EventPause_C_TickHelp");
-static_assert(sizeof(BP_EventPause_C_TickHelp) == 0x00000C, "Wrong size on BP_EventPause_C_TickHelp");
-static_assert(offsetof(BP_EventPause_C_TickHelp, DeltaTime) == 0x000000, "Member 'BP_EventPause_C_TickHelp::DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_EventPause_C_TickHelp, CallFunc_Less_FloatFloat_ReturnValue) == 0x000004, "Member 'BP_EventPause_C_TickHelp::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventPause_C_TickHelp, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'BP_EventPause_C_TickHelp::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventPause_C_TickHelp, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_EventPause_C_TickHelp::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-
-// Function BP_EventPause.BP_EventPause_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_EventPause_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventPause_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_EventPause_C_ReceiveTick");
-static_assert(sizeof(BP_EventPause_C_ReceiveTick) == 0x000004, "Wrong size on BP_EventPause_C_ReceiveTick");
-static_assert(offsetof(BP_EventPause_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_EventPause_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_EventPause.BP_EventPause_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventPause_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventPause_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_EventPause_C_ReceiveEndPlay");
-static_assert(sizeof(BP_EventPause_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_EventPause_C_ReceiveEndPlay");
-static_assert(offsetof(BP_EventPause_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_EventPause_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
 // Function BP_EventPause.BP_EventPause_C.ExecuteUbergraph_BP_EventPause
 // 0x0290 (0x0290 - 0x0000)
 struct BP_EventPause_C_ExecuteUbergraph_BP_EventPause final
@@ -65,78 +25,78 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionPadCheck_Success;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetGamePaused_ReturnValue;                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A2[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67C6[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsOpenDebugMenu_ReturnValue;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A3[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67C7[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue;                          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A4[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67C8[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A5[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67C9[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_DialogCtrl_C>     CallFunc_BPI_GetDialogWindowCtrl_OutActor;         // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_1;                        // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_1;              // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IWasConfirmedByMouse_bConfirmed;          // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A6[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67CA[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_IWasConfirmedByMouse_ItemIndex;           // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_DialogCtrl_C>     CallFunc_BPI_GetDialogWindowCtrl_OutActor_1;       // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsActionPadCheck_Success_1;               // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A7[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67CB[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_BoolToString_ReturnValue_1;          // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A8[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67CC[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87A9[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67CD[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IWasConfirmedByMouse_bConfirmed_1;        // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87AA[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67CE[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_IWasConfirmedByMouse_ItemIndex_1;         // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_2;                        // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionPadCheck_Success_2;               // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87AB[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67CF[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_2;              // 0x00F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87AC[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D0[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_DialogCtrl_C>     CallFunc_BPI_GetDialogWindowCtrl_OutActor_2;       // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<class FName>                           K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ConstParm, ReferenceParm)
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_3;                        // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionPadCheck_Success_3;               // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87AD[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D1[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_3;              // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87AE[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D2[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_DialogCtrl_C>     CallFunc_BPI_GetDialogWindowCtrl_OutActor_3;       // 0x0158(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_IGetDialogSelectedCursorPosition_OutIndex; // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x016D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87AF[0x2];                                     // 0x016E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D3[0x2];                                     // 0x016E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_4;                        // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_4;              // 0x0178(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B0[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D4[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_DialogCtrl_C>     CallFunc_BPI_GetDialogWindowCtrl_OutActor_4;       // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_5;                        // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_5;              // 0x01A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IIsClosedDialogWindow_OutFinished;        // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B1[0x6];                                     // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D5[0x6];                                     // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_DialogCtrl_C>     CallFunc_BPI_GetDialogWindowCtrl_OutActor_5;       // 0x01C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IIsClosedDialogWindow_OutFinished_1;      // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetGamePaused_ReturnValue_1;              // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetGamePaused_ReturnValue_2;              // 0x01D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B2[0x1];                                     // 0x01D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D6[0x1];                                     // 0x01D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionPadCheck_Success_4;               // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B3[0x7];                                     // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D7[0x7];                                     // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_6;                        // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetTickableWhenPaused_ReturnValue;        // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GetTickableWhenPaused_ReturnValue_1;      // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B4[0x6];                                     // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D8[0x6];                                     // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_7;                        // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_FadeOut_Black_ReturnValue;                // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsActionPadCheck_Success_5;               // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -144,10 +104,10 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetFadePaused_ReturnValue;                // 0x01FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x01FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B5[0x2];                                     // 0x01FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67D9[0x2];                                     // 0x01FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetFadePaused_ReturnValue_1;              // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B6[0x3];                                     // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67DA[0x3];                                     // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAtomComponent*                         CallFunc_SpawnSound2D_ReturnValue;                 // 0x0208(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue_8;                        // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionPadCheck_Success_6;               // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -157,10 +117,10 @@ public:
 	bool                                          CallFunc_FadeOut_Black_ReturnValue_1;              // 0x021C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsActionPadCheck_Success_7;               // 0x021D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsActionPadCheck_Success_8;               // 0x021E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B7[0x1];                                     // 0x021F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67DB[0x1];                                     // 0x021F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_BoolToString_ReturnValue_2;          // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B8[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67DC[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0238(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0248(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionPadCheck_Success_9;               // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -172,11 +132,11 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x025E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsActionPadCheck_Success_12;              // 0x025F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87B9[0x7];                                     // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67DD[0x7];                                     // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_EventStaff_C>     K2Node_DynamicCast_AsBPI_Event_Staff;              // 0x0268(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_87BA[0x6];                                     // 0x027A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67DE[0x6];                                     // 0x027A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_9;                        // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionPadCheck_Success_13;              // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -274,6 +234,46 @@ static_assert(offsetof(BP_EventPause_C_ExecuteUbergraph_BP_EventPause, K2Node_Dy
 static_assert(offsetof(BP_EventPause_C_ExecuteUbergraph_BP_EventPause, K2Node_Event_EndPlayReason) == 0x000279, "Member 'BP_EventPause_C_ExecuteUbergraph_BP_EventPause::K2Node_Event_EndPlayReason' has a wrong offset!");
 static_assert(offsetof(BP_EventPause_C_ExecuteUbergraph_BP_EventPause, CallFunc_Get_ReturnValue_9) == 0x000280, "Member 'BP_EventPause_C_ExecuteUbergraph_BP_EventPause::CallFunc_Get_ReturnValue_9' has a wrong offset!");
 static_assert(offsetof(BP_EventPause_C_ExecuteUbergraph_BP_EventPause, CallFunc_IsActionPadCheck_Success_13) == 0x000288, "Member 'BP_EventPause_C_ExecuteUbergraph_BP_EventPause::CallFunc_IsActionPadCheck_Success_13' has a wrong offset!");
+
+// Function BP_EventPause.BP_EventPause_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventPause_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventPause_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_EventPause_C_ReceiveEndPlay");
+static_assert(sizeof(BP_EventPause_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_EventPause_C_ReceiveEndPlay");
+static_assert(offsetof(BP_EventPause_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_EventPause_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+
+// Function BP_EventPause.BP_EventPause_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_EventPause_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventPause_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_EventPause_C_ReceiveTick");
+static_assert(sizeof(BP_EventPause_C_ReceiveTick) == 0x000004, "Wrong size on BP_EventPause_C_ReceiveTick");
+static_assert(offsetof(BP_EventPause_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_EventPause_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_EventPause.BP_EventPause_C.TickHelp
+// 0x000C (0x000C - 0x0000)
+struct BP_EventPause_C_TickHelp final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_67DF[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventPause_C_TickHelp) == 0x000004, "Wrong alignment on BP_EventPause_C_TickHelp");
+static_assert(sizeof(BP_EventPause_C_TickHelp) == 0x00000C, "Wrong size on BP_EventPause_C_TickHelp");
+static_assert(offsetof(BP_EventPause_C_TickHelp, DeltaTime) == 0x000000, "Member 'BP_EventPause_C_TickHelp::DeltaTime' has a wrong offset!");
+static_assert(offsetof(BP_EventPause_C_TickHelp, CallFunc_Less_FloatFloat_ReturnValue) == 0x000004, "Member 'BP_EventPause_C_TickHelp::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventPause_C_TickHelp, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'BP_EventPause_C_TickHelp::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventPause_C_TickHelp, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_EventPause_C_TickHelp::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
 
 }
 

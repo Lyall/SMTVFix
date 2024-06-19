@@ -14,16 +14,16 @@
 namespace SDK::Params
 {
 
-// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitActivate
+// Function BPI_MapEventHit.BPI_MapEventHit_C.DebugView
 // 0x0001 (0x0001 - 0x0000)
-struct BPI_MapEventHit_C_EventHitActivate final
+struct BPI_MapEventHit_C_DebugView final
 {
 public:
-	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Bool;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPI_MapEventHit_C_EventHitActivate) == 0x000001, "Wrong alignment on BPI_MapEventHit_C_EventHitActivate");
-static_assert(sizeof(BPI_MapEventHit_C_EventHitActivate) == 0x000001, "Wrong size on BPI_MapEventHit_C_EventHitActivate");
-static_assert(offsetof(BPI_MapEventHit_C_EventHitActivate, Active) == 0x000000, "Member 'BPI_MapEventHit_C_EventHitActivate::Active' has a wrong offset!");
+static_assert(alignof(BPI_MapEventHit_C_DebugView) == 0x000001, "Wrong alignment on BPI_MapEventHit_C_DebugView");
+static_assert(sizeof(BPI_MapEventHit_C_DebugView) == 0x000001, "Wrong size on BPI_MapEventHit_C_DebugView");
+static_assert(offsetof(BPI_MapEventHit_C_DebugView, Bool) == 0x000000, "Member 'BPI_MapEventHit_C_DebugView::Bool' has a wrong offset!");
 
 // Function BPI_MapEventHit.BPI_MapEventHit_C.HiddenVolume
 // 0x0001 (0x0001 - 0x0000)
@@ -36,16 +36,16 @@ static_assert(alignof(BPI_MapEventHit_C_HiddenVolume) == 0x000001, "Wrong alignm
 static_assert(sizeof(BPI_MapEventHit_C_HiddenVolume) == 0x000001, "Wrong size on BPI_MapEventHit_C_HiddenVolume");
 static_assert(offsetof(BPI_MapEventHit_C_HiddenVolume, Hidden) == 0x000000, "Member 'BPI_MapEventHit_C_HiddenVolume::Hidden' has a wrong offset!");
 
-// Function BPI_MapEventHit.BPI_MapEventHit_C.DebugView
+// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitActivate
 // 0x0001 (0x0001 - 0x0000)
-struct BPI_MapEventHit_C_DebugView final
+struct BPI_MapEventHit_C_EventHitActivate final
 {
 public:
-	bool                                          Bool;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPI_MapEventHit_C_DebugView) == 0x000001, "Wrong alignment on BPI_MapEventHit_C_DebugView");
-static_assert(sizeof(BPI_MapEventHit_C_DebugView) == 0x000001, "Wrong size on BPI_MapEventHit_C_DebugView");
-static_assert(offsetof(BPI_MapEventHit_C_DebugView, Bool) == 0x000000, "Member 'BPI_MapEventHit_C_DebugView::Bool' has a wrong offset!");
+static_assert(alignof(BPI_MapEventHit_C_EventHitActivate) == 0x000001, "Wrong alignment on BPI_MapEventHit_C_EventHitActivate");
+static_assert(sizeof(BPI_MapEventHit_C_EventHitActivate) == 0x000001, "Wrong size on BPI_MapEventHit_C_EventHitActivate");
+static_assert(offsetof(BPI_MapEventHit_C_EventHitActivate, Active) == 0x000000, "Member 'BPI_MapEventHit_C_EventHitActivate::Active' has a wrong offset!");
 
 }
 

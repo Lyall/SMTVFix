@@ -21,346 +21,6 @@
 namespace SDK::Params
 {
 
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.BPI_SetOptionBrightnessActive
-// 0x0002 (0x0002 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive final
-{
-public:
-	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          NewParam;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive) == 0x000001, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive) == 0x000002, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive, Active) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive::Active' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive, NewParam) == 0x000001, "Member 'BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive::NewParam' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.BPI_MultiplyBrightness_SelectPP
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP final
-{
-public:
-	class APostProcessVolume*                     PostProcess;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NewParam;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP) == 0x000010, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP, PostProcess) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP::PostProcess' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP, NewParam) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP::NewParam' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnGardenEnvLevelLoaded
-// 0x0030 (0x0030 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        CallFunc_Array_Get_Item;                           // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8AFC[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded) == 0x000030, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_Array_Length_ReturnValue) == 0x00000C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_Array_Get_Item) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000028, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnEnvLevelLoaded_Base
-// 0x0150 (0x0150 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base final
-{
-public:
-	class ULevelStreaming*                        Level;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8AFD[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOptionFieldBrightnessPP_st            L_Info;                                            // 0x0010(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          L_Check;                                           // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8AFE[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APostProcessVolume*                     L_PostProcessVolume;                               // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ULevelStreaming*                        L_Level;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8AFF[0x2];                                     // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B00[0xF];                                     // 0x0071(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               CallFunc_GetDefaultGainColor_Color;                // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FOptionFieldBrightnessPP_st            K2Node_MakeStruct_OptionFieldBrightnessPP_st;      // 0x0090(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B01[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOptionFieldBrightnessPP_st            CallFunc_Array_Get_Item;                           // 0x00D0(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B02[0x3];                                     // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B03[0x3];                                     // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_GetActorsFromLevel_ReturnValue;           // 0x0110(0x0010)(ReferenceParm)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B04[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APostProcessVolume*                     K2Node_DynamicCast_As_____________;                // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B05[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base) == 0x000150, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Level) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Level' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, L_Info) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::L_Info' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, L_Check) == 0x000040, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::L_Check' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, L_PostProcessVolume) == 0x000048, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::L_PostProcessVolume' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, L_Level) == 0x000050, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::L_Level' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_bool_True_if_break_was_hit_Variable) == 0x000058, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Not_PreBool_ReturnValue) == 0x000059, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_int_Loop_Counter_Variable) == 0x00005C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Add_IntInt_ReturnValue) == 0x000060, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_int_Array_Index_Variable) == 0x000064, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_GetStreamingLevel_ReturnValue) == 0x000068, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000070, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_GetDefaultGainColor_Color) == 0x000080, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_GetDefaultGainColor_Color' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, K2Node_MakeStruct_OptionFieldBrightnessPP_st) == 0x000090, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::K2Node_MakeStruct_OptionFieldBrightnessPP_st' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Add_ReturnValue) == 0x0000C0, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_int_Array_Index_Variable_1) == 0x0000C4, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_int_Loop_Counter_Variable_1) == 0x0000C8, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Get_Item) == 0x0000D0, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Add_IntInt_ReturnValue_1) == 0x000100, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000104, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Length_ReturnValue) == 0x000108, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Less_IntInt_ReturnValue) == 0x00010C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_GetActorsFromLevel_ReturnValue) == 0x000110, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_GetActorsFromLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_BooleanAND_ReturnValue) == 0x000120, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Get_Item_1) == 0x000128, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, K2Node_DynamicCast_As_____________) == 0x000130, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::K2Node_DynamicCast_As_____________' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, K2Node_DynamicCast_bSuccess) == 0x000138, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Length_ReturnValue_1) == 0x00013C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Less_IntInt_ReturnValue_1) == 0x000140, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnBattleEnvLevelLoaded
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded final
-{
-public:
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded) == 0x000008, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnAreaEnvLevelLoaded
-// 0x0040 (0x0040 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded final
-{
-public:
-	int32                                         L_AreaID;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        CallFunc_Array_Get_Item;                           // 0x000C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B06[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue_1;          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsLevelVisible_ReturnValue;               // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded) == 0x000040, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, L_AreaID) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::L_AreaID' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_Array_Length_ReturnValue) == 0x000004, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_Array_Get_Item) == 0x00000C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, Temp_int_Loop_Counter_Variable) == 0x00001C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000020, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue_1) == 0x000030, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_NotEqual_NameName_ReturnValue) == 0x000038, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_NotEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_IsLevelVisible_ReturnValue) == 0x00003A, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_IsLevelVisible_ReturnValue' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnSpecialEnvLevelLoaded
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded final
-{
-public:
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded) == 0x000008, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnMainEnvLevelLoaded
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded final
-{
-public:
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded) == 0x000008, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.GetDefaultGainColor
-// 0x03C0 (0x03C0 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor final
-{
-public:
-	struct FOptionFieldBrightnessPP_st            Info;                                              // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector4                               Color;                                             // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0040(0x0010)(ReferenceParm)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_ProjectGameInstance_C> K2Node_DynamicCast_AsBPI_Project_Game_Instance;    // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EDaathTypeList                                CallFunc_BPI_GetDaathLightType_LightType;          // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CurrentMapIsDaath_ReturnValue;            // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B07[0x1];                                     // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_LightParam                         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0078(0x0318)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B08[0x3];                                     // 0x0391(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakColor_R;                             // 0x0394(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_G;                             // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_B;                             // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_A;                             // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B09[0xC];                                     // 0x03A4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               K2Node_MakeStruct_Vector4;                         // 0x03B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor) == 0x0003C0, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, Info) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::Info' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, Color) == 0x000030, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::Color' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000040, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_GetGameInstance_ReturnValue) == 0x000050, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, K2Node_DynamicCast_AsBPI_Project_Game_Instance) == 0x000058, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::K2Node_DynamicCast_AsBPI_Project_Game_Instance' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BPI_GetDaathLightType_LightType) == 0x000069, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BPI_GetDaathLightType_LightType' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_CurrentMapIsDaath_ReturnValue) == 0x00006A, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_CurrentMapIsDaath_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00006C, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_Array_Get_Item) == 0x000070, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_GetDataTableRowFromName_OutRow) == 0x000078, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000390, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BreakColor_R) == 0x000394, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BreakColor_G) == 0x000398, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BreakColor_B) == 0x00039C, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BreakColor_A) == 0x0003A0, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, K2Node_MakeStruct_Vector4) == 0x0003B0, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::K2Node_MakeStruct_Vector4' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.SetOptionBrightnessActive
-// 0x0002 (0x0002 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive final
-{
-public:
-	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive) == 0x000001, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive) == 0x000002, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive, Active) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive::Active' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000001, "Member 'BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ResetBrightness
-// 0x0080 (0x0080 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_ResetBrightness final
-{
-public:
-	struct FVector4                               L_Color;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FOptionFieldBrightnessPP_st            CallFunc_Array_Get_Item;                           // 0x0020(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B0A[0xF];                                     // 0x0051(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               CallFunc_GetDefaultGainColor_Color;                // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_ResetBrightness");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness) == 0x000080, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_ResetBrightness");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, L_Color) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::L_Color' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_Array_Length_ReturnValue) == 0x00001C, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_Array_Get_Item) == 0x000020, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_GetDefaultGainColor_Color) == 0x000060, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_GetDefaultGainColor_Color' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.MultiplyBrightness_SelectPP
-// 0x0050 (0x0050 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP final
-{
-public:
-	class APostProcessVolume*                     PostProcess;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         L_Rate;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         L_Value;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B0B[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector4                               K2Node_MakeStruct_Vector4;                         // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetBrightness_ReturnValue;                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B0C[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP) == 0x000050, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, PostProcess) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::PostProcess' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, L_Rate) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::L_Rate' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, L_Value) == 0x00000C, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::L_Value' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000014, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000018, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x00001C, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, K2Node_MakeStruct_Vector4) == 0x000020, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::K2Node_MakeStruct_Vector4' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000030, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_GetFloatValue_ReturnValue) == 0x000034, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_GetFloatValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_GetBrightness_ReturnValue) == 0x000038, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_GetBrightness_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00003C, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Clamp_ReturnValue) == 0x000040, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.MultiplyBrightness
-// 0x0050 (0x0050 - 0x0000)
-struct BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FOptionFieldBrightnessPP_st            CallFunc_Array_Get_Item;                           // 0x0010(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness");
-static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness) == 0x000050, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_Array_Length_ReturnValue) == 0x00000C, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_Array_Get_Item) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_IsValid_ReturnValue) == 0x000041, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
 // Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl
 // 0x0490 (0x0490 - 0x0000)
 struct BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl final
@@ -378,28 +38,28 @@ public:
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0034(0x0010)(ZeroConstructor, NoDestructor)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0044(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_8B0D[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B9A[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B0E[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B9B[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue_1;          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B0F[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B9C[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0074(0x0010)(ZeroConstructor, NoDestructor)
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue_2;          // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B10[0x3];                                     // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B9D[0x3];                                     // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0098(0x0010)(ZeroConstructor, NoDestructor)
 	struct FPrimaryAssetId                        CallFunc_Array_Get_Item;                           // 0x00A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B11[0x2];                                     // 0x00BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B9E[0x2];                                     // 0x00BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue_3;          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B12[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B9F[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -411,21 +71,21 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_NameName_ReturnValue_1;          // 0x00FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B13[0x2];                                     // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BA0[0x2];                                     // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue_4;          // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B14[0x3];                                     // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BA1[0x3];                                     // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Array_Get_Item_2;                         // 0x0114(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B15[0x4];                                     // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BA2[0x4];                                     // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMapSubLevelTable_ST                   CallFunc_GetDataTableRowFromName_OutRow;           // 0x0120(0x02A8)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B16[0x7];                                     // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BA3[0x7];                                     // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMapSubLevelGarden_ST                  CallFunc_Array_Get_Item_3;                         // 0x03D0(0x00B0)(HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0480(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0484(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8B17[0x3];                                     // 0x0485(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BA4[0x3];                                     // 0x0485(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x048C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -482,6 +142,346 @@ static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_Opti
 static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl, CallFunc_Less_IntInt_ReturnValue_3) == 0x000484, "Member 'BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl, CallFunc_Array_Add_ReturnValue) == 0x000488, "Member 'BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00048C, "Member 'BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.MultiplyBrightness
+// 0x0050 (0x0050 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FOptionFieldBrightnessPP_st            CallFunc_Array_Get_Item;                           // 0x0010(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness) == 0x000050, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_Array_Length_ReturnValue) == 0x00000C, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_Array_Get_Item) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness, CallFunc_IsValid_ReturnValue) == 0x000041, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.MultiplyBrightness_SelectPP
+// 0x0050 (0x0050 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP final
+{
+public:
+	class APostProcessVolume*                     PostProcess;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         L_Rate;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         L_Value;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BA5[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector4                               K2Node_MakeStruct_Vector4;                         // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetBrightness_ReturnValue;                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6BA6[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP) == 0x000050, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, PostProcess) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::PostProcess' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, L_Rate) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::L_Rate' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, L_Value) == 0x00000C, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::L_Value' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000014, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000018, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x00001C, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, K2Node_MakeStruct_Vector4) == 0x000020, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::K2Node_MakeStruct_Vector4' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000030, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_GetFloatValue_ReturnValue) == 0x000034, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_GetFloatValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_GetBrightness_ReturnValue) == 0x000038, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_GetBrightness_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00003C, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP, CallFunc_Clamp_ReturnValue) == 0x000040, "Member 'BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP::CallFunc_Clamp_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ResetBrightness
+// 0x0080 (0x0080 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_ResetBrightness final
+{
+public:
+	struct FVector4                               L_Color;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FOptionFieldBrightnessPP_st            CallFunc_Array_Get_Item;                           // 0x0020(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BA7[0xF];                                     // 0x0051(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               CallFunc_GetDefaultGainColor_Color;                // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_ResetBrightness");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness) == 0x000080, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_ResetBrightness");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, L_Color) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::L_Color' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, Temp_int_Array_Index_Variable) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_Array_Length_ReturnValue) == 0x00001C, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_Array_Get_Item) == 0x000020, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_GetDefaultGainColor_Color) == 0x000060, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_GetDefaultGainColor_Color' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_ResetBrightness, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'BPC_OptionFieldBrightnessCtrl_C_ResetBrightness::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.SetOptionBrightnessActive
+// 0x0002 (0x0002 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive final
+{
+public:
+	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive) == 0x000001, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive) == 0x000002, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive, Active) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive::Active' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000001, "Member 'BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.GetDefaultGainColor
+// 0x03C0 (0x03C0 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor final
+{
+public:
+	struct FOptionFieldBrightnessPP_st            Info;                                              // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector4                               Color;                                             // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0040(0x0010)(ReferenceParm)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_ProjectGameInstance_C> K2Node_DynamicCast_AsBPI_Project_Game_Instance;    // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EDaathTypeList                                CallFunc_BPI_GetDaathLightType_LightType;          // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CurrentMapIsDaath_ReturnValue;            // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BA8[0x1];                                     // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_LightParam                         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0078(0x0318)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BA9[0x3];                                     // 0x0391(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakColor_R;                             // 0x0394(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_G;                             // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_B;                             // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_A;                             // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6BAA[0xC];                                     // 0x03A4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               K2Node_MakeStruct_Vector4;                         // 0x03B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor) == 0x0003C0, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, Info) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::Info' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, Color) == 0x000030, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::Color' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000040, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_GetGameInstance_ReturnValue) == 0x000050, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, K2Node_DynamicCast_AsBPI_Project_Game_Instance) == 0x000058, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::K2Node_DynamicCast_AsBPI_Project_Game_Instance' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BPI_GetDaathLightType_LightType) == 0x000069, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BPI_GetDaathLightType_LightType' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_CurrentMapIsDaath_ReturnValue) == 0x00006A, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_CurrentMapIsDaath_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00006C, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_Array_Get_Item) == 0x000070, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_GetDataTableRowFromName_OutRow) == 0x000078, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000390, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BreakColor_R) == 0x000394, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BreakColor_R' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BreakColor_G) == 0x000398, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BreakColor_G' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BreakColor_B) == 0x00039C, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BreakColor_B' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, CallFunc_BreakColor_A) == 0x0003A0, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::CallFunc_BreakColor_A' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor, K2Node_MakeStruct_Vector4) == 0x0003B0, "Member 'BPC_OptionFieldBrightnessCtrl_C_GetDefaultGainColor::K2Node_MakeStruct_Vector4' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnMainEnvLevelLoaded
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded final
+{
+public:
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded) == 0x000008, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnMainEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnSpecialEnvLevelLoaded
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded final
+{
+public:
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded) == 0x000008, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnSpecialEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnAreaEnvLevelLoaded
+// 0x0040 (0x0040 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded final
+{
+public:
+	int32                                         L_AreaID;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        CallFunc_Array_Get_Item;                           // 0x000C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BAB[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue_1;          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsLevelVisible_ReturnValue;               // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded) == 0x000040, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, L_AreaID) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::L_AreaID' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_Array_Length_ReturnValue) == 0x000004, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_Array_Get_Item) == 0x00000C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, Temp_int_Loop_Counter_Variable) == 0x00001C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000020, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue_1) == 0x000030, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_NotEqual_NameName_ReturnValue) == 0x000038, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_NotEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded, CallFunc_IsLevelVisible_ReturnValue) == 0x00003A, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnAreaEnvLevelLoaded::CallFunc_IsLevelVisible_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnBattleEnvLevelLoaded
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded final
+{
+public:
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded) == 0x000008, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnBattleEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnEnvLevelLoaded_Base
+// 0x0150 (0x0150 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base final
+{
+public:
+	class ULevelStreaming*                        Level;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6BAC[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOptionFieldBrightnessPP_st            L_Info;                                            // 0x0010(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          L_Check;                                           // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BAD[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APostProcessVolume*                     L_PostProcessVolume;                               // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ULevelStreaming*                        L_Level;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BAE[0x2];                                     // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BAF[0xF];                                     // 0x0071(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               CallFunc_GetDefaultGainColor_Color;                // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FOptionFieldBrightnessPP_st            K2Node_MakeStruct_OptionFieldBrightnessPP_st;      // 0x0090(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6BB0[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOptionFieldBrightnessPP_st            CallFunc_Array_Get_Item;                           // 0x00D0(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BB1[0x3];                                     // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BB2[0x3];                                     // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_GetActorsFromLevel_ReturnValue;           // 0x0110(0x0010)(ReferenceParm)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BB3[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APostProcessVolume*                     K2Node_DynamicCast_As_____________;                // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BB4[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base) == 0x000010, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base) == 0x000150, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Level) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Level' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, L_Info) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::L_Info' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, L_Check) == 0x000040, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::L_Check' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, L_PostProcessVolume) == 0x000048, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::L_PostProcessVolume' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, L_Level) == 0x000050, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::L_Level' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_bool_True_if_break_was_hit_Variable) == 0x000058, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Not_PreBool_ReturnValue) == 0x000059, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_int_Loop_Counter_Variable) == 0x00005C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Add_IntInt_ReturnValue) == 0x000060, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_int_Array_Index_Variable) == 0x000064, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_GetStreamingLevel_ReturnValue) == 0x000068, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000070, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_GetDefaultGainColor_Color) == 0x000080, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_GetDefaultGainColor_Color' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, K2Node_MakeStruct_OptionFieldBrightnessPP_st) == 0x000090, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::K2Node_MakeStruct_OptionFieldBrightnessPP_st' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Add_ReturnValue) == 0x0000C0, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_int_Array_Index_Variable_1) == 0x0000C4, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, Temp_int_Loop_Counter_Variable_1) == 0x0000C8, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Get_Item) == 0x0000D0, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Add_IntInt_ReturnValue_1) == 0x000100, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000104, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Length_ReturnValue) == 0x000108, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Less_IntInt_ReturnValue) == 0x00010C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_GetActorsFromLevel_ReturnValue) == 0x000110, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_GetActorsFromLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_BooleanAND_ReturnValue) == 0x000120, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Get_Item_1) == 0x000128, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, K2Node_DynamicCast_As_____________) == 0x000130, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::K2Node_DynamicCast_As_____________' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, K2Node_DynamicCast_bSuccess) == 0x000138, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Array_Length_ReturnValue_1) == 0x00013C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base, CallFunc_Less_IntInt_ReturnValue_1) == 0x000140, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnGardenEnvLevelLoaded
+// 0x0030 (0x0030 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        CallFunc_Array_Get_Item;                           // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6BB5[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded) == 0x000030, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_Array_Length_ReturnValue) == 0x00000C, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_Array_Get_Item) == 0x000010, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded, CallFunc_GetStreamingLevel_ReturnValue) == 0x000028, "Member 'BPC_OptionFieldBrightnessCtrl_C_OnGardenEnvLevelLoaded::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.BPI_MultiplyBrightness_SelectPP
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP final
+{
+public:
+	class APostProcessVolume*                     PostProcess;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NewParam;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP) == 0x000008, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP) == 0x000010, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP, PostProcess) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP::PostProcess' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP, NewParam) == 0x000008, "Member 'BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP::NewParam' has a wrong offset!");
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.BPI_SetOptionBrightnessActive
+// 0x0002 (0x0002 - 0x0000)
+struct BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive final
+{
+public:
+	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          NewParam;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive) == 0x000001, "Wrong alignment on BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive");
+static_assert(sizeof(BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive) == 0x000002, "Wrong size on BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive, Active) == 0x000000, "Member 'BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive::Active' has a wrong offset!");
+static_assert(offsetof(BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive, NewParam) == 0x000001, "Member 'BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive::NewParam' has a wrong offset!");
 
 }
 

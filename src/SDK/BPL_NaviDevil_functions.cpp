@@ -17,20 +17,20 @@
 namespace SDK
 {
 
-// Function BPL_NaviDevil.BPL_NaviDevil_C.SetVisibility_NaviEffect
+// Function BPL_NaviDevil.BPL_NaviDevil_C.SetVisibilityNaviDevil
 // (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPL_NaviDevil_C::SetVisibility_NaviEffect(bool Visible, class UObject* __WorldContext)
+void UBPL_NaviDevil_C::SetVisibilityNaviDevil(bool Visible, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "SetVisibility_NaviEffect");
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "SetVisibilityNaviDevil");
 
-	Params::BPL_NaviDevil_C_SetVisibility_NaviEffect Parms{};
+	Params::BPL_NaviDevil_C_SetVisibilityNaviDevil Parms{};
 
 	Parms.Visible = Visible;
 	Parms.__WorldContext = __WorldContext;
@@ -39,19 +39,65 @@ void UBPL_NaviDevil_C::SetVisibility_NaviEffect(bool Visible, class UObject* __W
 }
 
 
-// Function BPL_NaviDevil.BPL_NaviDevil_C.DestroyNaviDevil_BeforeEvent
+// Function BPL_NaviDevil.BPL_NaviDevil_C.SpawnNaviDevil
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// E_NAVI_DEVIL                            NaviDevil                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPL_NaviDevil_C::DestroyNaviDevil_BeforeEvent(class UObject* __WorldContext)
+void UBPL_NaviDevil_C::SpawnNaviDevil(E_NAVI_DEVIL NaviDevil, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "DestroyNaviDevil_BeforeEvent");
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "SpawnNaviDevil");
 
-	Params::BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent Parms{};
+	Params::BPL_NaviDevil_C_SpawnNaviDevil Parms{};
+
+	Parms.NaviDevil = NaviDevil;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.ChangeNaviDevil_FromPawn
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_NAVI_DEVIL                            NaviDevil                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPL_NaviDevil_C::ChangeNaviDevil_FromPawn(class APawn* Pawn, E_NAVI_DEVIL NaviDevil, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "ChangeNaviDevil_FromPawn");
+
+	Params::BPL_NaviDevil_C_ChangeNaviDevil_FromPawn Parms{};
+
+	Parms.Pawn = Pawn;
+	Parms.NaviDevil = NaviDevil;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.DestroyNaviDevil
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPL_NaviDevil_C::DestroyNaviDevil(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "DestroyNaviDevil");
+
+	Params::BPL_NaviDevil_C_DestroyNaviDevil Parms{};
 
 	Parms.__WorldContext = __WorldContext;
 
@@ -59,19 +105,65 @@ void UBPL_NaviDevil_C::DestroyNaviDevil_BeforeEvent(class UObject* __WorldContex
 }
 
 
-// Function BPL_NaviDevil.BPL_NaviDevil_C.RespawnNaviDevil_AfterEvent
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Function BPL_NaviDevil.BPL_NaviDevil_C.ChangeNaviDevilScale
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// class AActor*                           Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_NAVI_DEVIL                            NaviType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPL_NaviDevil_C::RespawnNaviDevil_AfterEvent(class UObject* __WorldContext)
+void UBPL_NaviDevil_C::ChangeNaviDevilScale(class AActor* Pawn, E_NAVI_DEVIL NaviType, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "RespawnNaviDevil_AfterEvent");
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "ChangeNaviDevilScale");
 
-	Params::BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent Parms{};
+	Params::BPL_NaviDevil_C_ChangeNaviDevilScale Parms{};
+
+	Parms.Pawn = Pawn;
+	Parms.NaviType = NaviType;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.WarpNaviDevilBasePosition
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    CalcOnGround                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPL_NaviDevil_C::WarpNaviDevilBasePosition(bool CalcOnGround, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "WarpNaviDevilBasePosition");
+
+	Params::BPL_NaviDevil_C_WarpNaviDevilBasePosition Parms{};
+
+	Parms.CalcOnGround = CalcOnGround;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.LotNaviGimmickExist
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPL_NaviDevil_C::LotNaviGimmickExist(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "LotNaviGimmickExist");
+
+	Params::BPL_NaviDevil_C_LotNaviGimmickExist Parms{};
 
 	Parms.__WorldContext = __WorldContext;
 
@@ -105,19 +197,19 @@ void UBPL_NaviDevil_C::UpdateNaviMinimapIcon(E_NAVI_DEVIL Navi, bool FlagSwitch,
 }
 
 
-// Function BPL_NaviDevil.BPL_NaviDevil_C.LotNaviGimmickExist
+// Function BPL_NaviDevil.BPL_NaviDevil_C.RespawnNaviDevil_AfterEvent
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPL_NaviDevil_C::LotNaviGimmickExist(class UObject* __WorldContext)
+void UBPL_NaviDevil_C::RespawnNaviDevil_AfterEvent(class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "LotNaviGimmickExist");
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "RespawnNaviDevil_AfterEvent");
 
-	Params::BPL_NaviDevil_C_LotNaviGimmickExist Parms{};
+	Params::BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent Parms{};
 
 	Parms.__WorldContext = __WorldContext;
 
@@ -125,65 +217,19 @@ void UBPL_NaviDevil_C::LotNaviGimmickExist(class UObject* __WorldContext)
 }
 
 
-// Function BPL_NaviDevil.BPL_NaviDevil_C.WarpNaviDevilBasePosition
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    CalcOnGround                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPL_NaviDevil_C::WarpNaviDevilBasePosition(bool CalcOnGround, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "WarpNaviDevilBasePosition");
-
-	Params::BPL_NaviDevil_C_WarpNaviDevilBasePosition Parms{};
-
-	Parms.CalcOnGround = CalcOnGround;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.ChangeNaviDevilScale
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// E_NAVI_DEVIL                            NaviType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPL_NaviDevil_C::ChangeNaviDevilScale(class AActor* Pawn, E_NAVI_DEVIL NaviType, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "ChangeNaviDevilScale");
-
-	Params::BPL_NaviDevil_C_ChangeNaviDevilScale Parms{};
-
-	Parms.Pawn = Pawn;
-	Parms.NaviType = NaviType;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.DestroyNaviDevil
+// Function BPL_NaviDevil.BPL_NaviDevil_C.DestroyNaviDevil_BeforeEvent
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPL_NaviDevil_C::DestroyNaviDevil(class UObject* __WorldContext)
+void UBPL_NaviDevil_C::DestroyNaviDevil_BeforeEvent(class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "DestroyNaviDevil");
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "DestroyNaviDevil_BeforeEvent");
 
-	Params::BPL_NaviDevil_C_DestroyNaviDevil Parms{};
+	Params::BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent Parms{};
 
 	Parms.__WorldContext = __WorldContext;
 
@@ -191,66 +237,20 @@ void UBPL_NaviDevil_C::DestroyNaviDevil(class UObject* __WorldContext)
 }
 
 
-// Function BPL_NaviDevil.BPL_NaviDevil_C.ChangeNaviDevil_FromPawn
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// E_NAVI_DEVIL                            NaviDevil                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPL_NaviDevil_C::ChangeNaviDevil_FromPawn(class APawn* Pawn, E_NAVI_DEVIL NaviDevil, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "ChangeNaviDevil_FromPawn");
-
-	Params::BPL_NaviDevil_C_ChangeNaviDevil_FromPawn Parms{};
-
-	Parms.Pawn = Pawn;
-	Parms.NaviDevil = NaviDevil;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.SpawnNaviDevil
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// E_NAVI_DEVIL                            NaviDevil                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPL_NaviDevil_C::SpawnNaviDevil(E_NAVI_DEVIL NaviDevil, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "SpawnNaviDevil");
-
-	Params::BPL_NaviDevil_C_SpawnNaviDevil Parms{};
-
-	Parms.NaviDevil = NaviDevil;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.SetVisibilityNaviDevil
+// Function BPL_NaviDevil.BPL_NaviDevil_C.SetVisibility_NaviEffect
 // (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPL_NaviDevil_C::SetVisibilityNaviDevil(bool Visible, class UObject* __WorldContext)
+void UBPL_NaviDevil_C::SetVisibility_NaviEffect(bool Visible, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "SetVisibilityNaviDevil");
+		Func = StaticClass()->GetFunction("BPL_NaviDevil_C", "SetVisibility_NaviEffect");
 
-	Params::BPL_NaviDevil_C_SetVisibilityNaviDevil Parms{};
+	Params::BPL_NaviDevil_C_SetVisibility_NaviEffect Parms{};
 
 	Parms.Visible = Visible;
 	Parms.__WorldContext = __WorldContext;

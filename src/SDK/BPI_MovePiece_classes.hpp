@@ -21,13 +21,13 @@ namespace SDK
 class IBPI_MovePiece_C final : public IInterface
 {
 public:
-	void BPI_CallWhenRoomRotateEnd();
-	void BPI_CallWhenRoomRotateStart();
-	void BPI_HideMovePiece();
-	void BPI_ShowAgainMovePiece();
-	void BPI_MissedTakara(int32 SaveId, class AActor* TakaraActor, int32 AfterFlag, bool HaveLimitOver);
-	void BPI_GetMovePieceCollision(class UBoxComponent** Collision);
 	void BPI_InitMovePiece(const struct FPieceData& PieceData, bool IsBtlResult, bool IsForceGet, bool InfoOnly, int32 PrevNum);
+	void BPI_GetMovePieceCollision(class UBoxComponent** Collision);
+	void BPI_MissedTakara(int32 SaveId, class AActor* TakaraActor, int32 AfterFlag, bool HaveLimitOver);
+	void BPI_ShowAgainMovePiece();
+	void BPI_HideMovePiece();
+	void BPI_CallWhenRoomRotateStart();
+	void BPI_CallWhenRoomRotateEnd();
 
 public:
 	static class UClass* StaticClass()

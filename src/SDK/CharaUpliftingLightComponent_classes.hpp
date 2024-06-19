@@ -22,12 +22,12 @@ namespace SDK
 class UCharaUpliftingLightComponent_C final : public UPointLightComponent
 {
 public:
-	uint8                                         Pad_29DA[0x8];                                     // 0x0358(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_277C[0x8];                                     // 0x0358(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	float                                         LivingSec;                                         // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         DestroyRemainSec;                                  // 0x036C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsReserveDestroy;                                  // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_29DB[0x3];                                     // 0x0371(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_277D[0x3];                                     // 0x0371(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DestroyRemainSec_const;                            // 0x0374(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AppearRemainSec_const;                             // 0x0378(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -21,15 +21,15 @@ namespace SDK
 class UWB_TokyoMapUIBase_C final : public UUserWidget
 {
 public:
-	void PlaceNameHide();
-	void PlaceNameShow();
-	void HidePlaceNameByDataId(int32 DataId, bool* NoUse);
-	void ShowPlaceNameByDataId(int32 DataId, bool* NoUse);
-	void Create();
-	void ShowAllTarget();
-	void ShowAllPlace();
-	void EndView(bool* NewParam);
 	void StartView(bool First, bool* NewParam);
+	void EndView(bool* NewParam);
+	void ShowAllPlace();
+	void ShowAllTarget();
+	void Create();
+	void ShowPlaceNameByDataId(int32 DataId, bool* NoUse);
+	void HidePlaceNameByDataId(int32 DataId, bool* NoUse);
+	void PlaceNameShow();
+	void PlaceNameHide();
 
 public:
 	static class UClass* StaticClass()

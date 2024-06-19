@@ -17,40 +17,189 @@
 namespace SDK
 {
 
-// Function BP_EventBase.BP_EventBase_C.BI_EB_PlayStart
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_EventBase.BP_EventBase_C.ExecuteUbergraph_BP_EventBase
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::BI_EB_PlayStart(bool* NoUse)
+void ABP_EventBase_C::ExecuteUbergraph_BP_EventBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "BI_EB_PlayStart");
+		Func = Class->GetFunction("BP_EventBase_C", "ExecuteUbergraph_BP_EventBase");
 
-	Params::BP_EventBase_C_BI_EB_PlayStart Parms{};
+	Params::BP_EventBase_C_ExecuteUbergraph_BP_EventBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (NoUse != nullptr)
-		*NoUse = Parms.NoUse;
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.BI_EB_IsFinish
+// Function BP_EventBase.BP_EventBase_C.CE_DebugOutputTextTIme
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::CE_DebugOutputTextTIme()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "CE_DebugOutputTextTIme");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.EndPauseMovieEvent
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::EndPauseMovieEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "EndPauseMovieEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.StartPauseMovieEvent
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::StartPauseMovieEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "StartPauseMovieEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PauseMovie
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::PauseMovie()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PauseMovie");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.AutoPlaySE
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::AutoPlaySE(const class FString& SoundID, float Volume, float Pitch, float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "AutoPlaySE");
+
+	Params::BP_EventBase_C_AutoPlaySE Parms{};
+
+	Parms.SoundID = std::move(SoundID);
+	Parms.Volume = Volume;
+	Parms.Pitch = Pitch;
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ReceiveEndPlay");
+
+	Params::BP_EventBase_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ReceiveTick");
+
+	Params::BP_EventBase_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_EventBase_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::PlayStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.IsFinish
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    Param_Finish                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::BI_EB_IsFinish(bool* Param_Finish)
+void ABP_EventBase_C::IsFinish(bool* Param_Finish)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "BI_EB_IsFinish");
+		Func = Class->GetFunction("BP_EventBase_C", "IsFinish");
 
-	Params::BP_EventBase_C_BI_EB_IsFinish Parms{};
+	Params::BP_EventBase_C_IsFinish Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -59,482 +208,19 @@ void ABP_EventBase_C::BI_EB_IsFinish(bool* Param_Finish)
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.PlaySelectionSoundEnter
+// Function BP_EventBase.BP_EventBase_C.SetPosition
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    SoundFlag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::PlaySelectionSoundEnter(bool SoundFlag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlaySelectionSoundEnter");
-
-	Params::BP_EventBase_C_PlaySelectionSoundEnter Parms{};
-
-	Parms.SoundFlag = SoundFlag;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlaySelectionSoundSelect
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    SoundFlag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::PlaySelectionSoundSelect(bool SoundFlag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlaySelectionSoundSelect");
-
-	Params::BP_EventBase_C_PlaySelectionSoundSelect Parms{};
-
-	Parms.SoundFlag = SoundFlag;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.GetFinish
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    IsFinish                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::GetFinish(bool* IsFinish)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "GetFinish");
-
-	Params::BP_EventBase_C_GetFinish Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsFinish != nullptr)
-		*IsFinish = Parms.IsFinish;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.IsTalkPart
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool ABP_EventBase_C::IsTalkPart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "IsTalkPart");
-
-	Params::BP_EventBase_C_IsTalkPart Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetStaffSkip
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Use                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class AActor*                           Param_EventStaff                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetStaffSkip(bool Use, class AActor* Param_EventStaff)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetStaffSkip");
-
-	Params::BP_EventBase_C_SetStaffSkip Parms{};
-
-	Parms.Use = Use;
-	Parms.Param_EventStaff = Param_EventStaff;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetUniteSkip
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Use                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::SetUniteSkip(bool Use)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetUniteSkip");
-
-	Params::BP_EventBase_C_SetUniteSkip Parms{};
-
-	Parms.Use = Use;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugOutputTextTime
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugOutputTextTime()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugOutputTextTime");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.IsPauseMovieEvent
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool ABP_EventBase_C::IsPauseMovieEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "IsPauseMovieEvent");
-
-	Params::BP_EventBase_C_IsPauseMovieEvent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.IsPlayingMovieEvent
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool ABP_EventBase_C::IsPlayingMovieEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "IsPlayingMovieEvent");
-
-	Params::BP_EventBase_C_IsPlayingMovieEvent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugPrintAperture
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugPrintAperture()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugPrintAperture");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.InterpolationEvent
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Type                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::InterpolationEvent(int32 Type)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "InterpolationEvent");
-
-	Params::BP_EventBase_C_InterpolationEvent Parms{};
-
-	Parms.Type = Type;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeMovieLanguage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           Culture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ChangeMovieLanguage(const class FString& Culture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeMovieLanguage");
-
-	Params::BP_EventBase_C_ChangeMovieLanguage Parms{};
-
-	Parms.Culture = std::move(Culture);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeMapPostProcessEx
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMaterialInterface*               Param_PostProcessMaterial                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class FName>                     ParameterName                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<float>                           Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_EventBase_C::ChangeMapPostProcessEx(class UMaterialInterface* Param_PostProcessMaterial, TArray<class FName>& ParameterName, TArray<float>& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeMapPostProcessEx");
-
-	Params::BP_EventBase_C_ChangeMapPostProcessEx Parms{};
-
-	Parms.Param_PostProcessMaterial = Param_PostProcessMaterial;
-	Parms.ParameterName = std::move(ParameterName);
-	Parms.Value = std::move(Value);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	ParameterName = std::move(Parms.ParameterName);
-	Value = std::move(Parms.Value);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.RevertMapPostProcess
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::RevertMapPostProcess()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "RevertMapPostProcess");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeMapPostProcess
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Daath                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   DownIntensity                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TopIntensity                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ChangeMapPostProcess(int32 Daath, float DownIntensity, float TopIntensity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeMapPostProcess");
-
-	Params::BP_EventBase_C_ChangeMapPostProcess Parms{};
-
-	Parms.Daath = Daath;
-	Parms.DownIntensity = DownIntensity;
-	Parms.TopIntensity = TopIntensity;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetMotionBlur
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Switch                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::SetMotionBlur(bool Switch)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetMotionBlur");
-
-	Params::BP_EventBase_C_SetMotionBlur Parms{};
-
-	Parms.Switch = Switch;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.CheckPauseEvent
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool ABP_EventBase_C::CheckPauseEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "CheckPauseEvent");
-
-	Params::BP_EventBase_C_CheckPauseEvent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetFontAlpha
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   Alpha                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetFontAlpha(float Alpha)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetFontAlpha");
-
-	Params::BP_EventBase_C_SetFontAlpha Parms{};
-
-	Parms.Alpha = Alpha;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.FadeOutBattle
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::FadeOutBattle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "FadeOutBattle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeCueVolumeEase
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EOptionVolumeCategory                   Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ChangeCueVolumeEase(EOptionVolumeCategory Category, float Volume, float Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeCueVolumeEase");
-
-	Params::BP_EventBase_C_ChangeCueVolumeEase Parms{};
-
-	Parms.Category = Category;
-	Parms.Volume = Volume;
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.CheckMovieText
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::CheckMovieText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "CheckMovieText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.MovieText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   MessageID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::MovieText(int32 MessageID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "MovieText");
-
-	Params::BP_EventBase_C_MovieText Parms{};
-
-	Parms.MessageID = MessageID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.GetMessageWidget
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWB_Message_C*                    Param_MessageWidget                                    (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::GetMessageWidget(class UWB_Message_C** Param_MessageWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "GetMessageWidget");
-
-	Params::BP_EventBase_C_GetMessageWidget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_MessageWidget != nullptr)
-		*Param_MessageWidget = Parms.Param_MessageWidget;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugDrawSkip
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugDrawSkip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugDrawSkip");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.InitPlayerPosition
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           PositionActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::InitPlayerPosition(class AActor* PositionActor)
+void ABP_EventBase_C::SetPosition(class AActor* PositionActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "InitPlayerPosition");
+		Func = Class->GetFunction("BP_EventBase_C", "SetPosition");
 
-	Params::BP_EventBase_C_InitPlayerPosition Parms{};
+	Params::BP_EventBase_C_SetPosition Parms{};
 
 	Parms.PositionActor = PositionActor;
 
@@ -542,1619 +228,86 @@ void ABP_EventBase_C::InitPlayerPosition(class AActor* PositionActor)
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.SetSearchAssetPath
+// Function BP_EventBase.BP_EventBase_C.Initialize
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_VoiceAssetPath                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             Param_LipAssetPath                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UScriptMessageAsset*              Param_MessageAsset                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::SetSearchAssetPath(class FName Param_VoiceAssetPath, class FName Param_LipAssetPath)
+void ABP_EventBase_C::Initialize(class UScriptMessageAsset* Param_MessageAsset)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetSearchAssetPath");
+		Func = Class->GetFunction("BP_EventBase_C", "Initialize");
 
-	Params::BP_EventBase_C_SetSearchAssetPath Parms{};
+	Params::BP_EventBase_C_Initialize Parms{};
 
-	Parms.Param_VoiceAssetPath = Param_VoiceAssetPath;
-	Parms.Param_LipAssetPath = Param_LipAssetPath;
+	Parms.Param_MessageAsset = Param_MessageAsset;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.StartChooseSE
+// Function BP_EventBase.BP_EventBase_C.InitMessage
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USoundAtomCue*                    Sound                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::StartChooseSE(class USoundAtomCue* Sound)
+void ABP_EventBase_C::InitMessage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StartChooseSE");
-
-	Params::BP_EventBase_C_StartChooseSE Parms{};
-
-	Parms.Sound = Sound;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.StopCueENV
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    NoBGM                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::StopCueENV(float FadeTime, bool NoBGM)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StopCueENV");
-
-	Params::BP_EventBase_C_StopCueENV Parms{};
-
-	Parms.FadeTime = FadeTime;
-	Parms.NoBGM = NoBGM;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayCueENV
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayCueENV(const class FString& SoundID, float Volume, float Pitch, float Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayCueENV");
-
-	Params::BP_EventBase_C_PlayCueENV Parms{};
-
-	Parms.SoundID = std::move(SoundID);
-	Parms.Volume = Volume;
-	Parms.Pitch = Pitch;
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ClearTemporaryText
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::ClearTemporaryText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ClearTemporaryText");
+		Func = Class->GetFunction("BP_EventBase_C", "InitMessage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.DrawTemporaryText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   MessageID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::DrawTemporaryText(int32 MessageID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DrawTemporaryText");
-
-	Params::BP_EventBase_C_DrawTemporaryText Parms{};
-
-	Parms.MessageID = MessageID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.VisibleLevelFinal
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::VisibleLevelFinal()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "VisibleLevelFinal");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.VisibleLevelInit
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::VisibleLevelInit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "VisibleLevelInit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.AddVisibleLevel
+// Function BP_EventBase.BP_EventBase_C.SetMessageAsset
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             LevelName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UScriptMessageAsset*              NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::AddVisibleLevel(class FName LevelName, bool Visible)
+void ABP_EventBase_C::SetMessageAsset(class UScriptMessageAsset* NewParam)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "AddVisibleLevel");
+		Func = Class->GetFunction("BP_EventBase_C", "SetMessageAsset");
 
-	Params::BP_EventBase_C_AddVisibleLevel Parms{};
+	Params::BP_EventBase_C_SetMessageAsset Parms{};
 
-	Parms.LevelName = LevelName;
-	Parms.Visible = Visible;
+	Parms.NewParam = NewParam;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.ProcSelectionEx
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    SoundFlag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Enter                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::ProcSelectionEx(bool SoundFlag, int32* Return, bool* Enter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ProcSelectionEx");
-
-	Params::BP_EventBase_C_ProcSelectionEx Parms{};
-
-	Parms.SoundFlag = SoundFlag;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Return != nullptr)
-		*Return = Parms.Return;
-
-	if (Enter != nullptr)
-		*Enter = Parms.Enter;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.InitSelectionEx
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// E_EVENT_SELECTION_EX_TYPE               SelectType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SelectMax                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::InitSelectionEx(E_EVENT_SELECTION_EX_TYPE SelectType, int32 SelectMax)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "InitSelectionEx");
-
-	Params::BP_EventBase_C_InitSelectionEx Parms{};
-
-	Parms.SelectType = SelectType;
-	Parms.SelectMax = SelectMax;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetSkipEnable
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::SetSkipEnable(bool Enable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetSkipEnable");
-
-	Params::BP_EventBase_C_SetSkipEnable Parms{};
-
-	Parms.Enable = Enable;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.Set Event Pause
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Puase                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    Stop                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::Set_Event_Pause(bool Puase, bool Stop)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "Set Event Pause");
-
-	Params::BP_EventBase_C_Set_Event_Pause Parms{};
-
-	Parms.Puase = Puase;
-	Parms.Stop = Stop;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.GetTextFixTime
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   FixTime                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::GetTextFixTime(int32 Param_Index, float* FixTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "GetTextFixTime");
-
-	Params::BP_EventBase_C_GetTextFixTime Parms{};
-
-	Parms.Param_Index = Param_Index;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (FixTime != nullptr)
-		*FixTime = Parms.FixTime;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugTextTime
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugTextTime()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugTextTime");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugSlomoFunc
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugSlomoFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugSlomoFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetUniteDevils
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Accident                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   ResultDevil                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Onest                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Twond                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Threerd                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Fourth                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetUniteDevils(bool Accident, int32 ResultDevil, int32 Onest, int32 Twond, int32 Threerd, int32 Fourth)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetUniteDevils");
-
-	Params::BP_EventBase_C_SetUniteDevils Parms{};
-
-	Parms.Accident = Accident;
-	Parms.ResultDevil = ResultDevil;
-	Parms.Onest = Onest;
-	Parms.Twond = Twond;
-	Parms.Threerd = Threerd;
-	Parms.Fourth = Fourth;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeMaterialCore
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMeshComponent*                   Mesh                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UDataTable*                       DataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UseColor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FLinearColor                     Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ChangeMaterialCore(class UMeshComponent* Mesh, class UDataTable* DataTable, bool UseColor, const struct FLinearColor& Color)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeMaterialCore");
-
-	Params::BP_EventBase_C_ChangeMaterialCore Parms{};
-
-	Parms.Mesh = Mesh;
-	Parms.DataTable = DataTable;
-	Parms.UseColor = UseColor;
-	Parms.Color = std::move(Color);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.AttachMesh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             SrcMesh                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DestMesh                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DestBone                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::AttachMesh(class FName Tag, class FName SrcMesh, class FName DestMesh, class FName DestBone)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "AttachMesh");
-
-	Params::BP_EventBase_C_AttachMesh Parms{};
-
-	Parms.Tag = Tag;
-	Parms.SrcMesh = SrcMesh;
-	Parms.DestMesh = DestMesh;
-	Parms.DestBone = DestBone;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetIKEnable
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// E_IK_TYPE_LIST                          Type                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    Immediately                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetIKEnable(E_IK_TYPE_LIST Type, bool Enable, bool Immediately, class FName Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetIKEnable");
-
-	Params::BP_EventBase_C_SetIKEnable Parms{};
-
-	Parms.Type = Type;
-	Parms.Enable = Enable;
-	Parms.Immediately = Immediately;
-	Parms.Tag = Tag;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeColorFade
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FLinearColor                     FinalColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Additive                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::ChangeColorFade(const struct FLinearColor& FinalColor, float Time, bool Additive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeColorFade");
-
-	Params::BP_EventBase_C_ChangeColorFade Parms{};
-
-	Parms.FinalColor = std::move(FinalColor);
-	Parms.Time = Time;
-	Parms.Additive = Additive;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetColorFade
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FLinearColor                     FirstColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     FinalColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Additive                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::SetColorFade(const struct FLinearColor& FirstColor, const struct FLinearColor& FinalColor, float Time, bool Additive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetColorFade");
-
-	Params::BP_EventBase_C_SetColorFade Parms{};
-
-	Parms.FirstColor = std::move(FirstColor);
-	Parms.FinalColor = std::move(FinalColor);
-	Parms.Time = Time;
-	Parms.Additive = Additive;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeCueVolumeTime
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EOptionVolumeCategory                   Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ChangeCueVolumeTime(EOptionVolumeCategory Category, float Volume, float Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeCueVolumeTime");
-
-	Params::BP_EventBase_C_ChangeCueVolumeTime Parms{};
-
-	Parms.Category = Category;
-	Parms.Volume = Volume;
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.CheckSkip
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::CheckSkip(bool* Return)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "CheckSkip");
-
-	Params::BP_EventBase_C_CheckSkip Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Return != nullptr)
-		*Return = Parms.Return;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.EnterSkip
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::EnterSkip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "EnterSkip");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.StopDefaultBlink
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::StopDefaultBlink(class FName Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StopDefaultBlink");
-
-	Params::BP_EventBase_C_StopDefaultBlink Parms{};
-
-	Parms.Tag = Tag;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayDefaultBlink
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayDefaultBlink(class FName Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayDefaultBlink");
-
-	Params::BP_EventBase_C_PlayDefaultBlink Parms{};
-
-	Parms.Tag = Tag;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.GetEventTableItem
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FEventTableStrInt>        Table                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class FString                           Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    Find                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::GetEventTableItem(TArray<struct FEventTableStrInt>& Table, const class FString& Object, bool* Find, int32* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "GetEventTableItem");
-
-	Params::BP_EventBase_C_GetEventTableItem Parms{};
-
-	Parms.Table = std::move(Table);
-	Parms.Object = std::move(Object);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Table = std::move(Parms.Table);
-
-	if (Find != nullptr)
-		*Find = Parms.Find;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ClearCharaForcedLOD
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::ClearCharaForcedLOD()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ClearCharaForcedLOD");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetCharaForcedLOD
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::SetCharaForcedLOD()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetCharaForcedLOD");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.MakeRateTable
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::MakeRateTable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "MakeRateTable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayMotionMob
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Param_PlayRate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayMotionMob(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float OffsetTime, float EventTime, float Param_PlayRate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayMotionMob");
-
-	Params::BP_EventBase_C_PlayMotionMob Parms{};
-
-	Parms.Tag = std::move(Tag);
-	Parms.AnimSequence = std::move(AnimSequence);
-	Parms.IsLoop = IsLoop;
-	Parms.OffsetTime = OffsetTime;
-	Parms.EventTime = EventTime;
-	Parms.Param_PlayRate = Param_PlayRate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.Reflesh
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::Reflesh()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "Reflesh");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ClearBindingActors
+// Function BP_EventBase.BP_EventBase_C.StepFirst
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FName>                     BindingActors                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_EventBase_C::ClearBindingActors(TArray<class FName>& BindingActors)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ClearBindingActors");
-
-	Params::BP_EventBase_C_ClearBindingActors Parms{};
-
-	Parms.BindingActors = std::move(BindingActors);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	BindingActors = std::move(Parms.BindingActors);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetBindingActors
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FName>                     BindingActors                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class AActor*                           EventCtrl                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetBindingActors(TArray<class FName>& BindingActors, class AActor* EventCtrl)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetBindingActors");
-
-	Params::BP_EventBase_C_SetBindingActors Parms{};
-
-	Parms.BindingActors = std::move(BindingActors);
-	Parms.EventCtrl = EventCtrl;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	BindingActors = std::move(Parms.BindingActors);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetNormalUnite
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   OnestDevilID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TwondDevilID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ResultId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Accident                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::SetNormalUnite(int32 OnestDevilID, int32 TwondDevilID, int32 ResultId, bool Accident)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetNormalUnite");
-
-	Params::BP_EventBase_C_SetNormalUnite Parms{};
-
-	Parms.OnestDevilID = OnestDevilID;
-	Parms.TwondDevilID = TwondDevilID;
-	Parms.ResultId = ResultId;
-	Parms.Accident = Accident;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.EventFlagSetUp
-// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString                           Param_EventId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    Last                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::EventFlagSetUp(const class FString& Param_EventId, bool Last)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "EventFlagSetUp");
-
-	Params::BP_EventBase_C_EventFlagSetUp Parms{};
-
-	Parms.Param_EventId = std::move(Param_EventId);
-	Parms.Last = Last;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.StopShake
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::StopShake()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StopShake");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayShake
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::PlayShake()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayShake");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetRate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           ObjectName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// float                                   Rate                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetRate(const class FString& ObjectName, float Rate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetRate");
-
-	Params::BP_EventBase_C_SetRate Parms{};
-
-	Parms.ObjectName = std::move(ObjectName);
-	Parms.Rate = Rate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.GetRate
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FString                           ObjectName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// float                                   Rate                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::GetRate(const class FString& ObjectName, float* Rate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "GetRate");
-
-	Params::BP_EventBase_C_GetRate Parms{};
-
-	Parms.ObjectName = std::move(ObjectName);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Rate != nullptr)
-		*Rate = Parms.Rate;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SimpleTextOff
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::SimpleTextOff()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SimpleTextOff");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SimpleTextOn
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SimpleTextOn(int32 ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SimpleTextOn");
-
-	Params::BP_EventBase_C_SimpleTextOn Parms{};
-
-	Parms.ID = ID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugPrintRate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugPrintRate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugPrintRate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeCueVolume
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EOptionVolumeCategory                   Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ChangeCueVolume(EOptionVolumeCategory Category, float Volume)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeCueVolume");
-
-	Params::BP_EventBase_C_ChangeCueVolume Parms{};
-
-	Parms.Category = Category;
-	Parms.Volume = Volume;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.StopCueBGM
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    NoBGM                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::StopCueBGM(float FadeTime, bool NoBGM)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StopCueBGM");
-
-	Params::BP_EventBase_C_StopCueBGM Parms{};
-
-	Parms.FadeTime = FadeTime;
-	Parms.NoBGM = NoBGM;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayCueBGM
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayCueBGM(const class FString& SoundID, float Volume, float Pitch, float Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayCueBGM");
-
-	Params::BP_EventBase_C_PlayCueBGM Parms{};
-
-	Parms.SoundID = std::move(SoundID);
-	Parms.Volume = Volume;
-	Parms.Pitch = Pitch;
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugPrintTime
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugPrintTime()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugPrintTime");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.CutFinalize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           LevelSelf                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::CutFinalize(class AActor* LevelSelf)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "CutFinalize");
-
-	Params::BP_EventBase_C_CutFinalize Parms{};
-
-	Parms.LevelSelf = LevelSelf;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayMotionProp
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Param_PlayRate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayMotionProp(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float OffsetTime, float EventTime, float Param_PlayRate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayMotionProp");
-
-	Params::BP_EventBase_C_PlayMotionProp Parms{};
-
-	Parms.Tag = std::move(Tag);
-	Parms.AnimSequence = std::move(AnimSequence);
-	Parms.IsLoop = IsLoop;
-	Parms.OffsetTime = OffsetTime;
-	Parms.EventTime = EventTime;
-	Parms.Param_PlayRate = Param_PlayRate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayMotionConv
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Param_PlayRate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayMotionConv(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime, float Param_PlayRate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayMotionConv");
-
-	Params::BP_EventBase_C_PlayMotionConv Parms{};
-
-	Parms.Tag = std::move(Tag);
-	Parms.AnimSequence = std::move(AnimSequence);
-	Parms.IsLoop = IsLoop;
-	Parms.BlendTime = BlendTime;
-	Parms.OffsetTime = OffsetTime;
-	Parms.EventTime = EventTime;
-	Parms.Param_PlayRate = Param_PlayRate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetVolumeCueLoop
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetVolumeCueLoop(const class FString& SoundID, float Volume)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetVolumeCueLoop");
-
-	Params::BP_EventBase_C_SetVolumeCueLoop Parms{};
-
-	Parms.SoundID = std::move(SoundID);
-	Parms.Volume = Volume;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.StopCueLoop
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::StopCueLoop(const class FString& SoundID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StopCueLoop");
-
-	Params::BP_EventBase_C_StopCueLoop Parms{};
-
-	Parms.SoundID = std::move(SoundID);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayCueLoop
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayCueLoop(const class FString& SoundID, float Volume, float Pitch)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayCueLoop");
-
-	Params::BP_EventBase_C_PlayCueLoop Parms{};
-
-	Parms.SoundID = std::move(SoundID);
-	Parms.Volume = Volume;
-	Parms.Pitch = Pitch;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayCue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayCue(const class FString& SoundID, float Volume, float Pitch, float Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayCue");
-
-	Params::BP_EventBase_C_PlayCue Parms{};
-
-	Parms.SoundID = std::move(SoundID);
-	Parms.Volume = Volume;
-	Parms.Pitch = Pitch;
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.Set Force End
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::Set_Force_End()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "Set Force End");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugForceFinish
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugForceFinish()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugForceFinish");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ResetBlurInvalid
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::ResetBlurInvalid()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ResetBlurInvalid");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetBlurInvalid
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::SetBlurInvalid()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetBlurInvalid");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugAddSoundKey
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugAddSoundKey()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugAddSoundKey");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugOpenWindow
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugOpenWindow()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugOpenWindow");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ClearMaterial
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ClearMaterial(class FName Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ClearMaterial");
-
-	Params::BP_EventBase_C_ClearMaterial Parms{};
-
-	Parms.Tag = Tag;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ChangeMaterial
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UDataTable*                       Table                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ChangeMaterial(class FName Tag, class UDataTable* Table)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeMaterial");
-
-	Params::BP_EventBase_C_ChangeMaterial Parms{};
-
-	Parms.Tag = Tag;
-	Parms.Table = Table;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.AutoMotion
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::AutoMotion(class FName Tag, bool IsLoop, float BlendTime, float OffsetTime, float EventTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "AutoMotion");
-
-	Params::BP_EventBase_C_AutoMotion Parms{};
-
-	Parms.Tag = Tag;
-	Parms.IsLoop = IsLoop;
-	Parms.BlendTime = BlendTime;
-	Parms.OffsetTime = OffsetTime;
-	Parms.EventTime = EventTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.AddSelection
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UImage*                           Image                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_EventLookAt_C*                LookAt                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             Facial                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequence*                    Motion                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AEmitter*                         Emitter                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   NextStep                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// E_ACTION_MAPPING_TYPE                   InputKey                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AAtomSound*>               VoiceSE                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_EventBase_C::AddSelection(class UImage* Image, class ABP_EventLookAt_C* LookAt, class FName Facial, class UAnimSequence* Motion, class AEmitter* Emitter, int32 NextStep, E_ACTION_MAPPING_TYPE InputKey, TArray<class AAtomSound*>& VoiceSE)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "AddSelection");
-
-	Params::BP_EventBase_C_AddSelection Parms{};
-
-	Parms.Image = Image;
-	Parms.LookAt = LookAt;
-	Parms.Facial = Facial;
-	Parms.Motion = Motion;
-	Parms.Emitter = Emitter;
-	Parms.NextStep = NextStep;
-	Parms.InputKey = InputKey;
-	Parms.VoiceSE = std::move(VoiceSE);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	VoiceSE = std::move(Parms.VoiceSE);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ProcSelection
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsEnd                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ProcSelection(float DeltaSeconds, bool* IsEnd, int32* Next)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ProcSelection");
-
-	Params::BP_EventBase_C_ProcSelection Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsEnd != nullptr)
-		*IsEnd = Parms.IsEnd;
-
-	if (Next != nullptr)
-		*Next = Parms.Next;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.InitSelection
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AAtomSound*                       BaseVoiceSE                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::InitSelection(class FName CharaTag, class AAtomSound* BaseVoiceSE)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "InitSelection");
-
-	Params::BP_EventBase_C_InitSelection Parms{};
-
-	Parms.CharaTag = CharaTag;
-	Parms.BaseVoiceSE = BaseVoiceSE;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C._GetSelectionVoiceArray
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class AAtomSound*>               VoiceArray                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class AAtomSound*                       Voice                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::_GetSelectionVoiceArray(TArray<class AAtomSound*>& VoiceArray, class AAtomSound** Voice)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "_GetSelectionVoiceArray");
-
-	Params::BP_EventBase_C__GetSelectionVoiceArray Parms{};
-
-	Parms.VoiceArray = std::move(VoiceArray);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	VoiceArray = std::move(Parms.VoiceArray);
-
-	if (Voice != nullptr)
-		*Voice = Parms.Voice;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetSelectionLRVoiceRight
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AAtomSound*                       Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetSelectionLRVoiceRight(class AAtomSound* Voice)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetSelectionLRVoiceRight");
-
-	Params::BP_EventBase_C_SetSelectionLRVoiceRight Parms{};
-
-	Parms.Voice = Voice;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetSelectionLRVoiceLeft
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AAtomSound*                       Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetSelectionLRVoiceLeft(class AAtomSound* Voice)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetSelectionLRVoiceLeft");
-
-	Params::BP_EventBase_C_SetSelectionLRVoiceLeft Parms{};
-
-	Parms.Voice = Voice;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetSelectionLRVoiceBase
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AAtomSound*                       Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetSelectionLRVoiceBase(class AAtomSound* Voice)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetSelectionLRVoiceBase");
-
-	Params::BP_EventBase_C_SetSelectionLRVoiceBase Parms{};
-
-	Parms.Voice = Voice;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ProcSelectionLR
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsEnd                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::ProcSelectionLR(float DeltaSeconds, bool* IsEnd, int32* Next)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ProcSelectionLR");
-
-	Params::BP_EventBase_C_ProcSelectionLR Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsEnd != nullptr)
-		*IsEnd = Parms.IsEnd;
-
-	if (Next != nullptr)
-		*Next = Parms.Next;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.InitSelectionLR
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ACharaBase_C*                     Chara                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UImage*                           LeftImage                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UImage*                           RightImage                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_EventLookAt_C*                LeftLookAt                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_EventLookAt_C*                RightLookAt                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AEmitter*                         LeftEffect                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AEmitter*                         RightEffect                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   LeftGoToStep                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   RightGoToStep                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// E_ACTION_MAPPING_TYPE                   LeftKey                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// E_ACTION_MAPPING_TYPE                   RightKey                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::InitSelectionLR(class ACharaBase_C* Chara, class UImage* LeftImage, class UImage* RightImage, class ABP_EventLookAt_C* LeftLookAt, class ABP_EventLookAt_C* RightLookAt, class AEmitter* LeftEffect, class AEmitter* RightEffect, int32 LeftGoToStep, int32 RightGoToStep, E_ACTION_MAPPING_TYPE LeftKey, E_ACTION_MAPPING_TYPE RightKey)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "InitSelectionLR");
-
-	Params::BP_EventBase_C_InitSelectionLR Parms{};
-
-	Parms.Chara = Chara;
-	Parms.LeftImage = LeftImage;
-	Parms.RightImage = RightImage;
-	Parms.LeftLookAt = LeftLookAt;
-	Parms.RightLookAt = RightLookAt;
-	Parms.LeftEffect = LeftEffect;
-	Parms.RightEffect = RightEffect;
-	Parms.LeftGoToStep = LeftGoToStep;
-	Parms.RightGoToStep = RightGoToStep;
-	Parms.LeftKey = LeftKey;
-	Parms.RightKey = RightKey;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugPrintInfo
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           UserData                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::DebugPrintInfo(const class FString& UserData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugPrintInfo");
-
-	Params::BP_EventBase_C_DebugPrintInfo Parms{};
-
-	Parms.UserData = std::move(UserData);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugFlagControl
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FName                             Left                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    L_Flag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class FName                             Right                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    R_Flag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class FName                             Up                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    U_Flag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class FName                             Down                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    D_Flag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    NoChangeScene                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    NoAutoFade                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    PlayerHidden                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   Param_MaxFPS                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::DebugFlagControl(const class FText& Text, class FName Left, bool L_Flag, class FName Right, bool R_Flag, class FName Up, bool U_Flag, class FName Down, bool D_Flag, bool* Next)
+void ABP_EventBase_C::StepFirst(const class FString& Param_EventId, bool NoBGM, bool NoChangeScene, bool NoAutoFade, bool PlayerHidden, int32 Param_MaxFPS, bool* Next)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugFlagControl");
+		Func = Class->GetFunction("BP_EventBase_C", "StepFirst");
 
-	Params::BP_EventBase_C_DebugFlagControl Parms{};
+	Params::BP_EventBase_C_StepFirst Parms{};
 
-	Parms.Text = std::move(Text);
-	Parms.Left = Left;
-	Parms.L_Flag = L_Flag;
-	Parms.Right = Right;
-	Parms.R_Flag = R_Flag;
-	Parms.Up = Up;
-	Parms.U_Flag = U_Flag;
-	Parms.Down = Down;
-	Parms.D_Flag = D_Flag;
+	Parms.Param_EventId = std::move(Param_EventId);
+	Parms.NoBGM = NoBGM;
+	Parms.NoChangeScene = NoChangeScene;
+	Parms.NoAutoFade = NoAutoFade;
+	Parms.PlayerHidden = PlayerHidden;
+	Parms.Param_MaxFPS = Param_MaxFPS;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -2163,514 +316,121 @@ void ABP_EventBase_C::DebugFlagControl(const class FText& Text, class FName Left
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.DebugTextOff
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DebugTextOff()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugTextOff");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DebugTextOn
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ABP_EventBase_C::DebugTextOn(const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DebugTextOn");
-
-	Params::BP_EventBase_C_DebugTextOn Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.GetInput
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// E_ACTION_MAPPING_TYPE                   Action                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::GetInput(E_ACTION_MAPPING_TYPE Action, bool* Return)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "GetInput");
-
-	Params::BP_EventBase_C_GetInput Parms{};
-
-	Parms.Action = Action;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Return != nullptr)
-		*Return = Parms.Return;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.TerminateSE
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::TerminateSE()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "TerminateSE");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.TerminateVoice
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::TerminateVoice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "TerminateVoice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.UpdateVoice
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::UpdateVoice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "UpdateVoice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayVoice
+// Function BP_EventBase.BP_EventBase_C.StepFinal
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsFade                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    AutoFadeOut                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    NoResetVolume                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    NoStopPrioBGM                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::PlayVoice(class FName Voice, class FName CharaTag)
+void ABP_EventBase_C::StepFinal(bool IsFade, bool AutoFadeOut, bool NoResetVolume, bool NoStopPrioBGM)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayVoice");
+		Func = Class->GetFunction("BP_EventBase_C", "StepFinal");
 
-	Params::BP_EventBase_C_PlayVoice Parms{};
+	Params::BP_EventBase_C_StepFinal Parms{};
 
-	Parms.Voice = Voice;
-	Parms.CharaTag = CharaTag;
+	Parms.IsFade = IsFade;
+	Parms.AutoFadeOut = AutoFadeOut;
+	Parms.NoResetVolume = NoResetVolume;
+	Parms.NoStopPrioBGM = NoStopPrioBGM;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.ChangeVolume
+// Function BP_EventBase.BP_EventBase_C.Set Activate
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EGameVolumeCategory                     Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_Activate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::ChangeVolume(EGameVolumeCategory Category, float Volume)
+void ABP_EventBase_C::Set_Activate(bool Param_Activate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangeVolume");
+		Func = Class->GetFunction("BP_EventBase_C", "Set Activate");
 
-	Params::BP_EventBase_C_ChangeVolume Parms{};
+	Params::BP_EventBase_C_Set_Activate Parms{};
 
-	Parms.Category = Category;
-	Parms.Volume = Volume;
+	Parms.Param_Activate = Param_Activate;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.StopPriorityBGM
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::StopPriorityBGM(float FadeTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StopPriorityBGM");
-
-	Params::BP_EventBase_C_StopPriorityBGM Parms{};
-
-	Parms.FadeTime = FadeTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayPriorityBGM
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayPriorityBGM(class FName SoundID, float FadeTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayPriorityBGM");
-
-	Params::BP_EventBase_C_PlayPriorityBGM Parms{};
-
-	Parms.SoundID = SoundID;
-	Parms.FadeTime = FadeTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayBGM
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayBGM(class FName SoundID, float FadeTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayBGM");
-
-	Params::BP_EventBase_C_PlayBGM Parms{};
-
-	Parms.SoundID = SoundID;
-	Parms.FadeTime = FadeTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.Facial
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             Param_Facial                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::Facial(class FName Tag, class FName Param_Facial)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "Facial");
-
-	Params::BP_EventBase_C_Facial Parms{};
-
-	Parms.Tag = Tag;
-	Parms.Param_Facial = Param_Facial;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayMotionID
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlayMotionID(class FName Tag, class UAnimSequenceBase* AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayMotionID");
-
-	Params::BP_EventBase_C_PlayMotionID Parms{};
-
-	Parms.Tag = Tag;
-	Parms.AnimSequence = AnimSequence;
-	Parms.IsLoop = IsLoop;
-	Parms.BlendTime = BlendTime;
-	Parms.OffsetTime = OffsetTime;
-	Parms.EventTime = EventTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SelectBranch
+// Function BP_EventBase.BP_EventBase_C.PlaySequence
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Select1                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Select2                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Select3                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Select4                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ALevelSequenceActor*              Sequencer                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ACineCameraActor*                 CineCamera                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FMovieSceneObjectBindingID       BindID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_FadeEnd                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Play                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::SelectBranch(int32 Select1, int32 Select2, int32 Select3, int32 Select4, int32* Return)
+void ABP_EventBase_C::PlaySequence(class ALevelSequenceActor* Sequencer, class ACineCameraActor* CineCamera, const struct FMovieSceneObjectBindingID& BindID, bool Param_FadeEnd, bool* Play)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SelectBranch");
+		Func = Class->GetFunction("BP_EventBase_C", "PlaySequence");
 
-	Params::BP_EventBase_C_SelectBranch Parms{};
+	Params::BP_EventBase_C_PlaySequence Parms{};
 
-	Parms.Select1 = Select1;
-	Parms.Select2 = Select2;
-	Parms.Select3 = Select3;
-	Parms.Select4 = Select4;
+	Parms.Sequencer = Sequencer;
+	Parms.CineCamera = CineCamera;
+	Parms.BindID = std::move(BindID);
+	Parms.Param_FadeEnd = Param_FadeEnd;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Return != nullptr)
-		*Return = Parms.Return;
+	if (Play != nullptr)
+		*Play = Parms.Play;
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.LookAtChara
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             TargetTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             Socket                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Immediately                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::LookAtChara(class FName CharaTag, class FName TargetTag, class FName Socket, bool Immediately)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "LookAtChara");
-
-	Params::BP_EventBase_C_LookAtChara Parms{};
-
-	Parms.CharaTag = CharaTag;
-	Parms.TargetTag = TargetTag;
-	Parms.Socket = Socket;
-	Parms.Immediately = Immediately;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.LookAtActor
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             TargetTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Immediately                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::LookAtActor(class FName CharaTag, class FName TargetTag, bool Immediately)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "LookAtActor");
-
-	Params::BP_EventBase_C_LookAtActor Parms{};
-
-	Parms.CharaTag = CharaTag;
-	Parms.TargetTag = TargetTag;
-	Parms.Immediately = Immediately;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayMotion
+// Function BP_EventBase.BP_EventBase_C.WaitSequence
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    PrintTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::PlayMotion(class FName Tag, class FName AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime)
+void ABP_EventBase_C::WaitSequence(bool PrintTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayMotion");
+		Func = Class->GetFunction("BP_EventBase_C", "WaitSequence");
 
-	Params::BP_EventBase_C_PlayMotion Parms{};
+	Params::BP_EventBase_C_WaitSequence Parms{};
 
-	Parms.Tag = Tag;
-	Parms.AnimSequence = AnimSequence;
-	Parms.IsLoop = IsLoop;
-	Parms.BlendTime = BlendTime;
-	Parms.OffsetTime = OffsetTime;
-	Parms.EventTime = EventTime;
+	Parms.PrintTime = PrintTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.PlaySE
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::PlaySE(class FName SoundID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlaySE");
-
-	Params::BP_EventBase_C_PlaySE Parms{};
-
-	Parms.SoundID = SoundID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetDummyMessage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetDummyMessage(float StartTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetDummyMessage");
-
-	Params::BP_EventBase_C_SetDummyMessage Parms{};
-
-	Parms.StartTime = StartTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.OneSequencer
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::OneSequencer()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "OneSequencer");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.EndSequence
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::EndSequence()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "EndSequence");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.IsEndSequence
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    End                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::IsEndSequence(bool* End)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "IsEndSequence");
-
-	Params::BP_EventBase_C_IsEndSequence Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (End != nullptr)
-		*End = Parms.End;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetSelectMessage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   MessageID_1                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   MessageID_2                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   MessageID_3                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   MessageID_4                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetSelectMessage(int32 MessageID_1, int32 MessageID_2, int32 MessageID_3, int32 MessageID_4)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetSelectMessage");
-
-	Params::BP_EventBase_C_SetSelectMessage Parms{};
-
-	Parms.MessageID_1 = MessageID_1;
-	Parms.MessageID_2 = MessageID_2;
-	Parms.MessageID_3 = MessageID_3;
-	Parms.MessageID_4 = MessageID_4;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.SetMessage
+// Function BP_EventBase.BP_EventBase_C.DrawText
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   MessageID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_SkipBlock                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    System                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ForceAuto                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   Param_AutoDelay                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::SetMessage(int32 MessageID, float StartTime, bool Param_SkipBlock, bool System, class FName CharaTag, bool ForceAuto, float Param_AutoDelay)
+void ABP_EventBase_C::DrawText(int32 MessageID, bool System, class FName CharaTag, bool ForceAuto, float Param_AutoDelay)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetMessage");
+		Func = Class->GetFunction("BP_EventBase_C", "DrawText");
 
-	Params::BP_EventBase_C_SetMessage Parms{};
+	Params::BP_EventBase_C_DrawText Parms{};
 
 	Parms.MessageID = MessageID;
-	Parms.StartTime = StartTime;
-	Parms.Param_SkipBlock = Param_SkipBlock;
 	Parms.System = System;
 	Parms.CharaTag = CharaTag;
 	Parms.ForceAuto = ForceAuto;
@@ -2680,45 +440,78 @@ void ABP_EventBase_C::SetMessage(int32 MessageID, float StartTime, bool Param_Sk
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.IsNextSelect
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_EventBase.BP_EventBase_C.ClearText
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    VoiceOnlyStop                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::IsNextSelect(bool* Return)
+void ABP_EventBase_C::ClearText(bool VoiceOnlyStop)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "IsNextSelect");
+		Func = Class->GetFunction("BP_EventBase_C", "ClearText");
 
-	Params::BP_EventBase_C_IsNextSelect Parms{};
+	Params::BP_EventBase_C_ClearText Parms{};
+
+	Parms.VoiceOnlyStop = VoiceOnlyStop;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Return != nullptr)
-		*Return = Parms.Return;
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.IsNextMessage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function BP_EventBase.BP_EventBase_C.DrawSelect
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_EventBase_C::IsNextMessage(bool* Next)
+void ABP_EventBase_C::DrawSelect()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "IsNextMessage");
+		Func = Class->GetFunction("BP_EventBase_C", "DrawSelect");
 
-	Params::BP_EventBase_C_IsNextMessage Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangePlayRate
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Param_PlayRate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangePlayRate(float Param_PlayRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangePlayRate");
+
+	Params::BP_EventBase_C_ChangePlayRate Parms{};
+
+	Parms.Param_PlayRate = Param_PlayRate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.GetNextMessageTime
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   NextTime                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::GetNextMessageTime(float* NextTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "GetNextMessageTime");
+
+	Params::BP_EventBase_C_GetNextMessageTime Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Next != nullptr)
-		*Next = Parms.Next;
+	if (NextTime != nullptr)
+		*NextTime = Parms.NextTime;
 }
 
 
@@ -2763,100 +556,71 @@ void ABP_EventBase_C::GetNextMessageID(int32* MessageID, bool* Param_SkipBlock, 
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.GetNextMessageTime
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_EventBase.BP_EventBase_C.IsNextMessage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                                   NextTime                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::GetNextMessageTime(float* NextTime)
+void ABP_EventBase_C::IsNextMessage(bool* Next)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "GetNextMessageTime");
+		Func = Class->GetFunction("BP_EventBase_C", "IsNextMessage");
 
-	Params::BP_EventBase_C_GetNextMessageTime Parms{};
+	Params::BP_EventBase_C_IsNextMessage Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NextTime != nullptr)
-		*NextTime = Parms.NextTime;
+	if (Next != nullptr)
+		*Next = Parms.Next;
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.ChangePlayRate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_EventBase.BP_EventBase_C.IsNextSelect
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                                   Param_PlayRate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::ChangePlayRate(float Param_PlayRate)
+void ABP_EventBase_C::IsNextSelect(bool* Return)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ChangePlayRate");
+		Func = Class->GetFunction("BP_EventBase_C", "IsNextSelect");
 
-	Params::BP_EventBase_C_ChangePlayRate Parms{};
-
-	Parms.Param_PlayRate = Param_PlayRate;
+	Params::BP_EventBase_C_IsNextSelect Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return != nullptr)
+		*Return = Parms.Return;
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.DrawSelect
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::DrawSelect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DrawSelect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ClearText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    VoiceOnlyStop                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::ClearText(bool VoiceOnlyStop)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ClearText");
-
-	Params::BP_EventBase_C_ClearText Parms{};
-
-	Parms.VoiceOnlyStop = VoiceOnlyStop;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.DrawText
+// Function BP_EventBase.BP_EventBase_C.SetMessage
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   MessageID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_SkipBlock                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    System                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ForceAuto                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   Param_AutoDelay                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::DrawText(int32 MessageID, bool System, class FName CharaTag, bool ForceAuto, float Param_AutoDelay)
+void ABP_EventBase_C::SetMessage(int32 MessageID, float StartTime, bool Param_SkipBlock, bool System, class FName CharaTag, bool ForceAuto, float Param_AutoDelay)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "DrawText");
+		Func = Class->GetFunction("BP_EventBase_C", "SetMessage");
 
-	Params::BP_EventBase_C_DrawText Parms{};
+	Params::BP_EventBase_C_SetMessage Parms{};
 
 	Parms.MessageID = MessageID;
+	Parms.StartTime = StartTime;
+	Parms.Param_SkipBlock = Param_SkipBlock;
 	Parms.System = System;
 	Parms.CharaTag = CharaTag;
 	Parms.ForceAuto = ForceAuto;
@@ -2866,128 +630,523 @@ void ABP_EventBase_C::DrawText(int32 MessageID, bool System, class FName CharaTa
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.WaitSequence
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PrintTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::WaitSequence(bool PrintTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "WaitSequence");
-
-	Params::BP_EventBase_C_WaitSequence Parms{};
-
-	Parms.PrintTime = PrintTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlaySequence
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ALevelSequenceActor*              Sequencer                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ACineCameraActor*                 CineCamera                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FMovieSceneObjectBindingID       BindID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_FadeEnd                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    Play                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::PlaySequence(class ALevelSequenceActor* Sequencer, class ACineCameraActor* CineCamera, const struct FMovieSceneObjectBindingID& BindID, bool Param_FadeEnd, bool* Play)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlaySequence");
-
-	Params::BP_EventBase_C_PlaySequence Parms{};
-
-	Parms.Sequencer = Sequencer;
-	Parms.CineCamera = CineCamera;
-	Parms.BindID = std::move(BindID);
-	Parms.Param_FadeEnd = Param_FadeEnd;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Play != nullptr)
-		*Play = Parms.Play;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.Set Activate
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Param_Activate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::Set_Activate(bool Param_Activate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "Set Activate");
-
-	Params::BP_EventBase_C_Set_Activate Parms{};
-
-	Parms.Param_Activate = Param_Activate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.StepFinal
+// Function BP_EventBase.BP_EventBase_C.SetSelectMessage
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsFade                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    AutoFadeOut                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    NoResetVolume                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    NoStopPrioBGM                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   MessageID_1                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   MessageID_2                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   MessageID_3                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   MessageID_4                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::StepFinal(bool IsFade, bool AutoFadeOut, bool NoResetVolume, bool NoStopPrioBGM)
+void ABP_EventBase_C::SetSelectMessage(int32 MessageID_1, int32 MessageID_2, int32 MessageID_3, int32 MessageID_4)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StepFinal");
+		Func = Class->GetFunction("BP_EventBase_C", "SetSelectMessage");
 
-	Params::BP_EventBase_C_StepFinal Parms{};
+	Params::BP_EventBase_C_SetSelectMessage Parms{};
 
-	Parms.IsFade = IsFade;
-	Parms.AutoFadeOut = AutoFadeOut;
-	Parms.NoResetVolume = NoResetVolume;
-	Parms.NoStopPrioBGM = NoStopPrioBGM;
+	Parms.MessageID_1 = MessageID_1;
+	Parms.MessageID_2 = MessageID_2;
+	Parms.MessageID_3 = MessageID_3;
+	Parms.MessageID_4 = MessageID_4;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.StepFirst
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_EventBase.BP_EventBase_C.IsEndSequence
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_EventId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    NoBGM                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    NoChangeScene                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    NoAutoFade                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    PlayerHidden                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Param_MaxFPS                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    End                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventBase_C::StepFirst(const class FString& Param_EventId, bool NoBGM, bool NoChangeScene, bool NoAutoFade, bool PlayerHidden, int32 Param_MaxFPS, bool* Next)
+void ABP_EventBase_C::IsEndSequence(bool* End)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StepFirst");
+		Func = Class->GetFunction("BP_EventBase_C", "IsEndSequence");
 
-	Params::BP_EventBase_C_StepFirst Parms{};
+	Params::BP_EventBase_C_IsEndSequence Parms{};
 
-	Parms.Param_EventId = std::move(Param_EventId);
-	Parms.NoBGM = NoBGM;
-	Parms.NoChangeScene = NoChangeScene;
-	Parms.NoAutoFade = NoAutoFade;
-	Parms.PlayerHidden = PlayerHidden;
-	Parms.Param_MaxFPS = Param_MaxFPS;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (End != nullptr)
+		*End = Parms.End;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.EndSequence
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::EndSequence()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "EndSequence");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.OneSequencer
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::OneSequencer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "OneSequencer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetDummyMessage
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetDummyMessage(float StartTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetDummyMessage");
+
+	Params::BP_EventBase_C_SetDummyMessage Parms{};
+
+	Parms.StartTime = StartTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlaySE
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlaySE(class FName SoundID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlaySE");
+
+	Params::BP_EventBase_C_PlaySE Parms{};
+
+	Parms.SoundID = SoundID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayMotion
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayMotion(class FName Tag, class FName AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayMotion");
+
+	Params::BP_EventBase_C_PlayMotion Parms{};
+
+	Parms.Tag = Tag;
+	Parms.AnimSequence = AnimSequence;
+	Parms.IsLoop = IsLoop;
+	Parms.BlendTime = BlendTime;
+	Parms.OffsetTime = OffsetTime;
+	Parms.EventTime = EventTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.LookAtActor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             TargetTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Immediately                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::LookAtActor(class FName CharaTag, class FName TargetTag, bool Immediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "LookAtActor");
+
+	Params::BP_EventBase_C_LookAtActor Parms{};
+
+	Parms.CharaTag = CharaTag;
+	Parms.TargetTag = TargetTag;
+	Parms.Immediately = Immediately;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.LookAtChara
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             TargetTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Socket                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Immediately                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::LookAtChara(class FName CharaTag, class FName TargetTag, class FName Socket, bool Immediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "LookAtChara");
+
+	Params::BP_EventBase_C_LookAtChara Parms{};
+
+	Parms.CharaTag = CharaTag;
+	Parms.TargetTag = TargetTag;
+	Parms.Socket = Socket;
+	Parms.Immediately = Immediately;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SelectBranch
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Select1                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Select2                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Select3                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Select4                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SelectBranch(int32 Select1, int32 Select2, int32 Select3, int32 Select4, int32* Return)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SelectBranch");
+
+	Params::BP_EventBase_C_SelectBranch Parms{};
+
+	Parms.Select1 = Select1;
+	Parms.Select2 = Select2;
+	Parms.Select3 = Select3;
+	Parms.Select4 = Select4;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return != nullptr)
+		*Return = Parms.Return;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayMotionID
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayMotionID(class FName Tag, class UAnimSequenceBase* AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayMotionID");
+
+	Params::BP_EventBase_C_PlayMotionID Parms{};
+
+	Parms.Tag = Tag;
+	Parms.AnimSequence = AnimSequence;
+	Parms.IsLoop = IsLoop;
+	Parms.BlendTime = BlendTime;
+	Parms.OffsetTime = OffsetTime;
+	Parms.EventTime = EventTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.Facial
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Param_Facial                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::Facial(class FName Tag, class FName Param_Facial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "Facial");
+
+	Params::BP_EventBase_C_Facial Parms{};
+
+	Parms.Tag = Tag;
+	Parms.Param_Facial = Param_Facial;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayBGM
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayBGM(class FName SoundID, float FadeTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayBGM");
+
+	Params::BP_EventBase_C_PlayBGM Parms{};
+
+	Parms.SoundID = SoundID;
+	Parms.FadeTime = FadeTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayPriorityBGM
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayPriorityBGM(class FName SoundID, float FadeTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayPriorityBGM");
+
+	Params::BP_EventBase_C_PlayPriorityBGM Parms{};
+
+	Parms.SoundID = SoundID;
+	Parms.FadeTime = FadeTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.StopPriorityBGM
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::StopPriorityBGM(float FadeTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "StopPriorityBGM");
+
+	Params::BP_EventBase_C_StopPriorityBGM Parms{};
+
+	Parms.FadeTime = FadeTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeVolume
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EGameVolumeCategory                     Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangeVolume(EGameVolumeCategory Category, float Volume)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeVolume");
+
+	Params::BP_EventBase_C_ChangeVolume Parms{};
+
+	Parms.Category = Category;
+	Parms.Volume = Volume;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayVoice
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayVoice(class FName Voice, class FName CharaTag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayVoice");
+
+	Params::BP_EventBase_C_PlayVoice Parms{};
+
+	Parms.Voice = Voice;
+	Parms.CharaTag = CharaTag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.UpdateVoice
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::UpdateVoice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "UpdateVoice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.TerminateVoice
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::TerminateVoice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "TerminateVoice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.TerminateSE
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::TerminateSE()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "TerminateSE");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.GetInput
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// E_ACTION_MAPPING_TYPE                   Action                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::GetInput(E_ACTION_MAPPING_TYPE Action, bool* Return)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "GetInput");
+
+	Params::BP_EventBase_C_GetInput Parms{};
+
+	Parms.Action = Action;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return != nullptr)
+		*Return = Parms.Return;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugTextOn
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_EventBase_C::DebugTextOn(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugTextOn");
+
+	Params::BP_EventBase_C_DebugTextOn Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugTextOff
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugTextOff()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugTextOff");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugFlagControl
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FName                             Left                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    L_Flag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class FName                             Right                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    R_Flag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class FName                             Up                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    U_Flag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class FName                             Down                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    D_Flag                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::DebugFlagControl(const class FText& Text, class FName Left, bool L_Flag, class FName Right, bool R_Flag, class FName Up, bool U_Flag, class FName Down, bool D_Flag, bool* Next)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugFlagControl");
+
+	Params::BP_EventBase_C_DebugFlagControl Parms{};
+
+	Parms.Text = std::move(Text);
+	Parms.Left = Left;
+	Parms.L_Flag = L_Flag;
+	Parms.Right = Right;
+	Parms.R_Flag = R_Flag;
+	Parms.Up = Up;
+	Parms.U_Flag = U_Flag;
+	Parms.Down = Down;
+	Parms.D_Flag = D_Flag;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -2996,185 +1155,436 @@ void ABP_EventBase_C::StepFirst(const class FString& Param_EventId, bool NoBGM, 
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.SetMessageAsset
+// Function BP_EventBase.BP_EventBase_C.DebugPrintInfo
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UScriptMessageAsset*              NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           UserData                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::SetMessageAsset(class UScriptMessageAsset* NewParam)
+void ABP_EventBase_C::DebugPrintInfo(const class FString& UserData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetMessageAsset");
+		Func = Class->GetFunction("BP_EventBase_C", "DebugPrintInfo");
 
-	Params::BP_EventBase_C_SetMessageAsset Parms{};
+	Params::BP_EventBase_C_DebugPrintInfo Parms{};
 
-	Parms.NewParam = NewParam;
+	Parms.UserData = std::move(UserData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.InitMessage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::InitMessage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "InitMessage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.Initialize
+// Function BP_EventBase.BP_EventBase_C.InitSelectionLR
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UScriptMessageAsset*              Param_MessageAsset                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ACharaBase_C*                     Chara                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UImage*                           LeftImage                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UImage*                           RightImage                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_EventLookAt_C*                LeftLookAt                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_EventLookAt_C*                RightLookAt                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AEmitter*                         LeftEffect                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AEmitter*                         RightEffect                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LeftGoToStep                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   RightGoToStep                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_ACTION_MAPPING_TYPE                   LeftKey                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_ACTION_MAPPING_TYPE                   RightKey                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::Initialize(class UScriptMessageAsset* Param_MessageAsset)
+void ABP_EventBase_C::InitSelectionLR(class ACharaBase_C* Chara, class UImage* LeftImage, class UImage* RightImage, class ABP_EventLookAt_C* LeftLookAt, class ABP_EventLookAt_C* RightLookAt, class AEmitter* LeftEffect, class AEmitter* RightEffect, int32 LeftGoToStep, int32 RightGoToStep, E_ACTION_MAPPING_TYPE LeftKey, E_ACTION_MAPPING_TYPE RightKey)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "Initialize");
+		Func = Class->GetFunction("BP_EventBase_C", "InitSelectionLR");
 
-	Params::BP_EventBase_C_Initialize Parms{};
+	Params::BP_EventBase_C_InitSelectionLR Parms{};
 
-	Parms.Param_MessageAsset = Param_MessageAsset;
+	Parms.Chara = Chara;
+	Parms.LeftImage = LeftImage;
+	Parms.RightImage = RightImage;
+	Parms.LeftLookAt = LeftLookAt;
+	Parms.RightLookAt = RightLookAt;
+	Parms.LeftEffect = LeftEffect;
+	Parms.RightEffect = RightEffect;
+	Parms.LeftGoToStep = LeftGoToStep;
+	Parms.RightGoToStep = RightGoToStep;
+	Parms.LeftKey = LeftKey;
+	Parms.RightKey = RightKey;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.SetPosition
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           PositionActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventBase_C::SetPosition(class AActor* PositionActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "SetPosition");
-
-	Params::BP_EventBase_C_SetPosition Parms{};
-
-	Parms.PositionActor = PositionActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.IsFinish
+// Function BP_EventBase.BP_EventBase_C.ProcSelectionLR
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_Finish                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_EventBase_C::IsFinish(bool* Param_Finish)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "IsFinish");
-
-	Params::BP_EventBase_C_IsFinish Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_Finish != nullptr)
-		*Param_Finish = Parms.Param_Finish;
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.PlayStart
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::PlayStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PlayStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_EventBase_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
 // float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsEnd                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::ReceiveTick(float DeltaSeconds)
+void ABP_EventBase_C::ProcSelectionLR(float DeltaSeconds, bool* IsEnd, int32* Next)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_EventBase_C", "ProcSelectionLR");
 
-	Params::BP_EventBase_C_ReceiveTick Parms{};
+	Params::BP_EventBase_C_ProcSelectionLR Parms{};
 
 	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsEnd != nullptr)
+		*IsEnd = Parms.IsEnd;
+
+	if (Next != nullptr)
+		*Next = Parms.Next;
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.ReceiveEndPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_EventBase.BP_EventBase_C.SetSelectionLRVoiceBase
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AAtomSound*                       Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void ABP_EventBase_C::SetSelectionLRVoiceBase(class AAtomSound* Voice)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ReceiveEndPlay");
+		Func = Class->GetFunction("BP_EventBase_C", "SetSelectionLRVoiceBase");
 
-	Params::BP_EventBase_C_ReceiveEndPlay Parms{};
+	Params::BP_EventBase_C_SetSelectionLRVoiceBase Parms{};
 
-	Parms.EndPlayReason = EndPlayReason;
+	Parms.Voice = Voice;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.AutoPlaySE
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EventBase.BP_EventBase_C.SetSelectionLRVoiceLeft
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AAtomSound*                       Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetSelectionLRVoiceLeft(class AAtomSound* Voice)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetSelectionLRVoiceLeft");
+
+	Params::BP_EventBase_C_SetSelectionLRVoiceLeft Parms{};
+
+	Parms.Voice = Voice;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetSelectionLRVoiceRight
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AAtomSound*                       Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetSelectionLRVoiceRight(class AAtomSound* Voice)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetSelectionLRVoiceRight");
+
+	Params::BP_EventBase_C_SetSelectionLRVoiceRight Parms{};
+
+	Parms.Voice = Voice;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C._GetSelectionVoiceArray
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class AAtomSound*>               VoiceArray                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AAtomSound*                       Voice                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::_GetSelectionVoiceArray(TArray<class AAtomSound*>& VoiceArray, class AAtomSound** Voice)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "_GetSelectionVoiceArray");
+
+	Params::BP_EventBase_C__GetSelectionVoiceArray Parms{};
+
+	Parms.VoiceArray = std::move(VoiceArray);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	VoiceArray = std::move(Parms.VoiceArray);
+
+	if (Voice != nullptr)
+		*Voice = Parms.Voice;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.InitSelection
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             CharaTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AAtomSound*                       BaseVoiceSE                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::InitSelection(class FName CharaTag, class AAtomSound* BaseVoiceSE)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "InitSelection");
+
+	Params::BP_EventBase_C_InitSelection Parms{};
+
+	Parms.CharaTag = CharaTag;
+	Parms.BaseVoiceSE = BaseVoiceSE;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ProcSelection
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsEnd                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   Next                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ProcSelection(float DeltaSeconds, bool* IsEnd, int32* Next)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ProcSelection");
+
+	Params::BP_EventBase_C_ProcSelection Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsEnd != nullptr)
+		*IsEnd = Parms.IsEnd;
+
+	if (Next != nullptr)
+		*Next = Parms.Next;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.AddSelection
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UImage*                           Image                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_EventLookAt_C*                LookAt                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Facial                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequence*                    Motion                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AEmitter*                         Emitter                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   NextStep                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_ACTION_MAPPING_TYPE                   InputKey                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class AAtomSound*>               VoiceSE                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void ABP_EventBase_C::AddSelection(class UImage* Image, class ABP_EventLookAt_C* LookAt, class FName Facial, class UAnimSequence* Motion, class AEmitter* Emitter, int32 NextStep, E_ACTION_MAPPING_TYPE InputKey, TArray<class AAtomSound*>& VoiceSE)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "AddSelection");
+
+	Params::BP_EventBase_C_AddSelection Parms{};
+
+	Parms.Image = Image;
+	Parms.LookAt = LookAt;
+	Parms.Facial = Facial;
+	Parms.Motion = Motion;
+	Parms.Emitter = Emitter;
+	Parms.NextStep = NextStep;
+	Parms.InputKey = InputKey;
+	Parms.VoiceSE = std::move(VoiceSE);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	VoiceSE = std::move(Parms.VoiceSE);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.AutoMotion
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::AutoMotion(class FName Tag, bool IsLoop, float BlendTime, float OffsetTime, float EventTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "AutoMotion");
+
+	Params::BP_EventBase_C_AutoMotion Parms{};
+
+	Parms.Tag = Tag;
+	Parms.IsLoop = IsLoop;
+	Parms.BlendTime = BlendTime;
+	Parms.OffsetTime = OffsetTime;
+	Parms.EventTime = EventTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeMaterial
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UDataTable*                       Table                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangeMaterial(class FName Tag, class UDataTable* Table)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeMaterial");
+
+	Params::BP_EventBase_C_ChangeMaterial Parms{};
+
+	Parms.Tag = Tag;
+	Parms.Table = Table;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ClearMaterial
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ClearMaterial(class FName Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ClearMaterial");
+
+	Params::BP_EventBase_C_ClearMaterial Parms{};
+
+	Parms.Tag = Tag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugOpenWindow
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugOpenWindow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugOpenWindow");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugAddSoundKey
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugAddSoundKey()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugAddSoundKey");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetBlurInvalid
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::SetBlurInvalid()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetBlurInvalid");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ResetBlurInvalid
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::ResetBlurInvalid()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ResetBlurInvalid");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugForceFinish
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugForceFinish()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugForceFinish");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.Set Force End
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::Set_Force_End()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "Set Force End");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayCue
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::AutoPlaySE(const class FString& SoundID, float Volume, float Pitch, float Time)
+void ABP_EventBase_C::PlayCue(const class FString& SoundID, float Volume, float Pitch, float Time)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "AutoPlaySE");
+		Func = Class->GetFunction("BP_EventBase_C", "PlayCue");
 
-	Params::BP_EventBase_C_AutoPlaySE Parms{};
+	Params::BP_EventBase_C_PlayCue Parms{};
 
 	Parms.SoundID = std::move(SoundID);
 	Parms.Volume = Volume;
@@ -3185,79 +1595,1669 @@ void ABP_EventBase_C::AutoPlaySE(const class FString& SoundID, float Volume, flo
 }
 
 
-// Function BP_EventBase.BP_EventBase_C.PauseMovie
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::PauseMovie()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "PauseMovie");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.StartPauseMovieEvent
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::StartPauseMovieEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "StartPauseMovieEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.EndPauseMovieEvent
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::EndPauseMovieEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "EndPauseMovieEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.CE_DebugOutputTextTIme
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EventBase_C::CE_DebugOutputTextTIme()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "CE_DebugOutputTextTIme");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventBase.BP_EventBase_C.ExecuteUbergraph_BP_EventBase
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_EventBase.BP_EventBase_C.PlayCueLoop
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventBase_C::ExecuteUbergraph_BP_EventBase(int32 EntryPoint)
+void ABP_EventBase_C::PlayCueLoop(const class FString& SoundID, float Volume, float Pitch)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventBase_C", "ExecuteUbergraph_BP_EventBase");
+		Func = Class->GetFunction("BP_EventBase_C", "PlayCueLoop");
 
-	Params::BP_EventBase_C_ExecuteUbergraph_BP_EventBase Parms{};
+	Params::BP_EventBase_C_PlayCueLoop Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.SoundID = std::move(SoundID);
+	Parms.Volume = Volume;
+	Parms.Pitch = Pitch;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.StopCueLoop
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::StopCueLoop(const class FString& SoundID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "StopCueLoop");
+
+	Params::BP_EventBase_C_StopCueLoop Parms{};
+
+	Parms.SoundID = std::move(SoundID);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetVolumeCueLoop
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetVolumeCueLoop(const class FString& SoundID, float Volume)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetVolumeCueLoop");
+
+	Params::BP_EventBase_C_SetVolumeCueLoop Parms{};
+
+	Parms.SoundID = std::move(SoundID);
+	Parms.Volume = Volume;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayMotionConv
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Param_PlayRate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayMotionConv(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float BlendTime, float OffsetTime, float EventTime, float Param_PlayRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayMotionConv");
+
+	Params::BP_EventBase_C_PlayMotionConv Parms{};
+
+	Parms.Tag = std::move(Tag);
+	Parms.AnimSequence = std::move(AnimSequence);
+	Parms.IsLoop = IsLoop;
+	Parms.BlendTime = BlendTime;
+	Parms.OffsetTime = OffsetTime;
+	Parms.EventTime = EventTime;
+	Parms.Param_PlayRate = Param_PlayRate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayMotionProp
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Param_PlayRate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayMotionProp(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float OffsetTime, float EventTime, float Param_PlayRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayMotionProp");
+
+	Params::BP_EventBase_C_PlayMotionProp Parms{};
+
+	Parms.Tag = std::move(Tag);
+	Parms.AnimSequence = std::move(AnimSequence);
+	Parms.IsLoop = IsLoop;
+	Parms.OffsetTime = OffsetTime;
+	Parms.EventTime = EventTime;
+	Parms.Param_PlayRate = Param_PlayRate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.CutFinalize
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           LevelSelf                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::CutFinalize(class AActor* LevelSelf)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "CutFinalize");
+
+	Params::BP_EventBase_C_CutFinalize Parms{};
+
+	Parms.LevelSelf = LevelSelf;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugPrintTime
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugPrintTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugPrintTime");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayCueBGM
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayCueBGM(const class FString& SoundID, float Volume, float Pitch, float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayCueBGM");
+
+	Params::BP_EventBase_C_PlayCueBGM Parms{};
+
+	Parms.SoundID = std::move(SoundID);
+	Parms.Volume = Volume;
+	Parms.Pitch = Pitch;
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.StopCueBGM
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    NoBGM                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::StopCueBGM(float FadeTime, bool NoBGM)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "StopCueBGM");
+
+	Params::BP_EventBase_C_StopCueBGM Parms{};
+
+	Parms.FadeTime = FadeTime;
+	Parms.NoBGM = NoBGM;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeCueVolume
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EOptionVolumeCategory                   Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangeCueVolume(EOptionVolumeCategory Category, float Volume)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeCueVolume");
+
+	Params::BP_EventBase_C_ChangeCueVolume Parms{};
+
+	Parms.Category = Category;
+	Parms.Volume = Volume;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugPrintRate
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugPrintRate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugPrintRate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SimpleTextOn
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SimpleTextOn(int32 ID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SimpleTextOn");
+
+	Params::BP_EventBase_C_SimpleTextOn Parms{};
+
+	Parms.ID = ID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SimpleTextOff
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::SimpleTextOff()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SimpleTextOff");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.GetRate
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FString                           ObjectName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// float                                   Rate                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::GetRate(const class FString& ObjectName, float* Rate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "GetRate");
+
+	Params::BP_EventBase_C_GetRate Parms{};
+
+	Parms.ObjectName = std::move(ObjectName);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Rate != nullptr)
+		*Rate = Parms.Rate;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetRate
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           ObjectName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// float                                   Rate                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetRate(const class FString& ObjectName, float Rate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetRate");
+
+	Params::BP_EventBase_C_SetRate Parms{};
+
+	Parms.ObjectName = std::move(ObjectName);
+	Parms.Rate = Rate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayShake
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::PlayShake()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayShake");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.StopShake
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::StopShake()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "StopShake");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.EventFlagSetUp
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           Param_EventId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    Last                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::EventFlagSetUp(const class FString& Param_EventId, bool Last)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "EventFlagSetUp");
+
+	Params::BP_EventBase_C_EventFlagSetUp Parms{};
+
+	Parms.Param_EventId = std::move(Param_EventId);
+	Parms.Last = Last;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetNormalUnite
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   OnestDevilID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TwondDevilID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ResultId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Accident                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::SetNormalUnite(int32 OnestDevilID, int32 TwondDevilID, int32 ResultId, bool Accident)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetNormalUnite");
+
+	Params::BP_EventBase_C_SetNormalUnite Parms{};
+
+	Parms.OnestDevilID = OnestDevilID;
+	Parms.TwondDevilID = TwondDevilID;
+	Parms.ResultId = ResultId;
+	Parms.Accident = Accident;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetBindingActors
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FName>                     BindingActors                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class AActor*                           EventCtrl                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetBindingActors(TArray<class FName>& BindingActors, class AActor* EventCtrl)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetBindingActors");
+
+	Params::BP_EventBase_C_SetBindingActors Parms{};
+
+	Parms.BindingActors = std::move(BindingActors);
+	Parms.EventCtrl = EventCtrl;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	BindingActors = std::move(Parms.BindingActors);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ClearBindingActors
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class FName>                     BindingActors                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void ABP_EventBase_C::ClearBindingActors(TArray<class FName>& BindingActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ClearBindingActors");
+
+	Params::BP_EventBase_C_ClearBindingActors Parms{};
+
+	Parms.BindingActors = std::move(BindingActors);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	BindingActors = std::move(Parms.BindingActors);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.Reflesh
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::Reflesh()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "Reflesh");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayMotionMob
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    IsLoop                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   OffsetTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   EventTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Param_PlayRate                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayMotionMob(const class FString& Tag, const class FString& AnimSequence, bool IsLoop, float OffsetTime, float EventTime, float Param_PlayRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayMotionMob");
+
+	Params::BP_EventBase_C_PlayMotionMob Parms{};
+
+	Parms.Tag = std::move(Tag);
+	Parms.AnimSequence = std::move(AnimSequence);
+	Parms.IsLoop = IsLoop;
+	Parms.OffsetTime = OffsetTime;
+	Parms.EventTime = EventTime;
+	Parms.Param_PlayRate = Param_PlayRate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.MakeRateTable
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::MakeRateTable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "MakeRateTable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetCharaForcedLOD
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::SetCharaForcedLOD()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetCharaForcedLOD");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ClearCharaForcedLOD
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::ClearCharaForcedLOD()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ClearCharaForcedLOD");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.GetEventTableItem
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FEventTableStrInt>        Table                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FString                           Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    Find                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::GetEventTableItem(TArray<struct FEventTableStrInt>& Table, const class FString& Object, bool* Find, int32* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "GetEventTableItem");
+
+	Params::BP_EventBase_C_GetEventTableItem Parms{};
+
+	Parms.Table = std::move(Table);
+	Parms.Object = std::move(Object);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Table = std::move(Parms.Table);
+
+	if (Find != nullptr)
+		*Find = Parms.Find;
+
+	if (Value != nullptr)
+		*Value = Parms.Value;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayDefaultBlink
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayDefaultBlink(class FName Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayDefaultBlink");
+
+	Params::BP_EventBase_C_PlayDefaultBlink Parms{};
+
+	Parms.Tag = Tag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.StopDefaultBlink
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::StopDefaultBlink(class FName Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "StopDefaultBlink");
+
+	Params::BP_EventBase_C_StopDefaultBlink Parms{};
+
+	Parms.Tag = Tag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.EnterSkip
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::EnterSkip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "EnterSkip");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.CheckSkip
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::CheckSkip(bool* Return)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "CheckSkip");
+
+	Params::BP_EventBase_C_CheckSkip Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return != nullptr)
+		*Return = Parms.Return;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeCueVolumeTime
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EOptionVolumeCategory                   Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangeCueVolumeTime(EOptionVolumeCategory Category, float Volume, float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeCueVolumeTime");
+
+	Params::BP_EventBase_C_ChangeCueVolumeTime Parms{};
+
+	Parms.Category = Category;
+	Parms.Volume = Volume;
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetColorFade
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor                     FirstColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     FinalColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Additive                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::SetColorFade(const struct FLinearColor& FirstColor, const struct FLinearColor& FinalColor, float Time, bool Additive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetColorFade");
+
+	Params::BP_EventBase_C_SetColorFade Parms{};
+
+	Parms.FirstColor = std::move(FirstColor);
+	Parms.FinalColor = std::move(FinalColor);
+	Parms.Time = Time;
+	Parms.Additive = Additive;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeColorFade
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor                     FinalColor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Additive                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::ChangeColorFade(const struct FLinearColor& FinalColor, float Time, bool Additive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeColorFade");
+
+	Params::BP_EventBase_C_ChangeColorFade Parms{};
+
+	Parms.FinalColor = std::move(FinalColor);
+	Parms.Time = Time;
+	Parms.Additive = Additive;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetIKEnable
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// E_IK_TYPE_LIST                          Type                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Immediately                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetIKEnable(E_IK_TYPE_LIST Type, bool Enable, bool Immediately, class FName Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetIKEnable");
+
+	Params::BP_EventBase_C_SetIKEnable Parms{};
+
+	Parms.Type = Type;
+	Parms.Enable = Enable;
+	Parms.Immediately = Immediately;
+	Parms.Tag = Tag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.AttachMesh
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SrcMesh                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DestMesh                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DestBone                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::AttachMesh(class FName Tag, class FName SrcMesh, class FName DestMesh, class FName DestBone)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "AttachMesh");
+
+	Params::BP_EventBase_C_AttachMesh Parms{};
+
+	Parms.Tag = Tag;
+	Parms.SrcMesh = SrcMesh;
+	Parms.DestMesh = DestMesh;
+	Parms.DestBone = DestBone;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeMaterialCore
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMeshComponent*                   Mesh                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UDataTable*                       DataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UseColor                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FLinearColor                     Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangeMaterialCore(class UMeshComponent* Mesh, class UDataTable* DataTable, bool UseColor, const struct FLinearColor& Color)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeMaterialCore");
+
+	Params::BP_EventBase_C_ChangeMaterialCore Parms{};
+
+	Parms.Mesh = Mesh;
+	Parms.DataTable = DataTable;
+	Parms.UseColor = UseColor;
+	Parms.Color = std::move(Color);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetUniteDevils
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Accident                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   ResultDevil                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Onest                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Twond                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Threerd                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Fourth                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetUniteDevils(bool Accident, int32 ResultDevil, int32 Onest, int32 Twond, int32 Threerd, int32 Fourth)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetUniteDevils");
+
+	Params::BP_EventBase_C_SetUniteDevils Parms{};
+
+	Parms.Accident = Accident;
+	Parms.ResultDevil = ResultDevil;
+	Parms.Onest = Onest;
+	Parms.Twond = Twond;
+	Parms.Threerd = Threerd;
+	Parms.Fourth = Fourth;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugSlomoFunc
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugSlomoFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugSlomoFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugTextTime
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugTextTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugTextTime");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.GetTextFixTime
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   FixTime                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::GetTextFixTime(int32 Param_Index, float* FixTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "GetTextFixTime");
+
+	Params::BP_EventBase_C_GetTextFixTime Parms{};
+
+	Parms.Param_Index = Param_Index;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (FixTime != nullptr)
+		*FixTime = Parms.FixTime;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.Set Event Pause
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Puase                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Stop                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::Set_Event_Pause(bool Puase, bool Stop)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "Set Event Pause");
+
+	Params::BP_EventBase_C_Set_Event_Pause Parms{};
+
+	Parms.Puase = Puase;
+	Parms.Stop = Stop;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetSkipEnable
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::SetSkipEnable(bool Enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetSkipEnable");
+
+	Params::BP_EventBase_C_SetSkipEnable Parms{};
+
+	Parms.Enable = Enable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.InitSelectionEx
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// E_EVENT_SELECTION_EX_TYPE               SelectType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   SelectMax                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::InitSelectionEx(E_EVENT_SELECTION_EX_TYPE SelectType, int32 SelectMax)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "InitSelectionEx");
+
+	Params::BP_EventBase_C_InitSelectionEx Parms{};
+
+	Parms.SelectType = SelectType;
+	Parms.SelectMax = SelectMax;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ProcSelectionEx
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    SoundFlag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   Return                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Enter                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::ProcSelectionEx(bool SoundFlag, int32* Return, bool* Enter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ProcSelectionEx");
+
+	Params::BP_EventBase_C_ProcSelectionEx Parms{};
+
+	Parms.SoundFlag = SoundFlag;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Return != nullptr)
+		*Return = Parms.Return;
+
+	if (Enter != nullptr)
+		*Enter = Parms.Enter;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.AddVisibleLevel
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             LevelName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visible                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::AddVisibleLevel(class FName LevelName, bool Visible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "AddVisibleLevel");
+
+	Params::BP_EventBase_C_AddVisibleLevel Parms{};
+
+	Parms.LevelName = LevelName;
+	Parms.Visible = Visible;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.VisibleLevelInit
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::VisibleLevelInit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "VisibleLevelInit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.VisibleLevelFinal
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::VisibleLevelFinal()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "VisibleLevelFinal");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DrawTemporaryText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   MessageID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::DrawTemporaryText(int32 MessageID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DrawTemporaryText");
+
+	Params::BP_EventBase_C_DrawTemporaryText Parms{};
+
+	Parms.MessageID = MessageID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ClearTemporaryText
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::ClearTemporaryText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ClearTemporaryText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlayCueENV
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           SoundID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::PlayCueENV(const class FString& SoundID, float Volume, float Pitch, float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlayCueENV");
+
+	Params::BP_EventBase_C_PlayCueENV Parms{};
+
+	Parms.SoundID = std::move(SoundID);
+	Parms.Volume = Volume;
+	Parms.Pitch = Pitch;
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.StopCueENV
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   FadeTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    NoBGM                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::StopCueENV(float FadeTime, bool NoBGM)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "StopCueENV");
+
+	Params::BP_EventBase_C_StopCueENV Parms{};
+
+	Parms.FadeTime = FadeTime;
+	Parms.NoBGM = NoBGM;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.StartChooseSE
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USoundAtomCue*                    Sound                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::StartChooseSE(class USoundAtomCue* Sound)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "StartChooseSE");
+
+	Params::BP_EventBase_C_StartChooseSE Parms{};
+
+	Parms.Sound = Sound;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetSearchAssetPath
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Param_VoiceAssetPath                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Param_LipAssetPath                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetSearchAssetPath(class FName Param_VoiceAssetPath, class FName Param_LipAssetPath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetSearchAssetPath");
+
+	Params::BP_EventBase_C_SetSearchAssetPath Parms{};
+
+	Parms.Param_VoiceAssetPath = Param_VoiceAssetPath;
+	Parms.Param_LipAssetPath = Param_LipAssetPath;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.InitPlayerPosition
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           PositionActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::InitPlayerPosition(class AActor* PositionActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "InitPlayerPosition");
+
+	Params::BP_EventBase_C_InitPlayerPosition Parms{};
+
+	Parms.PositionActor = PositionActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugDrawSkip
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugDrawSkip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugDrawSkip");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.GetMessageWidget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UWB_Message_C*                    Param_MessageWidget                                    (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::GetMessageWidget(class UWB_Message_C** Param_MessageWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "GetMessageWidget");
+
+	Params::BP_EventBase_C_GetMessageWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_MessageWidget != nullptr)
+		*Param_MessageWidget = Parms.Param_MessageWidget;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.MovieText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   MessageID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::MovieText(int32 MessageID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "MovieText");
+
+	Params::BP_EventBase_C_MovieText Parms{};
+
+	Parms.MessageID = MessageID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.CheckMovieText
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::CheckMovieText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "CheckMovieText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeCueVolumeEase
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EOptionVolumeCategory                   Category                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Volume                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangeCueVolumeEase(EOptionVolumeCategory Category, float Volume, float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeCueVolumeEase");
+
+	Params::BP_EventBase_C_ChangeCueVolumeEase Parms{};
+
+	Parms.Category = Category;
+	Parms.Volume = Volume;
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.FadeOutBattle
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::FadeOutBattle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "FadeOutBattle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetFontAlpha
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Alpha                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetFontAlpha(float Alpha)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetFontAlpha");
+
+	Params::BP_EventBase_C_SetFontAlpha Parms{};
+
+	Parms.Alpha = Alpha;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.CheckPauseEvent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_EventBase_C::CheckPauseEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "CheckPauseEvent");
+
+	Params::BP_EventBase_C_CheckPauseEvent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetMotionBlur
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Switch                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::SetMotionBlur(bool Switch)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetMotionBlur");
+
+	Params::BP_EventBase_C_SetMotionBlur Parms{};
+
+	Parms.Switch = Switch;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeMapPostProcess
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Daath                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DownIntensity                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TopIntensity                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangeMapPostProcess(int32 Daath, float DownIntensity, float TopIntensity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeMapPostProcess");
+
+	Params::BP_EventBase_C_ChangeMapPostProcess Parms{};
+
+	Parms.Daath = Daath;
+	Parms.DownIntensity = DownIntensity;
+	Parms.TopIntensity = TopIntensity;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.RevertMapPostProcess
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::RevertMapPostProcess()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "RevertMapPostProcess");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeMapPostProcessEx
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInterface*               Param_PostProcessMaterial                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FName>                     ParameterName                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<float>                           Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void ABP_EventBase_C::ChangeMapPostProcessEx(class UMaterialInterface* Param_PostProcessMaterial, TArray<class FName>& ParameterName, TArray<float>& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeMapPostProcessEx");
+
+	Params::BP_EventBase_C_ChangeMapPostProcessEx Parms{};
+
+	Parms.Param_PostProcessMaterial = Param_PostProcessMaterial;
+	Parms.ParameterName = std::move(ParameterName);
+	Parms.Value = std::move(Value);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	ParameterName = std::move(Parms.ParameterName);
+	Value = std::move(Parms.Value);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.ChangeMovieLanguage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           Culture                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::ChangeMovieLanguage(const class FString& Culture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "ChangeMovieLanguage");
+
+	Params::BP_EventBase_C_ChangeMovieLanguage Parms{};
+
+	Parms.Culture = std::move(Culture);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.InterpolationEvent
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Type                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::InterpolationEvent(int32 Type)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "InterpolationEvent");
+
+	Params::BP_EventBase_C_InterpolationEvent Parms{};
+
+	Parms.Type = Type;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugPrintAperture
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugPrintAperture()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugPrintAperture");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.IsPlayingMovieEvent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_EventBase_C::IsPlayingMovieEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "IsPlayingMovieEvent");
+
+	Params::BP_EventBase_C_IsPlayingMovieEvent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.IsPauseMovieEvent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_EventBase_C::IsPauseMovieEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "IsPauseMovieEvent");
+
+	Params::BP_EventBase_C_IsPauseMovieEvent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.DebugOutputTextTime
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventBase_C::DebugOutputTextTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "DebugOutputTextTime");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetUniteSkip
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Use                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::SetUniteSkip(bool Use)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetUniteSkip");
+
+	Params::BP_EventBase_C_SetUniteSkip Parms{};
+
+	Parms.Use = Use;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.SetStaffSkip
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Use                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class AActor*                           Param_EventStaff                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventBase_C::SetStaffSkip(bool Use, class AActor* Param_EventStaff)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "SetStaffSkip");
+
+	Params::BP_EventBase_C_SetStaffSkip Parms{};
+
+	Parms.Use = Use;
+	Parms.Param_EventStaff = Param_EventStaff;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.IsTalkPart
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_EventBase_C::IsTalkPart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "IsTalkPart");
+
+	Params::BP_EventBase_C_IsTalkPart Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.GetFinish
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    IsFinish                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::GetFinish(bool* IsFinish)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "GetFinish");
+
+	Params::BP_EventBase_C_GetFinish Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsFinish != nullptr)
+		*IsFinish = Parms.IsFinish;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlaySelectionSoundSelect
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    SoundFlag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::PlaySelectionSoundSelect(bool SoundFlag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlaySelectionSoundSelect");
+
+	Params::BP_EventBase_C_PlaySelectionSoundSelect Parms{};
+
+	Parms.SoundFlag = SoundFlag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.PlaySelectionSoundEnter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    SoundFlag                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::PlaySelectionSoundEnter(bool SoundFlag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "PlaySelectionSoundEnter");
+
+	Params::BP_EventBase_C_PlaySelectionSoundEnter Parms{};
+
+	Parms.SoundFlag = SoundFlag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.BI_EB_IsFinish
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Param_Finish                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::BI_EB_IsFinish(bool* Param_Finish)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "BI_EB_IsFinish");
+
+	Params::BP_EventBase_C_BI_EB_IsFinish Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_Finish != nullptr)
+		*Param_Finish = Parms.Param_Finish;
+}
+
+
+// Function BP_EventBase.BP_EventBase_C.BI_EB_PlayStart
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_EventBase_C::BI_EB_PlayStart(bool* NoUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventBase_C", "BI_EB_PlayStart");
+
+	Params::BP_EventBase_C_BI_EB_PlayStart Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NoUse != nullptr)
+		*NoUse = Parms.NoUse;
 }
 
 }

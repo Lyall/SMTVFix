@@ -22,7 +22,7 @@ namespace SDK
 class USteamNetDriver final : public UIpNetDriver
 {
 public:
-	uint8                                         Pad_E44[0x8];                                      // 0x07D0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DFA[0x8];                                      // 0x07D0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -60,7 +60,7 @@ class USteamNetConnection final : public UIpConnection
 {
 public:
 	bool                                          bIsPassthrough;                                    // 0x1C48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E45[0x7];                                      // 0x1C49(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DFB[0x7];                                      // 0x1C49(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

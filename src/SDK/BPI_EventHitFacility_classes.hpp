@@ -22,9 +22,9 @@ namespace SDK
 class IBPI_EventHitFacility_C final : public IInterface
 {
 public:
-	void BPI_GetDebugMemo(class FText* Memo);
-	void BPI_GetFacilityType(E_FACILITY_TYPE* Type);
 	void BPI_GetFacilityId(int32* FacitlityId);
+	void BPI_GetFacilityType(E_FACILITY_TYPE* Type);
+	void BPI_GetDebugMemo(class FText* Memo);
 
 public:
 	static class UClass* StaticClass()

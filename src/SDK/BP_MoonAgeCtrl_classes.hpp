@@ -29,7 +29,7 @@ public:
 	class UWB_MoonAge_C*                          M_WB_MoonAge;                                      // 0x0230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsShow;                                          // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_MoonAgeAnimationState                       M_AnimState;                                       // 0x0239(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_62D5[0x2];                                     // 0x023A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CAC[0x2];                                     // 0x023A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         M_DeltaSeconds;                                    // 0x023C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_CntSpeedRate;                                    // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -49,7 +49,7 @@ public:
 	int32                                         M_DevilID;                                         // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         M_Level;                                           // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsAppeared;                                      // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5C48[0x3];                                     // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46F0[0x3];                                     // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_BadStatus;                                       // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 M_Supports;                                        // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         M_Enenroll;                                        // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

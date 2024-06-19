@@ -30,12 +30,12 @@ public:
 	float                                         CameraHeight;                                      // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         DefaultHeightOffset;                               // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsActive;                                          // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_870B[0x3];                                     // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C80[0x3];                                     // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         HeightSpeed;                                       // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         StickInputThreshold;                               // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         HorizontalSpeed;                                   // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IconShowing;                                       // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_870C[0x3];                                     // 0x0311(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C81[0x3];                                     // 0x0311(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         FrameCount;                                        // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                TargetLocation;                                    // 0x0318(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TargetDistance;                                    // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -66,43 +66,43 @@ public:
 	bool                                          bConsoleVariableAtTop;                             // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void FieldVisibilityOnFinish();
-	void FieldVisibilityOnStart();
-	void ApplyConsoleVariables_debug();
-	void ResetConsoleVariables();
-	void ApplyConsoleVariables();
-	void GetConsoleVariables();
-	void GetHorizontalDistanceModifier(float* Modifier);
-	void GetStartHeight(float* Height);
-	void GetHeightDistanceMin(float* Height);
-	void ResetFoliageLOD();
-	void ResetLOD();
-	void SetFoliageLOD();
-	void SetLOD();
-	void TryTrace(const struct FVector& PrevLocation, const struct FVector& NextLocation, struct FVector* OutNext, bool* CanMove);
-	void ProcessInput_ActorHorizontal(float DeltaSeconds, bool ForceUpdate);
-	void UpdateButtonHelp(bool Param_IconShowing);
-	void ProcessInputInconHelp();
-	void OpenButtonHelp();
-	void GetDefaultFOVY(float* Height);
-	void ApplyTransitionDebugParam();
-	void Init_Camera_Param();
-	void GetBlendExp(float* BlendExp);
-	void GetBlendTime(float* Seconds);
-	void IsNorthUp(bool* Param_IsNorthUp);
-	void GetHorizontalDistanceLimit(float* Limit);
-	void GetDefaultHeight(float* Height);
-	void GetHorizontalSpeed(float* Speed);
-	void ProcessInput_Target(float DeltaSeconds);
-	void ProcessInput_Horizontal(float DeltaSeconds);
-	void ProcessInput_Height(float DeltaSeconds);
-	void Deactivate();
-	void ProcessInput(float DeltaSeconds);
-	void Start();
-	void ReceiveTick(float DeltaSeconds);
-	void OnStartTop();
-	void OnFinishTop();
 	void ExecuteUbergraph_BP_MapTopCamera(int32 EntryPoint);
+	void OnFinishTop();
+	void OnStartTop();
+	void ReceiveTick(float DeltaSeconds);
+	void Start();
+	void ProcessInput(float DeltaSeconds);
+	void Deactivate();
+	void ProcessInput_Height(float DeltaSeconds);
+	void ProcessInput_Horizontal(float DeltaSeconds);
+	void ProcessInput_Target(float DeltaSeconds);
+	void GetHorizontalSpeed(float* Speed);
+	void GetDefaultHeight(float* Height);
+	void GetHorizontalDistanceLimit(float* Limit);
+	void IsNorthUp(bool* Param_IsNorthUp);
+	void GetBlendTime(float* Seconds);
+	void GetBlendExp(float* BlendExp);
+	void Init_Camera_Param();
+	void ApplyTransitionDebugParam();
+	void GetDefaultFOVY(float* Height);
+	void OpenButtonHelp();
+	void ProcessInputInconHelp();
+	void UpdateButtonHelp(bool Param_IconShowing);
+	void ProcessInput_ActorHorizontal(float DeltaSeconds, bool ForceUpdate);
+	void TryTrace(const struct FVector& PrevLocation, const struct FVector& NextLocation, struct FVector* OutNext, bool* CanMove);
+	void SetLOD();
+	void SetFoliageLOD();
+	void ResetLOD();
+	void ResetFoliageLOD();
+	void GetHeightDistanceMin(float* Height);
+	void GetStartHeight(float* Height);
+	void GetHorizontalDistanceModifier(float* Modifier);
+	void GetConsoleVariables();
+	void ApplyConsoleVariables();
+	void ResetConsoleVariables();
+	void ApplyConsoleVariables_debug();
+	void FieldVisibilityOnStart();
+	void FieldVisibilityOnFinish();
 
 public:
 	static class UClass* StaticClass()

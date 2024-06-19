@@ -25,12 +25,12 @@ struct FBadStatusDecal_T final
 public:
 	E_BAD_STATUS                                  BadStatusKind_3_9AD9F3E64EE90FA58E9328AD7AE82D60;  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHARA_BAD_STATUS_APPEAR                     AppearTiming_6_B64AE0364DF80032DA6D9586E4565810;   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2525[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2335[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   SocketName_9_609C1BC84D8AB20766B0709AB7E310BD;     // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2526[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2336[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UMaterialInterface>      DecalMaterial_18_FB728269499DA891E9C9A9A237D0F211; // 0x0010(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FVector                                DecalSize_21_07E577AE4B03C55418C67E9ACD9BF02F;     // 0x0038(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2527[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2337[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMaterialAnimSetting_T>         MaterialAnimSetting_13_3B78C59A4C599CBB43EDE9BD86304432; // 0x0048(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FBadStatusDecal_T) == 0x000008, "Wrong alignment on FBadStatusDecal_T");

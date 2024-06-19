@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SymbolActRecord_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SymbolMoverData_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EncountData_st_structs.hpp"
 #include "MapActorCore_classes.hpp"
 #include "Project_structs.hpp"
@@ -29,10 +29,10 @@ class ABP_EncountAreaSpawner_C final : public AMapActorCore_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EncountAreaSpawner_C;            // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          Sucsess;                                           // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6287[0x3];                                     // 0x0281(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C73[0x3];                                     // 0x0281(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                SpawnLocation;                                     // 0x0284(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         EncountID;                                         // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_6288[0x4];                                     // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C74[0x4];                                     // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             EvtDis_SpawnDevil;                                 // 0x0298(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<int32>                                 EnemyIdList;                                       // 0x02A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         SymbolID;                                          // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
@@ -45,31 +45,31 @@ public:
 	struct FVector                                TraceBottom;                                       // 0x032C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          IsSpawnEffect;                                     // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsAngleManual;                                     // 0x0339(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6289[0x2];                                     // 0x033A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C75[0x2];                                     // 0x033A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Angle;                                             // 0x033C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSymbolMoverData                       MoverData;                                         // 0x0340(0x00B8)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          IgnorePause;                                       // 0x03F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_628A[0x3];                                     // 0x03F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C76[0x3];                                     // 0x03F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Index_BP_EncountAreaSpawner_C;                     // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReqReturn;                                         // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_628B[0x7];                                     // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C77[0x7];                                     // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             EvtDis_SpawnEnd;                                   // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         PackId;                                            // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          NotCalcAngle;                                      // 0x041C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_628C[0x3];                                     // 0x041D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C78[0x3];                                     // 0x041D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         UniqueSymbolID;                                    // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          IsUniqueSymbol;                                    // 0x0424(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          SpawnMotion;                                       // 0x0425(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_628D[0x2];                                     // 0x0426(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C79[0x2];                                     // 0x0426(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSymbolActRecord                       ActRecord;                                         // 0x0428(0x0020)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          UniqueIcon;                                        // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_628E[0x3];                                     // 0x0449(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C7A[0x3];                                     // 0x0449(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SpawnerRadius;                                     // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	float                                         DistanceToAvoidSymbols;                            // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          Manual_DistanceToAvoidSymbols;                     // 0x0454(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          RespawnAfterOtherScene;                            // 0x0455(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	bool                                          DevilView;                                         // 0x0456(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_628F[0x1];                                     // 0x0457(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C7B[0x1];                                     // 0x0457(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UActorComponent>         NewVar_0;                                          // 0x0458(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, InstancedReference, HasGetValueTypeHash)
 	class UClass*                                 ClassAsset;                                        // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -17,59 +17,52 @@
 namespace SDK
 {
 
-// Function BPI_MovePiece.BPI_MovePiece_C.BPI_CallWhenRoomRotateEnd
+// Function BPI_MovePiece.BPI_MovePiece_C.BPI_InitMovePiece
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FPieceData                       PieceData                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// bool                                    IsBtlResult                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsForceGet                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    InfoOnly                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   PrevNum                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_MovePiece_C::BPI_CallWhenRoomRotateEnd()
+void IBPI_MovePiece_C::BPI_InitMovePiece(const struct FPieceData& PieceData, bool IsBtlResult, bool IsForceGet, bool InfoOnly, int32 PrevNum)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_CallWhenRoomRotateEnd");
+		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_InitMovePiece");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPI_MovePiece_C_BPI_InitMovePiece Parms{};
+
+	Parms.PieceData = std::move(PieceData);
+	Parms.IsBtlResult = IsBtlResult;
+	Parms.IsForceGet = IsForceGet;
+	Parms.InfoOnly = InfoOnly;
+	Parms.PrevNum = PrevNum;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPI_MovePiece.BPI_MovePiece_C.BPI_CallWhenRoomRotateStart
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPI_MovePiece.BPI_MovePiece_C.BPI_GetMovePieceCollision
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBoxComponent*                    Collision                                              (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_MovePiece_C::BPI_CallWhenRoomRotateStart()
+void IBPI_MovePiece_C::BPI_GetMovePieceCollision(class UBoxComponent** Collision)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_CallWhenRoomRotateStart");
+		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_GetMovePieceCollision");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::BPI_MovePiece_C_BPI_GetMovePieceCollision Parms{};
 
+	UObject::ProcessEvent(Func, &Parms);
 
-// Function BPI_MovePiece.BPI_MovePiece_C.BPI_HideMovePiece
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_MovePiece_C::BPI_HideMovePiece()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_HideMovePiece");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_MovePiece.BPI_MovePiece_C.BPI_ShowAgainMovePiece
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_MovePiece_C::BPI_ShowAgainMovePiece()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_ShowAgainMovePiece");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (Collision != nullptr)
+		*Collision = Parms.Collision;
 }
 
 
@@ -99,52 +92,59 @@ void IBPI_MovePiece_C::BPI_MissedTakara(int32 SaveId, class AActor* TakaraActor,
 }
 
 
-// Function BPI_MovePiece.BPI_MovePiece_C.BPI_GetMovePieceCollision
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UBoxComponent*                    Collision                                              (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPI_MovePiece.BPI_MovePiece_C.BPI_ShowAgainMovePiece
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_MovePiece_C::BPI_GetMovePieceCollision(class UBoxComponent** Collision)
+void IBPI_MovePiece_C::BPI_ShowAgainMovePiece()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_GetMovePieceCollision");
+		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_ShowAgainMovePiece");
 
-	Params::BPI_MovePiece_C_BPI_GetMovePieceCollision Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Collision != nullptr)
-		*Collision = Parms.Collision;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPI_MovePiece.BPI_MovePiece_C.BPI_InitMovePiece
+// Function BPI_MovePiece.BPI_MovePiece_C.BPI_HideMovePiece
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FPieceData                       PieceData                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// bool                                    IsBtlResult                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    IsForceGet                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    InfoOnly                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   PrevNum                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_MovePiece_C::BPI_InitMovePiece(const struct FPieceData& PieceData, bool IsBtlResult, bool IsForceGet, bool InfoOnly, int32 PrevNum)
+void IBPI_MovePiece_C::BPI_HideMovePiece()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_InitMovePiece");
+		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_HideMovePiece");
 
-	Params::BPI_MovePiece_C_BPI_InitMovePiece Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.PieceData = std::move(PieceData);
-	Parms.IsBtlResult = IsBtlResult;
-	Parms.IsForceGet = IsForceGet;
-	Parms.InfoOnly = InfoOnly;
-	Parms.PrevNum = PrevNum;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BPI_MovePiece.BPI_MovePiece_C.BPI_CallWhenRoomRotateStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_MovePiece_C::BPI_CallWhenRoomRotateStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_CallWhenRoomRotateStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_MovePiece.BPI_MovePiece_C.BPI_CallWhenRoomRotateEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_MovePiece_C::BPI_CallWhenRoomRotateEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_MovePiece_C", "BPI_CallWhenRoomRotateEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

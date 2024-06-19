@@ -17,36 +17,49 @@
 namespace SDK
 {
 
-// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.IsPlaying
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.ExecuteUbergraph_BP_UIMovieCtrlBase
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    Param_IsPlaying                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIMovieCtrlBase_C::IsPlaying(bool* Param_IsPlaying)
+void ABP_UIMovieCtrlBase_C::ExecuteUbergraph_BP_UIMovieCtrlBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "IsPlaying");
+		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "ExecuteUbergraph_BP_UIMovieCtrlBase");
 
-	Params::BP_UIMovieCtrlBase_C_IsPlaying Parms{};
+	Params::BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_IsPlaying != nullptr)
-		*Param_IsPlaying = Parms.Param_IsPlaying;
 }
 
 
-// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_UIMovieCtrlBase_C::UserConstructionScript()
+void ABP_UIMovieCtrlBase_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.Stop
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_UIMovieCtrlBase_C::Stop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "Stop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -72,51 +85,38 @@ void ABP_UIMovieCtrlBase_C::Play(bool Loop)
 }
 
 
-// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.Stop
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_UIMovieCtrlBase_C::Stop()
+void ABP_UIMovieCtrlBase_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "Stop");
+		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_UIMovieCtrlBase_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.ExecuteUbergraph_BP_UIMovieCtrlBase
-// (Final, UbergraphFunction)
+// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.IsPlaying
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_IsPlaying                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_UIMovieCtrlBase_C::ExecuteUbergraph_BP_UIMovieCtrlBase(int32 EntryPoint)
+void ABP_UIMovieCtrlBase_C::IsPlaying(bool* Param_IsPlaying)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "ExecuteUbergraph_BP_UIMovieCtrlBase");
+		Func = Class->GetFunction("BP_UIMovieCtrlBase_C", "IsPlaying");
 
-	Params::BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::BP_UIMovieCtrlBase_C_IsPlaying Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_IsPlaying != nullptr)
+		*Param_IsPlaying = Parms.Param_IsPlaying;
 }
 
 }

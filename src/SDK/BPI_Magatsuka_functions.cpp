@@ -17,78 +17,6 @@
 namespace SDK
 {
 
-// Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_ShowIconRange
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Show                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void IBPI_Magatsuka_C::BPI_ShowIconRange(bool Show, bool* NewParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_Magatsuka_C", "BPI_ShowIconRange");
-
-	Params::BPI_Magatsuka_C_BPI_ShowIconRange Parms{};
-
-	Parms.Show = Show;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
-}
-
-
-// Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_ShowMagatsuka
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Show                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void IBPI_Magatsuka_C::BPI_ShowMagatsuka(bool Show)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_Magatsuka_C", "BPI_ShowMagatsuka");
-
-	Params::BPI_Magatsuka_C_BPI_ShowMagatsuka Parms{};
-
-	Parms.Show = Show;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_RecalcMagatsukaGaze
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_Magatsuka_C::BPI_RecalcMagatsukaGaze()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_Magatsuka_C", "BPI_RecalcMagatsukaGaze");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_ReleaseMagatsukaGaze
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_Magatsuka_C::BPI_ReleaseMagatsukaGaze()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_Magatsuka_C", "BPI_ReleaseMagatsukaGaze");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_GetComeRangeInfo
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -119,6 +47,78 @@ void IBPI_Magatsuka_C::BPI_GetComeRangeInfo(bool* View, struct FVector* LocalLoc
 
 	if (Size != nullptr)
 		*Size = std::move(Parms.Size);
+}
+
+
+// Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_ReleaseMagatsukaGaze
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_Magatsuka_C::BPI_ReleaseMagatsukaGaze()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_Magatsuka_C", "BPI_ReleaseMagatsukaGaze");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_RecalcMagatsukaGaze
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_Magatsuka_C::BPI_RecalcMagatsukaGaze()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_Magatsuka_C", "BPI_RecalcMagatsukaGaze");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_ShowMagatsuka
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Show                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void IBPI_Magatsuka_C::BPI_ShowMagatsuka(bool Show)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_Magatsuka_C", "BPI_ShowMagatsuka");
+
+	Params::BPI_Magatsuka_C_BPI_ShowMagatsuka Parms{};
+
+	Parms.Show = Show;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_Magatsuka.BPI_Magatsuka_C.BPI_ShowIconRange
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Show                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void IBPI_Magatsuka_C::BPI_ShowIconRange(bool Show, bool* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_Magatsuka_C", "BPI_ShowIconRange");
+
+	Params::BPI_Magatsuka_C_BPI_ShowIconRange Parms{};
+
+	Parms.Show = Show;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
 }
 
 }

@@ -16,39 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.IsPlaying
-// 0x0001 (0x0001 - 0x0000)
-struct BP_UIMovieCtrlBase_C_IsPlaying final
-{
-public:
-	bool                                          Param_IsPlaying;                                   // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_UIMovieCtrlBase_C_IsPlaying) == 0x000001, "Wrong alignment on BP_UIMovieCtrlBase_C_IsPlaying");
-static_assert(sizeof(BP_UIMovieCtrlBase_C_IsPlaying) == 0x000001, "Wrong size on BP_UIMovieCtrlBase_C_IsPlaying");
-static_assert(offsetof(BP_UIMovieCtrlBase_C_IsPlaying, Param_IsPlaying) == 0x000000, "Member 'BP_UIMovieCtrlBase_C_IsPlaying::Param_IsPlaying' has a wrong offset!");
-
-// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.UserConstructionScript
-// 0x0001 (0x0001 - 0x0000)
-struct BP_UIMovieCtrlBase_C_UserConstructionScript final
-{
-public:
-	bool                                          CallFunc_IsOriginalMovieResolution_ReturnValue;    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_UIMovieCtrlBase_C_UserConstructionScript) == 0x000001, "Wrong alignment on BP_UIMovieCtrlBase_C_UserConstructionScript");
-static_assert(sizeof(BP_UIMovieCtrlBase_C_UserConstructionScript) == 0x000001, "Wrong size on BP_UIMovieCtrlBase_C_UserConstructionScript");
-static_assert(offsetof(BP_UIMovieCtrlBase_C_UserConstructionScript, CallFunc_IsOriginalMovieResolution_ReturnValue) == 0x000000, "Member 'BP_UIMovieCtrlBase_C_UserConstructionScript::CallFunc_IsOriginalMovieResolution_ReturnValue' has a wrong offset!");
-
-// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.Play
-// 0x0001 (0x0001 - 0x0000)
-struct BP_UIMovieCtrlBase_C_Play final
-{
-public:
-	bool                                          Loop;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_UIMovieCtrlBase_C_Play) == 0x000001, "Wrong alignment on BP_UIMovieCtrlBase_C_Play");
-static_assert(sizeof(BP_UIMovieCtrlBase_C_Play) == 0x000001, "Wrong size on BP_UIMovieCtrlBase_C_Play");
-static_assert(offsetof(BP_UIMovieCtrlBase_C_Play, Loop) == 0x000000, "Member 'BP_UIMovieCtrlBase_C_Play::Loop' has a wrong offset!");
-
 // Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.ExecuteUbergraph_BP_UIMovieCtrlBase
 // 0x000C (0x000C - 0x0000)
 struct BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase final
@@ -73,6 +40,39 @@ static_assert(offsetof(BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase,
 static_assert(offsetof(BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase, CallFunc_GetStatus_ReturnValue_1) == 0x000008, "Member 'BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase::CallFunc_GetStatus_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000009, "Member 'BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase, Temp_bool_Has_Been_Initd_Variable) == 0x00000A, "Member 'BP_UIMovieCtrlBase_C_ExecuteUbergraph_BP_UIMovieCtrlBase::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
+
+// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.Play
+// 0x0001 (0x0001 - 0x0000)
+struct BP_UIMovieCtrlBase_C_Play final
+{
+public:
+	bool                                          Loop;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_UIMovieCtrlBase_C_Play) == 0x000001, "Wrong alignment on BP_UIMovieCtrlBase_C_Play");
+static_assert(sizeof(BP_UIMovieCtrlBase_C_Play) == 0x000001, "Wrong size on BP_UIMovieCtrlBase_C_Play");
+static_assert(offsetof(BP_UIMovieCtrlBase_C_Play, Loop) == 0x000000, "Member 'BP_UIMovieCtrlBase_C_Play::Loop' has a wrong offset!");
+
+// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.UserConstructionScript
+// 0x0001 (0x0001 - 0x0000)
+struct BP_UIMovieCtrlBase_C_UserConstructionScript final
+{
+public:
+	bool                                          CallFunc_IsOriginalMovieResolution_ReturnValue;    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_UIMovieCtrlBase_C_UserConstructionScript) == 0x000001, "Wrong alignment on BP_UIMovieCtrlBase_C_UserConstructionScript");
+static_assert(sizeof(BP_UIMovieCtrlBase_C_UserConstructionScript) == 0x000001, "Wrong size on BP_UIMovieCtrlBase_C_UserConstructionScript");
+static_assert(offsetof(BP_UIMovieCtrlBase_C_UserConstructionScript, CallFunc_IsOriginalMovieResolution_ReturnValue) == 0x000000, "Member 'BP_UIMovieCtrlBase_C_UserConstructionScript::CallFunc_IsOriginalMovieResolution_ReturnValue' has a wrong offset!");
+
+// Function BP_UIMovieCtrlBase.BP_UIMovieCtrlBase_C.IsPlaying
+// 0x0001 (0x0001 - 0x0000)
+struct BP_UIMovieCtrlBase_C_IsPlaying final
+{
+public:
+	bool                                          Param_IsPlaying;                                   // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_UIMovieCtrlBase_C_IsPlaying) == 0x000001, "Wrong alignment on BP_UIMovieCtrlBase_C_IsPlaying");
+static_assert(sizeof(BP_UIMovieCtrlBase_C_IsPlaying) == 0x000001, "Wrong size on BP_UIMovieCtrlBase_C_IsPlaying");
+static_assert(offsetof(BP_UIMovieCtrlBase_C_IsPlaying, Param_IsPlaying) == 0x000000, "Member 'BP_UIMovieCtrlBase_C_IsPlaying::Param_IsPlaying' has a wrong offset!");
 
 }
 

@@ -21,9 +21,9 @@ namespace SDK
 class IBPI_CharaFacialComponent_C final : public IInterface
 {
 public:
-	void GetFacialComponent(class USkeletalMeshComponent** FacialMesh);
-	void DestroyFacialComponent();
 	void AddFacialComponent(class FName ExpressionID);
+	void DestroyFacialComponent();
+	void GetFacialComponent(class USkeletalMeshComponent** FacialMesh);
 
 public:
 	static class UClass* StaticClass()

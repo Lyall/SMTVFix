@@ -36,29 +36,29 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_256E[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_680D[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMEC_BaseTask_C*                        CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_256F[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_680E[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2570[0x1];                                     // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_680F[0x1];                                     // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x004C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2571[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6810[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_1;                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2572[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6811[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IS_EDITOR_BUILD_ReturnValue;              // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2573[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6812[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMEC_BaseTask_C*                        K2Node_DynamicCast_AsMEC_Base_Task;                // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2574[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6813[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        CallFunc_GetChildComponent_ReturnValue_1;          // 0x0088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -99,80 +99,49 @@ static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, Cal
 static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 static_assert(offsetof(MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core, CallFunc_IsValid_ReturnValue_6) == 0x000094, "Member 'MapEventHit_Core_C_ExecuteUbergraph_MapEventHit_Core::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
 
-// Function MapEventHit_Core.MapEventHit_Core_C.IsEventHitPaused
-// 0x0030 (0x0030 - 0x0000)
-struct MapEventHit_Core_C_IsEventHitPaused final
+// Function MapEventHit_Core.MapEventHit_Core_C.ReShapeColor
+// 0x0010 (0x0010 - 0x0000)
+struct MapEventHit_Core_C_ReShapeColor final
 {
 public:
-	bool                                          Paused;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2575[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2576[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_CheckMapPause_IsPause;                // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FLinearColor                           Value;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(MapEventHit_Core_C_IsEventHitPaused) == 0x000008, "Wrong alignment on MapEventHit_Core_C_IsEventHitPaused");
-static_assert(sizeof(MapEventHit_Core_C_IsEventHitPaused) == 0x000030, "Wrong size on MapEventHit_Core_C_IsEventHitPaused");
-static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, Paused) == 0x000000, "Member 'MapEventHit_Core_C_IsEventHitPaused::Paused' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'MapEventHit_Core_C_IsEventHitPaused::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, CallFunc_Not_PreBool_ReturnValue) == 0x000010, "Member 'MapEventHit_Core_C_IsEventHitPaused::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000018, "Member 'MapEventHit_Core_C_IsEventHitPaused::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'MapEventHit_Core_C_IsEventHitPaused::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, CallFunc_BPI_CheckMapPause_IsPause) == 0x000029, "Member 'MapEventHit_Core_C_IsEventHitPaused::CallFunc_BPI_CheckMapPause_IsPause' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, CallFunc_BooleanAND_ReturnValue) == 0x00002A, "Member 'MapEventHit_Core_C_IsEventHitPaused::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(alignof(MapEventHit_Core_C_ReShapeColor) == 0x000004, "Wrong alignment on MapEventHit_Core_C_ReShapeColor");
+static_assert(sizeof(MapEventHit_Core_C_ReShapeColor) == 0x000010, "Wrong size on MapEventHit_Core_C_ReShapeColor");
+static_assert(offsetof(MapEventHit_Core_C_ReShapeColor, Value) == 0x000000, "Member 'MapEventHit_Core_C_ReShapeColor::Value' has a wrong offset!");
 
-// Function MapEventHit_Core.MapEventHit_Core_C.IsMyArea
-// 0x000C (0x000C - 0x0000)
-struct MapEventHit_Core_C_IsMyArea final
+// Function MapEventHit_Core.MapEventHit_Core_C.HiddenVolume
+// 0x0001 (0x0001 - 0x0000)
+struct MapEventHit_Core_C_HiddenVolume final
 {
 public:
-	bool                                          Param_IsMyArea;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2577[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetAreaID_ReturnValue;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Param_Hidden;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MapEventHit_Core_C_IsMyArea) == 0x000004, "Wrong alignment on MapEventHit_Core_C_IsMyArea");
-static_assert(sizeof(MapEventHit_Core_C_IsMyArea) == 0x00000C, "Wrong size on MapEventHit_Core_C_IsMyArea");
-static_assert(offsetof(MapEventHit_Core_C_IsMyArea, Param_IsMyArea) == 0x000000, "Member 'MapEventHit_Core_C_IsMyArea::Param_IsMyArea' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsMyArea, CallFunc_GetAreaID_ReturnValue) == 0x000004, "Member 'MapEventHit_Core_C_IsMyArea::CallFunc_GetAreaID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsMyArea, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000008, "Member 'MapEventHit_Core_C_IsMyArea::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsMyArea, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000009, "Member 'MapEventHit_Core_C_IsMyArea::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_IsMyArea, CallFunc_BooleanOR_ReturnValue) == 0x00000A, "Member 'MapEventHit_Core_C_IsMyArea::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(alignof(MapEventHit_Core_C_HiddenVolume) == 0x000001, "Wrong alignment on MapEventHit_Core_C_HiddenVolume");
+static_assert(sizeof(MapEventHit_Core_C_HiddenVolume) == 0x000001, "Wrong size on MapEventHit_Core_C_HiddenVolume");
+static_assert(offsetof(MapEventHit_Core_C_HiddenVolume, Param_Hidden) == 0x000000, "Member 'MapEventHit_Core_C_HiddenVolume::Param_Hidden' has a wrong offset!");
 
-// Function MapEventHit_Core.MapEventHit_Core_C.hidden
-// 0x0003 (0x0003 - 0x0000)
-struct MapEventHit_Core_C_Hidden final
+// Function MapEventHit_Core.MapEventHit_Core_C.DebugView
+// 0x0001 (0x0001 - 0x0000)
+struct MapEventHit_Core_C_DebugView final
 {
 public:
-	bool                                          NewHidden;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Bool;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MapEventHit_Core_C_Hidden) == 0x000001, "Wrong alignment on MapEventHit_Core_C_Hidden");
-static_assert(sizeof(MapEventHit_Core_C_Hidden) == 0x000003, "Wrong size on MapEventHit_Core_C_Hidden");
-static_assert(offsetof(MapEventHit_Core_C_Hidden, NewHidden) == 0x000000, "Member 'MapEventHit_Core_C_Hidden::NewHidden' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_Hidden, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'MapEventHit_Core_C_Hidden::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_Hidden, CallFunc_IsValid_ReturnValue_1) == 0x000002, "Member 'MapEventHit_Core_C_Hidden::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(MapEventHit_Core_C_DebugView) == 0x000001, "Wrong alignment on MapEventHit_Core_C_DebugView");
+static_assert(sizeof(MapEventHit_Core_C_DebugView) == 0x000001, "Wrong size on MapEventHit_Core_C_DebugView");
+static_assert(offsetof(MapEventHit_Core_C_DebugView, Bool) == 0x000000, "Member 'MapEventHit_Core_C_DebugView::Bool' has a wrong offset!");
 
-// Function MapEventHit_Core.MapEventHit_Core_C.FlagCh
-// 0x0003 (0x0003 - 0x0000)
-struct MapEventHit_Core_C_FlagCh final
+// Function MapEventHit_Core.MapEventHit_Core_C.EventHitActivate
+// 0x0001 (0x0001 - 0x0000)
+struct MapEventHit_Core_C_EventHitActivate final
 {
 public:
-	bool                                          OK;                                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Enable;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_ProjectDebugFlagGet_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MapEventHit_Core_C_FlagCh) == 0x000001, "Wrong alignment on MapEventHit_Core_C_FlagCh");
-static_assert(sizeof(MapEventHit_Core_C_FlagCh) == 0x000003, "Wrong size on MapEventHit_Core_C_FlagCh");
-static_assert(offsetof(MapEventHit_Core_C_FlagCh, OK) == 0x000000, "Member 'MapEventHit_Core_C_FlagCh::OK' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_FlagCh, Enable) == 0x000001, "Member 'MapEventHit_Core_C_FlagCh::Enable' has a wrong offset!");
-static_assert(offsetof(MapEventHit_Core_C_FlagCh, CallFunc_ProjectDebugFlagGet_ReturnValue) == 0x000002, "Member 'MapEventHit_Core_C_FlagCh::CallFunc_ProjectDebugFlagGet_ReturnValue' has a wrong offset!");
+static_assert(alignof(MapEventHit_Core_C_EventHitActivate) == 0x000001, "Wrong alignment on MapEventHit_Core_C_EventHitActivate");
+static_assert(sizeof(MapEventHit_Core_C_EventHitActivate) == 0x000001, "Wrong size on MapEventHit_Core_C_EventHitActivate");
+static_assert(offsetof(MapEventHit_Core_C_EventHitActivate, Active) == 0x000000, "Member 'MapEventHit_Core_C_EventHitActivate::Active' has a wrong offset!");
 
 // Function MapEventHit_Core.MapEventHit_Core_C.UserConstructionScript
 // 0x01E0 (0x01E0 - 0x0000)
@@ -183,7 +152,7 @@ public:
 	TArray<class UStaticMeshComponent*>           DbgPlane;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2578[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6814[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetMapEventHitTableData_Name1;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0018)()
 	float                                         CallFunc_BreakVector_X;                            // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -194,10 +163,10 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_Divide_ByteByte_ReturnValue;              // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2579[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6815[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 K2Node_MakeStruct_Color;                           // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x007C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_257A[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6816[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UStaticMeshComponent*>           K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm, ContainsInstancedReference)
 	float                                         CallFunc_BreakVector_X_1;                          // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y_1;                          // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -214,18 +183,18 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue_8;          // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x00DC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Array_Get_Item;                           // 0x00E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_257B[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6817[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        K2Node_MakeArray_Array_1;                          // 0x00F8(0x0010)(ReferenceParm)
 	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_1;                         // 0x0108(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_257C[0x4];                                     // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6818[0x4];                                     // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Array_Get_Item_2;                         // 0x012C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0138(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_257D[0x3];                                     // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6819[0x3];                                     // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0148(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -279,49 +248,80 @@ static_assert(offsetof(MapEventHit_Core_C_UserConstructionScript, CallFunc_Add_I
 static_assert(offsetof(MapEventHit_Core_C_UserConstructionScript, CallFunc_Array_Add_ReturnValue) == 0x0001D4, "Member 'MapEventHit_Core_C_UserConstructionScript::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 static_assert(offsetof(MapEventHit_Core_C_UserConstructionScript, CallFunc_IS_EDITOR_BUILD_ReturnValue) == 0x0001D8, "Member 'MapEventHit_Core_C_UserConstructionScript::CallFunc_IS_EDITOR_BUILD_ReturnValue' has a wrong offset!");
 
-// Function MapEventHit_Core.MapEventHit_Core_C.EventHitActivate
-// 0x0001 (0x0001 - 0x0000)
-struct MapEventHit_Core_C_EventHitActivate final
+// Function MapEventHit_Core.MapEventHit_Core_C.FlagCh
+// 0x0003 (0x0003 - 0x0000)
+struct MapEventHit_Core_C_FlagCh final
 {
 public:
-	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          OK;                                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Enable;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_ProjectDebugFlagGet_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MapEventHit_Core_C_EventHitActivate) == 0x000001, "Wrong alignment on MapEventHit_Core_C_EventHitActivate");
-static_assert(sizeof(MapEventHit_Core_C_EventHitActivate) == 0x000001, "Wrong size on MapEventHit_Core_C_EventHitActivate");
-static_assert(offsetof(MapEventHit_Core_C_EventHitActivate, Active) == 0x000000, "Member 'MapEventHit_Core_C_EventHitActivate::Active' has a wrong offset!");
+static_assert(alignof(MapEventHit_Core_C_FlagCh) == 0x000001, "Wrong alignment on MapEventHit_Core_C_FlagCh");
+static_assert(sizeof(MapEventHit_Core_C_FlagCh) == 0x000003, "Wrong size on MapEventHit_Core_C_FlagCh");
+static_assert(offsetof(MapEventHit_Core_C_FlagCh, OK) == 0x000000, "Member 'MapEventHit_Core_C_FlagCh::OK' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_FlagCh, Enable) == 0x000001, "Member 'MapEventHit_Core_C_FlagCh::Enable' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_FlagCh, CallFunc_ProjectDebugFlagGet_ReturnValue) == 0x000002, "Member 'MapEventHit_Core_C_FlagCh::CallFunc_ProjectDebugFlagGet_ReturnValue' has a wrong offset!");
 
-// Function MapEventHit_Core.MapEventHit_Core_C.DebugView
-// 0x0001 (0x0001 - 0x0000)
-struct MapEventHit_Core_C_DebugView final
+// Function MapEventHit_Core.MapEventHit_Core_C.hidden
+// 0x0003 (0x0003 - 0x0000)
+struct MapEventHit_Core_C_Hidden final
 {
 public:
-	bool                                          Bool;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          NewHidden;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MapEventHit_Core_C_DebugView) == 0x000001, "Wrong alignment on MapEventHit_Core_C_DebugView");
-static_assert(sizeof(MapEventHit_Core_C_DebugView) == 0x000001, "Wrong size on MapEventHit_Core_C_DebugView");
-static_assert(offsetof(MapEventHit_Core_C_DebugView, Bool) == 0x000000, "Member 'MapEventHit_Core_C_DebugView::Bool' has a wrong offset!");
+static_assert(alignof(MapEventHit_Core_C_Hidden) == 0x000001, "Wrong alignment on MapEventHit_Core_C_Hidden");
+static_assert(sizeof(MapEventHit_Core_C_Hidden) == 0x000003, "Wrong size on MapEventHit_Core_C_Hidden");
+static_assert(offsetof(MapEventHit_Core_C_Hidden, NewHidden) == 0x000000, "Member 'MapEventHit_Core_C_Hidden::NewHidden' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_Hidden, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'MapEventHit_Core_C_Hidden::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_Hidden, CallFunc_IsValid_ReturnValue_1) == 0x000002, "Member 'MapEventHit_Core_C_Hidden::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
-// Function MapEventHit_Core.MapEventHit_Core_C.HiddenVolume
-// 0x0001 (0x0001 - 0x0000)
-struct MapEventHit_Core_C_HiddenVolume final
+// Function MapEventHit_Core.MapEventHit_Core_C.IsMyArea
+// 0x000C (0x000C - 0x0000)
+struct MapEventHit_Core_C_IsMyArea final
 {
 public:
-	bool                                          Param_Hidden;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Param_IsMyArea;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_681A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetAreaID_ReturnValue;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MapEventHit_Core_C_HiddenVolume) == 0x000001, "Wrong alignment on MapEventHit_Core_C_HiddenVolume");
-static_assert(sizeof(MapEventHit_Core_C_HiddenVolume) == 0x000001, "Wrong size on MapEventHit_Core_C_HiddenVolume");
-static_assert(offsetof(MapEventHit_Core_C_HiddenVolume, Param_Hidden) == 0x000000, "Member 'MapEventHit_Core_C_HiddenVolume::Param_Hidden' has a wrong offset!");
+static_assert(alignof(MapEventHit_Core_C_IsMyArea) == 0x000004, "Wrong alignment on MapEventHit_Core_C_IsMyArea");
+static_assert(sizeof(MapEventHit_Core_C_IsMyArea) == 0x00000C, "Wrong size on MapEventHit_Core_C_IsMyArea");
+static_assert(offsetof(MapEventHit_Core_C_IsMyArea, Param_IsMyArea) == 0x000000, "Member 'MapEventHit_Core_C_IsMyArea::Param_IsMyArea' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsMyArea, CallFunc_GetAreaID_ReturnValue) == 0x000004, "Member 'MapEventHit_Core_C_IsMyArea::CallFunc_GetAreaID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsMyArea, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000008, "Member 'MapEventHit_Core_C_IsMyArea::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsMyArea, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000009, "Member 'MapEventHit_Core_C_IsMyArea::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsMyArea, CallFunc_BooleanOR_ReturnValue) == 0x00000A, "Member 'MapEventHit_Core_C_IsMyArea::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
-// Function MapEventHit_Core.MapEventHit_Core_C.ReShapeColor
-// 0x0010 (0x0010 - 0x0000)
-struct MapEventHit_Core_C_ReShapeColor final
+// Function MapEventHit_Core.MapEventHit_Core_C.IsEventHitPaused
+// 0x0030 (0x0030 - 0x0000)
+struct MapEventHit_Core_C_IsEventHitPaused final
 {
 public:
-	struct FLinearColor                           Value;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Paused;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_681B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_681C[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_CheckMapPause_IsPause;                // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MapEventHit_Core_C_ReShapeColor) == 0x000004, "Wrong alignment on MapEventHit_Core_C_ReShapeColor");
-static_assert(sizeof(MapEventHit_Core_C_ReShapeColor) == 0x000010, "Wrong size on MapEventHit_Core_C_ReShapeColor");
-static_assert(offsetof(MapEventHit_Core_C_ReShapeColor, Value) == 0x000000, "Member 'MapEventHit_Core_C_ReShapeColor::Value' has a wrong offset!");
+static_assert(alignof(MapEventHit_Core_C_IsEventHitPaused) == 0x000008, "Wrong alignment on MapEventHit_Core_C_IsEventHitPaused");
+static_assert(sizeof(MapEventHit_Core_C_IsEventHitPaused) == 0x000030, "Wrong size on MapEventHit_Core_C_IsEventHitPaused");
+static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, Paused) == 0x000000, "Member 'MapEventHit_Core_C_IsEventHitPaused::Paused' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'MapEventHit_Core_C_IsEventHitPaused::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, CallFunc_Not_PreBool_ReturnValue) == 0x000010, "Member 'MapEventHit_Core_C_IsEventHitPaused::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000018, "Member 'MapEventHit_Core_C_IsEventHitPaused::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'MapEventHit_Core_C_IsEventHitPaused::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, CallFunc_BPI_CheckMapPause_IsPause) == 0x000029, "Member 'MapEventHit_Core_C_IsEventHitPaused::CallFunc_BPI_CheckMapPause_IsPause' has a wrong offset!");
+static_assert(offsetof(MapEventHit_Core_C_IsEventHitPaused, CallFunc_BooleanAND_ReturnValue) == 0x00002A, "Member 'MapEventHit_Core_C_IsEventHitPaused::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 }
 

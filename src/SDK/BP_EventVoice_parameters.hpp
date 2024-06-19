@@ -14,106 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BP_EventVoice.BP_EventVoice_C.GetEnd
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventVoice_C_GetEnd final
-{
-public:
-	bool                                          End;                                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventVoice_C_GetEnd) == 0x000001, "Wrong alignment on BP_EventVoice_C_GetEnd");
-static_assert(sizeof(BP_EventVoice_C_GetEnd) == 0x000001, "Wrong size on BP_EventVoice_C_GetEnd");
-static_assert(offsetof(BP_EventVoice_C_GetEnd, End) == 0x000000, "Member 'BP_EventVoice_C_GetEnd::End' has a wrong offset!");
-
-// Function BP_EventVoice.BP_EventVoice_C.ForceEnd
-// 0x0010 (0x0010 - 0x0000)
-struct BP_EventVoice_C_ForceEnd final
-{
-public:
-	class UCharaFaceComponent*                    CallFunc_GetComponentByClass_ReturnValue;          // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventVoice_C_ForceEnd) == 0x000008, "Wrong alignment on BP_EventVoice_C_ForceEnd");
-static_assert(sizeof(BP_EventVoice_C_ForceEnd) == 0x000010, "Wrong size on BP_EventVoice_C_ForceEnd");
-static_assert(offsetof(BP_EventVoice_C_ForceEnd, CallFunc_GetComponentByClass_ReturnValue) == 0x000000, "Member 'BP_EventVoice_C_ForceEnd::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventVoice_C_ForceEnd, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_EventVoice_C_ForceEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_EventVoice.BP_EventVoice_C.IsPlaying
-// 0x0002 (0x0002 - 0x0000)
-struct BP_EventVoice_C_IsPlaying final
-{
-public:
-	bool                                          Play;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventVoice_C_IsPlaying) == 0x000001, "Wrong alignment on BP_EventVoice_C_IsPlaying");
-static_assert(sizeof(BP_EventVoice_C_IsPlaying) == 0x000002, "Wrong size on BP_EventVoice_C_IsPlaying");
-static_assert(offsetof(BP_EventVoice_C_IsPlaying, Play) == 0x000000, "Member 'BP_EventVoice_C_IsPlaying::Play' has a wrong offset!");
-static_assert(offsetof(BP_EventVoice_C_IsPlaying, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000001, "Member 'BP_EventVoice_C_IsPlaying::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BP_EventVoice.BP_EventVoice_C.StopVoice
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventVoice_C_StopVoice final
-{
-public:
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventVoice_C_StopVoice) == 0x000001, "Wrong alignment on BP_EventVoice_C_StopVoice");
-static_assert(sizeof(BP_EventVoice_C_StopVoice) == 0x000001, "Wrong size on BP_EventVoice_C_StopVoice");
-static_assert(offsetof(BP_EventVoice_C_StopVoice, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000000, "Member 'BP_EventVoice_C_StopVoice::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BP_EventVoice.BP_EventVoice_C.PlayVoice
-// 0x0068 (0x0068 - 0x0000)
-struct BP_EventVoice_C_PlayVoice final
-{
-public:
-	class FName                                   Voice;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ACharaBase_C*                           Param_Chara;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class USoundAtomCue>           CallFunc_SearchEventVoice_ReturnValue;             // 0x0010(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	TSoftObjectPtr<class UCharaLipSync>           CallFunc_SearchEventLipSync_ReturnValue;           // 0x0038(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventVoice_C_PlayVoice) == 0x000008, "Wrong alignment on BP_EventVoice_C_PlayVoice");
-static_assert(sizeof(BP_EventVoice_C_PlayVoice) == 0x000068, "Wrong size on BP_EventVoice_C_PlayVoice");
-static_assert(offsetof(BP_EventVoice_C_PlayVoice, Voice) == 0x000000, "Member 'BP_EventVoice_C_PlayVoice::Voice' has a wrong offset!");
-static_assert(offsetof(BP_EventVoice_C_PlayVoice, Param_Chara) == 0x000008, "Member 'BP_EventVoice_C_PlayVoice::Param_Chara' has a wrong offset!");
-static_assert(offsetof(BP_EventVoice_C_PlayVoice, CallFunc_SearchEventVoice_ReturnValue) == 0x000010, "Member 'BP_EventVoice_C_PlayVoice::CallFunc_SearchEventVoice_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventVoice_C_PlayVoice, CallFunc_SearchEventLipSync_ReturnValue) == 0x000038, "Member 'BP_EventVoice_C_PlayVoice::CallFunc_SearchEventLipSync_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventVoice_C_PlayVoice, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000060, "Member 'BP_EventVoice_C_PlayVoice::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-
-// Function BP_EventVoice.BP_EventVoice_C.OnLoaded_8535642A4460D76349FEDDA0194EA271
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271) == 0x000008, "Wrong alignment on BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271");
-static_assert(sizeof(BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271) == 0x000008, "Wrong size on BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271");
-static_assert(offsetof(BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271, Loaded) == 0x000000, "Member 'BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271::Loaded' has a wrong offset!");
-
-// Function BP_EventVoice.BP_EventVoice_C.OnLoaded_8B38A45C4B5796534726BBAD81B724E0
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0) == 0x000008, "Wrong alignment on BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0");
-static_assert(sizeof(BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0) == 0x000008, "Wrong size on BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0");
-static_assert(offsetof(BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0, Loaded) == 0x000000, "Member 'BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0::Loaded' has a wrong offset!");
-
-// Function BP_EventVoice.BP_EventVoice_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_EventVoice_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventVoice_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_EventVoice_C_ReceiveTick");
-static_assert(sizeof(BP_EventVoice_C_ReceiveTick) == 0x000004, "Wrong size on BP_EventVoice_C_ReceiveTick");
-static_assert(offsetof(BP_EventVoice_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_EventVoice_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
 // Function BP_EventVoice.BP_EventVoice_C.ExecuteUbergraph_BP_EventVoice
 // 0x00D8 (0x00D8 - 0x0000)
 struct BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice final
@@ -123,51 +23,51 @@ public:
 	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87BD[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67B5[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable_1;                               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87BE[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67B6[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Has_Been_Initd_Variable_2;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_IsClosed_Variable_2;                     // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87BF[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67B7[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable;                              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundAtomCue*                          K2Node_DynamicCast_AsSound_Atom_Cue;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C0[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67B8[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable_1;                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_IsClosed_Variable_3;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C1[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67B9[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharaLipSync*                          K2Node_DynamicCast_AsChara_Lip_Sync;               // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Has_Been_Initd_Variable_3;               // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C2[0x2];                                     // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67BA[0x2];                                     // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C3[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67BB[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_CustomEvent_Loaded_1;                       // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAtomComponent*                         CallFunc_SpawnSoundAtLocation_ReturnValue;         // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C4[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67BC[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x007C(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Has_Been_Initd_Variable_4;               // 0x008E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C5[0x1];                                     // 0x008F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67BD[0x1];                                     // 0x008F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable_2;                               // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_IsClosed_Variable_4;                     // 0x0095(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C6[0x2];                                     // 0x0096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67BE[0x2];                                     // 0x0096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C7[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67BF[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_1;            // 0x00A0(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C8[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67C0[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharaFaceComponent*                    CallFunc_GetComponentByClass_ReturnValue;          // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87C9[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67C1[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable_3;                               // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -215,6 +115,106 @@ static_assert(offsetof(BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice, Temp_int_
 static_assert(offsetof(BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000C8, "Member 'BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice, CallFunc_Add_IntInt_ReturnValue_2) == 0x0000CC, "Member 'BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice, CallFunc_Add_IntInt_ReturnValue_3) == 0x0000D0, "Member 'BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+
+// Function BP_EventVoice.BP_EventVoice_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_EventVoice_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventVoice_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_EventVoice_C_ReceiveTick");
+static_assert(sizeof(BP_EventVoice_C_ReceiveTick) == 0x000004, "Wrong size on BP_EventVoice_C_ReceiveTick");
+static_assert(offsetof(BP_EventVoice_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_EventVoice_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_EventVoice.BP_EventVoice_C.OnLoaded_8B38A45C4B5796534726BBAD81B724E0
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0 final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0) == 0x000008, "Wrong alignment on BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0");
+static_assert(sizeof(BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0) == 0x000008, "Wrong size on BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0");
+static_assert(offsetof(BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0, Loaded) == 0x000000, "Member 'BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0::Loaded' has a wrong offset!");
+
+// Function BP_EventVoice.BP_EventVoice_C.OnLoaded_8535642A4460D76349FEDDA0194EA271
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271 final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271) == 0x000008, "Wrong alignment on BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271");
+static_assert(sizeof(BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271) == 0x000008, "Wrong size on BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271");
+static_assert(offsetof(BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271, Loaded) == 0x000000, "Member 'BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271::Loaded' has a wrong offset!");
+
+// Function BP_EventVoice.BP_EventVoice_C.PlayVoice
+// 0x0068 (0x0068 - 0x0000)
+struct BP_EventVoice_C_PlayVoice final
+{
+public:
+	class FName                                   Voice;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACharaBase_C*                           Param_Chara;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class USoundAtomCue>           CallFunc_SearchEventVoice_ReturnValue;             // 0x0010(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	TSoftObjectPtr<class UCharaLipSync>           CallFunc_SearchEventLipSync_ReturnValue;           // 0x0038(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventVoice_C_PlayVoice) == 0x000008, "Wrong alignment on BP_EventVoice_C_PlayVoice");
+static_assert(sizeof(BP_EventVoice_C_PlayVoice) == 0x000068, "Wrong size on BP_EventVoice_C_PlayVoice");
+static_assert(offsetof(BP_EventVoice_C_PlayVoice, Voice) == 0x000000, "Member 'BP_EventVoice_C_PlayVoice::Voice' has a wrong offset!");
+static_assert(offsetof(BP_EventVoice_C_PlayVoice, Param_Chara) == 0x000008, "Member 'BP_EventVoice_C_PlayVoice::Param_Chara' has a wrong offset!");
+static_assert(offsetof(BP_EventVoice_C_PlayVoice, CallFunc_SearchEventVoice_ReturnValue) == 0x000010, "Member 'BP_EventVoice_C_PlayVoice::CallFunc_SearchEventVoice_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventVoice_C_PlayVoice, CallFunc_SearchEventLipSync_ReturnValue) == 0x000038, "Member 'BP_EventVoice_C_PlayVoice::CallFunc_SearchEventLipSync_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventVoice_C_PlayVoice, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000060, "Member 'BP_EventVoice_C_PlayVoice::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+
+// Function BP_EventVoice.BP_EventVoice_C.StopVoice
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventVoice_C_StopVoice final
+{
+public:
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventVoice_C_StopVoice) == 0x000001, "Wrong alignment on BP_EventVoice_C_StopVoice");
+static_assert(sizeof(BP_EventVoice_C_StopVoice) == 0x000001, "Wrong size on BP_EventVoice_C_StopVoice");
+static_assert(offsetof(BP_EventVoice_C_StopVoice, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000000, "Member 'BP_EventVoice_C_StopVoice::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_EventVoice.BP_EventVoice_C.IsPlaying
+// 0x0002 (0x0002 - 0x0000)
+struct BP_EventVoice_C_IsPlaying final
+{
+public:
+	bool                                          Play;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventVoice_C_IsPlaying) == 0x000001, "Wrong alignment on BP_EventVoice_C_IsPlaying");
+static_assert(sizeof(BP_EventVoice_C_IsPlaying) == 0x000002, "Wrong size on BP_EventVoice_C_IsPlaying");
+static_assert(offsetof(BP_EventVoice_C_IsPlaying, Play) == 0x000000, "Member 'BP_EventVoice_C_IsPlaying::Play' has a wrong offset!");
+static_assert(offsetof(BP_EventVoice_C_IsPlaying, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000001, "Member 'BP_EventVoice_C_IsPlaying::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_EventVoice.BP_EventVoice_C.ForceEnd
+// 0x0010 (0x0010 - 0x0000)
+struct BP_EventVoice_C_ForceEnd final
+{
+public:
+	class UCharaFaceComponent*                    CallFunc_GetComponentByClass_ReturnValue;          // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventVoice_C_ForceEnd) == 0x000008, "Wrong alignment on BP_EventVoice_C_ForceEnd");
+static_assert(sizeof(BP_EventVoice_C_ForceEnd) == 0x000010, "Wrong size on BP_EventVoice_C_ForceEnd");
+static_assert(offsetof(BP_EventVoice_C_ForceEnd, CallFunc_GetComponentByClass_ReturnValue) == 0x000000, "Member 'BP_EventVoice_C_ForceEnd::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventVoice_C_ForceEnd, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_EventVoice_C_ForceEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_EventVoice.BP_EventVoice_C.GetEnd
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventVoice_C_GetEnd final
+{
+public:
+	bool                                          End;                                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventVoice_C_GetEnd) == 0x000001, "Wrong alignment on BP_EventVoice_C_GetEnd");
+static_assert(sizeof(BP_EventVoice_C_GetEnd) == 0x000001, "Wrong size on BP_EventVoice_C_GetEnd");
+static_assert(offsetof(BP_EventVoice_C_GetEnd, End) == 0x000000, "Member 'BP_EventVoice_C_GetEnd::End' has a wrong offset!");
 
 }
 

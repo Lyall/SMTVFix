@@ -23,7 +23,7 @@ struct FST_BtnHelp_ChangeInfo2 final
 public:
 	E_BTN_HELP_POS_TYPE                           PositionType_7_1AEB67E44F07D7315E9ABF9B7DE77A22;   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTN_HELP_SET                                HelpPattern_13_488DA6254D128CF0EE08FA99409383D9;   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4192[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3BC7[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBtnHelpInfo>                   ManualInfo_29_C124E813419A53FD8D6D5B95720DB8E1;    // 0x0008(0x0010)(Edit, BlueprintVisible)
 	bool                                          CloseOtherHelp_12_94AA8BD2426C3516078ECCAF38D6A30E; // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          SkipAnimation_17_65E7D7CD495C455A6B7E70B691FB3283; // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)

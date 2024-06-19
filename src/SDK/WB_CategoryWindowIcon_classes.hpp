@@ -30,7 +30,7 @@ public:
 	class FName                                   Debug_CategoryAnim;                                // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Debug_IsSelectAnim;                                // 0x0288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Debug_IsVisibleNewIcon;                            // 0x0289(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4B2D[0x2];                                     // 0x028A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3F6D[0x2];                                     // 0x028A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CategoryIdx;                                       // 0x028C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             MouseEvent_OnClickedIcon;                          // 0x0290(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 

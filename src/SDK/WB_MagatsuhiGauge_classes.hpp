@@ -38,7 +38,7 @@ public:
 	bool                                          M_IsUpperSlideInPos;                               // 0x02CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_IsSlideInImmediately;                            // 0x02CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              M_ReduceGaugeFlashLoopVisibility;                  // 0x02CE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F64[0x1];                                     // 0x02CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49A1[0x1];                                     // 0x02CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_GuardReduceFlashLoop;                            // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

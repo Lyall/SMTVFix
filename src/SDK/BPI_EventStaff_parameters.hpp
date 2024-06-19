@@ -14,16 +14,16 @@
 namespace SDK::Params
 {
 
-// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffPlay
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_EventStaff_C_BI_StaffPlay final
+// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffIsFinished
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_EventStaff_C_BI_StaffIsFinished final
 {
 public:
-	class USoundAtomCue*                          BGM;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFinished;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPI_EventStaff_C_BI_StaffPlay) == 0x000008, "Wrong alignment on BPI_EventStaff_C_BI_StaffPlay");
-static_assert(sizeof(BPI_EventStaff_C_BI_StaffPlay) == 0x000008, "Wrong size on BPI_EventStaff_C_BI_StaffPlay");
-static_assert(offsetof(BPI_EventStaff_C_BI_StaffPlay, BGM) == 0x000000, "Member 'BPI_EventStaff_C_BI_StaffPlay::BGM' has a wrong offset!");
+static_assert(alignof(BPI_EventStaff_C_BI_StaffIsFinished) == 0x000001, "Wrong alignment on BPI_EventStaff_C_BI_StaffIsFinished");
+static_assert(sizeof(BPI_EventStaff_C_BI_StaffIsFinished) == 0x000001, "Wrong size on BPI_EventStaff_C_BI_StaffIsFinished");
+static_assert(offsetof(BPI_EventStaff_C_BI_StaffIsFinished, IsFinished) == 0x000000, "Member 'BPI_EventStaff_C_BI_StaffIsFinished::IsFinished' has a wrong offset!");
 
 // Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffPause
 // 0x0001 (0x0001 - 0x0000)
@@ -36,16 +36,16 @@ static_assert(alignof(BPI_EventStaff_C_BI_StaffPause) == 0x000001, "Wrong alignm
 static_assert(sizeof(BPI_EventStaff_C_BI_StaffPause) == 0x000001, "Wrong size on BPI_EventStaff_C_BI_StaffPause");
 static_assert(offsetof(BPI_EventStaff_C_BI_StaffPause, Puase) == 0x000000, "Member 'BPI_EventStaff_C_BI_StaffPause::Puase' has a wrong offset!");
 
-// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffIsFinished
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_EventStaff_C_BI_StaffIsFinished final
+// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffPlay
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_EventStaff_C_BI_StaffPlay final
 {
 public:
-	bool                                          IsFinished;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class USoundAtomCue*                          BGM;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_EventStaff_C_BI_StaffIsFinished) == 0x000001, "Wrong alignment on BPI_EventStaff_C_BI_StaffIsFinished");
-static_assert(sizeof(BPI_EventStaff_C_BI_StaffIsFinished) == 0x000001, "Wrong size on BPI_EventStaff_C_BI_StaffIsFinished");
-static_assert(offsetof(BPI_EventStaff_C_BI_StaffIsFinished, IsFinished) == 0x000000, "Member 'BPI_EventStaff_C_BI_StaffIsFinished::IsFinished' has a wrong offset!");
+static_assert(alignof(BPI_EventStaff_C_BI_StaffPlay) == 0x000008, "Wrong alignment on BPI_EventStaff_C_BI_StaffPlay");
+static_assert(sizeof(BPI_EventStaff_C_BI_StaffPlay) == 0x000008, "Wrong size on BPI_EventStaff_C_BI_StaffPlay");
+static_assert(offsetof(BPI_EventStaff_C_BI_StaffPlay, BGM) == 0x000000, "Member 'BPI_EventStaff_C_BI_StaffPlay::BGM' has a wrong offset!");
 
 }
 

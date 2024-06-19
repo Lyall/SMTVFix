@@ -21,9 +21,9 @@ namespace SDK
 class IBPI_EventMiman_C final : public IInterface
 {
 public:
-	void BPI_UpdateIconView();
-	void BPI_HideMiman();
 	void BPI_ShowAgainMiman();
+	void BPI_HideMiman();
+	void BPI_UpdateIconView();
 
 public:
 	static class UClass* StaticClass()

@@ -17,15 +17,15 @@
 namespace SDK
 {
 
-// Function MEC_BaseTask.MEC_BaseTask_C.CallTask
-// (BlueprintCallable, BlueprintEvent)
+// Function MEC_BaseTask.MEC_BaseTask_C.EndTask__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UMEC_BaseTask_C::CallTask()
+void UMEC_BaseTask_C::EndTask__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MEC_BaseTask_C", "CallTask");
+		Func = Class->GetFunction("MEC_BaseTask_C", "EndTask__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,15 +51,15 @@ void UMEC_BaseTask_C::ExecuteUbergraph_MEC_BaseTask(int32 EntryPoint)
 }
 
 
-// Function MEC_BaseTask.MEC_BaseTask_C.EndTask__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function MEC_BaseTask.MEC_BaseTask_C.CallTask
+// (BlueprintCallable, BlueprintEvent)
 
-void UMEC_BaseTask_C::EndTask__DelegateSignature()
+void UMEC_BaseTask_C::CallTask()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MEC_BaseTask_C", "EndTask__DelegateSignature");
+		Func = Class->GetFunction("MEC_BaseTask_C", "CallTask");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

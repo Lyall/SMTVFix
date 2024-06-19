@@ -17,17 +17,6 @@
 namespace SDK::Params
 {
 
-// Function BP_EventDefaultAO.BP_EventDefaultAO_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventDefaultAO_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventDefaultAO_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_EventDefaultAO_C_ReceiveEndPlay");
-static_assert(sizeof(BP_EventDefaultAO_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_EventDefaultAO_C_ReceiveEndPlay");
-static_assert(offsetof(BP_EventDefaultAO_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_EventDefaultAO_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
 // Function BP_EventDefaultAO.BP_EventDefaultAO_C.ExecuteUbergraph_BP_EventDefaultAO
 // 0x0B60 (0x0B60 - 0x0000)
 struct BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO final
@@ -47,17 +36,17 @@ public:
 	class APostProcessVolume*                     CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E11[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6988[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E12[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6989[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E13[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698A[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventDefaultAO_Struct                 K2Node_MakeStruct_EventDefaultAO_Struct;           // 0x0060(0x0570)(HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x05D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x05D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E14[0xB];                                     // 0x05D5(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_698B[0xB];                                     // 0x05D5(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventDefaultAO_Struct                 CallFunc_Array_Get_Item_2;                         // 0x05E0(0x0570)(HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0B50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0B54(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -88,6 +77,17 @@ static_assert(offsetof(BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO, K
 static_assert(offsetof(BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO, CallFunc_Array_Get_Item_2) == 0x0005E0, "Member 'BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO::CallFunc_Array_Get_Item_2' has a wrong offset!");
 static_assert(offsetof(BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO, CallFunc_Array_Length_ReturnValue_2) == 0x000B50, "Member 'BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO, CallFunc_Less_IntInt_ReturnValue_2) == 0x000B54, "Member 'BP_EventDefaultAO_C_ExecuteUbergraph_BP_EventDefaultAO::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+
+// Function BP_EventDefaultAO.BP_EventDefaultAO_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventDefaultAO_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventDefaultAO_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_EventDefaultAO_C_ReceiveEndPlay");
+static_assert(sizeof(BP_EventDefaultAO_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_EventDefaultAO_C_ReceiveEndPlay");
+static_assert(offsetof(BP_EventDefaultAO_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_EventDefaultAO_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 }
 

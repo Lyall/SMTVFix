@@ -17,27 +17,51 @@
 namespace SDK
 {
 
-// Function BP_MapTaoHeal.BP_MapTaoHeal_C.GetNkmHPMax
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_MapTaoHeal.BP_MapTaoHeal_C.ExecuteUbergraph_BP_MapTaoHeal
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   NkmIndex                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   HpMax                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTaoHeal_C::GetNkmHPMax(int32 NkmIndex, int32* HpMax)
+void ABP_MapTaoHeal_C::ExecuteUbergraph_BP_MapTaoHeal(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTaoHeal_C", "GetNkmHPMax");
+		Func = Class->GetFunction("BP_MapTaoHeal_C", "ExecuteUbergraph_BP_MapTaoHeal");
 
-	Params::BP_MapTaoHeal_C_GetNkmHPMax Parms{};
+	Params::BP_MapTaoHeal_C_ExecuteUbergraph_BP_MapTaoHeal Parms{};
 
-	Parms.NkmIndex = NkmIndex;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (HpMax != nullptr)
-		*HpMax = Parms.HpMax;
+
+// Function BP_MapTaoHeal.BP_MapTaoHeal_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_MapTaoHeal_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTaoHeal_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MapTaoHeal.BP_MapTaoHeal_C.ProcHeal
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_MapTaoHeal_C::ProcHeal()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapTaoHeal_C", "ProcHeal");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -62,51 +86,27 @@ void ABP_MapTaoHeal_C::GetPlayerHPMax(int32* HpMax)
 }
 
 
-// Function BP_MapTaoHeal.BP_MapTaoHeal_C.ProcHeal
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_MapTaoHeal_C::ProcHeal()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTaoHeal_C", "ProcHeal");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MapTaoHeal.BP_MapTaoHeal_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_MapTaoHeal_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTaoHeal_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MapTaoHeal.BP_MapTaoHeal_C.ExecuteUbergraph_BP_MapTaoHeal
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_MapTaoHeal.BP_MapTaoHeal_C.GetNkmHPMax
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   NkmIndex                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   HpMax                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MapTaoHeal_C::ExecuteUbergraph_BP_MapTaoHeal(int32 EntryPoint)
+void ABP_MapTaoHeal_C::GetNkmHPMax(int32 NkmIndex, int32* HpMax)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapTaoHeal_C", "ExecuteUbergraph_BP_MapTaoHeal");
+		Func = Class->GetFunction("BP_MapTaoHeal_C", "GetNkmHPMax");
 
-	Params::BP_MapTaoHeal_C_ExecuteUbergraph_BP_MapTaoHeal Parms{};
+	Params::BP_MapTaoHeal_C_GetNkmHPMax Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.NkmIndex = NkmIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (HpMax != nullptr)
+		*HpMax = Parms.HpMax;
 }
 
 }

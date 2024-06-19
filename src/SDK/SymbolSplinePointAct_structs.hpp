@@ -22,7 +22,7 @@ struct FSymbolSplinePointAct final
 {
 public:
 	int32                                         PointIndex_18_A075DCD74269E52CB7EC238FF28FA8CC;    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_166[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_161[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSymbolActPattern>              ActPatterns_14_5B3DA01C453BFB5A4C60A79B5080C029;   // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FSymbolSplinePointAct) == 0x000008, "Wrong alignment on FSymbolSplinePointAct");

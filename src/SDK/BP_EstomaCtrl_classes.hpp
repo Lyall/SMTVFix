@@ -27,24 +27,24 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	E_MOON_AGE                                    MoonAge;                                           // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MOON_AGE                                    PrevMoonAge;                                       // 0x0231(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E17[0x2];                                     // 0x0232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_693D[0x2];                                     // 0x0232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MoonChangeCount;                                   // 0x0234(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBP_EstomaData_C*                       EstomaData;                                        // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          PrevRiberama;                                      // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void LogMagatsuhi();
-	void GetMagatsuhi_WhenChangeMoon(int32* Magatsuhi);
-	void GetMagatsuhi_WhenUsed(int32* Magatsuhi);
-	void CloseAActionWindow();
-	void OpenAActionWindow();
-	void ReceiveTick(float DeltaSeconds);
-	void CallStartButton();
-	void RestartEstoma_FromOtherMap();
-	void CallEndButton();
-	void ReceiveBeginPlay();
-	void EndEstoma();
 	void ExecuteUbergraph_BP_EstomaCtrl(int32 EntryPoint);
+	void EndEstoma();
+	void ReceiveBeginPlay();
+	void CallEndButton();
+	void RestartEstoma_FromOtherMap();
+	void CallStartButton();
+	void ReceiveTick(float DeltaSeconds);
+	void OpenAActionWindow();
+	void CloseAActionWindow();
+	void GetMagatsuhi_WhenUsed(int32* Magatsuhi);
+	void GetMagatsuhi_WhenChangeMoon(int32* Magatsuhi);
+	void LogMagatsuhi();
 
 public:
 	static class UClass* StaticClass()

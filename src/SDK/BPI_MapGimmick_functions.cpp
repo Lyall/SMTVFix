@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BPI_MapGimmick.BPI_MapGimmick_C.BPI_HideGimmick
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// E_MapGimmickHideReason                  HideReason                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_MapGimmick_C::BPI_HideGimmick(E_MapGimmickHideReason HideReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MapGimmick_C", "BPI_HideGimmick");
-
-	Params::BPI_MapGimmick_C_BPI_HideGimmick Parms{};
-
-	Parms.HideReason = HideReason;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPI_MapGimmick.BPI_MapGimmick_C.BPI_ShowGimmick
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -50,6 +30,26 @@ void IBPI_MapGimmick_C::BPI_ShowGimmick(E_MapGimmickHideReason HideReason)
 		Func = Class->GetFunction("BPI_MapGimmick_C", "BPI_ShowGimmick");
 
 	Params::BPI_MapGimmick_C_BPI_ShowGimmick Parms{};
+
+	Parms.HideReason = HideReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_MapGimmick.BPI_MapGimmick_C.BPI_HideGimmick
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// E_MapGimmickHideReason                  HideReason                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_MapGimmick_C::BPI_HideGimmick(E_MapGimmickHideReason HideReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_MapGimmick_C", "BPI_HideGimmick");
+
+	Params::BPI_MapGimmick_C_BPI_HideGimmick Parms{};
 
 	Parms.HideReason = HideReason;
 

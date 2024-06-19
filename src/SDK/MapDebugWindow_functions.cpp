@@ -17,29 +17,35 @@
 namespace SDK
 {
 
-// Function MapDebugWindow.MapDebugWindow_C.MakeWindow
-// (BlueprintCallable, BlueprintEvent)
+// Function MapDebugWindow.MapDebugWindow_C.ExecuteUbergraph_MapDebugWindow
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMapDebugWindow_C::MakeWindow()
+void UMapDebugWindow_C::ExecuteUbergraph_MapDebugWindow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapDebugWindow_C", "MakeWindow");
+		Func = Class->GetFunction("MapDebugWindow_C", "ExecuteUbergraph_MapDebugWindow");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::MapDebugWindow_C_ExecuteUbergraph_MapDebugWindow Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function MapDebugWindow.MapDebugWindow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function MapDebugWindow.MapDebugWindow_C.DeleteWindow
+// (BlueprintCallable, BlueprintEvent)
 
-void UMapDebugWindow_C::Construct()
+void UMapDebugWindow_C::DeleteWindow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapDebugWindow_C", "Construct");
+		Func = Class->GetFunction("MapDebugWindow_C", "DeleteWindow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,37 +65,31 @@ void UMapDebugWindow_C::UpdateWindow()
 }
 
 
-// Function MapDebugWindow.MapDebugWindow_C.DeleteWindow
-// (BlueprintCallable, BlueprintEvent)
+// Function MapDebugWindow.MapDebugWindow_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UMapDebugWindow_C::DeleteWindow()
+void UMapDebugWindow_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapDebugWindow_C", "DeleteWindow");
+		Func = Class->GetFunction("MapDebugWindow_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MapDebugWindow.MapDebugWindow_C.ExecuteUbergraph_MapDebugWindow
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function MapDebugWindow.MapDebugWindow_C.MakeWindow
+// (BlueprintCallable, BlueprintEvent)
 
-void UMapDebugWindow_C::ExecuteUbergraph_MapDebugWindow(int32 EntryPoint)
+void UMapDebugWindow_C::MakeWindow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapDebugWindow_C", "ExecuteUbergraph_MapDebugWindow");
+		Func = Class->GetFunction("MapDebugWindow_C", "MakeWindow");
 
-	Params::MapDebugWindow_C_ExecuteUbergraph_MapDebugWindow Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -17,36 +17,131 @@
 namespace SDK
 {
 
-// Function BP_EventVoice.BP_EventVoice_C.GetEnd
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_EventVoice.BP_EventVoice_C.ExecuteUbergraph_BP_EventVoice
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    End                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventVoice_C::GetEnd(bool* End)
+void ABP_EventVoice_C::ExecuteUbergraph_BP_EventVoice(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "GetEnd");
+		Func = Class->GetFunction("BP_EventVoice_C", "ExecuteUbergraph_BP_EventVoice");
 
-	Params::BP_EventVoice_C_GetEnd Parms{};
+	Params::BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (End != nullptr)
-		*End = Parms.End;
 }
 
 
-// Function BP_EventVoice.BP_EventVoice_C.ForceEnd
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EventVoice.BP_EventVoice_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EventVoice_C::ForceEnd()
+void ABP_EventVoice_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "ForceEnd");
+		Func = Class->GetFunction("BP_EventVoice_C", "ReceiveTick");
+
+	Params::BP_EventVoice_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventVoice.BP_EventVoice_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_EventVoice_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventVoice_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EventVoice.BP_EventVoice_C.OnLoaded_8B38A45C4B5796534726BBAD81B724E0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventVoice_C::OnLoaded_8B38A45C4B5796534726BBAD81B724E0(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventVoice_C", "OnLoaded_8B38A45C4B5796534726BBAD81B724E0");
+
+	Params::BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventVoice.BP_EventVoice_C.OnLoaded_8535642A4460D76349FEDDA0194EA271
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventVoice_C::OnLoaded_8535642A4460D76349FEDDA0194EA271(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventVoice_C", "OnLoaded_8535642A4460D76349FEDDA0194EA271");
+
+	Params::BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventVoice.BP_EventVoice_C.PlayVoice
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ACharaBase_C*                     Param_Chara                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EventVoice_C::PlayVoice(class FName Voice, class ACharaBase_C* Param_Chara)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventVoice_C", "PlayVoice");
+
+	Params::BP_EventVoice_C_PlayVoice Parms{};
+
+	Parms.Voice = Voice;
+	Parms.Param_Chara = Param_Chara;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EventVoice.BP_EventVoice_C.StopVoice
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EventVoice_C::StopVoice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EventVoice_C", "StopVoice");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,133 +168,38 @@ void ABP_EventVoice_C::IsPlaying(bool* Play)
 }
 
 
-// Function BP_EventVoice.BP_EventVoice_C.StopVoice
+// Function BP_EventVoice.BP_EventVoice_C.ForceEnd
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_EventVoice_C::StopVoice()
+void ABP_EventVoice_C::ForceEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "StopVoice");
+		Func = Class->GetFunction("BP_EventVoice_C", "ForceEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EventVoice.BP_EventVoice_C.PlayVoice
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_EventVoice.BP_EventVoice_C.GetEnd
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Voice                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ACharaBase_C*                     Param_Chara                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    End                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_EventVoice_C::PlayVoice(class FName Voice, class ACharaBase_C* Param_Chara)
+void ABP_EventVoice_C::GetEnd(bool* End)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "PlayVoice");
+		Func = Class->GetFunction("BP_EventVoice_C", "GetEnd");
 
-	Params::BP_EventVoice_C_PlayVoice Parms{};
-
-	Parms.Voice = Voice;
-	Parms.Param_Chara = Param_Chara;
+	Params::BP_EventVoice_C_GetEnd Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function BP_EventVoice.BP_EventVoice_C.OnLoaded_8535642A4460D76349FEDDA0194EA271
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventVoice_C::OnLoaded_8535642A4460D76349FEDDA0194EA271(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "OnLoaded_8535642A4460D76349FEDDA0194EA271");
-
-	Params::BP_EventVoice_C_OnLoaded_8535642A4460D76349FEDDA0194EA271 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventVoice.BP_EventVoice_C.OnLoaded_8B38A45C4B5796534726BBAD81B724E0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventVoice_C::OnLoaded_8B38A45C4B5796534726BBAD81B724E0(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "OnLoaded_8B38A45C4B5796534726BBAD81B724E0");
-
-	Params::BP_EventVoice_C_OnLoaded_8B38A45C4B5796534726BBAD81B724E0 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventVoice.BP_EventVoice_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_EventVoice_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EventVoice.BP_EventVoice_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventVoice_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "ReceiveTick");
-
-	Params::BP_EventVoice_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EventVoice.BP_EventVoice_C.ExecuteUbergraph_BP_EventVoice
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EventVoice_C::ExecuteUbergraph_BP_EventVoice(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EventVoice_C", "ExecuteUbergraph_BP_EventVoice");
-
-	Params::BP_EventVoice_C_ExecuteUbergraph_BP_EventVoice Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	if (End != nullptr)
+		*End = Parms.End;
 }
 
 }

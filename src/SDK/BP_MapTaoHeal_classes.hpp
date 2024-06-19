@@ -26,16 +26,16 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	bool                                          CheckSE;                                           // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8F18[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_688A[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 NkmIndexList;                                      // 0x0238(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<int32>                                 HealHPList;                                        // 0x0248(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void GetNkmHPMax(int32 NkmIndex, int32* HpMax);
-	void GetPlayerHPMax(int32* HpMax);
-	void ProcHeal();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_MapTaoHeal(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ProcHeal();
+	void GetPlayerHPMax(int32* HpMax);
+	void GetNkmHPMax(int32 NkmIndex, int32* HpMax);
 
 public:
 	static class UClass* StaticClass()

@@ -16,20 +16,6 @@
 namespace SDK
 {
 
-// Function BPI_MagatsukaFoundEffect.BPI_MagatsukaFoundEffect_C.BPI_RestartFoundEffect
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_MagatsukaFoundEffect_C::BPI_RestartFoundEffect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MagatsukaFoundEffect_C", "BPI_RestartFoundEffect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPI_MagatsukaFoundEffect.BPI_MagatsukaFoundEffect_C.BPI_PauseFoundEffect
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -39,6 +25,20 @@ void IBPI_MagatsukaFoundEffect_C::BPI_PauseFoundEffect()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPI_MagatsukaFoundEffect_C", "BPI_PauseFoundEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_MagatsukaFoundEffect.BPI_MagatsukaFoundEffect_C.BPI_RestartFoundEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_MagatsukaFoundEffect_C::BPI_RestartFoundEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_MagatsukaFoundEffect_C", "BPI_RestartFoundEffect");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

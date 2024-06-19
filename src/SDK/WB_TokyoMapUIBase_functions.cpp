@@ -17,55 +17,90 @@
 namespace SDK
 {
 
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.PlaceNameHide
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMapUIBase_C::PlaceNameHide()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "PlaceNameHide");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.PlaceNameShow
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMapUIBase_C::PlaceNameShow()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "PlaceNameShow");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.HidePlaceNameByDataId
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.StartView
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   DataId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    First                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWB_TokyoMapUIBase_C::HidePlaceNameByDataId(int32 DataId, bool* NoUse)
+void UWB_TokyoMapUIBase_C::StartView(bool First, bool* NewParam)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "HidePlaceNameByDataId");
+		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "StartView");
 
-	Params::WB_TokyoMapUIBase_C_HidePlaceNameByDataId Parms{};
+	Params::WB_TokyoMapUIBase_C_StartView Parms{};
 
-	Parms.DataId = DataId;
+	Parms.First = First;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NoUse != nullptr)
-		*NoUse = Parms.NoUse;
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
+}
+
+
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.EndView
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UWB_TokyoMapUIBase_C::EndView(bool* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "EndView");
+
+	Params::WB_TokyoMapUIBase_C_EndView Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
+}
+
+
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.ShowAllPlace
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_TokyoMapUIBase_C::ShowAllPlace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "ShowAllPlace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.ShowAllTarget
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_TokyoMapUIBase_C::ShowAllTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "ShowAllTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.Create
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_TokyoMapUIBase_C::Create()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "Create");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -93,90 +128,55 @@ void UWB_TokyoMapUIBase_C::ShowPlaceNameByDataId(int32 DataId, bool* NoUse)
 }
 
 
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.Create
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMapUIBase_C::Create()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "Create");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.ShowAllTarget
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMapUIBase_C::ShowAllTarget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "ShowAllTarget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.ShowAllPlace
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMapUIBase_C::ShowAllPlace()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "ShowAllPlace");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.EndView
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.HidePlaceNameByDataId
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   DataId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    NoUse                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWB_TokyoMapUIBase_C::EndView(bool* NewParam)
+void UWB_TokyoMapUIBase_C::HidePlaceNameByDataId(int32 DataId, bool* NoUse)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "EndView");
+		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "HidePlaceNameByDataId");
 
-	Params::WB_TokyoMapUIBase_C_EndView Parms{};
+	Params::WB_TokyoMapUIBase_C_HidePlaceNameByDataId Parms{};
+
+	Parms.DataId = DataId;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
+	if (NoUse != nullptr)
+		*NoUse = Parms.NoUse;
 }
 
 
-// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.StartView
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    First                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.PlaceNameShow
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_TokyoMapUIBase_C::StartView(bool First, bool* NewParam)
+void UWB_TokyoMapUIBase_C::PlaceNameShow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "StartView");
+		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "PlaceNameShow");
 
-	Params::WB_TokyoMapUIBase_C_StartView Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.First = First;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function WB_TokyoMapUIBase.WB_TokyoMapUIBase_C.PlaceNameHide
+// (Public, BlueprintCallable, BlueprintEvent)
 
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
+void UWB_TokyoMapUIBase_C::PlaceNameHide()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMapUIBase_C", "PlaceNameHide");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

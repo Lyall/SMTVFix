@@ -20,43 +20,43 @@ namespace SDK
 
 // BlueprintGeneratedClass MapEventHit_Type_AAction.MapEventHit_Type_AAction_C
 // 0x0050 (0x03D0 - 0x0380)
-class AMapEventHit_Type_AAction_C : public AMapEventHit_Core_C
+class AMapEventHit_Type_AAction_C final : public AMapEventHit_Core_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_MapEventHit_Type_AAction_C;         // 0x0380(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          IsHit;                                             // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8F2B[0x7];                                     // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6860[0x7];                                     // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMapEventHit_Type_AAction_C*            CurrentAAction;                                    // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_AActionWindowType                           AActionWindowType;                                 // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8F2C[0x3];                                     // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6861[0x3];                                     // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   AActionLabel;                                      // 0x039C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AActionLock;                                       // 0x03A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          AActionSE;                                         // 0x03A5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8F2D[0x2];                                     // 0x03A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6862[0x2];                                     // 0x03A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        WallCheckComponent;                                // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WallChecker;                                       // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8F2E[0x7];                                     // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6863[0x7];                                     // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         IgnoreActors_WallCheck;                            // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	bool                                          Activate;                                          // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Overlap;                                           // 0x03C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void FlagCh(bool* OK);
-	void ReceiveBeginPlay();
-	void EventHitActivate(bool Active);
-	void SettingWallCheck(class USceneComponent* CheckPoint, TArray<class AActor*>& IgnoreActors);
-	void Action();
-	void BndEvt__Hit_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__Hit_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-	void CallEventHitOut_();
-	void ShowAActionWidget();
-	void HideAActionWidget();
-	void LockAAction();
-	void UnlockAAction();
-	void ManualBeginOverlap();
-	void RecalcOverlap();
-	void OnUnPause_AfterLoad();
 	void ExecuteUbergraph_MapEventHit_Type_AAction(int32 EntryPoint);
+	void OnUnPause_AfterLoad();
+	void RecalcOverlap();
+	void ManualBeginOverlap();
+	void UnlockAAction();
+	void LockAAction();
+	void HideAActionWidget();
+	void ShowAActionWidget();
+	void CallEventHitOut_();
+	void BndEvt__Hit_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void BndEvt__Hit_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void Action();
+	void SettingWallCheck(class USceneComponent* CheckPoint, TArray<class AActor*>& IgnoreActors);
+	void EventHitActivate(bool Active);
+	void ReceiveBeginPlay();
+	void FlagCh(bool* OK);
 
 public:
 	static class UClass* StaticClass()

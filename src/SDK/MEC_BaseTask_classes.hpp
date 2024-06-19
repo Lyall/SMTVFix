@@ -19,18 +19,17 @@ namespace SDK
 
 // BlueprintGeneratedClass MEC_BaseTask.MEC_BaseTask_C
 // 0x0020 (0x0220 - 0x0200)
-#pragma pack(push, 0x1)
-class alignas(0x10) UMEC_BaseTask_C : public USceneComponent
+class UMEC_BaseTask_C final : public USceneComponent
 {
 public:
-	uint8                                         Pad_1E5C[0x8];                                     // 0x01F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67EC[0x8];                                     // 0x01F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0200(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	FMulticastInlineDelegateProperty_             EndTask;                                           // 0x0208(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void CallTask();
-	void ExecuteUbergraph_MEC_BaseTask(int32 EntryPoint);
 	void EndTask__DelegateSignature();
+	void ExecuteUbergraph_MEC_BaseTask(int32 EntryPoint);
+	void CallTask();
 
 public:
 	static class UClass* StaticClass()
@@ -42,7 +41,6 @@ public:
 		return GetDefaultObjImpl<UMEC_BaseTask_C>();
 	}
 };
-#pragma pack(pop)
 static_assert(alignof(UMEC_BaseTask_C) == 0x000010, "Wrong alignment on UMEC_BaseTask_C");
 static_assert(sizeof(UMEC_BaseTask_C) == 0x000220, "Wrong size on UMEC_BaseTask_C");
 static_assert(offsetof(UMEC_BaseTask_C, UberGraphFrame) == 0x000200, "Member 'UMEC_BaseTask_C::UberGraphFrame' has a wrong offset!");

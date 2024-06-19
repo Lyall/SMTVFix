@@ -21,11 +21,11 @@ namespace SDK
 class IBPI_Magatsuka_C final : public IInterface
 {
 public:
-	void BPI_ShowIconRange(bool Show, bool* NewParam);
-	void BPI_ShowMagatsuka(bool Show);
-	void BPI_RecalcMagatsukaGaze();
-	void BPI_ReleaseMagatsukaGaze();
 	void BPI_GetComeRangeInfo(bool* View, struct FVector* LocalLocation, struct FRotator* LocalRotation, struct FVector* Size);
+	void BPI_ReleaseMagatsukaGaze();
+	void BPI_RecalcMagatsukaGaze();
+	void BPI_ShowMagatsuka(bool Show);
+	void BPI_ShowIconRange(bool Show, bool* NewParam);
 
 public:
 	static class UClass* StaticClass()

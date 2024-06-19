@@ -17,37 +17,24 @@
 namespace SDK
 {
 
-// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffPlay
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffIsFinished
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USoundAtomCue*                    BGM                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsFinished                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void IBPI_EventStaff_C::BI_StaffPlay(class USoundAtomCue* BGM)
+void IBPI_EventStaff_C::BI_StaffIsFinished(bool* IsFinished)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_EventStaff_C", "BI_StaffPlay");
+		Func = Class->GetFunction("BPI_EventStaff_C", "BI_StaffIsFinished");
 
-	Params::BPI_EventStaff_C_BI_StaffPlay Parms{};
-
-	Parms.BGM = BGM;
+	Params::BPI_EventStaff_C_BI_StaffIsFinished Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffStop
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_EventStaff_C::BI_StaffStop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_EventStaff_C", "BI_StaffStop");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (IsFinished != nullptr)
+		*IsFinished = Parms.IsFinished;
 }
 
 
@@ -71,24 +58,37 @@ void IBPI_EventStaff_C::BI_StaffPause(bool Puase)
 }
 
 
-// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffIsFinished
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsFinished                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffStop
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_EventStaff_C::BI_StaffIsFinished(bool* IsFinished)
+void IBPI_EventStaff_C::BI_StaffStop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_EventStaff_C", "BI_StaffIsFinished");
+		Func = Class->GetFunction("BPI_EventStaff_C", "BI_StaffStop");
 
-	Params::BPI_EventStaff_C_BI_StaffIsFinished Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_EventStaff.BPI_EventStaff_C.BI_StaffPlay
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USoundAtomCue*                    BGM                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_EventStaff_C::BI_StaffPlay(class USoundAtomCue* BGM)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_EventStaff_C", "BI_StaffPlay");
+
+	Params::BPI_EventStaff_C_BI_StaffPlay Parms{};
+
+	Parms.BGM = BGM;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsFinished != nullptr)
-		*IsFinished = Parms.IsFinished;
 }
 
 }

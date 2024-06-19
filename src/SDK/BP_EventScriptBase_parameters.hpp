@@ -12,483 +12,13 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "E_EVENT_TOILETMARK_TYPE_structs.hpp"
 #include "Project_structs.hpp"
+#include "E_EVENT_TOILETMARK_TYPE_structs.hpp"
 #include "AActionWindowTable_st_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_SetInvalidWindow
-// 0x0002 (0x0002 - 0x0000)
-struct BP_EventScriptBase_C_BI_SetInvalidWindow final
-{
-public:
-	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          NoUse;                                             // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BI_SetInvalidWindow) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BI_SetInvalidWindow");
-static_assert(sizeof(BP_EventScriptBase_C_BI_SetInvalidWindow) == 0x000002, "Wrong size on BP_EventScriptBase_C_BI_SetInvalidWindow");
-static_assert(offsetof(BP_EventScriptBase_C_BI_SetInvalidWindow, Invalid) == 0x000000, "Member 'BP_EventScriptBase_C_BI_SetInvalidWindow::Invalid' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_BI_SetInvalidWindow, NoUse) == 0x000001, "Member 'BP_EventScriptBase_C_BI_SetInvalidWindow::NoUse' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ForceSpawnScript
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_ForceSpawnScript final
-{
-public:
-	bool                                          NoUse;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_ForceSpawnScript) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_ForceSpawnScript");
-static_assert(sizeof(BP_EventScriptBase_C_ForceSpawnScript) == 0x000001, "Wrong size on BP_EventScriptBase_C_ForceSpawnScript");
-static_assert(offsetof(BP_EventScriptBase_C_ForceSpawnScript, NoUse) == 0x000000, "Member 'BP_EventScriptBase_C_ForceSpawnScript::NoUse' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_CheckActiveArea
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_BI_CheckActiveArea final
-{
-public:
-	bool                                          Param_IsActive;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BI_CheckActiveArea) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BI_CheckActiveArea");
-static_assert(sizeof(BP_EventScriptBase_C_BI_CheckActiveArea) == 0x000001, "Wrong size on BP_EventScriptBase_C_BI_CheckActiveArea");
-static_assert(offsetof(BP_EventScriptBase_C_BI_CheckActiveArea, Param_IsActive) == 0x000000, "Member 'BP_EventScriptBase_C_BI_CheckActiveArea::Param_IsActive' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_SpawnScript
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_BI_SpawnScript final
-{
-public:
-	bool                                          NoUse;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BI_SpawnScript) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BI_SpawnScript");
-static_assert(sizeof(BP_EventScriptBase_C_BI_SpawnScript) == 0x000001, "Wrong size on BP_EventScriptBase_C_BI_SpawnScript");
-static_assert(offsetof(BP_EventScriptBase_C_BI_SpawnScript, NoUse) == 0x000000, "Member 'BP_EventScriptBase_C_BI_SpawnScript::NoUse' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_DeleteScript
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_BI_DeleteScript final
-{
-public:
-	bool                                          NoUse;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BI_DeleteScript) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BI_DeleteScript");
-static_assert(sizeof(BP_EventScriptBase_C_BI_DeleteScript) == 0x000001, "Wrong size on BP_EventScriptBase_C_BI_DeleteScript");
-static_assert(offsetof(BP_EventScriptBase_C_BI_DeleteScript, NoUse) == 0x000000, "Member 'BP_EventScriptBase_C_BI_DeleteScript::NoUse' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeOutWhite
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_BI_FadeOutWhite final
-{
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BI_FadeOutWhite) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_BI_FadeOutWhite");
-static_assert(sizeof(BP_EventScriptBase_C_BI_FadeOutWhite) == 0x000008, "Wrong size on BP_EventScriptBase_C_BI_FadeOutWhite");
-static_assert(offsetof(BP_EventScriptBase_C_BI_FadeOutWhite, Time) == 0x000000, "Member 'BP_EventScriptBase_C_BI_FadeOutWhite::Time' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_BI_FadeOutWhite, Ret) == 0x000004, "Member 'BP_EventScriptBase_C_BI_FadeOutWhite::Ret' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeInWhite
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_BI_FadeInWhite final
-{
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BI_FadeInWhite) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_BI_FadeInWhite");
-static_assert(sizeof(BP_EventScriptBase_C_BI_FadeInWhite) == 0x000008, "Wrong size on BP_EventScriptBase_C_BI_FadeInWhite");
-static_assert(offsetof(BP_EventScriptBase_C_BI_FadeInWhite, Time) == 0x000000, "Member 'BP_EventScriptBase_C_BI_FadeInWhite::Time' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_BI_FadeInWhite, Ret) == 0x000004, "Member 'BP_EventScriptBase_C_BI_FadeInWhite::Ret' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeOutBlack
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_BI_FadeOutBlack final
-{
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BI_FadeOutBlack) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_BI_FadeOutBlack");
-static_assert(sizeof(BP_EventScriptBase_C_BI_FadeOutBlack) == 0x000008, "Wrong size on BP_EventScriptBase_C_BI_FadeOutBlack");
-static_assert(offsetof(BP_EventScriptBase_C_BI_FadeOutBlack, Time) == 0x000000, "Member 'BP_EventScriptBase_C_BI_FadeOutBlack::Time' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_BI_FadeOutBlack, Ret) == 0x000004, "Member 'BP_EventScriptBase_C_BI_FadeOutBlack::Ret' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeInBlack
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_BI_FadeInBlack final
-{
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BI_FadeInBlack) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_BI_FadeInBlack");
-static_assert(sizeof(BP_EventScriptBase_C_BI_FadeInBlack) == 0x000008, "Wrong size on BP_EventScriptBase_C_BI_FadeInBlack");
-static_assert(offsetof(BP_EventScriptBase_C_BI_FadeInBlack, Time) == 0x000000, "Member 'BP_EventScriptBase_C_BI_FadeInBlack::Time' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_BI_FadeInBlack, Ret) == 0x000004, "Member 'BP_EventScriptBase_C_BI_FadeInBlack::Ret' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SpawnReflesh
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_SpawnReflesh final
-{
-public:
-	bool                                          NoUse;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_SpawnReflesh) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_SpawnReflesh");
-static_assert(sizeof(BP_EventScriptBase_C_SpawnReflesh) == 0x000001, "Wrong size on BP_EventScriptBase_C_SpawnReflesh");
-static_assert(offsetof(BP_EventScriptBase_C_SpawnReflesh, NoUse) == 0x000000, "Member 'BP_EventScriptBase_C_SpawnReflesh::NoUse' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetPlayerLookAt
-// 0x0048 (0x0048 - 0x0000)
-struct BP_EventScriptBase_C_SetPlayerLookAt final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C09[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGazeTargetHolder*                      CallFunc_GetGazeTargetHolder_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C0A[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C0B[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshComponent*                         CallFunc_BI_GetMeshComponent_MeshComp;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_SetPlayerLookAt) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_SetPlayerLookAt");
-static_assert(sizeof(BP_EventScriptBase_C_SetPlayerLookAt) == 0x000048, "Wrong size on BP_EventScriptBase_C_SetPlayerLookAt");
-static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, Enable) == 0x000000, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::Enable' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_GetGazeTargetHolder_ReturnValue) == 0x000008, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_GetGazeTargetHolder_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_Array_Get_Item) == 0x000010, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000018, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x000020, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_BI_GetMeshComponent_MeshComp) == 0x000038, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_BI_GetMeshComponent_MeshComp' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.BPI_CheckMissionEvent
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_BPI_CheckMissionEvent final
-{
-public:
-	bool                                          MissionEvent;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_BPI_CheckMissionEvent) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BPI_CheckMissionEvent");
-static_assert(sizeof(BP_EventScriptBase_C_BPI_CheckMissionEvent) == 0x000001, "Wrong size on BP_EventScriptBase_C_BPI_CheckMissionEvent");
-static_assert(offsetof(BP_EventScriptBase_C_BPI_CheckMissionEvent, MissionEvent) == 0x000000, "Member 'BP_EventScriptBase_C_BPI_CheckMissionEvent::MissionEvent' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.RegisterTalkIcon
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_RegisterTalkIcon final
-{
-public:
-	class AActor*                                 ThreeDCharacter;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventScriptBase_C_RegisterTalkIcon) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_RegisterTalkIcon");
-static_assert(sizeof(BP_EventScriptBase_C_RegisterTalkIcon) == 0x000008, "Wrong size on BP_EventScriptBase_C_RegisterTalkIcon");
-static_assert(offsetof(BP_EventScriptBase_C_RegisterTalkIcon, ThreeDCharacter) == 0x000000, "Member 'BP_EventScriptBase_C_RegisterTalkIcon::ThreeDCharacter' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.AddCharacter
-// 0x0210 (0x0210 - 0x0000)
-struct BP_EventScriptBase_C_AddCharacter final
-{
-public:
-	class AActor*                                 Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Tag;                                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGazeTargetHolder*                      CallFunc_GetGazeTargetHolder_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_CharaLipSync_C>   K2Node_DynamicCast_AsBPI_Chara_Lip_Sync;           // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BI_SetNPCCollision_ret;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C0C[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGazeTarget>           K2Node_DynamicCast_AsGaze_Target;                  // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C0D[0xF];                                     // 0x0041(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0050(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x008C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0098(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C0E[0xC];                                     // 0x00B4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue_1;               // 0x00C0(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x00F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x00FC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0108(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0124(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x013C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C0F[0x8];                                     // 0x0148(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0150(0x0030)(IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0180(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_AddCharacter) == 0x000010, "Wrong alignment on BP_EventScriptBase_C_AddCharacter");
-static_assert(sizeof(BP_EventScriptBase_C_AddCharacter) == 0x000210, "Wrong size on BP_EventScriptBase_C_AddCharacter");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, Character) == 0x000000, "Member 'BP_EventScriptBase_C_AddCharacter::Character' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, Tag) == 0x000008, "Member 'BP_EventScriptBase_C_AddCharacter::Tag' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_GetGazeTargetHolder_ReturnValue) == 0x000010, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_GetGazeTargetHolder_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, K2Node_DynamicCast_AsBPI_Chara_Lip_Sync) == 0x000018, "Member 'BP_EventScriptBase_C_AddCharacter::K2Node_DynamicCast_AsBPI_Chara_Lip_Sync' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_EventScriptBase_C_AddCharacter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BI_SetNPCCollision_ret) == 0x00002A, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BI_SetNPCCollision_ret' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, K2Node_DynamicCast_AsGaze_Target) == 0x000030, "Member 'BP_EventScriptBase_C_AddCharacter::K2Node_DynamicCast_AsGaze_Target' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'BP_EventScriptBase_C_AddCharacter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_GetTransform_ReturnValue) == 0x000050, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Location) == 0x000080, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Rotation) == 0x00008C, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Scale) == 0x000098, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Roll) == 0x0000A4, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Pitch) == 0x0000A8, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Yaw) == 0x0000AC, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Array_AddUnique_ReturnValue) == 0x0000B0, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_GetTransform_ReturnValue_1) == 0x0000C0, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_GetTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Location_1) == 0x0000F0, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Rotation_1) == 0x0000FC, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Scale_1) == 0x000108, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000114, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Roll_1) == 0x000118, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Pitch_1) == 0x00011C, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Yaw_1) == 0x000120, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Add_VectorVector_ReturnValue) == 0x000124, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Add_FloatFloat_ReturnValue) == 0x000130, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000134, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x000138, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_MakeRotator_ReturnValue) == 0x00013C, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_MakeTransform_ReturnValue) == 0x000150, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x000180, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_K2_SetActorTransform_ReturnValue) == 0x000208, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetMessage
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_SetMessage final
-{
-public:
-	class UScriptMessageAsset*                    Param_MessageAsset;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventScriptBase_C_SetMessage) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_SetMessage");
-static_assert(sizeof(BP_EventScriptBase_C_SetMessage) == 0x000008, "Wrong size on BP_EventScriptBase_C_SetMessage");
-static_assert(offsetof(BP_EventScriptBase_C_SetMessage, Param_MessageAsset) == 0x000000, "Member 'BP_EventScriptBase_C_SetMessage::Param_MessageAsset' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetDataTable
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_SetDataTable final
-{
-public:
-	class UDataTable*                             Param_DataTable;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventScriptBase_C_SetDataTable) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_SetDataTable");
-static_assert(sizeof(BP_EventScriptBase_C_SetDataTable) == 0x000008, "Wrong size on BP_EventScriptBase_C_SetDataTable");
-static_assert(offsetof(BP_EventScriptBase_C_SetDataTable, Param_DataTable) == 0x000000, "Member 'BP_EventScriptBase_C_SetDataTable::Param_DataTable' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.GetActive
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_GetActive final
-{
-public:
-	bool                                          Param_IsActive;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_GetActive) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_GetActive");
-static_assert(sizeof(BP_EventScriptBase_C_GetActive) == 0x000001, "Wrong size on BP_EventScriptBase_C_GetActive");
-static_assert(offsetof(BP_EventScriptBase_C_GetActive, Param_IsActive) == 0x000000, "Member 'BP_EventScriptBase_C_GetActive::Param_IsActive' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetLookAt
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_SetLookAt final
-{
-public:
-	bool                                          LookAt;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_SetLookAt) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_SetLookAt");
-static_assert(sizeof(BP_EventScriptBase_C_SetLookAt) == 0x000001, "Wrong size on BP_EventScriptBase_C_SetLookAt");
-static_assert(offsetof(BP_EventScriptBase_C_SetLookAt, LookAt) == 0x000000, "Member 'BP_EventScriptBase_C_SetLookAt::LookAt' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.Character
-// 0x0180 (0x0180 - 0x0000)
-struct BP_EventScriptBase_C_Character final
-{
-public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PosX;                                              // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PosY;                                              // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PosZ;                                              // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RotZ;                                              // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Tag;                                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 SpawnActor;                                        // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGazeTargetHolder*                      CallFunc_GetGazeTargetHolder_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C10[0xF];                                     // 0x0031(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0040(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0070(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x007C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0088(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x00B8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_3;             // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C11[0xC];                                     // 0x00D4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00E0(0x0030)(IsPlainOldData, NoDestructor)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C12[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCharaParamComponent*                   CallFunc_BI_GetCharaParamComponent_Comp;           // 0x0138(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_CharaLipSync_C>   K2Node_DynamicCast_AsBPI_Chara_Lip_Sync;           // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BI_SetNPCCollision_ret;                   // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0152(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0153(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_Conv_FloatToVector_ReturnValue;           // 0x0154(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IGazeTarget>           K2Node_DynamicCast_AsGaze_Target;                  // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C13[0x3];                                     // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventScriptBase_C_Character) == 0x000010, "Wrong alignment on BP_EventScriptBase_C_Character");
-static_assert(sizeof(BP_EventScriptBase_C_Character) == 0x000180, "Wrong size on BP_EventScriptBase_C_Character");
-static_assert(offsetof(BP_EventScriptBase_C_Character, Param_Class) == 0x000000, "Member 'BP_EventScriptBase_C_Character::Param_Class' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, PosX) == 0x000008, "Member 'BP_EventScriptBase_C_Character::PosX' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, PosY) == 0x00000C, "Member 'BP_EventScriptBase_C_Character::PosY' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, PosZ) == 0x000010, "Member 'BP_EventScriptBase_C_Character::PosZ' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, RotZ) == 0x000014, "Member 'BP_EventScriptBase_C_Character::RotZ' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, Tag) == 0x000018, "Member 'BP_EventScriptBase_C_Character::Tag' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, SpawnActor) == 0x000020, "Member 'BP_EventScriptBase_C_Character::SpawnActor' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_GetGazeTargetHolder_ReturnValue) == 0x000028, "Member 'BP_EventScriptBase_C_Character::CallFunc_GetGazeTargetHolder_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_IsValidClass_ReturnValue) == 0x000030, "Member 'BP_EventScriptBase_C_Character::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_GetTransform_ReturnValue) == 0x000040, "Member 'BP_EventScriptBase_C_Character::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakTransform_Location) == 0x000070, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakTransform_Rotation) == 0x00007C, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakTransform_Scale) == 0x000088, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakVector_X) == 0x000094, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakVector_Y) == 0x000098, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakVector_Z) == 0x00009C, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakRotator_Roll) == 0x0000A0, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakRotator_Pitch) == 0x0000A4, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakRotator_Yaw) == 0x0000A8, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Add_FloatFloat_ReturnValue) == 0x0000AC, "Member 'BP_EventScriptBase_C_Character::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x0000B0, "Member 'BP_EventScriptBase_C_Character::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x0000B4, "Member 'BP_EventScriptBase_C_Character::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_MakeRotator_ReturnValue) == 0x0000B8, "Member 'BP_EventScriptBase_C_Character::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Add_FloatFloat_ReturnValue_3) == 0x0000C4, "Member 'BP_EventScriptBase_C_Character::CallFunc_Add_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_MakeVector_ReturnValue) == 0x0000C8, "Member 'BP_EventScriptBase_C_Character::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_MakeTransform_ReturnValue) == 0x0000E0, "Member 'BP_EventScriptBase_C_Character::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000110, "Member 'BP_EventScriptBase_C_Character::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_FinishSpawningActor_ReturnValue) == 0x000118, "Member 'BP_EventScriptBase_C_Character::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x000120, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_bSuccess) == 0x000130, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Array_AddUnique_ReturnValue) == 0x000134, "Member 'BP_EventScriptBase_C_Character::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BI_GetCharaParamComponent_Comp) == 0x000138, "Member 'BP_EventScriptBase_C_Character::CallFunc_BI_GetCharaParamComponent_Comp' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_AsBPI_Chara_Lip_Sync) == 0x000140, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_AsBPI_Chara_Lip_Sync' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_bSuccess_1) == 0x000150, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BI_SetNPCCollision_ret) == 0x000151, "Member 'BP_EventScriptBase_C_Character::CallFunc_BI_SetNPCCollision_ret' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_IsValid_ReturnValue) == 0x000152, "Member 'BP_EventScriptBase_C_Character::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_IsValid_ReturnValue_1) == 0x000153, "Member 'BP_EventScriptBase_C_Character::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Conv_FloatToVector_ReturnValue) == 0x000154, "Member 'BP_EventScriptBase_C_Character::CallFunc_Conv_FloatToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_AsGaze_Target) == 0x000160, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_AsGaze_Target' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_bSuccess_2) == 0x000170, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000174, "Member 'BP_EventScriptBase_C_Character::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.Initialize
-// 0x0002 (0x0002 - 0x0000)
-struct BP_EventScriptBase_C_Initialize final
-{
-public:
-	bool                                          Param_PlayerCamera;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Param_PlayerVisible;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_Initialize) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_Initialize");
-static_assert(sizeof(BP_EventScriptBase_C_Initialize) == 0x000002, "Wrong size on BP_EventScriptBase_C_Initialize");
-static_assert(offsetof(BP_EventScriptBase_C_Initialize, Param_PlayerCamera) == 0x000000, "Member 'BP_EventScriptBase_C_Initialize::Param_PlayerCamera' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_Initialize, Param_PlayerVisible) == 0x000001, "Member 'BP_EventScriptBase_C_Initialize::Param_PlayerVisible' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D");
-static_assert(sizeof(BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D) == 0x000008, "Wrong size on BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D");
-static_assert(offsetof(BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D, Loaded) == 0x000000, "Member 'BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D::Loaded' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E");
-static_assert(sizeof(BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E) == 0x000008, "Wrong size on BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E");
-static_assert(offsetof(BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E, Loaded) == 0x000000, "Member 'BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E::Loaded' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.PlayDeadMotion
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_PlayDeadMotion final
-{
-public:
-	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_PlayDeadMotion) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_PlayDeadMotion");
-static_assert(sizeof(BP_EventScriptBase_C_PlayDeadMotion) == 0x000001, "Wrong size on BP_EventScriptBase_C_PlayDeadMotion");
-static_assert(offsetof(BP_EventScriptBase_C_PlayDeadMotion, Active) == 0x000000, "Member 'BP_EventScriptBase_C_PlayDeadMotion::Active' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_EventScriptBase_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventScriptBase_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_ReceiveTick");
-static_assert(sizeof(BP_EventScriptBase_C_ReceiveTick) == 0x000004, "Wrong size on BP_EventScriptBase_C_ReceiveTick");
-static_assert(offsetof(BP_EventScriptBase_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_EventScriptBase_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.SetInvalidWindow
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EventScriptBase_C_SetInvalidWindow final
-{
-public:
-	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_EventScriptBase_C_SetInvalidWindow) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_SetInvalidWindow");
-static_assert(sizeof(BP_EventScriptBase_C_SetInvalidWindow) == 0x000001, "Wrong size on BP_EventScriptBase_C_SetInvalidWindow");
-static_assert(offsetof(BP_EventScriptBase_C_SetInvalidWindow, Invalid) == 0x000000, "Member 'BP_EventScriptBase_C_SetInvalidWindow::Invalid' has a wrong offset!");
-
-// Function BP_EventScriptBase.BP_EventScriptBase_C.ToiletMark
-// 0x000C (0x000C - 0x0000)
-struct BP_EventScriptBase_C_ToiletMark final
-{
-public:
-	E_EVENT_TOILETMARK_TYPE                       Type;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C14[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Tag;                                               // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventScriptBase_C_ToiletMark) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_ToiletMark");
-static_assert(sizeof(BP_EventScriptBase_C_ToiletMark) == 0x00000C, "Wrong size on BP_EventScriptBase_C_ToiletMark");
-static_assert(offsetof(BP_EventScriptBase_C_ToiletMark, Type) == 0x000000, "Member 'BP_EventScriptBase_C_ToiletMark::Type' has a wrong offset!");
-static_assert(offsetof(BP_EventScriptBase_C_ToiletMark, Tag) == 0x000004, "Member 'BP_EventScriptBase_C_ToiletMark::Tag' has a wrong offset!");
 
 // Function BP_EventScriptBase.BP_EventScriptBase_C.ExecuteUbergraph_BP_EventScriptBase
 // 0x06F0 (0x06F0 - 0x0000)
@@ -497,22 +27,22 @@ struct BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_8C15[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B58[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_CustomEvent_Loaded_1;                       // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable;                              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMesh*                          K2Node_DynamicCast_AsSkeletal_Mesh;                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C16[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B59[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable_1;                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      K2Node_DynamicCast_AsAnim_Sequence_Base;           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C17[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B5A[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C18[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B5B[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0064(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -523,20 +53,20 @@ public:
 	TArray<class ABP_EventScriptArea_C*>          CallFunc_GetAllActorsOfClass_OutActors;            // 0x0088(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C19[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B5C[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x00A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_4;                  // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C1A[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B5D[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_EventScriptArea_C*                  CallFunc_Array_Get_Item;                           // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C1B[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B5E[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_EventScript_C>    K2Node_DynamicCast_AsBPI_Event_Script;             // 0x00D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SpawnReflesh_NoUse;                       // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C1C[0x2];                                     // 0x00E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B5F[0x2];                                     // 0x00E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_4;                   // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGazeTargetHolder*                      CallFunc_GetGazeTargetHolder_ReturnValue;          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x00F0(0x0010)(ZeroConstructor, NoDestructor)
@@ -547,43 +77,43 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPI_CheckMapPause_IsPause;                // 0x013A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C1D[0x5];                                     // 0x013B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B60[0x5];                                     // 0x013B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetMapCommon_rerutn_1;                    // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_1;             // 0x0148(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPI_CheckMapPause_IsPause_1;              // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_Active;                               // 0x015B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C1E[0x4];                                     // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B61[0x4];                                     // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetMapCommon_rerutn_2;                    // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMapEventHit_Type_AAction_C*            K2Node_DynamicCast_AsMap_Event_Hit_Type_AAction;   // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C1F[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B62[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_2;             // 0x0178(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C20[0x3];                                     // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B63[0x3];                                     // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x018C(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_CheckActorBegunPlay_ReturnValue;          // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C21[0x3];                                     // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B64[0x3];                                     // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetMapCommon_rerutn_3;                    // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_3;             // 0x01A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C22[0x5];                                     // 0x01BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B65[0x5];                                     // 0x01BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C23[0x4];                                     // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B66[0x4];                                     // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x01D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C24[0x6];                                     // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B67[0x6];                                     // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMeshComponent*                         CallFunc_BI_GetMeshComponent_MeshComp;             // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C25[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B68[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IGazeTarget>           K2Node_DynamicCast_AsGaze_Target;                  // 0x01F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C26[0x7];                                     // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B69[0x7];                                     // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0218(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_2;        // 0x0224(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -594,10 +124,10 @@ public:
 	float                                         CallFunc_Dot_VectorVector_ReturnValue;             // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_DegAcos_ReturnValue;                      // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x026C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C27[0x3];                                     // 0x026D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B6A[0x3];                                     // 0x026D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMapEventHit_Type_INOUT_C*              K2Node_DynamicCast_AsMap_Event_Hit_Type_INOUT;     // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C28[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B6B[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_1;              // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue_1;        // 0x0288(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_3;        // 0x0294(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -607,48 +137,48 @@ public:
 	float                                         CallFunc_Dot_VectorVector_ReturnValue_1;           // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_Array_Get_Item_2;                         // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_DegAcos_ReturnValue_1;                    // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C29[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B6C[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor_1;    // 0x02D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x02E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C2A[0x6];                                     // 0x02EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B6D[0x6];                                     // 0x02EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor_2;    // 0x02F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C2B[0x3];                                     // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B6E[0x3];                                     // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0304(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C2C[0x7];                                     // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B6F[0x7];                                     // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item_3;                         // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor_3;    // 0x0318(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_13;                    // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C2D[0x3];                                     // 0x0329(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B70[0x3];                                     // 0x0329(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_LookAt_NoUse;                          // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C2E[0x2];                                     // 0x0332(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B71[0x2];                                     // 0x0332(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x0334(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_8C2F[0x4];                                     // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B72[0x4];                                     // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMapEventHit_Type_AAction_C*            K2Node_DynamicCast_AsMap_Event_Hit_Type_AAction_1; // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_14;                    // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C30[0x7];                                     // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B73[0x7];                                     // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMapEventHit_Type_INOUT_C*              K2Node_DynamicCast_AsMap_Event_Hit_Type_INOUT_1;   // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_15;                    // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C31[0xF];                                     // 0x0361(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B74[0xF];                                     // 0x0361(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0370(0x0030)(IsPlainOldData, NoDestructor)
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_EventScript_C*                      CallFunc_FinishSpawningActor_ReturnValue;          // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_2;              // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor_4;    // 0x03B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_16;                    // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C32[0x7];                                     // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B75[0x7];                                     // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMeshComponent*                         CallFunc_BI_GetMeshComponent_MeshComp_1;           // 0x03D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BI_LookAt_NoUse_1;                        // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C33[0x7];                                     // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B76[0x7];                                     // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue_1;                        // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundAtomCue*                          CallFunc_GetCurrentBGM_ReturnValue;                // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBgmScene                                     CallFunc_GetBGMScene_ReturnValue;                  // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C34[0x3];                                     // 0x03F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B77[0x3];                                     // 0x03F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x03FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0400(0x0010)(ReferenceParm)
 	class FName                                   CallFunc_Array_Get_Item_4;                         // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -657,58 +187,58 @@ public:
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0429(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x042A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C35[0x5];                                     // 0x042B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B78[0x5];                                     // 0x042B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_2;                        // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager;                // 0x0438(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_17;                    // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C36[0x7];                                     // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B79[0x7];                                     // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonWindowCtrl_C> CallFunc_BPI_GetCommonWindowCtrl_OutActor;         // 0x0450(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPI_GetCommonWindowCtrl_Success;          // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C37[0x7];                                     // 0x0461(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B7A[0x7];                                     // 0x0461(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_3;                        // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_1;              // 0x0470(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_18;                    // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C38[0x7];                                     // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B7B[0x7];                                     // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonWindowCtrl_C> CallFunc_BPI_GetCommonWindowCtrl_OutActor_1;       // 0x0488(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPI_GetCommonWindowCtrl_Success_1;        // 0x0498(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C39[0x7];                                     // 0x0499(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B7C[0x7];                                     // 0x0499(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_4;                        // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_2;              // 0x04A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_19;                    // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C3A[0x7];                                     // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B7D[0x7];                                     // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue_5;                        // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_CommonWindowCtrl_C> CallFunc_BPI_GetCommonWindowCtrl_OutActor_2;       // 0x04C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPI_GetCommonWindowCtrl_Success_2;        // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C3B[0x7];                                     // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B7E[0x7];                                     // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectSoundManager*                   CallFunc_Get_ReturnValue_6;                        // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMinimapManager*                        CallFunc_GetMinimapManager_ReturnValue;            // 0x04E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMapID_ReturnValue;                     // 0x04F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C3C[0x4];                                     // 0x04F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B7F[0x4];                                     // 0x04F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMapEventHit_Type_AAction_C*            K2Node_DynamicCast_AsMap_Event_Hit_Type_AAction_2; // 0x04F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_20;                    // 0x0500(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C3D[0x3];                                     // 0x0501(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B80[0x3];                                     // 0x0501(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetAreaID_ReturnValue;                    // 0x0504(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetStaticMinimapEntry_Found;              // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C3E[0x3];                                     // 0x0509(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B81[0x3];                                     // 0x0509(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMinimapPOIEntry                       CallFunc_GetStaticMinimapEntry_ReturnValue;        // 0x050C(0x0084)(NoDestructor)
 	TScriptInterface<class IBPI_MapEventHit_C>    K2Node_DynamicCast_AsBPI_Map_Event_Hit;            // 0x0590(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_21;                    // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C3F[0x7];                                     // 0x05A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B82[0x7];                                     // 0x05A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MapEventHit_C>    K2Node_DynamicCast_AsBPI_Map_Event_Hit_1;          // 0x05A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_22;                    // 0x05B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_CustomEvent_Invalid;                        // 0x05B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C40[0x6];                                     // 0x05BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B83[0x6];                                     // 0x05BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MapEventHit_C>    K2Node_DynamicCast_AsBPI_Map_Event_Hit_2;          // 0x05C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_23;                    // 0x05D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_EVENT_TOILETMARK_TYPE                       K2Node_CustomEvent_Type;                           // 0x05D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C41[0x2];                                     // 0x05D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B84[0x2];                                     // 0x05D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_CustomEvent_Tag;                            // 0x05D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_4;        // 0x05DC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C42[0x8];                                     // 0x05E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B85[0x8];                                     // 0x05E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x05F0(0x0030)(IsPlainOldData, NoDestructor)
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue_1; // 0x0620(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_5;        // 0x0628(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C43[0x4];                                     // 0x0634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B86[0x4];                                     // 0x0634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ASkeletalMeshActor*                     CallFunc_FinishSpawningActor_ReturnValue_1;        // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0644(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -717,16 +247,16 @@ public:
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_8;                        // 0x0668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_3;              // 0x0670(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_24;                    // 0x0680(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C44[0x7];                                     // 0x0681(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B87[0x7];                                     // 0x0681(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonWindowCtrl_C> CallFunc_BPI_GetCommonWindowCtrl_OutActor_3;       // 0x0688(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPI_GetCommonWindowCtrl_Success_3;        // 0x0698(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C45[0x3];                                     // 0x0699(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B88[0x3];                                     // 0x0699(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_7;            // 0x069C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_8C46[0x4];                                     // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B89[0x4];                                     // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UProjectUIManager*                      CallFunc_Get_ReturnValue_9;                        // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_UIManager_C>      K2Node_DynamicCast_AsBPI_UIManager_4;              // 0x06B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_25;                    // 0x06C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C47[0x7];                                     // 0x06C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B8A[0x7];                                     // 0x06C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CommonWindowCtrl_C> CallFunc_BPI_GetCommonWindowCtrl_OutActor_4;       // 0x06D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPI_GetCommonWindowCtrl_Success_4;        // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -915,6 +445,476 @@ static_assert(offsetof(BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase,
 static_assert(offsetof(BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase, K2Node_DynamicCast_bSuccess_25) == 0x0006C8, "Member 'BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase::K2Node_DynamicCast_bSuccess_25' has a wrong offset!");
 static_assert(offsetof(BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase, CallFunc_BPI_GetCommonWindowCtrl_OutActor_4) == 0x0006D0, "Member 'BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase::CallFunc_BPI_GetCommonWindowCtrl_OutActor_4' has a wrong offset!");
 static_assert(offsetof(BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase, CallFunc_BPI_GetCommonWindowCtrl_Success_4) == 0x0006E0, "Member 'BP_EventScriptBase_C_ExecuteUbergraph_BP_EventScriptBase::CallFunc_BPI_GetCommonWindowCtrl_Success_4' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ToiletMark
+// 0x000C (0x000C - 0x0000)
+struct BP_EventScriptBase_C_ToiletMark final
+{
+public:
+	E_EVENT_TOILETMARK_TYPE                       Type;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6B8B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Tag;                                               // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventScriptBase_C_ToiletMark) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_ToiletMark");
+static_assert(sizeof(BP_EventScriptBase_C_ToiletMark) == 0x00000C, "Wrong size on BP_EventScriptBase_C_ToiletMark");
+static_assert(offsetof(BP_EventScriptBase_C_ToiletMark, Type) == 0x000000, "Member 'BP_EventScriptBase_C_ToiletMark::Type' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_ToiletMark, Tag) == 0x000004, "Member 'BP_EventScriptBase_C_ToiletMark::Tag' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetInvalidWindow
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_SetInvalidWindow final
+{
+public:
+	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_SetInvalidWindow) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_SetInvalidWindow");
+static_assert(sizeof(BP_EventScriptBase_C_SetInvalidWindow) == 0x000001, "Wrong size on BP_EventScriptBase_C_SetInvalidWindow");
+static_assert(offsetof(BP_EventScriptBase_C_SetInvalidWindow, Invalid) == 0x000000, "Member 'BP_EventScriptBase_C_SetInvalidWindow::Invalid' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_EventScriptBase_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventScriptBase_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_ReceiveTick");
+static_assert(sizeof(BP_EventScriptBase_C_ReceiveTick) == 0x000004, "Wrong size on BP_EventScriptBase_C_ReceiveTick");
+static_assert(offsetof(BP_EventScriptBase_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_EventScriptBase_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.PlayDeadMotion
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_PlayDeadMotion final
+{
+public:
+	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_PlayDeadMotion) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_PlayDeadMotion");
+static_assert(sizeof(BP_EventScriptBase_C_PlayDeadMotion) == 0x000001, "Wrong size on BP_EventScriptBase_C_PlayDeadMotion");
+static_assert(offsetof(BP_EventScriptBase_C_PlayDeadMotion, Active) == 0x000000, "Member 'BP_EventScriptBase_C_PlayDeadMotion::Active' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E");
+static_assert(sizeof(BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E) == 0x000008, "Wrong size on BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E");
+static_assert(offsetof(BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E, Loaded) == 0x000000, "Member 'BP_EventScriptBase_C_OnLoaded_44E8C5904B9505DDBE91FBAD0D27188E::Loaded' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D");
+static_assert(sizeof(BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D) == 0x000008, "Wrong size on BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D");
+static_assert(offsetof(BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D, Loaded) == 0x000000, "Member 'BP_EventScriptBase_C_OnLoaded_221B908D41E0B5F6EEA9618D90FADD7D::Loaded' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.Initialize
+// 0x0002 (0x0002 - 0x0000)
+struct BP_EventScriptBase_C_Initialize final
+{
+public:
+	bool                                          Param_PlayerCamera;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Param_PlayerVisible;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_Initialize) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_Initialize");
+static_assert(sizeof(BP_EventScriptBase_C_Initialize) == 0x000002, "Wrong size on BP_EventScriptBase_C_Initialize");
+static_assert(offsetof(BP_EventScriptBase_C_Initialize, Param_PlayerCamera) == 0x000000, "Member 'BP_EventScriptBase_C_Initialize::Param_PlayerCamera' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Initialize, Param_PlayerVisible) == 0x000001, "Member 'BP_EventScriptBase_C_Initialize::Param_PlayerVisible' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.Character
+// 0x0180 (0x0180 - 0x0000)
+struct BP_EventScriptBase_C_Character final
+{
+public:
+	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PosX;                                              // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PosY;                                              // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PosZ;                                              // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RotZ;                                              // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Tag;                                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 SpawnActor;                                        // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGazeTargetHolder*                      CallFunc_GetGazeTargetHolder_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B8C[0xF];                                     // 0x0031(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0040(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0070(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x007C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0088(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x00B8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_3;             // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6B8D[0xC];                                     // 0x00D4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00E0(0x0030)(IsPlainOldData, NoDestructor)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B8E[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCharaParamComponent*                   CallFunc_BI_GetCharaParamComponent_Comp;           // 0x0138(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_CharaLipSync_C>   K2Node_DynamicCast_AsBPI_Chara_Lip_Sync;           // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BI_SetNPCCollision_ret;                   // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0152(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0153(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_Conv_FloatToVector_ReturnValue;           // 0x0154(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGazeTarget>           K2Node_DynamicCast_AsGaze_Target;                  // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B8F[0x3];                                     // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventScriptBase_C_Character) == 0x000010, "Wrong alignment on BP_EventScriptBase_C_Character");
+static_assert(sizeof(BP_EventScriptBase_C_Character) == 0x000180, "Wrong size on BP_EventScriptBase_C_Character");
+static_assert(offsetof(BP_EventScriptBase_C_Character, Param_Class) == 0x000000, "Member 'BP_EventScriptBase_C_Character::Param_Class' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, PosX) == 0x000008, "Member 'BP_EventScriptBase_C_Character::PosX' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, PosY) == 0x00000C, "Member 'BP_EventScriptBase_C_Character::PosY' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, PosZ) == 0x000010, "Member 'BP_EventScriptBase_C_Character::PosZ' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, RotZ) == 0x000014, "Member 'BP_EventScriptBase_C_Character::RotZ' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, Tag) == 0x000018, "Member 'BP_EventScriptBase_C_Character::Tag' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, SpawnActor) == 0x000020, "Member 'BP_EventScriptBase_C_Character::SpawnActor' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_GetGazeTargetHolder_ReturnValue) == 0x000028, "Member 'BP_EventScriptBase_C_Character::CallFunc_GetGazeTargetHolder_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_IsValidClass_ReturnValue) == 0x000030, "Member 'BP_EventScriptBase_C_Character::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_GetTransform_ReturnValue) == 0x000040, "Member 'BP_EventScriptBase_C_Character::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakTransform_Location) == 0x000070, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakTransform_Rotation) == 0x00007C, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakTransform_Scale) == 0x000088, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakVector_X) == 0x000094, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakVector_Y) == 0x000098, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakVector_Z) == 0x00009C, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakRotator_Roll) == 0x0000A0, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakRotator_Pitch) == 0x0000A4, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BreakRotator_Yaw) == 0x0000A8, "Member 'BP_EventScriptBase_C_Character::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Add_FloatFloat_ReturnValue) == 0x0000AC, "Member 'BP_EventScriptBase_C_Character::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x0000B0, "Member 'BP_EventScriptBase_C_Character::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x0000B4, "Member 'BP_EventScriptBase_C_Character::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_MakeRotator_ReturnValue) == 0x0000B8, "Member 'BP_EventScriptBase_C_Character::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Add_FloatFloat_ReturnValue_3) == 0x0000C4, "Member 'BP_EventScriptBase_C_Character::CallFunc_Add_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_MakeVector_ReturnValue) == 0x0000C8, "Member 'BP_EventScriptBase_C_Character::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_MakeTransform_ReturnValue) == 0x0000E0, "Member 'BP_EventScriptBase_C_Character::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000110, "Member 'BP_EventScriptBase_C_Character::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_FinishSpawningActor_ReturnValue) == 0x000118, "Member 'BP_EventScriptBase_C_Character::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x000120, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_bSuccess) == 0x000130, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Array_AddUnique_ReturnValue) == 0x000134, "Member 'BP_EventScriptBase_C_Character::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BI_GetCharaParamComponent_Comp) == 0x000138, "Member 'BP_EventScriptBase_C_Character::CallFunc_BI_GetCharaParamComponent_Comp' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_AsBPI_Chara_Lip_Sync) == 0x000140, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_AsBPI_Chara_Lip_Sync' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_bSuccess_1) == 0x000150, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_BI_SetNPCCollision_ret) == 0x000151, "Member 'BP_EventScriptBase_C_Character::CallFunc_BI_SetNPCCollision_ret' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_IsValid_ReturnValue) == 0x000152, "Member 'BP_EventScriptBase_C_Character::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_IsValid_ReturnValue_1) == 0x000153, "Member 'BP_EventScriptBase_C_Character::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Conv_FloatToVector_ReturnValue) == 0x000154, "Member 'BP_EventScriptBase_C_Character::CallFunc_Conv_FloatToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_AsGaze_Target) == 0x000160, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_AsGaze_Target' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, K2Node_DynamicCast_bSuccess_2) == 0x000170, "Member 'BP_EventScriptBase_C_Character::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_Character, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000174, "Member 'BP_EventScriptBase_C_Character::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetLookAt
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_SetLookAt final
+{
+public:
+	bool                                          LookAt;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_SetLookAt) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_SetLookAt");
+static_assert(sizeof(BP_EventScriptBase_C_SetLookAt) == 0x000001, "Wrong size on BP_EventScriptBase_C_SetLookAt");
+static_assert(offsetof(BP_EventScriptBase_C_SetLookAt, LookAt) == 0x000000, "Member 'BP_EventScriptBase_C_SetLookAt::LookAt' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.GetActive
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_GetActive final
+{
+public:
+	bool                                          Param_IsActive;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_GetActive) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_GetActive");
+static_assert(sizeof(BP_EventScriptBase_C_GetActive) == 0x000001, "Wrong size on BP_EventScriptBase_C_GetActive");
+static_assert(offsetof(BP_EventScriptBase_C_GetActive, Param_IsActive) == 0x000000, "Member 'BP_EventScriptBase_C_GetActive::Param_IsActive' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetDataTable
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_SetDataTable final
+{
+public:
+	class UDataTable*                             Param_DataTable;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventScriptBase_C_SetDataTable) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_SetDataTable");
+static_assert(sizeof(BP_EventScriptBase_C_SetDataTable) == 0x000008, "Wrong size on BP_EventScriptBase_C_SetDataTable");
+static_assert(offsetof(BP_EventScriptBase_C_SetDataTable, Param_DataTable) == 0x000000, "Member 'BP_EventScriptBase_C_SetDataTable::Param_DataTable' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetMessage
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_SetMessage final
+{
+public:
+	class UScriptMessageAsset*                    Param_MessageAsset;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventScriptBase_C_SetMessage) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_SetMessage");
+static_assert(sizeof(BP_EventScriptBase_C_SetMessage) == 0x000008, "Wrong size on BP_EventScriptBase_C_SetMessage");
+static_assert(offsetof(BP_EventScriptBase_C_SetMessage, Param_MessageAsset) == 0x000000, "Member 'BP_EventScriptBase_C_SetMessage::Param_MessageAsset' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.AddCharacter
+// 0x0210 (0x0210 - 0x0000)
+struct BP_EventScriptBase_C_AddCharacter final
+{
+public:
+	class AActor*                                 Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Tag;                                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGazeTargetHolder*                      CallFunc_GetGazeTargetHolder_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_CharaLipSync_C>   K2Node_DynamicCast_AsBPI_Chara_Lip_Sync;           // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BI_SetNPCCollision_ret;                   // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B90[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGazeTarget>           K2Node_DynamicCast_AsGaze_Target;                  // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B91[0xF];                                     // 0x0041(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0050(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x008C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0098(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6B92[0xC];                                     // 0x00B4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue_1;               // 0x00C0(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x00F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x00FC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0108(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0124(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x013C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B93[0x8];                                     // 0x0148(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0150(0x0030)(IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0180(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_AddCharacter) == 0x000010, "Wrong alignment on BP_EventScriptBase_C_AddCharacter");
+static_assert(sizeof(BP_EventScriptBase_C_AddCharacter) == 0x000210, "Wrong size on BP_EventScriptBase_C_AddCharacter");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, Character) == 0x000000, "Member 'BP_EventScriptBase_C_AddCharacter::Character' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, Tag) == 0x000008, "Member 'BP_EventScriptBase_C_AddCharacter::Tag' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_GetGazeTargetHolder_ReturnValue) == 0x000010, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_GetGazeTargetHolder_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, K2Node_DynamicCast_AsBPI_Chara_Lip_Sync) == 0x000018, "Member 'BP_EventScriptBase_C_AddCharacter::K2Node_DynamicCast_AsBPI_Chara_Lip_Sync' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_EventScriptBase_C_AddCharacter::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BI_SetNPCCollision_ret) == 0x00002A, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BI_SetNPCCollision_ret' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, K2Node_DynamicCast_AsGaze_Target) == 0x000030, "Member 'BP_EventScriptBase_C_AddCharacter::K2Node_DynamicCast_AsGaze_Target' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'BP_EventScriptBase_C_AddCharacter::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_GetTransform_ReturnValue) == 0x000050, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Location) == 0x000080, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Rotation) == 0x00008C, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Scale) == 0x000098, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Roll) == 0x0000A4, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Pitch) == 0x0000A8, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Yaw) == 0x0000AC, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Array_AddUnique_ReturnValue) == 0x0000B0, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_GetTransform_ReturnValue_1) == 0x0000C0, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_GetTransform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Location_1) == 0x0000F0, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Location_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Rotation_1) == 0x0000FC, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakTransform_Scale_1) == 0x000108, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000114, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Roll_1) == 0x000118, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Pitch_1) == 0x00011C, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_BreakRotator_Yaw_1) == 0x000120, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Add_VectorVector_ReturnValue) == 0x000124, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Add_FloatFloat_ReturnValue) == 0x000130, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000134, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x000138, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_MakeRotator_ReturnValue) == 0x00013C, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_MakeTransform_ReturnValue) == 0x000150, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x000180, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_AddCharacter, CallFunc_K2_SetActorTransform_ReturnValue) == 0x000208, "Member 'BP_EventScriptBase_C_AddCharacter::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.RegisterTalkIcon
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_RegisterTalkIcon final
+{
+public:
+	class AActor*                                 ThreeDCharacter;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventScriptBase_C_RegisterTalkIcon) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_RegisterTalkIcon");
+static_assert(sizeof(BP_EventScriptBase_C_RegisterTalkIcon) == 0x000008, "Wrong size on BP_EventScriptBase_C_RegisterTalkIcon");
+static_assert(offsetof(BP_EventScriptBase_C_RegisterTalkIcon, ThreeDCharacter) == 0x000000, "Member 'BP_EventScriptBase_C_RegisterTalkIcon::ThreeDCharacter' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BPI_CheckMissionEvent
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_BPI_CheckMissionEvent final
+{
+public:
+	bool                                          MissionEvent;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BPI_CheckMissionEvent) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BPI_CheckMissionEvent");
+static_assert(sizeof(BP_EventScriptBase_C_BPI_CheckMissionEvent) == 0x000001, "Wrong size on BP_EventScriptBase_C_BPI_CheckMissionEvent");
+static_assert(offsetof(BP_EventScriptBase_C_BPI_CheckMissionEvent, MissionEvent) == 0x000000, "Member 'BP_EventScriptBase_C_BPI_CheckMissionEvent::MissionEvent' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SetPlayerLookAt
+// 0x0048 (0x0048 - 0x0000)
+struct BP_EventScriptBase_C_SetPlayerLookAt final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B94[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGazeTargetHolder*                      CallFunc_GetGazeTargetHolder_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B95[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6B96[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMeshComponent*                         CallFunc_BI_GetMeshComponent_MeshComp;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_SetPlayerLookAt) == 0x000008, "Wrong alignment on BP_EventScriptBase_C_SetPlayerLookAt");
+static_assert(sizeof(BP_EventScriptBase_C_SetPlayerLookAt) == 0x000048, "Wrong size on BP_EventScriptBase_C_SetPlayerLookAt");
+static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, Enable) == 0x000000, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::Enable' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_GetGazeTargetHolder_ReturnValue) == 0x000008, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_GetGazeTargetHolder_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_Array_Get_Item) == 0x000010, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000018, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x000020, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_BI_GetMeshComponent_MeshComp) == 0x000038, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_BI_GetMeshComponent_MeshComp' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_SetPlayerLookAt, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'BP_EventScriptBase_C_SetPlayerLookAt::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.SpawnReflesh
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_SpawnReflesh final
+{
+public:
+	bool                                          NoUse;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_SpawnReflesh) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_SpawnReflesh");
+static_assert(sizeof(BP_EventScriptBase_C_SpawnReflesh) == 0x000001, "Wrong size on BP_EventScriptBase_C_SpawnReflesh");
+static_assert(offsetof(BP_EventScriptBase_C_SpawnReflesh, NoUse) == 0x000000, "Member 'BP_EventScriptBase_C_SpawnReflesh::NoUse' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeInBlack
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_BI_FadeInBlack final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BI_FadeInBlack) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_BI_FadeInBlack");
+static_assert(sizeof(BP_EventScriptBase_C_BI_FadeInBlack) == 0x000008, "Wrong size on BP_EventScriptBase_C_BI_FadeInBlack");
+static_assert(offsetof(BP_EventScriptBase_C_BI_FadeInBlack, Time) == 0x000000, "Member 'BP_EventScriptBase_C_BI_FadeInBlack::Time' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_BI_FadeInBlack, Ret) == 0x000004, "Member 'BP_EventScriptBase_C_BI_FadeInBlack::Ret' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeOutBlack
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_BI_FadeOutBlack final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BI_FadeOutBlack) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_BI_FadeOutBlack");
+static_assert(sizeof(BP_EventScriptBase_C_BI_FadeOutBlack) == 0x000008, "Wrong size on BP_EventScriptBase_C_BI_FadeOutBlack");
+static_assert(offsetof(BP_EventScriptBase_C_BI_FadeOutBlack, Time) == 0x000000, "Member 'BP_EventScriptBase_C_BI_FadeOutBlack::Time' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_BI_FadeOutBlack, Ret) == 0x000004, "Member 'BP_EventScriptBase_C_BI_FadeOutBlack::Ret' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeInWhite
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_BI_FadeInWhite final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BI_FadeInWhite) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_BI_FadeInWhite");
+static_assert(sizeof(BP_EventScriptBase_C_BI_FadeInWhite) == 0x000008, "Wrong size on BP_EventScriptBase_C_BI_FadeInWhite");
+static_assert(offsetof(BP_EventScriptBase_C_BI_FadeInWhite, Time) == 0x000000, "Member 'BP_EventScriptBase_C_BI_FadeInWhite::Time' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_BI_FadeInWhite, Ret) == 0x000004, "Member 'BP_EventScriptBase_C_BI_FadeInWhite::Ret' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_FadeOutWhite
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventScriptBase_C_BI_FadeOutWhite final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Ret;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BI_FadeOutWhite) == 0x000004, "Wrong alignment on BP_EventScriptBase_C_BI_FadeOutWhite");
+static_assert(sizeof(BP_EventScriptBase_C_BI_FadeOutWhite) == 0x000008, "Wrong size on BP_EventScriptBase_C_BI_FadeOutWhite");
+static_assert(offsetof(BP_EventScriptBase_C_BI_FadeOutWhite, Time) == 0x000000, "Member 'BP_EventScriptBase_C_BI_FadeOutWhite::Time' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_BI_FadeOutWhite, Ret) == 0x000004, "Member 'BP_EventScriptBase_C_BI_FadeOutWhite::Ret' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_DeleteScript
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_BI_DeleteScript final
+{
+public:
+	bool                                          NoUse;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BI_DeleteScript) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BI_DeleteScript");
+static_assert(sizeof(BP_EventScriptBase_C_BI_DeleteScript) == 0x000001, "Wrong size on BP_EventScriptBase_C_BI_DeleteScript");
+static_assert(offsetof(BP_EventScriptBase_C_BI_DeleteScript, NoUse) == 0x000000, "Member 'BP_EventScriptBase_C_BI_DeleteScript::NoUse' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_SpawnScript
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_BI_SpawnScript final
+{
+public:
+	bool                                          NoUse;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BI_SpawnScript) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BI_SpawnScript");
+static_assert(sizeof(BP_EventScriptBase_C_BI_SpawnScript) == 0x000001, "Wrong size on BP_EventScriptBase_C_BI_SpawnScript");
+static_assert(offsetof(BP_EventScriptBase_C_BI_SpawnScript, NoUse) == 0x000000, "Member 'BP_EventScriptBase_C_BI_SpawnScript::NoUse' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_CheckActiveArea
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_BI_CheckActiveArea final
+{
+public:
+	bool                                          Param_IsActive;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BI_CheckActiveArea) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BI_CheckActiveArea");
+static_assert(sizeof(BP_EventScriptBase_C_BI_CheckActiveArea) == 0x000001, "Wrong size on BP_EventScriptBase_C_BI_CheckActiveArea");
+static_assert(offsetof(BP_EventScriptBase_C_BI_CheckActiveArea, Param_IsActive) == 0x000000, "Member 'BP_EventScriptBase_C_BI_CheckActiveArea::Param_IsActive' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.ForceSpawnScript
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EventScriptBase_C_ForceSpawnScript final
+{
+public:
+	bool                                          NoUse;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_ForceSpawnScript) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_ForceSpawnScript");
+static_assert(sizeof(BP_EventScriptBase_C_ForceSpawnScript) == 0x000001, "Wrong size on BP_EventScriptBase_C_ForceSpawnScript");
+static_assert(offsetof(BP_EventScriptBase_C_ForceSpawnScript, NoUse) == 0x000000, "Member 'BP_EventScriptBase_C_ForceSpawnScript::NoUse' has a wrong offset!");
+
+// Function BP_EventScriptBase.BP_EventScriptBase_C.BI_SetInvalidWindow
+// 0x0002 (0x0002 - 0x0000)
+struct BP_EventScriptBase_C_BI_SetInvalidWindow final
+{
+public:
+	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          NoUse;                                             // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EventScriptBase_C_BI_SetInvalidWindow) == 0x000001, "Wrong alignment on BP_EventScriptBase_C_BI_SetInvalidWindow");
+static_assert(sizeof(BP_EventScriptBase_C_BI_SetInvalidWindow) == 0x000002, "Wrong size on BP_EventScriptBase_C_BI_SetInvalidWindow");
+static_assert(offsetof(BP_EventScriptBase_C_BI_SetInvalidWindow, Invalid) == 0x000000, "Member 'BP_EventScriptBase_C_BI_SetInvalidWindow::Invalid' has a wrong offset!");
+static_assert(offsetof(BP_EventScriptBase_C_BI_SetInvalidWindow, NoUse) == 0x000001, "Member 'BP_EventScriptBase_C_BI_SetInvalidWindow::NoUse' has a wrong offset!");
 
 }
 

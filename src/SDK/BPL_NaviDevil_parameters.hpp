@@ -17,410 +17,46 @@
 namespace SDK::Params
 {
 
-// Function BPL_NaviDevil.BPL_NaviDevil_C.SetVisibility_NaviEffect
-// 0x00B0 (0x00B0 - 0x0000)
-struct BPL_NaviDevil_C_SetVisibility_NaviEffect final
-{
-public:
-	bool                                          Visible;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E74[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UActorComponent*>                L_Comps;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E75[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E76[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_BPI_GetNaviDevilPawn_Pawn;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UActorComponent*                        CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E77[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_CharaFollower_C>  K2Node_DynamicCast_AsBPI_Chara_Follower;           // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E78[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_CharaFollower_C>  K2Node_DynamicCast_AsBPI_Chara_Follower_1;         // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E79[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UActorComponent*>                CallFunc_GetComponentsByInterface_ReturnValue;     // 0x0090(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E7A[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPL_NaviDevil_C_SetVisibility_NaviEffect) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_SetVisibility_NaviEffect");
-static_assert(sizeof(BPL_NaviDevil_C_SetVisibility_NaviEffect) == 0x0000B0, "Wrong size on BPL_NaviDevil_C_SetVisibility_NaviEffect");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, Visible) == 0x000000, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::Visible' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, __WorldContext) == 0x000008, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, L_Comps) == 0x000010, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::L_Comps' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_GetMapCommon_rerutn) == 0x000020, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, Temp_int_Array_Index_Variable) == 0x000028, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000030, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_BPI_GetNaviDevilPawn_Pawn) == 0x000048, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_BPI_GetNaviDevilPawn_Pawn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_Array_Get_Item) == 0x000050, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_AsBPI_Chara_Follower) == 0x000060, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_AsBPI_Chara_Follower' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_bSuccess_1) == 0x000070, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_AsBPI_Chara_Follower_1) == 0x000078, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_AsBPI_Chara_Follower_1' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_bSuccess_2) == 0x000088, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_IsValid_ReturnValue) == 0x000089, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_GetComponentsByInterface_ReturnValue) == 0x000090, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_GetComponentsByInterface_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, Temp_int_Loop_Counter_Variable) == 0x0000A0, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_Less_IntInt_ReturnValue) == 0x0000A4, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_Add_IntInt_ReturnValue) == 0x0000A8, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.DestroyNaviDevil_BeforeEvent
-// 0x0040 (0x0040 - 0x0000)
-struct BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E7B[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent");
-static_assert(sizeof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent) == 0x000040, "Wrong size on BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, __WorldContext) == 0x000000, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000010, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000028, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000030, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.RespawnNaviDevil_AfterEvent
-// 0x0040 (0x0040 - 0x0000)
-struct BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E7C[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent");
-static_assert(sizeof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent) == 0x000040, "Wrong size on BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent");
-static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, __WorldContext) == 0x000000, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000010, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000028, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000030, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.UpdateNaviMinimapIcon
-// 0x00F8 (0x00F8 - 0x0000)
-struct BPL_NaviDevil_C_UpdateNaviMinimapIcon final
-{
-public:
-	E_NAVI_DEVIL                                  Navi;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FlagSwitch;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          NaviNotChange;                                     // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E7D[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   L_UnlockFlagName;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   L_IconFlagName;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E7E[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckEventFlag_ReturnValue;               // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_CheckEventFlag_ReturnValue_1;             // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E7F[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_2;          // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_6;              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_7;              // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckEventFlag_ReturnValue_2;             // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPL_NaviDevil_C_UpdateNaviMinimapIcon) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_UpdateNaviMinimapIcon");
-static_assert(sizeof(BPL_NaviDevil_C_UpdateNaviMinimapIcon) == 0x0000F8, "Wrong size on BPL_NaviDevil_C_UpdateNaviMinimapIcon");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, Navi) == 0x000000, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::Navi' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, FlagSwitch) == 0x000001, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::FlagSwitch' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, NaviNotChange) == 0x000002, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::NaviNotChange' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, __WorldContext) == 0x000008, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, L_UnlockFlagName) == 0x000010, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::L_UnlockFlagName' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, L_IconFlagName) == 0x000018, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::L_IconFlagName' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Conv_BoolToString_ReturnValue) == 0x000030, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, K2Node_SwitchEnum_CmpSuccess) == 0x000040, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000048, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_CheckEventFlag_ReturnValue) == 0x000058, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_CheckEventFlag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_CheckEventFlag_ReturnValue_1) == 0x000059, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_CheckEventFlag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000060, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Conv_NameToString_ReturnValue) == 0x000070, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000080, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Conv_NameToString_ReturnValue_2) == 0x000090, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Conv_NameToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0000A0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_4) == 0x0000B0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_5) == 0x0000C0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_6) == 0x0000D0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_7) == 0x0000E0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_CheckEventFlag_ReturnValue_2) == 0x0000F0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_CheckEventFlag_ReturnValue_2' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.LotNaviGimmickExist
-// 0x0040 (0x0040 - 0x0000)
-struct BPL_NaviDevil_C_LotNaviGimmickExist final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E80[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPL_NaviDevil_C_LotNaviGimmickExist) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_LotNaviGimmickExist");
-static_assert(sizeof(BPL_NaviDevil_C_LotNaviGimmickExist) == 0x000040, "Wrong size on BPL_NaviDevil_C_LotNaviGimmickExist");
-static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, __WorldContext) == 0x000000, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000010, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000028, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000030, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.WarpNaviDevilBasePosition
-// 0x0098 (0x0098 - 0x0000)
-struct BPL_NaviDevil_C_WarpNaviDevilBasePosition final
-{
-public:
-	bool                                          CalcOnGround;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E81[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UActorComponent*>                L_Comps;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E82[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E83[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_BPI_GetNaviDevilPawn_Pawn;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UActorComponent*>                CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0058(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E84[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UActorComponent*                        CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E85[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_CharaFollower_C>  K2Node_DynamicCast_AsBPI_Chara_Follower;           // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_WarpNaviDevilBasePos_NewParam;        // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPL_NaviDevil_C_WarpNaviDevilBasePosition) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_WarpNaviDevilBasePosition");
-static_assert(sizeof(BPL_NaviDevil_C_WarpNaviDevilBasePosition) == 0x000098, "Wrong size on BPL_NaviDevil_C_WarpNaviDevilBasePosition");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CalcOnGround) == 0x000000, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CalcOnGround' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, __WorldContext) == 0x000008, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, L_Comps) == 0x000010, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::L_Comps' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_GetMapCommon_rerutn) == 0x000020, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, Temp_int_Array_Index_Variable) == 0x000028, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000030, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_BPI_GetNaviDevilPawn_Pawn) == 0x000048, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_BPI_GetNaviDevilPawn_Pawn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, Temp_int_Loop_Counter_Variable) == 0x000050, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_Add_IntInt_ReturnValue) == 0x000054, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000058, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_Array_Length_ReturnValue) == 0x00006C, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_Array_Get_Item) == 0x000070, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, K2Node_DynamicCast_AsBPI_Chara_Follower) == 0x000080, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::K2Node_DynamicCast_AsBPI_Chara_Follower' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_BPI_WarpNaviDevilBasePos_NewParam) == 0x000091, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_BPI_WarpNaviDevilBasePos_NewParam' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.ChangeNaviDevilScale
-// 0x0100 (0x0100 - 0x0000)
-struct BPL_NaviDevil_C_ChangeNaviDevilScale final
-{
-public:
-	class AActor*                                 Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_NAVI_DEVIL                                  NaviType;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E86[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E87[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E88[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0038(0x0010)(ReferenceParm)
-	class FName                                   CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E89[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNaviDevilParam_st                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x0058(0x0098)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BI_SetMeshRelativeScale_NoUse;            // 0x00F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E8A[0x3];                                     // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPL_NaviDevil_C_ChangeNaviDevilScale) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_ChangeNaviDevilScale");
-static_assert(sizeof(BPL_NaviDevil_C_ChangeNaviDevilScale) == 0x000100, "Wrong size on BPL_NaviDevil_C_ChangeNaviDevilScale");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, Pawn) == 0x000000, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::Pawn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, NaviType) == 0x000008, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::NaviType' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, __WorldContext) == 0x000010, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x000018, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, Temp_bool_True_if_break_was_hit_Variable) == 0x000029, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Not_PreBool_ReturnValue) == 0x000030, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, Temp_int_Loop_Counter_Variable) == 0x000034, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000038, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Array_Get_Item) == 0x000048, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_GetDataTableRowFromName_OutRow) == 0x000058, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000F0, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Less_IntInt_ReturnValue) == 0x0000F1, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_BooleanAND_ReturnValue) == 0x0000F2, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_BI_SetMeshRelativeScale_NoUse) == 0x0000F3, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_BI_SetMeshRelativeScale_NoUse' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000F4, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Add_IntInt_ReturnValue) == 0x0000F8, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.DestroyNaviDevil
-// 0x0040 (0x0040 - 0x0000)
-struct BPL_NaviDevil_C_DestroyNaviDevil final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E8B[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPL_NaviDevil_C_DestroyNaviDevil) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_DestroyNaviDevil");
-static_assert(sizeof(BPL_NaviDevil_C_DestroyNaviDevil) == 0x000040, "Wrong size on BPL_NaviDevil_C_DestroyNaviDevil");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, __WorldContext) == 0x000000, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000010, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000028, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000030, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.ChangeNaviDevil_FromPawn
-// 0x0050 (0x0050 - 0x0000)
-struct BPL_NaviDevil_C_ChangeNaviDevil_FromPawn final
-{
-public:
-	class APawn*                                  Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_NAVI_DEVIL                                  NaviDevil;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E8C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E8D[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_ChangeNaviDevil_FromPawn");
-static_assert(sizeof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn) == 0x000050, "Wrong size on BPL_NaviDevil_C_ChangeNaviDevil_FromPawn");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, Pawn) == 0x000000, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::Pawn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, NaviDevil) == 0x000008, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::NaviDevil' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, __WorldContext) == 0x000010, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, CallFunc_GetMapCommon_rerutn) == 0x000018, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000020, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000038, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000040, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function BPL_NaviDevil.BPL_NaviDevil_C.SpawnNaviDevil
-// 0x0048 (0x0048 - 0x0000)
-struct BPL_NaviDevil_C_SpawnNaviDevil final
-{
-public:
-	E_NAVI_DEVIL                                  NaviDevil;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E8E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E8F[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BPL_NaviDevil_C_SpawnNaviDevil) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_SpawnNaviDevil");
-static_assert(sizeof(BPL_NaviDevil_C_SpawnNaviDevil) == 0x000048, "Wrong size on BPL_NaviDevil_C_SpawnNaviDevil");
-static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, NaviDevil) == 0x000000, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::NaviDevil' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, __WorldContext) == 0x000008, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, CallFunc_GetMapCommon_rerutn) == 0x000010, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000018, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000030, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000038, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
-static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
 // Function BPL_NaviDevil.BPL_NaviDevil_C.SetVisibilityNaviDevil
 // 0x00E8 (0x00E8 - 0x0000)
 struct BPL_NaviDevil_C_SetVisibilityNaviDevil final
 {
 public:
 	bool                                          Visible;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E90[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_671F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          L_Exist;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E91[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6720[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UActorComponent*>                L_Comps;                                           // 0x0018(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E92[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6721[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CurrentMapIsDaath_ReturnValue;            // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E93[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6722[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetMapCommon_rerutn_1;                    // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E94[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6723[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_1;             // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E95[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6724[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_BPI_GetNaviDevilPawn_Pawn;                // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E96[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6725[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UActorComponent*>                CallFunc_GetComponentsByInterface_ReturnValue;     // 0x0088(0x0010)(ReferenceParm, ContainsInstancedReference)
 	class UActorComponent*                        CallFunc_Array_Get_Item;                           // 0x0098(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E97[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6726[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaFollower_C>  K2Node_DynamicCast_AsBPI_Chara_Follower;           // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E98[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6727[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_CharaFollower_C>  K2Node_DynamicCast_AsBPI_Chara_Follower_1;         // 0x00C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8E99[0x3];                                     // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6728[0x3];                                     // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_NAVI_DEVIL                                  CallFunc_GetCurrentNaviDevil_ReturnValue;          // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8E9A[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6729[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -460,6 +96,370 @@ static_assert(offsetof(BPL_NaviDevil_C_SetVisibilityNaviDevil, CallFunc_BooleanA
 static_assert(offsetof(BPL_NaviDevil_C_SetVisibilityNaviDevil, CallFunc_Less_IntInt_ReturnValue) == 0x0000E2, "Member 'BPL_NaviDevil_C_SetVisibilityNaviDevil::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BPL_NaviDevil_C_SetVisibilityNaviDevil, CallFunc_BooleanAND_ReturnValue_1) == 0x0000E3, "Member 'BPL_NaviDevil_C_SetVisibilityNaviDevil::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BPL_NaviDevil_C_SetVisibilityNaviDevil, CallFunc_Add_IntInt_ReturnValue) == 0x0000E4, "Member 'BPL_NaviDevil_C_SetVisibilityNaviDevil::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.SpawnNaviDevil
+// 0x0048 (0x0048 - 0x0000)
+struct BPL_NaviDevil_C_SpawnNaviDevil final
+{
+public:
+	E_NAVI_DEVIL                                  NaviDevil;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_672A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_672B[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPL_NaviDevil_C_SpawnNaviDevil) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_SpawnNaviDevil");
+static_assert(sizeof(BPL_NaviDevil_C_SpawnNaviDevil) == 0x000048, "Wrong size on BPL_NaviDevil_C_SpawnNaviDevil");
+static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, NaviDevil) == 0x000000, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::NaviDevil' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, __WorldContext) == 0x000008, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, CallFunc_GetMapCommon_rerutn) == 0x000010, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000018, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000030, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000038, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SpawnNaviDevil, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'BPL_NaviDevil_C_SpawnNaviDevil::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.ChangeNaviDevil_FromPawn
+// 0x0050 (0x0050 - 0x0000)
+struct BPL_NaviDevil_C_ChangeNaviDevil_FromPawn final
+{
+public:
+	class APawn*                                  Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_NAVI_DEVIL                                  NaviDevil;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_672C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_672D[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_ChangeNaviDevil_FromPawn");
+static_assert(sizeof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn) == 0x000050, "Wrong size on BPL_NaviDevil_C_ChangeNaviDevil_FromPawn");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, Pawn) == 0x000000, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::Pawn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, NaviDevil) == 0x000008, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::NaviDevil' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, __WorldContext) == 0x000010, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, CallFunc_GetMapCommon_rerutn) == 0x000018, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000020, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000038, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000040, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevil_FromPawn, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'BPL_NaviDevil_C_ChangeNaviDevil_FromPawn::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.DestroyNaviDevil
+// 0x0040 (0x0040 - 0x0000)
+struct BPL_NaviDevil_C_DestroyNaviDevil final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_672E[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPL_NaviDevil_C_DestroyNaviDevil) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_DestroyNaviDevil");
+static_assert(sizeof(BPL_NaviDevil_C_DestroyNaviDevil) == 0x000040, "Wrong size on BPL_NaviDevil_C_DestroyNaviDevil");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, __WorldContext) == 0x000000, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000010, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000028, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000030, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BPL_NaviDevil_C_DestroyNaviDevil::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.ChangeNaviDevilScale
+// 0x0100 (0x0100 - 0x0000)
+struct BPL_NaviDevil_C_ChangeNaviDevilScale final
+{
+public:
+	class AActor*                                 Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_NAVI_DEVIL                                  NaviType;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_672F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6730[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6731[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0038(0x0010)(ReferenceParm)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6732[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNaviDevilParam_st                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x0058(0x0098)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BI_SetMeshRelativeScale_NoUse;            // 0x00F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6733[0x3];                                     // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPL_NaviDevil_C_ChangeNaviDevilScale) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_ChangeNaviDevilScale");
+static_assert(sizeof(BPL_NaviDevil_C_ChangeNaviDevilScale) == 0x000100, "Wrong size on BPL_NaviDevil_C_ChangeNaviDevilScale");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, Pawn) == 0x000000, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::Pawn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, NaviType) == 0x000008, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::NaviType' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, __WorldContext) == 0x000010, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x000018, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, Temp_bool_True_if_break_was_hit_Variable) == 0x000029, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Not_PreBool_ReturnValue) == 0x000030, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, Temp_int_Loop_Counter_Variable) == 0x000034, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000038, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Array_Get_Item) == 0x000048, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_GetDataTableRowFromName_OutRow) == 0x000058, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000F0, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Less_IntInt_ReturnValue) == 0x0000F1, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_BooleanAND_ReturnValue) == 0x0000F2, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_BI_SetMeshRelativeScale_NoUse) == 0x0000F3, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_BI_SetMeshRelativeScale_NoUse' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000F4, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_ChangeNaviDevilScale, CallFunc_Add_IntInt_ReturnValue) == 0x0000F8, "Member 'BPL_NaviDevil_C_ChangeNaviDevilScale::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.WarpNaviDevilBasePosition
+// 0x0098 (0x0098 - 0x0000)
+struct BPL_NaviDevil_C_WarpNaviDevilBasePosition final
+{
+public:
+	bool                                          CalcOnGround;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6734[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UActorComponent*>                L_Comps;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6735[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6736[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_BPI_GetNaviDevilPawn_Pawn;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UActorComponent*>                CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0058(0x0010)(ReferenceParm, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6737[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UActorComponent*                        CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6738[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_CharaFollower_C>  K2Node_DynamicCast_AsBPI_Chara_Follower;           // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_WarpNaviDevilBasePos_NewParam;        // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPL_NaviDevil_C_WarpNaviDevilBasePosition) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_WarpNaviDevilBasePosition");
+static_assert(sizeof(BPL_NaviDevil_C_WarpNaviDevilBasePosition) == 0x000098, "Wrong size on BPL_NaviDevil_C_WarpNaviDevilBasePosition");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CalcOnGround) == 0x000000, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CalcOnGround' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, __WorldContext) == 0x000008, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, L_Comps) == 0x000010, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::L_Comps' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_GetMapCommon_rerutn) == 0x000020, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, Temp_int_Array_Index_Variable) == 0x000028, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000030, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_BPI_GetNaviDevilPawn_Pawn) == 0x000048, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_BPI_GetNaviDevilPawn_Pawn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, Temp_int_Loop_Counter_Variable) == 0x000050, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_Add_IntInt_ReturnValue) == 0x000054, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000058, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_Array_Length_ReturnValue) == 0x00006C, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_Array_Get_Item) == 0x000070, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, K2Node_DynamicCast_AsBPI_Chara_Follower) == 0x000080, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::K2Node_DynamicCast_AsBPI_Chara_Follower' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, K2Node_DynamicCast_bSuccess_1) == 0x000090, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_WarpNaviDevilBasePosition, CallFunc_BPI_WarpNaviDevilBasePos_NewParam) == 0x000091, "Member 'BPL_NaviDevil_C_WarpNaviDevilBasePosition::CallFunc_BPI_WarpNaviDevilBasePos_NewParam' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.LotNaviGimmickExist
+// 0x0040 (0x0040 - 0x0000)
+struct BPL_NaviDevil_C_LotNaviGimmickExist final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6739[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPL_NaviDevil_C_LotNaviGimmickExist) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_LotNaviGimmickExist");
+static_assert(sizeof(BPL_NaviDevil_C_LotNaviGimmickExist) == 0x000040, "Wrong size on BPL_NaviDevil_C_LotNaviGimmickExist");
+static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, __WorldContext) == 0x000000, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000010, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000028, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000030, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_LotNaviGimmickExist, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BPL_NaviDevil_C_LotNaviGimmickExist::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.UpdateNaviMinimapIcon
+// 0x00F8 (0x00F8 - 0x0000)
+struct BPL_NaviDevil_C_UpdateNaviMinimapIcon final
+{
+public:
+	E_NAVI_DEVIL                                  Navi;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FlagSwitch;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          NaviNotChange;                                     // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_673A[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   L_UnlockFlagName;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   L_IconFlagName;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_673B[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckEventFlag_ReturnValue;               // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_CheckEventFlag_ReturnValue_1;             // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_673C[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_2;          // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_6;              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_7;              // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckEventFlag_ReturnValue_2;             // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPL_NaviDevil_C_UpdateNaviMinimapIcon) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_UpdateNaviMinimapIcon");
+static_assert(sizeof(BPL_NaviDevil_C_UpdateNaviMinimapIcon) == 0x0000F8, "Wrong size on BPL_NaviDevil_C_UpdateNaviMinimapIcon");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, Navi) == 0x000000, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::Navi' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, FlagSwitch) == 0x000001, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::FlagSwitch' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, NaviNotChange) == 0x000002, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::NaviNotChange' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, __WorldContext) == 0x000008, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, L_UnlockFlagName) == 0x000010, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::L_UnlockFlagName' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, L_IconFlagName) == 0x000018, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::L_IconFlagName' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Conv_BoolToString_ReturnValue) == 0x000030, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, K2Node_SwitchEnum_CmpSuccess) == 0x000040, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000048, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_CheckEventFlag_ReturnValue) == 0x000058, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_CheckEventFlag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_CheckEventFlag_ReturnValue_1) == 0x000059, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_CheckEventFlag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000060, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Conv_NameToString_ReturnValue) == 0x000070, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000080, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Conv_NameToString_ReturnValue_2) == 0x000090, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Conv_NameToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0000A0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_4) == 0x0000B0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_5) == 0x0000C0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_6) == 0x0000D0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_Concat_StrStr_ReturnValue_7) == 0x0000E0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_Concat_StrStr_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_UpdateNaviMinimapIcon, CallFunc_CheckEventFlag_ReturnValue_2) == 0x0000F0, "Member 'BPL_NaviDevil_C_UpdateNaviMinimapIcon::CallFunc_CheckEventFlag_ReturnValue_2' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.RespawnNaviDevil_AfterEvent
+// 0x0040 (0x0040 - 0x0000)
+struct BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_673D[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent");
+static_assert(sizeof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent) == 0x000040, "Wrong size on BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent");
+static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, __WorldContext) == 0x000000, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000010, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000028, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000030, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BPL_NaviDevil_C_RespawnNaviDevil_AfterEvent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.DestroyNaviDevil_BeforeEvent
+// 0x0040 (0x0040 - 0x0000)
+struct BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_673E[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_BPI_GetNaviDevilCtrl_Actor;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_NaviDevilCtrlBase_C*                K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent");
+static_assert(sizeof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent) == 0x000040, "Wrong size on BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, __WorldContext) == 0x000000, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, CallFunc_GetMapCommon_rerutn) == 0x000008, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000010, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, CallFunc_BPI_GetNaviDevilCtrl_Actor) == 0x000028, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::CallFunc_BPI_GetNaviDevilCtrl_Actor' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base) == 0x000030, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::K2Node_DynamicCast_AsBP_Navi_Devil_Ctrl_Base' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BPL_NaviDevil_C_DestroyNaviDevil_BeforeEvent::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function BPL_NaviDevil.BPL_NaviDevil_C.SetVisibility_NaviEffect
+// 0x00B0 (0x00B0 - 0x0000)
+struct BPL_NaviDevil_C_SetVisibility_NaviEffect final
+{
+public:
+	bool                                          Visible;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_673F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UActorComponent*>                L_Comps;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6740[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6741[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_BPI_GetNaviDevilPawn_Pawn;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UActorComponent*                        CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6742[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_CharaFollower_C>  K2Node_DynamicCast_AsBPI_Chara_Follower;           // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6743[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_CharaFollower_C>  K2Node_DynamicCast_AsBPI_Chara_Follower_1;         // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6744[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UActorComponent*>                CallFunc_GetComponentsByInterface_ReturnValue;     // 0x0090(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6745[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPL_NaviDevil_C_SetVisibility_NaviEffect) == 0x000008, "Wrong alignment on BPL_NaviDevil_C_SetVisibility_NaviEffect");
+static_assert(sizeof(BPL_NaviDevil_C_SetVisibility_NaviEffect) == 0x0000B0, "Wrong size on BPL_NaviDevil_C_SetVisibility_NaviEffect");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, Visible) == 0x000000, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::Visible' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, __WorldContext) == 0x000008, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, L_Comps) == 0x000010, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::L_Comps' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_GetMapCommon_rerutn) == 0x000020, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, Temp_int_Array_Index_Variable) == 0x000028, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000030, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_BPI_GetNaviDevilPawn_Pawn) == 0x000048, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_BPI_GetNaviDevilPawn_Pawn' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_Array_Get_Item) == 0x000050, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_AsBPI_Chara_Follower) == 0x000060, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_AsBPI_Chara_Follower' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_bSuccess_1) == 0x000070, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_AsBPI_Chara_Follower_1) == 0x000078, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_AsBPI_Chara_Follower_1' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, K2Node_DynamicCast_bSuccess_2) == 0x000088, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_IsValid_ReturnValue) == 0x000089, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_GetComponentsByInterface_ReturnValue) == 0x000090, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_GetComponentsByInterface_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, Temp_int_Loop_Counter_Variable) == 0x0000A0, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_Less_IntInt_ReturnValue) == 0x0000A4, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_NaviDevil_C_SetVisibility_NaviEffect, CallFunc_Add_IntInt_ReturnValue) == 0x0000A8, "Member 'BPL_NaviDevil_C_SetVisibility_NaviEffect::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

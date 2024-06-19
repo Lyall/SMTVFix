@@ -22,12 +22,12 @@ namespace SDK
 class UBPL_Magatsuka_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void ShowMagatsukaAll(TArray<class AActor*>& Actors, bool Show, class UObject* __WorldContext);
-	static void RecalcMagatsukaGaze(TArray<class AActor*>& Actors, class UObject* __WorldContext);
-	static void ReleaseMagatsukaGaze(TArray<class AActor*>& Actors, class UObject* __WorldContext);
-	static void OtherScene_To_MagatsukaFound(class UObject* __WorldContext);
-	static void MagatsukaFound_To_OtherScene(class UObject* __WorldContext);
 	static void ChangeBGM_MagatsukaOrMap(EFadeType FadeType, class UObject* __WorldContext);
+	static void MagatsukaFound_To_OtherScene(class UObject* __WorldContext);
+	static void OtherScene_To_MagatsukaFound(class UObject* __WorldContext);
+	static void ReleaseMagatsukaGaze(TArray<class AActor*>& Actors, class UObject* __WorldContext);
+	static void RecalcMagatsukaGaze(TArray<class AActor*>& Actors, class UObject* __WorldContext);
+	static void ShowMagatsukaAll(TArray<class AActor*>& Actors, bool Show, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

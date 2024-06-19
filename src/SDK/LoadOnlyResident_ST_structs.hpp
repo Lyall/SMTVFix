@@ -24,7 +24,7 @@ public:
 	TArray<struct FPrimaryAssetId>                LoadOnlyAssetList_3_90C1A54546D5BE14871DCB91D9D72697; // 0x0000(0x0010)(Edit, BlueprintVisible)
 	TArray<class FName>                           LoadOnlyAssetName_6_1F15686D473541A9FBC83682AAFDC0BD; // 0x0010(0x0010)(Edit, BlueprintVisible)
 	bool                                          LoadEnd_10_255737704885EE756A41CCB4EAF5B235;       // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_44F3[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D41[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MapId_13_27BDD72D480B82A4A775EDBFA12C06C3;         // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         AreaID_15_FB45A49D42C01E1435C00EAD0316008B;        // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Index_18_C18C9C114C33DBA779DDE5BF23557FC8;         // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

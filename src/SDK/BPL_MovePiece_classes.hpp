@@ -21,8 +21,8 @@ namespace SDK
 class UBPL_MovePiece_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void HideMovePieceAll(class UObject* __WorldContext);
 	static void ShowAgainMovePieceAll(class UObject* __WorldContext);
+	static void HideMovePieceAll(class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

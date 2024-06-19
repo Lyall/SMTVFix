@@ -85,11 +85,11 @@ public:
 	bool                                          Enemyoffsetcursorinstanceflag;                     // 0x0426(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsExistScrollBar;                                  // 0x0427(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	float                                         Localoffsetinstancerate;                           // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6CC0[0x4];                                     // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52DA[0x4];                                     // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWB_CharaPanel_C*>               WBCharaPanelArray;                                 // 0x0430(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          IsInitializeFlag;                                  // 0x0440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsItScrollBar;                                     // 0x0441(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6CC1[0x2];                                     // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52DB[0x2];                                     // 0x0442(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Scrollvarvalue;                                    // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

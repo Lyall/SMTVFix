@@ -27,8 +27,8 @@ public:
 	class AMapCommonCtrl_C*                       MapCommonCtrl_34_ExecuteUbergraph_LV_MapCommonCtrl_RefProperty; // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_LV_MapCommonCtrl(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

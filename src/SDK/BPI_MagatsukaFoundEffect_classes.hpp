@@ -21,8 +21,8 @@ namespace SDK
 class IBPI_MagatsukaFoundEffect_C final : public IInterface
 {
 public:
-	void BPI_RestartFoundEffect();
 	void BPI_PauseFoundEffect();
+	void BPI_RestartFoundEffect();
 
 public:
 	static class UClass* StaticClass()

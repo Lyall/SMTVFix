@@ -17,23 +17,23 @@
 namespace SDK
 {
 
-// Function MapdebugWindowMesBase.MapdebugWindowMesBase_C.GetText_0
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function MapdebugWindowMesBase.MapdebugWindowMesBase_C.ExecuteUbergraph_MapdebugWindowMesBase
+// (Final, UbergraphFunction)
 // Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class FText UMapdebugWindowMesBase_C::GetText_0()
+void UMapdebugWindowMesBase_C::ExecuteUbergraph_MapdebugWindowMesBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapdebugWindowMesBase_C", "GetText_0");
+		Func = Class->GetFunction("MapdebugWindowMesBase_C", "ExecuteUbergraph_MapdebugWindowMesBase");
 
-	Params::MapdebugWindowMesBase_C_GetText_0 Parms{};
+	Params::MapdebugWindowMesBase_C_ExecuteUbergraph_MapdebugWindowMesBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -57,23 +57,23 @@ void UMapdebugWindowMesBase_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function MapdebugWindowMesBase.MapdebugWindowMesBase_C.ExecuteUbergraph_MapdebugWindowMesBase
-// (Final, UbergraphFunction)
+// Function MapdebugWindowMesBase.MapdebugWindowMesBase_C.GetText_0
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UMapdebugWindowMesBase_C::ExecuteUbergraph_MapdebugWindowMesBase(int32 EntryPoint)
+class FText UMapdebugWindowMesBase_C::GetText_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapdebugWindowMesBase_C", "ExecuteUbergraph_MapdebugWindowMesBase");
+		Func = Class->GetFunction("MapdebugWindowMesBase_C", "GetText_0");
 
-	Params::MapdebugWindowMesBase_C_ExecuteUbergraph_MapdebugWindowMesBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::MapdebugWindowMesBase_C_GetText_0 Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

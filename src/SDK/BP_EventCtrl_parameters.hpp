@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BP_EventCtrl.BP_EventCtrl_C.SetPosition
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EventCtrl_C_SetPosition final
-{
-public:
-	class AActor*                                 PositionActor;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_EventCtrl_C_SetPosition) == 0x000008, "Wrong alignment on BP_EventCtrl_C_SetPosition");
-static_assert(sizeof(BP_EventCtrl_C_SetPosition) == 0x000008, "Wrong size on BP_EventCtrl_C_SetPosition");
-static_assert(offsetof(BP_EventCtrl_C_SetPosition, PositionActor) == 0x000000, "Member 'BP_EventCtrl_C_SetPosition::PositionActor' has a wrong offset!");
-
 // Function BP_EventCtrl.BP_EventCtrl_C.IsFinish
 // 0x0001 (0x0001 - 0x0000)
 struct BP_EventCtrl_C_IsFinish final
@@ -35,6 +24,17 @@ public:
 static_assert(alignof(BP_EventCtrl_C_IsFinish) == 0x000001, "Wrong alignment on BP_EventCtrl_C_IsFinish");
 static_assert(sizeof(BP_EventCtrl_C_IsFinish) == 0x000001, "Wrong size on BP_EventCtrl_C_IsFinish");
 static_assert(offsetof(BP_EventCtrl_C_IsFinish, Param_Finish) == 0x000000, "Member 'BP_EventCtrl_C_IsFinish::Param_Finish' has a wrong offset!");
+
+// Function BP_EventCtrl.BP_EventCtrl_C.SetPosition
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EventCtrl_C_SetPosition final
+{
+public:
+	class AActor*                                 PositionActor;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EventCtrl_C_SetPosition) == 0x000008, "Wrong alignment on BP_EventCtrl_C_SetPosition");
+static_assert(sizeof(BP_EventCtrl_C_SetPosition) == 0x000008, "Wrong size on BP_EventCtrl_C_SetPosition");
+static_assert(offsetof(BP_EventCtrl_C_SetPosition, PositionActor) == 0x000000, "Member 'BP_EventCtrl_C_SetPosition::PositionActor' has a wrong offset!");
 
 }
 

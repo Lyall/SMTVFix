@@ -17,168 +17,23 @@
 namespace SDK
 {
 
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.UpdateIcon
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMap_Icon_C::UpdateIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "UpdateIcon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetMissionId
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.ExecuteUbergraph_WB_TokyoMap_Icon
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   Param_MissionId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_TokyoMap_Icon_C::SetMissionId(int32 Param_MissionId)
+void UWB_TokyoMap_Icon_C::ExecuteUbergraph_WB_TokyoMap_Icon(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetMissionId");
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "ExecuteUbergraph_WB_TokyoMap_Icon");
 
-	Params::WB_TokyoMap_Icon_C_SetMissionId Parms{};
+	Params::WB_TokyoMap_Icon_C_ExecuteUbergraph_WB_TokyoMap_Icon Parms{};
 
-	Parms.Param_MissionId = Param_MissionId;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetIconType
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// E_TOKYO_ICON_TYPE                       Param_IconType                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_TokyoMap_Icon_C::SetIconType(E_TOKYO_ICON_TYPE Param_IconType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetIconType");
-
-	Params::WB_TokyoMap_Icon_C_SetIconType Parms{};
-
-	Parms.Param_IconType = Param_IconType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.GetPriority
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   Param_Priority                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_TokyoMap_Icon_C::GetPriority(int32* Param_Priority)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "GetPriority");
-
-	Params::WB_TokyoMap_Icon_C_GetPriority Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Param_Priority != nullptr)
-		*Param_Priority = Parms.Param_Priority;
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.Update
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMap_Icon_C::Update()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "Update");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetInactiveFlag
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             InactiveFlagName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_TokyoMap_Icon_C::SetInactiveFlag(class FName InactiveFlagName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetInactiveFlag");
-
-	Params::WB_TokyoMap_Icon_C_SetInactiveFlag Parms{};
-
-	Parms.InactiveFlagName = InactiveFlagName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.UpdatePosition
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMap_Icon_C::UpdatePosition()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "UpdatePosition");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetTalkOffIcon
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMap_Icon_C::SetTalkOffIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetTalkOffIcon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetTalkIcon
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_TokyoMap_Icon_C::SetTalkIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetTalkIcon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWB_TokyoMap_Icon_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -204,23 +59,168 @@ void UWB_TokyoMap_Icon_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 }
 
 
-// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.ExecuteUbergraph_WB_TokyoMap_Icon
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWB_TokyoMap_Icon_C::ExecuteUbergraph_WB_TokyoMap_Icon(int32 EntryPoint)
+void UWB_TokyoMap_Icon_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "ExecuteUbergraph_WB_TokyoMap_Icon");
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "Construct");
 
-	Params::WB_TokyoMap_Icon_C_ExecuteUbergraph_WB_TokyoMap_Icon Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetTalkIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_TokyoMap_Icon_C::SetTalkIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetTalkIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetTalkOffIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_TokyoMap_Icon_C::SetTalkOffIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetTalkOffIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.UpdatePosition
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_TokyoMap_Icon_C::UpdatePosition()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "UpdatePosition");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetInactiveFlag
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InactiveFlagName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_TokyoMap_Icon_C::SetInactiveFlag(class FName InactiveFlagName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetInactiveFlag");
+
+	Params::WB_TokyoMap_Icon_C_SetInactiveFlag Parms{};
+
+	Parms.InactiveFlagName = InactiveFlagName;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.Update
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_TokyoMap_Icon_C::Update()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "Update");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.GetPriority
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   Param_Priority                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_TokyoMap_Icon_C::GetPriority(int32* Param_Priority)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "GetPriority");
+
+	Params::WB_TokyoMap_Icon_C_GetPriority Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Param_Priority != nullptr)
+		*Param_Priority = Parms.Param_Priority;
+}
+
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetIconType
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// E_TOKYO_ICON_TYPE                       Param_IconType                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_TokyoMap_Icon_C::SetIconType(E_TOKYO_ICON_TYPE Param_IconType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetIconType");
+
+	Params::WB_TokyoMap_Icon_C_SetIconType Parms{};
+
+	Parms.Param_IconType = Param_IconType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.SetMissionId
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Param_MissionId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_TokyoMap_Icon_C::SetMissionId(int32 Param_MissionId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "SetMissionId");
+
+	Params::WB_TokyoMap_Icon_C_SetMissionId Parms{};
+
+	Parms.Param_MissionId = Param_MissionId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_TokyoMap_Icon.WB_TokyoMap_Icon_C.UpdateIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_TokyoMap_Icon_C::UpdateIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TokyoMap_Icon_C", "UpdateIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

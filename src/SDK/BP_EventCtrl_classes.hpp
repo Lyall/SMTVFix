@@ -31,9 +31,9 @@ public:
 	bool                                          UsePositionOffset;                                 // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void SetPosition(class AActor* PositionActor);
-	void IsFinish(bool* Param_Finish);
 	void PlayStart();
+	void IsFinish(bool* Param_Finish);
+	void SetPosition(class AActor* PositionActor);
 
 public:
 	static class UClass* StaticClass()

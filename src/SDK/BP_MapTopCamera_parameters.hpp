@@ -18,843 +18,441 @@
 namespace SDK::Params
 {
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.FieldVisibilityOnFinish
-// 0x0018 (0x0018 - 0x0000)
-struct BP_MapTopCamera_C_FieldVisibilityOnFinish final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ExecuteUbergraph_BP_MapTopCamera
+// 0x02E8 (0x02E8 - 0x0000)
+struct BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera final
 {
 public:
-	int32                                         CallFunc_GetMapID_ReturnValue;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_870D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C82[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x002C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0044(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl_1;                 // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl_1;             // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_ShowTopCameraIcon_dummy;              // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C83[0x2];                                     // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BPI_UpdateTopCameraIcon_dummy;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C84[0x2];                                     // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorLocationAndRotation_SweepHitResult; // 0x0074(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocationAndRotation_ReturnValue; // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C85[0x2];                                     // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorLocationAndRotation_SweepHitResult_1; // 0x0100(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocationAndRotation_ReturnValue_1; // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C86[0x2];                                     // 0x018A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector_X;                            // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_1;              // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C87[0x4];                                     // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x01A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C88[0x3];                                     // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x01BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn_1;                    // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x01D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C89[0x7];                                     // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_1;             // 0x01F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_MapTopCameraOnStartTop_dummy;         // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_MapTopCameraOnFinishTop_dummy;        // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C8A[0x5];                                     // 0x0203(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0208(0x00D0)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x02D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C8B[0x2];                                     // 0x02DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_MapTopCamera_C_FieldVisibilityOnFinish) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_FieldVisibilityOnFinish");
-static_assert(sizeof(BP_MapTopCamera_C_FieldVisibilityOnFinish) == 0x000018, "Wrong size on BP_MapTopCamera_C_FieldVisibilityOnFinish");
-static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnFinish, CallFunc_GetMapID_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_FieldVisibilityOnFinish::CallFunc_GetMapID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnFinish, CallFunc_GetStreamingLevel_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_FieldVisibilityOnFinish::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnFinish, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000010, "Member 'BP_MapTopCamera_C_FieldVisibilityOnFinish::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera");
+static_assert(sizeof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera) == 0x0002E8, "Wrong size on BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, EntryPoint) == 0x000000, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetMapUICtrl_MapUICtrl) == 0x000008, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetMapUICtrl_MapUICtrl' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetPlayerPawn_ReturnValue) == 0x000010, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Map_UICtrl) == 0x000018, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Map_UICtrl' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_GetActorRotation_ReturnValue) == 0x00002C, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000038, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000044, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetMapUICtrl_MapUICtrl_1) == 0x000050, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetMapUICtrl_MapUICtrl_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Map_UICtrl_1) == 0x000058, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Map_UICtrl_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BPI_ShowTopCameraIcon_dummy) == 0x000069, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BPI_ShowTopCameraIcon_dummy' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BPI_UpdateTopCameraIcon_dummy) == 0x000070, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BPI_UpdateTopCameraIcon_dummy' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_SwitchEnum_CmpSuccess) == 0x000071, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_SetActorLocationAndRotation_SweepHitResult) == 0x000074, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_SetActorLocationAndRotation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_SetActorLocationAndRotation_ReturnValue) == 0x0000FC, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_SetActorLocationAndRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000FD, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_SetActorLocationAndRotation_SweepHitResult_1) == 0x000100, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_SetActorLocationAndRotation_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_SetActorLocationAndRotation_ReturnValue_1) == 0x000188, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_SetActorLocationAndRotation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000189, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BreakVector_X) == 0x00018C, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BreakVector_Y) == 0x000190, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BreakVector_Z) == 0x000194, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetPlayerPawn_ReturnValue_1) == 0x000198, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetPlayerPawn_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x0001A8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess_2) == 0x0001B8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_MakeVector_ReturnValue) == 0x0001BC, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetMapCommon_rerutn) == 0x0001C8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetMapCommon_rerutn_1) == 0x0001D0, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetMapCommon_rerutn_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Map_Common) == 0x0001D8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess_3) == 0x0001E8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Map_Common_1) == 0x0001F0, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Map_Common_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess_4) == 0x000200, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BPI_MapTopCameraOnStartTop_dummy) == 0x000201, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BPI_MapTopCameraOnStartTop_dummy' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BPI_MapTopCameraOnFinishTop_dummy) == 0x000202, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BPI_MapTopCameraOnFinishTop_dummy' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000208, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x0002D8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0002D9, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, Temp_int_Variable) == 0x0002DC, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_SwitchInteger_CmpSuccess) == 0x0002E0, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BooleanOR_ReturnValue) == 0x0002E1, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_Not_PreBool_ReturnValue) == 0x0002E2, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.FieldVisibilityOnStart
-// 0x0018 (0x0018 - 0x0000)
-struct BP_MapTopCamera_C_FieldVisibilityOnStart final
-{
-public:
-	int32                                         CallFunc_GetMapID_ReturnValue;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_870E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_MapTopCamera_C_FieldVisibilityOnStart) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_FieldVisibilityOnStart");
-static_assert(sizeof(BP_MapTopCamera_C_FieldVisibilityOnStart) == 0x000018, "Wrong size on BP_MapTopCamera_C_FieldVisibilityOnStart");
-static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnStart, CallFunc_GetMapID_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_FieldVisibilityOnStart::CallFunc_GetMapID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnStart, CallFunc_GetStreamingLevel_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_FieldVisibilityOnStart::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnStart, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000010, "Member 'BP_MapTopCamera_C_FieldVisibilityOnStart::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyConsoleVariables_debug
-// 0x0810 (0x0810 - 0x0000)
-struct BP_MapTopCamera_C_ApplyConsoleVariables_debug final
-{
-public:
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0000(0x00D0)()
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D0(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_870F[0x3];                                     // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8710[0x4];                                     // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2; // 0x01B0(0x00D0)()
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0280(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0290(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_1;            // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3; // 0x02A8(0x00D0)()
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0378(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0388(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_2;            // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4; // 0x03A0(0x00D0)()
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_2;         // 0x0470(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0480(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_3;            // 0x0490(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0494(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5; // 0x0498(0x00D0)()
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_3;         // 0x0568(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0578(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8711[0x7];                                     // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6; // 0x0590(0x00D0)()
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7; // 0x0660(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0731(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8712[0x6];                                     // 0x0732(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8; // 0x0738(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_4;          // 0x0808(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_MapTopCamera_C_ApplyConsoleVariables_debug) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ApplyConsoleVariables_debug");
-static_assert(sizeof(BP_MapTopCamera_C_ApplyConsoleVariables_debug) == 0x000810, "Wrong size on BP_MapTopCamera_C_ApplyConsoleVariables_debug");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001A4, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0001A8, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2) == 0x0001B0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_FloatToString_ReturnValue) == 0x000280, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Concat_StrStr_ReturnValue) == 0x000290, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x0002A0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x0002A4, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3) == 0x0002A8, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000378, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000388, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_IntToFloat_ReturnValue_2) == 0x000398, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_IntToFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x00039C, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4) == 0x0003A0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_FloatToString_ReturnValue_2) == 0x000470, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_FloatToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000480, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_IntToFloat_ReturnValue_3) == 0x000490, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_IntToFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Divide_FloatFloat_ReturnValue_3) == 0x000494, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Divide_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5) == 0x000498, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_FloatToString_ReturnValue_3) == 0x000568, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_FloatToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000578, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000588, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6) == 0x000590, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7) == 0x000660, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000730, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000731, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8) == 0x000738, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue_4) == 0x000808, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue_4' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetConsoleVariables
-// 0x0080 (0x0080 - 0x0000)
-struct BP_MapTopCamera_C_ResetConsoleVariables final
-{
-public:
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_2;         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_3;         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_ResetConsoleVariables) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ResetConsoleVariables");
-static_assert(sizeof(BP_MapTopCamera_C_ResetConsoleVariables) == 0x000080, "Wrong size on BP_MapTopCamera_C_ResetConsoleVariables");
-static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000010, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_2) == 0x000040, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_3) == 0x000050, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000060, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000070, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyConsoleVariables
-// 0x0080 (0x0080 - 0x0000)
-struct BP_MapTopCamera_C_ApplyConsoleVariables final
-{
-public:
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_2;         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_3;         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_ApplyConsoleVariables) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ApplyConsoleVariables");
-static_assert(sizeof(BP_MapTopCamera_C_ApplyConsoleVariables) == 0x000080, "Wrong size on BP_MapTopCamera_C_ApplyConsoleVariables");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000010, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_2) == 0x000040, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_3) == 0x000050, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000060, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000070, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetConsoleVariables
-// 0x0098 (0x0098 - 0x0000)
-struct BP_MapTopCamera_C_GetConsoleVariables final
-{
-public:
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_2;         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_3;         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue; // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8713[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue_1; // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue_2; // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue_3; // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_GetConsoleVariables) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetConsoleVariables");
-static_assert(sizeof(BP_MapTopCamera_C_GetConsoleVariables) == 0x000098, "Wrong size on BP_MapTopCamera_C_GetConsoleVariables");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000010, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_2) == 0x000040, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_3) == 0x000050, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000060, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000070, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_GetConsoleVariableFloatValue_ReturnValue) == 0x000080, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_GetConsoleVariableFloatValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Less_FloatFloat_ReturnValue) == 0x000084, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_GetConsoleVariableFloatValue_ReturnValue_1) == 0x000088, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_GetConsoleVariableFloatValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_GetConsoleVariableFloatValue_ReturnValue_2) == 0x00008C, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_GetConsoleVariableFloatValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_GetConsoleVariableFloatValue_ReturnValue_3) == 0x000090, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_GetConsoleVariableFloatValue_ReturnValue_3' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalDistanceModifier
-// 0x0088 (0x0088 - 0x0000)
-struct BP_MapTopCamera_C_GetHorizontalDistanceModifier final
-{
-public:
-	float                                         Modifier;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetHeightDistanceMin_Height;              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8714[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8715[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_GetHorizontalDistanceModifier) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetHorizontalDistanceModifier");
-static_assert(sizeof(BP_MapTopCamera_C_GetHorizontalDistanceModifier) == 0x000088, "Wrong size on BP_MapTopCamera_C_GetHorizontalDistanceModifier");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, Modifier) == 0x000000, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::Modifier' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000004, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_BreakVector_X) == 0x000010, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_BreakVector_Y) == 0x000014, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_BreakVector_Z) == 0x000018, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_GetHeightDistanceMin_Height) == 0x00001C, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_GetHeightDistanceMin_Height' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000024, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Conv_FloatToString_ReturnValue) == 0x000028, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000038, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Concat_StrStr_ReturnValue) == 0x000040, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Add_FloatFloat_ReturnValue) == 0x000050, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000058, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000068, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000078, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetStartHeight
-// 0x01B8 (0x01B8 - 0x0000)
-struct BP_MapTopCamera_C_GetStartHeight final
-{
-public:
-	float                                         Height;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTopCameraHeight_ReturnValue;           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8716[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00E0(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8717[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_GetStartHeight) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetStartHeight");
-static_assert(sizeof(BP_MapTopCamera_C_GetStartHeight) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetStartHeight");
-static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, Height) == 0x000000, "Member 'BP_MapTopCamera_C_GetStartHeight::Height' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_GetTopCameraHeight_ReturnValue) == 0x000004, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_GetTopCameraHeight_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000E0, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001B4, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHeightDistanceMin
-// 0x01B8 (0x01B8 - 0x0000)
-struct BP_MapTopCamera_C_GetHeightDistanceMin final
-{
-public:
-	float                                         Height;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8718[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D8(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8719[0x3];                                     // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_MapTopCamera_C_GetHeightDistanceMin) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetHeightDistanceMin");
-static_assert(sizeof(BP_MapTopCamera_C_GetHeightDistanceMin) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetHeightDistanceMin");
-static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, Height) == 0x000000, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::Height' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001A8, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001AC, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetFoliageLOD
-// 0x0010 (0x0010 - 0x0000)
-struct BP_MapTopCamera_C_ResetFoliageLOD final
-{
-public:
-	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_ResetFoliageLOD) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ResetFoliageLOD");
-static_assert(sizeof(BP_MapTopCamera_C_ResetFoliageLOD) == 0x000010, "Wrong size on BP_MapTopCamera_C_ResetFoliageLOD");
-static_assert(offsetof(BP_MapTopCamera_C_ResetFoliageLOD, CallFunc_MakeLiteralString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ResetFoliageLOD::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetLOD
-// 0x0010 (0x0010 - 0x0000)
-struct BP_MapTopCamera_C_ResetLOD final
-{
-public:
-	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_ResetLOD) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ResetLOD");
-static_assert(sizeof(BP_MapTopCamera_C_ResetLOD) == 0x000010, "Wrong size on BP_MapTopCamera_C_ResetLOD");
-static_assert(offsetof(BP_MapTopCamera_C_ResetLOD, CallFunc_MakeLiteralString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ResetLOD::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.SetFoliageLOD
-// 0x01C8 (0x01C8 - 0x0000)
-struct BP_MapTopCamera_C_SetFoliageLOD final
-{
-public:
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0000(0x00D0)()
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D0(0x00D0)()
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_MapTopCamera_C_SetFoliageLOD) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_SetFoliageLOD");
-static_assert(sizeof(BP_MapTopCamera_C_SetFoliageLOD) == 0x0001C8, "Wrong size on BP_MapTopCamera_C_SetFoliageLOD");
-static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D0, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_Conv_IntToString_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_Concat_StrStr_ReturnValue) == 0x0001B0, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001C0, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.SetLOD
-// 0x01C8 (0x01C8 - 0x0000)
-struct BP_MapTopCamera_C_SetLOD final
-{
-public:
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0000(0x00D0)()
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D0(0x00D0)()
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_MapTopCamera_C_SetLOD) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_SetLOD");
-static_assert(sizeof(BP_MapTopCamera_C_SetLOD) == 0x0001C8, "Wrong size on BP_MapTopCamera_C_SetLOD");
-static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D0, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_Conv_IntToString_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_Concat_StrStr_ReturnValue) == 0x0001B0, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001C0, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.TryTrace
-// 0x0034 (0x0034 - 0x0000)
-struct BP_MapTopCamera_C_TryTrace final
-{
-public:
-	struct FVector                                PrevLocation;                                      // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NextLocation;                                      // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                OutNext;                                           // 0x0018(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanMove;                                           // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_871A[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Ret;                                               // 0x0028(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_TryTrace) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_TryTrace");
-static_assert(sizeof(BP_MapTopCamera_C_TryTrace) == 0x000034, "Wrong size on BP_MapTopCamera_C_TryTrace");
-static_assert(offsetof(BP_MapTopCamera_C_TryTrace, PrevLocation) == 0x000000, "Member 'BP_MapTopCamera_C_TryTrace::PrevLocation' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_TryTrace, NextLocation) == 0x00000C, "Member 'BP_MapTopCamera_C_TryTrace::NextLocation' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_TryTrace, OutNext) == 0x000018, "Member 'BP_MapTopCamera_C_TryTrace::OutNext' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_TryTrace, CanMove) == 0x000024, "Member 'BP_MapTopCamera_C_TryTrace::CanMove' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_TryTrace, Ret) == 0x000028, "Member 'BP_MapTopCamera_C_TryTrace::Ret' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_ActorHorizontal
-// 0x01D0 (0x01D0 - 0x0000)
-struct BP_MapTopCamera_C_ProcessInput_ActorHorizontal final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_MapTopCamera_C_ReceiveTick final
 {
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ForceUpdate;                                       // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_871B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PrevToNext;                                        // 0x0008(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LY;                                                // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LX;                                                // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSizeXY_ReturnValue;                      // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetHorizontalDistanceModifier_Modifier;   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x003C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAxisPad_Value;                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAxisPad_Value_1;                       // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_TryTrace_OutNext;                         // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TryTrace_CanMove;                         // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_871C[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector_X_1;                          // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_1;                          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_1;                          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x006C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0078(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_871D[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetHorizontalDistanceLimit_Limit;         // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue; // 0x0108(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_871E[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_871F[0x3];                                     // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetHorizontalSpeed_Speed;                 // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0128(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0134(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0140(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X_2;                          // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_2;                          // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_2;                          // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GreaterGreater_VectorRotator_ReturnValue; // 0x0164(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0170(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAxisPad_Value_2;                       // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAxisPad_Value_3;                       // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_3;        // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_4;        // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_5;        // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Abs_ReturnValue;                          // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8720[0x3];                                     // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Abs_ReturnValue_1;                        // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_1;    // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8721[0x3];                                     // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector_X_3;                          // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_3;                          // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_3;                          // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8722[0x3];                                     // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_3;                 // 0x01C4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_ProcessInput_ActorHorizontal");
-static_assert(sizeof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal) == 0x0001D0, "Wrong size on BP_MapTopCamera_C_ProcessInput_ActorHorizontal");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, ForceUpdate) == 0x000004, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::ForceUpdate' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, PrevToNext) == 0x000008, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::PrevToNext' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, LY) == 0x000014, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::LY' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, LX) == 0x000018, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::LX' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_X) == 0x00001C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Y) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Z) == 0x000024, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_MakeVector_ReturnValue) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_VSizeXY_ReturnValue) == 0x000034, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_VSizeXY_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetHorizontalDistanceModifier_Modifier) == 0x000038, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetHorizontalDistanceModifier_Modifier' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_MakeVector_ReturnValue_1) == 0x00003C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetAxisPad_Value) == 0x000048, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetAxisPad_Value' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetAxisPad_Value_1) == 0x00004C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetAxisPad_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_TryTrace_OutNext) == 0x000050, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_TryTrace_OutNext' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_TryTrace_CanMove) == 0x00005C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_TryTrace_CanMove' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_X_1) == 0x000060, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Y_1) == 0x000064, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Z_1) == 0x000068, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_K2_GetActorLocation_ReturnValue) == 0x00006C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000078, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000100, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetHorizontalDistanceLimit_Limit) == 0x000104, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetHorizontalDistanceLimit_Limit' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue) == 0x000108, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000114, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_K2_SetActorRotation_ReturnValue) == 0x000118, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Divide_FloatFloat_ReturnValue) == 0x00011C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000120, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetHorizontalSpeed_Speed) == 0x000124, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetHorizontalSpeed_Speed' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000128, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000134, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Add_VectorVector_ReturnValue) == 0x000140, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_X_2) == 0x00014C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Y_2) == 0x000150, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Z_2) == 0x000154, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_MakeVector_ReturnValue_2) == 0x000158, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GreaterGreater_VectorRotator_ReturnValue) == 0x000164, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GreaterGreater_VectorRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000170, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetAxisPad_Value_2) == 0x00017C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetAxisPad_Value_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetAxisPad_Value_3) == 0x000180, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetAxisPad_Value_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Add_FloatFloat_ReturnValue) == 0x000184, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000188, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x00018C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x000190, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x000194, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x000198, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_5) == 0x00019C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Abs_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x0001A4, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Abs_ReturnValue_1) == 0x0001A8, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x0001AC, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_X_3) == 0x0001B0, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_X_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Y_3) == 0x0001B4, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Y_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Z_3) == 0x0001B8, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Z_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BooleanOR_ReturnValue) == 0x0001BC, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x0001C0, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_MakeVector_ReturnValue_3) == 0x0001C4, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_MakeVector_ReturnValue_3' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_ReceiveTick");
+static_assert(sizeof(BP_MapTopCamera_C_ReceiveTick) == 0x000004, "Wrong size on BP_MapTopCamera_C_ReceiveTick");
+static_assert(offsetof(BP_MapTopCamera_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.UpdateButtonHelp
-// 0x0160 (0x0160 - 0x0000)
-struct BP_MapTopCamera_C_UpdateButtonHelp final
-{
-public:
-	bool                                          Param_IconShowing;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8723[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText;           // 0x0008(0x0018)()
-	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_1;         // 0x0020(0x0018)()
-	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo;                     // 0x0038(0x0020)()
-	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo_1;                   // 0x0058(0x0020)()
-	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_2;         // 0x0078(0x0018)()
-	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_3;         // 0x0090(0x0018)()
-	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_4;         // 0x00A8(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x00C0(0x0018)()
-	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo_2;                   // 0x00D8(0x0020)()
-	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo_3;                   // 0x00F8(0x0020)()
-	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_5;         // 0x0118(0x0018)()
-	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo_4;                   // 0x0130(0x0020)()
-	TArray<struct FBtnHelpInfo>                   K2Node_MakeArray_Array;                            // 0x0150(0x0010)(ConstParm, ReferenceParm)
-};
-static_assert(alignof(BP_MapTopCamera_C_UpdateButtonHelp) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_UpdateButtonHelp");
-static_assert(sizeof(BP_MapTopCamera_C_UpdateButtonHelp) == 0x000160, "Wrong size on BP_MapTopCamera_C_UpdateButtonHelp");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, Param_IconShowing) == 0x000000, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::Param_IconShowing' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, Temp_bool_Variable) == 0x000001, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText) == 0x000008, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_1) == 0x000020, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo) == 0x000038, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo_1) == 0x000058, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_2) == 0x000078, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_3) == 0x000090, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_4) == 0x0000A8, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_Select_Default) == 0x0000C0, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo_2) == 0x0000D8, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo_3) == 0x0000F8, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_5) == 0x000118, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_5' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo_4) == 0x000130, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeArray_Array) == 0x000150, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeArray_Array' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInputInconHelp
-// 0x0040 (0x0040 - 0x0000)
-struct BP_MapTopCamera_C_ProcessInputInconHelp final
-{
-public:
-	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl_1;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8724[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl_1;             // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_HideTopCameraIcon_dummy;              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_ShowTopCameraIcon_dummy;              // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsActionPadCheck_Success;                 // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_MapTopCamera_C_ProcessInputInconHelp) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ProcessInputInconHelp");
-static_assert(sizeof(BP_MapTopCamera_C_ProcessInputInconHelp) == 0x000040, "Wrong size on BP_MapTopCamera_C_ProcessInputInconHelp");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_GetMapUICtrl_MapUICtrl) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_GetMapUICtrl_MapUICtrl' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_GetMapUICtrl_MapUICtrl_1) == 0x000008, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_GetMapUICtrl_MapUICtrl_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, K2Node_DynamicCast_AsBPI_Map_UICtrl) == 0x000010, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::K2Node_DynamicCast_AsBPI_Map_UICtrl' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, K2Node_DynamicCast_AsBPI_Map_UICtrl_1) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::K2Node_DynamicCast_AsBPI_Map_UICtrl_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_BPI_HideTopCameraIcon_dummy) == 0x000039, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_BPI_HideTopCameraIcon_dummy' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_BPI_ShowTopCameraIcon_dummy) == 0x00003A, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_BPI_ShowTopCameraIcon_dummy' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_IsActionPadCheck_Success) == 0x00003B, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_IsActionPadCheck_Success' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetDefaultFOVY
-// 0x01B8 (0x01B8 - 0x0000)
-struct BP_MapTopCamera_C_GetDefaultFOVY final
-{
-public:
-	float                                         Height;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8725[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8726[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00E0(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8727[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_GetDefaultFOVY) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetDefaultFOVY");
-static_assert(sizeof(BP_MapTopCamera_C_GetDefaultFOVY) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetDefaultFOVY");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, Height) == 0x000000, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::Height' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000E0, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001B4, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyTransitionDebugParam
-// 0x07A0 (0x07A0 - 0x0000)
-struct BP_MapTopCamera_C_ApplyTransitionDebugParam final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.Start
+// 0x0168 (0x0168 - 0x0000)
+struct BP_MapTopCamera_C_Start final
 {
 public:
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0000(0x00D0)()
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D0(0x00D0)()
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_1;            // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2; // 0x01B0(0x00D0)()
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3; // 0x0280(0x00D0)()
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_2;            // 0x0350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_3;            // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8728[0x4];                                     // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4; // 0x0360(0x00D0)()
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_4;            // 0x0434(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5; // 0x0438(0x00D0)()
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_4;          // 0x0508(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8729[0x4];                                     // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6; // 0x0510(0x00D0)()
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_5;            // 0x05E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_5;          // 0x05E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_6;            // 0x05E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_6;          // 0x05EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7; // 0x05F0(0x00D0)()
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8; // 0x06C0(0x00D0)()
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue_7;            // 0x0790(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0794(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_872A[0x3];                                     // 0x0795(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_7;          // 0x0798(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C8C[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x00E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C8D[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAtomComponent*                         CallFunc_SpawnSound2D_ReturnValue;                 // 0x0100(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_1;              // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_ProjectPlayerCameraManager_C> K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager; // 0x0118(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C8E[0x7];                                     // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_PlayerInputReceiver_C> K2Node_DynamicCast_AsBPI_Player_Input_Receiver;    // 0x0130(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C8F[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_MapTopCamera_C_ApplyTransitionDebugParam) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ApplyTransitionDebugParam");
-static_assert(sizeof(BP_MapTopCamera_C_ApplyTransitionDebugParam) == 0x0007A0, "Wrong size on BP_MapTopCamera_C_ApplyTransitionDebugParam");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x0001A4, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0001A8, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x0001AC, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2) == 0x0001B0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3) == 0x000280, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_2) == 0x000350, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x000354, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_3) == 0x000358, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4) == 0x000360, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_3) == 0x000430, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_4) == 0x000434, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5) == 0x000438, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_4) == 0x000508, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6) == 0x000510, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_5) == 0x0005E0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_5) == 0x0005E4, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_6) == 0x0005E8, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_6) == 0x0005EC, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7) == 0x0005F0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8) == 0x0006C0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_7) == 0x000790, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000794, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_7) == 0x000798, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_7' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_Start) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_Start");
+static_assert(sizeof(BP_MapTopCamera_C_Start) == 0x000168, "Wrong size on BP_MapTopCamera_C_Start");
+static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0000D0, "Member 'BP_MapTopCamera_C_Start::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetPlayerPawn_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x0000E0, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_bSuccess) == 0x0000F0, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_Get_ReturnValue) == 0x0000F8, "Member 'BP_MapTopCamera_C_Start::CallFunc_Get_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_SpawnSound2D_ReturnValue) == 0x000100, "Member 'BP_MapTopCamera_C_Start::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetPlayerController_ReturnValue) == 0x000108, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetPlayerPawn_ReturnValue_1) == 0x000110, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetPlayerPawn_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager) == 0x000118, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_bSuccess_1) == 0x000128, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_AsBPI_Player_Input_Receiver) == 0x000130, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_AsBPI_Player_Input_Receiver' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_bSuccess_2) == 0x000140, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetMapCommon_rerutn) == 0x000148, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000150, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_bSuccess_3) == 0x000160, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.Init Camera Param
-// 0x01A0 (0x01A0 - 0x0000)
-struct BP_MapTopCamera_C_Init_Camera_Param final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput
+// 0x01D0 (0x01D0 - 0x0000)
+struct BP_MapTopCamera_C_ProcessInput final
 {
 public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_872B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_X;                            // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y;                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Z;                            // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Temp_struct_Variable;                              // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue; // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_GetDefaultHeight_Height;                  // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetDefaultFOVY_Height;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetDefaultHeight_Height_1;                // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_872C[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_1;                          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_1;                          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_1;                          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_2;                          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_2;                          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_2;                          // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C90[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0048(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsActionPadCheck_Success;                 // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsActionPadCheck_Success_1;               // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C91[0x5];                                     // 0x00D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraComponent*                       CallFunc_GetPlayerCamera_PlayerCamera;             // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C92[0x8];                                     // 0x00E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x00F0(0x0030)(IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0120(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x012C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0138(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C93[0x4];                                     // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAtomComponent*                         CallFunc_SpawnSound2D_ReturnValue;                 // 0x0148(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C94[0x4];                                     // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_ProjectPlayerCameraManager_C> K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager; // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C95[0x7];                                     // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsRequestFinishCameraUpdateDone_Done;     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C96[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_PlayerInputReceiver_C> K2Node_DynamicCast_AsBPI_Player_Input_Receiver;    // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C97[0x6];                                     // 0x01A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x01B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_HideTopCameraIcon_dummy;              // 0x01C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsActionPadCheck_Success_2;               // 0x01C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsActionPadCheck_Success_3;               // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x01C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x01C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_ProcessInput) == 0x000010, "Wrong alignment on BP_MapTopCamera_C_ProcessInput");
+static_assert(sizeof(BP_MapTopCamera_C_ProcessInput) == 0x0001D0, "Wrong size on BP_MapTopCamera_C_ProcessInput");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInput::DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_X) == 0x000004, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Y) == 0x000008, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Z) == 0x00000C, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000010, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_X_1) == 0x00001C, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Y_1) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Z_1) == 0x000024, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_X_2) == 0x00002C, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_X_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Y_2) == 0x000030, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Y_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Z_2) == 0x000034, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Z_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_MakeVector_ReturnValue) == 0x000038, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_Greater_IntInt_ReturnValue) == 0x000044, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000048, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0000D0, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsActionPadCheck_Success) == 0x0000D1, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsActionPadCheck_Success' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsActionPadCheck_Success_1) == 0x0000D2, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsActionPadCheck_Success_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_GetPlayerCamera_PlayerCamera) == 0x0000D8, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_GetPlayerCamera_PlayerCamera' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_Get_ReturnValue) == 0x0000E0, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_Get_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x0000F0, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakTransform_Location) == 0x000120, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakTransform_Rotation) == 0x00012C, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakTransform_Scale) == 0x000138, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_SpawnSound2D_ReturnValue) == 0x000148, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_GetPlayerController_ReturnValue) == 0x000150, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000158, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager) == 0x000168, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_bSuccess) == 0x000178, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_GetPlayerPawn_ReturnValue) == 0x000180, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsRequestFinishCameraUpdateDone_Done) == 0x000188, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsRequestFinishCameraUpdateDone_Done' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_AsBPI_Player_Input_Receiver) == 0x000190, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_AsBPI_Player_Input_Receiver' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_bSuccess_1) == 0x0001A0, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanOR_ReturnValue) == 0x0001A1, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_GetMapUICtrl_MapUICtrl) == 0x0001A8, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_GetMapUICtrl_MapUICtrl' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_AsBPI_Map_UICtrl) == 0x0001B0, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_AsBPI_Map_UICtrl' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_bSuccess_2) == 0x0001C0, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0001C1, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BPI_HideTopCameraIcon_dummy) == 0x0001C2, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BPI_HideTopCameraIcon_dummy' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsActionPadCheck_Success_2) == 0x0001C3, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsActionPadCheck_Success_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsActionPadCheck_Success_3) == 0x0001C4, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsActionPadCheck_Success_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanOR_ReturnValue_1) == 0x0001C5, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanOR_ReturnValue_2) == 0x0001C6, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanAND_ReturnValue) == 0x0001C7, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanAND_ReturnValue_1) == 0x0001C8, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.Deactivate
+// 0x0058 (0x0058 - 0x0000)
+struct BP_MapTopCamera_C_Deactivate final
+{
+public:
+	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_FromTopCamera_dummy;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C98[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetBlendTime_Seconds;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetBlendExp_BlendExp;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C99[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C9A[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0060(0x0030)(IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0090(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_872D[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFOVAngle_ReturnValue;                  // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0120(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetComponentRotation_ReturnValue;      // 0x012C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakVector_X_1;                          // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_1;                          // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_1;                          // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0164(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GreaterGreater_VectorRotator_ReturnValue; // 0x0170(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsNorthUp_IsNorthUp;                      // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_872E[0x3];                                     // 0x017D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x0180(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               K2Node_Select_Default;                             // 0x018C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_MapTopCamera_C_Init_Camera_Param) == 0x000010, "Wrong alignment on BP_MapTopCamera_C_Init_Camera_Param");
-static_assert(sizeof(BP_MapTopCamera_C_Init_Camera_Param) == 0x0001A0, "Wrong size on BP_MapTopCamera_C_Init_Camera_Param");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, Temp_bool_Variable) == 0x000000, "Member 'BP_MapTopCamera_C_Init_Camera_Param::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_X) == 0x000004, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_Y) == 0x000008, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_Z) == 0x00000C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, Temp_struct_Variable) == 0x000010, "Member 'BP_MapTopCamera_C_Init_Camera_Param::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeVector_ReturnValue) == 0x00001C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeVector_ReturnValue_1) == 0x000028, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue) == 0x000034, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetDefaultHeight_Height) == 0x000040, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetDefaultHeight_Height' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetDefaultFOVY_Height) == 0x000044, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetDefaultFOVY_Height' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetDefaultHeight_Height_1) == 0x000048, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetDefaultHeight_Height_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetPlayerController_ReturnValue) == 0x000050, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetPlayerController_ReturnValue_1) == 0x000058, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeTransform_ReturnValue) == 0x000060, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x000090, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_K2_SetActorTransform_ReturnValue) == 0x000118, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetFOVAngle_ReturnValue) == 0x00011C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetFOVAngle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000120, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_K2_GetComponentRotation_ReturnValue) == 0x00012C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_K2_GetComponentRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_X_1) == 0x000138, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_Y_1) == 0x00013C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_Z_1) == 0x000140, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_Add_FloatFloat_ReturnValue) == 0x000144, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000148, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakRotator_Roll) == 0x00014C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakRotator_Pitch) == 0x000150, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakRotator_Yaw) == 0x000154, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeRotator_ReturnValue) == 0x000158, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeVector_ReturnValue_2) == 0x000164, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GreaterGreater_VectorRotator_ReturnValue) == 0x000170, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GreaterGreater_VectorRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_IsNorthUp_IsNorthUp) == 0x00017C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_IsNorthUp_IsNorthUp' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_SelectVector_ReturnValue) == 0x000180, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, K2Node_Select_Default) == 0x00018C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::K2Node_Select_Default' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_Deactivate) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_Deactivate");
+static_assert(sizeof(BP_MapTopCamera_C_Deactivate) == 0x000058, "Wrong size on BP_MapTopCamera_C_Deactivate");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetMapUICtrl_MapUICtrl) == 0x000000, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetMapUICtrl_MapUICtrl' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, K2Node_DynamicCast_AsBPI_Map_UICtrl) == 0x000008, "Member 'BP_MapTopCamera_C_Deactivate::K2Node_DynamicCast_AsBPI_Map_UICtrl' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_MapTopCamera_C_Deactivate::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_BPI_FromTopCamera_dummy) == 0x000019, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_BPI_FromTopCamera_dummy' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetBlendTime_Seconds) == 0x00001C, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetBlendTime_Seconds' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetMapCommon_rerutn) == 0x000020, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetBlendExp_BlendExp) == 0x000028, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetBlendExp_BlendExp' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000030, "Member 'BP_MapTopCamera_C_Deactivate::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'BP_MapTopCamera_C_Deactivate::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetPlayerPawn_ReturnValue) == 0x000048, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetPlayerController_ReturnValue) == 0x000050, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetBlendExp
-// 0x00E0 (0x00E0 - 0x0000)
-struct BP_MapTopCamera_C_GetBlendExp final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Height
+// 0x0120 (0x0120 - 0x0000)
+struct BP_MapTopCamera_C_ProcessInput_Height final
 {
 public:
-	float                                         BlendExp;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_872F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PrevToNext;                                        // 0x0004(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LHeight_next;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LHeight_prev;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetHeightDistanceMin_Height;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAxisPad_Value;                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_TryTrace_OutNext;                         // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TryTrace_CanMove;                         // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C9B[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x005C(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C9C[0x3];                                     // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector_X_1;                          // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_1;                          // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_1;                          // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAxisPad_Value_1;                       // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00F8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Abs_ReturnValue;                          // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C9D[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_FClamp_ReturnValue;                       // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapTopCamera_C_GetBlendExp) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetBlendExp");
-static_assert(sizeof(BP_MapTopCamera_C_GetBlendExp) == 0x0000E0, "Wrong size on BP_MapTopCamera_C_GetBlendExp");
-static_assert(offsetof(BP_MapTopCamera_C_GetBlendExp, BlendExp) == 0x000000, "Member 'BP_MapTopCamera_C_GetBlendExp::BlendExp' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetBlendExp, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetBlendExp::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetBlendExp, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetBlendExp::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetBlendExp, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0000DC, "Member 'BP_MapTopCamera_C_GetBlendExp::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_ProcessInput_Height) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_ProcessInput_Height");
+static_assert(sizeof(BP_MapTopCamera_C_ProcessInput_Height) == 0x000120, "Wrong size on BP_MapTopCamera_C_ProcessInput_Height");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInput_Height::DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, PrevToNext) == 0x000004, "Member 'BP_MapTopCamera_C_ProcessInput_Height::PrevToNext' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, LHeight_next) == 0x000010, "Member 'BP_MapTopCamera_C_ProcessInput_Height::LHeight_next' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, LHeight_prev) == 0x000014, "Member 'BP_MapTopCamera_C_ProcessInput_Height::LHeight_prev' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_X) == 0x000018, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_Y) == 0x00001C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_Z) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_GetHeightDistanceMin_Height) == 0x000024, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_GetHeightDistanceMin_Height' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_GetAxisPad_Value) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_GetAxisPad_Value' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x00002C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_TryTrace_OutNext) == 0x000030, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_TryTrace_OutNext' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_TryTrace_CanMove) == 0x00003C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_TryTrace_CanMove' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000040, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Add_FloatFloat_ReturnValue) == 0x00004C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000050, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x00005C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0000E4, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_X_1) == 0x0000E8, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_Y_1) == 0x0000EC, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_Z_1) == 0x0000F0, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_GetAxisPad_Value_1) == 0x0000F4, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_GetAxisPad_Value_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_MakeVector_ReturnValue) == 0x0000F8, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000104, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000108, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Abs_ReturnValue) == 0x00010C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000110, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x000114, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000118, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_FClamp_ReturnValue) == 0x00011C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_FClamp_ReturnValue' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetBlendTime
-// 0x00E0 (0x00E0 - 0x0000)
-struct BP_MapTopCamera_C_GetBlendTime final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Horizontal
+// 0x00F4 (0x00F4 - 0x0000)
+struct BP_MapTopCamera_C_ProcessInput_Horizontal final
 {
 public:
-	float                                         Seconds;                                           // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8730[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LY;                                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LX;                                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAxisPad_Value;                         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAxisPad_Value_1;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_3;        // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_4;        // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Abs_ReturnValue;                          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C9E[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Abs_ReturnValue_1;                        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_1;    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3C9F[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector_X;                            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CA0[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0068(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_MapTopCamera_C_GetBlendTime) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetBlendTime");
-static_assert(sizeof(BP_MapTopCamera_C_GetBlendTime) == 0x0000E0, "Wrong size on BP_MapTopCamera_C_GetBlendTime");
-static_assert(offsetof(BP_MapTopCamera_C_GetBlendTime, Seconds) == 0x000000, "Member 'BP_MapTopCamera_C_GetBlendTime::Seconds' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetBlendTime, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetBlendTime::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetBlendTime, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetBlendTime::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetBlendTime, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0000DC, "Member 'BP_MapTopCamera_C_GetBlendTime::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.IsNorthUp
-// 0x0004 (0x0004 - 0x0000)
-struct BP_MapTopCamera_C_IsNorthUp final
-{
-public:
-	bool                                          Param_IsNorthUp;                                   // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	E_OPTION_COMMON_SELECT_TYPE                   CallFunc_GetRotateMiniMapType_ReturnValue;         // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_MapTopCamera_C_IsNorthUp) == 0x000001, "Wrong alignment on BP_MapTopCamera_C_IsNorthUp");
-static_assert(sizeof(BP_MapTopCamera_C_IsNorthUp) == 0x000004, "Wrong size on BP_MapTopCamera_C_IsNorthUp");
-static_assert(offsetof(BP_MapTopCamera_C_IsNorthUp, Param_IsNorthUp) == 0x000000, "Member 'BP_MapTopCamera_C_IsNorthUp::Param_IsNorthUp' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_IsNorthUp, CallFunc_GetRotateMiniMapType_ReturnValue) == 0x000001, "Member 'BP_MapTopCamera_C_IsNorthUp::CallFunc_GetRotateMiniMapType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_IsNorthUp, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000002, "Member 'BP_MapTopCamera_C_IsNorthUp::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_IsNorthUp, CallFunc_Not_PreBool_ReturnValue) == 0x000003, "Member 'BP_MapTopCamera_C_IsNorthUp::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalDistanceLimit
-// 0x01B8 (0x01B8 - 0x0000)
-struct BP_MapTopCamera_C_GetHorizontalDistanceLimit final
-{
-public:
-	float                                         Limit;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8731[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8732[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00E0(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8733[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_GetHorizontalDistanceLimit) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetHorizontalDistanceLimit");
-static_assert(sizeof(BP_MapTopCamera_C_GetHorizontalDistanceLimit) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetHorizontalDistanceLimit");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, Limit) == 0x000000, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::Limit' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000E0, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001B4, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetDefaultHeight
-// 0x01B8 (0x01B8 - 0x0000)
-struct BP_MapTopCamera_C_GetDefaultHeight final
-{
-public:
-	float                                         Height;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8734[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8735[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00E0(0x00D0)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8736[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_GetDefaultHeight) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetDefaultHeight");
-static_assert(sizeof(BP_MapTopCamera_C_GetDefaultHeight) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetDefaultHeight");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, Height) == 0x000000, "Member 'BP_MapTopCamera_C_GetDefaultHeight::Height' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000E0, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001B4, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-
-// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalSpeed
-// 0x0004 (0x0004 - 0x0000)
-struct BP_MapTopCamera_C_GetHorizontalSpeed final
-{
-public:
-	float                                         Speed;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapTopCamera_C_GetHorizontalSpeed) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_GetHorizontalSpeed");
-static_assert(sizeof(BP_MapTopCamera_C_GetHorizontalSpeed) == 0x000004, "Wrong size on BP_MapTopCamera_C_GetHorizontalSpeed");
-static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalSpeed, Speed) == 0x000000, "Member 'BP_MapTopCamera_C_GetHorizontalSpeed::Speed' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_ProcessInput_Horizontal) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_ProcessInput_Horizontal");
+static_assert(sizeof(BP_MapTopCamera_C_ProcessInput_Horizontal) == 0x0000F4, "Wrong size on BP_MapTopCamera_C_ProcessInput_Horizontal");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, LY) == 0x000004, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::LY' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, LX) == 0x000008, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::LX' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_GetAxisPad_Value) == 0x00000C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_GetAxisPad_Value' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_GetAxisPad_Value_1) == 0x000010, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_GetAxisPad_Value_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000018, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x00001C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x000024, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Abs_ReturnValue) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x00002C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Abs_ReturnValue_1) == 0x000030, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000034, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x000040, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_BreakVector_X) == 0x000044, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_BreakVector_Y) == 0x000048, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_BreakVector_Z) == 0x00004C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_BooleanOR_ReturnValue) == 0x000050, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Add_FloatFloat_ReturnValue) == 0x000054, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000058, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_MakeVector_ReturnValue) == 0x00005C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000068, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0000F0, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
 
 // Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Target
 // 0x0300 (0x0300 - 0x0000)
@@ -864,13 +462,13 @@ public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LY;                                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LX;                                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8737[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA1[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0010(0x0010)(ConstParm, ReferenceParm)
 	float                                         CallFunc_VSizeXY_ReturnValue;                      // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0024(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0030(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8738[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA2[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x00BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_X;                            // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y;                            // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -880,15 +478,15 @@ public:
 	float                                         CallFunc_BreakVector_Z_1;                          // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x00E0(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8739[0x3];                                     // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA3[0x3];                                     // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x016C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue; // 0x0178(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_GetHorizontalDistanceLimit_Limit;         // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_873A[0x3];                                     // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA4[0x3];                                     // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_873B[0x3];                                     // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA5[0x3];                                     // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetHorizontalSpeed_Speed;                 // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0198(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x01A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -919,11 +517,11 @@ public:
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_4;        // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Abs_ReturnValue;                          // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_873C[0x3];                                     // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA6[0x3];                                     // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Abs_ReturnValue_1;                        // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         Temp_object_Variable_1;                            // 0x0260(0x0010)(ConstParm, ReferenceParm)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_1;    // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_873D[0x3];                                     // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CA7[0x3];                                     // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_LineTraceSingle_OutHit_1;                 // 0x0274(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_LineTraceSingle_ReturnValue_1;            // 0x02FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x02FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -990,441 +588,843 @@ static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Target, CallFunc_LineTrace
 static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Target, CallFunc_LineTraceSingle_ReturnValue_1) == 0x0002FC, "Member 'BP_MapTopCamera_C_ProcessInput_Target::CallFunc_LineTraceSingle_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Target, CallFunc_BooleanOR_ReturnValue) == 0x0002FD, "Member 'BP_MapTopCamera_C_ProcessInput_Target::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Horizontal
-// 0x00F4 (0x00F4 - 0x0000)
-struct BP_MapTopCamera_C_ProcessInput_Horizontal final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalSpeed
+// 0x0004 (0x0004 - 0x0000)
+struct BP_MapTopCamera_C_GetHorizontalSpeed final
 {
 public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LY;                                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LX;                                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAxisPad_Value;                         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAxisPad_Value_1;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_3;        // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_4;        // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Abs_ReturnValue;                          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_873E[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Abs_ReturnValue_1;                        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_1;    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_873F[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector_X;                            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8740[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0068(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         Speed;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapTopCamera_C_ProcessInput_Horizontal) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_ProcessInput_Horizontal");
-static_assert(sizeof(BP_MapTopCamera_C_ProcessInput_Horizontal) == 0x0000F4, "Wrong size on BP_MapTopCamera_C_ProcessInput_Horizontal");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, LY) == 0x000004, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::LY' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, LX) == 0x000008, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::LX' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_GetAxisPad_Value) == 0x00000C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_GetAxisPad_Value' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_GetAxisPad_Value_1) == 0x000010, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_GetAxisPad_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000018, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x00001C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x000024, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Abs_ReturnValue) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x00002C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Abs_ReturnValue_1) == 0x000030, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000034, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x000040, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_BreakVector_X) == 0x000044, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_BreakVector_Y) == 0x000048, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_BreakVector_Z) == 0x00004C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_BooleanOR_ReturnValue) == 0x000050, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Add_FloatFloat_ReturnValue) == 0x000054, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000058, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_MakeVector_ReturnValue) == 0x00005C, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000068, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Horizontal, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0000F0, "Member 'BP_MapTopCamera_C_ProcessInput_Horizontal::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_GetHorizontalSpeed) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_GetHorizontalSpeed");
+static_assert(sizeof(BP_MapTopCamera_C_GetHorizontalSpeed) == 0x000004, "Wrong size on BP_MapTopCamera_C_GetHorizontalSpeed");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalSpeed, Speed) == 0x000000, "Member 'BP_MapTopCamera_C_GetHorizontalSpeed::Speed' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_Height
-// 0x0120 (0x0120 - 0x0000)
-struct BP_MapTopCamera_C_ProcessInput_Height final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetDefaultHeight
+// 0x01B8 (0x01B8 - 0x0000)
+struct BP_MapTopCamera_C_GetDefaultHeight final
 {
 public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PrevToNext;                                        // 0x0004(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LHeight_next;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LHeight_prev;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetHeightDistanceMin_Height;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAxisPad_Value;                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_TryTrace_OutNext;                         // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TryTrace_CanMove;                         // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8741[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x005C(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8742[0x3];                                     // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector_X_1;                          // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_1;                          // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_1;                          // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAxisPad_Value_1;                       // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00F8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Abs_ReturnValue;                          // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8743[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_FClamp_ReturnValue;                       // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Height;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CA8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CA9[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00E0(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CAA[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapTopCamera_C_ProcessInput_Height) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_ProcessInput_Height");
-static_assert(sizeof(BP_MapTopCamera_C_ProcessInput_Height) == 0x000120, "Wrong size on BP_MapTopCamera_C_ProcessInput_Height");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInput_Height::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, PrevToNext) == 0x000004, "Member 'BP_MapTopCamera_C_ProcessInput_Height::PrevToNext' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, LHeight_next) == 0x000010, "Member 'BP_MapTopCamera_C_ProcessInput_Height::LHeight_next' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, LHeight_prev) == 0x000014, "Member 'BP_MapTopCamera_C_ProcessInput_Height::LHeight_prev' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_X) == 0x000018, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_Y) == 0x00001C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_Z) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_GetHeightDistanceMin_Height) == 0x000024, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_GetHeightDistanceMin_Height' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_GetAxisPad_Value) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_GetAxisPad_Value' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x00002C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_TryTrace_OutNext) == 0x000030, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_TryTrace_OutNext' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_TryTrace_CanMove) == 0x00003C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_TryTrace_CanMove' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000040, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Add_FloatFloat_ReturnValue) == 0x00004C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000050, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x00005C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0000E4, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_X_1) == 0x0000E8, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_Y_1) == 0x0000EC, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_BreakVector_Z_1) == 0x0000F0, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_GetAxisPad_Value_1) == 0x0000F4, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_GetAxisPad_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_MakeVector_ReturnValue) == 0x0000F8, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000104, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000108, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Abs_ReturnValue) == 0x00010C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000110, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x000114, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000118, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_Height, CallFunc_FClamp_ReturnValue) == 0x00011C, "Member 'BP_MapTopCamera_C_ProcessInput_Height::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_GetDefaultHeight) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetDefaultHeight");
+static_assert(sizeof(BP_MapTopCamera_C_GetDefaultHeight) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetDefaultHeight");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, Height) == 0x000000, "Member 'BP_MapTopCamera_C_GetDefaultHeight::Height' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000E0, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultHeight, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001B4, "Member 'BP_MapTopCamera_C_GetDefaultHeight::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.Deactivate
-// 0x0058 (0x0058 - 0x0000)
-struct BP_MapTopCamera_C_Deactivate final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalDistanceLimit
+// 0x01B8 (0x01B8 - 0x0000)
+struct BP_MapTopCamera_C_GetHorizontalDistanceLimit final
 {
 public:
-	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_FromTopCamera_dummy;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8744[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetBlendTime_Seconds;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetBlendExp_BlendExp;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8745[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8746[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Limit;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CAB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CAC[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00E0(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CAD[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapTopCamera_C_Deactivate) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_Deactivate");
-static_assert(sizeof(BP_MapTopCamera_C_Deactivate) == 0x000058, "Wrong size on BP_MapTopCamera_C_Deactivate");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetMapUICtrl_MapUICtrl) == 0x000000, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetMapUICtrl_MapUICtrl' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, K2Node_DynamicCast_AsBPI_Map_UICtrl) == 0x000008, "Member 'BP_MapTopCamera_C_Deactivate::K2Node_DynamicCast_AsBPI_Map_UICtrl' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_MapTopCamera_C_Deactivate::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_BPI_FromTopCamera_dummy) == 0x000019, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_BPI_FromTopCamera_dummy' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetBlendTime_Seconds) == 0x00001C, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetBlendTime_Seconds' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetMapCommon_rerutn) == 0x000020, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetBlendExp_BlendExp) == 0x000028, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetBlendExp_BlendExp' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000030, "Member 'BP_MapTopCamera_C_Deactivate::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'BP_MapTopCamera_C_Deactivate::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetPlayerPawn_ReturnValue) == 0x000048, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Deactivate, CallFunc_GetPlayerController_ReturnValue) == 0x000050, "Member 'BP_MapTopCamera_C_Deactivate::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_GetHorizontalDistanceLimit) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetHorizontalDistanceLimit");
+static_assert(sizeof(BP_MapTopCamera_C_GetHorizontalDistanceLimit) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetHorizontalDistanceLimit");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, Limit) == 0x000000, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::Limit' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000E0, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceLimit, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001B4, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceLimit::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput
-// 0x01D0 (0x01D0 - 0x0000)
-struct BP_MapTopCamera_C_ProcessInput final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.IsNorthUp
+// 0x0004 (0x0004 - 0x0000)
+struct BP_MapTopCamera_C_IsNorthUp final
 {
 public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Param_IsNorthUp;                                   // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	E_OPTION_COMMON_SELECT_TYPE                   CallFunc_GetRotateMiniMapType_ReturnValue;         // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_IsNorthUp) == 0x000001, "Wrong alignment on BP_MapTopCamera_C_IsNorthUp");
+static_assert(sizeof(BP_MapTopCamera_C_IsNorthUp) == 0x000004, "Wrong size on BP_MapTopCamera_C_IsNorthUp");
+static_assert(offsetof(BP_MapTopCamera_C_IsNorthUp, Param_IsNorthUp) == 0x000000, "Member 'BP_MapTopCamera_C_IsNorthUp::Param_IsNorthUp' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_IsNorthUp, CallFunc_GetRotateMiniMapType_ReturnValue) == 0x000001, "Member 'BP_MapTopCamera_C_IsNorthUp::CallFunc_GetRotateMiniMapType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_IsNorthUp, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000002, "Member 'BP_MapTopCamera_C_IsNorthUp::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_IsNorthUp, CallFunc_Not_PreBool_ReturnValue) == 0x000003, "Member 'BP_MapTopCamera_C_IsNorthUp::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetBlendTime
+// 0x00E0 (0x00E0 - 0x0000)
+struct BP_MapTopCamera_C_GetBlendTime final
+{
+public:
+	float                                         Seconds;                                           // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CAE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_GetBlendTime) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetBlendTime");
+static_assert(sizeof(BP_MapTopCamera_C_GetBlendTime) == 0x0000E0, "Wrong size on BP_MapTopCamera_C_GetBlendTime");
+static_assert(offsetof(BP_MapTopCamera_C_GetBlendTime, Seconds) == 0x000000, "Member 'BP_MapTopCamera_C_GetBlendTime::Seconds' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetBlendTime, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetBlendTime::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetBlendTime, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetBlendTime::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetBlendTime, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0000DC, "Member 'BP_MapTopCamera_C_GetBlendTime::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetBlendExp
+// 0x00E0 (0x00E0 - 0x0000)
+struct BP_MapTopCamera_C_GetBlendExp final
+{
+public:
+	float                                         BlendExp;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CAF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_GetBlendExp) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetBlendExp");
+static_assert(sizeof(BP_MapTopCamera_C_GetBlendExp) == 0x0000E0, "Wrong size on BP_MapTopCamera_C_GetBlendExp");
+static_assert(offsetof(BP_MapTopCamera_C_GetBlendExp, BlendExp) == 0x000000, "Member 'BP_MapTopCamera_C_GetBlendExp::BlendExp' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetBlendExp, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetBlendExp::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetBlendExp, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetBlendExp::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetBlendExp, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0000DC, "Member 'BP_MapTopCamera_C_GetBlendExp::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.Init Camera Param
+// 0x01A0 (0x01A0 - 0x0000)
+struct BP_MapTopCamera_C_Init_Camera_Param final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CB0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakVector_X;                            // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Y;                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Z;                            // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X_1;                          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_1;                          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_1;                          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X_2;                          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_2;                          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_2;                          // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8747[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0048(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsActionPadCheck_Success;                 // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsActionPadCheck_Success_1;               // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8748[0x5];                                     // 0x00D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraComponent*                       CallFunc_GetPlayerCamera_PlayerCamera;             // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8749[0x8];                                     // 0x00E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x00F0(0x0030)(IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0120(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x012C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0138(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_874A[0x4];                                     // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAtomComponent*                         CallFunc_SpawnSound2D_ReturnValue;                 // 0x0148(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_874B[0x4];                                     // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_ProjectPlayerCameraManager_C> K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager; // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_874C[0x7];                                     // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsRequestFinishCameraUpdateDone_Done;     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_874D[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_PlayerInputReceiver_C> K2Node_DynamicCast_AsBPI_Player_Input_Receiver;    // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_874E[0x6];                                     // 0x01A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x01B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_HideTopCameraIcon_dummy;              // 0x01C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsActionPadCheck_Success_2;               // 0x01C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsActionPadCheck_Success_3;               // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x01C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x01C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               Temp_struct_Variable;                              // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue; // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_GetDefaultHeight_Height;                  // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetDefaultFOVY_Height;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetDefaultHeight_Height_1;                // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CB1[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0060(0x0030)(IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0090(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CB2[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFOVAngle_ReturnValue;                  // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0120(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetComponentRotation_ReturnValue;      // 0x012C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakVector_X_1;                          // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_1;                          // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_1;                          // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0164(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GreaterGreater_VectorRotator_ReturnValue; // 0x0170(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsNorthUp_IsNorthUp;                      // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CB3[0x3];                                     // 0x017D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x0180(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               K2Node_Select_Default;                             // 0x018C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_MapTopCamera_C_ProcessInput) == 0x000010, "Wrong alignment on BP_MapTopCamera_C_ProcessInput");
-static_assert(sizeof(BP_MapTopCamera_C_ProcessInput) == 0x0001D0, "Wrong size on BP_MapTopCamera_C_ProcessInput");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInput::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_X) == 0x000004, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Y) == 0x000008, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Z) == 0x00000C, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000010, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_X_1) == 0x00001C, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Y_1) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Z_1) == 0x000024, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_X_2) == 0x00002C, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Y_2) == 0x000030, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakVector_Z_2) == 0x000034, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_MakeVector_ReturnValue) == 0x000038, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_Greater_IntInt_ReturnValue) == 0x000044, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000048, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0000D0, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsActionPadCheck_Success) == 0x0000D1, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsActionPadCheck_Success' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsActionPadCheck_Success_1) == 0x0000D2, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsActionPadCheck_Success_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_GetPlayerCamera_PlayerCamera) == 0x0000D8, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_GetPlayerCamera_PlayerCamera' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_Get_ReturnValue) == 0x0000E0, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_Get_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x0000F0, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakTransform_Location) == 0x000120, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakTransform_Rotation) == 0x00012C, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BreakTransform_Scale) == 0x000138, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_SpawnSound2D_ReturnValue) == 0x000148, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_GetPlayerController_ReturnValue) == 0x000150, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000158, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager) == 0x000168, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_bSuccess) == 0x000178, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_GetPlayerPawn_ReturnValue) == 0x000180, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsRequestFinishCameraUpdateDone_Done) == 0x000188, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsRequestFinishCameraUpdateDone_Done' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_AsBPI_Player_Input_Receiver) == 0x000190, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_AsBPI_Player_Input_Receiver' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_bSuccess_1) == 0x0001A0, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanOR_ReturnValue) == 0x0001A1, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_GetMapUICtrl_MapUICtrl) == 0x0001A8, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_GetMapUICtrl_MapUICtrl' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_AsBPI_Map_UICtrl) == 0x0001B0, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_AsBPI_Map_UICtrl' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, K2Node_DynamicCast_bSuccess_2) == 0x0001C0, "Member 'BP_MapTopCamera_C_ProcessInput::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0001C1, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BPI_HideTopCameraIcon_dummy) == 0x0001C2, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BPI_HideTopCameraIcon_dummy' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsActionPadCheck_Success_2) == 0x0001C3, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsActionPadCheck_Success_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_IsActionPadCheck_Success_3) == 0x0001C4, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_IsActionPadCheck_Success_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanOR_ReturnValue_1) == 0x0001C5, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanOR_ReturnValue_2) == 0x0001C6, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanAND_ReturnValue) == 0x0001C7, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ProcessInput, CallFunc_BooleanAND_ReturnValue_1) == 0x0001C8, "Member 'BP_MapTopCamera_C_ProcessInput::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_Init_Camera_Param) == 0x000010, "Wrong alignment on BP_MapTopCamera_C_Init_Camera_Param");
+static_assert(sizeof(BP_MapTopCamera_C_Init_Camera_Param) == 0x0001A0, "Wrong size on BP_MapTopCamera_C_Init_Camera_Param");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, Temp_bool_Variable) == 0x000000, "Member 'BP_MapTopCamera_C_Init_Camera_Param::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_X) == 0x000004, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_Y) == 0x000008, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_Z) == 0x00000C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, Temp_struct_Variable) == 0x000010, "Member 'BP_MapTopCamera_C_Init_Camera_Param::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeVector_ReturnValue) == 0x00001C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeVector_ReturnValue_1) == 0x000028, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue) == 0x000034, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetDefaultHeight_Height) == 0x000040, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetDefaultHeight_Height' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetDefaultFOVY_Height) == 0x000044, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetDefaultFOVY_Height' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetDefaultHeight_Height_1) == 0x000048, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetDefaultHeight_Height_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetPlayerController_ReturnValue) == 0x000050, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetPlayerController_ReturnValue_1) == 0x000058, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetPlayerController_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeTransform_ReturnValue) == 0x000060, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x000090, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_K2_SetActorTransform_ReturnValue) == 0x000118, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GetFOVAngle_ReturnValue) == 0x00011C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GetFOVAngle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000120, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_K2_GetComponentRotation_ReturnValue) == 0x00012C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_K2_GetComponentRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_X_1) == 0x000138, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_Y_1) == 0x00013C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakVector_Z_1) == 0x000140, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_Add_FloatFloat_ReturnValue) == 0x000144, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000148, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakRotator_Roll) == 0x00014C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakRotator_Pitch) == 0x000150, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_BreakRotator_Yaw) == 0x000154, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeRotator_ReturnValue) == 0x000158, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_MakeVector_ReturnValue_2) == 0x000164, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_GreaterGreater_VectorRotator_ReturnValue) == 0x000170, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_GreaterGreater_VectorRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_IsNorthUp_IsNorthUp) == 0x00017C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_IsNorthUp_IsNorthUp' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, CallFunc_SelectVector_ReturnValue) == 0x000180, "Member 'BP_MapTopCamera_C_Init_Camera_Param::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_Init_Camera_Param, K2Node_Select_Default) == 0x00018C, "Member 'BP_MapTopCamera_C_Init_Camera_Param::K2Node_Select_Default' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.Start
-// 0x0168 (0x0168 - 0x0000)
-struct BP_MapTopCamera_C_Start final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyTransitionDebugParam
+// 0x07A0 (0x07A0 - 0x0000)
+struct BP_MapTopCamera_C_ApplyTransitionDebugParam final
 {
 public:
 	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0000(0x00D0)()
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_874F[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x00E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8750[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UProjectSoundManager*                   CallFunc_Get_ReturnValue;                          // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAtomComponent*                         CallFunc_SpawnSound2D_ReturnValue;                 // 0x0100(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_1;              // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_ProjectPlayerCameraManager_C> K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager; // 0x0118(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8751[0x7];                                     // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_PlayerInputReceiver_C> K2Node_DynamicCast_AsBPI_Player_Input_Receiver;    // 0x0130(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8752[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D0(0x00D0)()
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_1;            // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2; // 0x01B0(0x00D0)()
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3; // 0x0280(0x00D0)()
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_2;            // 0x0350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_3;            // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CB4[0x4];                                     // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4; // 0x0360(0x00D0)()
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_4;            // 0x0434(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5; // 0x0438(0x00D0)()
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_4;          // 0x0508(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CB5[0x4];                                     // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6; // 0x0510(0x00D0)()
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_5;            // 0x05E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_5;          // 0x05E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_6;            // 0x05E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_6;          // 0x05EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7; // 0x05F0(0x00D0)()
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8; // 0x06C0(0x00D0)()
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_7;            // 0x0790(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0794(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CB6[0x3];                                     // 0x0795(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_7;          // 0x0798(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapTopCamera_C_Start) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_Start");
-static_assert(sizeof(BP_MapTopCamera_C_Start) == 0x000168, "Wrong size on BP_MapTopCamera_C_Start");
-static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0000D0, "Member 'BP_MapTopCamera_C_Start::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetPlayerPawn_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x0000E0, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_bSuccess) == 0x0000F0, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_Get_ReturnValue) == 0x0000F8, "Member 'BP_MapTopCamera_C_Start::CallFunc_Get_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_SpawnSound2D_ReturnValue) == 0x000100, "Member 'BP_MapTopCamera_C_Start::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetPlayerController_ReturnValue) == 0x000108, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetPlayerPawn_ReturnValue_1) == 0x000110, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetPlayerPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager) == 0x000118, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_AsBPI_Project_Player_Camera_Manager' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_bSuccess_1) == 0x000128, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_AsBPI_Player_Input_Receiver) == 0x000130, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_AsBPI_Player_Input_Receiver' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_bSuccess_2) == 0x000140, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, CallFunc_GetMapCommon_rerutn) == 0x000148, "Member 'BP_MapTopCamera_C_Start::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_AsBPI_Map_Common) == 0x000150, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_Start, K2Node_DynamicCast_bSuccess_3) == 0x000160, "Member 'BP_MapTopCamera_C_Start::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_ApplyTransitionDebugParam) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ApplyTransitionDebugParam");
+static_assert(sizeof(BP_MapTopCamera_C_ApplyTransitionDebugParam) == 0x0007A0, "Wrong size on BP_MapTopCamera_C_ApplyTransitionDebugParam");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x0001A4, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0001A8, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x0001AC, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2) == 0x0001B0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3) == 0x000280, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_2) == 0x000350, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x000354, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_3) == 0x000358, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4) == 0x000360, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_3) == 0x000430, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_4) == 0x000434, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5) == 0x000438, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_4) == 0x000508, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6) == 0x000510, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_5) == 0x0005E0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_5) == 0x0005E4, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_6) == 0x0005E8, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_6) == 0x0005EC, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7) == 0x0005F0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8) == 0x0006C0, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Conv_IntToFloat_ReturnValue_7) == 0x000790, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Conv_IntToFloat_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000794, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyTransitionDebugParam, CallFunc_Divide_FloatFloat_ReturnValue_7) == 0x000798, "Member 'BP_MapTopCamera_C_ApplyTransitionDebugParam::CallFunc_Divide_FloatFloat_ReturnValue_7' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_MapTopCamera_C_ReceiveTick final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetDefaultFOVY
+// 0x01B8 (0x01B8 - 0x0000)
+struct BP_MapTopCamera_C_GetDefaultFOVY final
+{
+public:
+	float                                         Height;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CB7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CB8[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00E0(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CB9[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_GetDefaultFOVY) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetDefaultFOVY");
+static_assert(sizeof(BP_MapTopCamera_C_GetDefaultFOVY) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetDefaultFOVY");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, Height) == 0x000000, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::Height' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000E0, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetDefaultFOVY, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001B4, "Member 'BP_MapTopCamera_C_GetDefaultFOVY::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInputInconHelp
+// 0x0040 (0x0040 - 0x0000)
+struct BP_MapTopCamera_C_ProcessInputInconHelp final
+{
+public:
+	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl_1;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CBA[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl_1;             // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_HideTopCameraIcon_dummy;              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BPI_ShowTopCameraIcon_dummy;              // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsActionPadCheck_Success;                 // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_ProcessInputInconHelp) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ProcessInputInconHelp");
+static_assert(sizeof(BP_MapTopCamera_C_ProcessInputInconHelp) == 0x000040, "Wrong size on BP_MapTopCamera_C_ProcessInputInconHelp");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_GetMapUICtrl_MapUICtrl) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_GetMapUICtrl_MapUICtrl' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_GetMapUICtrl_MapUICtrl_1) == 0x000008, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_GetMapUICtrl_MapUICtrl_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, K2Node_DynamicCast_AsBPI_Map_UICtrl) == 0x000010, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::K2Node_DynamicCast_AsBPI_Map_UICtrl' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, K2Node_DynamicCast_AsBPI_Map_UICtrl_1) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::K2Node_DynamicCast_AsBPI_Map_UICtrl_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_BPI_HideTopCameraIcon_dummy) == 0x000039, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_BPI_HideTopCameraIcon_dummy' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_BPI_ShowTopCameraIcon_dummy) == 0x00003A, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_BPI_ShowTopCameraIcon_dummy' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInputInconHelp, CallFunc_IsActionPadCheck_Success) == 0x00003B, "Member 'BP_MapTopCamera_C_ProcessInputInconHelp::CallFunc_IsActionPadCheck_Success' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.UpdateButtonHelp
+// 0x0160 (0x0160 - 0x0000)
+struct BP_MapTopCamera_C_UpdateButtonHelp final
+{
+public:
+	bool                                          Param_IconShowing;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CBB[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText;           // 0x0008(0x0018)()
+	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_1;         // 0x0020(0x0018)()
+	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo;                     // 0x0038(0x0020)()
+	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo_1;                   // 0x0058(0x0020)()
+	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_2;         // 0x0078(0x0018)()
+	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_3;         // 0x0090(0x0018)()
+	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_4;         // 0x00A8(0x0018)()
+	class FText                                   K2Node_Select_Default;                             // 0x00C0(0x0018)()
+	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo_2;                   // 0x00D8(0x0020)()
+	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo_3;                   // 0x00F8(0x0020)()
+	class FText                                   CallFunc_BtnHelp_GetTextByEnum_HelpText_5;         // 0x0118(0x0018)()
+	struct FBtnHelpInfo                           K2Node_MakeStruct_BtnHelpInfo_4;                   // 0x0130(0x0020)()
+	TArray<struct FBtnHelpInfo>                   K2Node_MakeArray_Array;                            // 0x0150(0x0010)(ConstParm, ReferenceParm)
+};
+static_assert(alignof(BP_MapTopCamera_C_UpdateButtonHelp) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_UpdateButtonHelp");
+static_assert(sizeof(BP_MapTopCamera_C_UpdateButtonHelp) == 0x000160, "Wrong size on BP_MapTopCamera_C_UpdateButtonHelp");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, Param_IconShowing) == 0x000000, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::Param_IconShowing' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, Temp_bool_Variable) == 0x000001, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText) == 0x000008, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_1) == 0x000020, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo) == 0x000038, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo_1) == 0x000058, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_2) == 0x000078, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_3) == 0x000090, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_4) == 0x0000A8, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_Select_Default) == 0x0000C0, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo_2) == 0x0000D8, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo_3) == 0x0000F8, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, CallFunc_BtnHelp_GetTextByEnum_HelpText_5) == 0x000118, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::CallFunc_BtnHelp_GetTextByEnum_HelpText_5' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeStruct_BtnHelpInfo_4) == 0x000130, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeStruct_BtnHelpInfo_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_UpdateButtonHelp, K2Node_MakeArray_Array) == 0x000150, "Member 'BP_MapTopCamera_C_UpdateButtonHelp::K2Node_MakeArray_Array' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ProcessInput_ActorHorizontal
+// 0x01D0 (0x01D0 - 0x0000)
+struct BP_MapTopCamera_C_ProcessInput_ActorHorizontal final
 {
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceUpdate;                                       // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CBC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PrevToNext;                                        // 0x0008(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LY;                                                // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LX;                                                // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VSizeXY_ReturnValue;                      // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetHorizontalDistanceModifier_Modifier;   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x003C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAxisPad_Value;                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAxisPad_Value_1;                       // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_TryTrace_OutNext;                         // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TryTrace_CanMove;                         // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CBD[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector_X_1;                          // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_1;                          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_1;                          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x006C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0078(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CBE[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetHorizontalDistanceLimit_Limit;         // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue; // 0x0108(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CBF[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CC0[0x3];                                     // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetHorizontalSpeed_Speed;                 // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0128(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0134(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0140(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_2;                          // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_2;                          // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_2;                          // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GreaterGreater_VectorRotator_ReturnValue; // 0x0164(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0170(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAxisPad_Value_2;                       // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAxisPad_Value_3;                       // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_3;        // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_4;        // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_5;        // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Abs_ReturnValue;                          // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CC1[0x3];                                     // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Abs_ReturnValue_1;                        // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_1;    // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CC2[0x3];                                     // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector_X_3;                          // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_3;                          // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_3;                          // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CC3[0x3];                                     // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_3;                 // 0x01C4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapTopCamera_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_ReceiveTick");
-static_assert(sizeof(BP_MapTopCamera_C_ReceiveTick) == 0x000004, "Wrong size on BP_MapTopCamera_C_ReceiveTick");
-static_assert(offsetof(BP_MapTopCamera_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_ProcessInput_ActorHorizontal");
+static_assert(sizeof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal) == 0x0001D0, "Wrong size on BP_MapTopCamera_C_ProcessInput_ActorHorizontal");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, DeltaSeconds) == 0x000000, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, ForceUpdate) == 0x000004, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::ForceUpdate' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, PrevToNext) == 0x000008, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::PrevToNext' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, LY) == 0x000014, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::LY' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, LX) == 0x000018, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::LX' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_X) == 0x00001C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Y) == 0x000020, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Z) == 0x000024, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_MakeVector_ReturnValue) == 0x000028, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_VSizeXY_ReturnValue) == 0x000034, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_VSizeXY_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetHorizontalDistanceModifier_Modifier) == 0x000038, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetHorizontalDistanceModifier_Modifier' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_MakeVector_ReturnValue_1) == 0x00003C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetAxisPad_Value) == 0x000048, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetAxisPad_Value' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetAxisPad_Value_1) == 0x00004C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetAxisPad_Value_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_TryTrace_OutNext) == 0x000050, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_TryTrace_OutNext' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_TryTrace_CanMove) == 0x00005C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_TryTrace_CanMove' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_X_1) == 0x000060, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Y_1) == 0x000064, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Z_1) == 0x000068, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_K2_GetActorLocation_ReturnValue) == 0x00006C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000078, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000100, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetHorizontalDistanceLimit_Limit) == 0x000104, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetHorizontalDistanceLimit_Limit' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue) == 0x000108, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Find_Look_at_Rotation_with_UpVec_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000114, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_K2_SetActorRotation_ReturnValue) == 0x000118, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Divide_FloatFloat_ReturnValue) == 0x00011C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000120, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetHorizontalSpeed_Speed) == 0x000124, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetHorizontalSpeed_Speed' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000128, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000134, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Add_VectorVector_ReturnValue) == 0x000140, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_X_2) == 0x00014C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_X_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Y_2) == 0x000150, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Y_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Z_2) == 0x000154, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Z_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_MakeVector_ReturnValue_2) == 0x000158, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GreaterGreater_VectorRotator_ReturnValue) == 0x000164, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GreaterGreater_VectorRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000170, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetAxisPad_Value_2) == 0x00017C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetAxisPad_Value_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GetAxisPad_Value_3) == 0x000180, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GetAxisPad_Value_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Add_FloatFloat_ReturnValue) == 0x000184, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000188, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x00018C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x000190, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x000194, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x000198, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Multiply_FloatFloat_ReturnValue_5) == 0x00019C, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Multiply_FloatFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Abs_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x0001A4, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Abs_ReturnValue_1) == 0x0001A8, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x0001AC, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_X_3) == 0x0001B0, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_X_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Y_3) == 0x0001B4, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Y_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BreakVector_Z_3) == 0x0001B8, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BreakVector_Z_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_BooleanOR_ReturnValue) == 0x0001BC, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x0001C0, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ProcessInput_ActorHorizontal, CallFunc_MakeVector_ReturnValue_3) == 0x0001C4, "Member 'BP_MapTopCamera_C_ProcessInput_ActorHorizontal::CallFunc_MakeVector_ReturnValue_3' has a wrong offset!");
 
-// Function BP_MapTopCamera.BP_MapTopCamera_C.ExecuteUbergraph_BP_MapTopCamera
-// 0x02E8 (0x02E8 - 0x0000)
-struct BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera final
+// Function BP_MapTopCamera.BP_MapTopCamera_C.TryTrace
+// 0x0034 (0x0034 - 0x0000)
+struct BP_MapTopCamera_C_TryTrace final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8753[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x002C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0044(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl_1;                 // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl_1;             // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_ShowTopCameraIcon_dummy;              // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8754[0x2];                                     // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BPI_UpdateTopCameraIcon_dummy;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8755[0x2];                                     // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetActorLocationAndRotation_SweepHitResult; // 0x0074(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocationAndRotation_ReturnValue; // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8756[0x2];                                     // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetActorLocationAndRotation_SweepHitResult_1; // 0x0100(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocationAndRotation_ReturnValue_1; // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8757[0x2];                                     // 0x018A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector_X;                            // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_1;              // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8758[0x4];                                     // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_CharaBaseAccessor_C> K2Node_DynamicCast_AsBPI_Chara_Base_Accessor;      // 0x01A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8759[0x3];                                     // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x01BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn;                      // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetMapCommon_rerutn_1;                    // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common;               // 0x01D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_875A[0x7];                                     // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_MapCommon_C>      K2Node_DynamicCast_AsBPI_Map_Common_1;             // 0x01F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_MapTopCameraOnStartTop_dummy;         // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BPI_MapTopCameraOnFinishTop_dummy;        // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_875B[0x5];                                     // 0x0203(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0208(0x00D0)()
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x02D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_875C[0x2];                                     // 0x02DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                PrevLocation;                                      // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NextLocation;                                      // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                OutNext;                                           // 0x0018(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanMove;                                           // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CC4[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Ret;                                               // 0x0028(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera");
-static_assert(sizeof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera) == 0x0002E8, "Wrong size on BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, EntryPoint) == 0x000000, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetMapUICtrl_MapUICtrl) == 0x000008, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetMapUICtrl_MapUICtrl' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetPlayerPawn_ReturnValue) == 0x000010, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Map_UICtrl) == 0x000018, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Map_UICtrl' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_GetActorRotation_ReturnValue) == 0x00002C, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000038, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000044, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetMapUICtrl_MapUICtrl_1) == 0x000050, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetMapUICtrl_MapUICtrl_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Map_UICtrl_1) == 0x000058, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Map_UICtrl_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BPI_ShowTopCameraIcon_dummy) == 0x000069, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BPI_ShowTopCameraIcon_dummy' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BPI_UpdateTopCameraIcon_dummy) == 0x000070, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BPI_UpdateTopCameraIcon_dummy' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_SwitchEnum_CmpSuccess) == 0x000071, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_SetActorLocationAndRotation_SweepHitResult) == 0x000074, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_SetActorLocationAndRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_SetActorLocationAndRotation_ReturnValue) == 0x0000FC, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_SetActorLocationAndRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000FD, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_SetActorLocationAndRotation_SweepHitResult_1) == 0x000100, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_SetActorLocationAndRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_K2_SetActorLocationAndRotation_ReturnValue_1) == 0x000188, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_K2_SetActorLocationAndRotation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000189, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BreakVector_X) == 0x00018C, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BreakVector_Y) == 0x000190, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BreakVector_Z) == 0x000194, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetPlayerPawn_ReturnValue_1) == 0x000198, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetPlayerPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Chara_Base_Accessor) == 0x0001A8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Chara_Base_Accessor' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess_2) == 0x0001B8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_MakeVector_ReturnValue) == 0x0001BC, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetMapCommon_rerutn) == 0x0001C8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetMapCommon_rerutn' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetMapCommon_rerutn_1) == 0x0001D0, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetMapCommon_rerutn_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Map_Common) == 0x0001D8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Map_Common' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess_3) == 0x0001E8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_AsBPI_Map_Common_1) == 0x0001F0, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_AsBPI_Map_Common_1' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_DynamicCast_bSuccess_4) == 0x000200, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BPI_MapTopCameraOnStartTop_dummy) == 0x000201, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BPI_MapTopCameraOnStartTop_dummy' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BPI_MapTopCameraOnFinishTop_dummy) == 0x000202, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BPI_MapTopCameraOnFinishTop_dummy' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000208, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x0002D8, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0002D9, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, Temp_int_Variable) == 0x0002DC, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, K2Node_SwitchInteger_CmpSuccess) == 0x0002E0, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_BooleanOR_ReturnValue) == 0x0002E1, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera, CallFunc_Not_PreBool_ReturnValue) == 0x0002E2, "Member 'BP_MapTopCamera_C_ExecuteUbergraph_BP_MapTopCamera::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_MapTopCamera_C_TryTrace) == 0x000004, "Wrong alignment on BP_MapTopCamera_C_TryTrace");
+static_assert(sizeof(BP_MapTopCamera_C_TryTrace) == 0x000034, "Wrong size on BP_MapTopCamera_C_TryTrace");
+static_assert(offsetof(BP_MapTopCamera_C_TryTrace, PrevLocation) == 0x000000, "Member 'BP_MapTopCamera_C_TryTrace::PrevLocation' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_TryTrace, NextLocation) == 0x00000C, "Member 'BP_MapTopCamera_C_TryTrace::NextLocation' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_TryTrace, OutNext) == 0x000018, "Member 'BP_MapTopCamera_C_TryTrace::OutNext' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_TryTrace, CanMove) == 0x000024, "Member 'BP_MapTopCamera_C_TryTrace::CanMove' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_TryTrace, Ret) == 0x000028, "Member 'BP_MapTopCamera_C_TryTrace::Ret' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.SetLOD
+// 0x01C8 (0x01C8 - 0x0000)
+struct BP_MapTopCamera_C_SetLOD final
+{
+public:
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0000(0x00D0)()
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D0(0x00D0)()
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_SetLOD) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_SetLOD");
+static_assert(sizeof(BP_MapTopCamera_C_SetLOD) == 0x0001C8, "Wrong size on BP_MapTopCamera_C_SetLOD");
+static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D0, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_Conv_IntToString_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_Concat_StrStr_ReturnValue) == 0x0001B0, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_SetLOD, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001C0, "Member 'BP_MapTopCamera_C_SetLOD::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.SetFoliageLOD
+// 0x01C8 (0x01C8 - 0x0000)
+struct BP_MapTopCamera_C_SetFoliageLOD final
+{
+public:
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0000(0x00D0)()
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D0(0x00D0)()
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_SetFoliageLOD) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_SetFoliageLOD");
+static_assert(sizeof(BP_MapTopCamera_C_SetFoliageLOD) == 0x0001C8, "Wrong size on BP_MapTopCamera_C_SetFoliageLOD");
+static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D0, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_Conv_IntToString_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_Concat_StrStr_ReturnValue) == 0x0001B0, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_SetFoliageLOD, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001C0, "Member 'BP_MapTopCamera_C_SetFoliageLOD::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetLOD
+// 0x0010 (0x0010 - 0x0000)
+struct BP_MapTopCamera_C_ResetLOD final
+{
+public:
+	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_ResetLOD) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ResetLOD");
+static_assert(sizeof(BP_MapTopCamera_C_ResetLOD) == 0x000010, "Wrong size on BP_MapTopCamera_C_ResetLOD");
+static_assert(offsetof(BP_MapTopCamera_C_ResetLOD, CallFunc_MakeLiteralString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ResetLOD::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetFoliageLOD
+// 0x0010 (0x0010 - 0x0000)
+struct BP_MapTopCamera_C_ResetFoliageLOD final
+{
+public:
+	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_ResetFoliageLOD) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ResetFoliageLOD");
+static_assert(sizeof(BP_MapTopCamera_C_ResetFoliageLOD) == 0x000010, "Wrong size on BP_MapTopCamera_C_ResetFoliageLOD");
+static_assert(offsetof(BP_MapTopCamera_C_ResetFoliageLOD, CallFunc_MakeLiteralString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ResetFoliageLOD::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHeightDistanceMin
+// 0x01B8 (0x01B8 - 0x0000)
+struct BP_MapTopCamera_C_GetHeightDistanceMin final
+{
+public:
+	float                                         Height;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D8(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CC6[0x3];                                     // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_GetHeightDistanceMin) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetHeightDistanceMin");
+static_assert(sizeof(BP_MapTopCamera_C_GetHeightDistanceMin) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetHeightDistanceMin");
+static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, Height) == 0x000000, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::Height' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001A8, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001AC, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHeightDistanceMin, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetHeightDistanceMin::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetStartHeight
+// 0x01B8 (0x01B8 - 0x0000)
+struct BP_MapTopCamera_C_GetStartHeight final
+{
+public:
+	float                                         Height;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTopCameraHeight_ReturnValue;           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0008(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CC7[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00E0(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CC8[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_GetStartHeight) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetStartHeight");
+static_assert(sizeof(BP_MapTopCamera_C_GetStartHeight) == 0x0001B8, "Wrong size on BP_MapTopCamera_C_GetStartHeight");
+static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, Height) == 0x000000, "Member 'BP_MapTopCamera_C_GetStartHeight::Height' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_GetTopCameraHeight_ReturnValue) == 0x000004, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_GetTopCameraHeight_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000E0, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001B0, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetStartHeight, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001B4, "Member 'BP_MapTopCamera_C_GetStartHeight::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetHorizontalDistanceModifier
+// 0x0088 (0x0088 - 0x0000)
+struct BP_MapTopCamera_C_GetHorizontalDistanceModifier final
+{
+public:
+	float                                         Modifier;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetHeightDistanceMin_Height;              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC9[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CCA[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_GetHorizontalDistanceModifier) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetHorizontalDistanceModifier");
+static_assert(sizeof(BP_MapTopCamera_C_GetHorizontalDistanceModifier) == 0x000088, "Wrong size on BP_MapTopCamera_C_GetHorizontalDistanceModifier");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, Modifier) == 0x000000, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::Modifier' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000004, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_BreakVector_X) == 0x000010, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_BreakVector_Y) == 0x000014, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_BreakVector_Z) == 0x000018, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_GetHeightDistanceMin_Height) == 0x00001C, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_GetHeightDistanceMin_Height' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000024, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Conv_FloatToString_ReturnValue) == 0x000028, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000038, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Concat_StrStr_ReturnValue) == 0x000040, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Add_FloatFloat_ReturnValue) == 0x000050, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000058, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000068, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetHorizontalDistanceModifier, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000078, "Member 'BP_MapTopCamera_C_GetHorizontalDistanceModifier::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.GetConsoleVariables
+// 0x0098 (0x0098 - 0x0000)
+struct BP_MapTopCamera_C_GetConsoleVariables final
+{
+public:
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_2;         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_3;         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue; // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CCB[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue_1; // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue_2; // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue_3; // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_GetConsoleVariables) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_GetConsoleVariables");
+static_assert(sizeof(BP_MapTopCamera_C_GetConsoleVariables) == 0x000098, "Wrong size on BP_MapTopCamera_C_GetConsoleVariables");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000010, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_2) == 0x000040, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_3) == 0x000050, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000060, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000070, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_GetConsoleVariableFloatValue_ReturnValue) == 0x000080, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_GetConsoleVariableFloatValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_Less_FloatFloat_ReturnValue) == 0x000084, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_GetConsoleVariableFloatValue_ReturnValue_1) == 0x000088, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_GetConsoleVariableFloatValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_GetConsoleVariableFloatValue_ReturnValue_2) == 0x00008C, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_GetConsoleVariableFloatValue_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_GetConsoleVariables, CallFunc_GetConsoleVariableFloatValue_ReturnValue_3) == 0x000090, "Member 'BP_MapTopCamera_C_GetConsoleVariables::CallFunc_GetConsoleVariableFloatValue_ReturnValue_3' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyConsoleVariables
+// 0x0080 (0x0080 - 0x0000)
+struct BP_MapTopCamera_C_ApplyConsoleVariables final
+{
+public:
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_2;         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_3;         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_ApplyConsoleVariables) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ApplyConsoleVariables");
+static_assert(sizeof(BP_MapTopCamera_C_ApplyConsoleVariables) == 0x000080, "Wrong size on BP_MapTopCamera_C_ApplyConsoleVariables");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000010, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_2) == 0x000040, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_3) == 0x000050, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000060, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000070, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ResetConsoleVariables
+// 0x0080 (0x0080 - 0x0000)
+struct BP_MapTopCamera_C_ResetConsoleVariables final
+{
+public:
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_2;         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_3;         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapTopCamera_C_ResetConsoleVariables) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ResetConsoleVariables");
+static_assert(sizeof(BP_MapTopCamera_C_ResetConsoleVariables) == 0x000080, "Wrong size on BP_MapTopCamera_C_ResetConsoleVariables");
+static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000010, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_2) == 0x000040, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Conv_FloatToString_ReturnValue_3) == 0x000050, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Conv_FloatToString_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000060, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ResetConsoleVariables, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000070, "Member 'BP_MapTopCamera_C_ResetConsoleVariables::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.ApplyConsoleVariables_debug
+// 0x0810 (0x0810 - 0x0000)
+struct BP_MapTopCamera_C_ApplyConsoleVariables_debug final
+{
+public:
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue; // 0x0000(0x00D0)()
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1; // 0x00D0(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CCC[0x3];                                     // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CCD[0x4];                                     // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2; // 0x01B0(0x00D0)()
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0280(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0290(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_1;            // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3; // 0x02A8(0x00D0)()
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0378(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0388(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_2;            // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4; // 0x03A0(0x00D0)()
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_2;         // 0x0470(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0480(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue_3;            // 0x0490(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0494(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5; // 0x0498(0x00D0)()
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_3;         // 0x0568(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0578(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CCE[0x7];                                     // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6; // 0x0590(0x00D0)()
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7; // 0x0660(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0731(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3CCF[0x6];                                     // 0x0732(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDebugMenuItemData                     CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8; // 0x0738(0x00D0)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_4;          // 0x0808(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_ApplyConsoleVariables_debug) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_ApplyConsoleVariables_debug");
+static_assert(sizeof(BP_MapTopCamera_C_ApplyConsoleVariables_debug) == 0x000810, "Wrong size on BP_MapTopCamera_C_ApplyConsoleVariables_debug");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1) == 0x0000D0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0001A0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0001A4, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0001A8, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2) == 0x0001B0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_FloatToString_ReturnValue) == 0x000280, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Concat_StrStr_ReturnValue) == 0x000290, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x0002A0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x0002A4, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3) == 0x0002A8, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_FloatToString_ReturnValue_1) == 0x000378, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_FloatToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000388, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_IntToFloat_ReturnValue_2) == 0x000398, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_IntToFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x00039C, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4) == 0x0003A0, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_FloatToString_ReturnValue_2) == 0x000470, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_FloatToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000480, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_IntToFloat_ReturnValue_3) == 0x000490, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_IntToFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Divide_FloatFloat_ReturnValue_3) == 0x000494, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Divide_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5) == 0x000498, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Conv_FloatToString_ReturnValue_3) == 0x000568, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Conv_FloatToString_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000578, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000588, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6) == 0x000590, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7) == 0x000660, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000730, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000731, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8) == 0x000738, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_GetDebugMenuItemFromPathName_Name_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_ApplyConsoleVariables_debug, CallFunc_EqualEqual_IntInt_ReturnValue_4) == 0x000808, "Member 'BP_MapTopCamera_C_ApplyConsoleVariables_debug::CallFunc_EqualEqual_IntInt_ReturnValue_4' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.FieldVisibilityOnStart
+// 0x0018 (0x0018 - 0x0000)
+struct BP_MapTopCamera_C_FieldVisibilityOnStart final
+{
+public:
+	int32                                         CallFunc_GetMapID_ReturnValue;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CD0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_FieldVisibilityOnStart) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_FieldVisibilityOnStart");
+static_assert(sizeof(BP_MapTopCamera_C_FieldVisibilityOnStart) == 0x000018, "Wrong size on BP_MapTopCamera_C_FieldVisibilityOnStart");
+static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnStart, CallFunc_GetMapID_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_FieldVisibilityOnStart::CallFunc_GetMapID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnStart, CallFunc_GetStreamingLevel_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_FieldVisibilityOnStart::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnStart, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000010, "Member 'BP_MapTopCamera_C_FieldVisibilityOnStart::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_MapTopCamera.BP_MapTopCamera_C.FieldVisibilityOnFinish
+// 0x0018 (0x0018 - 0x0000)
+struct BP_MapTopCamera_C_FieldVisibilityOnFinish final
+{
+public:
+	int32                                         CallFunc_GetMapID_ReturnValue;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CD1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelStreaming*                        CallFunc_GetStreamingLevel_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_MapTopCamera_C_FieldVisibilityOnFinish) == 0x000008, "Wrong alignment on BP_MapTopCamera_C_FieldVisibilityOnFinish");
+static_assert(sizeof(BP_MapTopCamera_C_FieldVisibilityOnFinish) == 0x000018, "Wrong size on BP_MapTopCamera_C_FieldVisibilityOnFinish");
+static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnFinish, CallFunc_GetMapID_ReturnValue) == 0x000000, "Member 'BP_MapTopCamera_C_FieldVisibilityOnFinish::CallFunc_GetMapID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnFinish, CallFunc_GetStreamingLevel_ReturnValue) == 0x000008, "Member 'BP_MapTopCamera_C_FieldVisibilityOnFinish::CallFunc_GetStreamingLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MapTopCamera_C_FieldVisibilityOnFinish, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000010, "Member 'BP_MapTopCamera_C_FieldVisibilityOnFinish::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

@@ -23,12 +23,12 @@ struct FBattleSkillLight_t final
 {
 public:
 	E_SKILL_HIT_STAMP_TYPE                        SkillHitStamp_16_A6D944F74BAC1196FF95199D402692CC; // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CB0[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4758[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstance*                      LightMaterial_15_50B2C8A9477276A64A589CAC5B55ED01; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           LightColor_9_2DEFFC6C496E50E37F8A639DB6FFBDF2;     // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 SocketName_12_3D9CCE1640D33EDF1ABF448C7A68D757;    // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	struct FVector                                Offset_25_E267616E4F38245C442F03A4B2E49A4D;        // 0x0030(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CB1[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4759[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            IntensityCurve_20_28CCCFAE42A0DA13CAE0E2905531C6A7; // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            RadiusCurve_22_6057213C434E9B5F3E6B549771167787;   // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            LightFalloffExponent_28_8E6E8A9A49FAE7CED1DF10B9CAF70E5A; // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

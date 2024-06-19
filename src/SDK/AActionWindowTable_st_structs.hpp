@@ -22,7 +22,7 @@ struct FAActionWindowTable_st final
 {
 public:
 	E_AActionWindowType                           AActionWindowType_3_5D352CCF439DFB2901177EABA6A0DF4E; // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61ED[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67EB[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Label_6_687222DA4CE18F548525469D5B7FB24A;          // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FAActionWindowTable_st) == 0x000004, "Wrong alignment on FAActionWindowTable_st");

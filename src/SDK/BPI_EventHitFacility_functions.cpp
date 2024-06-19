@@ -17,24 +17,24 @@
 namespace SDK
 {
 
-// Function BPI_EventHitFacility.BPI_EventHitFacility_C.BPI_GetDebugMemo
+// Function BPI_EventHitFacility.BPI_EventHitFacility_C.BPI_GetFacilityId
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Memo                                                   (Parm, OutParm)
+// int32                                   FacitlityId                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_EventHitFacility_C::BPI_GetDebugMemo(class FText* Memo)
+void IBPI_EventHitFacility_C::BPI_GetFacilityId(int32* FacitlityId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_EventHitFacility_C", "BPI_GetDebugMemo");
+		Func = Class->GetFunction("BPI_EventHitFacility_C", "BPI_GetFacilityId");
 
-	Params::BPI_EventHitFacility_C_BPI_GetDebugMemo Parms{};
+	Params::BPI_EventHitFacility_C_BPI_GetFacilityId Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Memo != nullptr)
-		*Memo = std::move(Parms.Memo);
+	if (FacitlityId != nullptr)
+		*FacitlityId = Parms.FacitlityId;
 }
 
 
@@ -59,24 +59,24 @@ void IBPI_EventHitFacility_C::BPI_GetFacilityType(E_FACILITY_TYPE* Type)
 }
 
 
-// Function BPI_EventHitFacility.BPI_EventHitFacility_C.BPI_GetFacilityId
+// Function BPI_EventHitFacility.BPI_EventHitFacility_C.BPI_GetDebugMemo
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   FacitlityId                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             Memo                                                   (Parm, OutParm)
 
-void IBPI_EventHitFacility_C::BPI_GetFacilityId(int32* FacitlityId)
+void IBPI_EventHitFacility_C::BPI_GetDebugMemo(class FText* Memo)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_EventHitFacility_C", "BPI_GetFacilityId");
+		Func = Class->GetFunction("BPI_EventHitFacility_C", "BPI_GetDebugMemo");
 
-	Params::BPI_EventHitFacility_C_BPI_GetFacilityId Parms{};
+	Params::BPI_EventHitFacility_C_BPI_GetDebugMemo Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (FacitlityId != nullptr)
-		*FacitlityId = Parms.FacitlityId;
+	if (Memo != nullptr)
+		*Memo = std::move(Parms.Memo);
 }
 
 }

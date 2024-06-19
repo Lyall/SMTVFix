@@ -17,138 +17,19 @@
 namespace SDK
 {
 
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.getMediator
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Mediator                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_SaveLoadCtrl_C::GetMediator(class UObject** Mediator)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "getMediator");
-
-	Params::BPI_SaveLoadCtrl_C_GetMediator Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Mediator != nullptr)
-		*Mediator = Parms.Mediator;
-}
-
-
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.isStartedFieldReturnFade
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsStarted                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void IBPI_SaveLoadCtrl_C::IsStartedFieldReturnFade(bool* IsStarted)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "isStartedFieldReturnFade");
-
-	Params::BPI_SaveLoadCtrl_C_IsStartedFieldReturnFade Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsStarted != nullptr)
-		*IsStarted = Parms.IsStarted;
-}
-
-
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.isSetUpComplete
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void IBPI_SaveLoadCtrl_C::IsSetUpComplete(bool* OutValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "isSetUpComplete");
-
-	Params::BPI_SaveLoadCtrl_C_IsSetUpComplete Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutValue != nullptr)
-		*OutValue = Parms.OutValue;
-}
-
-
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.startSaveInherit
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_SaveLoadCtrl_C::StartSaveInherit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "startSaveInherit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.setupInherit
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_SaveLoadCtrl_C::SetupInherit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "setupInherit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.offLoadScreen
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_SaveLoadCtrl_C::OffLoadScreen()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "offLoadScreen");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.OnLoadScreen
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_SaveLoadCtrl_C::OnLoadScreen()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "OnLoadScreen");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.setupSaveMenu
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.setupLoadMenu
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// E_SAVE_LOCATION                         InLocation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Load_LOCATION                         InLocation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_SaveLoadCtrl_C::SetupSaveMenu(E_SAVE_LOCATION InLocation)
+void IBPI_SaveLoadCtrl_C::SetupLoadMenu(E_Load_LOCATION InLocation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "setupSaveMenu");
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "setupLoadMenu");
 
-	Params::BPI_SaveLoadCtrl_C_SetupSaveMenu Parms{};
+	Params::BPI_SaveLoadCtrl_C_SetupLoadMenu Parms{};
 
 	Parms.InLocation = InLocation;
 
@@ -156,15 +37,36 @@ void IBPI_SaveLoadCtrl_C::SetupSaveMenu(E_SAVE_LOCATION InLocation)
 }
 
 
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.setHiddenCommonWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.isEndSaveLoad
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// E_SaveLoadEndType                       OutEndType                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_SaveLoadCtrl_C::SetHiddenCommonWidget()
+void IBPI_SaveLoadCtrl_C::IsEndSaveLoad(E_SaveLoadEndType* OutEndType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "setHiddenCommonWidget");
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "isEndSaveLoad");
+
+	Params::BPI_SaveLoadCtrl_C_IsEndSaveLoad Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutEndType != nullptr)
+		*OutEndType = Parms.OutEndType;
+}
+
+
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.startLoadMenu
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_SaveLoadCtrl_C::StartLoadMenu()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "startLoadMenu");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -191,58 +93,156 @@ void IBPI_SaveLoadCtrl_C::IsCancel(bool* OutValue)
 }
 
 
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.startLoadMenu
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.setHiddenCommonWidget
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_SaveLoadCtrl_C::StartLoadMenu()
+void IBPI_SaveLoadCtrl_C::SetHiddenCommonWidget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "startLoadMenu");
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "setHiddenCommonWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.isEndSaveLoad
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// E_SaveLoadEndType                       OutEndType                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_SaveLoadCtrl_C::IsEndSaveLoad(E_SaveLoadEndType* OutEndType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "isEndSaveLoad");
-
-	Params::BPI_SaveLoadCtrl_C_IsEndSaveLoad Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutEndType != nullptr)
-		*OutEndType = Parms.OutEndType;
-}
-
-
-// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.setupLoadMenu
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.setupSaveMenu
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// E_Load_LOCATION                         InLocation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_SAVE_LOCATION                         InLocation                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_SaveLoadCtrl_C::SetupLoadMenu(E_Load_LOCATION InLocation)
+void IBPI_SaveLoadCtrl_C::SetupSaveMenu(E_SAVE_LOCATION InLocation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "setupLoadMenu");
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "setupSaveMenu");
 
-	Params::BPI_SaveLoadCtrl_C_SetupLoadMenu Parms{};
+	Params::BPI_SaveLoadCtrl_C_SetupSaveMenu Parms{};
 
 	Parms.InLocation = InLocation;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.OnLoadScreen
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_SaveLoadCtrl_C::OnLoadScreen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "OnLoadScreen");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.offLoadScreen
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_SaveLoadCtrl_C::OffLoadScreen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "offLoadScreen");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.setupInherit
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_SaveLoadCtrl_C::SetupInherit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "setupInherit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.startSaveInherit
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_SaveLoadCtrl_C::StartSaveInherit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "startSaveInherit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.isSetUpComplete
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void IBPI_SaveLoadCtrl_C::IsSetUpComplete(bool* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "isSetUpComplete");
+
+	Params::BPI_SaveLoadCtrl_C_IsSetUpComplete Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutValue != nullptr)
+		*OutValue = Parms.OutValue;
+}
+
+
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.isStartedFieldReturnFade
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsStarted                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void IBPI_SaveLoadCtrl_C::IsStartedFieldReturnFade(bool* IsStarted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "isStartedFieldReturnFade");
+
+	Params::BPI_SaveLoadCtrl_C_IsStartedFieldReturnFade Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsStarted != nullptr)
+		*IsStarted = Parms.IsStarted;
+}
+
+
+// Function BPI_SaveLoadCtrl.BPI_SaveLoadCtrl_C.getMediator
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Mediator                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_SaveLoadCtrl_C::GetMediator(class UObject** Mediator)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_SaveLoadCtrl_C", "getMediator");
+
+	Params::BPI_SaveLoadCtrl_C_GetMediator Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Mediator != nullptr)
+		*Mediator = Parms.Mediator;
 }
 
 }

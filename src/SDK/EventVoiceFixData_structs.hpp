@@ -21,7 +21,7 @@ struct FEventVoiceFixData final
 public:
 	int32                                         Index_11_1E1FD9B048CA3EE74A749AAE58DF1AC3;         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Label_12_DDD1CDD945C5AFB436F75BBC90ED72F0;         // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_887E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_527B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 VoiceName_13_27D37CB3489A00FFEF7B118D04B22A22;     // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	float                                         Time_14_0B9BB1764FE90F90C80E8C87E6E76D25;          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

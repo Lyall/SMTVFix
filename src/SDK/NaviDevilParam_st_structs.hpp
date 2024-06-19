@@ -23,7 +23,7 @@ struct FNaviDevilParam_st final
 {
 public:
 	E_NAVI_DEVIL                                  NaviType_2_4D57470A4E91DFDF2873E6AF861A5C5F;       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8797[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67E3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Scale_5_C8E5B29740F2B9A7D7A7E381DCD4D194;          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class USoundAtomCue>           FindVoice_9_464633A149B5CA3B9F9FBA8FC6898AA0;      // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class USoundAtomCue>           GoVoice_12_C54BB7C5431B34877F308088A684F2E4;       // 0x0030(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
@@ -33,7 +33,7 @@ public:
 	struct FVector                                CameraInsideCheckLocation_23_E715504446FBEA85FB25CFA8D6E76ED0; // 0x006C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CameraInsideCheckSize_25_A3D295D74F30BD084040BEB9B70A0DDE; // 0x0078(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MeshOffsetEnable_30_296FBC5041992166E071C290F428DB21; // 0x0084(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8798[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67E4[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                MeshOffeset_31_CDF0C413486ED438D167B48FC16F5A6E;   // 0x0088(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CHARA_MOTION_ID                             GimmickMotion_36_4F5245034F40B4119D37A1AB8B789D5B; // 0x0094(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          OnGround_33_6BDE00BB4179A5A4417ED3AAB4036BFA;      // 0x0095(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)

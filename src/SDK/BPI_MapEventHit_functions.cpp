@@ -17,21 +17,63 @@
 namespace SDK
 {
 
-// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitActivate
+// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitAction
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void IBPI_MapEventHit_C::EventHitActivate(bool Active)
+void IBPI_MapEventHit_C::EventHitAction()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MapEventHit_C", "EventHitActivate");
+		Func = Class->GetFunction("BPI_MapEventHit_C", "EventHitAction");
 
-	Params::BPI_MapEventHit_C_EventHitActivate Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Active = Active;
+
+// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitIN
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_MapEventHit_C::EventHitIN()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_MapEventHit_C", "EventHitIN");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitOUT
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_MapEventHit_C::EventHitOUT()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_MapEventHit_C", "EventHitOUT");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_MapEventHit.BPI_MapEventHit_C.DebugView
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Bool                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void IBPI_MapEventHit_C::DebugView(bool Bool)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_MapEventHit_C", "DebugView");
+
+	Params::BPI_MapEventHit_C_DebugView Parms{};
+
+	Parms.Bool = Bool;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,65 +99,23 @@ void IBPI_MapEventHit_C::HiddenVolume(bool Hidden)
 }
 
 
-// Function BPI_MapEventHit.BPI_MapEventHit_C.DebugView
+// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitActivate
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Bool                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void IBPI_MapEventHit_C::DebugView(bool Bool)
+void IBPI_MapEventHit_C::EventHitActivate(bool Active)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MapEventHit_C", "DebugView");
+		Func = Class->GetFunction("BPI_MapEventHit_C", "EventHitActivate");
 
-	Params::BPI_MapEventHit_C_DebugView Parms{};
+	Params::BPI_MapEventHit_C_EventHitActivate Parms{};
 
-	Parms.Bool = Bool;
+	Parms.Active = Active;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitOUT
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_MapEventHit_C::EventHitOUT()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MapEventHit_C", "EventHitOUT");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitIN
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_MapEventHit_C::EventHitIN()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MapEventHit_C", "EventHitIN");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_MapEventHit.BPI_MapEventHit_C.EventHitAction
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_MapEventHit_C::EventHitAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_MapEventHit_C", "EventHitAction");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

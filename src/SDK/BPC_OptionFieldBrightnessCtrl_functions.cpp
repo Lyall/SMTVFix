@@ -17,155 +17,105 @@
 namespace SDK
 {
 
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.BPI_SetOptionBrightnessActive
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_OptionFieldBrightnessCtrl_C::BPI_SetOptionBrightnessActive(bool Active, bool* NewParam)
+void UBPC_OptionFieldBrightnessCtrl_C::ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "BPI_SetOptionBrightnessActive");
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl");
 
-	Params::BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive Parms{};
+	Params::BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl Parms{};
 
-	Parms.Active = Active;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
 }
 
 
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.BPI_MultiplyBrightness_SelectPP
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APostProcessVolume*               PostProcess                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBPC_OptionFieldBrightnessCtrl_C::BPI_MultiplyBrightness_SelectPP(class APostProcessVolume* PostProcess, bool* NewParam)
+void UBPC_OptionFieldBrightnessCtrl_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "BPI_MultiplyBrightness_SelectPP");
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "ReceiveBeginPlay");
 
-	Params::BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.MultiplyBrightness
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBPC_OptionFieldBrightnessCtrl_C::MultiplyBrightness()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "MultiplyBrightness");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.MultiplyBrightness_SelectPP
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APostProcessVolume*               PostProcess                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_OptionFieldBrightnessCtrl_C::MultiplyBrightness_SelectPP(class APostProcessVolume* PostProcess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "MultiplyBrightness_SelectPP");
+
+	Params::BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP Parms{};
 
 	Parms.PostProcess = PostProcess;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
 }
 
 
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnGardenEnvLevelLoaded
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::OnGardenEnvLevelLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnGardenEnvLevelLoaded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.UpdateBrightnessVolume
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::UpdateBrightnessVolume()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "UpdateBrightnessVolume");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnEnvLevelLoaded_Base
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ResetBrightness
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ULevelStreaming*                  Level                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_OptionFieldBrightnessCtrl_C::OnEnvLevelLoaded_Base(class ULevelStreaming* Level)
+void UBPC_OptionFieldBrightnessCtrl_C::ResetBrightness()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnEnvLevelLoaded_Base");
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "ResetBrightness");
 
-	Params::BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Level = Level;
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.SetOptionBrightnessActive
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UBPC_OptionFieldBrightnessCtrl_C::SetOptionBrightnessActive(bool Active)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "SetOptionBrightnessActive");
+
+	Params::BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive Parms{};
+
+	Parms.Active = Active;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnBattleEnvLevelLoaded
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::OnBattleEnvLevelLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnBattleEnvLevelLoaded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnAreaEnvLevelLoaded
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::OnAreaEnvLevelLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnAreaEnvLevelLoaded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnSpecialEnvLevelLoaded
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::OnSpecialEnvLevelLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnSpecialEnvLevelLoaded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnMainEnvLevelLoaded
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::OnMainEnvLevelLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnMainEnvLevelLoaded");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -193,105 +143,155 @@ void UBPC_OptionFieldBrightnessCtrl_C::GetDefaultGainColor(const struct FOptionF
 }
 
 
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.SetOptionBrightnessActive
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnMainEnvLevelLoaded
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UBPC_OptionFieldBrightnessCtrl_C::SetOptionBrightnessActive(bool Active)
+void UBPC_OptionFieldBrightnessCtrl_C::OnMainEnvLevelLoaded()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "SetOptionBrightnessActive");
-
-	Params::BPC_OptionFieldBrightnessCtrl_C_SetOptionBrightnessActive Parms{};
-
-	Parms.Active = Active;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ResetBrightness
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::ResetBrightness()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "ResetBrightness");
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnMainEnvLevelLoaded");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.MultiplyBrightness_SelectPP
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnSpecialEnvLevelLoaded
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APostProcessVolume*               PostProcess                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_OptionFieldBrightnessCtrl_C::MultiplyBrightness_SelectPP(class APostProcessVolume* PostProcess)
+void UBPC_OptionFieldBrightnessCtrl_C::OnSpecialEnvLevelLoaded()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "MultiplyBrightness_SelectPP");
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnSpecialEnvLevelLoaded");
 
-	Params::BPC_OptionFieldBrightnessCtrl_C_MultiplyBrightness_SelectPP Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnAreaEnvLevelLoaded
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBPC_OptionFieldBrightnessCtrl_C::OnAreaEnvLevelLoaded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnAreaEnvLevelLoaded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnBattleEnvLevelLoaded
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBPC_OptionFieldBrightnessCtrl_C::OnBattleEnvLevelLoaded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnBattleEnvLevelLoaded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnEnvLevelLoaded_Base
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ULevelStreaming*                  Level                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_OptionFieldBrightnessCtrl_C::OnEnvLevelLoaded_Base(class ULevelStreaming* Level)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnEnvLevelLoaded_Base");
+
+	Params::BPC_OptionFieldBrightnessCtrl_C_OnEnvLevelLoaded_Base Parms{};
+
+	Parms.Level = Level;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.UpdateBrightnessVolume
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBPC_OptionFieldBrightnessCtrl_C::UpdateBrightnessVolume()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "UpdateBrightnessVolume");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.OnGardenEnvLevelLoaded
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBPC_OptionFieldBrightnessCtrl_C::OnGardenEnvLevelLoaded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "OnGardenEnvLevelLoaded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.BPI_MultiplyBrightness_SelectPP
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APostProcessVolume*               PostProcess                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UBPC_OptionFieldBrightnessCtrl_C::BPI_MultiplyBrightness_SelectPP(class APostProcessVolume* PostProcess, bool* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "BPI_MultiplyBrightness_SelectPP");
+
+	Params::BPC_OptionFieldBrightnessCtrl_C_BPI_MultiplyBrightness_SelectPP Parms{};
 
 	Parms.PostProcess = PostProcess;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
 }
 
 
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.MultiplyBrightness
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::MultiplyBrightness()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "MultiplyBrightness");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_OptionFieldBrightnessCtrl_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_OptionFieldBrightnessCtrl.BPC_OptionFieldBrightnessCtrl_C.BPI_SetOptionBrightnessActive
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UBPC_OptionFieldBrightnessCtrl_C::ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl(int32 EntryPoint)
+void UBPC_OptionFieldBrightnessCtrl_C::BPI_SetOptionBrightnessActive(bool Active, bool* NewParam)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl");
+		Func = Class->GetFunction("BPC_OptionFieldBrightnessCtrl_C", "BPI_SetOptionBrightnessActive");
 
-	Params::BPC_OptionFieldBrightnessCtrl_C_ExecuteUbergraph_BPC_OptionFieldBrightnessCtrl Parms{};
+	Params::BPC_OptionFieldBrightnessCtrl_C_BPI_SetOptionBrightnessActive Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Active = Active;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
 }
 
 }

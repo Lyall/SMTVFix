@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "EncountPointStruct_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EncountPointStruct_structs.hpp"
 #include "E_MAP_PLAYER_TYPE_structs.hpp"
 #include "Project_structs.hpp"
-#include "E_MAP_DEBUG_MES_TYPE_structs.hpp"
 #include "EncountData_st_structs.hpp"
+#include "E_MAP_DEBUG_MES_TYPE_structs.hpp"
 #include "EventBattleListStruct_structs.hpp"
 #include "ST_LightParam_structs.hpp"
 #include "MapActorCore_classes.hpp"
@@ -40,43 +40,43 @@ public:
 	class USceneComponent*                        Scene;                                             // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         Env___Track_0_36A7A3E1437D635D0B97F98B1B9F6A55;    // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Env__Direction_36A7A3E1437D635D0B97F98B1B9F6A55;   // 0x02AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_887F[0x3];                                     // 0x02AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BB6[0x3];                                     // 0x02AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     ENV;                                               // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Time;                                              // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ChangeFlag;                                        // 0x02BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8880[0x3];                                     // 0x02BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BB7[0x3];                                     // 0x02BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TimeC;                                             // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         DeltaTime;                                         // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         DebugCTime;                                        // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          FlyModeFlag;                                       // 0x02CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8881[0x3];                                     // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BB8[0x3];                                     // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SpeedG;                                            // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8882[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BB9[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             CallAction;                                        // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CallCancel;                                        // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CallRight;                                         // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CallLeft;                                          // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsFade;                                            // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8883[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BBA[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   TestClassAsset;                                    // 0x0320(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          First;                                             // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8884[0x3];                                     // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BBB[0x3];                                     // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               DebugLocalRot;                                     // 0x034C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FVector                                DebugLocalPos;                                     // 0x0358(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          TEST_FORCE_GAGE__;                                 // 0x0364(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8885[0x3];                                     // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BBC[0x3];                                     // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Name_MapCommonCtrl_C;                              // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 EndPoint;                                          // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 ReStartPoint;                                      // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EventEnable;                                       // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          NextBattle;                                        // 0x0381(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FEncountPointStruct                    TestBattle;                                        // 0x0382(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8886[0x6];                                     // 0x038A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BBD[0x6];                                     // 0x038A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEncountData_st                        TestDesc;                                          // 0x0390(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class AActor*                                 BtlPoint;                                          // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InitFade;                                          // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsEncount;                                         // 0x03C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8887[0x6];                                     // 0x03C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BBE[0x6];                                     // 0x03C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 EncountPawn;                                       // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             PlayerBattleReturnPos;                             // 0x03D0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	float                                         NearSafePoint;                                     // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -84,36 +84,36 @@ public:
 	class ABP_EventCtrl_C*                        EventCtrl;                                         // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EncontOff;                                         // 0x0410(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ForceEncountOFF;                                   // 0x0411(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8888[0x2];                                     // 0x0412(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BBF[0x2];                                     // 0x0412(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         EventFadeTime;                                     // 0x0414(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         EvtBtlID;                                          // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         EvtID;                                             // 0x041C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_EventBase_C*                        EvtBase;                                           // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             StartBattle;                                       // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             EndBattle;                                         // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	uint8                                         Pad_8889[0x8];                                     // 0x0448(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC0[0x8];                                     // 0x0448(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             EventTransform;                                    // 0x0450(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	TSoftClassPtr<class UClass>                   AssetName;                                         // 0x0480(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	int32                                         SymbolCounter;                                     // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SymbolMax;                                         // 0x04AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSymbolSpawn;                                     // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_888A[0x7];                                     // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC1[0x7];                                     // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  DebugOldPlayer;                                    // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MAP_PLAYER_TYPE                             MapPlayerType;                                     // 0x04C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_888B[0x7];                                     // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC2[0x7];                                     // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMapDebugWindow_C*                      DebugWindow;                                       // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MAP_DEBUG_MES_TYPE                          DebugType;                                         // 0x04D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_888C[0x7];                                     // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC3[0x7];                                     // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FText>                           TextList;                                          // 0x04D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          DebugStopGageAct;                                  // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          DebugUpDateON;                                     // 0x04E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_888D[0x6];                                     // 0x04EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC4[0x6];                                     // 0x04EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             ReturnMap;                                         // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsEventBattle;                                     // 0x0500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_888E[0x7];                                     // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC5[0x7];                                     // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerBase_C*                          EventGattaiForm;                                   // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMapAttack;                                       // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_888F[0x7];                                     // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC6[0x7];                                     // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             CallSkyterminalMarkerBoot;                         // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CallSkyterminalMarkerSet;                          // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	float                                         AxisInput_LeftX;                                   // 0x0538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -122,23 +122,23 @@ public:
 	float                                         AxisInput_RightY;                                  // 0x0544(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             CallAutoMap;                                       // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsForceSafe;                                       // 0x0558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8890[0x7];                                     // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC7[0x7];                                     // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             CallSkyterminalMarkerBootRelease;                  // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsCustomMap;                                       // 0x0570(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8891[0x7];                                     // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC8[0x7];                                     // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptMessageAsset*                    EventViewName;                                     // 0x0578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         DebugMesActorArray;                                // 0x0580(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	float                                         PieceTimer;                                        // 0x0590(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EventHitOff;                                       // 0x0594(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsPause;                                           // 0x0595(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8892[0x2];                                     // 0x0596(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BC9[0x2];                                     // 0x0596(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             CallSikaku;                                        // 0x0598(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class APawn*                                  TempPawn;                                          // 0x05A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class ADevilBase_C*>                   SymbolHideList;                                    // 0x05B0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	int32                                         NextMapId;                                         // 0x05C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NextEventID;                                       // 0x05C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         EventType;                                         // 0x05C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8893[0x4];                                     // 0x05CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BCA[0x4];                                     // 0x05CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FEventBattleListStruct>         EventBTLActor;                                     // 0x05D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FTransform                             EventBtLActorPos;                                  // 0x05E0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FTransform                             EventOldCameraPos;                                 // 0x0610(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -147,91 +147,91 @@ public:
 	bool                                          IsLessEventBtL;                                    // 0x0680(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EventLoadEnd;                                      // 0x0681(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ForceEnd;                                          // 0x0682(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8894[0x1];                                     // 0x0683(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BCB[0x1];                                     // 0x0683(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Name_old;                                          // 0x0684(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SaveSlot;                                          // 0x068C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_FINISHED_STATE                          BtlFinishedState;                                  // 0x0690(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8895[0x7];                                     // 0x0691(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BCC[0x7];                                     // 0x0691(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 EncountAreaActor;                                  // 0x0698(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<bool>                                  PlayerPauseList;                                   // 0x06A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          M_EventViewer_EndViewPlayer;                       // 0x06B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_BTN_HELP_SET                                ButtonHelpType;                                    // 0x06B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8896[0x2];                                     // 0x06B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BCD[0x2];                                     // 0x06B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NextAreaId;                                        // 0x06B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NextPointID;                                       // 0x06B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8897[0x4];                                     // 0x06BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BCE[0x4];                                     // 0x06BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TokyoCameraPos;                                    // 0x06C0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	class APlayerCameraManager*                   TokyoCamMag;                                       // 0x06F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 Aaa;                                               // 0x06F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             EndEvent;                                          // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          WaitEvent;                                         // 0x0710(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8898[0x7];                                     // 0x0711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BCF[0x7];                                     // 0x0711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_MapGimmickTrigger_C*                GimmickTrigger;                                    // 0x0718(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnMapFromOutsideCheck;                         // 0x0720(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8899[0x7];                                     // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD0[0x7];                                     // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AEncountActor_New_C*                    EncountActor;                                      // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 BattlePointActor;                                  // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsBtlNormalEnd;                                    // 0x0738(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_889A[0x7];                                     // 0x0739(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD1[0x7];                                     // 0x0739(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACameraActor*                           ShopCam;                                           // 0x0740(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SymbolPause;                                       // 0x0748(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_889B[0x3];                                     // 0x0749(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD2[0x3];                                     // 0x0749(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FST_LightParam                         NextLightParam;                                    // 0x074C(0x0318)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FST_LightParam                         PrevLightParam;                                    // 0x0A64(0x0318)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_889C[0x4];                                     // 0x0D7C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD3[0x4];                                     // 0x0D7C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             PlayerTransform_BeforePause;                       // 0x0D80(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	int32                                         M_DebugOverrideBattleMapDarkID;                    // 0x0DB0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ManualBtlEnd;                                      // 0x0DB4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ManualEvtEnd;                                      // 0x0DB5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_889D[0x2];                                     // 0x0DB6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD4[0x2];                                     // 0x0DB6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MapTimer;                                          // 0x0DB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MagatsukaDiscoveryCnt;                             // 0x0DBC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         NaviDevilGimmicks;                                 // 0x0DC0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	class ABP_NaviDevilCtrlBase_C*                NaviDevilCtrl;                                     // 0x0DD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   NaviDevilCtrl_soft;                                // 0x0DD8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          MapStart_SimpleEventEnable;                        // 0x0E00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_889E[0x7];                                     // 0x0E01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD5[0x7];                                     // 0x0E01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             StartMap_SimpleEvent;                              // 0x0E08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          AActionLock;                                       // 0x0E18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_889F[0x7];                                     // 0x0E19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD6[0x7];                                     // 0x0E19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 AActionActor;                                      // 0x0E20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCameraPause;                                     // 0x0E28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A0[0x7];                                     // 0x0E29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD7[0x7];                                     // 0x0E29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             EndTakara_ForSimpleEvent;                          // 0x0E30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          bHide_WhenBattleOrEvent;                           // 0x0E40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A1[0x3];                                     // 0x0E41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD8[0x3];                                     // 0x0E41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Debug_skyLight;                                    // 0x0E44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnvChange_Enable;                                  // 0x0E48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A2[0x3];                                     // 0x0E49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BD9[0x3];                                     // 0x0E49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NaviGimmickBlankIndex;                             // 0x0E4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             CallNaviGimmickTutorial_ForInner;                  // 0x0E50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CallNaviGimmickTutorial_ForOuter;                  // 0x0E60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          Estoma_WhenPause;                                  // 0x0E70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EnvChangeMagatuka;                                 // 0x0E71(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A3[0x6];                                     // 0x0E72(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BDA[0x6];                                     // 0x0E72(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             EndMagatsuka_ForSimpleEvent;                       // 0x0E78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<class AActor*>                         MagatsukaList;                                     // 0x0E88(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	bool                                          UniqueSymbolBGM;                                   // 0x0E98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A4[0x7];                                     // 0x0E99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BDB[0x7];                                     // 0x0E99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   Traport_Soft;                                      // 0x0EA0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class USoundAtomCue*                          PrevNormalMapBGM;                                  // 0x0EC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RequestTaoHeal;                                    // 0x0ED0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsStatusMode;                                      // 0x0ED1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A5[0x6];                                     // 0x0ED2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BDC[0x6];                                     // 0x0ED2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 SaveCtrl;                                          // 0x0ED8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBP_EstomaData_C*                       EstomaData;                                        // 0x0EE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EstomaForceVisible;                                // 0x0EE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A6[0x7];                                     // 0x0EE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BDD[0x7];                                     // 0x0EE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_EstomaCtrl_C*                       EstomaCtrl;                                        // 0x0EF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Riberama_WhenPause;                                // 0x0EF8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bPushMapMouseCursor;                               // 0x0EF9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EstomaButtonHelpGrayOut;                           // 0x0EFA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EstomaButtonHelpView;                              // 0x0EFB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EstomaButtonHelpHoldEffect;                        // 0x0EFC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A7[0x3];                                     // 0x0EFD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BDE[0x3];                                     // 0x0EFD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 BossRushFieldCtrl;                                 // 0x0F00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IgnoreEstomaEffectPause;                           // 0x0F08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A8[0x7];                                     // 0x0F09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BDF[0x7];                                     // 0x0F09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             CallTopCameraOnStartTop;                           // 0x0F10(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             CallTopCameraOnFinishTop;                          // 0x0F20(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class ABP_EventDefaultAO_C*                   DefaultAO;                                         // 0x0F30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -239,323 +239,323 @@ public:
 	TArray<float>                                 BattleDirectionLightBloomScales;                   // 0x0F48(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         InsideAgratFieldCnt;                               // 0x0F58(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShouldTickPlayerCamera;                            // 0x0F5C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88A9[0x3];                                     // 0x0F5D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6BE0[0x3];                                     // 0x0F5D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FailSafeTimer;                                     // 0x0F60(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ApplyMissionMapBGM(bool* Dummy);
-	void IsInGardenLevel(bool* Param_IsInGardenLevel);
-	void IsGardenOpen(int32 MapId, bool* Param_IsGardenOpen);
-	void GetGardenWarpPoint(int32* WarpPoint);
-	void IsGardenLoaded(bool* End);
-	void IsMapSystemHideEnd(bool* End);
-	void IsMapSystemUnloadEnd(bool* End);
-	void IsMapEventPlaying(bool* Param_IsMapEventPlaying);
-	void SetMapEventPlaying(bool Param_IsMapEventPlaying, bool* Dummy);
-	void IsMapSystemLevelLoadEnd(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type, bool* End);
-	void IsGameStart(bool* Enable);
-	void IsBGLoadMapArea(bool* Emd);
-	void IsUnLoadMapArea(bool* End);
-	void IsMapSystemOnlyLoadEnd(bool* End);
-	void IsMapSystemBKLoadEnd(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type, bool* End);
-	void IsNextMapBGLoadEnd(bool* End);
-	void IsLoadMapArea(bool* End);
-	void IsLoadMapUnResident(int32 MapId, bool* LoadAfterView);
-	void BPI_SetAgratField(bool Inside, bool* NewParam);
-	void BPI_CheckAgratField(bool* Inside);
-	void BPI_CheckHide_WhenBattleOrEvent(bool* Hide);
-	void BPI_CheckAfterLoaded(bool* AfterLoaded);
-	void BPI_UpdateOptionFieldBrightness(bool* NewParam);
-	void BPI_MapTopCameraOnFinishTop(bool* Dummy);
-	void BPI_MapTopCameraOnStartTop(bool* Dummy);
-	void BPI_IgnoreEstomaEffectPause(bool Ignore, bool* NewParam);
-	void BPI_GetOptionFieldBrightnessCtrl(class UActorComponent** Component);
-	void BPI_RemoveEncountAreaList(class AActor* EncountArea, bool* NewParam);
-	void BPI_AddEncountAreaList(class AActor* EncountArea, bool* NewParam);
-	void BPI_GetBossRushFieldCtrl(class AActor** Actor);
-	void BPI_SetBossRushFieldCtrl(class AActor* Actor, bool* NewParam);
-	void BPI_SetLevelVisibilityEnabled(bool Enable, bool* Dummy);
-	void BPI_IsStatusMode(bool* Param_IsStatusMode);
-	void BPI_SetStatusMode(bool Param_IsStatusMode, bool* NoUse);
-	void BPI_UpdateLevelVisibility(const struct FVector& NewLocation, bool* Updated);
-	void BPI_GetEncountAreaAll(TArray<class AActor*>* Actors);
-	void BPI_UpdateUniqueSymbolBGM(bool* NewParam);
-	void BPI_UnregisterMagatsuka(class AActor* Actor, bool* NewParam);
-	void BPI_RegisterMagatsuka(class AActor* Actor, bool* NewParam1);
-	void BPI_ShowMapButtonHelp(bool* Dummy);
-	void BPI_GetMapButtonHelpType(E_BTN_HELP_SET* Out);
-	void BPI_IsTokyoLargeMap(bool* IsTokyoLargeMap);
-	void BPI_CheckMapEnableCamera(bool* Param_IsPause);
-	void BPI_CheckAActionLock(bool* Lock, class AActor** Param_AActionActor);
-	void BPI_SetAActionLock(bool Lock, class AActor* Param_AActionActor, bool* NewParam1);
-	void BPI_GetNaviDevilCtrl(class AActor** Actor);
-	void BPI_GetNaviDevilPawn(class APawn** Pawn);
-	void BPI_SetNaviDevilPawn(class APawn* Pawn, bool* NewParam1);
-	void BPI_CheckMagatsukaDiscoveryCnt(bool* Discovery);
-	void BPI_AddMagatsukaDiscoveryCnt(int32 Add, bool* NewParam1);
-	void BPI_GetMapTimer(float* Param_MapTimer);
-	void BPI_SetDebugOverrideBattleMapDarkID(int32 MapDarkID, bool* NoUse);
-	void BPI_CheckSymbolPause(bool* Pause);
-	void GetGShopCamera(class ACameraActor** Cam);
-	void BI_IsEventView(bool* IsEventView);
-	void BI_GetDaathIntensityEff(struct FLinearColor* Intensity);
-	void JsonCounterGet(int32* EncountNum, int32* MagatukaNum);
-	void BPI_GetMapGimmickTrigger(class AActor** Actor);
-	void GetJsonFileName(class FString* Filename);
-	void GetJsonData(class UJsonDataCtrl** Json);
-	void GetDebugGameTrace(bool* IsEnable);
-	void BPI_MakeUpLessEvent(bool* RetValue);
-	void GetEventBattleActor(TArray<class AActor*>* List);
-	void IsLoadLevelGame(bool* Enable);
-	void GetNextMapAssetList(TArray<struct FLoadOnlyResident_ST>* LevelList);
-	void IsNextMapLoadStart(bool* Return);
-	void IsNextMapLoadEnd(bool* Return);
-	void GetNextMapStartList(struct FLoadOnlyResident_ST* Return);
-	void GetMapStartLoadFlag(bool* Enable);
-	void BPI_IsEventPlay(bool* IsPlay);
-	void BPI_GetEventReserv(int32* MapEventID);
-	void BI_CheckEncountOn(bool* EncountOn);
-	void BPI_GetBuddyPawn(class APawn** Pawn);
-	void BPI_CheckMapPause(bool* Param_IsPause);
-	void GetSavingWidget(bool* Widget);
-	void IsEventHitOff(bool* Enable);
-	void GetcurrentLevelCustom(bool* Enable);
-	void GetIsBattle(bool* IsBattle);
-	void BPI_IsSpawnSymbol(bool* NewParam);
-	void BPI_GetMapCommon(class AActor** Rerutn);
-	void MapChangeBridgeMode(int32 MapId, int32 AreaId, int32 WarpPoint, int32 FromEvent, int32 OtherMapReturn);
-	void DebugLogPlayerVisibility();
-	void RegisterActorVisibilityVolume();
-	void ApplyActorVisibilityDebug();
-	void CanUseMapAttack(bool* CanUse);
-	bool CheckGardenTribute();
-	void CanUseMapSave(bool* CanUse);
-	void CanUseMapTopCamera(bool* CanUse);
-	void PopMapMouseCursor();
-	void PushMapMouseCursor();
-	void ProcRiberama_WhenMapStart();
-	void ProcRiberama_WhenMapPause();
-	void CheckEnoughMagatsuhi_ForEstoma(bool* Enough);
-	void ProcEstoma_WhenMapStart();
-	void ProcEstoma_WhenMapPause();
-	void CheckSaveUnlock(bool* Unlock);
-	void TraceForEncount(const struct FTransform& InPos, int32 BattleFIeldID, struct FTransform* OutPos, bool* Hit);
-	void SetBoost(bool Enabled);
-	void CheckUnlock_MapAutoHeal(bool* Unlock);
-	void CheckUnlock_MapTraport(bool* Unlock);
-	void SetOcclusionSetting();
-	void CheckShowButtonHelp();
-	void MoonAgeCheckOpen();
-	void GetTokyoLargeMapUI(class ABP_TokyoMapUI_C** TokyoMapUI);
-	void IsTokyoLargeMap(bool* IsTokyo);
-	void CheckMagatsukaArea(class AActor* Area, bool* Magatsuka);
-	void FindSafePoint_ForEncountArea(struct FTransform* Transform, int32* BattleFIeldID);
-	void HideButtonHelp();
-	void ShowButtonHelp();
-	void EventView_MoveStartCharaPos(int32 MapEventID, bool* IsStartEvent, bool* IsSet);
-	void CalcCheckBtlForceHit();
-	void NextEventSelect(int32 OnFlag1, int32 OffFlag1, int32 OnFlag2, int32 OffFlag2, int32 One_Map, int32 One_Area, int32 One_Point, int32 One_Event, int32 Two_Map, int32 Two_Area, int32 Two_Point, int32 Two_Event, int32* NextMap, int32* NextArea, int32* NextPoint, int32* NextEvent);
-	void EventSeparete(int32 Flag1, int32 Flag2, bool* TURR);
-	void MapDebugMes_ViewMapEvent();
-	void MapDebugMes_ViewFacility();
-	void MapDebugMes_ViewTakara();
-	void FindSafePoint(int32 SafeZoneID, bool ManualSafeZone, struct FTransform* Transform, int32* BattleFIeldID);
-	void ActiveBattle(bool* NewParam);
-	void Env__FinishedFunc();
-	void Env__UpdateFunc();
-	void ActPadEvt_Map_Estoma_K2Node_ActionPadEvent_10(const struct FKey& Key);
-	void OnLoaded_F628C93F43330FA28013338DF031C2F5(TSubclassOf<class UObject> Loaded);
-	void OnLoaded_E1BE54FB459C6F1F0D123FB2817DD21B(TSubclassOf<class UObject> Loaded);
-	void OnLoaded_8873E8F24C05929027A36C9F8BFCDFB0(TSubclassOf<class UObject> Loaded);
-	void ActPadEvt_Map_Action_K2Node_ActionPadEvent_9(const struct FKey& Key);
-	void ActPadEvt_Utl_Cancel_K2Node_ActionPadEvent_8(const struct FKey& Key);
-	void ActPadEvt_Utl_Right_K2Node_ActionPadEvent_7(const struct FKey& Key);
-	void ActPadEvt_Utl_Left_K2Node_ActionPadEvent_6(const struct FKey& Key);
-	void ActPadEvt_Map_AutoMap_K2Node_ActionPadEvent_5(const struct FKey& Key);
-	void ActPadEvt_Map_Attack_K2Node_ActionPadEvent_4(const struct FKey& Key);
-	void ActPadEvt_Map_AutoHeal_K2Node_ActionPadEvent_3(const struct FKey& Key);
-	void ActPadEvt_Map_Traport_K2Node_ActionPadEvent_2(const struct FKey& Key);
-	void ActPadEvt_Map_ViewDown_K2Node_ActionPadEvent_1(const struct FKey& Key);
-	void ActPadEvt_Map_Save_K2Node_ActionPadEvent_0(const struct FKey& Key);
-	void SetDaathAreaLock(bool Lock);
-	void MapStartLoad();
-	void MapAllResidentDelete(int32 NextMap, int32 NextArea);
-	void MapAreaLoad(int32 Map, int32 Area, bool LoadAfterView);
-	void MapAreaView(int32 Map, int32 Area);
-	void MapAreaUnload(int32 Map, int32 Area);
-	void MapUnResidentLoad(int32 MapId, int32 AreaId, bool LoadAfterView);
-	void MapUnResidentView(int32 MapId);
-	void MapUnResidentUnLoad(int32 MapId);
-	void StartNextMapBGLoad(int32 MapId, int32 AreaId);
-	void MapOpenLevel(int32 Old_mapID, int32 Old_AreaID, int32 New_MapID, int32 New_AreaId);
-	void MapInitEnd();
-	void MapSystemBKLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
-	void MapSystemBKUnLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
-	void MapSystemBKView(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
-	void NextMapBGUnLoad();
-	void MapSystem_StreamOnlyUnLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
-	void MapSystem_StreamOnlyLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
-	void LevelChange(const struct FPrimaryAssetId& UnLoad, const struct FPrimaryAssetId& Load);
-	void InitFadeCancel();
-	void DaathSublevelManagerInit();
-	void DebugTraceStart();
-	void DebugTraceStop();
-	void DebugTraceView_Player();
-	void DebugTraceActivePos(const struct FDebugTrace_St_Action& Action);
-	void DebugTraceViewOFF();
-	void EndLoadUnResident();
-	void InitPause();
-	void ForceTraport();
-	void MapSystemBKHide(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
-	void MapAreaChange(int32 MapId, int32 CurrentAreaId, int32 NewAreaId, bool LoadAfterView);
-	void StartGardenLoad(int32 MapId, int32 WarpPoint, bool LoadAfterView);
-	void StartGardenUnload(int32 MapId);
-	void BPI_SetMapCommon(class AActor* Actor);
-	void BPI_AddSpawnEnemyCount();
-	void BPI_DebugChangeChar(E_MAP_PLAYER_TYPE Type);
-	void BPI_CallKokubouEvent(int32 EventId, class AActor* RestarPoint, class AActor* BattlePoint);
-	void BPI_OpenSkyTerminal();
-	void BPI_MapAttackEnd(bool Enable);
-	void BPI_SetEventReserv(int32 MapEventID);
-	void BPI_HeroChange(bool Param_IsFade, E_MAP_PLAYER_TYPE Hero);
-	void SetNextMapAssetList(const TArray<struct FPrimaryAssetId>& LevelList, const TArray<class FName>& NameList, int32 MapId, int32 AreaId);
-	void SetNextMapLoadStart(bool Enable);
-	void SetNextMapLoadEnd(bool Enable);
-	void DeleteNextMapAssetList();
-	void SetNextMapStartList(const TArray<struct FPrimaryAssetId>& LevelList, const TArray<class FName>& LevelNameList, int32 MapId, int32 AreaId);
-	void SetMapStartLoadFlag(bool Enable);
-	void SetLoadLevelGame(bool Enable);
-	void BPI_SetEncountActor(class AActor* Actor);
-	void StartDebugGameTrace(bool IsEnable);
-	void SetJsonData(class UJsonDataCtrl* Json);
-	void SetJsonFile(const class FString& Json);
-	void JsonCounterAdd(int32 EncountAdd, int32 MagatukaNum);
-	void BI_SetMapChange(bool IsMapChange, int32 WarpPoint, int32 FromEvent, int32 OtherMapReturn);
-	void Tick_EstomaButtonHelpCheck();
-	void Estoma_WhenBeginMap();
-	void BPI_GardenLoad(int32 WarpPoint, float FadeInTime);
-	void BPI_GardenUnload(float FadeInTime);
-	void CallSaveShortcut();
-	void CallTopCamera();
-	void CallAutoHeal();
-	void CallTraport();
-	void BPI_TokyoLargeMapAddIconTalk(const struct FVector& ActorLocation, class FName InactiveFlag, class AActor* Param_Owner);
-	void BPI_TokyoLargeMapDeleteIcon(class AActor* Param_Owner);
-	void BPI_TokyoLargeMapShowPlace(int32 DataId);
-	void BPI_TokyoLargeMapHidePlace(int32 DataId);
-	void InitNaviDevil(bool FromLoad);
-	void BPI_EntryNaviDevillGimmick(class AActor* Actor);
-	void BPI_RequestNaviDevilVisible(bool Visible);
-	void EnvChange_Play(const struct FST_LightParam& Next, const struct FST_LightParam& Prev);
-	void EnvChange_Reverse();
-	void EnvChangeMagatuka_Play(float Alpha);
-	void Env_ChangeSpecial_Play(int32 Param_Index, float Alpha);
-	void EnvChange_Immediate();
-	void HiddenVolume();
-	void VisibleVolume();
-	void InitDebugMes();
-	void UpdateText(const TArray<class FText>& Param_TextList);
-	void UpdateDebugText();
-	void BPI_DebugMesWindow(E_MAP_DEBUG_MES_TYPE MesType);
-	void BPI_LoadMap(bool InFadeCancel);
-	void MapLoadStart();
-	void ContinueLoad();
-	void SetEvent(class FName Param_Name, class AActor* Param_ReStartPoint, class AActor* BattlePoint, bool Param_NextBattle, bool Param_InitFade, int32 EvtBattleID, int32 Param_NextMapId, int32 Param_NextAreaId, int32 Param_NextPointID, int32 Param_NextEventID, int32 Type);
-	void StartEvent();
-	void EventFunc();
-	void NextBtl();
-	void NextMap();
-	void ToBtl(class ADevilBase_C* _____);
-	void PointSetting();
-	void PointSet_Battle();
-	void PointSet_Player();
-	void NextOtherMap();
-	void BeforOtherMap(int32 Param_NextMap, int32 NextArea, int32 NextWarpPoint, int32 NextEvent);
-	void MapChange_FromEvent(int32 EventId);
-	void AfterEventCall();
-	void NextKeyFreeMap();
-	void ForceEventEnd();
-	void SetEventBattleActor(const TArray<struct FEventBattleListStruct>& BTLActor, const struct FTransform& PlayerPos);
-	void BPI_CallMapEvent(int32 MapEventID_, class AActor* Param_ReStartPoint, class AActor* BattlePoint, bool Param_InitFade, bool Param_WaitEvent);
-	void EventEndMap();
-	void BPI_MapStart_SimpleEventEnable();
-	void ResetEventBattleActor();
-	void BPI_SpawnEncountActor(const TArray<int32>& EnemyIdList, int32 EncountID, const struct FTransform& SpawnTransform, class AActor* Param_EncountPawn, E_BTL_SYMBOL_ENCOUNT SymbolEncountType, bool ManualWhenNotEscape, bool HitMapAttack, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi);
-	void BPI_ReturnFromBtl();
-	void ActiveEncount_();
-	void BPI_SetEncountOff();
-	void BPI_SetEncountON();
-	void BPI_CallEventEncount(int32 EventEncountId, const struct FTransform& SpawnTransform, int32 Param_NextEventID, int32 NowEventID, bool Manual);
-	void BPI_ForceSafeEncount(bool Enable);
-	void MakeUpLessEvent();
-	void RecordEncountArea(class APawn* DevilPawn);
-	void BPI_CallEncountForMagatsuka(int32 EncountID, const TArray<int32>& EnemyList, int32 SafeZoneID, bool ManualSafeZone, E_BTL_SYMBOL_ENCOUNT EncountType, bool HitMapAttack);
-	void SpawnEncountActor_Core(const struct FTransform& SpawnTransform, int32 EncountID, const TArray<int32>& EnemyIdList, bool Param_IsEventBattle, class ADevilBase_C* SymbolPawn, bool ExistNextEvent, int32 NextEvtID, int32 NowEvtID, bool Manual, bool ManualWhenNotEscape, int32 BattleFIeldID, E_BTL_SYMBOL_ENCOUNT SymbolEncountType, bool Magatsuka, bool MagatsukaBoss, bool HitMapAttack, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi, bool BossRush, bool BossRushChallengMode, bool NaviEncount);
-	void EncountActor_Destroyed(class AActor* DestroyedActor);
-	void BPI_CallEncountForNaviDevil(int32 EncountID, const TArray<int32>& EnemyList, int32 SafeZoneID, bool ManualSafeZone, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi, bool PlayerFirst);
-	void BPI_CallEncountForDebug(int32 EncountID, const TArray<int32>& EnemyList, int32 SafeZoneID, bool ManualSafeZone, E_BTL_SYMBOL_ENCOUNT EncountType);
-	void BPI_CallEventEncount_ForUniqueSymbol(int32 EventEncountId, const struct FTransform& SpawnTransform, bool ManualWhenNotEscape, bool HitMapAttack, E_BTL_SYMBOL_ENCOUNT EncountType);
-	void BPI_CallEventEncountForMagatsuka(int32 EventEncountId, int32 SafeZoeID, bool ManualSafeZone, bool HitMapAttack);
-	void BPI_CallEventEncount_BossRush(int32 EventEncountId, int32 Param_NextEventID, int32 NowEventID, bool Manual, bool ChallengeMode);
-	void SettingLight_BeforeBattle();
-	void SettingLight_AfterBattle();
-	void InitEncount_AfterLoaded();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void BindCallPause();
-	void Paused();
-	void BindCallUnPause();
-	void UnPaused();
-	void Init();
-	void MapChangeCheck();
-	void WarpPoint(int32 Param_WarpPoint);
-	void BPI_MapPlayerStop(bool Stop, bool Hidden);
-	void PauseNoUpdate();
-	void BPI_MapPause(bool PlayerMoveEnable, bool PlayerCameraEnable, bool PlayerVisible, bool MoonTimeEnable, bool SymbolEnable, bool AllMapStop, bool AllObjectHidden, bool TopCamera);
-	void BPI_MapStart(bool MissionCheckDisable, bool StartSymbolAIDisable, bool ReturnPlayerPosition, bool UI_Immediate);
-	void MapHidden();
-	void MapVisible();
-	void ReturnMapFromOutSide(bool AutoSave, bool ReturnPlayerPosition, bool UI_Immediate);
-	void BPI_PlayerOFF();
-	void BPI_PlayerON();
-	void MoonStart();
-	void MapInit();
-	void TokyoLMapStop();
-	void TokyoLMapStart();
-	void ReturnMapFromOutside_WaitKeyFree();
-	void BPI_ReturnMapFromOutside(bool AutoSave, bool ReturnPlayerPosition, bool UI_Immediate);
-	void BPI_ChangeArea(int32 Param_NextAreaId, int32 Param_WarpPoint, float FadeInTime);
-	void EndFadeIn_ChangeArea();
-	void BPI_EndTakara_ForSimpleEvent(int32 TakaraID);
-	void BPI_ShowObjects_WhenReturnMap();
-	void BPI_HideObjects_WhenExitMap();
-	void BPI_NaviGimmickTutorial_ForInner();
-	void BPI_NaviGimmickTutorial_ForOuter();
-	void BPI_PreSystemLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Enum);
-	void BPI_EndMagatsuka_ForSimpleEvent();
-	void BPI_Tokyo_Large_Map_Add_Icon_Mission(const struct FVector& ActorLocation, int32 MissionId, class AActor* Param_Owner);
-	void BPI_LoadMapBridgeMode(int32 Param_NextMapId, int32 Param_NextAreaId, bool FadeCancel);
-	void ExecuteUbergraph_MapCommonCtrl(int32 EntryPoint);
-	void CallTopCameraOnFinishTop__DelegateSignature();
-	void CallTopCameraOnStartTop__DelegateSignature();
-	void EndMagatsuka_ForSimpleEvent__DelegateSignature();
-	void CallNaviGimmickTutorial_ForOuter__DelegateSignature();
-	void CallNaviGimmickTutorial_ForInner__DelegateSignature();
-	void EndTakara_ForSimpleEvent__DelegateSignature(int32 TakaraID);
-	void StartMap_SimpleEvent__DelegateSignature();
-	void EndEvent__DelegateSignature();
-	void CallSikaku__DelegateSignature();
-	void CallSkyterminalMarkerBootRelease__DelegateSignature();
-	void CallAutoMap__DelegateSignature();
-	void CallSkyterminalMarkerSet__DelegateSignature();
-	void CallSkyterminalMarkerBoot__DelegateSignature();
-	void ReturnMap__DelegateSignature();
-	void EndBattle__DelegateSignature();
-	void StartBattle__DelegateSignature();
-	void CallLeft__DelegateSignature();
-	void CallRight__DelegateSignature();
-	void CallCancel__DelegateSignature();
 	void CallAction__DelegateSignature();
+	void CallCancel__DelegateSignature();
+	void CallRight__DelegateSignature();
+	void CallLeft__DelegateSignature();
+	void StartBattle__DelegateSignature();
+	void EndBattle__DelegateSignature();
+	void ReturnMap__DelegateSignature();
+	void CallSkyterminalMarkerBoot__DelegateSignature();
+	void CallSkyterminalMarkerSet__DelegateSignature();
+	void CallAutoMap__DelegateSignature();
+	void CallSkyterminalMarkerBootRelease__DelegateSignature();
+	void CallSikaku__DelegateSignature();
+	void EndEvent__DelegateSignature();
+	void StartMap_SimpleEvent__DelegateSignature();
+	void EndTakara_ForSimpleEvent__DelegateSignature(int32 TakaraID);
+	void CallNaviGimmickTutorial_ForInner__DelegateSignature();
+	void CallNaviGimmickTutorial_ForOuter__DelegateSignature();
+	void EndMagatsuka_ForSimpleEvent__DelegateSignature();
+	void CallTopCameraOnStartTop__DelegateSignature();
+	void CallTopCameraOnFinishTop__DelegateSignature();
+	void ExecuteUbergraph_MapCommonCtrl(int32 EntryPoint);
+	void BPI_LoadMapBridgeMode(int32 Param_NextMapId, int32 Param_NextAreaId, bool FadeCancel);
+	void BPI_Tokyo_Large_Map_Add_Icon_Mission(const struct FVector& ActorLocation, int32 MissionId, class AActor* Param_Owner);
+	void BPI_EndMagatsuka_ForSimpleEvent();
+	void BPI_PreSystemLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Enum);
+	void BPI_NaviGimmickTutorial_ForOuter();
+	void BPI_NaviGimmickTutorial_ForInner();
+	void BPI_HideObjects_WhenExitMap();
+	void BPI_ShowObjects_WhenReturnMap();
+	void BPI_EndTakara_ForSimpleEvent(int32 TakaraID);
+	void EndFadeIn_ChangeArea();
+	void BPI_ChangeArea(int32 Param_NextAreaId, int32 Param_WarpPoint, float FadeInTime);
+	void BPI_ReturnMapFromOutside(bool AutoSave, bool ReturnPlayerPosition, bool UI_Immediate);
+	void ReturnMapFromOutside_WaitKeyFree();
+	void TokyoLMapStart();
+	void TokyoLMapStop();
+	void MapInit();
+	void MoonStart();
+	void BPI_PlayerON();
+	void BPI_PlayerOFF();
+	void ReturnMapFromOutSide(bool AutoSave, bool ReturnPlayerPosition, bool UI_Immediate);
+	void MapVisible();
+	void MapHidden();
+	void BPI_MapStart(bool MissionCheckDisable, bool StartSymbolAIDisable, bool ReturnPlayerPosition, bool UI_Immediate);
+	void BPI_MapPause(bool PlayerMoveEnable, bool PlayerCameraEnable, bool PlayerVisible, bool MoonTimeEnable, bool SymbolEnable, bool AllMapStop, bool AllObjectHidden, bool TopCamera);
+	void PauseNoUpdate();
+	void BPI_MapPlayerStop(bool Stop, bool Hidden);
+	void WarpPoint(int32 Param_WarpPoint);
+	void MapChangeCheck();
+	void Init();
+	void UnPaused();
+	void BindCallUnPause();
+	void Paused();
+	void BindCallPause();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void InitEncount_AfterLoaded();
+	void SettingLight_AfterBattle();
+	void SettingLight_BeforeBattle();
+	void BPI_CallEventEncount_BossRush(int32 EventEncountId, int32 Param_NextEventID, int32 NowEventID, bool Manual, bool ChallengeMode);
+	void BPI_CallEventEncountForMagatsuka(int32 EventEncountId, int32 SafeZoeID, bool ManualSafeZone, bool HitMapAttack);
+	void BPI_CallEventEncount_ForUniqueSymbol(int32 EventEncountId, const struct FTransform& SpawnTransform, bool ManualWhenNotEscape, bool HitMapAttack, E_BTL_SYMBOL_ENCOUNT EncountType);
+	void BPI_CallEncountForDebug(int32 EncountID, const TArray<int32>& EnemyList, int32 SafeZoneID, bool ManualSafeZone, E_BTL_SYMBOL_ENCOUNT EncountType);
+	void BPI_CallEncountForNaviDevil(int32 EncountID, const TArray<int32>& EnemyList, int32 SafeZoneID, bool ManualSafeZone, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi, bool PlayerFirst);
+	void EncountActor_Destroyed(class AActor* DestroyedActor);
+	void SpawnEncountActor_Core(const struct FTransform& SpawnTransform, int32 EncountID, const TArray<int32>& EnemyIdList, bool Param_IsEventBattle, class ADevilBase_C* SymbolPawn, bool ExistNextEvent, int32 NextEvtID, int32 NowEvtID, bool Manual, bool ManualWhenNotEscape, int32 BattleFIeldID, E_BTL_SYMBOL_ENCOUNT SymbolEncountType, bool Magatsuka, bool MagatsukaBoss, bool HitMapAttack, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi, bool BossRush, bool BossRushChallengMode, bool NaviEncount);
+	void BPI_CallEncountForMagatsuka(int32 EncountID, const TArray<int32>& EnemyList, int32 SafeZoneID, bool ManualSafeZone, E_BTL_SYMBOL_ENCOUNT EncountType, bool HitMapAttack);
+	void RecordEncountArea(class APawn* DevilPawn);
+	void MakeUpLessEvent();
+	void BPI_ForceSafeEncount(bool Enable);
+	void BPI_CallEventEncount(int32 EventEncountId, const struct FTransform& SpawnTransform, int32 Param_NextEventID, int32 NowEventID, bool Manual);
+	void BPI_SetEncountON();
+	void BPI_SetEncountOff();
+	void ActiveEncount_();
+	void BPI_ReturnFromBtl();
+	void BPI_SpawnEncountActor(const TArray<int32>& EnemyIdList, int32 EncountID, const struct FTransform& SpawnTransform, class AActor* Param_EncountPawn, E_BTL_SYMBOL_ENCOUNT SymbolEncountType, bool ManualWhenNotEscape, bool HitMapAttack, const struct FChainEncountInfo& ChainEncountInfo, bool Magatsuhi);
+	void ResetEventBattleActor();
+	void BPI_MapStart_SimpleEventEnable();
+	void EventEndMap();
+	void BPI_CallMapEvent(int32 MapEventID_, class AActor* Param_ReStartPoint, class AActor* BattlePoint, bool Param_InitFade, bool Param_WaitEvent);
+	void SetEventBattleActor(const TArray<struct FEventBattleListStruct>& BTLActor, const struct FTransform& PlayerPos);
+	void ForceEventEnd();
+	void NextKeyFreeMap();
+	void AfterEventCall();
+	void MapChange_FromEvent(int32 EventId);
+	void BeforOtherMap(int32 Param_NextMap, int32 NextArea, int32 NextWarpPoint, int32 NextEvent);
+	void NextOtherMap();
+	void PointSet_Player();
+	void PointSet_Battle();
+	void PointSetting();
+	void ToBtl(class ADevilBase_C* _____);
+	void NextMap();
+	void NextBtl();
+	void EventFunc();
+	void StartEvent();
+	void SetEvent(class FName Param_Name, class AActor* Param_ReStartPoint, class AActor* BattlePoint, bool Param_NextBattle, bool Param_InitFade, int32 EvtBattleID, int32 Param_NextMapId, int32 Param_NextAreaId, int32 Param_NextPointID, int32 Param_NextEventID, int32 Type);
+	void ContinueLoad();
+	void MapLoadStart();
+	void BPI_LoadMap(bool InFadeCancel);
+	void BPI_DebugMesWindow(E_MAP_DEBUG_MES_TYPE MesType);
+	void UpdateDebugText();
+	void UpdateText(const TArray<class FText>& Param_TextList);
+	void InitDebugMes();
+	void VisibleVolume();
+	void HiddenVolume();
+	void EnvChange_Immediate();
+	void Env_ChangeSpecial_Play(int32 Param_Index, float Alpha);
+	void EnvChangeMagatuka_Play(float Alpha);
+	void EnvChange_Reverse();
+	void EnvChange_Play(const struct FST_LightParam& Next, const struct FST_LightParam& Prev);
+	void BPI_RequestNaviDevilVisible(bool Visible);
+	void BPI_EntryNaviDevillGimmick(class AActor* Actor);
+	void InitNaviDevil(bool FromLoad);
+	void BPI_TokyoLargeMapHidePlace(int32 DataId);
+	void BPI_TokyoLargeMapShowPlace(int32 DataId);
+	void BPI_TokyoLargeMapDeleteIcon(class AActor* Param_Owner);
+	void BPI_TokyoLargeMapAddIconTalk(const struct FVector& ActorLocation, class FName InactiveFlag, class AActor* Param_Owner);
+	void CallTraport();
+	void CallAutoHeal();
+	void CallTopCamera();
+	void CallSaveShortcut();
+	void BPI_GardenUnload(float FadeInTime);
+	void BPI_GardenLoad(int32 WarpPoint, float FadeInTime);
+	void Estoma_WhenBeginMap();
+	void Tick_EstomaButtonHelpCheck();
+	void BI_SetMapChange(bool IsMapChange, int32 WarpPoint, int32 FromEvent, int32 OtherMapReturn);
+	void JsonCounterAdd(int32 EncountAdd, int32 MagatukaNum);
+	void SetJsonFile(const class FString& Json);
+	void SetJsonData(class UJsonDataCtrl* Json);
+	void StartDebugGameTrace(bool IsEnable);
+	void BPI_SetEncountActor(class AActor* Actor);
+	void SetLoadLevelGame(bool Enable);
+	void SetMapStartLoadFlag(bool Enable);
+	void SetNextMapStartList(const TArray<struct FPrimaryAssetId>& LevelList, const TArray<class FName>& LevelNameList, int32 MapId, int32 AreaId);
+	void DeleteNextMapAssetList();
+	void SetNextMapLoadEnd(bool Enable);
+	void SetNextMapLoadStart(bool Enable);
+	void SetNextMapAssetList(const TArray<struct FPrimaryAssetId>& LevelList, const TArray<class FName>& NameList, int32 MapId, int32 AreaId);
+	void BPI_HeroChange(bool Param_IsFade, E_MAP_PLAYER_TYPE Hero);
+	void BPI_SetEventReserv(int32 MapEventID);
+	void BPI_MapAttackEnd(bool Enable);
+	void BPI_OpenSkyTerminal();
+	void BPI_CallKokubouEvent(int32 EventId, class AActor* RestarPoint, class AActor* BattlePoint);
+	void BPI_DebugChangeChar(E_MAP_PLAYER_TYPE Type);
+	void BPI_AddSpawnEnemyCount();
+	void BPI_SetMapCommon(class AActor* Actor);
+	void StartGardenUnload(int32 MapId);
+	void StartGardenLoad(int32 MapId, int32 WarpPoint, bool LoadAfterView);
+	void MapAreaChange(int32 MapId, int32 CurrentAreaId, int32 NewAreaId, bool LoadAfterView);
+	void MapSystemBKHide(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
+	void ForceTraport();
+	void InitPause();
+	void EndLoadUnResident();
+	void DebugTraceViewOFF();
+	void DebugTraceActivePos(const struct FDebugTrace_St_Action& Action);
+	void DebugTraceView_Player();
+	void DebugTraceStop();
+	void DebugTraceStart();
+	void DaathSublevelManagerInit();
+	void InitFadeCancel();
+	void LevelChange(const struct FPrimaryAssetId& UnLoad, const struct FPrimaryAssetId& Load);
+	void MapSystem_StreamOnlyLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
+	void MapSystem_StreamOnlyUnLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
+	void NextMapBGUnLoad();
+	void MapSystemBKView(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
+	void MapSystemBKUnLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
+	void MapSystemBKLoad(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type);
+	void MapInitEnd();
+	void MapOpenLevel(int32 Old_mapID, int32 Old_AreaID, int32 New_MapID, int32 New_AreaId);
+	void StartNextMapBGLoad(int32 MapId, int32 AreaId);
+	void MapUnResidentUnLoad(int32 MapId);
+	void MapUnResidentView(int32 MapId);
+	void MapUnResidentLoad(int32 MapId, int32 AreaId, bool LoadAfterView);
+	void MapAreaUnload(int32 Map, int32 Area);
+	void MapAreaView(int32 Map, int32 Area);
+	void MapAreaLoad(int32 Map, int32 Area, bool LoadAfterView);
+	void MapAllResidentDelete(int32 NextMap, int32 NextArea);
+	void MapStartLoad();
+	void SetDaathAreaLock(bool Lock);
+	void ActPadEvt_Map_Save_K2Node_ActionPadEvent_0(const struct FKey& Key);
+	void ActPadEvt_Map_ViewDown_K2Node_ActionPadEvent_1(const struct FKey& Key);
+	void ActPadEvt_Map_Traport_K2Node_ActionPadEvent_2(const struct FKey& Key);
+	void ActPadEvt_Map_AutoHeal_K2Node_ActionPadEvent_3(const struct FKey& Key);
+	void ActPadEvt_Map_Attack_K2Node_ActionPadEvent_4(const struct FKey& Key);
+	void ActPadEvt_Map_AutoMap_K2Node_ActionPadEvent_5(const struct FKey& Key);
+	void ActPadEvt_Utl_Left_K2Node_ActionPadEvent_6(const struct FKey& Key);
+	void ActPadEvt_Utl_Right_K2Node_ActionPadEvent_7(const struct FKey& Key);
+	void ActPadEvt_Utl_Cancel_K2Node_ActionPadEvent_8(const struct FKey& Key);
+	void ActPadEvt_Map_Action_K2Node_ActionPadEvent_9(const struct FKey& Key);
+	void OnLoaded_8873E8F24C05929027A36C9F8BFCDFB0(TSubclassOf<class UObject> Loaded);
+	void OnLoaded_E1BE54FB459C6F1F0D123FB2817DD21B(TSubclassOf<class UObject> Loaded);
+	void OnLoaded_F628C93F43330FA28013338DF031C2F5(TSubclassOf<class UObject> Loaded);
+	void ActPadEvt_Map_Estoma_K2Node_ActionPadEvent_10(const struct FKey& Key);
+	void Env__UpdateFunc();
+	void Env__FinishedFunc();
+	void ActiveBattle(bool* NewParam);
+	void FindSafePoint(int32 SafeZoneID, bool ManualSafeZone, struct FTransform* Transform, int32* BattleFIeldID);
+	void MapDebugMes_ViewTakara();
+	void MapDebugMes_ViewFacility();
+	void MapDebugMes_ViewMapEvent();
+	void EventSeparete(int32 Flag1, int32 Flag2, bool* TURR);
+	void NextEventSelect(int32 OnFlag1, int32 OffFlag1, int32 OnFlag2, int32 OffFlag2, int32 One_Map, int32 One_Area, int32 One_Point, int32 One_Event, int32 Two_Map, int32 Two_Area, int32 Two_Point, int32 Two_Event, int32* NextMap, int32* NextArea, int32* NextPoint, int32* NextEvent);
+	void CalcCheckBtlForceHit();
+	void EventView_MoveStartCharaPos(int32 MapEventID, bool* IsStartEvent, bool* IsSet);
+	void ShowButtonHelp();
+	void HideButtonHelp();
+	void FindSafePoint_ForEncountArea(struct FTransform* Transform, int32* BattleFIeldID);
+	void CheckMagatsukaArea(class AActor* Area, bool* Magatsuka);
+	void IsTokyoLargeMap(bool* IsTokyo);
+	void GetTokyoLargeMapUI(class ABP_TokyoMapUI_C** TokyoMapUI);
+	void MoonAgeCheckOpen();
+	void CheckShowButtonHelp();
+	void SetOcclusionSetting();
+	void CheckUnlock_MapTraport(bool* Unlock);
+	void CheckUnlock_MapAutoHeal(bool* Unlock);
+	void SetBoost(bool Enabled);
+	void TraceForEncount(const struct FTransform& InPos, int32 BattleFIeldID, struct FTransform* OutPos, bool* Hit);
+	void CheckSaveUnlock(bool* Unlock);
+	void ProcEstoma_WhenMapPause();
+	void ProcEstoma_WhenMapStart();
+	void CheckEnoughMagatsuhi_ForEstoma(bool* Enough);
+	void ProcRiberama_WhenMapPause();
+	void ProcRiberama_WhenMapStart();
+	void PushMapMouseCursor();
+	void PopMapMouseCursor();
+	void CanUseMapTopCamera(bool* CanUse);
+	void CanUseMapSave(bool* CanUse);
+	bool CheckGardenTribute();
+	void CanUseMapAttack(bool* CanUse);
+	void ApplyActorVisibilityDebug();
+	void RegisterActorVisibilityVolume();
+	void DebugLogPlayerVisibility();
+	void MapChangeBridgeMode(int32 MapId, int32 AreaId, int32 WarpPoint, int32 FromEvent, int32 OtherMapReturn);
+	void BPI_GetMapCommon(class AActor** Rerutn);
+	void BPI_IsSpawnSymbol(bool* NewParam);
+	void GetIsBattle(bool* IsBattle);
+	void GetcurrentLevelCustom(bool* Enable);
+	void IsEventHitOff(bool* Enable);
+	void GetSavingWidget(bool* Widget);
+	void BPI_CheckMapPause(bool* Param_IsPause);
+	void BPI_GetBuddyPawn(class APawn** Pawn);
+	void BI_CheckEncountOn(bool* EncountOn);
+	void BPI_GetEventReserv(int32* MapEventID);
+	void BPI_IsEventPlay(bool* IsPlay);
+	void GetMapStartLoadFlag(bool* Enable);
+	void GetNextMapStartList(struct FLoadOnlyResident_ST* Return);
+	void IsNextMapLoadEnd(bool* Return);
+	void IsNextMapLoadStart(bool* Return);
+	void GetNextMapAssetList(TArray<struct FLoadOnlyResident_ST>* LevelList);
+	void IsLoadLevelGame(bool* Enable);
+	void GetEventBattleActor(TArray<class AActor*>* List);
+	void BPI_MakeUpLessEvent(bool* RetValue);
+	void GetDebugGameTrace(bool* IsEnable);
+	void GetJsonData(class UJsonDataCtrl** Json);
+	void GetJsonFileName(class FString* Filename);
+	void BPI_GetMapGimmickTrigger(class AActor** Actor);
+	void JsonCounterGet(int32* EncountNum, int32* MagatukaNum);
+	void BI_GetDaathIntensityEff(struct FLinearColor* Intensity);
+	void BI_IsEventView(bool* IsEventView);
+	void GetGShopCamera(class ACameraActor** Cam);
+	void BPI_CheckSymbolPause(bool* Pause);
+	void BPI_SetDebugOverrideBattleMapDarkID(int32 MapDarkID, bool* NoUse);
+	void BPI_GetMapTimer(float* Param_MapTimer);
+	void BPI_AddMagatsukaDiscoveryCnt(int32 Add, bool* NewParam1);
+	void BPI_CheckMagatsukaDiscoveryCnt(bool* Discovery);
+	void BPI_SetNaviDevilPawn(class APawn* Pawn, bool* NewParam1);
+	void BPI_GetNaviDevilPawn(class APawn** Pawn);
+	void BPI_GetNaviDevilCtrl(class AActor** Actor);
+	void BPI_SetAActionLock(bool Lock, class AActor* Param_AActionActor, bool* NewParam1);
+	void BPI_CheckAActionLock(bool* Lock, class AActor** Param_AActionActor);
+	void BPI_CheckMapEnableCamera(bool* Param_IsPause);
+	void BPI_IsTokyoLargeMap(bool* IsTokyoLargeMap);
+	void BPI_GetMapButtonHelpType(E_BTN_HELP_SET* Out);
+	void BPI_ShowMapButtonHelp(bool* Dummy);
+	void BPI_RegisterMagatsuka(class AActor* Actor, bool* NewParam1);
+	void BPI_UnregisterMagatsuka(class AActor* Actor, bool* NewParam);
+	void BPI_UpdateUniqueSymbolBGM(bool* NewParam);
+	void BPI_GetEncountAreaAll(TArray<class AActor*>* Actors);
+	void BPI_UpdateLevelVisibility(const struct FVector& NewLocation, bool* Updated);
+	void BPI_SetStatusMode(bool Param_IsStatusMode, bool* NoUse);
+	void BPI_IsStatusMode(bool* Param_IsStatusMode);
+	void BPI_SetLevelVisibilityEnabled(bool Enable, bool* Dummy);
+	void BPI_SetBossRushFieldCtrl(class AActor* Actor, bool* NewParam);
+	void BPI_GetBossRushFieldCtrl(class AActor** Actor);
+	void BPI_AddEncountAreaList(class AActor* EncountArea, bool* NewParam);
+	void BPI_RemoveEncountAreaList(class AActor* EncountArea, bool* NewParam);
+	void BPI_GetOptionFieldBrightnessCtrl(class UActorComponent** Component);
+	void BPI_IgnoreEstomaEffectPause(bool Ignore, bool* NewParam);
+	void BPI_MapTopCameraOnStartTop(bool* Dummy);
+	void BPI_MapTopCameraOnFinishTop(bool* Dummy);
+	void BPI_UpdateOptionFieldBrightness(bool* NewParam);
+	void BPI_CheckAfterLoaded(bool* AfterLoaded);
+	void BPI_CheckHide_WhenBattleOrEvent(bool* Hide);
+	void BPI_CheckAgratField(bool* Inside);
+	void BPI_SetAgratField(bool Inside, bool* NewParam);
+	void IsLoadMapUnResident(int32 MapId, bool* LoadAfterView);
+	void IsLoadMapArea(bool* End);
+	void IsNextMapBGLoadEnd(bool* End);
+	void IsMapSystemBKLoadEnd(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type, bool* End);
+	void IsMapSystemOnlyLoadEnd(bool* End);
+	void IsUnLoadMapArea(bool* End);
+	void IsBGLoadMapArea(bool* Emd);
+	void IsGameStart(bool* Enable);
+	void IsMapSystemLevelLoadEnd(int32 MapId, E_MAP_SYSTEMRESIDENT_ID Type, bool* End);
+	void SetMapEventPlaying(bool Param_IsMapEventPlaying, bool* Dummy);
+	void IsMapEventPlaying(bool* Param_IsMapEventPlaying);
+	void IsMapSystemUnloadEnd(bool* End);
+	void IsMapSystemHideEnd(bool* End);
+	void IsGardenLoaded(bool* End);
+	void GetGardenWarpPoint(int32* WarpPoint);
+	void IsGardenOpen(int32 MapId, bool* Param_IsGardenOpen);
+	void IsInGardenLevel(bool* Param_IsInGardenLevel);
+	void ApplyMissionMapBGM(bool* Dummy);
 
 public:
 	static class UClass* StaticClass()
