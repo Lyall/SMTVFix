@@ -284,38 +284,46 @@ void CurrentResolution()
             [](SafetyHookContext& ctx)
             {
                 // Get ResX and ResY
-                iCurrentResX = (int)ctx.r10;
-                iCurrentResY = (int)ctx.r9;
-
-                iCurrentResX /= fScreenPercentage / 100;
-                iCurrentResY /= fScreenPercentage / 100;
-
-                // Calculate aspect ratio
-                fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
-                fAspectMultiplier = fAspectRatio / fNativeAspect;
-
-                // HUD variables
-                fHUDWidth = iCurrentResY * fNativeAspect;
-                fHUDHeight = (float)iCurrentResY;
-                fHUDWidthOffset = (float)(iCurrentResX - fHUDWidth) / 2;
-                fHUDHeightOffset = 0;
-                if (fAspectRatio < fNativeAspect)
-                {
-                    fHUDWidth = (float)iCurrentResX;
-                    fHUDHeight = (float)iCurrentResX / fNativeAspect;
-                    fHUDWidthOffset = 0;
-                    fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
-                }
+                int iResX = (int)ctx.r10;
+                int iResY = (int)ctx.r9;
 
                 // Only log on resolution change since this function runs all the time.
-                if (iCurrentResX != iOldResX || iCurrentResY != iOldResY)
+                if (iResX != iOldResX || iResY != iOldResY)
                 {
-                    iOldResX = iCurrentResX;
-                    iOldResY = iCurrentResY;
+                    auto ScreenPercentageCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects));
+                    if (ScreenPercentageCVAR)
+                    {
+                        fScreenPercentage = ScreenPercentageCVAR->GetFloat();
+                    }
+
+                    iOldResX = iCurrentResX = iResX;
+                    iOldResY = iCurrentResY = iResY;
+
+                    iCurrentResX /= fScreenPercentage / 100;
+                    iCurrentResY /= fScreenPercentage / 100;
+
+                    // Calculate aspect ratio
+                    fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
+                    fAspectMultiplier = fAspectRatio / fNativeAspect;
+
+                    // HUD variables
+                    fHUDWidth = iCurrentResY * fNativeAspect;
+                    fHUDHeight = (float)iCurrentResY;
+                    fHUDWidthOffset = (float)(iCurrentResX - fHUDWidth) / 2;
+                    fHUDHeightOffset = 0;
+                    if (fAspectRatio < fNativeAspect)
+                    {
+                        fHUDWidth = (float)iCurrentResX;
+                        fHUDHeight = (float)iCurrentResX / fNativeAspect;
+                        fHUDWidthOffset = 0;
+                        fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
+                    }
 
                     // Log details about current resolution
                     spdlog::info("----------");
-                    spdlog::info("Current Resolution: Resolution: {}x{}", iCurrentResX, iCurrentResY);
+                    spdlog::info("Current Resolution: Base Resolution: {}x{}", iCurrentResX, iCurrentResY);
+                    spdlog::info("Current Resolution: fScreenPercentage: {}", fScreenPercentage);
+                    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX * fScreenPercentage / 100, iCurrentResY * fScreenPercentage / 100);
                     spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
                     spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
                     spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
