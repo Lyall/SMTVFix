@@ -8,6 +8,7 @@ This is a fix for Shin Megami Tensei V: Vengeance that adds ultrawide/narrow dis
 ### General
 - Skip intro logos/movie.
 - Enable developer console.
+- Force 4K movies.
 - Remove 60FPS cap in menus.
 - Adjust player camera distance/fov/height.
 
@@ -22,6 +23,7 @@ This is a fix for Shin Megami Tensei V: Vengeance that adds ultrawide/narrow dis
 - Adjust shadow resolution.
 - Adjust LOD distance.
 - Enable GTAO ambient occlusion.
+- Enable screen space global illumination.
 
 ## Installation
 - Grab the latest release of SMTVFix from [here.](https://github.com/Lyall/SMTVFix/releases)
