@@ -767,10 +767,10 @@ void GraphicalTweaks()
                     }
 
                     auto LandscapeLODBiasCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.LandscapeLODBias", ConsoleObjects));
-                    if (LandscapeLODBiasCVAR && LandscapeLODBiasCVAR->GetInt() != -1)
+                    if (LandscapeLODBiasCVAR && LandscapeLODBiasCVAR->GetInt() != 0)
                     {
                         LandscapeLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        LandscapeLODBiasCVAR->Set(L"-1");
+                        LandscapeLODBiasCVAR->Set(L"0");
                         spdlog::info("Set CVARS: Set r.LandscapeLODBias to {}", LandscapeLODBiasCVAR->GetInt());
                     }
                 }
