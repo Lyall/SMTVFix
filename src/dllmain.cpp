@@ -765,6 +765,14 @@ void GraphicalTweaks()
                         SkeletalMeshLODBiasCVAR->Set(L"-1");
                         spdlog::info("Set CVARS: Set r.SkeletalMeshLODBias to {}", SkeletalMeshLODBiasCVAR->GetInt());
                     }
+
+                    auto LandscapeLODBiasCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.LandscapeLODBias", ConsoleObjects));
+                    if (LandscapeLODBiasCVAR && LandscapeLODBiasCVAR->GetInt() != -1)
+                    {
+                        LandscapeLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        LandscapeLODBiasCVAR->Set(L"-1");
+                        spdlog::info("Set CVARS: Set r.LandscapeLODBias to {}", LandscapeLODBiasCVAR->GetInt());
+                    }
                 }
 
                 if (iSSAOLevel != 1)
