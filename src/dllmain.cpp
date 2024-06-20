@@ -60,6 +60,9 @@ bool bAdjustLOD;
 float fFoliageDistanceScale;
 float fViewDistanceScale;
 int iSSAOLevel;
+bool bEnableSSGI;
+int iSSGIQuality;
+bool bHalfResSSGI;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -189,6 +192,9 @@ void ReadConfig()
     inipp::get_value(ini.sections["Ambient Occlusion Quality"], "Levels", iSSAOLevel);
     inipp::get_value(ini.sections["GTAO Ambient Occlusion"], "Enabled", bEnableGTAO);
     inipp::get_value(ini.sections["GTAO Ambient Occlusion"], "HalfRes", bGTAOHalfRes);
+    inipp::get_value(ini.sections["SSGI"], "Enabled", bEnableSSGI);
+    inipp::get_value(ini.sections["SSGI"], "Quality", iSSGIQuality);
+    inipp::get_value(ini.sections["SSGI"], "HalfRes", bHalfResSSGI);
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
@@ -257,6 +263,14 @@ void ReadConfig()
         iSSAOLevel = std::clamp(iSSAOLevel, 1, 3);
         spdlog::warn("Config Parse: iSSAOLevel value invalid, clamped to {}", iSSAOLevel);
     }
+    spdlog::info("Config Parse: bEnableSSGI: {}", bEnableSSGI);
+    spdlog::info("Config Parse: iSSGIQuality: {}", iSSGIQuality);
+    if (iSSGIQuality < 1 || iSSGIQuality > 4)
+    {
+        iSSGIQuality = std::clamp(iSSGIQuality, 1, 4);
+        spdlog::warn("Config Parse: iSSGIQuality value invalid, clamped to {}", iSSGIQuality);
+    }
+    spdlog::info("Config Parse: bHalfResSSGI: {}", bHalfResSSGI);
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -784,6 +798,36 @@ void GraphicalTweaks()
                         SSAOLevelsCVAR->Set(std::to_wstring(iSSAOLevel).c_str());
                         spdlog::info("Set CVARS: Set r.AmbientOcclusionLevels to {}", SSAOLevelsCVAR->GetInt());
                     }
+                }
+
+                if (bEnableSSGI)
+                {
+                    auto SSGIEnableCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.SSGI.Enable", ConsoleObjects));
+                    if (SSGIEnableCVAR && SSGIEnableCVAR->GetInt() != 1)
+                    {
+                        SSGIEnableCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        SSGIEnableCVAR->Set(L"1");
+                        spdlog::info("Set CVARS: Set r.SSGI.Enable to {}", SSGIEnableCVAR->GetInt());
+                    }
+
+                    auto SSGIQualityCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.SSGI.Quality", ConsoleObjects));
+                    if (SSGIQualityCVAR && SSGIQualityCVAR->GetInt() != iSSGIQuality)
+                    {
+                        SSGIQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        SSGIQualityCVAR->Set(std::to_wstring(iSSGIQuality).c_str());
+                        spdlog::info("Set CVARS: Set r.SSGI.Quality to {}", SSGIQualityCVAR->GetInt());
+                    }
+
+                    if (bHalfResSSGI)
+                    {
+                        auto SSGIHalfResCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.SSGI.HalfRes", ConsoleObjects));
+                        if (SSGIHalfResCVAR && SSGIHalfResCVAR->GetInt() != 1)
+                        {
+                            SSGIHalfResCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            SSGIHalfResCVAR->Set(L"1");
+                            spdlog::info("Set CVARS: Set r.SSGI.HalfRes to {}", SSGIHalfResCVAR->GetInt());
+                        }
+                    }           
                 }
 
                 if (bShadowQuality)
