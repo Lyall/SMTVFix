@@ -399,7 +399,7 @@ void AspectFOV()
                             SDK::AProjectPlayerCameraManager_C* camManager = (SDK::AProjectPlayerCameraManager_C*)(ctx.rdi);
 
                             // Check if "Standard" camera angle
-                            if (camManager->DEF_Distance == 580.00f && camManager->DEF_FOV == 60.00f && camManager->DEF_Height == 73.00f)
+                            if (SDK::UBPL_SystemData::GetFOVType() == SDK::E_OPTION_CONTENT_FOV_TYPE::E_OPTION_CONTENT_FOV_TYPE_STANDARD)
                             {
                                 camManager->Camera_Standard_Preset.M_CameraDistance = (UC::int32)fAdjustDist;              // Default = 580
                                 camManager->Camera_Standard_Preset.M_CameraFOV = (UC::int32)fAdjustFOV;                    // Default = 60
