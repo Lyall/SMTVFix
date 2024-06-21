@@ -258,9 +258,9 @@ void ReadConfig()
     spdlog::info("Config Parse: bEnableGTAO: {}", bEnableGTAO);
     spdlog::info("Config Parse: bGTAOHalfRes: {}", bGTAOHalfRes);
     spdlog::info("Config Parse: iSSAOLevel: {}", iSSAOLevel);
-    if (iSSAOLevel < 1 || iSSAOLevel > 3)
+    if (iSSAOLevel < -1 || iSSAOLevel > 3)
     {
-        iSSAOLevel = std::clamp(iSSAOLevel, 1, 3);
+        iSSAOLevel = std::clamp(iSSAOLevel, -1, 3);
         spdlog::warn("Config Parse: iSSAOLevel value invalid, clamped to {}", iSSAOLevel);
     }
     spdlog::info("Config Parse: bEnableSSGI: {}", bEnableSSGI);
