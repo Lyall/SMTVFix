@@ -26,7 +26,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.8.9";
+std::string sFixVer = "0.9.0";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
