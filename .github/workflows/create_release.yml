@@ -48,7 +48,7 @@ jobs:
         cp ${{ github.event.repository.name }}.ini .\zip\Project\Binaries\Win64\
         cp dinput8.dll .\zip\Project\Binaries\Win64\dsound.dll
         cp UltimateASILoader_LICENSE.md .\zip\Project\Binaries\Win64\
-        New-Item -Path ".\zip\EXTRACT_TO_Project_FOLDER" -ItemType File
+        New-Item -Path ".\zip\EXTRACT_TO_GAME_FOLDER" -ItemType File
         
     - name: Create Release Zip
       run: |
