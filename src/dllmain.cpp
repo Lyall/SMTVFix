@@ -26,7 +26,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.0";
+std::string sFixVer = "0.9.1";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
@@ -778,14 +778,6 @@ void GraphicalTweaks()
                         SkeletalMeshLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                         SkeletalMeshLODBiasCVAR->Set(L"-1");
                         spdlog::info("Set CVARS: Set r.SkeletalMeshLODBias to {}", SkeletalMeshLODBiasCVAR->GetInt());
-                    }
-
-                    auto LandscapeLODBiasCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.LandscapeLODBias", ConsoleObjects));
-                    if (LandscapeLODBiasCVAR && LandscapeLODBiasCVAR->GetInt() != 0)
-                    {
-                        LandscapeLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        LandscapeLODBiasCVAR->Set(L"0");
-                        spdlog::info("Set CVARS: Set r.LandscapeLODBias to {}", LandscapeLODBiasCVAR->GetInt());
                     }
                 }
 
