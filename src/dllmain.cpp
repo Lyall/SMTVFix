@@ -63,6 +63,7 @@ int iSSAOLevel;
 bool bEnableSSGI;
 int iSSGIQuality;
 bool bHalfResSSGI;
+bool bVignette;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -195,6 +196,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["SSGI"], "Enabled", bEnableSSGI);
     inipp::get_value(ini.sections["SSGI"], "Quality", iSSGIQuality);
     inipp::get_value(ini.sections["SSGI"], "HalfRes", bHalfResSSGI);
+    inipp::get_value(ini.sections["Vignette"], "Enabled", bVignette);
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
@@ -271,6 +273,7 @@ void ReadConfig()
         spdlog::warn("Config Parse: iSSGIQuality value invalid, clamped to {}", iSSGIQuality);
     }
     spdlog::info("Config Parse: bHalfResSSGI: {}", bHalfResSSGI);
+    spdlog::info("Config Parse: bVignette: {}", bVignette);
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -820,6 +823,17 @@ void GraphicalTweaks()
                             spdlog::info("Set CVARS: Set r.SSGI.HalfRes to {}", SSGIHalfResCVAR->GetInt());
                         }
                     }           
+                }
+
+                if (!bVignette)
+                {
+                    auto TonemapperQualityCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.Tonemapper.Quality", ConsoleObjects));
+                    if (TonemapperQualityCVAR && TonemapperQualityCVAR->GetInt() != 0)
+                    {
+                        TonemapperQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        TonemapperQualityCVAR->Set(L"0");
+                        spdlog::info("Set CVARS: Set r.Tonemapper.Quality to {}", TonemapperQualityCVAR->GetInt());
+                    }
                 }
 
                 if (bShadowQuality)
