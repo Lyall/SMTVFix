@@ -64,6 +64,7 @@ bool bEnableSSGI;
 int iSSGIQuality;
 bool bHalfResSSGI;
 bool bVignette;
+bool bUROEnabled;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -197,6 +198,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["SSGI"], "Quality", iSSGIQuality);
     inipp::get_value(ini.sections["SSGI"], "HalfRes", bHalfResSSGI);
     inipp::get_value(ini.sections["Vignette"], "Enabled", bVignette);
+    inipp::get_value(ini.sections["Update Rate Optimizations"], "Enabled", bUROEnabled);
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
@@ -274,6 +276,7 @@ void ReadConfig()
     }
     spdlog::info("Config Parse: bHalfResSSGI: {}", bHalfResSSGI);
     spdlog::info("Config Parse: bVignette: {}", bVignette);
+    spdlog::info("Config Parse: bUROEnabled: {}", bUROEnabled);
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -833,6 +836,17 @@ void GraphicalTweaks()
                         TonemapperQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                         TonemapperQualityCVAR->Set(L"0");
                         spdlog::info("Set CVARS: Set r.Tonemapper.Quality to {}", TonemapperQualityCVAR->GetInt());
+                    }
+                }
+
+                if (!bUROEnabled)
+                {
+                    auto UROEnableCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("a.URO.Enable", ConsoleObjects));
+                    if (UROEnableCVAR && UROEnableCVAR->GetInt() != 0)
+                    {
+                        UROEnableCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                        UROEnableCVAR->Set(L"0");
+                        spdlog::info("Set CVARS: Set a.URO.Enable to {}", UROEnableCVAR->GetInt());
                     }
                 }
 
