@@ -52,6 +52,7 @@ float fAdjustDist;
 float fAdjustFOV;
 float fAdjustHeight;
 bool bForceMovieRes;
+bool bPauseOnFocusLoss;
 bool bShadowQuality;
 int iShadowResolution;
 bool bEnableGTAO;
@@ -81,6 +82,7 @@ int iCurrentResX;
 int iCurrentResY;
 int iOldResX;
 int iOldResY;
+LPCWSTR sWindowClassName = L"UnrealWindow";
 
 // CVAR addresses
 SDK::TMap<SDK::FString, Unreal::FConsoleObject*> ConsoleObjects;
@@ -182,6 +184,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["Adjust Player Camera"], "FOV", fAdjustFOV);
     inipp::get_value(ini.sections["Adjust Player Camera"], "Height", fAdjustHeight);
     inipp::get_value(ini.sections["Force 4K Movies"], "Enabled", bForceMovieRes);
+    inipp::get_value(ini.sections["Pause on Focus Loss"], "Enabled", bPauseOnFocusLoss);
     inipp::get_value(ini.sections["Screen Percentage"], "Enabled", bScreenPercentage);
     inipp::get_value(ini.sections["Screen Percentage"], "Value", fScreenPercentage);
     inipp::get_value(ini.sections["Enable TAA"], "Enabled", bEnableTAA);
@@ -229,6 +232,7 @@ void ReadConfig()
         spdlog::warn("Config Parse: fAdjustHeight value invalid, clamped to {}", fAdjustHeight);
     }
     spdlog::info("Config Parse: bForceMovieRes: {}", bForceMovieRes);
+    spdlog::info("Config Parse: bPauseOnFocusLoss: {}", bPauseOnFocusLoss);
     spdlog::info("Config Parse: bScreenPercentage: {}", bScreenPercentage);
     spdlog::info("Config Parse: fScreenPercentage: {}", fScreenPercentage);
     if (fScreenPercentage < (float)10 || fScreenPercentage >(float)400)
@@ -1004,6 +1008,55 @@ void IntroSkip()
     } 
 }
 
+HWND hWnd;
+WNDPROC OldWndProc;
+LRESULT __stdcall NewWndProc(HWND window, UINT message_type, WPARAM w_param, LPARAM l_param) {
+    switch (message_type) {
+
+    case WM_ACTIVATE:
+
+    case WM_ACTIVATEAPP:
+        if (w_param == FALSE)
+        {
+            return 0;
+        }
+
+    case WM_KILLFOCUS:
+        return 0;
+
+    default:
+        return CallWindowProc(OldWndProc, window, message_type, w_param, l_param);
+    }
+};
+
+void WindowFocus()
+{
+    if (!bPauseOnFocusLoss)
+    {
+        int i = 0;
+        while (i < 30 && !IsWindow(hWnd))
+        {
+            // Wait 1 sec then try again
+            Sleep(1000);
+            i++;
+            hWnd = FindWindowW(sWindowClassName, nullptr);
+        }
+
+        // If 30 seconds have passed and we still dont have the handle, give up
+        if (i == 30)
+        {
+            spdlog::error("Window Focus: Failed to find window handle.");
+            return;
+        }
+        else
+        {
+            // Set new wnd proc
+            OldWndProc = (WNDPROC)SetWindowLongPtr(hWnd, GWLP_WNDPROC, (LONG_PTR)NewWndProc);
+            spdlog::info("Window Focus: Set new WndProc.");
+        }
+    }
+}
+
 DWORD __stdcall Main(void*)
 {
     Logging();
@@ -1014,6 +1067,7 @@ DWORD __stdcall Main(void*)
     GraphicalTweaks();
     Misc();
     IntroSkip();
+    WindowFocus();
     return true; //end thread
 }
 
