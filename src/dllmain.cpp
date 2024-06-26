@@ -285,18 +285,23 @@ void ReadConfig()
 
 void CalculateAspectRatio(int ResX, int ResY)
 {
-    // Get screen percentage
+    // Get/set r.ScreenPercentage
     auto ScreenPercentageCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects));
     if (ScreenPercentageCVAR)
     {
+        if (bScreenPercentage && ScreenPercentageCVAR->GetFloat() != fScreenPercentage)
+        {
+            ScreenPercentageCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+            ScreenPercentageCVAR->Set(std::to_wstring(fScreenPercentage).c_str());
+            spdlog::info("Set CVARS: Set r.ScreenPercentage to {}", ScreenPercentageCVAR->GetFloat());
+        }
+
+        // Grab screen percentage in case it was set by the user
         fScreenPercentage = ScreenPercentageCVAR->GetFloat();
     }
 
     iOldResX = iCurrentResX = ResX;
     iOldResY = iCurrentResY = ResY;
-
-    iCurrentResX /= fScreenPercentage / 100;
-    iCurrentResY /= fScreenPercentage / 100;
 
     // Calculate aspect ratio
     fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
@@ -319,7 +324,7 @@ void CalculateAspectRatio(int ResX, int ResY)
     spdlog::info("----------");
     spdlog::info("Current Resolution: Base Resolution: {}x{}", iCurrentResX, iCurrentResY);
     spdlog::info("Current Resolution: fScreenPercentage: {}", fScreenPercentage);
-    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX * fScreenPercentage / 100, iCurrentResY * fScreenPercentage / 100);
+    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX * (fScreenPercentage / 100), iCurrentResY * (fScreenPercentage / 100));
     spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
     spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
     spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
@@ -685,21 +690,7 @@ void GraphicalTweaks()
         static SafetyHookMid SetCVARSMidHook{};
         SetCVARSMidHook = safetyhook::create_mid(SetCVARSScanResult,
             [](SafetyHookContext& ctx)
-            {
-                auto ScreenPercentageCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects));
-                if (ScreenPercentageCVAR)
-                {
-                    if (bScreenPercentage && ScreenPercentageCVAR->GetFloat() != fScreenPercentage)
-                    {
-                        ScreenPercentageCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        ScreenPercentageCVAR->Set(std::to_wstring(fScreenPercentage).c_str());
-                        spdlog::info("Set CVARS: Set r.ScreenPercentage to {}", ScreenPercentageCVAR->GetFloat());
-                    }
-
-                    // Grab screen percentage in case it was set by the user
-                    fScreenPercentage = ScreenPercentageCVAR->GetFloat();
-                }
-         
+            {         
                 if (bEnableTAA)
                 {
                     auto AntiAliasingCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.DefaultFeature.AntiAliasing", ConsoleObjects));
