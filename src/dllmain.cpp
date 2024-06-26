@@ -332,7 +332,7 @@ void CalculateAspectRatio(int ResX, int ResY)
 void CurrentResolution()
 {
     // Get current resolution
-    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "42 ?? ?? ?? ?? ?? ?? ?? 41 ?? ?? 42 ?? ?? ?? ?? ?? ?? ?? 0F ?? ?? 41 ?? ?? 42 ?? ?? ?? ?? ?? ?? ??");
+    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "33 ?? 0F ?? ?? ?? ?? ?? ?? 44 ?? ?? ?? 44 ?? ?? ?? 4C 89 ?? ?? ?? ?? ?? FF 90 ?? ?? ?? ??");
     if (CurrResolutionScanResult)
     {
         spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)baseModule);
@@ -342,10 +342,10 @@ void CurrentResolution()
             [](SafetyHookContext& ctx)
             {
                 // Get ResX and ResY
-                int iResX = (int)ctx.r10;
-                int iResY = (int)ctx.r9;
+                int iResX = (int)ctx.rdx;
+                int iResY = (int)ctx.r8;
 
-                // Only log on resolution change since this function runs all the time.
+                // Only log on resolution change.
                 if (iResX != iOldResX || iResY != iOldResY)
                 {
                     CalculateAspectRatio(iResX, iResY);
