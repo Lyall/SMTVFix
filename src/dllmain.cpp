@@ -35,6 +35,7 @@ std::filesystem::path sThisModulePath;
 std::pair DesktopDimensions = { 0,0 };
 
 // Ini variables
+int iInjectionDelay;
 bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
@@ -171,6 +172,7 @@ void ReadConfig()
     }
 
     // Read ini file
+    inipp::get_value(ini.sections["SMTVFix Parameters"], "InjectionDelay", iInjectionDelay);
     inipp::get_value(ini.sections["Intro Skip"], "Enabled", bIntroSkip);
     inipp::get_value(ini.sections["Intro Skip"], "SkipMovie", bIntroSkipMovie);
     inipp::get_value(ini.sections["Enable Console"], "Enabled", bEnableConsole);
@@ -204,6 +206,7 @@ void ReadConfig()
     inipp::get_value(ini.sections["Update Rate Optimizations"], "Enabled", bUROEnabled);
 
     // Log config parse
+    spdlog::info("Config Parse: iInjectionDelay: {}ms", iInjectionDelay);
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
     spdlog::info("Config Parse: bIntroSkipMovie: {}", bIntroSkipMovie);
     spdlog::info("Config Parse: bEnableConsole: {}", bEnableConsole);
@@ -1061,6 +1064,7 @@ DWORD __stdcall Main(void*)
 {
     Logging();
     ReadConfig();
+    Sleep(iInjectionDelay);
     CurrentResolution();
     AspectFOV();
     HUD();
