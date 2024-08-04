@@ -26,7 +26,7 @@ HMODULE thisModule;
 inipp::Ini<char> ini;
 std::shared_ptr<spdlog::logger> logger;
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.1";
+std::string sFixVer = "0.9.2";
 std::string sLogFile = "SMTVFix.log";
 std::string sConfigFile = "SMTVFix.ini";
 std::string sExeName;
@@ -375,13 +375,13 @@ void AspectFOV()
     if (bFixFOV)
     {
         // Field of View
-        uint8_t* FOVScanResult = Memory::PatternScan(baseModule, "E9 ?? ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 45 ?? ?? ??") + 0xA;
+        uint8_t* FOVScanResult = Memory::PatternScan(baseModule, "E9 ?? ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 45 ?? ?? ??");
         if (FOVScanResult)
         {
             spdlog::info("FOV: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FOVScanResult - (uintptr_t)baseModule);
 
             static SafetyHookMid FOVMidHook{};
-            FOVMidHook = safetyhook::create_mid(FOVScanResult,
+            FOVMidHook = safetyhook::create_mid(FOVScanResult + 0xA,
                 [](SafetyHookContext& ctx)
                 {
                     // Fix vert- FOV when using an ultrawide aspect ratio
@@ -437,13 +437,13 @@ void AspectFOV()
     if (bFixAspect)
     {
         // Aspect Ratio
-        uint8_t* AspectRatioScanResult = Memory::PatternScan(baseModule, "74 ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? EB ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? 8B") + 0xA;
+        uint8_t* AspectRatioScanResult = Memory::PatternScan(baseModule, "74 ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? EB ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? 8B");
         if (AspectRatioScanResult)
         {
             spdlog::info("Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AspectRatioScanResult - (uintptr_t)baseModule);
 
             static SafetyHookMid AspectRatioMidHook{};
-            AspectRatioMidHook = safetyhook::create_mid(AspectRatioScanResult + 0x1D,
+            AspectRatioMidHook = safetyhook::create_mid(AspectRatioScanResult + 0x27,
                 [](SafetyHookContext& ctx)
                 {
                     ctx.rax = *(uint32_t*)&fAspectRatio;
@@ -455,13 +455,13 @@ void AspectFOV()
         }
 
         // Freecam Aspect Ratio
-        uint8_t* FreecamAspectRatioScanResult = Memory::PatternScan(baseModule, "4C 89 ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ??") + 0x25;
+        uint8_t* FreecamAspectRatioScanResult = Memory::PatternScan(baseModule, "4C 89 ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ??");
         if (FreecamAspectRatioScanResult)
         {
             spdlog::info("Freecam Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FreecamAspectRatioScanResult - (uintptr_t)baseModule);
 
             static SafetyHookMid FreecamAspectRatioMidHook{};
-            FreecamAspectRatioMidHook = safetyhook::create_mid(FreecamAspectRatioScanResult,
+            FreecamAspectRatioMidHook = safetyhook::create_mid(FreecamAspectRatioScanResult + 0x25,
                 [](SafetyHookContext& ctx)
                 {
                     ctx.rax = *(uint32_t*)&fAspectRatio;
@@ -489,14 +489,14 @@ void HUD()
     }
 
     // Center HUD
-    uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3") + 0xA;
+    uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3");
     if (HUDPositionScanResult)
     {
         spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
 
         static bool bHasSkippedIntro = false;
         static SafetyHookMid HUDPositionMidHook{};
-        HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult,
+        HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult + 0xA,
             [](SafetyHookContext& ctx)
             {
                 if (ctx.rcx)
@@ -557,13 +557,13 @@ void HUD()
     if (bFixHUD)
     {
         // Fix offset markers (i.e speech bubbles etc)
-        uint8_t* MarkersScanResult = Memory::PatternScan(baseModule, "0F ?? ?? 66 ?? ?? ?? 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? 4C") + 0xA;
+        uint8_t* MarkersScanResult = Memory::PatternScan(baseModule, "0F ?? ?? 66 ?? ?? ?? 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? 4C");
         if (MarkersScanResult)
         {
             spdlog::info("HUD: Markers: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MarkersScanResult - (uintptr_t)baseModule);
 
             static SafetyHookMid MarkersMidHook{};
-            MarkersMidHook = safetyhook::create_mid(MarkersScanResult,
+            MarkersMidHook = safetyhook::create_mid(MarkersScanResult + 0xA,
                 [](SafetyHookContext& ctx)
                 {
                     if (fAspectRatio > fNativeAspect)
@@ -582,13 +582,13 @@ void HUD()
         }
 
         // HUD Backgrounds
-        uint8_t* HUDBackgroundsScanResult = Memory::PatternScan(baseModule, "C3 F2 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? F2 0F ?? ?? ?? ?? F2 0F ?? ?? 48 ?? ??") + 0x9;
+        uint8_t* HUDBackgroundsScanResult = Memory::PatternScan(baseModule, "C3 F2 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? F2 0F ?? ?? ?? ?? F2 0F ?? ?? 48 ?? ??");
         if (HUDBackgroundsScanResult)
         {
             spdlog::info("HUD: HUDBackgrounds: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDBackgroundsScanResult - (uintptr_t)baseModule);
 
             static SafetyHookMid HUDBackgroundsMidHook{};
-            HUDBackgroundsMidHook = safetyhook::create_mid(HUDBackgroundsScanResult,
+            HUDBackgroundsMidHook = safetyhook::create_mid(HUDBackgroundsScanResult + 0x9,
                 [](SafetyHookContext& ctx)
                 {
                     // Black Curtain
@@ -624,13 +624,13 @@ void HUD()
         }
 
         // Pause Background
-        uint8_t* PauseBGScanResult = Memory::PatternScan(baseModule, "F3 0F ?? ?? ?? ?? ?? ?? 48 8D ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ??") + 0x15;
+        uint8_t* PauseBGScanResult = Memory::PatternScan(baseModule, "F3 0F ?? ?? ?? ?? ?? ?? 48 8D ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ??");
         if (PauseBGScanResult)
         {
             spdlog::info("HUD: PauseBG: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)PauseBGScanResult - (uintptr_t)baseModule);
 
             static SafetyHookMid PauseBGMidHook{};
-            PauseBGMidHook = safetyhook::create_mid(PauseBGScanResult,
+            PauseBGMidHook = safetyhook::create_mid(PauseBGScanResult + 0x15,
                 [](SafetyHookContext& ctx)
                 {
                     if (fAspectRatio > fNativeAspect)
@@ -689,13 +689,13 @@ void HUD()
 void GraphicalTweaks()
 {
     // Set CVARs
-    uint8_t* SetCVARSScanResult = Memory::PatternScan(baseModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3") + 0x3;
+    uint8_t* SetCVARSScanResult = Memory::PatternScan(baseModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3");
     if (SetCVARSScanResult)
     {
         spdlog::info("Set CVARS: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)SetCVARSScanResult - (uintptr_t)baseModule);
 
         static SafetyHookMid SetCVARSMidHook{};
-        SetCVARSMidHook = safetyhook::create_mid(SetCVARSScanResult,
+        SetCVARSMidHook = safetyhook::create_mid(SetCVARSScanResult + 0x3,
             [](SafetyHookContext& ctx)
             {         
                 if (bEnableTAA)
