@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "SDK/Basic.hpp"
+#include "SDK/ConsoleVariable.h"
 
 namespace Memory
 {
@@ -18,22 +19,6 @@ namespace Memory
         VirtualProtect((LPVOID)address, numBytes, PAGE_EXECUTE_READWRITE, &oldProtect);
         memcpy((LPVOID)address, pattern, numBytes);
         VirtualProtect((LPVOID)address, numBytes, oldProtect, &oldProtect);
-    }
-
-   
-    static HMODULE GetThisDllHandle()
-    {
-        MEMORY_BASIC_INFORMATION info;
-        size_t len = VirtualQueryEx(GetCurrentProcess(), (void*)GetThisDllHandle, &info, sizeof(info));
-        assert(len == sizeof(info));
-        return len ? (HMODULE)info.AllocationBase : NULL;
-    }
-
-    uint32_t ModuleTimestamp(void* module)
-    {
-        auto dosHeader = (PIMAGE_DOS_HEADER)module;
-        auto ntHeaders = (PIMAGE_NT_HEADERS)((std::uint8_t*)module + dosHeader->e_lfanew);
-        return ntHeaders->FileHeader.TimeDateStamp;
     }
 
     // CSGOSimple's pattern scan
@@ -57,7 +42,7 @@ namespace Memory
                 }
             }
             return bytes;
-        };
+            };
 
         auto dosHeader = (PIMAGE_DOS_HEADER)module;
         auto ntHeaders = (PIMAGE_NT_HEADERS)((std::uint8_t*)module + dosHeader->e_lfanew);
@@ -84,45 +69,24 @@ namespace Memory
         return nullptr;
     }
 
+    static HMODULE GetThisDllHandle()
+    {
+        MEMORY_BASIC_INFORMATION info;
+        size_t len = VirtualQueryEx(GetCurrentProcess(), (void*)GetThisDllHandle, &info, sizeof(info));
+        assert(len == sizeof(info));
+        return len ? (HMODULE)info.AllocationBase : NULL;
+    }
+
+    uint32_t ModuleTimestamp(void* module)
+    {
+        auto dosHeader = (PIMAGE_DOS_HEADER)module;
+        auto ntHeaders = (PIMAGE_NT_HEADERS)((std::uint8_t*)module + dosHeader->e_lfanew);
+        return ntHeaders->FileHeader.TimeDateStamp;
+    }
+
     uintptr_t GetAbsolute(uintptr_t address) noexcept
     {
         return (address + 4 + *reinterpret_cast<std::int32_t*>(address));
-    }
-
-    BOOL HookIAT(HMODULE callerModule, char const* targetModule, const void* targetFunction, void* detourFunction)
-    {
-        auto* base = (uint8_t*)callerModule;
-        const auto* dos_header = (IMAGE_DOS_HEADER*)base;
-        const auto nt_headers = (IMAGE_NT_HEADERS*)(base + dos_header->e_lfanew);
-        const auto* imports = (IMAGE_IMPORT_DESCRIPTOR*)(base + nt_headers->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT].VirtualAddress);
-
-        for (int i = 0; imports[i].Characteristics; i++)
-        {
-            const char* name = (const char*)(base + imports[i].Name);
-            if (lstrcmpiA(name, targetModule) != 0)
-                continue;
-
-            void** thunk = (void**)(base + imports[i].FirstThunk);
-
-            for (; *thunk; thunk++)
-            {
-                const void* import = *thunk;
-
-                if (import != targetFunction)
-                    continue;
-
-                DWORD oldState;
-                if (!VirtualProtect(thunk, sizeof(void*), PAGE_READWRITE, &oldState))
-                    return FALSE;
-
-                *thunk = detourFunction;
-
-                VirtualProtect(thunk, sizeof(void*), oldState, &oldState);
-
-                return TRUE;
-            }
-        }
-        return FALSE;
     }
 }
 
@@ -133,6 +97,22 @@ namespace Util
             return { devMode.dmPelsWidth, devMode.dmPelsHeight };
 
         return {};
+    }
+
+    int HexStringToInt(const std::string& hexString) {
+        int num;
+        std::stringstream ss;
+        ss << std::hex << hexString;
+        ss >> num;
+        return num;
+    }
+
+    std::wstring StringToWString(std::string Str) {
+        std::vector<wchar_t> buf(Str.size());
+        std::use_facet<std::ctype<wchar_t>>(std::locale()).widen(Str.data(),
+            Str.data() + Str.size(),
+            buf.data());
+        return std::wstring(buf.data(), buf.size());
     }
 }
 
@@ -147,19 +127,29 @@ namespace Unreal
     SDK::TMap<SDK::FString, FConsoleObject*> GetConsoleObjects(uintptr_t singletonAddr)
     {
         SDK::uint8** Singleton = reinterpret_cast<SDK::uint8**>(singletonAddr);
-
         return *reinterpret_cast<SDK::TMap<SDK::FString, FConsoleObject*>*>(*Singleton + 8);
     }
 
-    uintptr_t FindCVAR(std::string CVAR, SDK::TMap<SDK::FString, FConsoleObject*> ConsoleObjects)
+    SDK::IConsoleVariable* FindCVAR(std::string CVAR, SDK::TMap<SDK::FString, FConsoleObject*> ConsoleObjects)
     {
-        for (auto& Pair : ConsoleObjects)
+        if (CVAR.empty() || ConsoleObjects.Num() == 0)
         {
+            return nullptr;
+        }
+
+        for (const auto& Pair : ConsoleObjects)
+        {
+            if (Pair.Value() == nullptr)
+            {
+                continue;
+            }
+
             if (Pair.Key().ToString() == CVAR)
             {
-                return (uintptr_t)Pair.Value();
+                return reinterpret_cast<SDK::IConsoleVariable*>(Pair.Value());
             }
         }
-        return 0;
+
+        return nullptr;
     }
 }
