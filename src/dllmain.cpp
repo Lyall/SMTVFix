@@ -89,6 +89,7 @@ int iCurrentResY;
 int iOldResX;
 int iOldResY;
 bool bCachedConsoleObjects;
+SDK::UWBP_EventMovie_C* EventMovie = nullptr;
 LPCWSTR sWindowClassName = L"UnrealWindow";
 
 // CVAR addresses
@@ -519,75 +520,102 @@ void HUD()
         spdlog::error("Render Texture 2D Resolution: Pattern scan failed.");
     }
 
-    // Center HUD
-    uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3");
-    if (HUDPositionScanResult)
-    {
-        spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
-
-        static bool bHasSkippedIntro = false;
-        static SafetyHookMid HUDPositionMidHook{};
-        HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult + 0xA,
-            [](SafetyHookContext& ctx)
-            {
-                if (ctx.rcx)
-                {
-                    SDK::UObject* obj = (SDK::UObject*)ctx.rcx;
-
-                    // Intro Skip
-                    if (bIntroSkip && !bHasSkippedIntro)
-                    {
-                        if (obj->IsA(SDK::UWBP_LogoScreen_C::StaticClass()))
-                        {
-                            auto LogoScreen = (SDK::UWBP_LogoScreen_C*)ctx.rcx;
-                            LogoScreen->bComplete = true;
-                            spdlog::info("Intro Skip: Skipped intro logos.");
-                            bHasSkippedIntro = true;
-                        }
-                    }
-
-                    // Center HUD
-                    if (bFixHUD)
-                    {
-                        // Fix "new" on choice selections
-                        if (obj->IsA(SDK::UWB_MsgWindow_C::StaticClass()))
-                        {
-                            auto messageWindow = (SDK::UWB_MsgWindow_C*)obj;
-                            auto selectWidget = messageWindow->MsgSelectMenu->SsPlayerWidgetIcon;
-                            selectWidget->bScissor = true;
-                        }
-
-                        // Check for whitelisted classes and skip centering them
-                        if (obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()) || obj->IsA(SDK::UWB_Loading_C::StaticClass()) || obj->IsA(SDK::UWB_EncountScene_C::StaticClass()))
-                        {
-                            return;
-                        }
-
-                        // Center HUD
-                        if (ctx.xmm0.f32[0] == 0.00f && ctx.xmm0.f32[1] == 0.00f && ctx.xmm0.f32[2] == 1.00f && ctx.xmm0.f32[3] == 1.00f)
-                        {
-                            if (fAspectRatio > fNativeAspect)
-                            {
-                                ctx.xmm0.f32[0] = (float)fHUDWidthOffset / iCurrentResX;
-                                ctx.xmm0.f32[2] = 1.00f - ctx.xmm0.f32[0];
-                            }
-                            else if (fAspectRatio < fNativeAspect)
-                            {
-                                ctx.xmm0.f32[1] = (float)fHUDHeightOffset / iCurrentResY;
-                                ctx.xmm0.f32[3] = 1.00f - ctx.xmm0.f32[1];
-                            }
-                        }
-                    }
-                }
-            });
-    }
-    else if (!HUDPositionScanResult)
-    {
-        spdlog::error("HUD: HUD Position: Pattern scan failed.");
-    }
-
     if (bFixHUD)
     {
+        // Movies - ManaComponent::Prepare()
+        uint8_t* MoviePrepareScanResult = Memory::PatternScan(baseModule, "48 8D ?? ?? ?? ?? ?? ?? 48 89 ?? ?? ?? ?? ?? ?? 48 89 ?? 48 89 ?? ?? 48 89 ?? ??  48 8D ?? ?? ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 89 ?? ?? 48 89 ?? ??");
+        if (MoviePrepareScanResult)
+        {
+            spdlog::info("Movies: Prepare: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MoviePrepareScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid MoviePrepareMidHook{};
+            MoviePrepareMidHook = safetyhook::create_mid(MoviePrepareScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    // Get WBP_EventMovie_C
+                    int i = 0;
+                    while (!EventMovie) {
+                        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                        for (int j = 0; j < SDK::UObject::GObjects->Num(); j++) {
+                            SDK::UObject* Obj = SDK::UObject::GObjects->GetByIndex(j);
+
+                            if (!Obj)
+                                continue;
+
+                            if (Obj->IsA(SDK::UWBP_EventMovie_C::StaticClass()) && !Obj->IsDefaultObject() && (uintptr_t)Obj != (uintptr_t)EventMovie) {
+                                EventMovie = static_cast<SDK::UWBP_EventMovie_C*>(Obj);
+                                break;
+                            }
+                        }
+
+                        i++;
+                        if (i == 100) { // 10s
+                            spdlog::error("Movies: Prepare: Failed to find WBP_EventMovie_C address.");
+                            return;
+                        }
+                    }
+                    spdlog::info("Movies: Prepare: WBP_EventMovie_C address = {:x}", (uintptr_t)EventMovie);
+
+                    // Add pillarboxing/letterboxing and scale movies
+                    if (EventMovie->IsA(SDK::UWBP_EventMovie_C::StaticClass())) {
+                        if (EventMovie->Image_0->RenderTransform.Scale.X == 1.00f && EventMovie->Image_0->RenderTransform.Scale.Y == 1.00f) {
+                            auto widgetTree = (SDK::UPanelWidget*)EventMovie->WidgetTree->RootWidget;
+
+                            // Create background image
+                            SDK::UObject* imgObj = SDK::UGameplayStatics::SpawnObject(UImage::StaticClass(), UImage::StaticClass()->Outer);
+                            auto bgImg = static_cast<SDK::UImage*>(imgObj);
+
+                            // Set brush to black
+                            bgImg->Brush.TintColor = SDK::FSlateColor(SDK::FLinearColor(0.00f, 0.00f, 0.00f, 1.00f));
+
+                            // Add background image widget as child of movie widget
+                            widgetTree->AddChild(bgImg);
+
+                            // Fill screen with background image and set z-order so it's behind the movie texture
+                            auto Slot = static_cast<SDK::UCanvasPanelSlot*>(bgImg->Slot);
+                            if (Slot) {
+                                Slot->SetAnchors(SDK::FAnchors(SDK::FVector2D(0.00f, 0), SDK::FVector2D(1.00f, 1.00f)));
+                                Slot->SetOffsets(SDK::FMargin(0.00f, 0.00f, 0.00f, 0.00f));
+                                Slot->SetZOrder(-1000);
+                            }
+
+                            // Rescale movie texture
+                            if (fAspectRatio > fNativeAspect) {
+                                EventMovie->Image_0->SetRenderScale(SDK::FVector2D(1.00f / fAspectMultiplier, 1.00f));
+                            }
+                            else if (fAspectRatio < fNativeAspect) {
+                                EventMovie->Image_0->SetRenderScale(SDK::FVector2D(1.00f, 1.00f * fAspectMultiplier));
+                            }
+                        }
+                    } else {
+                        spdlog::error("Movies: Prepare: Not a valid WBP_EventMovie_C address.");
+                    }
+                });
+        }
+        else if (!MoviePrepareScanResult)
+        {
+            spdlog::error("Movies: Prepare: Pattern scan failed.");
+        }
+
+        // Movies - ManaComponent::Stop()
+        uint8_t* MovieStopScanResult = Memory::PatternScan(baseModule, "40 ?? 48 83 ?? ?? 48 8B ?? 48 8B ?? ?? ?? ?? ?? 48 85 ?? 0F 84 ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ??");
+        if (MovieStopScanResult)
+        {
+            spdlog::info("Movies: Stop: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MovieStopScanResult - (uintptr_t)baseModule);
+
+            static SafetyHookMid MoviePlayMidHook{};
+            MoviePlayMidHook = safetyhook::create_mid(MovieStopScanResult,
+                [](SafetyHookContext& ctx)
+                {
+                    EventMovie = nullptr;
+                    spdlog::info("Movies: Stop: Movie stopped.");
+                });
+        }
+        else if (!MovieStopScanResult)
+        {
+            spdlog::error("Movies: Stop: Pattern scan failed.");
+        }
+
         // Fix offset markers (i.e speech bubbles etc)
         uint8_t* MarkersScanResult = Memory::PatternScan(baseModule, "0F ?? ?? 66 ?? ?? ?? 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? 4C");
         if (MarkersScanResult)
@@ -715,6 +743,72 @@ void HUD()
         {
             spdlog::error("HUD: EncountPanelSlot: Pattern scan failed.");
         }
+    }
+
+    // Center HUD + Skip Intro
+    uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3");
+    if (HUDPositionScanResult)
+    {
+        spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
+
+        static bool bHasSkippedIntro = false;
+        static SafetyHookMid HUDPositionMidHook{};
+        HUDPositionMidHook = safetyhook::create_mid(HUDPositionScanResult + 0xA,
+            [](SafetyHookContext& ctx)
+            {
+                if (ctx.rcx)
+                {
+                    SDK::UObject* obj = (SDK::UObject*)ctx.rcx;
+
+                    // Intro Skip
+                    if (bIntroSkip && !bHasSkippedIntro)
+                    {
+                        if (obj->IsA(SDK::UWBP_LogoScreen_C::StaticClass()))
+                        {
+                            auto LogoScreen = (SDK::UWBP_LogoScreen_C*)ctx.rcx;
+                            LogoScreen->bComplete = true;
+                            spdlog::info("Intro Skip: Skipped intro logos.");
+                            bHasSkippedIntro = true;
+                        }
+                    }
+
+                    if (bFixHUD)
+                    {
+                        // Fix "new" on choice selections
+                        if (obj->IsA(SDK::UWB_MsgWindow_C::StaticClass()))
+                        {
+                            auto messageWindow = (SDK::UWB_MsgWindow_C*)obj;
+                            auto selectWidget = messageWindow->MsgSelectMenu->SsPlayerWidgetIcon;
+                            selectWidget->bScissor = true;
+                        }
+
+                        // Check for whitelisted classes and skip centering them
+                        if (obj == EventMovie || obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()) || obj->IsA(SDK::UWB_Loading_C::StaticClass()) || obj->IsA(SDK::UWB_EncountScene_C::StaticClass()))
+                        {
+                            return;
+                        }
+
+                        // Center HUD
+                        if (ctx.xmm0.f32[0] == 0.00f && ctx.xmm0.f32[1] == 0.00f && ctx.xmm0.f32[2] == 1.00f && ctx.xmm0.f32[3] == 1.00f)
+                        {
+                            if (fAspectRatio > fNativeAspect)
+                            {
+                                ctx.xmm0.f32[0] = (float)fHUDWidthOffset / iCurrentResX;
+                                ctx.xmm0.f32[2] = 1.00f - ctx.xmm0.f32[0];
+                            }
+                            else if (fAspectRatio < fNativeAspect)
+                            {
+                                ctx.xmm0.f32[1] = (float)fHUDHeightOffset / iCurrentResY;
+                                ctx.xmm0.f32[3] = 1.00f - ctx.xmm0.f32[1];
+                            }
+                        }
+                    }
+                }
+            });
+    }
+    else if (!HUDPositionScanResult)
+    {
+        spdlog::error("HUD: HUD Position: Pattern scan failed.");
     }
 }
 
