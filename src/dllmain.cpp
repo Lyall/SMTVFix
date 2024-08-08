@@ -557,46 +557,6 @@ void HUD()
                             selectWidget->bScissor = true;
                         }
 
-                        // Add pillarboxing/letterboxing to movies
-                        if (obj->IsA(SDK::UWBP_EventMovie_C::StaticClass()))
-                        {
-                            auto movie = (SDK::UWBP_EventMovie_C*)obj;
-                            if (movie->Image_0->RenderTransform.Scale.X == 1.00f && movie->Image_0->RenderTransform.Scale.Y == 1.00f)
-                            {
-                                auto widgetTree = (SDK::UPanelWidget*)movie->WidgetTree->RootWidget;
-
-                                // Create background image
-                                SDK::UObject* imgObj = SDK::UGameplayStatics::SpawnObject(UImage::StaticClass(), UImage::StaticClass()->Outer);
-                                auto bgImg = static_cast<SDK::UImage*>(imgObj);
-
-                                // Set brush to black
-                                bgImg->Brush.TintColor = SDK::FSlateColor(SDK::FLinearColor(0.00f, 0.00f, 0.00f, 1.00f));
-
-                                // Add background image widget as a child of movie widget
-                                widgetTree->AddChild(bgImg);
-
-                                // Fill screen with background image and set z-order so it's behind the movie texture
-                                auto Slot = static_cast<SDK::UCanvasPanelSlot*>(bgImg->Slot);
-                                if (Slot)
-                                {
-                                    Slot->SetAnchors(SDK::FAnchors(SDK::FVector2D(0.00f, 0), SDK::FVector2D(1.00f, 1.00f)));
-                                    Slot->SetOffsets(SDK::FMargin(0.00f, 0.00f, 0.00f, 0.00f));
-                                    Slot->SetZOrder(-1000);
-                                }
-
-                                // Rescale movie texture
-                                if (fAspectRatio > fNativeAspect)
-                                {
-                                    movie->Image_0->SetRenderScale(SDK::FVector2D(1.00f / fAspectMultiplier, 1.00f));
-                                }
-                                else if (fAspectRatio < fNativeAspect)
-                                {
-                                    movie->Image_0->SetRenderScale(SDK::FVector2D(1.00f, 1.00f * fAspectMultiplier));
-                                }
-                            }
-                            return;
-                        }
-
                         // Check for whitelisted classes and skip centering them
                         if (obj->IsA(SDK::UWB_ScreenFade_C::StaticClass()) || obj->IsA(SDK::UWB_ScreenTransition_C::StaticClass()) || obj->IsA(SDK::UWB_EventColorFade_C::StaticClass()) || obj->IsA(SDK::UWB_Loading_C::StaticClass()) || obj->IsA(SDK::UWB_EncountScene_C::StaticClass()))
                         {
@@ -1037,34 +997,27 @@ void IntroSkip()
     if (bIntroSkipMovie)
     {
         // Skip intro movie
-        SDK::UFunction* IntroMovie_fn = SDK::UObject::FindObject<SDK::UFunction>("Function Project.BPL_Title.SetRequestTitleMovie");
-
-        int i = 0;
-        while(!IntroMovie_fn)
+        uint8_t* IntroSkipScanResult = Memory::PatternScan(baseModule, "0A ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 40 ?? 48 83 ?? ?? 48 8B ?? ?? 33 ??");
+        if (IntroSkipScanResult)
         {
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-            IntroMovie_fn = SDK::UObject::FindObject<SDK::UFunction>("Function Project.BPL_Title.SetRequestTitleMovie");
-            i++;
-            if (i == 100)
-            {
-                spdlog::info("Intro Skip: Failed to find intro movie function.");
-                return;
-            }
-        }
-
-        static bool bHasSkippedIntroMovie = false;
-        static SafetyHookMid AspectRatioMidHook{};
-        AspectRatioMidHook = safetyhook::create_mid((uintptr_t)(IntroMovie_fn->ExecFunction) + 0x67,
-            [](SafetyHookContext& ctx)
-            {
-                // Only skip it once so people can replay it by idling in the main menu.
-                if (!bHasSkippedIntroMovie)
+            static bool bHasSkippedIntroMovie = false;
+            static SafetyHookMid IntroSkipMidHook{};
+            IntroSkipMidHook = safetyhook::create_mid((uintptr_t)IntroSkipScanResult + 0x2E,
+                [](SafetyHookContext& ctx)
                 {
-                    ctx.rcx = 0;
-                    bHasSkippedIntroMovie = true;
-                    spdlog::info("Intro Skip: Skipped intro movie.");
-                }
-            });
+                    // Only skip it once so people can replay it by idling in the main menu.
+                    if (!bHasSkippedIntroMovie)
+                    {
+                        ctx.rax &= ~(0xFF);
+                        bHasSkippedIntroMovie = true;
+                        spdlog::info("Intro Skip: Skipped intro movie.");
+                    }
+                });
+        }
+        else if (!IntroSkipScanResult)
+        {
+            spdlog::error("Intro Skip: Pattern scan failed.");
+        }
     } 
 }
 
