@@ -30,9 +30,9 @@ public:
 	bool                                          CamReset_R;                                        // 0x06C2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          CamReset_L;                                        // 0x06C3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          LRStick;                                           // 0x06C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26FC[0x3];                                     // 0x06C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C5[0x3];                                      // 0x06C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               InitRotation;                                      // 0x06C8(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26FD[0x4];                                     // 0x06D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D4[0x4];                                      // 0x06D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            PlayerCameraCV;                                    // 0x06D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

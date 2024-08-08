@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "BattleBGMType_structs.hpp"
 #include "Project_structs.hpp"
+#include "BattleBGMType_structs.hpp"
 
 
 namespace SDK

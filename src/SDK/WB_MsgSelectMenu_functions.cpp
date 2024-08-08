@@ -280,10 +280,10 @@ void UWB_MsgSelectMenu_C::DecSelect()
 // Function WB_MsgSelectMenu.WB_MsgSelectMenu_C.SetSelectCursorOffset
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Defaultcursorpos                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Param_DefaultCursorPos                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    InInitPositionFlag                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWB_MsgSelectMenu_C::SetSelectCursorOffset(int32 Param_Defaultcursorpos, bool InInitPositionFlag)
+void UWB_MsgSelectMenu_C::SetSelectCursorOffset(int32 Param_DefaultCursorPos, bool InInitPositionFlag)
 {
 	static class UFunction* Func = nullptr;
 
@@ -292,7 +292,7 @@ void UWB_MsgSelectMenu_C::SetSelectCursorOffset(int32 Param_Defaultcursorpos, bo
 
 	Params::WB_MsgSelectMenu_C_SetSelectCursorOffset Parms{};
 
-	Parms.Param_Defaultcursorpos = Param_Defaultcursorpos;
+	Parms.Param_DefaultCursorPos = Param_DefaultCursorPos;
 	Parms.InInitPositionFlag = InInitPositionFlag;
 
 	UObject::ProcessEvent(Func, &Parms);

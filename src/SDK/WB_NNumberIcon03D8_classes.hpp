@@ -37,7 +37,7 @@ public:
 	TArray<int32>                                 Digit;                                             // 0x02B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         Subpos;                                            // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCheckSpace;                                      // 0x02C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5292[0x3];                                     // 0x02C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C5[0x3];                                      // 0x02C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FLinearColor>                   ColorType;                                         // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         Lindex;                                            // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

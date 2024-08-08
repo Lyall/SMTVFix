@@ -24,7 +24,7 @@ class UWB_BtlInfoMess_C final : public UUserWidget
 {
 public:
 	int32                                         M_AnimationState;                                  // 0x0260(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53CB[0x4];                                     // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         M_CommonReservedProgramVal;                        // 0x0268(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

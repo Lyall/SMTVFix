@@ -22,7 +22,7 @@ struct FEventScriptStruct final
 {
 public:
 	E_EVENT_SCRIPT_TYPE                           Type_2_76DC6FFD4B73A1CD4B5C9395701D6AB9;           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CAA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Value_1_5_0BC3D8C4409921DC0D9A7B95626BA423;        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Value_2_8_435944694C4D9FAE820B86AB40F4D9CF;        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Value_3_9_714CE87847C9B13801C687B65D5DD7C2;        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

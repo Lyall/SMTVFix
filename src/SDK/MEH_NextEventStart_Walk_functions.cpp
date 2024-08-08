@@ -1041,34 +1041,6 @@ void AMEH_NextEventStart_Walk_C::BPI_SetEncountActor(class AActor* Actor)
 }
 
 
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AMEH_NextEventStart_Walk_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.EventHitAction
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AMEH_NextEventStart_Walk_C::EventHitAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "EventHitAction");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.SetEventBattleActor
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1450,6 +1422,34 @@ void AMEH_NextEventStart_Walk_C::BPI_MapStart(bool MissionCheckDisable, bool Sta
 	Parms.UI_Immediate = UI_Immediate;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AMEH_NextEventStart_Walk_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MEH_NextEventStart_Walk.MEH_NextEventStart_Walk_C.EventHitAction
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AMEH_NextEventStart_Walk_C::EventHitAction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MEH_NextEventStart_Walk_C", "EventHitAction");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -149,7 +149,7 @@ struct BPI_CommonHelpWindowCtrl_C_ICommonHelpWindowSetProgramValue final
 {
 public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D4A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 InString;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_CommonHelpWindowCtrl_C_ICommonHelpWindowSetProgramValue) == 0x000008, "Wrong alignment on BPI_CommonHelpWindowCtrl_C_ICommonHelpWindowSetProgramValue");

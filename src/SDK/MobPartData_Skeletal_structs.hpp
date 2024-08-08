@@ -20,7 +20,7 @@ struct FMobPartData_Skeletal final
 {
 public:
 	int32                                         ID_3_5D38C1B342A8861A7D8A05993A750E46;             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2612[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class USkeletalMesh>           Mesh_6_D1A9672C48F12A6ED4E29888B464EA9C;           // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
 static_assert(alignof(FMobPartData_Skeletal) == 0x000008, "Wrong alignment on FMobPartData_Skeletal");

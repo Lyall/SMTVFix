@@ -22,10 +22,10 @@ namespace SDK
 class ULightPropagationVolumeBlendable final : public UObject
 {
 public:
-	uint8                                         Pad_1032[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLightPropagationVolumeSettings        Settings;                                          // 0x0030(0x0040)(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         BlendWeight;                                       // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1033[0x4];                                     // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

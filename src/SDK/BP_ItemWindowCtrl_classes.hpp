@@ -34,7 +34,7 @@ public:
 	bool                                          IsFinishedCloseWindow;                             // 0x023C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          AlreadyAddWidget;                                  // 0x023D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          AlreadyRemoveWidget;                               // 0x023E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_417F[0x1];                                     // 0x023F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23F[0x1];                                      // 0x023F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ItemId;                                            // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ItemNum;                                           // 0x0244(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ItemAdd;                                           // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

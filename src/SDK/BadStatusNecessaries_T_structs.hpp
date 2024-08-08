@@ -22,7 +22,7 @@ struct FBadStatusNecessaries_T final
 {
 public:
 	E_BAD_STATUS                                  BadStatus_8_C67747F744CDF6F7F90F589F2D1E7E76;      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_236A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Memo_18_436E41E84D73479F118F1BA40BD1F6D3;          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	TArray<class FName>                           ScalarParamNames_4_AF7B82714B7361E559FFA0823D3CFE09; // 0x0018(0x0010)(Edit, BlueprintVisible)
 	TSoftObjectPtr<class UMaterialParameterApplier> MaterialParameterApplier_19_9FB4CBCF4751C2BD842030A72AC48E9B; // 0x0028(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)

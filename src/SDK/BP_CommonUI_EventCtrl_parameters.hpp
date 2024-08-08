@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_SORTWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE_structs.hpp"
+#include "E_SORTWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 #include "E_CATEGORYWINDOW_MOUSE_EVENT_TYPE_structs.hpp"
 
 
@@ -24,7 +24,7 @@ struct BP_CommonUI_EventCtrl_C_CategoryWindow_MouseEvent__DelegateSignature fina
 {
 public:
 	E_CATEGORYWINDOW_MOUSE_EVENT_TYPE             MouseEventType;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SelectCategoryIcon;                                // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CommonUI_EventCtrl_C_CategoryWindow_MouseEvent__DelegateSignature) == 0x000004, "Wrong alignment on BP_CommonUI_EventCtrl_C_CategoryWindow_MouseEvent__DelegateSignature");
@@ -38,7 +38,7 @@ struct BP_CommonUI_EventCtrl_C_SkillSearchSort_MouseEvent__DelegateSignature fin
 {
 public:
 	E_SKILLSEARCH_WINDOW_MOUSE_EVENT_TYPE         MouseEventType;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SelectLstIdx;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectSlotIdx;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ListScrollOffset;                                  // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -58,7 +58,7 @@ struct BP_CommonUI_EventCtrl_C_SortWindow_MouseEvent__DelegateSignature final
 {
 public:
 	E_SORTWINDOW_MOUSE_EVENT_TYPE                 MouseEventType;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SelectLstIdx;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectSlotIdx;                                     // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ListScrollOffset;                                  // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

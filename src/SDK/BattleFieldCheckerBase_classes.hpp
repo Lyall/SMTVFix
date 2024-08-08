@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "PhysicsCore_structs.hpp"
+#include "EncountPostTableData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Project_structs.hpp"
 #include "Project_classes.hpp"
-#include "EncountPostTableData_structs.hpp"
 
 
 namespace SDK
@@ -59,10 +59,10 @@ public:
 	FMulticastInlineDelegateProperty_             Evt_TraceFailed;                                   // 0x0340(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             EvtTraceSuccess;                                   // 0x0350(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          M_IsFailed;                                        // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4557[0x3];                                     // 0x0361(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_361[0x3];                                      // 0x0361(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                M_TraceLocation;                                   // 0x0364(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_SafetySlope;                                     // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4558[0x4];                                     // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_374[0x4];                                      // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        M_TraceLocationArray;                              // 0x0378(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class USceneComponent*>                M_ValidFieldChip;                                  // 0x0388(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<class AActor*>                         M_HiddenActorList;                                 // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
@@ -73,28 +73,28 @@ public:
 	TArray<class USceneComponent*>                M_PlayerAbount;                                    // 0x0410(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<class USceneComponent*>                M_EnemyAbout;                                      // 0x0420(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	struct FVector                                M_FieldUpVector;                                   // 0x0430(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4559[0x4];                                     // 0x043C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43C[0x4];                                      // 0x043C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         M_DitherActorList;                                 // 0x0440(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	bool                                          M_IsValidField;                                    // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_455A[0x3];                                     // 0x0451(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_451[0x3];                                      // 0x0451(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         M_HiSlope;                                         // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   NewVar_0;                                          // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         M_Angle;                                           // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_455B[0x4];                                     // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             Evt_Err_OriginTrace;                               // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         AngleRevize;                                       // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CheckExecute;                                      // 0x047C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_BTL_ENEMY_FIELD                             M_EnemyField;                                      // 0x047D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_455C[0x2];                                     // 0x047E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47E[0x2];                                      // 0x047E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         M_EncountID;                                       // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_455D[0x4];                                     // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEncountPostTableData                  M_EncountPostData;                                 // 0x0488(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TArray<class USceneComponent*>                M_OtherObject;                                     // 0x04B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          M_IsEditor;                                        // 0x04C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_455E[0x3];                                     // 0x04C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C1[0x3];                                      // 0x04C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         M_CeilingCheckRadius;                              // 0x04C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_TraceHit;                                        // 0x04C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_455F[0x3];                                     // 0x04C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C9[0x3];                                      // 0x04C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                M_TraceAfter;                                      // 0x04CC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          M_IsLogOn;                                         // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          M_IsEvent;                                         // 0x04D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)

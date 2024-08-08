@@ -165,15 +165,15 @@ public:
 	class FText                                   CallFunc_GetFacilityName_ReturnValue;              // 0x0030(0x0018)(ConstParm)
 	class AActor*                                 CallFunc_GetMapUICtrl_MapUICtrl;                   // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_LOCATION_WINDOW_TYPE                        CallFunc_GetType_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_665C[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl;               // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_665D[0x6];                                     // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_BPI_GetCurAutomapName_AreaName;           // 0x0070(0x0018)()
 	TScriptInterface<class IBPI_MapUICtrl_C>      K2Node_DynamicCast_AsBPI_Map_UICtrl_1;             // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_665E[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_BPI_GetCurAreaName_AreaName;              // 0x00A0(0x0018)()
 };
 static_assert(alignof(BP_LocationWinCtrl_C_GetCurrentName) == 0x000008, "Wrong alignment on BP_LocationWinCtrl_C_GetCurrentName");

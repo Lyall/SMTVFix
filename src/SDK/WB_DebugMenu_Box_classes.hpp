@@ -35,7 +35,7 @@ public:
 	struct FDebugMenuPageData                     Lo_Data;                                           // 0x02B8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	TSoftClassPtr<class UClass>                   WB_PageClassAssetId;                               // 0x02D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	int32                                         Const_DrawPageMax;                                 // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4028[0x4];                                     // 0x02FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2FC[0x4];                                      // 0x02FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 Class_WbPage;                                      // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UWB_DebugMenu_ItemBase_C*>       PageWidgetList;                                    // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 

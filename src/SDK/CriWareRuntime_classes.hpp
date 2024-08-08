@@ -28,7 +28,7 @@ class UAtomAsrRack final : public UObject
 {
 public:
 	int32                                         RackId;                                            // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_ED9[0x14];                                     // 0x002C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x14];                                      // 0x002C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UAtomAsrRack* GetAsrRack(int32 AsrRackId);
@@ -97,36 +97,36 @@ class UAtomComponent final : public USceneComponent
 public:
 	class USoundAtomCue*                          Sound;                                             // 0x01F8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bAutoDestroy : 1;                                  // 0x0200(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_EEC[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_201[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bPersistAcrossLevelTransition;                     // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EED[0x3];                                      // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_205[0x3];                                      // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bStopWhenOwnerDestroyed : 1;                       // 0x0208(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bIsUISound : 1;                                    // 0x0208(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_EEE[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DefaultVolume;                                     // 0x0210(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableMultipleSoundPlayback;                      // 0x0214(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUsePlaylist;                                      // 0x0215(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EEF[0x2];                                      // 0x0216(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_216[0x2];                                      // 0x0216(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAtomSoundObject*                       DefaultSoundObject;                                // 0x0218(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DefaultBlockIndex;                                 // 0x0220(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EF0[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAtomAisacControlParam>         DefaultAisacControl;                               // 0x0228(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FAtomSelectorParam>             DefaultSelectorLabel;                              // 0x0238(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bOnly2DSound;                                      // 0x0248(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EF1[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnAudioFinished;                                   // 0x0250(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UWorld*                                 PlayWorld;                                         // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGameViewportClient*                    GameViewport;                                      // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EF2[0x18];                                     // 0x0270(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_270[0x18];                                     // 0x0270(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bOverrideAttenuation : 1;                          // 0x0288(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_EF3[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAttenuation*                      AttenuationSettings;                               // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoundAttenuationSettings              AttenuationOverrides;                              // 0x0298(0x03A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EF4[0x8F0];                                    // 0x0638(0x08F0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_638[0x8F0];                                    // 0x0638(0x08F0)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAtomCueSheet*                     CueSheet;                                          // 0x0F28(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_EF5[0x10];                                     // 0x0F30(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F30[0x10];                                     // 0x0F30(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAtomSoundObject*                       AppliedSoundObject;                                // 0x0F40(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_EF6[0x18];                                     // 0x0F48(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F48[0x18];                                     // 0x0F48(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static void DestroyComponentByID(int32 TargetID);
@@ -208,7 +208,7 @@ class UAtomComponentPool final : public UObject
 {
 public:
 	TArray<class UAtomComponent*>                 Pool;                                              // 0x0028(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_EFB[0x30];                                     // 0x0038(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x30];                                      // 0x0038(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -233,9 +233,9 @@ public:
 	class UCriFsBinderComponent*                  BinderComponent;                                   // 0x0210(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLoadCompleted;                                   // 0x0218(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLoadError;                                       // 0x0228(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EFC[0x30];                                     // 0x0238(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_238[0x30];                                     // 0x0238(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAtomCueSheet*                     CueSheet;                                          // 0x0268(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_EFD[0x20];                                     // 0x0270(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_270[0x20];                                     // 0x0270(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static void LoadAtomCueSheet(class UObject* WorldContextObject, TSoftObjectPtr<class USoundAtomCueSheet> Asset, TDelegate<void(class USoundAtomCueSheet* Loaded)> OnLoaded, const struct FLatentActionInfo& LatentInfo);
@@ -271,7 +271,7 @@ class UAtomDeviceWatcher final : public UObject
 {
 public:
 	FMulticastInlineDelegateProperty_             OnDeviceUpdated;                                   // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EFE[0x18];                                     // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 GetDeviceChannelCount();
@@ -297,7 +297,7 @@ static_assert(offsetof(UAtomDeviceWatcher, OnDeviceUpdated) == 0x000028, "Member
 class AAtomDisposer final : public AActor
 {
 public:
-	uint8                                         Pad_EFF[0x10];                                     // 0x0220(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_220[0x10];                                     // 0x0220(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -319,7 +319,7 @@ class UAtomListenerFocusPoint final : public USceneComponent
 public:
 	float                                         DistanceFocusLevel;                                // 0x01F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DirectionFocusLevel;                               // 0x01FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F00[0x10];                                     // 0x0200(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_200[0x10];                                     // 0x0200(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -405,7 +405,7 @@ class AAtomSoundData final : public AActor
 {
 public:
 	class USoundAtomCueSheet*                     CueSheet;                                          // 0x0220(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F02[0x8];                                      // 0x0228(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x8];                                      // 0x0228(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -428,7 +428,7 @@ class UAtomSoundObject final : public UDataAsset
 public:
 	bool                                          EnableVoiceLimitScope;                             // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          EnableCategoryCueLimitScope;                       // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F03[0x16];                                     // 0x0032(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x16];                                      // 0x0032(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -529,7 +529,7 @@ public:
 	class FString                                 FilePath;                                          // 0x01F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnBindCompleted;                                   // 0x0208(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnBindError;                                       // 0x0218(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F15[0x28];                                     // 0x0228(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x28];                                     // 0x0228(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Bind();
@@ -583,7 +583,7 @@ public:
 	class FString                                 FilePath;                                          // 0x01F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLoadCompleted;                                   // 0x0208(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLoadError;                                       // 0x0218(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F16[0x48];                                     // 0x0228(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x48];                                     // 0x0228(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	const TArray<uint8> GetDataArray();
@@ -653,129 +653,129 @@ class UCriWarePluginSettings final : public UObject
 {
 public:
 	bool                                          bNoExistCriWareIni;                                // 0x0028(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F19[0x7];                                      // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDirectoryPath                         NonAssetContentDir;                                // 0x0030(0x0010)(Edit, NativeAccessSpecifierPublic)
 	class FString                                 ContentDir;                                        // 0x0040(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1A[0x10];                                     // 0x0050(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumBinders;                                        // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1B[0x4];                                      // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxBinds;                                          // 0x0068(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1C[0x4];                                      // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumLoaders;                                        // 0x0070(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1D[0x4];                                      // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxPath;                                           // 0x0078(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1E[0x4];                                      // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          OutputsLogFileSystem;                              // 0x0080(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1F[0x3];                                      // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_FileAccessThreadAffinityMask;                  // 0x0084(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F20[0x4];                                      // 0x0088(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_88[0x4];                                       // 0x0088(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_DataDecompressionThreadAffinityMask;           // 0x008C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F21[0x4];                                      // 0x0090(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90[0x4];                                       // 0x0090(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_MemoryFileSystemThreadAffinityMask;            // 0x0094(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F22[0x4];                                      // 0x0098(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x4];                                       // 0x0098(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_FileAccessThreadPriority;                      // 0x009C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F23[0x4];                                      // 0x00A0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0[0x4];                                       // 0x00A0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_DataDecompressionThreadPriority;               // 0x00A4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F24[0x4];                                      // 0x00A8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A8[0x4];                                       // 0x00A8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_MemoryFileSystemThreadPriority;                // 0x00AC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F25[0x4];                                      // 0x00B0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x4];                                       // 0x00B0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          AutomaticallyCreateCueAsset;                       // 0x00B4(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UsesInGamePreview;                                 // 0x00B5(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F26[0x1];                                      // 0x00B6(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B6[0x1];                                       // 0x00B6(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          OutputsLogAtom;                                    // 0x00B7(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F27[0x4];                                      // 0x00B8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x4];                                       // 0x00B8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxVirtualVoices;                                  // 0x00BC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F28[0x4];                                      // 0x00C0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C0[0x4];                                       // 0x00C0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumStandardMemoryVoices;                           // 0x00C4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F29[0x4];                                      // 0x00C8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C8[0x4];                                       // 0x00C8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         StandardMemoryVoiceNumChannels;                    // 0x00CC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F2A[0x4];                                      // 0x00D0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D0[0x4];                                       // 0x00D0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         StandardMemoryVoiceSamplingRate;                   // 0x00D4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F2B[0x4];                                      // 0x00D8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D8[0x4];                                       // 0x00D8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumStandardStreamingVoices;                        // 0x00DC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F2C[0x4];                                      // 0x00E0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E0[0x4];                                       // 0x00E0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         StandardStreamingVoiceNumChannels;                 // 0x00E4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F2D[0x4];                                      // 0x00E8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E8[0x4];                                       // 0x00E8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         StandardStreamingVoiceSamplingRate;                // 0x00EC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F2E[0x4];                                      // 0x00F0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F0[0x4];                                       // 0x00F0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          PoolAtomComponent;                                 // 0x00F4(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F2F[0x3];                                      // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftObjectPath                        AtomConfig;                                        // 0x00F8(0x0018)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F30[0x18];                                     // 0x0110(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_110[0x18];                                     // 0x0110(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 AcfFileName;                                       // 0x0128(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DistanceFactor;                                    // 0x0138(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F31[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	EAtomSoundRendererType                        SoundRendererTypeUI;                               // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F32[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SoundRendererType;                                 // 0x0144(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F33[0x8];                                      // 0x0148(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_148[0x8];                                      // 0x0148(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAtomAsrRackConfigUI>           AsrRackConfigUI;                                   // 0x0150(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FAtomAsrRackConfig>             AsrRackConfig;                                     // 0x0160(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F34[0x10];                                     // 0x0170(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_170[0x10];                                     // 0x0170(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Hardware1;                                         // 0x0180(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Hardware2;                                         // 0x0190(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Hardware3;                                         // 0x01A0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Hardware4;                                         // 0x01B0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EconomicTickMarginDistance;                        // 0x01C0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F35[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         EconomicTickFrequency;                             // 0x01C8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F36[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CullingMarginDistance;                             // 0x01D0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F37[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HcaMxVoiceSamplingRate;                            // 0x01D8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F38[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumHcaMxMemoryVoices;                              // 0x01E0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F39[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HcaMxMemoryVoiceNumChannels;                       // 0x01E8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F3A[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumHcaMxStreamingVoices;                           // 0x01F0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F3B[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HcaMxStreamingVoiceNumChannels;                    // 0x01F8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F3C[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          WASAPI_IsExclusive;                                // 0x0200(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F3D[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_201[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         WASAPI_BitsPerSample;                              // 0x0204(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F3E[0x4];                                      // 0x0208(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_208[0x4];                                      // 0x0208(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         WASAPI_SamplingRate;                               // 0x020C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F3F[0x4];                                      // 0x0210(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_210[0x4];                                      // 0x0210(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         WASAPI_NumChannels;                                // 0x0214(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F40[0x4];                                      // 0x0218(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_218[0x4];                                      // 0x0218(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_ServerThreadAffinityMask;                      // 0x021C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F41[0x4];                                      // 0x0220(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_220[0x4];                                      // 0x0220(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_OutputThreadAffinityMask;                      // 0x0224(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F42[0x4];                                      // 0x0228(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x4];                                      // 0x0228(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_ServerThreadPriority;                          // 0x022C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F43[0x4];                                      // 0x0230(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_230[0x4];                                      // 0x0230(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_OutputThreadPriority;                          // 0x0234(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F44[0x4];                                      // 0x0238(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_238[0x4];                                      // 0x0238(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          PS4_UseAudio3d;                                    // 0x023C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F45[0x3];                                      // 0x023D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23D[0x3];                                      // 0x023D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_NumberOfAudio3dMemoryVoices;                   // 0x0240(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F46[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_SamplingRateOfAudio3dMemoryVoices;             // 0x0248(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F47[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_NumberOfAudio3dStreamingVoices;                // 0x0250(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F48[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PS4_SamplingRateOfAudio3dStreamingVoices;          // 0x0258(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F49[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          InitializeMana;                                    // 0x0260(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4A[0x1];                                      // 0x0261(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_261[0x1];                                      // 0x0261(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          EnableDecodeSkip;                                  // 0x0262(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4B[0x1];                                      // 0x0263(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_263[0x1];                                      // 0x0263(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxDecoderHandles;                                 // 0x0264(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4C[0x4];                                      // 0x0268(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_268[0x4];                                      // 0x0268(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxManaBPS;                                        // 0x026C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4D[0x4];                                      // 0x0270(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_270[0x4];                                      // 0x0270(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxManaStreams;                                    // 0x0274(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4E[0x4];                                      // 0x0278(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_278[0x4];                                      // 0x0278(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          UseH264Decoder;                                    // 0x027C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4F[0x1];                                      // 0x027D(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_27D[0x1];                                      // 0x027D(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bUseManaStartupMovies;                             // 0x027E(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWaitForMoviesToComplete;                          // 0x027F(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMoviesAreSkippable;                               // 0x0280(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F50[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         StartupMovies;                                     // 0x0288(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F51[0x10];                                     // 0x0298(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_298[0x10];                                     // 0x0298(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -872,28 +872,28 @@ public:
 	FMulticastInlineDelegateProperty_             OnFrameOnTime;                                     // 0x0118(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnPlayerDestroyed;                                 // 0x0128(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TDelegate<void(class UManaComponent* ManaComponent)> OnRequestData;                                     // 0x0138(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F52[0x40];                                     // 0x0148(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_148[0x40];                                     // 0x0148(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
 	class UManaPlaylist*                          Playlist;                                          // 0x0188(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         PlaylistIndex;                                     // 0x0190(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F53[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bLoop;                                             // 0x0198(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F54[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AlphaTrack;                                        // 0x019C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         AudioTrack;                                        // 0x01A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         SubAudioTrack;                                     // 0x01A4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         ExtraAudioTrack;                                   // 0x01A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F55[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 AudioCategoryName;                                 // 0x01B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FString                                 SubAudioCategoryName;                              // 0x01C0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FString                                 ExtraAudioCategoryName;                            // 0x01D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bSubtitlesEnabled;                                 // 0x01E0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F56[0x3];                                      // 0x01E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E1[0x3];                                      // 0x01E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SubtitlesChannel;                                  // 0x01E4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EManaSubtitlesEncoding                        SubtitlesEncoding;                                 // 0x01E8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EManaFrameAction                              EndFrameAction;                                    // 0x01E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EManaPlaybackTimer                            PlaybackTimer;                                     // 0x01EA(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EManaMaxFrameDrop                             MaxFrameDrop;                                      // 0x01EB(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F57[0xA4];                                     // 0x01EC(0x00A4)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1EC[0xA4];                                     // 0x01EC(0x00A4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AdvanceTime(const struct FTimespan& DeltaTime);
@@ -1008,7 +1008,7 @@ public:
 	EManaComponentTextureType                     ComponentType;                                     // 0x0181(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETextureAddress                               AddressX;                                          // 0x0182(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETextureAddress                               AddressY;                                          // 0x0183(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F5E[0x4C];                                     // 0x0184(0x004C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_184[0x4C];                                     // 0x0184(0x004C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1051,7 +1051,7 @@ static_assert(sizeof(UManaSource) == 0x000028, "Wrong size on UManaSource");
 class UManaMovie : public UManaSource
 {
 public:
-	uint8                                         Pad_F5F[0x10];                                     // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FManaVideoTrackInfo>            VideoTracks;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FManaVideoTrackInfo>            AlphaTracks;                                       // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FManaAudioTrackInfo>            AudioTracks;                                       // 0x0058(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
@@ -1059,7 +1059,7 @@ public:
 	int32                                         NumSubtitleChannels;                               // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         MaxSubtitleSize;                                   // 0x007C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         bIsAlpha : 1;                                      // 0x0080(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_F60[0xF];                                      // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString GetUrl() const;
@@ -1090,7 +1090,7 @@ class UFileManaMovie final : public UManaMovie
 {
 public:
 	bool                                          bPrecacheFile;                                     // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F61[0x7];                                      // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 FilePath;                                          // 0x0098(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AssetRegistrySearchable, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -1116,7 +1116,7 @@ static_assert(offsetof(UFileManaMovie, FilePath) == 0x000098, "Member 'UFileMana
 class UDataManaMovie final : public UManaMovie
 {
 public:
-	uint8                                         Pad_F62[0x8];                                      // 0x0090(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	TArray<uint8> GetDataArray();
@@ -1161,13 +1161,13 @@ static_assert(offsetof(UStreamManaMovie, StreamUrl) == 0x000090, "Member 'UStrea
 class alignas(0x10) UManaPlayer final : public UObject
 {
 public:
-	uint8                                         Pad_F63[0x10];                                     // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          PlayOnOpen;                                        // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F64[0x3];                                      // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         Loop : 1;                                          // 0x003C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_F65[0xB];                                      // 0x003D(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0xB];                                       // 0x003D(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
 	EManaMaxFrameDrop                             MaxFrameDrop;                                      // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F66[0x7];                                      // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnEndReached;                                      // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnMovieClosed;                                     // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnMovieOpened;                                     // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -1180,9 +1180,9 @@ public:
 	class UManaMovie*                             ManaMovie;                                         // 0x00D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UManaPlaylist*                          Playlist;                                          // 0x00E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         PlaylistIndex;                                     // 0x00E8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F67[0x4];                                      // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UManaComponent*                         ManaComponent;                                     // 0x00F0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F68[0xB8];                                     // 0x00F8(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F8[0xB8];                                      // 0x00F8(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BindOnFrameUpdated(const TDelegate<void(int32 FrameNumber)>& Event);
@@ -1270,7 +1270,7 @@ public:
 	bool                                          bIsAlpha;                                          // 0x0038(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsMixedTypes;                                     // 0x0039(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bIsSeamless;                                       // 0x003A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F75[0x5];                                      // 0x003B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B[0x5];                                       // 0x003B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Add(class UManaMovie* ManaMovie);
@@ -1308,27 +1308,27 @@ static_assert(offsetof(UManaPlaylist, bIsSeamless) == 0x00003A, "Member 'UManaPl
 class UManaTexture final : public UTexture
 {
 public:
-	uint8                                         Pad_F7B[0x10];                                     // 0x0178(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_178[0x10];                                     // 0x0178(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UManaSource*                            MovieSource;                                       // 0x0188(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FString                                 MovieFilePath;                                     // 0x0190(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         bRenderToTexture : 1;                              // 0x01A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_F7C[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TargetGamma;                                       // 0x01A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bHDR : 1;                                          // 0x01A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_F7D[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	ETextureAddress                               AddressX;                                          // 0x01AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETextureAddress                               AddressY;                                          // 0x01AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F7E[0x2];                                      // 0x01AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1AE[0x2];                                      // 0x01AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           ClearColor;                                        // 0x01B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bOverrideDimensions : 1;                           // 0x01C0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_F7F[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FIntPoint                              TargetDimensions;                                  // 0x01C4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPixelFormat                                  OverrideFormat;                                    // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F80[0x3];                                      // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CD[0x3];                                      // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnTextureUpdated;                                  // 0x01D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<class UManaComponentTexture*>          ComponentTextures;                                 // 0x01E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, AdvancedDisplay, Protected, NativeAccessSpecifierProtected)
 	TArray<class UManaComponentTexture*>          AlphaComponentTextures;                            // 0x01F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, AdvancedDisplay, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F81[0x80];                                     // 0x0200(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_200[0x80];                                     // 0x0200(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnTextureUpdated__DelegateSignature(class UManaTexture* ManaTexture);
@@ -1373,7 +1373,7 @@ public:
 	EManaColorSpace                               ColorSpace;                                        // 0x00A6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseGammaExponent;                                 // 0x00A7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ConstGamma;                                        // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F82[0x4];                                      // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1404,7 +1404,7 @@ class UMaterialExpressionManaMovieFormatSwitch final : public UMaterialExpressio
 {
 public:
 	struct FExpressionInput                       Inputs[0x5];                                       // 0x0040(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F83[0x4];                                      // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1427,11 +1427,11 @@ class UMovieSceneAtomSection final : public UMovieSceneSection
 public:
 	class USoundAtomCue*                          Sound;                                             // 0x00E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         StartOffset;                                       // 0x00F0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F84[0x4];                                      // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneFloatChannel                SoundVolume;                                       // 0x00F8(0x00A0)(NativeAccessSpecifierPrivate)
 	struct FMovieSceneFloatChannel                PitchMultiplier;                                   // 0x0198(0x00A0)(NativeAccessSpecifierPrivate)
 	bool                                          bSuppressSubtitles;                                // 0x0238(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F85[0x7];                                      // 0x0239(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1456,7 +1456,7 @@ static_assert(offsetof(UMovieSceneAtomSection, bSuppressSubtitles) == 0x000238, 
 class UMovieSceneAtomTrack final : public UMovieSceneNameableTrack
 {
 public:
-	uint8                                         Pad_F86[0x8];                                      // 0x0090(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90[0x8];                                       // 0x0090(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMovieSceneSection*>             AtomSections;                                      // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
@@ -1500,7 +1500,7 @@ class USoundAtomConfig final : public UObject
 {
 public:
 	class FString                                 AcfFilePath;                                       // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F87[0x28];                                     // 0x0038(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x28];                                      // 0x0038(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static TArray<struct FAtomCategoryInfoParam> GetCategoryInfoArray();
@@ -1524,31 +1524,31 @@ static_assert(offsetof(USoundAtomConfig, AcfFilePath) == 0x000028, "Member 'USou
 class USoundAtomCue final : public UObject
 {
 public:
-	uint8                                         Pad_F88[0x10];                                     // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAtomCueSheet*                     CueSheet;                                          // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 CueName;                                           // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyAtomParameter;                               // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F89[0x3];                                      // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bOverrideConcurrency : 1;                          // 0x0054(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_F8A[0x3];                                      // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundConcurrency*                      SoundConcurrencySettings;                          // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoundConcurrencySettings              ConcurrencyOverrides;                              // 0x0060(0x0028)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         Priority;                                          // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F8B[0x4];                                      // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAttenuation*                      DefaultAttenuation;                                // 0x0090(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEconomicTick;                                     // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverrideEconomicTickSettings;                     // 0x0099(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F8C[0x2];                                      // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         EconomicTickMarginDistance;                        // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EconomicTickFrequency;                             // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCullingSoundPlayingProcessByDistance;             // 0x00A4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseLegacyCullingSettings;                         // 0x00A5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F8D[0x2];                                      // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A6[0x2];                                       // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxProcessDistance;                                // 0x00A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverrideCullingSettings;                          // 0x00AC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F8E[0x3];                                      // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CullingMarginDistance;                             // 0x00B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F8F[0x24];                                     // 0x00B4(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B4[0x24];                                      // 0x00B4(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAtomCue*                          ActionTrackSourceCue;                              // 0x00D8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -1599,18 +1599,18 @@ class USoundAtomCueSheet final : public UObject
 {
 public:
 	bool                                          Contains;                                          // 0x0028(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F90[0x7];                                      // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 AcbFilePath;                                       // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F91[0x28];                                     // 0x0040(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x28];                                      // 0x0040(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bOverrideAwbDirectory;                             // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F92[0x7];                                      // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDirectoryPath                         AwbDirectory;                                      // 0x0070(0x0010)(Edit, NativeAccessSpecifierPublic)
 	class FString                                 CueSheetName;                                      // 0x0080(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumSlots;                                          // 0x0090(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEncrypt;                                          // 0x0094(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F93[0x3];                                      // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USoundAtomCue*>                  Cues;                                              // 0x0098(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F94[0x48];                                     // 0x00A8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A8[0x48];                                      // 0x00A8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static void ApplyDspBusSnapshot(const class FString& SnapshotName, int32 Milliseconds);

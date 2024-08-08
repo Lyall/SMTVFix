@@ -390,7 +390,7 @@ public:
 	bool                                          QueryExportBaseDirectory;                          // 0x0050(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsTexWrapMode                                WrapMode;                                          // 0x0051(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsTexFilterMode                              FilterMode;                                        // 0x0052(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9A[0x1];                                      // 0x0053(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53[0x1];                                       // 0x0053(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         VertexAnimeFloat;                                  // 0x0054(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSs6ProjectSetting) == 0x000008, "Wrong alignment on FSs6ProjectSetting");
@@ -457,7 +457,7 @@ public:
 	ESsBlendType                                  AlphaBlendType;                                    // 0x0013(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ColorLabel;                                        // 0x0014(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          MaskInfluence;                                     // 0x001C(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9B[0x3];                                      // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InheritRates[0x27];                                // 0x0020(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   RefAnimePack;                                      // 0x00BC(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   RefAnime;                                          // 0x00C4(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -469,7 +469,7 @@ public:
 	float                                         WeightImpact;                                      // 0x00EC(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         IKDepth;                                           // 0x00F0(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsIkRotationArrow                            IKRotationArrow;                                   // 0x00F4(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9C[0x3];                                      // 0x00F5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsPart) == 0x000004, "Wrong alignment on FSsPart");
 static_assert(sizeof(FSsPart) == 0x0000F8, "Wrong size on FSsPart");
@@ -532,7 +532,7 @@ struct FSsModel final
 {
 public:
 	TArray<struct FSsPart>                        PartList;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9D[0x8];                                      // 0x0010(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSsMeshBind>                    MeshList;                                          // 0x0018(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TMap<class FName, int32>                      BoneList;                                          // 0x0028(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
@@ -554,7 +554,7 @@ public:
 	float                                         StartKeyTime;                                      // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndKeyTime;                                        // 0x0014(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          SyncStartEnd;                                      // 0x0018(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9E[0x3];                                      // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsCurve) == 0x000004, "Wrong alignment on FSsCurve");
 static_assert(sizeof(FSsCurve) == 0x00001C, "Wrong size on FSsCurve");
@@ -572,11 +572,11 @@ struct alignas(0x08) FSsValue final
 {
 public:
 	ESsValueType                                  Type;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9F[0xF];                                      // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Int_temp;                                          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Float_temp;                                        // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Bool_temp;                                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA0[0x7];                                      // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsValue) == 0x000008, "Wrong alignment on FSsValue");
 static_assert(sizeof(FSsValue) == 0x000020, "Wrong size on FSsValue");
@@ -592,9 +592,9 @@ struct FSsKeyframe final
 public:
 	int32                                         Time;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsInterpolationType                          IpType;                                            // 0x0004(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA1[0x3];                                      // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSsCurve                               Curve;                                             // 0x0008(0x001C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA2[0x4];                                      // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSsValue                               Value;                                             // 0x0028(0x0020)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSsKeyframe) == 0x000008, "Wrong alignment on FSsKeyframe");
@@ -610,7 +610,7 @@ struct FSsAttribute final
 {
 public:
 	ESsAttributeKind                              Tag;                                               // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA3[0x7];                                      // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSsKeyframe>                    Key;                                               // 0x0008(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSsAttribute) == 0x000008, "Wrong alignment on FSsAttribute");
@@ -651,13 +651,13 @@ struct FSsAnimation final
 public:
 	class FName                                   AnimationName;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          OverrideSettings;                                  // 0x0008(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA4[0x3];                                      // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSsAnimationSettings                   Settings;                                          // 0x000C(0x0020)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA5[0x4];                                      // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSsPartAnime>                   PartAnimes;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FSsLabel>                       Labels;                                            // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	bool                                          IsSetup;                                           // 0x0050(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA6[0x7];                                      // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsAnimation) == 0x000008, "Wrong alignment on FSsAnimation");
 static_assert(sizeof(FSsAnimation) == 0x000058, "Wrong size on FSsAnimation");
@@ -695,7 +695,7 @@ struct FSsVarianceValueFloat final
 {
 public:
 	ESsVarianceValueRangeType                     RangeType;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA7[0x3];                                      // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Value;                                             // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubValue;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -710,9 +710,9 @@ static_assert(offsetof(FSsVarianceValueFloat, SubValue) == 0x000008, "Member 'FS
 struct alignas(0x08) FSsEffectElementBase
 {
 public:
-	uint8                                         Pad_FA8[0x8];                                      // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	ESsEffectFunctionType                         MyType;                                            // 0x0008(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA9[0x7];                                      // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsEffectElementBase) == 0x000008, "Wrong alignment on FSsEffectElementBase");
 static_assert(sizeof(FSsEffectElementBase) == 0x000010, "Wrong size on FSsEffectElementBase");
@@ -756,19 +756,19 @@ public:
 	struct FVector2D                              Size;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              Pivot;                                             // 0x0018(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Rotated;                                           // 0x0020(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FAA[0x3];                                      // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ParentSize;                                        // 0x0024(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsMesh;                                            // 0x002C(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FAB[0x3];                                      // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector2D>                      InnerPoint;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      OuterPoint;                                        // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      MeshPointList;                                     // 0x0050(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FSsTriangle>                    MeshTriList;                                       // 0x0060(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	ESsMeshDivType                                DivType;                                           // 0x0070(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FAC[0x3];                                      // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DivW;                                              // 0x0074(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DivH;                                              // 0x0078(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FAD[0x4];                                      // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsCell) == 0x000008, "Wrong alignment on FSsCell");
 static_assert(sizeof(FSsCell) == 0x000080, "Wrong size on FSsCell");
@@ -802,7 +802,7 @@ public:
 	bool                                          OverrideTexSettings;                               // 0x0048(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsTexWrapMode                                WrapMode;                                          // 0x0049(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsTexFilterMode                              FilterMode;                                        // 0x004A(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FAE[0x5];                                      // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSsCell>                        Cells;                                             // 0x0050(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSsCellMap) == 0x000008, "Wrong alignment on FSsCellMap");
@@ -825,7 +825,7 @@ struct FSsVarianceValueInt final
 {
 public:
 	ESsVarianceValueRangeType                     RangeType;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FAF[0x3];                                      // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Value;                                             // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SubValue;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -840,11 +840,11 @@ static_assert(offsetof(FSsVarianceValueInt, SubValue) == 0x000008, "Member 'FSsV
 struct alignas(0x08) FSsEffectBehavior final
 {
 public:
-	uint8                                         Pad_FB0[0x18];                                     // 0x0000(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CellName;                                          // 0x0018(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   CellMapName;                                       // 0x0020(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsRenderBlendType                            blendType;                                         // 0x0028(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FB1[0x7];                                      // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsEffectBehavior) == 0x000008, "Wrong alignment on FSsEffectBehavior");
 static_assert(sizeof(FSsEffectBehavior) == 0x000030, "Wrong size on FSsEffectBehavior");
@@ -858,7 +858,7 @@ struct FSsParticleElementDelay final : public FSsEffectElementBase
 {
 public:
 	int32                                         DelayTime;                                         // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FB2[0x4];                                      // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementDelay) == 0x000008, "Wrong alignment on FSsParticleElementDelay");
 static_assert(sizeof(FSsParticleElementDelay) == 0x000018, "Wrong size on FSsParticleElementDelay");
@@ -878,7 +878,7 @@ struct FSsParticleTurnToDirectionEnabled final : public FSsEffectElementBase
 {
 public:
 	float                                         Rotation;                                          // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FB3[0x4];                                      // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleTurnToDirectionEnabled) == 0x000008, "Wrong alignment on FSsParticleTurnToDirectionEnabled");
 static_assert(sizeof(FSsParticleTurnToDirectionEnabled) == 0x000018, "Wrong size on FSsParticleTurnToDirectionEnabled");
@@ -891,7 +891,7 @@ struct FSsParticlePointGravity final : public FSsEffectElementBase
 public:
 	struct FVector2D                              Position;                                          // 0x0010(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Power;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FB4[0x4];                                      // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticlePointGravity) == 0x000008, "Wrong alignment on FSsParticlePointGravity");
 static_assert(sizeof(FSsParticlePointGravity) == 0x000020, "Wrong size on FSsParticlePointGravity");
@@ -903,7 +903,7 @@ static_assert(offsetof(FSsParticlePointGravity, Power) == 0x000018, "Member 'FSs
 struct alignas(0x08) FSsSimpleTree
 {
 public:
-	uint8                                         Pad_FB5[0x20];                                     // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsSimpleTree) == 0x000008, "Wrong alignment on FSsSimpleTree");
 static_assert(sizeof(FSsSimpleTree) == 0x000020, "Wrong size on FSsSimpleTree");
@@ -917,7 +917,7 @@ public:
 	int32                                         ParentIndex;                                       // 0x0024(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESsEffectNodeType                             Type;                                              // 0x0028(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Visible;                                           // 0x0029(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FB6[0x6];                                      // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSsEffectBehavior                      Behavior;                                          // 0x0030(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSsEffectNode) == 0x000008, "Wrong alignment on FSsEffectNode");
@@ -933,13 +933,13 @@ static_assert(offsetof(FSsEffectNode, Behavior) == 0x000030, "Member 'FSsEffectN
 struct FSsEffectModel final
 {
 public:
-	uint8                                         Pad_FB7[0x8];                                      // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSsEffectNode>                  NodeList;                                          // 0x0008(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	int32                                         LockRandSeed;                                      // 0x0018(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsLockRandSeed;                                    // 0x001C(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FB8[0x3];                                      // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Fps;                                               // 0x0020(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FB9[0x4];                                      // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BgColor;                                           // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   EffectName;                                        // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LayoutScaleX;                                      // 0x0040(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -964,7 +964,7 @@ public:
 	struct FSsVarianceValueFloat                  SizeX;                                             // 0x0010(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSsVarianceValueFloat                  SizeY;                                             // 0x001C(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSsVarianceValueFloat                  ScaleFactor;                                       // 0x0028(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FBA[0x4];                                      // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementTransSize) == 0x000008, "Wrong alignment on FSsParticleElementTransSize");
 static_assert(sizeof(FSsParticleElementTransSize) == 0x000038, "Wrong size on FSsParticleElementTransSize");
@@ -980,7 +980,7 @@ public:
 	struct FSsVarianceValueFloat                  SizeX;                                             // 0x0010(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSsVarianceValueFloat                  SizeY;                                             // 0x001C(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSsVarianceValueFloat                  ScaleFactor;                                       // 0x0028(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FBB[0x4];                                      // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementSize) == 0x000008, "Wrong alignment on FSsParticleElementSize");
 static_assert(sizeof(FSsParticleElementSize) == 0x000038, "Wrong size on FSsParticleElementSize");
@@ -994,7 +994,7 @@ struct FSsParticleElementAlphaFade final : public FSsEffectElementBase
 {
 public:
 	struct FSsVarianceValueFloat                  Disprange;                                         // 0x0010(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FBC[0x4];                                      // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementAlphaFade) == 0x000008, "Wrong alignment on FSsParticleElementAlphaFade");
 static_assert(sizeof(FSsParticleElementAlphaFade) == 0x000020, "Wrong size on FSsParticleElementAlphaFade");
@@ -1006,7 +1006,7 @@ struct FSsParticleElementRndSeedChange final : public FSsEffectElementBase
 {
 public:
 	int32                                         Seed;                                              // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FBD[0x4];                                      // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementRndSeedChange) == 0x000008, "Wrong alignment on FSsParticleElementRndSeedChange");
 static_assert(sizeof(FSsParticleElementRndSeedChange) == 0x000018, "Wrong size on FSsParticleElementRndSeedChange");
@@ -1050,7 +1050,7 @@ struct FSsParticleElementTransColor final : public FSsEffectElementBase
 {
 public:
 	struct FSsVarianceValueColor                  Color;                                             // 0x0010(0x0009)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FBE[0x7];                                      // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementTransColor) == 0x000008, "Wrong alignment on FSsParticleElementTransColor");
 static_assert(sizeof(FSsParticleElementTransColor) == 0x000020, "Wrong size on FSsParticleElementTransColor");
@@ -1108,7 +1108,7 @@ struct FSsParticleElementInitColor final : public FSsEffectElementBase
 {
 public:
 	struct FSsVarianceValueColor                  Color;                                             // 0x0010(0x0009)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FBF[0x7];                                      // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementInitColor) == 0x000008, "Wrong alignment on FSsParticleElementInitColor");
 static_assert(sizeof(FSsParticleElementInitColor) == 0x000020, "Wrong size on FSsParticleElementInitColor");
@@ -1120,7 +1120,7 @@ struct FSsParticleElementTangentialAcceleration final : public FSsEffectElementB
 {
 public:
 	struct FSsVarianceValueFloat                  Acceleration;                                      // 0x0010(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC0[0x4];                                      // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementTangentialAcceleration) == 0x000008, "Wrong alignment on FSsParticleElementTangentialAcceleration");
 static_assert(sizeof(FSsParticleElementTangentialAcceleration) == 0x000020, "Wrong size on FSsParticleElementTangentialAcceleration");
@@ -1132,7 +1132,7 @@ struct FSsParticleElementTransSpeed final : public FSsEffectElementBase
 {
 public:
 	struct FSsVarianceValueFloat                  Speed;                                             // 0x0010(0x000C)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC1[0x4];                                      // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementTransSpeed) == 0x000008, "Wrong alignment on FSsParticleElementTransSpeed");
 static_assert(sizeof(FSsParticleElementTransSpeed) == 0x000020, "Wrong size on FSsParticleElementTransSpeed");
@@ -1189,7 +1189,7 @@ public:
 	int32                                         Lifetime;                                          // 0x0038(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AttimeCreate;                                      // 0x003C(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Priority;                                          // 0x0040(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC2[0x4];                                      // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSsParticleElementBasic) == 0x000008, "Wrong alignment on FSsParticleElementBasic");
 static_assert(sizeof(FSsParticleElementBasic) == 0x000048, "Wrong size on FSsParticleElementBasic");

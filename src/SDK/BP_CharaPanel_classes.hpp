@@ -29,7 +29,7 @@ public:
 	bool                                          IsCreateWidget;                                    // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsHPGaugeAnimation;                                // 0x0391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsMPGaugeAnimation;                                // 0x0392(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_530B[0x5];                                     // 0x0393(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_393[0x5];                                      // 0x0393(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture>                CharaPanelTextrueRef;                              // 0x0398(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          IsActorOnAnimation;                                // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsSelectOnAnimation;                               // 0x03C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "E_ScreenTransitionFadeType_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Project_structs.hpp"
 
 

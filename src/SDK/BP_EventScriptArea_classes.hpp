@@ -33,7 +33,7 @@ public:
 	bool                                          UseMakeActorList;                                  // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ActiveArea;                                        // 0x0251(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsSpawn;                                           // 0x0252(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_65AC[0x5];                                     // 0x0253(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_253[0x5];                                      // 0x0253(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ABP_EventAreaActor_C*>           ActorList;                                         // 0x0258(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class ABP_EventScriptArea_Add_C*>      AddArea;                                           // 0x0268(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	int32                                         SplitIndex;                                        // 0x0278(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

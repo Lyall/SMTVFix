@@ -22,7 +22,7 @@ struct FMapEventHitTypeTable_Struct final
 {
 public:
 	E_MEH_TYPE                                    MEH_Type_9_12EB04AE44F0A307557EC2BCF4C03A45;       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_67E5[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 HitName_6_030A4D634AE06B0EBF6BADA055966AA2;        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FMapEventHitTypeTable_Struct) == 0x000008, "Wrong alignment on FMapEventHitTypeTable_Struct");

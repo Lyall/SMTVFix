@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BattleBGMType_structs.hpp"
 #include "Project_structs.hpp"
+#include "BattleBGMType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

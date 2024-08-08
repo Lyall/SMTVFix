@@ -211,7 +211,7 @@ struct BPI_CharaIK_AnimBP_C_SetInvalidLegIK final
 {
 public:
 	bool                                          Invalid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_260E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Param_Index;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_CharaIK_AnimBP_C_SetInvalidLegIK) == 0x000004, "Wrong alignment on BPI_CharaIK_AnimBP_C_SetInvalidLegIK");

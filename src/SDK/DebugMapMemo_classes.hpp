@@ -25,7 +25,7 @@ class ADebugMapMemo_C final : public AMapActorCore_C
 public:
 	class FText                                   Memo;                                              // 0x0278(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          NewVar_0;                                          // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E65[0x7];                                     // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FST_MAP_DEBUG_MemoColor>        StaffColor;                                        // 0x0298(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	E_MAP_DebugMemo                               Staff;                                             // 0x02A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

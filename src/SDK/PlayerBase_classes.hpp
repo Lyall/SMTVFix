@@ -35,40 +35,40 @@ public:
 	class UPlayerMovementComponent*               PlayerMovement;                                    // 0x08F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         _______3_Val_4A8BE92948CBCCB20FBEB099B4B6DAD2;     // 0x0900(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            _______3__Direction_4A8BE92948CBCCB20FBEB099B4B6DAD2; // 0x0904(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_122A[0x3];                                     // 0x0905(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_905[0x3];                                      // 0x0905(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     _______3;                                          // 0x0908(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         DeathActionTimeLine_Val_1A3BCD7A40C303052A5F8EADD0D1D97A; // 0x0910(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            DeathActionTimeLine__Direction_1A3BCD7A40C303052A5F8EADD0D1D97A; // 0x0914(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_122B[0x3];                                     // 0x0915(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_915[0x3];                                      // 0x0915(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     DeathActionTimeLine;                               // 0x0918(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableGaze;                                       // 0x0920(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          bEnableGazeTransient;                              // 0x0921(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_122C[0x2];                                     // 0x0922(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_922[0x2];                                      // 0x0922(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CurrentGaze;                                       // 0x0924(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableAttack;                                     // 0x092C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_122D[0x3];                                     // 0x092D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_92D[0x3];                                      // 0x092D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         bkBadStatus;                                       // 0x0930(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableLandingAnimation;                           // 0x0934(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bLastMovingOnGround;                               // 0x0935(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_122E[0x2];                                     // 0x0936(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_936[0x2];                                      // 0x0936(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CurrentGazeLimitX;                                 // 0x0938(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CurrentGazeLimitZ;                                 // 0x093C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bAttacking;                                        // 0x0940(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_122F[0x3];                                     // 0x0941(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_941[0x3];                                      // 0x0941(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NearCameraZOffset;                                 // 0x0944(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UProjectIKAnimInstance*                 PostAnimBP;                                        // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          PostAnimFootIK;                                    // 0x0950(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1230[0x7];                                     // 0x0951(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_951[0x7];                                      // 0x0951(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharaStampEffectTable*                 FootStampTable;                                    // 0x0958(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPhysicalSurface                              LastFootSurfaceType;                               // 0x0960(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1231[0x3];                                     // 0x0961(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_961[0x3];                                      // 0x0961(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         OnWaterSurface;                                    // 0x0964(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         BkOnWaterSurface;                                  // 0x0968(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1232[0x4];                                     // 0x096C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_96C[0x4];                                      // 0x096C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystemComponent*               WaterSurfaceParticle_Move;                         // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UParticleSystemComponent*               WaterSurfaceParticle_Idle;                         // 0x0978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         InitialCameraRootTZ;                               // 0x0980(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1233[0x4];                                     // 0x0984(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_984[0x4];                                      // 0x0984(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            CV_CameraForwardOffsetPerVelocity;                 // 0x0988(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundAtomCue*                          MovingSE_Walk;                                     // 0x0990(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USoundAtomCue*                          MovingSE_Run;                                      // 0x0998(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -77,7 +77,7 @@ public:
 	float                                         CameraForwardOffsetInterpSpeed;                    // 0x09B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         GazeDistanceCoefficient;                           // 0x09B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableDash;                                       // 0x09B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1234[0x3];                                     // 0x09B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9B9[0x3];                                      // 0x09B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CameaHeightOffset;                                 // 0x09BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPhysicalMaterial*                      PhysMat;                                           // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SP_Area;                                           // 0x09C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -90,7 +90,6 @@ public:
 	void TickForceTraport();
 	void TickCampMenu();
 	void PlayerPawnTeleport(const struct FVector& NewLocation, const struct FRotator& NewRotation);
-	void SetLegIKEnable(bool Enable, bool Immediately);
 	void TickPostAnimBP();
 	void Input_ToggleAutoRun();
 	void Input_EndDash();
@@ -140,7 +139,6 @@ public:
 	void TickWalkRun(float DeltaSeconds);
 	void SetPausePlayer(bool bPause);
 	void TickBadStatus(E_PLAYER_TYPE PlayerType);
-	void UpdateSink(float DeltaTime, TArray<class UCharaSinkTesterInterface_C*>& Array, struct FVector* Offset);
 	void TickLanding();
 	void IsAttackable(bool* bAttackable);
 	void TickCameraOffset(float DeltaSeconds);
@@ -155,6 +153,8 @@ public:
 	void DebugLogPlayerVisibility();
 	void IsAutoRunning(bool* bAutoRunning);
 	void Act_Death(uint8 InOption, bool DeadTimingOverride, float DeadTiming);
+	void SetLegIKEnable(bool Enable, bool Immediately);
+	void UpdateSink(float DeltaTime, TArray<class UCharaSinkTesterInterface_C*>& Array, struct FVector* Offset);
 
 	E_PLAYER_MOVEMENT_STATE GetMovementState() const;
 	void GetIsMovingOnGround(bool* Param_IsMovingOnGround) const;

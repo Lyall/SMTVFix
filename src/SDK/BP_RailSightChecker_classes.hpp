@@ -23,9 +23,9 @@ namespace SDK
 class ABP_RailSightChecker_C final : public ABP_RailActor_C
 {
 public:
-	uint8                                         Pad_43CF[0x2];                                     // 0x0386(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_386[0x2];                                      // 0x0386(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                M_TargetLocation;                                  // 0x0388(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43D0[0x4];                                     // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         M_IgnoreActor;                                     // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:

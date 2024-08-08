@@ -22,7 +22,7 @@ struct FEventDefaultAO_Struct final
 {
 public:
 	class APostProcessVolume*                     TargetPPV_6_CD6E9C0B4EF5EB40CB46D6BF7BD87845;      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA5[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPostProcessSettings                   Setting_5_BAD4F7574D3A2E420DDE30B3EDFB76DD;        // 0x0010(0x0560)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FEventDefaultAO_Struct) == 0x000010, "Wrong alignment on FEventDefaultAO_Struct");

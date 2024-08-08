@@ -121,28 +121,6 @@ void APlayerBase_C::PlayerPawnTeleport(const struct FVector& NewLocation, const 
 }
 
 
-// Function PlayerBase.PlayerBase_C.SetLegIKEnable
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    Immediately                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void APlayerBase_C::SetLegIKEnable(bool Enable, bool Immediately)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBase_C", "SetLegIKEnable");
-
-	Params::PlayerBase_C_SetLegIKEnable Parms{};
-
-	Parms.Enable = Enable;
-	Parms.Immediately = Immediately;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function PlayerBase.PlayerBase_C.TickPostAnimBP
 // (BlueprintCallable, BlueprintEvent)
 
@@ -1009,34 +987,6 @@ void APlayerBase_C::TickBadStatus(E_PLAYER_TYPE PlayerType)
 }
 
 
-// Function PlayerBase.PlayerBase_C.UpdateSink
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class UCharaSinkTesterInterface_C*>Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// struct FVector                          Offset                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APlayerBase_C::UpdateSink(float DeltaTime, TArray<class UCharaSinkTesterInterface_C*>& Array, struct FVector* Offset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBase_C", "UpdateSink");
-
-	Params::PlayerBase_C_UpdateSink Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-	Parms.Array = std::move(Array);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Array = std::move(Parms.Array);
-
-	if (Offset != nullptr)
-		*Offset = std::move(Parms.Offset);
-}
-
-
 // Function PlayerBase.PlayerBase_C.TickLanding
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -1286,6 +1236,56 @@ void APlayerBase_C::Act_Death(uint8 InOption, bool DeadTimingOverride, float Dea
 	Parms.DeadTiming = DeadTiming;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PlayerBase.PlayerBase_C.SetLegIKEnable
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Immediately                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void APlayerBase_C::SetLegIKEnable(bool Enable, bool Immediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBase_C", "SetLegIKEnable");
+
+	Params::PlayerBase_C_SetLegIKEnable Parms{};
+
+	Parms.Enable = Enable;
+	Parms.Immediately = Immediately;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PlayerBase.PlayerBase_C.UpdateSink
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class UCharaSinkTesterInterface_C*>Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// struct FVector                          Offset                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void APlayerBase_C::UpdateSink(float DeltaTime, TArray<class UCharaSinkTesterInterface_C*>& Array, struct FVector* Offset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerBase_C", "UpdateSink");
+
+	Params::PlayerBase_C_UpdateSink Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+	Parms.Array = std::move(Array);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Array = std::move(Parms.Array);
+
+	if (Offset != nullptr)
+		*Offset = std::move(Parms.Offset);
 }
 
 

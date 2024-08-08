@@ -23,7 +23,7 @@ struct FEventSelection final
 {
 public:
 	E_EVENT_SELECTION_STEP                        Status_22_2061DB104EE337CA2D87AABD667390CE;        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_67B0[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UImage*                                 Image_2_8E9EC881470EFDC46E0827BBDE938DB8;          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_EventLookAt_C*                      LookAt_5_34241E4448139E7D49CED69CC8ECEF9B;         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Facial_25_97D28F8D483FB431EE1B6982261F5D69;        // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -31,7 +31,7 @@ public:
 	class AEmitter*                               Emitter_8_0EBCA47941EC6B76F10489A9B0B495BE;        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NextStep_11_6082B38448EC7172157AF780E235A917;      // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_ACTION_MAPPING_TYPE                         InputKey_14_92A61959493828CE86B5A3BA9B7B58DF;      // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_67B1[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AAtomSound*>                     VoiceSE_18_24BC900046E6D34CAD66F29A82A2FA93;       // 0x0038(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 };
 static_assert(alignof(FEventSelection) == 0x000008, "Wrong alignment on FEventSelection");

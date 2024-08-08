@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "E_MAP_PLAYER_CAMERA_ANIM_TYPE_structs.hpp"
+#include "PlayerCameraInitParam_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "PlayerCameraInitParam_structs.hpp"
 #include "Project_structs.hpp"
 #include "Project_classes.hpp"
+#include "E_MAP_PLAYER_CAMERA_ANIM_TYPE_structs.hpp"
 
 
 namespace SDK
@@ -32,16 +32,16 @@ public:
 	float                                         DEF_Distance;                                      // 0x28D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Dush_End;                                          // 0x28D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Attack_Time;                                       // 0x28D5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26CA[0x2];                                     // 0x28D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28D6[0x2];                                     // 0x28D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DEF_Height;                                        // 0x28D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Atk_End;                                           // 0x28DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	E_MAP_PLAYER_CAMERA_ANIM_TYPE                 NOW_ANIM;                                          // 0x28DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26CB[0x2];                                     // 0x28DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28DE[0x2];                                     // 0x28DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Now_FOV;                                           // 0x28E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Now_Distance;                                      // 0x28E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Now_Height;                                        // 0x28E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_MAP_PLAYER_CAMERA_ANIM_TYPE                 Next_ANIM;                                         // 0x28EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26CC[0x3];                                     // 0x28ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28ED[0x3];                                     // 0x28ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         GoDistance;                                        // 0x28F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         GoSpeed;                                           // 0x28F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         GoFOV;                                             // 0x28F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -52,22 +52,22 @@ public:
 	float                                         Go_DushShakeSpeed;                                 // 0x290C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCameraShakeBase*                       ShakeInstance;                                     // 0x2910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Exinit;                                            // 0x2918(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26CD[0x3];                                     // 0x2919(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2919[0x3];                                     // 0x2919(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Gripoffset;                                        // 0x291C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Nearlimit;                                         // 0x2920(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ManagerMeshVisibleOFF;                             // 0x2924(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ForceHidden;                                       // 0x2925(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26CE[0x2];                                     // 0x2926(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2926[0x2];                                     // 0x2926(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EObjectTypeQuery>                      NPC_and_MOb;                                       // 0x2928(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          MobNPC_Hidden_Once;                                // 0x2938(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          RequestedCameraLagStop;                            // 0x2939(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26CF[0x6];                                     // 0x293A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_293A[0x6];                                     // 0x293A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCameraComponent*                       PlayerCamera;                                      // 0x2940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                LastFrameSocketTransform;                          // 0x2948(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26D0[0x4];                                     // 0x2954(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2954[0x4];                                     // 0x2954(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCustomSpringArmComponent*              PlayerSpringArm;                                   // 0x2958(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ForceKeepVisible;                                  // 0x2960(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26D1[0x3];                                     // 0x2961(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2961[0x3];                                     // 0x2961(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCameraViewPresetData                  Camera_Wide_Preset;                                // 0x2964(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	struct FCameraViewPresetData                  Camera_Standard_Preset;                            // 0x2970(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	struct FCameraViewPresetData                  Camera_Narrow_Preset;                              // 0x297C(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)

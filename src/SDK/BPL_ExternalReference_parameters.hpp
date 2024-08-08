@@ -24,11 +24,11 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_BattleMain_C>     RetValue;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_422A[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_ExternalBattle_C> K2Node_DynamicCast_AsBPI_External_Battle;          // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_422B[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BI_GetBattleMain_retValue;                // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_BattleMain_C>     K2Node_DynamicCast_AsBPI_Battle_Main;              // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -67,7 +67,7 @@ struct BPL_ExternalReference_C_BPL_IsBattleFinished final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_422C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_BPL_GetBIBattleMain_retValue;             // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPL_GetBIBattleMain_success;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BI_BattleIsFinished_retValue;             // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -87,7 +87,7 @@ struct BPL_ExternalReference_C_BPL_IsBattleExcuting final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_422D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_BPL_GetBIBattleMain_retValue;             // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPL_GetBIBattleMain_success;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -107,7 +107,7 @@ public:
 	TMap<E_BTL_CHAR_TYPE, TScriptInterface<class IBPI_CharaBaseAccessor_C>> RetValue;                                          // 0x0008(0x0050)(Parm, OutParm)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_BPL_GetBIBattleMain_retValue;             // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPL_GetBIBattleMain_success;              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_422E[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<E_BTL_CHAR_TYPE, TScriptInterface<class IBPI_CharaBaseAccessor_C>> CallFunc_BI_GetMapOutChara_retValue;               // 0x0070(0x0050)()
 };
 static_assert(alignof(BPL_ExternalReference_C_BPL_GetBattleMapOutChara) == 0x000008, "Wrong alignment on BPL_ExternalReference_C_BPL_GetBattleMapOutChara");
@@ -144,7 +144,7 @@ public:
 	struct FBtlApllyResultData                    RetValue;                                          // 0x0008(0x0070)(Parm, OutParm)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_BPL_GetBIBattleMain_retValue;             // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPL_GetBIBattleMain_success;              // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_422F[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBtlApllyResultData                    CallFunc_BI_GetApplyResultData_retValue;           // 0x0090(0x0070)()
 };
 static_assert(alignof(BPL_ExternalReference_C_BPL_GetBattleApplyResultData) == 0x000008, "Wrong alignment on BPL_ExternalReference_C_BPL_GetBattleApplyResultData");
@@ -162,12 +162,12 @@ struct BPL_ExternalReference_C_BPL_GetBattleFinishedState final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_BTL_FINISHED_STATE                          RetValue;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4230[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SaveSlot;                                          // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_BattleMain_C>     CallFunc_BPL_GetBIBattleMain_retValue;             // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BPL_GetBIBattleMain_success;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	E_BTL_FINISHED_STATE                          CallFunc_BI_GetFinishedState_state;                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4231[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_BI_GetFinishedState_saveSlot;             // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPL_ExternalReference_C_BPL_GetBattleFinishedState) == 0x000008, "Wrong alignment on BPL_ExternalReference_C_BPL_GetBattleFinishedState");

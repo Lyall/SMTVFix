@@ -90,8 +90,6 @@ public:
 	void SetJsonData(class UJsonDataCtrl* Json);
 	void StartDebugGameTrace(bool IsEnable);
 	void BPI_SetEncountActor(class AActor* Actor);
-	void ReceiveBeginPlay();
-	void EventHitAction();
 	void SetEventBattleActor(const TArray<struct FEventBattleListStruct>& BTLActor, const struct FTransform& PlayerPos);
 	void SetLoadLevelGame(bool Enable);
 	void MapInit();
@@ -111,6 +109,8 @@ public:
 	void BPI_PlayerOFF();
 	void BPI_CallEventEncount(int32 EventEncountId, const struct FTransform& SpawnTransform, int32 NextEventID, int32 NowEventID, bool Manual);
 	void BPI_MapStart(bool MissionCheckDisable, bool StartSymbolAIDisable, bool ReturnPlayerPosition, bool UI_Immediate);
+	void ReceiveBeginPlay();
+	void EventHitAction();
 	void BPI_MapPause(bool PlayerMoveEnable, bool PlayerCameraEnable, bool PlayerVisible, bool MoonTimeEnable, bool SymbolEnable, bool AllMapStop, bool AllObjectHidden, bool TopCamera);
 	void BPI_DebugMesWindow(E_MAP_DEBUG_MES_TYPE MesType);
 	void BPI_DebugChangeChar(E_MAP_PLAYER_TYPE Type);

@@ -22,7 +22,7 @@ struct FBTL_CURSOR_MEMORY_T final
 {
 public:
 	E_BTL_UI_COMMAND                              Command_2_BC58054944575C313E32E3A2679D77CE;        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4407[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CursorIndex_6_8CB5330E42A511DF6FFA47B1DFC43688;    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         UsedItemID_9_5B8D84D349FE8684257866B3AAF25A4B;     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
