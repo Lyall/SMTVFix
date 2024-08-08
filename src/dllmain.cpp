@@ -1,14 +1,17 @@
 #include "stdafx.h"
 #include "helper.hpp"
+
 #include <inipp/inipp.h>
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <safetyhook.hpp>
 
+// UE4 SDK
 #include "SDK/Engine_classes.hpp"
 #include "SDK/CinematicCamera_classes.hpp"
 #include "SDK/ProjectPlayerCameraManager_classes.hpp"
 #include "SDK/WBP_LogoScreen_classes.hpp"
+#include "SDK/WBP_EventMovie_classes.hpp"
 #include "SDK/WB_ScreenFade_classes.hpp"
 #include "SDK/WB_ScreenTransition_classes.hpp"
 #include "SDK/WB_EventColorFade_classes.hpp"
@@ -20,22 +23,23 @@
 #include "SDK/ConsoleVariable.h"
 
 HMODULE baseModule = GetModuleHandle(NULL);
-HMODULE thisModule;
 
-// Logger and config setup
-inipp::Ini<char> ini;
-std::shared_ptr<spdlog::logger> logger;
+// Version
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.2";
-std::string sLogFile = "SMTVFix.log";
-std::string sConfigFile = "SMTVFix.ini";
-std::string sExeName;
+std::string sFixVer = "0.9.3";
+std::string sLogFile = sFixName + ".log";
+
+// Logger
+std::shared_ptr<spdlog::logger> logger;
 std::filesystem::path sExePath;
-std::filesystem::path sThisModulePath;
+std::string sExeName;
+
+// Ini
+inipp::Ini<char> ini;
+std::string sConfigFile = sFixName + ".ini";
 std::pair DesktopDimensions = { 0,0 };
 
 // Ini variables
-int iInjectionDelay;
 bool bFixAspect;
 bool bFixHUD;
 bool bFixFOV;
@@ -43,6 +47,7 @@ bool bFixBattleTransition;
 bool bIntroSkip;
 bool bIntroSkipMovie;
 bool bEnableConsole;
+std::string sConsoleHotkey;
 bool bDisableMenuFPSCap;
 bool bEnableTAA;
 bool bEnableGen5TAAU;
@@ -83,6 +88,7 @@ int iCurrentResX;
 int iCurrentResY;
 int iOldResX;
 int iOldResY;
+bool bCachedConsoleObjects;
 LPCWSTR sWindowClassName = L"UnrealWindow";
 
 // CVAR addresses
@@ -106,14 +112,53 @@ void* RenTexPostLoad_Hooked(uint8_t* thisptr)
     return RenTexPostLoad.stdcall<void*>(thisptr);
 }
 
+void CalculateAspectRatio()
+{
+    // Get r.ScreenPercentage
+    if (bCachedConsoleObjects) {
+        SDK::IConsoleVariable* ScreenPercentageCVAR = Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects);
+
+        if (ScreenPercentageCVAR) {
+            fScreenPercentage = ScreenPercentageCVAR->GetFloat();
+        }
+        else {
+            spdlog::error("Current Resolution: Failed to retrieve r.ScreenPercentage CVAR value. Assuming r.ScreenPercentage = 100");
+            fScreenPercentage = 100.0f;
+        }
+    }
+
+    // Calculate aspect ratio
+    fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
+    fAspectMultiplier = fAspectRatio / fNativeAspect;
+
+    // HUD variables
+    fHUDWidth = iCurrentResY * fNativeAspect;
+    fHUDHeight = (float)iCurrentResY;
+    fHUDWidthOffset = (float)(iCurrentResX - fHUDWidth) / 2;
+    fHUDHeightOffset = 0;
+    if (fAspectRatio < fNativeAspect) {
+        fHUDWidth = (float)iCurrentResX;
+        fHUDHeight = (float)iCurrentResX / fNativeAspect;
+        fHUDWidthOffset = 0;
+        fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
+    }
+
+    // Log details about current resolution
+    spdlog::info("----------");
+    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX, iCurrentResY);
+    spdlog::info("Current Resolution: Screen Percentage: {}", fScreenPercentage);
+    spdlog::info("Current Resolution: Base Resolution: {}x{}", iCurrentResX / (fScreenPercentage / 100), iCurrentResY / (fScreenPercentage / 100));
+    spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
+    spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
+    spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
+    spdlog::info("Current Resolution: fHUDHeight: {}", fHUDHeight);
+    spdlog::info("Current Resolution: fHUDWidthOffset: {}", fHUDWidthOffset);
+    spdlog::info("Current Resolution: fHUDHeightOffset: {}", fHUDHeightOffset);
+    spdlog::info("----------");
+}
+
 void Logging()
 {
-    // Get this module path
-    WCHAR thisModulePath[_MAX_PATH] = { 0 };
-    GetModuleFileNameW(thisModule, thisModulePath, MAX_PATH);
-    sThisModulePath = thisModulePath;
-    sThisModulePath = sThisModulePath.remove_filename();
-
     // Get game name and exe path
     WCHAR exePath[_MAX_PATH] = { 0 };
     GetModuleFileNameW(baseModule, exePath, MAX_PATH);
@@ -123,16 +168,15 @@ void Logging()
 
     // spdlog initialisation
     {
-        try
-        {
-            logger = spdlog::basic_logger_st(sFixName.c_str(), sThisModulePath.string() + sLogFile, true);
+        try {
+            logger = spdlog::basic_logger_st(sFixName.c_str(), sExePath.string() + sLogFile, true);
             spdlog::set_default_logger(logger);
 
             spdlog::flush_on(spdlog::level::debug);
             spdlog::info("----------");
             spdlog::info("{} v{} loaded.", sFixName.c_str(), sFixVer.c_str());
             spdlog::info("----------");
-            spdlog::info("Path to logfile: {}", sThisModulePath.string() + sLogFile);
+            spdlog::info("Path to logfile: {}", sExePath.string() + sLogFile);
             spdlog::info("----------");
 
             // Log module details
@@ -142,12 +186,12 @@ void Logging()
             spdlog::info("Module Timestamp: {0:d}", Memory::ModuleTimestamp(baseModule));
             spdlog::info("----------");
         }
-        catch (const spdlog::spdlog_ex& ex)
-        {
+        catch (const spdlog::spdlog_ex& ex) {
             AllocConsole();
             FILE* dummy;
             freopen_s(&dummy, "CONOUT$", "w", stdout);
             std::cout << "Log initialisation failed: " << ex.what() << std::endl;
+            FreeLibraryAndExitThread(baseModule, 1);
         }
     }
 }
@@ -155,27 +199,27 @@ void Logging()
 void ReadConfig()
 {
     // Initialise config
-    std::ifstream iniFile(sThisModulePath.string() + sConfigFile);
-    if (!iniFile)
-    {
+    std::ifstream iniFile(sExePath.string() + sConfigFile);
+    if (!iniFile) {
         AllocConsole();
         FILE* dummy;
         freopen_s(&dummy, "CONOUT$", "w", stdout);
         std::cout << "" << sFixName.c_str() << " v" << sFixVer.c_str() << " loaded." << std::endl;
         std::cout << "ERROR: Could not locate config file." << std::endl;
-        std::cout << "ERROR: Make sure " << sConfigFile.c_str() << " is located in " << sThisModulePath.string().c_str() << std::endl;
+        std::cout << "ERROR: Make sure " << sConfigFile.c_str() << " is located in " << sExePath.string().c_str() << std::endl;
+        FreeLibraryAndExitThread(baseModule, 1);
     }
-    else
-    {
-        spdlog::info("Path to config file: {}", sThisModulePath.string() + sConfigFile);
+    else {
+        spdlog::info("Path to config file: {}", sExePath.string() + sConfigFile);
         ini.parse(iniFile);
     }
 
     // Read ini file
-    inipp::get_value(ini.sections["SMTVFix Parameters"], "InjectionDelay", iInjectionDelay);
+    ini.strip_trailing_comments();
     inipp::get_value(ini.sections["Intro Skip"], "Enabled", bIntroSkip);
     inipp::get_value(ini.sections["Intro Skip"], "SkipMovie", bIntroSkipMovie);
     inipp::get_value(ini.sections["Enable Console"], "Enabled", bEnableConsole);
+    inipp::get_value(ini.sections["Enable Console"], "Hotkey", sConsoleHotkey);
     inipp::get_value(ini.sections["Remove 60FPS Cap"], "Enabled", bDisableMenuFPSCap);
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
@@ -206,10 +250,10 @@ void ReadConfig()
     inipp::get_value(ini.sections["Update Rate Optimizations"], "Enabled", bUROEnabled);
 
     // Log config parse
-    spdlog::info("Config Parse: iInjectionDelay: {}ms", iInjectionDelay);
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
     spdlog::info("Config Parse: bIntroSkipMovie: {}", bIntroSkipMovie);
     spdlog::info("Config Parse: bEnableConsole: {}", bEnableConsole);
+    spdlog::info("Config Parse: sConsoleHotkey: {}", sConsoleHotkey);
     spdlog::info("Config Parse: bDisableMenuFPSCap: {}", bDisableMenuFPSCap);
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
@@ -288,79 +332,66 @@ void ReadConfig()
 
     // Grab desktop resolution/aspect
     DesktopDimensions = Util::GetPhysicalDesktopDimensions();
+    iCurrentResX = DesktopDimensions.first;
+    iCurrentResY = DesktopDimensions.second;
+
+    // Calculate aspect ratio based on desktop resolution before we read it from the game
+    CalculateAspectRatio();
 }
 
-void CalculateAspectRatio(int ResX, int ResY)
+void GetCVARs()
 {
-    // Get/set r.ScreenPercentage
-    auto ScreenPercentageCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects));
-    if (ScreenPercentageCVAR)
-    {
-        if (bScreenPercentage && ScreenPercentageCVAR->GetFloat() != fScreenPercentage)
+    // Get console objects
+    uint8_t* ConsoleManagerSingletonScanResult = Memory::PatternScan(baseModule, "48 83 ?? ?? 48 83 3D ?? ?? ?? ?? 00 0F 85 ?? ?? ?? ?? B9 ?? ?? ?? ?? 48 89 ?? ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 48 ?? ??");
+    if (ConsoleManagerSingletonScanResult) {
+        spdlog::info("Console CVARs: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ConsoleManagerSingletonScanResult - (uintptr_t)baseModule);
+        uintptr_t singletonAddr = Memory::GetAbsolute((uintptr_t)ConsoleManagerSingletonScanResult + 0x7) + 0x1;
+        spdlog::info("Console CVARs: IConsoleManager singleton address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)singletonAddr - (uintptr_t)baseModule);
+
+        int i = 0;
+        while (!*(uintptr_t*)singletonAddr)
         {
-            ScreenPercentageCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-            ScreenPercentageCVAR->Set(std::to_wstring(fScreenPercentage).c_str());
-            spdlog::info("Set CVARS: Set r.ScreenPercentage to {}", ScreenPercentageCVAR->GetFloat());
+            i++;
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+            if (i == 100) { // 10s
+                spdlog::info("Console CVARs: Failed to find singleton adddress.");
+                return;
+            }
         }
 
-        // Grab screen percentage in case it was set by the user
-        fScreenPercentage = ScreenPercentageCVAR->GetFloat();
+        // Cache all console objects
+        ConsoleObjects = Unreal::GetConsoleObjects(singletonAddr);
+        bCachedConsoleObjects = true;
+        spdlog::info("Console CVARs: Cached all console objects.");
     }
-
-    iOldResX = iCurrentResX = ResX;
-    iOldResY = iCurrentResY = ResY;
-
-    // Calculate aspect ratio
-    fAspectRatio = (float)iCurrentResX / (float)iCurrentResY;
-    fAspectMultiplier = fAspectRatio / fNativeAspect;
-
-    // HUD variables
-    fHUDWidth = iCurrentResY * fNativeAspect;
-    fHUDHeight = (float)iCurrentResY;
-    fHUDWidthOffset = (float)(iCurrentResX - fHUDWidth) / 2;
-    fHUDHeightOffset = 0;
-    if (fAspectRatio < fNativeAspect)
-    {
-        fHUDWidth = (float)iCurrentResX;
-        fHUDHeight = (float)iCurrentResX / fNativeAspect;
-        fHUDWidthOffset = 0;
-        fHUDHeightOffset = (float)(iCurrentResY - fHUDHeight) / 2;
+    else if (!ConsoleManagerSingletonScanResult) {
+        spdlog::error("Console CVARs: Pattern scan failed.");
     }
-
-    // Log details about current resolution
-    spdlog::info("----------");
-    spdlog::info("Current Resolution: Base Resolution: {}x{}", iCurrentResX, iCurrentResY);
-    spdlog::info("Current Resolution: fScreenPercentage: {}", fScreenPercentage);
-    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX * (fScreenPercentage / 100), iCurrentResY * (fScreenPercentage / 100));
-    spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
-    spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
-    spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
-    spdlog::info("Current Resolution: fHUDHeight: {}", fHUDHeight);
-    spdlog::info("Current Resolution: fHUDWidthOffset: {}", fHUDWidthOffset);
-    spdlog::info("Current Resolution: fHUDHeightOffset: {}", fHUDHeightOffset);
-    spdlog::info("----------");
 }
 
 void CurrentResolution()
 {
     // Get current resolution
-    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "33 ?? 0F ?? ?? ?? ?? ?? ?? 44 ?? ?? ?? 44 ?? ?? ?? 4C 89 ?? ?? ?? ?? ?? FF 90 ?? ?? ?? ??");
+    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "41 ?? ?? 42 89 ?? ?? ?? ?? ?? 00 41 ?? ?? 0F ?? ??");
     if (CurrResolutionScanResult)
     {
         spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)baseModule);
 
         static SafetyHookMid CurrResolutionMidHook{};
-        CurrResolutionMidHook = safetyhook::create_mid(CurrResolutionScanResult,
+        CurrResolutionMidHook = safetyhook::create_mid(CurrResolutionScanResult + 0x11,
             [](SafetyHookContext& ctx)
             {
                 // Get ResX and ResY
-                int iResX = (int)ctx.rdx;
-                int iResY = (int)ctx.r8;
+                int iResX = (int)ctx.rcx;
+                int iResY = (int)ctx.rax;
 
                 // Only log on resolution change.
-                if (iResX != iOldResX || iResY != iOldResY)
+                if (iResX != iCurrentResX || iResY != iCurrentResY)
                 {
-                    CalculateAspectRatio(iResX, iResY);
+                    iCurrentResX = iResX;
+                    iCurrentResY = iResY;
+                    CalculateAspectRatio();
                 }
             });
     }
@@ -411,7 +442,7 @@ void AspectFOV()
                 { 
                     if (ctx.rdi)
                     {
-                        SDK::UObject* obj = (SDK::UObject*)(ctx.rdi);
+                        SDK::UObject* obj = (SDK::UObject*)ctx.rdi;
                         if (obj->IsA(SDK::AProjectPlayerCameraManager_C::StaticClass()))
                         {
                             SDK::AProjectPlayerCameraManager_C* camManager = (SDK::AProjectPlayerCameraManager_C*)(ctx.rdi);
@@ -501,14 +532,14 @@ void HUD()
             {
                 if (ctx.rcx)
                 {
-                    SDK::UObject* obj = (SDK::UObject*)(ctx.rcx);
+                    SDK::UObject* obj = (SDK::UObject*)ctx.rcx;
 
                     // Intro Skip
                     if (bIntroSkip && !bHasSkippedIntro)
                     {
                         if (obj->IsA(SDK::UWBP_LogoScreen_C::StaticClass()))
                         {
-                            auto LogoScreen = (SDK::UWBP_LogoScreen_C*)(ctx.rcx);
+                            auto LogoScreen = (SDK::UWBP_LogoScreen_C*)ctx.rcx;
                             LogoScreen->bComplete = true;
                             spdlog::info("Intro Skip: Skipped intro logos.");
                             bHasSkippedIntro = true;
@@ -517,12 +548,53 @@ void HUD()
 
                     // Center HUD
                     if (bFixHUD)
-                    { 
+                    {
+                        // Fix "new" on choice selections
                         if (obj->IsA(SDK::UWB_MsgWindow_C::StaticClass()))
                         {
                             auto messageWindow = (SDK::UWB_MsgWindow_C*)obj;
                             auto selectWidget = messageWindow->MsgSelectMenu->SsPlayerWidgetIcon;
                             selectWidget->bScissor = true;
+                        }
+
+                        // Add pillarboxing/letterboxing to movies
+                        if (obj->IsA(SDK::UWBP_EventMovie_C::StaticClass()))
+                        {
+                            auto movie = (SDK::UWBP_EventMovie_C*)obj;
+                            if (movie->Image_0->RenderTransform.Scale.X == 1.00f && movie->Image_0->RenderTransform.Scale.Y == 1.00f)
+                            {
+                                auto widgetTree = (SDK::UPanelWidget*)movie->WidgetTree->RootWidget;
+
+                                // Create background image
+                                SDK::UObject* imgObj = SDK::UGameplayStatics::SpawnObject(UImage::StaticClass(), UImage::StaticClass()->Outer);
+                                auto bgImg = static_cast<SDK::UImage*>(imgObj);
+
+                                // Set brush to black
+                                bgImg->Brush.TintColor = SDK::FSlateColor(SDK::FLinearColor(0.00f, 0.00f, 0.00f, 1.00f));
+
+                                // Add background image widget as a child of movie widget
+                                widgetTree->AddChild(bgImg);
+
+                                // Fill screen with background image and set z-order so it's behind the movie texture
+                                auto Slot = static_cast<SDK::UCanvasPanelSlot*>(bgImg->Slot);
+                                if (Slot)
+                                {
+                                    Slot->SetAnchors(SDK::FAnchors(SDK::FVector2D(0.00f, 0), SDK::FVector2D(1.00f, 1.00f)));
+                                    Slot->SetOffsets(SDK::FMargin(0.00f, 0.00f, 0.00f, 0.00f));
+                                    Slot->SetZOrder(-1000);
+                                }
+
+                                // Rescale movie texture
+                                if (fAspectRatio > fNativeAspect)
+                                {
+                                    movie->Image_0->SetRenderScale(SDK::FVector2D(1.00f / fAspectMultiplier, 1.00f));
+                                }
+                                else if (fAspectRatio < fNativeAspect)
+                                {
+                                    movie->Image_0->SetRenderScale(SDK::FVector2D(1.00f, 1.00f * fAspectMultiplier));
+                                }
+                            }
+                            return;
                         }
 
                         // Check for whitelisted classes and skip centering them
@@ -698,172 +770,175 @@ void GraphicalTweaks()
         SetCVARSMidHook = safetyhook::create_mid(SetCVARSScanResult + 0x3,
             [](SafetyHookContext& ctx)
             {         
-                if (bEnableTAA)
+                if (bCachedConsoleObjects)
                 {
-                    auto AntiAliasingCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.DefaultFeature.AntiAliasing", ConsoleObjects));
-                    if (AntiAliasingCVAR && AntiAliasingCVAR->GetInt() != 2)
+                    if (bEnableTAA)
                     {
-                        AntiAliasingCVAR->SetFlags(ECVF_SetByConstructor);
-                        AntiAliasingCVAR->Set(L"2");
-                        spdlog::info("Set CVARS: Set r.DefaultFeature.AntiAliasing to {}", AntiAliasingCVAR->GetInt());
-                    }
-
-                    auto VertexMotionVectorsCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.VertexDeformationOutputsVelocity", ConsoleObjects));
-                    if (VertexMotionVectorsCVAR && VertexMotionVectorsCVAR->GetInt() != 1)
-                    {
-                        VertexMotionVectorsCVAR->SetFlags(ECVF_SetByConstructor);
-                        VertexMotionVectorsCVAR->Set(L"1");
-                        spdlog::info("Set CVARS: Set r.VertexDeformationOutputsVelocity to {}", VertexMotionVectorsCVAR->GetInt());
-                    }
-
-                    auto HalfResAOCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.AmbientOcclusion.HalfRes", ConsoleObjects));
-                    if (HalfResAOCVAR && HalfResAOCVAR->GetInt() != 0)
-                    {
-                        HalfResAOCVAR->SetFlags(ECVF_SetByConstructor);
-                        HalfResAOCVAR->Set(L"0");
-                        spdlog::info("Set CVARS: Set r.AmbientOcclusion.HalfRes to {}", HalfResAOCVAR->GetInt());
-                    }
-
-                    if (bEnableGen5TAAU)
-                    {
-                        auto TAAUAlgorithmCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.TemporalAA.Algorithm", ConsoleObjects));
-                        if (TAAUAlgorithmCVAR && TAAUAlgorithmCVAR->GetInt() != 1)
+                        auto AntiAliasingCVAR = Unreal::FindCVAR("r.DefaultFeature.AntiAliasing", ConsoleObjects);
+                        if (AntiAliasingCVAR && AntiAliasingCVAR->GetInt() != 2)
                         {
-                            TAAUAlgorithmCVAR->SetFlags(ECVF_SetByConstructor);
-                            TAAUAlgorithmCVAR->Set(L"1");
-                            spdlog::info("Set CVARS: Set r.TemporalAA.Algorithm to {}", TAAUAlgorithmCVAR->GetInt());
+                            AntiAliasingCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            AntiAliasingCVAR->Set(L"2");
+                            spdlog::info("Set CVARS: Set r.DefaultFeature.AntiAliasing to {}", AntiAliasingCVAR->GetInt());
+                        }
+
+                        auto VertexMotionVectorsCVAR = Unreal::FindCVAR("r.VertexDeformationOutputsVelocity", ConsoleObjects);
+                        if (VertexMotionVectorsCVAR && VertexMotionVectorsCVAR->GetInt() != 1)
+                        {
+                            VertexMotionVectorsCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            VertexMotionVectorsCVAR->Set(L"1");
+                            spdlog::info("Set CVARS: Set r.VertexDeformationOutputsVelocity to {}", VertexMotionVectorsCVAR->GetInt());
+                        }
+
+                        auto HalfResAOCVAR = Unreal::FindCVAR("r.AmbientOcclusion.HalfRes", ConsoleObjects);
+                        if (HalfResAOCVAR && HalfResAOCVAR->GetInt() != 0)
+                        {
+                            HalfResAOCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            HalfResAOCVAR->Set(L"0");
+                            spdlog::info("Set CVARS: Set r.AmbientOcclusion.HalfRes to {}", HalfResAOCVAR->GetInt());
+                        }
+
+                        if (bEnableGen5TAAU)
+                        {
+                            auto TAAUAlgorithmCVAR = Unreal::FindCVAR("r.TemporalAA.Algorithm", ConsoleObjects);
+                            if (TAAUAlgorithmCVAR && TAAUAlgorithmCVAR->GetInt() != 1)
+                            {
+                                TAAUAlgorithmCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                                TAAUAlgorithmCVAR->Set(L"1");
+                                spdlog::info("Set CVARS: Set r.TemporalAA.Algorithm to {}", TAAUAlgorithmCVAR->GetInt());
+                            }
                         }
                     }
-                }
 
-                if (bEnableGTAO)
-                {
-                    auto AOMethodCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.AmbientOcclusion.Method", ConsoleObjects));
-                    if (AOMethodCVAR && AOMethodCVAR->GetInt() != 1)
+                    if (bEnableGTAO)
                     {
-                        AOMethodCVAR->SetFlags(ECVF_SetByConstructor);
-                        AOMethodCVAR->Set(L"1");
-                        spdlog::info("Set CVARS: Set r.AmbientOcclusion.Method to {}", AOMethodCVAR->GetInt());
-                    }
-
-                    if (bGTAOHalfRes)
-                    {
-                        auto HalfResGTAOCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.GTAO.Downsample", ConsoleObjects));
-                        if (HalfResGTAOCVAR && HalfResGTAOCVAR->GetInt() != 1)
+                        auto AOMethodCVAR = Unreal::FindCVAR("r.AmbientOcclusion.Method", ConsoleObjects);
+                        if (AOMethodCVAR && AOMethodCVAR->GetInt() != 1)
                         {
-                            HalfResGTAOCVAR->SetFlags(ECVF_SetByConstructor);
-                            HalfResGTAOCVAR->Set(L"1");
-                            spdlog::info("Set CVARS: Set r.GTAO.Downsample to {}", HalfResGTAOCVAR->GetInt());
+                            AOMethodCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            AOMethodCVAR->Set(L"1");
+                            spdlog::info("Set CVARS: Set r.AmbientOcclusion.Method to {}", AOMethodCVAR->GetInt());
+                        }
+
+                        if (bGTAOHalfRes)
+                        {
+                            auto HalfResGTAOCVAR = Unreal::FindCVAR("r.GTAO.Downsample", ConsoleObjects);
+                            if (HalfResGTAOCVAR && HalfResGTAOCVAR->GetInt() != 1)
+                            {
+                                HalfResGTAOCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                                HalfResGTAOCVAR->Set(L"1");
+                                spdlog::info("Set CVARS: Set r.GTAO.Downsample to {}", HalfResGTAOCVAR->GetInt());
+                            }
                         }
                     }
-                }
 
-                if (bAdjustLOD)
-                {
-                    auto FoliageDistanceCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("foliage.LODDistanceScale", ConsoleObjects));
-                    if (FoliageDistanceCVAR && FoliageDistanceCVAR->GetFloat() != fFoliageDistanceScale)
+                    if (bAdjustLOD)
                     {
-                        FoliageDistanceCVAR->SetFlags(ECVF_SetByConstructor);
-                        FoliageDistanceCVAR->Set(std::to_wstring(fFoliageDistanceScale).c_str());
-                        spdlog::info("Set CVARS: Set foliage.LODDistanceScale to {}", FoliageDistanceCVAR->GetFloat());
-                    }
-
-                    auto ViewDistanceCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.ViewDistanceScale", ConsoleObjects));
-                    if (ViewDistanceCVAR && ViewDistanceCVAR->GetFloat() != fViewDistanceScale)
-                    {
-                        ViewDistanceCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        ViewDistanceCVAR->Set(std::to_wstring(fViewDistanceScale).c_str());
-                        spdlog::info("Set CVARS: Set r.ViewDistanceScale to {}", ViewDistanceCVAR->GetFloat());
-                    }
-
-                    auto SkeletalMeshLODBiasCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.SkeletalMeshLODBias", ConsoleObjects));
-                    if (SkeletalMeshLODBiasCVAR && SkeletalMeshLODBiasCVAR->GetInt() != -1)
-                    {
-                        SkeletalMeshLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        SkeletalMeshLODBiasCVAR->Set(L"-1");
-                        spdlog::info("Set CVARS: Set r.SkeletalMeshLODBias to {}", SkeletalMeshLODBiasCVAR->GetInt());
-                    }
-                }
-
-                if (iSSAOLevel != 1)
-                {
-                    auto SSAOLevelsCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.AmbientOcclusionLevels", ConsoleObjects));
-                    if (SSAOLevelsCVAR && SSAOLevelsCVAR->GetInt() != iSSAOLevel)
-                    {
-                        SSAOLevelsCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        SSAOLevelsCVAR->Set(std::to_wstring(iSSAOLevel).c_str());
-                        spdlog::info("Set CVARS: Set r.AmbientOcclusionLevels to {}", SSAOLevelsCVAR->GetInt());
-                    }
-                }
-
-                if (bEnableSSGI)
-                {
-                    auto SSGIEnableCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.SSGI.Enable", ConsoleObjects));
-                    if (SSGIEnableCVAR && SSGIEnableCVAR->GetInt() != 1)
-                    {
-                        SSGIEnableCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        SSGIEnableCVAR->Set(L"1");
-                        spdlog::info("Set CVARS: Set r.SSGI.Enable to {}", SSGIEnableCVAR->GetInt());
-                    }
-
-                    auto SSGIQualityCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.SSGI.Quality", ConsoleObjects));
-                    if (SSGIQualityCVAR && SSGIQualityCVAR->GetInt() != iSSGIQuality)
-                    {
-                        SSGIQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        SSGIQualityCVAR->Set(std::to_wstring(iSSGIQuality).c_str());
-                        spdlog::info("Set CVARS: Set r.SSGI.Quality to {}", SSGIQualityCVAR->GetInt());
-                    }
-
-                    if (bHalfResSSGI)
-                    {
-                        auto SSGIHalfResCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.SSGI.HalfRes", ConsoleObjects));
-                        if (SSGIHalfResCVAR && SSGIHalfResCVAR->GetInt() != 1)
+                        auto FoliageDistanceCVAR = Unreal::FindCVAR("foliage.LODDistanceScale", ConsoleObjects);
+                        if (FoliageDistanceCVAR && FoliageDistanceCVAR->GetFloat() != fFoliageDistanceScale)
                         {
-                            SSGIHalfResCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                            SSGIHalfResCVAR->Set(L"1");
-                            spdlog::info("Set CVARS: Set r.SSGI.HalfRes to {}", SSGIHalfResCVAR->GetInt());
+                            FoliageDistanceCVAR->SetFlags(ECVF_SetByConstructor);
+                            FoliageDistanceCVAR->Set(std::to_wstring(fFoliageDistanceScale).c_str());
+                            spdlog::info("Set CVARS: Set foliage.LODDistanceScale to {}", FoliageDistanceCVAR->GetFloat());
                         }
-                    }           
-                }
 
-                if (!bVignette)
-                {
-                    auto TonemapperQualityCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.Tonemapper.Quality", ConsoleObjects));
-                    if (TonemapperQualityCVAR && TonemapperQualityCVAR->GetInt() != 0)
-                    {
-                        TonemapperQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        TonemapperQualityCVAR->Set(L"0");
-                        spdlog::info("Set CVARS: Set r.Tonemapper.Quality to {}", TonemapperQualityCVAR->GetInt());
-                    }
-                }
+                        auto ViewDistanceCVAR = Unreal::FindCVAR("r.ViewDistanceScale", ConsoleObjects);
+                        if (ViewDistanceCVAR && ViewDistanceCVAR->GetFloat() != fViewDistanceScale)
+                        {
+                            ViewDistanceCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            ViewDistanceCVAR->Set(std::to_wstring(fViewDistanceScale).c_str());
+                            spdlog::info("Set CVARS: Set r.ViewDistanceScale to {}", ViewDistanceCVAR->GetFloat());
+                        }
 
-                if (!bUROEnabled)
-                {
-                    auto UROEnableCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("a.URO.Enable", ConsoleObjects));
-                    if (UROEnableCVAR && UROEnableCVAR->GetInt() != 0)
-                    {
-                        UROEnableCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        UROEnableCVAR->Set(L"0");
-                        spdlog::info("Set CVARS: Set a.URO.Enable to {}", UROEnableCVAR->GetInt());
-                    }
-                }
-
-                if (bShadowQuality)
-                {
-                    auto MaxShadowCSMResolutionCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.Shadow.MaxCSMResolution", ConsoleObjects));
-                    if (MaxShadowCSMResolutionCVAR && MaxShadowCSMResolutionCVAR->GetInt() != iShadowResolution)
-                    {
-                        MaxShadowCSMResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        MaxShadowCSMResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
-                        spdlog::info("Set CVARS: Set r.Shadow.MaxCSMResolution to {}", MaxShadowCSMResolutionCVAR->GetInt());
+                        auto SkeletalMeshLODBiasCVAR = Unreal::FindCVAR("r.SkeletalMeshLODBias", ConsoleObjects);
+                        if (SkeletalMeshLODBiasCVAR && SkeletalMeshLODBiasCVAR->GetInt() != -1)
+                        {
+                            SkeletalMeshLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            SkeletalMeshLODBiasCVAR->Set(L"-1");
+                            spdlog::info("Set CVARS: Set r.SkeletalMeshLODBias to {}", SkeletalMeshLODBiasCVAR->GetInt());
+                        }
                     }
 
-                    auto MaxShadowResolutionCVAR = reinterpret_cast<IConsoleVariable*>(Unreal::FindCVAR("r.Shadow.MaxResolution", ConsoleObjects));
-                    if (MaxShadowResolutionCVAR && MaxShadowResolutionCVAR->GetInt() != iShadowResolution)
+                    if (iSSAOLevel != 1)
                     {
-                        MaxShadowResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
-                        MaxShadowResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
-                        spdlog::info("Set CVARS: Set r.Shadow.MaxResolution to {}", MaxShadowResolutionCVAR->GetInt());
+                        auto SSAOLevelsCVAR = Unreal::FindCVAR("r.AmbientOcclusionLevels", ConsoleObjects);
+                        if (SSAOLevelsCVAR && SSAOLevelsCVAR->GetInt() != iSSAOLevel)
+                        {
+                            SSAOLevelsCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            SSAOLevelsCVAR->Set(std::to_wstring(iSSAOLevel).c_str());
+                            spdlog::info("Set CVARS: Set r.AmbientOcclusionLevels to {}", SSAOLevelsCVAR->GetInt());
+                        }
+                    }
+
+                    if (bEnableSSGI)
+                    {
+                        auto SSGIEnableCVAR = Unreal::FindCVAR("r.SSGI.Enable", ConsoleObjects);
+                        if (SSGIEnableCVAR && SSGIEnableCVAR->GetInt() != 1)
+                        {
+                            SSGIEnableCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            SSGIEnableCVAR->Set(L"1");
+                            spdlog::info("Set CVARS: Set r.SSGI.Enable to {}", SSGIEnableCVAR->GetInt());
+                        }
+
+                        auto SSGIQualityCVAR = Unreal::FindCVAR("r.SSGI.Quality", ConsoleObjects);
+                        if (SSGIQualityCVAR && SSGIQualityCVAR->GetInt() != iSSGIQuality)
+                        {
+                            SSGIQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            SSGIQualityCVAR->Set(std::to_wstring(iSSGIQuality).c_str());
+                            spdlog::info("Set CVARS: Set r.SSGI.Quality to {}", SSGIQualityCVAR->GetInt());
+                        }
+
+                        if (bHalfResSSGI)
+                        {
+                            auto SSGIHalfResCVAR = Unreal::FindCVAR("r.SSGI.HalfRes", ConsoleObjects);
+                            if (SSGIHalfResCVAR && SSGIHalfResCVAR->GetInt() != 1)
+                            {
+                                SSGIHalfResCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                                SSGIHalfResCVAR->Set(L"1");
+                                spdlog::info("Set CVARS: Set r.SSGI.HalfRes to {}", SSGIHalfResCVAR->GetInt());
+                            }
+                        }
+                    }
+
+                    if (!bVignette)
+                    {
+                        auto TonemapperQualityCVAR = Unreal::FindCVAR("r.Tonemapper.Quality", ConsoleObjects);
+                        if (TonemapperQualityCVAR && TonemapperQualityCVAR->GetInt() != 0)
+                        {
+                            TonemapperQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            TonemapperQualityCVAR->Set(L"0");
+                            spdlog::info("Set CVARS: Set r.Tonemapper.Quality to {}", TonemapperQualityCVAR->GetInt());
+                        }
+                    }
+
+                    if (!bUROEnabled)
+                    {
+                        auto UROEnableCVAR = Unreal::FindCVAR("a.URO.Enable", ConsoleObjects);
+                        if (UROEnableCVAR && UROEnableCVAR->GetInt() != 0)
+                        {
+                            UROEnableCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            UROEnableCVAR->Set(L"0");
+                            spdlog::info("Set CVARS: Set a.URO.Enable to {}", UROEnableCVAR->GetInt());
+                        }
+                    }
+
+                    if (bShadowQuality)
+                    {
+                        auto MaxShadowCSMResolutionCVAR = Unreal::FindCVAR("r.Shadow.MaxCSMResolution", ConsoleObjects);
+                        if (MaxShadowCSMResolutionCVAR && MaxShadowCSMResolutionCVAR->GetInt() != iShadowResolution)
+                        {
+                            MaxShadowCSMResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            MaxShadowCSMResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
+                            spdlog::info("Set CVARS: Set r.Shadow.MaxCSMResolution to {}", MaxShadowCSMResolutionCVAR->GetInt());
+                        }
+
+                        auto MaxShadowResolutionCVAR = Unreal::FindCVAR("r.Shadow.MaxResolution", ConsoleObjects);
+                        if (MaxShadowResolutionCVAR && MaxShadowResolutionCVAR->GetInt() != iShadowResolution)
+                        {
+                            MaxShadowResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+                            MaxShadowResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
+                            spdlog::info("Set CVARS: Set r.Shadow.MaxResolution to {}", MaxShadowResolutionCVAR->GetInt());
+                        }
                     }
                 }
             });
@@ -874,67 +949,50 @@ void GraphicalTweaks()
     }
 }
 
-void Misc()
+void EnableConsole()
 {
-    // IConsoleManager Singleton
-    uint8_t* ConsoleManagerSingletonScanResult = Memory::PatternScan(baseModule, "48 83 ?? ?? 48 83 3D ?? ?? ?? ?? 00 0F 85 ?? ?? ?? ?? B9 ?? ?? ?? ?? 48 89 ?? ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 48 ?? ??");
-    if (ConsoleManagerSingletonScanResult)
-    {
-        spdlog::info("IConsoleManager Singleton: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ConsoleManagerSingletonScanResult - (uintptr_t)baseModule);
-        uintptr_t SingletonAddr = Memory::GetAbsolute((uintptr_t)ConsoleManagerSingletonScanResult + 0x7) + 0x1;
-        spdlog::info("IConsoleManager Singleton: Singleton address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)SingletonAddr - (uintptr_t)baseModule);
-
-        // Cache all console objects
-        ConsoleObjects = Unreal::GetConsoleObjects(SingletonAddr);
-    }
-    else if (!ConsoleManagerSingletonScanResult)
-    {
-        spdlog::error("IConsoleManager Singleton: Pattern scan failed.");
-    }
-
     if (bEnableConsole)
     {
-        // Construct Console
-        uint8_t* ConstructConsoleScanResult = Memory::PatternScan(baseModule, "48 ?? ?? ?? ?? 57 48 ?? ?? ?? ?? ?? ?? 80 ?? ?? ?? ?? ?? 00 48 ?? ?? 48 ?? ?? 0F ?? ?? ?? ?? ?? 8B ?? ??");
-        if (ConstructConsoleScanResult)
-        {
-            spdlog::info("Construct Console: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ConstructConsoleScanResult - (uintptr_t)baseModule);
+        // Get GEngine
+        SDK::UEngine* engine = nullptr;
 
-            static SafetyHookMid ConstructConsoleMidHook{};
-            ConstructConsoleMidHook = safetyhook::create_mid(ConstructConsoleScanResult,
-                [](SafetyHookContext& ctx)
-                {
-                    if (ctx.rcx)
-                    {
-                        SDK::UGameViewportClient* viewport = (SDK::UGameViewportClient*)(ctx.rcx);
+        int i = 0;
+        while (i < 100) { // 10s
+            engine = SDK::UEngine::GetEngine();
 
-                        if (viewport->ViewportConsole)
-                        {
-                            return;
-                        }
+            if (engine && engine->ConsoleClass && engine->GameViewport) {
+                break;
+            }
 
-                        // Get console key
-                        if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
-                        {
-                            spdlog::info("Console enabled: Access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
-                        }
-                        else if (!SDK::UInputSettings::GetInputSettings()->ConsoleKeys)
-                        {
-                            spdlog::info("Console enabled but no console key is bound.\nAdd this: \n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde\nto %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini");
-                        }
-
-                        SDK::UEngine* Engine = SDK::UEngine::GetEngine();
-                        SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
-                        viewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
-                    }
-                });
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            i++;
         }
-        else if (!ConstructConsoleScanResult)
-        {
-            spdlog::error("Construct Console: Pattern scan failed.");
+
+        if (i == 100) {
+            spdlog::error("Construct Console: Failed to find GEngine address.");
+            return;
+        }
+
+        spdlog::info("Construct Console: GEngine address = {:x}", (uintptr_t)engine);
+
+        // Set console key
+        SDK::UInputSettings::GetDefaultObj()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(SDK::FString(Util::StringToWString(sConsoleHotkey).c_str()));
+
+        // Construct console
+        SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(engine->ConsoleClass, engine->GameViewport);
+        engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
+        spdlog::info("Construct Console: Console enabled.");
+
+        // Log console key
+        if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys) {
+            spdlog::info("Construct Console: Console enabled - access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
         }
     }
 
+}
+
+void Misc()
+{
     if (bDisableMenuFPSCap)
     {
         // Disable FrameRateManager changing t.MaxFPS to 60
@@ -972,7 +1030,6 @@ void Misc()
             spdlog::error("Movie Resolution: Pattern scan failed.");
         }
     }
-
 }
 
 void IntroSkip()
@@ -985,13 +1042,13 @@ void IntroSkip()
         int i = 0;
         while(!IntroMovie_fn)
         {
-            Sleep(500);
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
             IntroMovie_fn = SDK::UObject::FindObject<SDK::UFunction>("Function Project.BPL_Title.SetRequestTitleMovie");
             i++;
-            if (i == 20)
+            if (i == 100)
             {
                 spdlog::info("Intro Skip: Failed to find intro movie function.");
-                break;
+                return;
             }
         }
 
@@ -1064,15 +1121,16 @@ DWORD __stdcall Main(void*)
 {
     Logging();
     ReadConfig();
-    Sleep(iInjectionDelay);
     CurrentResolution();
+    GetCVARs();
+    IntroSkip();
     AspectFOV();
     HUD();
     GraphicalTweaks();
+    EnableConsole();
     Misc();
-    IntroSkip();
     WindowFocus();
-    return true; //end thread
+    return true;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule,
@@ -1084,12 +1142,12 @@ BOOL APIENTRY DllMain(HMODULE hModule,
     {
     case DLL_PROCESS_ATTACH:
     {
-        thisModule = hModule;
         HANDLE mainHandle = CreateThread(NULL, 0, Main, 0, NULL, 0);
         if (mainHandle)
         {
             CloseHandle(mainHandle);
         }
+        break;
     }
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
