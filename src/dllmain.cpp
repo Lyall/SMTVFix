@@ -88,7 +88,7 @@ int iCurrentResX;
 int iCurrentResY;
 int iOldResX;
 int iOldResY;
-bool bCachedConsoleObjects;
+bool bCachedConsoleObjects = false;
 SDK::UWBP_EventMovie_C* EventMovie = nullptr;
 LPCWSTR sWindowClassName = L"UnrealWindow";
 
@@ -369,7 +369,7 @@ void GetCVARs()
             spdlog::info("Console CVARs: Cached all console objects.");
         }
         else {
-            spdlog::info("Console CVARs: ConsoleObjects TMap is not valid.");
+            spdlog::error("Console CVARs: ConsoleObjects TMap is not valid.");
         }
     }
     else if (!ConsoleManagerSingletonScanResult) {
@@ -1000,6 +1000,9 @@ void GraphicalTweaks()
                             spdlog::info("Set CVARS: Set r.Shadow.MaxResolution to {}", MaxShadowResolutionCVAR->GetInt());
                         }
                     }
+                }
+                else {
+                    spdlog::error("Set CVARS: ConsoleObjects invalid.");
                 }
             });
     }
