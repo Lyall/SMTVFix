@@ -47,7 +47,6 @@ bool bFixBattleTransition;
 bool bIntroSkip;
 bool bIntroSkipMovie;
 bool bEnableConsole;
-std::string sConsoleHotkey;
 bool bDisableMenuFPSCap;
 bool bEnableTAA;
 bool bEnableGen5TAAU;
@@ -220,7 +219,6 @@ void ReadConfig()
     inipp::get_value(ini.sections["Intro Skip"], "Enabled", bIntroSkip);
     inipp::get_value(ini.sections["Intro Skip"], "SkipMovie", bIntroSkipMovie);
     inipp::get_value(ini.sections["Enable Console"], "Enabled", bEnableConsole);
-    inipp::get_value(ini.sections["Enable Console"], "Hotkey", sConsoleHotkey);
     inipp::get_value(ini.sections["Remove 60FPS Cap"], "Enabled", bDisableMenuFPSCap);
     inipp::get_value(ini.sections["Fix Aspect Ratio"], "Enabled", bFixAspect);
     inipp::get_value(ini.sections["Fix HUD"], "Enabled", bFixHUD);
@@ -254,7 +252,6 @@ void ReadConfig()
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
     spdlog::info("Config Parse: bIntroSkipMovie: {}", bIntroSkipMovie);
     spdlog::info("Config Parse: bEnableConsole: {}", bEnableConsole);
-    spdlog::info("Config Parse: sConsoleHotkey: {}", sConsoleHotkey);
     spdlog::info("Config Parse: bDisableMenuFPSCap: {}", bDisableMenuFPSCap);
     spdlog::info("Config Parse: bFixAspect: {}", bFixAspect);
     spdlog::info("Config Parse: bFixHUD: {}", bFixHUD);
@@ -1023,8 +1020,10 @@ void EnableConsole()
         while (i < 100) { // 10s
             engine = SDK::UEngine::GetEngine();
 
-            if (engine && engine->ConsoleClass && engine->GameViewport) {
-                break;
+            if (engine) {
+                if (engine->ConsoleClass && engine->GameViewport) {
+                    break;
+                }
             }
 
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
@@ -1032,26 +1031,37 @@ void EnableConsole()
         }
 
         if (i == 100) {
-            spdlog::error("Construct Console: Failed to find GEngine address.");
+            spdlog::error("Construct Console: Failed to find GEngine address after 10 seconds.");
             return;
         }
 
         spdlog::info("Construct Console: GEngine address = {:x}", (uintptr_t)engine);
 
-        // Set console key
-        SDK::UInputSettings::GetDefaultObj()->ConsoleKeys[0].KeyName = SDK::UKismetStringLibrary::Conv_StringToName(SDK::FString(Util::StringToWString(sConsoleHotkey).c_str()));
-
         // Construct console
-        SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(engine->ConsoleClass, engine->GameViewport);
-        engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
-        spdlog::info("Construct Console: Console enabled.");
+        if (engine->ConsoleClass && engine->GameViewport) {
+            SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(engine->ConsoleClass, engine->GameViewport);
+            if (NewObject) {
+                engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
+                spdlog::info("Construct Console: Console object constructed.");
+            }
+            else {
+                spdlog::error("Construct Console: Failed to construct console object.");
+                return;
+            }
+        }
+        else {
+            spdlog::error("Construct Console: Failed to construct console object - ConsoleClass or GameViewport is null.");
+            return;
+        }
 
         // Log console key
-        if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys) {
+        if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys && SDK::UInputSettings::GetInputSettings()->ConsoleKeys.Num() > 0) {
             spdlog::info("Construct Console: Console enabled - access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
         }
+        else {
+            spdlog::error("Console enabled but no console key is bound.\nAdd this: \n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde\nto %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini");
+        }
     }
-
 }
 
 void Misc()
@@ -1153,7 +1163,7 @@ void WindowFocus()
         while (i < 30 && !IsWindow(hWnd))
         {
             // Wait 1 sec then try again
-            Sleep(1000);
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
             i++;
             hWnd = FindWindowW(sWindowClassName, nullptr);
         }
