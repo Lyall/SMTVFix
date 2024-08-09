@@ -20,13 +20,12 @@
 #include "SDK/WB_MsgWindow_classes.hpp"
 #include "SDK/WB_MsgSelectMenu_classes.hpp"
 #include "SDK/SpriteStudio6_classes.hpp"
-#include "SDK/ConsoleVariable.h"
 
 HMODULE baseModule = GetModuleHandle(NULL);
 
 // Version
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.3";
+std::string sFixVer = "0.9.4";
 std::string sLogFile = sFixName + ".log";
 
 // Logger
