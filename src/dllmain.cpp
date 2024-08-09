@@ -1058,7 +1058,7 @@ void EnableConsole()
             spdlog::info("Construct Console: Console enabled - access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
         }
         else {
-            spdlog::error("Console enabled but no console key is bound.\nAdd this: \n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde\nto %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini");
+            spdlog::error("Console enabled but no console key is bound.\nAdd this to %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini -\n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde");
         }
     }
 }
