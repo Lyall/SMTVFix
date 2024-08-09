@@ -363,8 +363,14 @@ void GetCVARs()
 
         // Cache all console objects
         ConsoleObjects = Unreal::GetConsoleObjects(singletonAddr);
-        bCachedConsoleObjects = true;
-        spdlog::info("Console CVARs: Cached all console objects.");
+
+        if (ConsoleObjects.Num() != 0) {
+            bCachedConsoleObjects = true;
+            spdlog::info("Console CVARs: Cached all console objects.");
+        }
+        else {
+            spdlog::info("Console CVARs: ConsoleObjects TMap is not valid.");
+        }
     }
     else if (!ConsoleManagerSingletonScanResult) {
         spdlog::error("Console CVARs: Pattern scan failed.");

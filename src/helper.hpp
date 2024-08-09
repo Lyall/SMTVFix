@@ -126,7 +126,18 @@ namespace Unreal
 
     SDK::TMap<SDK::FString, FConsoleObject*> GetConsoleObjects(uintptr_t singletonAddr)
     {
+        if (singletonAddr == 0)
+        {
+            return SDK::TMap<SDK::FString, FConsoleObject*>();
+        }
+
         SDK::uint8** Singleton = reinterpret_cast<SDK::uint8**>(singletonAddr);
+
+        if (Singleton == nullptr || *Singleton == nullptr )
+        {
+            return SDK::TMap<SDK::FString, FConsoleObject*>();
+        }
+
         return *reinterpret_cast<SDK::TMap<SDK::FString, FConsoleObject*>*>(*Singleton + 8);
     }
 
