@@ -25,7 +25,7 @@ HMODULE baseModule = GetModuleHandle(NULL);
 
 // Version
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.4";
+std::string sFixVer = "0.9.5";
 std::string sLogFile = sFixName + ".log";
 
 // Logger
@@ -334,6 +334,43 @@ void ReadConfig()
 
     // Calculate aspect ratio based on desktop resolution before we read it from the game
     CalculateAspectRatio();
+}
+
+void UpdateOffsets()
+{
+    // GObjects
+    uint8_t* GObjectsScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 48 8B ?? ?? 48 8D ?? ?? EB ?? 33 ?? 8B ?? ?? C1 ??");
+    if (GObjectsScanResult) {
+        spdlog::info("Offsets: GObjects: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)GObjectsScanResult - (uintptr_t)baseModule);
+        uintptr_t GObjectsAddr = Memory::GetAbsolute((uintptr_t)GObjectsScanResult + 0x3);
+        SDK::Offsets::GObjects = (uintptr_t)GObjectsAddr - (uintptr_t)baseModule;
+        spdlog::info("Offsets: GObjects: Offset: {:x}", SDK::Offsets::GObjects);
+    }
+    else if (!GObjectsScanResult) {
+        spdlog::error("Offsets: GObjects: Pattern scan failed.");
+    }
+
+    // AppendString
+    uint8_t* AppendStringScanResult = Memory::PatternScan(baseModule, "48 89 ?? ?? ?? 48 89 ?? ?? ?? 57 48 83 ?? ?? 8B ?? 48 8B ?? 8B ?? 44 0F ?? ?? C1 ?? 10 48 8B ?? 80 3D ?? ?? ?? ?? 00 89 ?? ?? ?? 44 89 ?? ?? ?? 74 ?? 4C 8D ?? ?? ?? ?? ?? EB ?? 48 8D ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 4C ?? ?? C6 ?? ?? ?? ?? ?? 01 48 8B ?? ?? ?? 48 8B ?? 48 ?? ?? ?? 8D ?? ?? 49 ?? ?? ?? ?? E8 ?? ?? ?? ?? 83 ?? ?? 00");
+    if (AppendStringScanResult) {
+        spdlog::info("Offsets: AppendString: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AppendStringScanResult - (uintptr_t)baseModule);
+        SDK::Offsets::AppendString = (uintptr_t)AppendStringScanResult - (uintptr_t)baseModule;
+        spdlog::info("Offsets: AppendString: Offset: {:x}", SDK::Offsets::AppendString);
+    }
+    else if (!AppendStringScanResult) {
+        spdlog::error("Offsets: AppendString: Pattern scan failed.");
+    }
+
+    // ProcessEvent
+    uint8_t* ProcessEventScanResult = Memory::PatternScan(baseModule, "40 ?? 56 57 41 ?? 41 ?? 41 ?? 41 ?? 48 81 ?? ?? ?? ?? ?? 48 8D ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ?? 48 33 ?? 48 89 ?? ?? ?? ?? ?? 8B ?? ?? 45 33 ??");
+    if (ProcessEventScanResult) {
+        spdlog::info("Offsets: ProcessEvent: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ProcessEventScanResult - (uintptr_t)baseModule);
+        SDK::Offsets::ProcessEvent = (uintptr_t)ProcessEventScanResult - (uintptr_t)baseModule;
+        spdlog::info("Offsets: ProcessEvent: Offset: {:x}", SDK::Offsets::ProcessEvent);
+    }
+    else if (!ProcessEventScanResult) {
+        spdlog::error("Offsets: ProcessEvent: Pattern scan failed.");
+    }
 }
 
 void GetCVARs()
@@ -1012,53 +1049,55 @@ void EnableConsole()
 {
     if (bEnableConsole)
     {
-        // Get GEngine
-        SDK::UEngine* engine = nullptr;
+        if (SDK::Offsets::GObjects && SDK::Offsets::AppendString) {
+            // Get GEngine
+            SDK::UEngine* engine = nullptr;
 
-        int i = 0;
-        while (i < 100) { // 10s
-            engine = SDK::UEngine::GetEngine();
+            int i = 0;
+            while (i < 100) { // 10s
+                engine = SDK::UEngine::GetEngine();
 
-            if (engine) {
-                if (engine->ConsoleClass && engine->GameViewport) {
-                    break;
+                if (engine) {
+                    if (engine->ConsoleClass && engine->GameViewport) {
+                        break;
+                    }
                 }
+
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                i++;
             }
 
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-            i++;
-        }
-
-        if (i == 100) {
-            spdlog::error("Construct Console: Failed to find GEngine address after 10 seconds.");
-            return;
-        }
-
-        spdlog::info("Construct Console: GEngine address = {:x}", (uintptr_t)engine);
-
-        // Construct console
-        if (engine->ConsoleClass && engine->GameViewport) {
-            SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(engine->ConsoleClass, engine->GameViewport);
-            if (NewObject) {
-                engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
-                spdlog::info("Construct Console: Console object constructed.");
-            }
-            else {
-                spdlog::error("Construct Console: Failed to construct console object.");
+            if (i == 100) {
+                spdlog::error("Construct Console: Failed to find GEngine address after 10 seconds.");
                 return;
             }
-        }
-        else {
-            spdlog::error("Construct Console: Failed to construct console object - ConsoleClass or GameViewport is null.");
-            return;
-        }
 
-        // Log console key
-        if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys && SDK::UInputSettings::GetInputSettings()->ConsoleKeys.Num() > 0) {
-            spdlog::info("Construct Console: Console enabled - access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
-        }
-        else {
-            spdlog::error("Console enabled but no console key is bound.\nAdd this to %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini -\n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde");
+            spdlog::info("Construct Console: GEngine address = {:x}", (uintptr_t)engine);
+
+            // Construct console
+            if (engine->ConsoleClass && engine->GameViewport) {
+                SDK::UObject* NewObject = SDK::UGameplayStatics::SpawnObject(engine->ConsoleClass, engine->GameViewport);
+                if (NewObject) {
+                    engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(NewObject);
+                    spdlog::info("Construct Console: Console object constructed.");
+                }
+                else {
+                    spdlog::error("Construct Console: Failed to construct console object.");
+                    return;
+                }
+            }
+            else {
+                spdlog::error("Construct Console: Failed to construct console object - ConsoleClass or GameViewport is null.");
+                return;
+            }
+
+            // Log console key
+            if (SDK::UInputSettings::GetInputSettings()->ConsoleKeys && SDK::UInputSettings::GetInputSettings()->ConsoleKeys.Num() > 0) {
+                spdlog::info("Construct Console: Console enabled - access it using key: {}.", SDK::UInputSettings::GetInputSettings()->ConsoleKeys[0].KeyName.ToString());
+            }
+            else {
+                spdlog::error("Console enabled but no console key is bound.\nAdd this to %LOCALAPPDATA%\\SMT5V\\Saved\\Config\\WindowsNoEditor\\Input.ini -\n[/Script/Engine.InputSettings]\nConsoleKeys = Tilde");
+            }
         }
     }
 }
@@ -1186,6 +1225,7 @@ DWORD __stdcall Main(void*)
 {
     Logging();
     ReadConfig();
+    UpdateOffsets();
     CurrentResolution();
     GetCVARs();
     IntroSkip();

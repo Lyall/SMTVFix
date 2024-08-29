@@ -77714,7 +77714,7 @@ void UKismetGuidLibrary::Parse_StringToGuid(const class FString& GuidString, str
 
 class UWorld* UWorld::GetWorld()
 {
-	if constexpr (Offsets::GWorld != 0)
+	if (Offsets::GWorld != 0)
 		return *reinterpret_cast<UWorld**>(InSDKUtils::GetImageBase() + Offsets::GWorld);
 
 	if (UEngine* Engine = UEngine::GetEngine())
