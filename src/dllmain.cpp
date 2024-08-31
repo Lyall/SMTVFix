@@ -70,6 +70,7 @@ int iSSGIQuality;
 bool bHalfResSSGI;
 bool bVignette;
 bool bUROEnabled;
+std::vector<std::pair<std::string, std::string>> sCustomCVars;
 
 // Aspect ratio + HUD stuff
 float fPi = (float)3.141592653;
@@ -246,6 +247,12 @@ void ReadConfig()
     inipp::get_value(ini.sections["SSGI"], "HalfRes", bHalfResSSGI);
     inipp::get_value(ini.sections["Vignette"], "Enabled", bVignette);
     inipp::get_value(ini.sections["Update Rate Optimizations"], "Enabled", bUROEnabled);
+    auto it = ini.sections.find("Custom CVars");
+    if (it != ini.sections.end()) {
+        for (const auto& pair : it->second) {
+            sCustomCVars.emplace_back(pair.first, pair.second);
+        }
+    }
 
     // Log config parse
     spdlog::info("Config Parse: bIntroSkip: {}", bIntroSkip);
@@ -325,6 +332,9 @@ void ReadConfig()
     spdlog::info("Config Parse: bHalfResSSGI: {}", bHalfResSSGI);
     spdlog::info("Config Parse: bVignette: {}", bVignette);
     spdlog::info("Config Parse: bUROEnabled: {}", bUROEnabled);
+    for (const auto& cvar : sCustomCVars) {
+        spdlog::info("Config Parse: CustomCVars: {} = {}", cvar.first, cvar.second);
+    }
     spdlog::info("----------");
 
     // Grab desktop resolution/aspect
@@ -373,6 +383,37 @@ void UpdateOffsets()
     }
 }
 
+void CurrentResolution()
+{
+    // Get current resolution
+    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "41 ?? ?? 42 89 ?? ?? ?? ?? ?? 00 41 ?? ?? 0F ?? ??");
+    if (CurrResolutionScanResult)
+    {
+        spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)baseModule);
+
+        static SafetyHookMid CurrResolutionMidHook{};
+        CurrResolutionMidHook = safetyhook::create_mid(CurrResolutionScanResult + 0x11,
+            [](SafetyHookContext& ctx)
+            {
+                // Get ResX and ResY
+                int iResX = (int)ctx.rcx;
+                int iResY = (int)ctx.rax;
+
+                // Only log on resolution change.
+                if (iResX != iCurrentResX || iResY != iCurrentResY)
+                {
+                    iCurrentResX = iResX;
+                    iCurrentResY = iResY;
+                    CalculateAspectRatio();
+                }
+            });
+    }
+    else if (!CurrResolutionScanResult)
+    {
+        spdlog::error("Current Resolution: Pattern scan failed.");
+    }
+}
+
 void GetCVARs()
 {
     // Get console objects
@@ -408,36 +449,20 @@ void GetCVARs()
     else if (!ConsoleManagerSingletonScanResult) {
         spdlog::error("Console CVARs: Pattern scan failed.");
     }
-}
 
-void CurrentResolution()
-{
-    // Get current resolution
-    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "41 ?? ?? 42 89 ?? ?? ?? ?? ?? 00 41 ?? ?? 0F ?? ??");
-    if (CurrResolutionScanResult)
-    {
-        spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)baseModule);
-
-        static SafetyHookMid CurrResolutionMidHook{};
-        CurrResolutionMidHook = safetyhook::create_mid(CurrResolutionScanResult + 0x11,
-            [](SafetyHookContext& ctx)
-            {
-                // Get ResX and ResY
-                int iResX = (int)ctx.rcx;
-                int iResY = (int)ctx.rax;
-
-                // Only log on resolution change.
-                if (iResX != iCurrentResX || iResY != iCurrentResY)
-                {
-                    iCurrentResX = iResX;
-                    iCurrentResY = iResY;
-                    CalculateAspectRatio();
-                }
-            });
-    }
-    else if (!CurrResolutionScanResult)
-    {
-        spdlog::error("Current Resolution: Pattern scan failed.");
+    // Apply custom cvars from ini
+    for (const auto& cvar : sCustomCVars) {
+        auto consoleVariable = Unreal::FindCVAR(cvar.first, ConsoleObjects);
+        if (consoleVariable) {
+            // Convert to wstring
+            std::wstring wValue(cvar.second.begin(), cvar.second.end());
+            // Set value
+            consoleVariable->Set(wValue.c_str());
+            spdlog::info("Custom CVars: Set {} to {}", cvar.first, consoleVariable->GetString().ToString());
+        }
+        else {
+            spdlog::info("Custom CVars: Failed to find {}", cvar.first);
+        }
     }
 }
 
