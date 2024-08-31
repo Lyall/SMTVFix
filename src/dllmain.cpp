@@ -25,7 +25,7 @@ HMODULE baseModule = GetModuleHandle(NULL);
 
 // Version
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.5";
+std::string sFixVer = "0.9.6";
 std::string sLogFile = sFixName + ".log";
 
 // Logger
