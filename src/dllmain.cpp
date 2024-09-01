@@ -386,18 +386,18 @@ void UpdateOffsets()
 void CurrentResolution()
 {
     // Get current resolution
-    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "41 ?? ?? 42 89 ?? ?? ?? ?? ?? 00 41 ?? ?? 0F ?? ??");
+    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "89 ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 44 89 ?? ?? ?? ?? ?? 89 ?? ?? ?? 44 ?? ?? ??");
     if (CurrResolutionScanResult)
     {
         spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)baseModule);
 
         static SafetyHookMid CurrResolutionMidHook{};
-        CurrResolutionMidHook = safetyhook::create_mid(CurrResolutionScanResult + 0x11,
+        CurrResolutionMidHook = safetyhook::create_mid(CurrResolutionScanResult,
             [](SafetyHookContext& ctx)
             {
                 // Get ResX and ResY
-                int iResX = (int)ctx.rcx;
-                int iResY = (int)ctx.rax;
+                int iResX = (int)ctx.r9;
+                int iResY = (int)ctx.rcx;
 
                 // Only log on resolution change.
                 if (iResX != iCurrentResX || iResY != iCurrentResY)
