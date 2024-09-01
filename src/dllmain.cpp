@@ -586,8 +586,8 @@ void HUD()
 
     if (bFixHUD)
     {
-        // Movies - ManaComponent::Prepare()
-        uint8_t* MoviePrepareScanResult = Memory::PatternScan(baseModule, "48 8D ?? ?? ?? ?? ?? ?? 48 89 ?? ?? ?? ?? ?? ?? 48 89 ?? 48 89 ?? ?? 48 89 ?? ??  48 8D ?? ?? ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 89 ?? ?? 48 89 ?? ??");
+        // Movies - ManaComponent::IsPreparing()
+        uint8_t* MoviePrepareScanResult = Memory::PatternScan(baseModule, "48 83 ?? ?? ?? ?? ?? 00 75 ?? 30 C0 C3 0F ?? ?? ?? ?? ?? ?? FE ??");
         if (MoviePrepareScanResult)
         {
             spdlog::info("Movies: Prepare: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MoviePrepareScanResult - (uintptr_t)baseModule);
@@ -614,7 +614,7 @@ void HUD()
 
                         i++;
                         if (i == 100) { // 10s
-                            spdlog::error("Movies: Prepare: Failed to find WBP_EventMovie_C address.");
+                            //spdlog::error("Movies: Prepare: Failed to find WBP_EventMovie_C address.");
                             return;
                         }
                     }
@@ -652,7 +652,7 @@ void HUD()
                             }
                         }
                     } else {
-                        spdlog::error("Movies: Prepare: Not a valid WBP_EventMovie_C address.");
+                        //spdlog::error("Movies: Prepare: Not a valid WBP_EventMovie_C address.");
                     }
                 });
         }
