@@ -614,15 +614,15 @@ void HUD()
 
                         i++;
                         if (i == 100) { // 10s
-                            //spdlog::error("Movies: Prepare: Failed to find WBP_EventMovie_C address.");
+                            spdlog::error("Movies: Prepare: Failed to find WBP_EventMovie_C address.");
                             return;
-                        }
+                        }                       
                     }
-                    spdlog::info("Movies: Prepare: WBP_EventMovie_C address = {:x}", (uintptr_t)EventMovie);
 
                     // Add pillarboxing/letterboxing and scale movies
                     if (EventMovie->IsA(SDK::UWBP_EventMovie_C::StaticClass())) {
                         if (EventMovie->Image_0->RenderTransform.Scale.X == 1.00f && EventMovie->Image_0->RenderTransform.Scale.Y == 1.00f) {
+                            spdlog::info("Movies: Prepare: WBP_EventMovie_C address = {:x}", (uintptr_t)EventMovie);
                             auto widgetTree = (SDK::UPanelWidget*)EventMovie->WidgetTree->RootWidget;
 
                             // Create background image
@@ -652,7 +652,7 @@ void HUD()
                             }
                         }
                     } else {
-                        //spdlog::error("Movies: Prepare: Not a valid WBP_EventMovie_C address.");
+                        spdlog::error("Movies: Prepare: Not a valid WBP_EventMovie_C address.");
                     }
                 });
         }
@@ -671,8 +671,10 @@ void HUD()
             MoviePlayMidHook = safetyhook::create_mid(MovieStopScanResult,
                 [](SafetyHookContext& ctx)
                 {
-                    EventMovie = nullptr;
-                    spdlog::info("Movies: Stop: Movie stopped.");
+                    if (EventMovie != nullptr) {
+                        EventMovie = nullptr;
+                        spdlog::info("Movies: Stop: Movie stopped.");
+                    }
                 });
         }
         else if (!MovieStopScanResult)
