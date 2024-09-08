@@ -1176,35 +1176,6 @@ void Misc()
     }
 }
 
-void IntroSkip()
-{
-    if (bIntroSkipMovie)
-    {
-        // Skip intro movie
-        uint8_t* IntroSkipScanResult = Memory::PatternScan(baseModule, "0A ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 40 ?? 48 83 ?? ?? 48 8B ?? ?? 33 ??");
-        if (IntroSkipScanResult)
-        {
-            static bool bHasSkippedIntroMovie = false;
-            static SafetyHookMid IntroSkipMidHook{};
-            IntroSkipMidHook = safetyhook::create_mid((uintptr_t)IntroSkipScanResult + 0x2E,
-                [](SafetyHookContext& ctx)
-                {
-                    // Only skip it once so people can replay it by idling in the main menu.
-                    if (!bHasSkippedIntroMovie)
-                    {
-                        ctx.rax &= ~(0xFF);
-                        bHasSkippedIntroMovie = true;
-                        spdlog::info("Intro Skip: Skipped intro movie.");
-                    }
-                });
-        }
-        else if (!IntroSkipScanResult)
-        {
-            spdlog::error("Intro Skip: Pattern scan failed.");
-        }
-    }
-}
-
 HWND hWnd;
 WNDPROC OldWndProc;
 LRESULT __stdcall NewWndProc(HWND window, UINT message_type, WPARAM w_param, LPARAM l_param) {
