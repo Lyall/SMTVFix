@@ -1176,6 +1176,42 @@ void Misc()
     }
 }
 
+void IntroSkip()
+{
+    if (bIntroSkipMovie)
+    {
+        // Skip intro movie
+        SDK::UFunction* IntroMovie_fn = SDK::UObject::FindObject<SDK::UFunction>("Function Project.BPL_Title.IsRequestedTitleMovie");
+
+        int i = 0;
+        while (!IntroMovie_fn)
+        {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            IntroMovie_fn = SDK::UObject::FindObject<SDK::UFunction>("Function Project.BPL_Title.IsRequestedTitleMovie");
+            i++;
+            if (i == 300) // 30s
+            {
+                spdlog::error("Intro Skip: Failed to find intro movie function address.");
+                return;
+            }
+        }
+
+        static bool bHasSkippedIntroMovie = false;
+        static SafetyHookMid IntroSkipMidHook{};
+        IntroSkipMidHook = safetyhook::create_mid((uintptr_t)(IntroMovie_fn->ExecFunction) + 0x21,
+            [](SafetyHookContext& ctx)
+            {
+                // Only skip it once so people can replay it by idling in the main menu.
+                if (!bHasSkippedIntroMovie)
+                {
+                    ctx.rax &= ~(0xFF);
+                    bHasSkippedIntroMovie = true;
+                    spdlog::info("Intro Skip: Skipped intro movie.");
+                }
+            });
+    }   
+}
+
 HWND hWnd;
 WNDPROC OldWndProc;
 LRESULT __stdcall NewWndProc(HWND window, UINT message_type, WPARAM w_param, LPARAM l_param) {
@@ -1232,6 +1268,7 @@ DWORD __stdcall Main(void*)
     UpdateOffsets();
     CurrentResolution();
     GetCVARs();
+    IntroSkip();
     AspectFOV();
     HUD();
     GraphicalTweaks();
