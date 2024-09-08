@@ -25,7 +25,7 @@ HMODULE baseModule = GetModuleHandle(NULL);
 
 // Version
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.7";
+std::string sFixVer = "0.9.8";
 std::string sLogFile = sFixName + ".log";
 
 // Logger
@@ -118,6 +118,12 @@ void CalculateAspectRatio()
     if (bCachedConsoleObjects) {
         SDK::IConsoleVariable* ScreenPercentageCVAR = Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects);
 
+        if (bScreenPercentage && ScreenPercentageCVAR->GetFloat() != fScreenPercentage) {
+            ScreenPercentageCVAR->SetFlags(SDK::ECVF_SetByConstructor);
+            ScreenPercentageCVAR->Set(std::to_wstring(fScreenPercentage).c_str());
+            spdlog::info("Set CVARS: Set r.ScreenPercentage to {}", ScreenPercentageCVAR->GetFloat());
+        }
+
         if (ScreenPercentageCVAR) {
             fScreenPercentage = ScreenPercentageCVAR->GetFloat();
         }
@@ -145,9 +151,9 @@ void CalculateAspectRatio()
 
     // Log details about current resolution
     spdlog::info("----------");
-    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX, iCurrentResY);
+    spdlog::info("Current Resolution: Base Resolution: {}x{}", iCurrentResX, iCurrentResY);
     spdlog::info("Current Resolution: Screen Percentage: {}", fScreenPercentage);
-    spdlog::info("Current Resolution: Base Resolution: {}x{}", iCurrentResX / (fScreenPercentage / 100), iCurrentResY / (fScreenPercentage / 100));
+    spdlog::info("Current Resolution: Scaled Resolution: {}x{}", iCurrentResX * (fScreenPercentage / 100), iCurrentResY * (fScreenPercentage / 100));
     spdlog::info("Current Resolution: fAspectRatio: {}", fAspectRatio);
     spdlog::info("Current Resolution: fAspectMultiplier: {}", fAspectMultiplier);
     spdlog::info("Current Resolution: fHUDWidth: {}", fHUDWidth);
@@ -1196,7 +1202,7 @@ void IntroSkip()
         {
             spdlog::error("Intro Skip: Pattern scan failed.");
         }
-    } 
+    }
 }
 
 HWND hWnd;
@@ -1255,7 +1261,6 @@ DWORD __stdcall Main(void*)
     UpdateOffsets();
     CurrentResolution();
     GetCVARs();
-    IntroSkip();
     AspectFOV();
     HUD();
     GraphicalTweaks();
