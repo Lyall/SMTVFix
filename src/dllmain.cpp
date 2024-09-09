@@ -119,7 +119,6 @@ void CalculateAspectRatio()
         SDK::IConsoleVariable* ScreenPercentageCVAR = Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects);
 
         if (bScreenPercentage && ScreenPercentageCVAR->GetFloat() != fScreenPercentage) {
-            ScreenPercentageCVAR->SetFlags(SDK::ECVF_SetByConstructor);
             ScreenPercentageCVAR->Set(std::to_wstring(fScreenPercentage).c_str());
             spdlog::info("Set CVARS: Set r.ScreenPercentage to {}", ScreenPercentageCVAR->GetFloat());
         }
@@ -898,38 +897,42 @@ void GraphicalTweaks()
             {         
                 if (bCachedConsoleObjects)
                 {
+                    // r.ScreenPercentage
+                    SDK::IConsoleVariable* ScreenPercentageCVAR = Unreal::FindCVAR("r.ScreenPercentage", ConsoleObjects);
+
+                    if (bScreenPercentage && ScreenPercentageCVAR->GetFloat() != fScreenPercentage) {
+                        ScreenPercentageCVAR->Set(std::to_wstring(fScreenPercentage).c_str());
+                        spdlog::info("Set CVARS: Set r.ScreenPercentage to {}", ScreenPercentageCVAR->GetFloat());
+                    }
+
                     if (bEnableTAA)
                     {
-                        auto AntiAliasingCVAR = Unreal::FindCVAR("r.DefaultFeature.AntiAliasing", ConsoleObjects);
+                        SDK::IConsoleVariable* AntiAliasingCVAR = Unreal::FindCVAR("r.DefaultFeature.AntiAliasing", ConsoleObjects);
                         if (AntiAliasingCVAR && AntiAliasingCVAR->GetInt() != 2)
                         {
-                            AntiAliasingCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             AntiAliasingCVAR->Set(L"2");
                             spdlog::info("Set CVARS: Set r.DefaultFeature.AntiAliasing to {}", AntiAliasingCVAR->GetInt());
                         }
 
-                        auto VertexMotionVectorsCVAR = Unreal::FindCVAR("r.VertexDeformationOutputsVelocity", ConsoleObjects);
+                        SDK::IConsoleVariable* VertexMotionVectorsCVAR = Unreal::FindCVAR("r.VertexDeformationOutputsVelocity", ConsoleObjects);
                         if (VertexMotionVectorsCVAR && VertexMotionVectorsCVAR->GetInt() != 1)
                         {
-                            VertexMotionVectorsCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             VertexMotionVectorsCVAR->Set(L"1");
                             spdlog::info("Set CVARS: Set r.VertexDeformationOutputsVelocity to {}", VertexMotionVectorsCVAR->GetInt());
                         }
 
-                        auto HalfResAOCVAR = Unreal::FindCVAR("r.AmbientOcclusion.HalfRes", ConsoleObjects);
+                        SDK::IConsoleVariable* HalfResAOCVAR = Unreal::FindCVAR("r.AmbientOcclusion.HalfRes", ConsoleObjects);
                         if (HalfResAOCVAR && HalfResAOCVAR->GetInt() != 0)
                         {
-                            HalfResAOCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             HalfResAOCVAR->Set(L"0");
                             spdlog::info("Set CVARS: Set r.AmbientOcclusion.HalfRes to {}", HalfResAOCVAR->GetInt());
                         }
 
                         if (bEnableGen5TAAU)
                         {
-                            auto TAAUAlgorithmCVAR = Unreal::FindCVAR("r.TemporalAA.Algorithm", ConsoleObjects);
+                            SDK::IConsoleVariable* TAAUAlgorithmCVAR = Unreal::FindCVAR("r.TemporalAA.Algorithm", ConsoleObjects);
                             if (TAAUAlgorithmCVAR && TAAUAlgorithmCVAR->GetInt() != 1)
                             {
-                                TAAUAlgorithmCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                                 TAAUAlgorithmCVAR->Set(L"1");
                                 spdlog::info("Set CVARS: Set r.TemporalAA.Algorithm to {}", TAAUAlgorithmCVAR->GetInt());
                             }
@@ -938,20 +941,18 @@ void GraphicalTweaks()
 
                     if (bEnableGTAO)
                     {
-                        auto AOMethodCVAR = Unreal::FindCVAR("r.AmbientOcclusion.Method", ConsoleObjects);
+                        SDK::IConsoleVariable* AOMethodCVAR = Unreal::FindCVAR("r.AmbientOcclusion.Method", ConsoleObjects);
                         if (AOMethodCVAR && AOMethodCVAR->GetInt() != 1)
                         {
-                            AOMethodCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             AOMethodCVAR->Set(L"1");
                             spdlog::info("Set CVARS: Set r.AmbientOcclusion.Method to {}", AOMethodCVAR->GetInt());
                         }
 
                         if (bGTAOHalfRes)
                         {
-                            auto HalfResGTAOCVAR = Unreal::FindCVAR("r.GTAO.Downsample", ConsoleObjects);
+                            SDK::IConsoleVariable* HalfResGTAOCVAR = Unreal::FindCVAR("r.GTAO.Downsample", ConsoleObjects);
                             if (HalfResGTAOCVAR && HalfResGTAOCVAR->GetInt() != 1)
                             {
-                                HalfResGTAOCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                                 HalfResGTAOCVAR->Set(L"1");
                                 spdlog::info("Set CVARS: Set r.GTAO.Downsample to {}", HalfResGTAOCVAR->GetInt());
                             }
@@ -960,26 +961,23 @@ void GraphicalTweaks()
 
                     if (bAdjustLOD)
                     {
-                        auto FoliageDistanceCVAR = Unreal::FindCVAR("foliage.LODDistanceScale", ConsoleObjects);
+                        SDK::IConsoleVariable* FoliageDistanceCVAR = Unreal::FindCVAR("foliage.LODDistanceScale", ConsoleObjects);
                         if (FoliageDistanceCVAR && FoliageDistanceCVAR->GetFloat() != fFoliageDistanceScale)
                         {
-                            FoliageDistanceCVAR->SetFlags(ECVF_SetByConstructor);
                             FoliageDistanceCVAR->Set(std::to_wstring(fFoliageDistanceScale).c_str());
                             spdlog::info("Set CVARS: Set foliage.LODDistanceScale to {}", FoliageDistanceCVAR->GetFloat());
                         }
 
-                        auto ViewDistanceCVAR = Unreal::FindCVAR("r.ViewDistanceScale", ConsoleObjects);
+                        SDK::IConsoleVariable* ViewDistanceCVAR = Unreal::FindCVAR("r.ViewDistanceScale", ConsoleObjects);
                         if (ViewDistanceCVAR && ViewDistanceCVAR->GetFloat() != fViewDistanceScale)
                         {
-                            ViewDistanceCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             ViewDistanceCVAR->Set(std::to_wstring(fViewDistanceScale).c_str());
                             spdlog::info("Set CVARS: Set r.ViewDistanceScale to {}", ViewDistanceCVAR->GetFloat());
                         }
 
-                        auto SkeletalMeshLODBiasCVAR = Unreal::FindCVAR("r.SkeletalMeshLODBias", ConsoleObjects);
+                        SDK::IConsoleVariable* SkeletalMeshLODBiasCVAR = Unreal::FindCVAR("r.SkeletalMeshLODBias", ConsoleObjects);
                         if (SkeletalMeshLODBiasCVAR && SkeletalMeshLODBiasCVAR->GetInt() != -1)
                         {
-                            SkeletalMeshLODBiasCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             SkeletalMeshLODBiasCVAR->Set(L"-1");
                             spdlog::info("Set CVARS: Set r.SkeletalMeshLODBias to {}", SkeletalMeshLODBiasCVAR->GetInt());
                         }
@@ -987,10 +985,9 @@ void GraphicalTweaks()
 
                     if (iSSAOLevel != 1)
                     {
-                        auto SSAOLevelsCVAR = Unreal::FindCVAR("r.AmbientOcclusionLevels", ConsoleObjects);
+                        SDK::IConsoleVariable* SSAOLevelsCVAR = Unreal::FindCVAR("r.AmbientOcclusionLevels", ConsoleObjects);
                         if (SSAOLevelsCVAR && SSAOLevelsCVAR->GetInt() != iSSAOLevel)
                         {
-                            SSAOLevelsCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             SSAOLevelsCVAR->Set(std::to_wstring(iSSAOLevel).c_str());
                             spdlog::info("Set CVARS: Set r.AmbientOcclusionLevels to {}", SSAOLevelsCVAR->GetInt());
                         }
@@ -998,28 +995,25 @@ void GraphicalTweaks()
 
                     if (bEnableSSGI)
                     {
-                        auto SSGIEnableCVAR = Unreal::FindCVAR("r.SSGI.Enable", ConsoleObjects);
+                        SDK::IConsoleVariable* SSGIEnableCVAR = Unreal::FindCVAR("r.SSGI.Enable", ConsoleObjects);
                         if (SSGIEnableCVAR && SSGIEnableCVAR->GetInt() != 1)
                         {
-                            SSGIEnableCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             SSGIEnableCVAR->Set(L"1");
                             spdlog::info("Set CVARS: Set r.SSGI.Enable to {}", SSGIEnableCVAR->GetInt());
                         }
 
-                        auto SSGIQualityCVAR = Unreal::FindCVAR("r.SSGI.Quality", ConsoleObjects);
+                        SDK::IConsoleVariable* SSGIQualityCVAR = Unreal::FindCVAR("r.SSGI.Quality", ConsoleObjects);
                         if (SSGIQualityCVAR && SSGIQualityCVAR->GetInt() != iSSGIQuality)
                         {
-                            SSGIQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             SSGIQualityCVAR->Set(std::to_wstring(iSSGIQuality).c_str());
                             spdlog::info("Set CVARS: Set r.SSGI.Quality to {}", SSGIQualityCVAR->GetInt());
                         }
 
                         if (bHalfResSSGI)
                         {
-                            auto SSGIHalfResCVAR = Unreal::FindCVAR("r.SSGI.HalfRes", ConsoleObjects);
+                            SDK::IConsoleVariable* SSGIHalfResCVAR = Unreal::FindCVAR("r.SSGI.HalfRes", ConsoleObjects);
                             if (SSGIHalfResCVAR && SSGIHalfResCVAR->GetInt() != 1)
                             {
-                                SSGIHalfResCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                                 SSGIHalfResCVAR->Set(L"1");
                                 spdlog::info("Set CVARS: Set r.SSGI.HalfRes to {}", SSGIHalfResCVAR->GetInt());
                             }
@@ -1028,10 +1022,9 @@ void GraphicalTweaks()
 
                     if (!bVignette)
                     {
-                        auto TonemapperQualityCVAR = Unreal::FindCVAR("r.Tonemapper.Quality", ConsoleObjects);
+                        SDK::IConsoleVariable* TonemapperQualityCVAR = Unreal::FindCVAR("r.Tonemapper.Quality", ConsoleObjects);
                         if (TonemapperQualityCVAR && TonemapperQualityCVAR->GetInt() != 0)
                         {
-                            TonemapperQualityCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             TonemapperQualityCVAR->Set(L"0");
                             spdlog::info("Set CVARS: Set r.Tonemapper.Quality to {}", TonemapperQualityCVAR->GetInt());
                         }
@@ -1039,10 +1032,9 @@ void GraphicalTweaks()
 
                     if (!bUROEnabled)
                     {
-                        auto UROEnableCVAR = Unreal::FindCVAR("a.URO.Enable", ConsoleObjects);
+                        SDK::IConsoleVariable* UROEnableCVAR = Unreal::FindCVAR("a.URO.Enable", ConsoleObjects);
                         if (UROEnableCVAR && UROEnableCVAR->GetInt() != 0)
                         {
-                            UROEnableCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             UROEnableCVAR->Set(L"0");
                             spdlog::info("Set CVARS: Set a.URO.Enable to {}", UROEnableCVAR->GetInt());
                         }
@@ -1050,18 +1042,16 @@ void GraphicalTweaks()
 
                     if (bShadowQuality)
                     {
-                        auto MaxShadowCSMResolutionCVAR = Unreal::FindCVAR("r.Shadow.MaxCSMResolution", ConsoleObjects);
+                        SDK::IConsoleVariable* MaxShadowCSMResolutionCVAR = Unreal::FindCVAR("r.Shadow.MaxCSMResolution", ConsoleObjects);
                         if (MaxShadowCSMResolutionCVAR && MaxShadowCSMResolutionCVAR->GetInt() != iShadowResolution)
                         {
-                            MaxShadowCSMResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             MaxShadowCSMResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
                             spdlog::info("Set CVARS: Set r.Shadow.MaxCSMResolution to {}", MaxShadowCSMResolutionCVAR->GetInt());
                         }
 
-                        auto MaxShadowResolutionCVAR = Unreal::FindCVAR("r.Shadow.MaxResolution", ConsoleObjects);
+                        SDK::IConsoleVariable* MaxShadowResolutionCVAR = Unreal::FindCVAR("r.Shadow.MaxResolution", ConsoleObjects);
                         if (MaxShadowResolutionCVAR && MaxShadowResolutionCVAR->GetInt() != iShadowResolution)
                         {
-                            MaxShadowResolutionCVAR->SetFlags(SDK::ECVF_SetByConstructor);
                             MaxShadowResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
                             spdlog::info("Set CVARS: Set r.Shadow.MaxResolution to {}", MaxShadowResolutionCVAR->GetInt());
                         }
