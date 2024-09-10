@@ -3,7 +3,7 @@
 
 #include <inipp/inipp.h>
 #include <spdlog/spdlog.h>
-#include <spdlog/sinks/basic_file_sink.h>
+#include "spdlog/sinks/base_sink.h"
 #include <safetyhook.hpp>
 
 // UE4 SDK
@@ -25,7 +25,7 @@ HMODULE baseModule = GetModuleHandle(NULL);
 
 // Version
 std::string sFixName = "SMTVFix";
-std::string sFixVer = "0.9.8";
+std::string sFixVer = "0.9.8a";
 std::string sLogFile = sFixName + ".log";
 
 // Logger
@@ -162,6 +162,50 @@ void CalculateAspectRatio()
     spdlog::info("----------");
 }
 
+// Spdlog sink (truncate on startup, single file)
+template<typename Mutex>
+class size_limited_sink : public spdlog::sinks::base_sink<Mutex> {
+public:
+    explicit size_limited_sink(const std::string& filename, size_t max_size)
+        : _filename(filename), _max_size(max_size) {
+        truncate_log_file();
+
+        _file.open(_filename, std::ios::app);
+        if (!_file.is_open()) {
+            throw spdlog::spdlog_ex("Failed to open log file " + filename);
+        }
+    }
+
+protected:
+    void sink_it_(const spdlog::details::log_msg& msg) override {
+        if (std::filesystem::exists(_filename) && std::filesystem::file_size(_filename) >= _max_size) {
+            return;
+        }
+
+        spdlog::memory_buf_t formatted;
+        this->formatter_->format(msg, formatted);
+
+        _file.write(formatted.data(), formatted.size());
+        _file.flush();
+    }
+
+    void flush_() override {
+        _file.flush();
+    }
+
+private:
+    std::ofstream _file;
+    std::string _filename;
+    size_t _max_size;
+
+    void truncate_log_file() {
+        if (std::filesystem::exists(_filename)) {
+            std::ofstream ofs(_filename, std::ofstream::out | std::ofstream::trunc);
+            ofs.close();
+        }
+    }
+};
+
 void Logging()
 {
     // Get game name and exe path
@@ -174,7 +218,7 @@ void Logging()
     // spdlog initialisation
     {
         try {
-            logger = spdlog::basic_logger_st(sFixName.c_str(), sExePath.string() + sLogFile, true);
+            logger = std::make_shared<spdlog::logger>(sLogFile, std::make_shared<size_limited_sink<std::mutex>>(sExePath.string() + sLogFile, 10 * 1024 * 1024));
             spdlog::set_default_logger(logger);
 
             spdlog::flush_on(spdlog::level::debug);
@@ -203,6 +247,11 @@ void Logging()
 
 void ReadConfig()
 {
+    // Log some messages
+    for (int i = 0; i < 1000000000; ++i) {
+        logger->info("This is log message number {}", i);
+    }
+
     // Initialise config
     std::ifstream iniFile(sExePath.string() + sConfigFile);
     if (!iniFile) {
@@ -902,6 +951,7 @@ void GraphicalTweaks()
 
                     if (bScreenPercentage && ScreenPercentageCVAR->GetFloat() != fScreenPercentage) {
                         ScreenPercentageCVAR->Set(std::to_wstring(fScreenPercentage).c_str());
+                        ScreenPercentageCVAR->SetFlags(SDK::ECVF_SetByCode);
                         spdlog::info("Set CVARS: Set r.ScreenPercentage to {}", ScreenPercentageCVAR->GetFloat());
                     }
 
@@ -911,6 +961,7 @@ void GraphicalTweaks()
                         if (AntiAliasingCVAR && AntiAliasingCVAR->GetInt() != 2)
                         {
                             AntiAliasingCVAR->Set(L"2");
+                            AntiAliasingCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.DefaultFeature.AntiAliasing to {}", AntiAliasingCVAR->GetInt());
                         }
 
@@ -918,6 +969,7 @@ void GraphicalTweaks()
                         if (VertexMotionVectorsCVAR && VertexMotionVectorsCVAR->GetInt() != 1)
                         {
                             VertexMotionVectorsCVAR->Set(L"1");
+                            VertexMotionVectorsCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.VertexDeformationOutputsVelocity to {}", VertexMotionVectorsCVAR->GetInt());
                         }
 
@@ -925,6 +977,7 @@ void GraphicalTweaks()
                         if (HalfResAOCVAR && HalfResAOCVAR->GetInt() != 0)
                         {
                             HalfResAOCVAR->Set(L"0");
+                            HalfResAOCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.AmbientOcclusion.HalfRes to {}", HalfResAOCVAR->GetInt());
                         }
 
@@ -934,6 +987,7 @@ void GraphicalTweaks()
                             if (TAAUAlgorithmCVAR && TAAUAlgorithmCVAR->GetInt() != 1)
                             {
                                 TAAUAlgorithmCVAR->Set(L"1");
+                                TAAUAlgorithmCVAR->SetFlags(SDK::ECVF_SetByCode);
                                 spdlog::info("Set CVARS: Set r.TemporalAA.Algorithm to {}", TAAUAlgorithmCVAR->GetInt());
                             }
                         }
@@ -945,6 +999,7 @@ void GraphicalTweaks()
                         if (AOMethodCVAR && AOMethodCVAR->GetInt() != 1)
                         {
                             AOMethodCVAR->Set(L"1");
+                            AOMethodCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.AmbientOcclusion.Method to {}", AOMethodCVAR->GetInt());
                         }
 
@@ -954,6 +1009,7 @@ void GraphicalTweaks()
                             if (HalfResGTAOCVAR && HalfResGTAOCVAR->GetInt() != 1)
                             {
                                 HalfResGTAOCVAR->Set(L"1");
+                                HalfResGTAOCVAR->SetFlags(SDK::ECVF_SetByCode);
                                 spdlog::info("Set CVARS: Set r.GTAO.Downsample to {}", HalfResGTAOCVAR->GetInt());
                             }
                         }
@@ -965,6 +1021,7 @@ void GraphicalTweaks()
                         if (FoliageDistanceCVAR && FoliageDistanceCVAR->GetFloat() != fFoliageDistanceScale)
                         {
                             FoliageDistanceCVAR->Set(std::to_wstring(fFoliageDistanceScale).c_str());
+                            FoliageDistanceCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set foliage.LODDistanceScale to {}", FoliageDistanceCVAR->GetFloat());
                         }
 
@@ -972,6 +1029,7 @@ void GraphicalTweaks()
                         if (ViewDistanceCVAR && ViewDistanceCVAR->GetFloat() != fViewDistanceScale)
                         {
                             ViewDistanceCVAR->Set(std::to_wstring(fViewDistanceScale).c_str());
+                            ViewDistanceCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.ViewDistanceScale to {}", ViewDistanceCVAR->GetFloat());
                         }
 
@@ -979,6 +1037,7 @@ void GraphicalTweaks()
                         if (SkeletalMeshLODBiasCVAR && SkeletalMeshLODBiasCVAR->GetInt() != -1)
                         {
                             SkeletalMeshLODBiasCVAR->Set(L"-1");
+                            SkeletalMeshLODBiasCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.SkeletalMeshLODBias to {}", SkeletalMeshLODBiasCVAR->GetInt());
                         }
                     }
@@ -989,6 +1048,7 @@ void GraphicalTweaks()
                         if (SSAOLevelsCVAR && SSAOLevelsCVAR->GetInt() != iSSAOLevel)
                         {
                             SSAOLevelsCVAR->Set(std::to_wstring(iSSAOLevel).c_str());
+                            SSAOLevelsCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.AmbientOcclusionLevels to {}", SSAOLevelsCVAR->GetInt());
                         }
                     }
@@ -999,6 +1059,7 @@ void GraphicalTweaks()
                         if (SSGIEnableCVAR && SSGIEnableCVAR->GetInt() != 1)
                         {
                             SSGIEnableCVAR->Set(L"1");
+                            SSGIEnableCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.SSGI.Enable to {}", SSGIEnableCVAR->GetInt());
                         }
 
@@ -1006,6 +1067,7 @@ void GraphicalTweaks()
                         if (SSGIQualityCVAR && SSGIQualityCVAR->GetInt() != iSSGIQuality)
                         {
                             SSGIQualityCVAR->Set(std::to_wstring(iSSGIQuality).c_str());
+                            SSGIQualityCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.SSGI.Quality to {}", SSGIQualityCVAR->GetInt());
                         }
 
@@ -1015,6 +1077,7 @@ void GraphicalTweaks()
                             if (SSGIHalfResCVAR && SSGIHalfResCVAR->GetInt() != 1)
                             {
                                 SSGIHalfResCVAR->Set(L"1");
+                                SSGIHalfResCVAR->SetFlags(SDK::ECVF_SetByCode);
                                 spdlog::info("Set CVARS: Set r.SSGI.HalfRes to {}", SSGIHalfResCVAR->GetInt());
                             }
                         }
@@ -1026,6 +1089,7 @@ void GraphicalTweaks()
                         if (TonemapperQualityCVAR && TonemapperQualityCVAR->GetInt() != 0)
                         {
                             TonemapperQualityCVAR->Set(L"0");
+                            TonemapperQualityCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.Tonemapper.Quality to {}", TonemapperQualityCVAR->GetInt());
                         }
                     }
@@ -1036,6 +1100,7 @@ void GraphicalTweaks()
                         if (UROEnableCVAR && UROEnableCVAR->GetInt() != 0)
                         {
                             UROEnableCVAR->Set(L"0");
+                            UROEnableCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set a.URO.Enable to {}", UROEnableCVAR->GetInt());
                         }
                     }
@@ -1046,6 +1111,7 @@ void GraphicalTweaks()
                         if (MaxShadowCSMResolutionCVAR && MaxShadowCSMResolutionCVAR->GetInt() != iShadowResolution)
                         {
                             MaxShadowCSMResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
+                            MaxShadowCSMResolutionCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.Shadow.MaxCSMResolution to {}", MaxShadowCSMResolutionCVAR->GetInt());
                         }
 
@@ -1053,6 +1119,7 @@ void GraphicalTweaks()
                         if (MaxShadowResolutionCVAR && MaxShadowResolutionCVAR->GetInt() != iShadowResolution)
                         {
                             MaxShadowResolutionCVAR->Set(std::to_wstring(iShadowResolution).c_str());
+                            MaxShadowResolutionCVAR->SetFlags(SDK::ECVF_SetByCode);
                             spdlog::info("Set CVARS: Set r.Shadow.MaxResolution to {}", MaxShadowResolutionCVAR->GetInt());
                         }
                     }
