@@ -33,6 +33,24 @@ This is a fix for Shin Megami Tensei V: Vengeance that adds ultrawide/narrow dis
 🚩**You do not need to do this if you are using Windows!**
 - Open up the game properties in Steam and add `WINEDLLOVERRIDES="dsound=n,b" %command%` to the launch options.
 
+<details>
+<summary>Installing SMTVFix as a Reloaded II Mod</summary>
+  
+*This applies to both Windows and Steam Deck/Linux*
+
+Before starting, make sure to **delete any SMTVFix files** inside of the game's files **if you have already have used this fix** previously (*SMTVFix.ini*, *SMTVFix.asi*, *dsound.ini* and *dsound.dll*)
+
+To make sure SMTVFix loads alongside any Reloaded II mods you are using, follow these steps:
+
+- Download the file marked `SMTVFix_Reloaded-II.zip` from the "Assets" section below.
+
+- Drag and drop `SMTVFix_Reloaded-II.zip` onto the Reloaded-II window. (Alternatively: [Manual Install](https://reloaded-project.github.io/Reloaded-II/QuickStart/))
+
+- Enable it in your `Reloaded-II` mod list.
+- You should now be able to start the game and see both SMTVFix and Reloaded II mods working.
+
+</details>
+
 ## Configuration
 - See **SMTVFix.ini** to adjust settings for the fix.
 
