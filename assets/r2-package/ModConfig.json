@@ -1,0 +1,33 @@
+{
+  "ModId": "smtvv.smtvfix",
+  "ModName": "SMTVFix",
+  "ModAuthor": "Lyall",
+  "ModVersion": "<REPLACED_VERSION_IN_CI>",
+  "ModDescription": "An \u0027Essentials\u0027 mod for SMT V:Vengeance. Edit `SMTVFix.ini` in Mod Folder to configure settings.",
+  "ModDll": "",
+  "ModIcon": "",
+  "ModR2RManagedDll32": "",
+  "ModR2RManagedDll64": "",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "SMTVFix.asi",
+  "Tags": [],
+  "CanUnload": null,
+  "HasExports": null,
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "smtvv.smtvfix.ReleaseMetadata.json",
+  "PluginData": {
+    "GitHubRelease": {
+      "UserName": "Lyall",
+      "RepositoryName": "SMTVFix",
+      "UseReleaseTag": true,
+      "AssetFileName": "SMTVFix_Reloaded-II.zip"
+    }
+  },
+  "IsUniversalMod": false,
+  "ModDependencies": [],
+  "OptionalDependencies": [],
+  "SupportedAppId": [
+    "smt5v-win64-shipping.exe"
+  ],
+  "ProjectUrl": "https://github.com/Lyall/P3RFix"
+}
