@@ -21,7 +21,8 @@
 #include "SDK/WB_MsgSelectMenu_classes.hpp"
 #include "SDK/SpriteStudio6_classes.hpp"
 
-HMODULE baseModule = GetModuleHandle(NULL);
+HMODULE gameModule = GetModuleHandle(NULL); // Game exe
+HMODULE thisModule; // Fix DLL
 
 // Version
 std::string sFixName = "SMTVFix";
@@ -32,6 +33,7 @@ std::string sLogFile = sFixName + ".log";
 std::shared_ptr<spdlog::logger> logger;
 std::filesystem::path sExePath;
 std::string sExeName;
+std::filesystem::path sThisModulePath;
 
 // Ini
 inipp::Ini<char> ini;
@@ -208,9 +210,15 @@ private:
 
 void Logging()
 {
+    // Get this module path
+    WCHAR thisModulePath[_MAX_PATH] = { 0 };
+    GetModuleFileNameW(thisModule, thisModulePath, MAX_PATH);
+    sThisModulePath = thisModulePath;
+    sThisModulePath = sThisModulePath.remove_filename();
+
     // Get game name and exe path
     WCHAR exePath[_MAX_PATH] = { 0 };
-    GetModuleFileNameW(baseModule, exePath, MAX_PATH);
+    GetModuleFileNameW(gameModule, exePath, MAX_PATH);
     sExePath = exePath;
     sExeName = sExePath.filename().string();
     sExePath = sExePath.remove_filename();
@@ -218,21 +226,21 @@ void Logging()
     // spdlog initialisation
     {
         try {
-            logger = std::make_shared<spdlog::logger>(sLogFile, std::make_shared<size_limited_sink<std::mutex>>(sExePath.string() + sLogFile, 10 * 1024 * 1024));
+            logger = std::make_shared<spdlog::logger>(sLogFile, std::make_shared<size_limited_sink<std::mutex>>(sThisModulePath.string() + sLogFile, 10 * 1024 * 1024));
             spdlog::set_default_logger(logger);
 
             spdlog::flush_on(spdlog::level::debug);
             spdlog::info("----------");
             spdlog::info("{} v{} loaded.", sFixName.c_str(), sFixVer.c_str());
             spdlog::info("----------");
-            spdlog::info("Path to logfile: {}", sExePath.string() + sLogFile);
+            spdlog::info("Path to logfile: {}", sThisModulePath.string() + sLogFile);
             spdlog::info("----------");
 
-            // Log module details
-            spdlog::info("Module Name: {0:s}", sExeName.c_str());
-            spdlog::info("Module Path: {0:s}", sExePath.string());
-            spdlog::info("Module Address: 0x{0:x}", (uintptr_t)baseModule);
-            spdlog::info("Module Timestamp: {0:d}", Memory::ModuleTimestamp(baseModule));
+            // Log game module details
+            spdlog::info("Game Module Name: {0:s}", sExeName.c_str());
+            spdlog::info("Game Module Path: {0:s}", sExePath.string());
+            spdlog::info("Game Module Address: 0x{0:x}", (uintptr_t)gameModule);
+            spdlog::info("Game Module Timestamp: {0:d}", Memory::ModuleTimestamp(gameModule));
             spdlog::info("----------");
         }
         catch (const spdlog::spdlog_ex& ex) {
@@ -240,7 +248,7 @@ void Logging()
             FILE* dummy;
             freopen_s(&dummy, "CONOUT$", "w", stdout);
             std::cout << "Log initialisation failed: " << ex.what() << std::endl;
-            FreeLibraryAndExitThread(baseModule, 1);
+            FreeLibraryAndExitThread(gameModule, 1);
         }
     }
 }
@@ -248,18 +256,18 @@ void Logging()
 void ReadConfig()
 {
     // Initialise config
-    std::ifstream iniFile(sExePath.string() + sConfigFile);
+    std::ifstream iniFile(sThisModulePath.string() + sConfigFile);
     if (!iniFile) {
         AllocConsole();
         FILE* dummy;
         freopen_s(&dummy, "CONOUT$", "w", stdout);
         std::cout << "" << sFixName.c_str() << " v" << sFixVer.c_str() << " loaded." << std::endl;
         std::cout << "ERROR: Could not locate config file." << std::endl;
-        std::cout << "ERROR: Make sure " << sConfigFile.c_str() << " is located in " << sExePath.string().c_str() << std::endl;
-        FreeLibraryAndExitThread(baseModule, 1);
+        std::cout << "ERROR: Make sure " << sConfigFile.c_str() << " is located in " << sThisModulePath.string().c_str() << std::endl;
+        FreeLibraryAndExitThread(gameModule, 1);
     }
     else {
-        spdlog::info("Path to config file: {}", sExePath.string() + sConfigFile);
+        spdlog::info("Path to config file: {}", sThisModulePath.string() + sConfigFile);
         ini.parse(iniFile);
     }
 
@@ -398,11 +406,11 @@ void ReadConfig()
 void UpdateOffsets()
 {
     // GObjects
-    uint8_t* GObjectsScanResult = Memory::PatternScan(baseModule, "48 8B ?? ?? ?? ?? ?? 48 8B ?? ?? 48 8D ?? ?? EB ?? 33 ?? 8B ?? ?? C1 ??");
+    uint8_t* GObjectsScanResult = Memory::PatternScan(gameModule, "48 8B ?? ?? ?? ?? ?? 48 8B ?? ?? 48 8D ?? ?? EB ?? 33 ?? 8B ?? ?? C1 ??");
     if (GObjectsScanResult) {
-        spdlog::info("Offsets: GObjects: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)GObjectsScanResult - (uintptr_t)baseModule);
+        spdlog::info("Offsets: GObjects: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)GObjectsScanResult - (uintptr_t)gameModule);
         uintptr_t GObjectsAddr = Memory::GetAbsolute((uintptr_t)GObjectsScanResult + 0x3);
-        SDK::Offsets::GObjects = (uintptr_t)GObjectsAddr - (uintptr_t)baseModule;
+        SDK::Offsets::GObjects = (uintptr_t)GObjectsAddr - (uintptr_t)gameModule;
         spdlog::info("Offsets: GObjects: Offset: {:x}", SDK::Offsets::GObjects);
     }
     else if (!GObjectsScanResult) {
@@ -410,10 +418,10 @@ void UpdateOffsets()
     }
 
     // AppendString
-    uint8_t* AppendStringScanResult = Memory::PatternScan(baseModule, "48 89 ?? ?? ?? 48 89 ?? ?? ?? 57 48 83 ?? ?? 8B ?? 48 8B ?? 8B ?? 44 0F ?? ?? C1 ?? 10 48 8B ?? 80 3D ?? ?? ?? ?? 00 89 ?? ?? ?? 44 89 ?? ?? ?? 74 ?? 4C 8D ?? ?? ?? ?? ?? EB ?? 48 8D ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 4C ?? ?? C6 ?? ?? ?? ?? ?? 01 48 8B ?? ?? ?? 48 8B ?? 48 ?? ?? ?? 8D ?? ?? 49 ?? ?? ?? ?? E8 ?? ?? ?? ?? 83 ?? ?? 00");
+    uint8_t* AppendStringScanResult = Memory::PatternScan(gameModule, "48 89 ?? ?? ?? 48 89 ?? ?? ?? 57 48 83 ?? ?? 8B ?? 48 8B ?? 8B ?? 44 0F ?? ?? C1 ?? 10 48 8B ?? 80 3D ?? ?? ?? ?? 00 89 ?? ?? ?? 44 89 ?? ?? ?? 74 ?? 4C 8D ?? ?? ?? ?? ?? EB ?? 48 8D ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 4C ?? ?? C6 ?? ?? ?? ?? ?? 01 48 8B ?? ?? ?? 48 8B ?? 48 ?? ?? ?? 8D ?? ?? 49 ?? ?? ?? ?? E8 ?? ?? ?? ?? 83 ?? ?? 00");
     if (AppendStringScanResult) {
-        spdlog::info("Offsets: AppendString: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AppendStringScanResult - (uintptr_t)baseModule);
-        SDK::Offsets::AppendString = (uintptr_t)AppendStringScanResult - (uintptr_t)baseModule;
+        spdlog::info("Offsets: AppendString: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AppendStringScanResult - (uintptr_t)gameModule);
+        SDK::Offsets::AppendString = (uintptr_t)AppendStringScanResult - (uintptr_t)gameModule;
         spdlog::info("Offsets: AppendString: Offset: {:x}", SDK::Offsets::AppendString);
     }
     else if (!AppendStringScanResult) {
@@ -421,10 +429,10 @@ void UpdateOffsets()
     }
 
     // ProcessEvent
-    uint8_t* ProcessEventScanResult = Memory::PatternScan(baseModule, "40 ?? 56 57 41 ?? 41 ?? 41 ?? 41 ?? 48 81 ?? ?? ?? ?? ?? 48 8D ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ?? 48 33 ?? 48 89 ?? ?? ?? ?? ?? 8B ?? ?? 45 33 ??");
+    uint8_t* ProcessEventScanResult = Memory::PatternScan(gameModule, "40 ?? 56 57 41 ?? 41 ?? 41 ?? 41 ?? 48 81 ?? ?? ?? ?? ?? 48 8D ?? ?? ?? 48 89 ?? ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ?? 48 33 ?? 48 89 ?? ?? ?? ?? ?? 8B ?? ?? 45 33 ??");
     if (ProcessEventScanResult) {
-        spdlog::info("Offsets: ProcessEvent: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ProcessEventScanResult - (uintptr_t)baseModule);
-        SDK::Offsets::ProcessEvent = (uintptr_t)ProcessEventScanResult - (uintptr_t)baseModule;
+        spdlog::info("Offsets: ProcessEvent: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ProcessEventScanResult - (uintptr_t)gameModule);
+        SDK::Offsets::ProcessEvent = (uintptr_t)ProcessEventScanResult - (uintptr_t)gameModule;
         spdlog::info("Offsets: ProcessEvent: Offset: {:x}", SDK::Offsets::ProcessEvent);
     }
     else if (!ProcessEventScanResult) {
@@ -435,10 +443,10 @@ void UpdateOffsets()
 void CurrentResolution()
 {
     // Get current resolution
-    uint8_t* CurrResolutionScanResult = Memory::PatternScan(baseModule, "89 ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 44 89 ?? ?? ?? ?? ?? 89 ?? ?? ?? 44 ?? ?? ??");
+    uint8_t* CurrResolutionScanResult = Memory::PatternScan(gameModule, "89 ?? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 44 89 ?? ?? ?? ?? ?? 89 ?? ?? ?? 44 ?? ?? ??");
     if (CurrResolutionScanResult)
     {
-        spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)baseModule);
+        spdlog::info("Current Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)CurrResolutionScanResult - (uintptr_t)gameModule);
 
         static SafetyHookMid CurrResolutionMidHook{};
         CurrResolutionMidHook = safetyhook::create_mid(CurrResolutionScanResult,
@@ -466,11 +474,11 @@ void CurrentResolution()
 void GetCVARs()
 {
     // Get console objects
-    uint8_t* ConsoleManagerSingletonScanResult = Memory::PatternScan(baseModule, "48 83 ?? ?? 48 83 3D ?? ?? ?? ?? 00 0F 85 ?? ?? ?? ?? B9 ?? ?? ?? ?? 48 89 ?? ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 48 ?? ??");
+    uint8_t* ConsoleManagerSingletonScanResult = Memory::PatternScan(gameModule, "48 83 ?? ?? 48 83 3D ?? ?? ?? ?? 00 0F 85 ?? ?? ?? ?? B9 ?? ?? ?? ?? 48 89 ?? ?? ?? E8 ?? ?? ?? ?? 48 ?? ?? 48 ?? ??");
     if (ConsoleManagerSingletonScanResult) {
-        spdlog::info("Console CVARs: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ConsoleManagerSingletonScanResult - (uintptr_t)baseModule);
+        spdlog::info("Console CVARs: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)ConsoleManagerSingletonScanResult - (uintptr_t)gameModule);
         uintptr_t singletonAddr = Memory::GetAbsolute((uintptr_t)ConsoleManagerSingletonScanResult + 0x7) + 0x1;
-        spdlog::info("Console CVARs: IConsoleManager singleton address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)singletonAddr - (uintptr_t)baseModule);
+        spdlog::info("Console CVARs: IConsoleManager singleton address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)singletonAddr - (uintptr_t)gameModule);
 
         int i = 0;
         while (!*(uintptr_t*)singletonAddr)
@@ -520,10 +528,10 @@ void AspectFOV()
     if (bFixFOV)
     {
         // Field of View
-        uint8_t* FOVScanResult = Memory::PatternScan(baseModule, "E9 ?? ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 45 ?? ?? ??");
+        uint8_t* FOVScanResult = Memory::PatternScan(gameModule, "E9 ?? ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 45 ?? ?? ??");
         if (FOVScanResult)
         {
-            spdlog::info("FOV: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FOVScanResult - (uintptr_t)baseModule);
+            spdlog::info("FOV: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FOVScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid FOVMidHook{};
             FOVMidHook = safetyhook::create_mid(FOVScanResult + 0xA,
@@ -545,10 +553,10 @@ void AspectFOV()
     if (bAdjustCam)
     {
         // Adjust player camera
-        uint8_t* PlayerCameraScanResult = Memory::PatternScan(baseModule, "49 ?? ?? C6 ?? ?? ?? 01 48 ?? ?? F3 0F ?? ?? ?? ?? F3 0F ?? ?? ?? ?? F3 0F ?? ?? ?? ??");
+        uint8_t* PlayerCameraScanResult = Memory::PatternScan(gameModule, "49 ?? ?? C6 ?? ?? ?? 01 48 ?? ?? F3 0F ?? ?? ?? ?? F3 0F ?? ?? ?? ?? F3 0F ?? ?? ?? ??");
         if (PlayerCameraScanResult)
         {
-            spdlog::info("PlayerCamera: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)PlayerCameraScanResult - (uintptr_t)baseModule);
+            spdlog::info("PlayerCamera: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)PlayerCameraScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid PlayerCameraMidHook{};
             PlayerCameraMidHook = safetyhook::create_mid(PlayerCameraScanResult,
@@ -582,10 +590,10 @@ void AspectFOV()
     if (bFixAspect)
     {
         // Aspect Ratio
-        uint8_t* AspectRatioScanResult = Memory::PatternScan(baseModule, "74 ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? EB ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? 8B");
+        uint8_t* AspectRatioScanResult = Memory::PatternScan(gameModule, "74 ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? EB ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? 8B");
         if (AspectRatioScanResult)
         {
-            spdlog::info("Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AspectRatioScanResult - (uintptr_t)baseModule);
+            spdlog::info("Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)AspectRatioScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid AspectRatioMidHook{};
             AspectRatioMidHook = safetyhook::create_mid(AspectRatioScanResult + 0x27,
@@ -600,10 +608,10 @@ void AspectFOV()
         }
 
         // Freecam Aspect Ratio
-        uint8_t* FreecamAspectRatioScanResult = Memory::PatternScan(baseModule, "4C 89 ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ??");
+        uint8_t* FreecamAspectRatioScanResult = Memory::PatternScan(gameModule, "4C 89 ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ?? 8B ?? ?? ?? ?? ?? 89 ?? ??");
         if (FreecamAspectRatioScanResult)
         {
-            spdlog::info("Freecam Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FreecamAspectRatioScanResult - (uintptr_t)baseModule);
+            spdlog::info("Freecam Aspect Ratio: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FreecamAspectRatioScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid FreecamAspectRatioMidHook{};
             FreecamAspectRatioMidHook = safetyhook::create_mid(FreecamAspectRatioScanResult + 0x25,
@@ -622,11 +630,11 @@ void AspectFOV()
 void HUD()
 {
     // Render Texture 2D Resolution
-    uint8_t* RenTex2DScanResult = Memory::PatternScan(baseModule, "8B ?? ?? ?? 00 00 44 ?? ?? ?? ?? ?? ?? 41 ?? ?? 8B ?? ?? ?? 00 00 44 ?? ?? ?? 66 ?? ?? ??");
+    uint8_t* RenTex2DScanResult = Memory::PatternScan(gameModule, "8B ?? ?? ?? 00 00 44 ?? ?? ?? ?? ?? ?? 41 ?? ?? 8B ?? ?? ?? 00 00 44 ?? ?? ?? 66 ?? ?? ??");
     if (RenTex2DScanResult)
     {
         RenTexPostLoad = safetyhook::create_inline(reinterpret_cast<void*>(RenTex2DScanResult), RenTexPostLoad_Hooked);
-        spdlog::info("Render Texture 2D Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)RenTex2DScanResult - (uintptr_t)baseModule);
+        spdlog::info("Render Texture 2D Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)RenTex2DScanResult - (uintptr_t)gameModule);
     }
     else if (!RenTex2DScanResult)
     {
@@ -636,10 +644,10 @@ void HUD()
     if (bFixHUD)
     {
         // Movies - ManaComponent::IsPreparing()
-        uint8_t* MoviePrepareScanResult = Memory::PatternScan(baseModule, "48 83 ?? ?? ?? ?? ?? 00 75 ?? 30 C0 C3 0F ?? ?? ?? ?? ?? ?? FE ??");
+        uint8_t* MoviePrepareScanResult = Memory::PatternScan(gameModule, "48 83 ?? ?? ?? ?? ?? 00 75 ?? 30 C0 C3 0F ?? ?? ?? ?? ?? ?? FE ??");
         if (MoviePrepareScanResult)
         {
-            spdlog::info("Movies: Prepare: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MoviePrepareScanResult - (uintptr_t)baseModule);
+            spdlog::info("Movies: Prepare: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MoviePrepareScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid MoviePrepareMidHook{};
             MoviePrepareMidHook = safetyhook::create_mid(MoviePrepareScanResult,
@@ -711,10 +719,10 @@ void HUD()
         }
 
         // Movies - ManaComponent::Stop()
-        uint8_t* MovieStopScanResult = Memory::PatternScan(baseModule, "40 ?? 48 83 ?? ?? 48 8B ?? 48 8B ?? ?? ?? ?? ?? 48 85 ?? 0F 84 ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ??");
+        uint8_t* MovieStopScanResult = Memory::PatternScan(gameModule, "40 ?? 48 83 ?? ?? 48 8B ?? 48 8B ?? ?? ?? ?? ?? 48 85 ?? 0F 84 ?? ?? ?? ?? E8 ?? ?? ?? ?? 48 8B ?? ?? ?? ?? ??");
         if (MovieStopScanResult)
         {
-            spdlog::info("Movies: Stop: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MovieStopScanResult - (uintptr_t)baseModule);
+            spdlog::info("Movies: Stop: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MovieStopScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid MoviePlayMidHook{};
             MoviePlayMidHook = safetyhook::create_mid(MovieStopScanResult,
@@ -732,10 +740,10 @@ void HUD()
         }
 
         // Fix offset markers (i.e speech bubbles etc)
-        uint8_t* MarkersScanResult = Memory::PatternScan(baseModule, "0F ?? ?? 66 ?? ?? ?? 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? 4C");
+        uint8_t* MarkersScanResult = Memory::PatternScan(gameModule, "0F ?? ?? 66 ?? ?? ?? 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? ?? F3 0F ?? ?? 4C");
         if (MarkersScanResult)
         {
-            spdlog::info("HUD: Markers: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MarkersScanResult - (uintptr_t)baseModule);
+            spdlog::info("HUD: Markers: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MarkersScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid MarkersMidHook{};
             MarkersMidHook = safetyhook::create_mid(MarkersScanResult + 0xA,
@@ -757,10 +765,10 @@ void HUD()
         }
 
         // HUD Backgrounds
-        uint8_t* HUDBackgroundsScanResult = Memory::PatternScan(baseModule, "C3 F2 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? F2 0F ?? ?? ?? ?? F2 0F ?? ?? 48 ?? ??");
+        uint8_t* HUDBackgroundsScanResult = Memory::PatternScan(gameModule, "C3 F2 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? F2 0F ?? ?? ?? ?? F2 0F ?? ?? 48 ?? ??");
         if (HUDBackgroundsScanResult)
         {
-            spdlog::info("HUD: HUDBackgrounds: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDBackgroundsScanResult - (uintptr_t)baseModule);
+            spdlog::info("HUD: HUDBackgrounds: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDBackgroundsScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid HUDBackgroundsMidHook{};
             HUDBackgroundsMidHook = safetyhook::create_mid(HUDBackgroundsScanResult + 0x9,
@@ -799,10 +807,10 @@ void HUD()
         }
 
         // Pause Background
-        uint8_t* PauseBGScanResult = Memory::PatternScan(baseModule, "F3 0F ?? ?? ?? ?? ?? ?? 48 8D ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ??");
+        uint8_t* PauseBGScanResult = Memory::PatternScan(gameModule, "F3 0F ?? ?? ?? ?? ?? ?? 48 8D ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? F3 0F ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ??");
         if (PauseBGScanResult)
         {
-            spdlog::info("HUD: PauseBG: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)PauseBGScanResult - (uintptr_t)baseModule);
+            spdlog::info("HUD: PauseBG: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)PauseBGScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid PauseBGMidHook{};
             PauseBGMidHook = safetyhook::create_mid(PauseBGScanResult + 0x15,
@@ -824,10 +832,10 @@ void HUD()
         }
 
         // Battle Transition Blur
-        uint8_t* EncountPanelSlotScanResult = Memory::PatternScan(baseModule, "49 ?? ?? 49 ?? ?? FF 90 ?? ?? ?? ?? 49 ?? ?? 49 ?? ?? 44 0F ?? ??");
+        uint8_t* EncountPanelSlotScanResult = Memory::PatternScan(gameModule, "49 ?? ?? 49 ?? ?? FF 90 ?? ?? ?? ?? 49 ?? ?? 49 ?? ?? 44 0F ?? ??");
         if (EncountPanelSlotScanResult)
         {
-            spdlog::info("HUD: EncountPanelSlot: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)EncountPanelSlotScanResult - (uintptr_t)baseModule);
+            spdlog::info("HUD: EncountPanelSlot: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)EncountPanelSlotScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid EncountPanelSlotMidHook{};
             EncountPanelSlotMidHook = safetyhook::create_mid(EncountPanelSlotScanResult,
@@ -861,10 +869,10 @@ void HUD()
     }
 
     // Center HUD + Skip Intro
-    uint8_t* HUDPositionScanResult = Memory::PatternScan(baseModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3");
+    uint8_t* HUDPositionScanResult = Memory::PatternScan(gameModule, "FF ?? 48 ?? ?? ?? ?? 0F ?? ?? 48 ?? ?? 0F ?? ?? 48 ?? ?? ?? 5F C3");
     if (HUDPositionScanResult)
     {
-        spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)baseModule);
+        spdlog::info("HUD: HUD Position: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)HUDPositionScanResult - (uintptr_t)gameModule);
 
         static bool bHasSkippedIntro = false;
         static SafetyHookMid HUDPositionMidHook{};
@@ -930,10 +938,10 @@ void HUD()
 void GraphicalTweaks()
 {
     // Set CVARs
-    uint8_t* SetCVARSScanResult = Memory::PatternScan(baseModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3");
+    uint8_t* SetCVARSScanResult = Memory::PatternScan(gameModule, "0F ?? ?? F3 0F ?? ?? ?? 0F ?? ?? F3 0F ?? ?? ?? ?? ?? ?? 0F ?? ?? 77 ?? F3 0F ?? ?? ?? ?? ?? ?? 48 ?? ?? ?? ?? 48 ?? ?? 20 5F C3");
     if (SetCVARSScanResult)
     {
-        spdlog::info("Set CVARS: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)SetCVARSScanResult - (uintptr_t)baseModule);
+        spdlog::info("Set CVARS: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)SetCVARSScanResult - (uintptr_t)gameModule);
 
         static SafetyHookMid SetCVARSMidHook{};
         SetCVARSMidHook = safetyhook::create_mid(SetCVARSScanResult + 0x3,
@@ -1192,10 +1200,10 @@ void Misc()
     if (bDisableMenuFPSCap)
     {
         // Disable FrameRateManager changing t.MaxFPS to 60
-        uint8_t* FramerateChangeScanResult = Memory::PatternScan(baseModule, "44 ?? ?? ?? 0F ?? ?? ?? ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ??");
+        uint8_t* FramerateChangeScanResult = Memory::PatternScan(gameModule, "44 ?? ?? ?? 0F ?? ?? ?? ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ?? 41 ?? ?? ?? 74 ??");
         if (FramerateChangeScanResult)
         {
-            spdlog::info("Menu Framerate Cap: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FramerateChangeScanResult - (uintptr_t)baseModule);
+            spdlog::info("Menu Framerate Cap: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)FramerateChangeScanResult - (uintptr_t)gameModule);
 
             static SafetyHookMid FramerateChangeMidHook{};
             FramerateChangeMidHook = safetyhook::create_mid(FramerateChangeScanResult,
@@ -1214,10 +1222,10 @@ void Misc()
     {
         // Always play 4K movies
         // EventFunctionLibrary::IsOriginalMovieResolution()
-        uint8_t* MovieResolutionScanResult = Memory::PatternScan(baseModule, "81 ?? ?? D0 07 00 00 0F ?? ?? 48 83 ?? ?? C3");
+        uint8_t* MovieResolutionScanResult = Memory::PatternScan(gameModule, "81 ?? ?? D0 07 00 00 0F ?? ?? 48 83 ?? ?? C3");
         if (MovieResolutionScanResult)
         {
-            spdlog::info("Movie Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MovieResolutionScanResult - (uintptr_t)baseModule);
+            spdlog::info("Movie Resolution: Address is {:s}+{:x}", sExeName.c_str(), (uintptr_t)MovieResolutionScanResult - (uintptr_t)gameModule);
             Memory::Write((uintptr_t)MovieResolutionScanResult + 0x3, (int)0);
             spdlog::info("Movie Resolution: Patched instruction.");
         }
@@ -1339,6 +1347,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,
     {
     case DLL_PROCESS_ATTACH:
     {
+        thisModule = hModule;
         HANDLE mainHandle = CreateThread(NULL, 0, Main, 0, NULL, 0);
         if (mainHandle)
         {
